@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunBikeCalc - Free Calculator Tools for Runners, Cyclists & Endurance Athletes</title>
+    <meta name="description" content="Free calculator tools for runners, cyclists, and endurance athletes. Calculate heart rate zones, running pace, VO2 max, FTP, and more. Mobile-optimized and easy to use.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RunBikeCalc - Free Calculator Tools for Endurance Athletes">
+    <meta property="og:description" content="Free calculator tools for runners, cyclists, and endurance athletes. Calculate heart rate zones, running pace, VO2 max, and more.">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-homepage.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RunBikeCalc - Free Calculator Tools for Endurance Athletes">
+    <meta name="twitter:description" content="Free calculator tools for runners, cyclists, and endurance athletes">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/twitter-homepage.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "RunBikeCalc",
+        "url": "https://runbikecalc.com",
+        "description": "Free calculator tools for runners, cyclists, and endurance athletes",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://runbikecalc.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link font-semibold text-primary">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item font-semibold text-primary">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Hero section -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Free Calculator Tools for <span class="text-primary">Endurance Athletes</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                Optimize your training with our comprehensive suite of calculators for runners, cyclists, and triathletes. 
+                Get instant results for heart rate zones, pace, power, and more.
+            </p>
+            
+            <!-- Top banner ad (desktop only) -->
+            <div class="hidden md:block mb-8">
+                <!-- AdSense 728x90 Leaderboard -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+        
+        <!-- Calculator categories -->
+        <section class="mb-16">
+            <!-- Heart Rate & Training Zones -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-center md:text-left">❤️ Heart Rate & Training Zones</h2>
+                <p class="text-gray-600 mb-6 text-center md:text-left">Calculate your optimal training zones for maximum performance and recovery</p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/zone-2-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Zone 2 Calculator</h3>
+                        <p class="text-gray-600">Find your aerobic base training zone for optimal endurance development</p>
+                    </a>
+                    
+                    <a href="/heart-rate-zone-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Heart Rate Zone Calculator</h3>
+                        <p class="text-gray-600">Calculate all 5 training zones based on your maximum heart rate</p>
+                    </a>
+                    
+                    <a href="/max-heart-rate-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Max Heart Rate Calculator</h3>
+                        <p class="text-gray-600">Determine your maximum heart rate using multiple proven formulas</p>
+                    </a>
+                    
+                    <a href="/target-heart-rate-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Target Heart Rate Calculator</h3>
+                        <p class="text-gray-600">Find your target heart rate for specific workout intensities</p>
+                    </a>
+                    
+                    <a href="/mhr-karvonen-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Karvonen Formula Calculator</h3>
+                        <p class="text-gray-600">More accurate heart rate zones using your resting heart rate</p>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Running Calculators -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-center md:text-left">🏃 Running Calculators</h2>
+                <p class="text-gray-600 mb-6 text-center md:text-left">Pace, race time prediction, and performance tools for runners</p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/running-pace-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Running Pace Calculator</h3>
+                        <p class="text-gray-600">Calculate pace, time, and distance for your runs</p>
+                    </a>
+                    
+                    <a href="/race-time-predictor.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Race Time Predictor</h3>
+                        <p class="text-gray-600">Predict race times based on recent performance or VO2 max</p>
+                    </a>
+                    
+                    <a href="/run-walk-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Run-Walk Calculator</h3>
+                        <p class="text-gray-600">Optimize your run-walk intervals for marathon training</p>
+                    </a>
+                    
+                    <a href="/calories-burned-running.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Calories Burned Running</h3>
+                        <p class="text-gray-600">Calculate calories burned during your running workouts</p>
+                    </a>
+                    
+                    <a href="/mileage-to-km-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Mile to KM Converter</h3>
+                        <p class="text-gray-600">Convert between miles and kilometers for running distances</p>
+                    </a>
+                    
+                    <a href="/treadmill-pace-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Treadmill Pace Converter</h3>
+                        <p class="text-gray-600">Convert between treadmill speed (mph/kph) and running pace</p>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile ad placement -->
+            <div class="md:hidden my-8 text-center">
+                <!-- AdSense 300x250 Rectangle -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:250px"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- Cycling Calculators -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-center md:text-left">🚴 Cycling Calculators</h2>
+                <p class="text-gray-600 mb-6 text-center md:text-left">Power, gearing, and performance tools for cyclists</p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/bike-gearing-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Bike Gearing Calculator</h3>
+                        <p class="text-gray-600">Calculate gear ratios and development for optimal performance</p>
+                    </a>
+                    
+                    <a href="/cadence-speed-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Cadence Speed Calculator</h3>
+                        <p class="text-gray-600">Find your speed based on cadence and gear selection</p>
+                    </a>
+                    
+                    <a href="/power-to-weight-ratio-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Power-to-Weight Ratio</h3>
+                        <p class="text-gray-600">Calculate your power-to-weight ratio for cycling performance</p>
+                    </a>
+                    
+                    <a href="/ftp-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">FTP Calculator</h3>
+                        <p class="text-gray-600">Determine your Functional Threshold Power from test results</p>
+                    </a>
+                    
+                    <a href="/watts-to-calories-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Watts to Calories Calculator</h3>
+                        <p class="text-gray-600">Convert power output to calories burned during cycling</p>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- VO2 Max & Fitness -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-center md:text-left">🎽 VO2 Max & Fitness</h2>
+                <p class="text-gray-600 mb-6 text-center md:text-left">Assess and track your cardiovascular fitness and performance</p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/vo2-max-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">VO2 Max Calculator</h3>
+                        <p class="text-gray-600">Estimate your VO2 max from running performance data</p>
+                    </a>
+                    
+                    <a href="/cooper-test-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Cooper Test Calculator</h3>
+                        <p class="text-gray-600">Calculate VO2 max from 12-minute run test results</p>
+                    </a>
+                    
+                    <a href="/lactate-threshold-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Lactate Threshold Calculator</h3>
+                        <p class="text-gray-600">Determine your lactate threshold pace and heart rate</p>
+                    </a>
+                    
+                    <a href="/aerobic-vs-anaerobic-threshold.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Aerobic vs Anaerobic Threshold</h3>
+                        <p class="text-gray-600">Calculate both aerobic and anaerobic threshold values</p>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Utility & Conversion Tools -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-2 text-center md:text-left">🔧 Utility & Conversion Tools</h2>
+                <p class="text-gray-600 mb-6 text-center md:text-left">Quick conversion tools and utility calculators for training</p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/bpm-to-percent-max.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">BPM to % Max Calculator</h3>
+                        <p class="text-gray-600">Convert heart rate BPM to percentage of maximum</p>
+                    </a>
+                    
+                    <a href="/pace-to-speed-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Pace to Speed Converter</h3>
+                        <p class="text-gray-600">Convert running pace (min/mile) to speed (mph)</p>
+                    </a>
+                    
+                    <a href="/speed-to-pace-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Speed to Pace Converter</h3>
+                        <p class="text-gray-600">Convert speed (mph/kph) to running pace</p>
+                    </a>
+                    
+                    <a href="/minutes-per-mile-to-kph.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Min/Mile to KPH</h3>
+                        <p class="text-gray-600">Convert minutes per mile pace to kilometers per hour</p>
+                    </a>
+                    
+                    <a href="/kph-to-minutes-per-mile.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">KPH to Min/Mile</h3>
+                        <p class="text-gray-600">Convert kilometers per hour to minutes per mile pace</p>
+                    </a>
+                    
+                    <a href="/calories-per-hour-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Calories per Hour</h3>
+                        <p class="text-gray-600">Calculate hourly calorie burn for various activities</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to action / benefits -->
+        <section class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Why Choose RunBikeCalc?</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div>
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">Mobile Optimized</h3>
+                    <p class="text-gray-600">All calculators work perfectly on your phone, tablet, or desktop</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-2">Instant Results</h3>
+                    <p class="text-gray-600">Get immediate calculations with real-time updates as you type</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-4">🆓</div>
+                    <h3 class="text-xl font-semibold mb-2">Always Free</h3>
+                    <p class="text-gray-600">No registration required. All tools are completely free to use</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes. Optimize your training with our comprehensive suite of performance calculators.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/pace-to-speed-converter.html" class="hover:text-white">Pace Converter</a></li>
+                        <li><a href="/mileage-to-km-converter.html" class="hover:text-white">Mile to KM</a></li>
+                        <li><a href="/calories-burned-running.html" class="hover:text-white">Calorie Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Add smooth scrolling for better mobile experience
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Rate Zone Calculator - 5 Zone Training System | RunBikeCalc</title>
+    <meta name="description" content="Calculate all 5 heart rate training zones based on your maximum heart rate. Free calculator for runners, cyclists, and endurance athletes with detailed zone explanations.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/heart-rate-zone-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Heart Rate Zone Calculator - 5 Zone Training System">
+    <meta property="og:description" content="Calculate all 5 heart rate training zones for optimal endurance training">
+    <meta property="og:image" content="https://runbikecalc.com/images/hr-zone-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/heart-rate-zone-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Heart Rate Zone Calculator">
+    <meta name="twitter:description" content="Calculate all 5 heart rate training zones for endurance sports">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/hr-zone-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Heart Rate Zone Calculator",
+        "url": "https://runbikecalc.com/heart-rate-zone-calculator",
+        "description": "Calculate all 5 heart rate training zones for endurance sports",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link font-semibold text-primary">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item font-semibold text-primary">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Heart Rate Training</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">HR Zone Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Heart Rate Zone Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate your complete 5-zone heart rate training system. Get personalized training zones for optimal endurance development across all intensity levels.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Your Training Zones</h2>
+                    
+                    <form id="hrzone-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years) *
+                                </label>
+                                <input type="number" 
+                                       id="age" 
+                                       name="age" 
+                                       class="calc-input-number" 
+                                       placeholder="30"
+                                       required
+                                       min="18"
+                                       max="80"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your current age in years</p>
+                            </div>
+                            
+                            <div>
+                                <label for="restingHR" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (optional)
+                                </label>
+                                <input type="number" 
+                                       id="restingHR" 
+                                       name="restingHR" 
+                                       class="calc-input-number" 
+                                       placeholder="60"
+                                       min="40"
+                                       max="100"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">For Karvonen method accuracy</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="method" class="block text-sm font-medium text-gray-700 mb-2">
+                                Calculation Method
+                            </label>
+                            <select id="method" name="method" class="calc-input-number text-left">
+                                <option value="basic">Basic (220 - Age)</option>
+                                <option value="karvonen">Karvonen (Heart Rate Reserve)</option>
+                                <option value="tanaka">Tanaka Formula (208 - 0.7 × Age)</option>
+                            </select>
+                            <p class="text-sm text-gray-600 mt-1">Choose your preferred max HR calculation</p>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate All Heart Rate Zones
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding the 5 Heart Rate Training Zones</h2>
+                    <p>Heart rate training zones are intensity ranges based on percentages of your maximum heart rate. Each zone targets different physiological adaptations and training benefits.</p>
+                    
+                    <h3>Zone 1: Recovery (50-60% Max HR)</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> Active recovery and easy base training</li>
+                        <li><strong>Feel:</strong> Very easy, can hold full conversations</li>
+                        <li><strong>Benefits:</strong> Promotes recovery, fat burning, aerobic base</li>
+                        <li><strong>Training:</strong> Easy runs, cool-downs, recovery rides</li>
+                    </ul>
+                    
+                    <h3>Zone 2: Aerobic Base (60-70% Max HR)</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> Aerobic base building and fat oxidation</li>
+                        <li><strong>Feel:</strong> Comfortable, conversational pace</li>
+                        <li><strong>Benefits:</strong> Improves fat burning, mitochondrial function</li>
+                        <li><strong>Training:</strong> Long runs, base rides, most training volume</li>
+                    </ul>
+                    
+                    <h3>Zone 3: Aerobic (70-80% Max HR)</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> Aerobic capacity development</li>
+                        <li><strong>Feel:</strong> Moderate effort, some conversation possible</li>
+                        <li><strong>Benefits:</strong> Improves aerobic power and endurance</li>
+                        <li><strong>Training:</strong> Tempo runs, steady-state efforts</li>
+                    </ul>
+                    
+                    <h3>Zone 4: Lactate Threshold (80-90% Max HR)</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> Lactate threshold and VO2 max development</li>
+                        <li><strong>Feel:</strong> Hard effort, difficult to talk</li>
+                        <li><strong>Benefits:</strong> Improves lactate clearance and anaerobic capacity</li>
+                        <li><strong>Training:</strong> Threshold intervals, race pace efforts</li>
+                    </ul>
+                    
+                    <h3>Zone 5: VO2 Max (90-100% Max HR)</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> Maximum aerobic power development</li>
+                        <li><strong>Feel:</strong> Very hard, cannot speak</li>
+                        <li><strong>Benefits:</strong> Improves VO2 max and anaerobic power</li>
+                        <li><strong>Training:</strong> Short intervals, all-out efforts</li>
+                    </ul>
+                    
+                    <h3>How to Use Your Heart Rate Zones</h3>
+                    <p>Use these zones to structure your training program:</p>
+                    <ul>
+                        <li><strong>80/20 Rule:</strong> Spend 80% of training time in Zones 1-2, 20% in Zones 3-5</li>
+                        <li><strong>Progressive Build:</strong> Start with more Zone 1-2, gradually add higher zones</li>
+                        <li><strong>Periodization:</strong> Vary zone emphasis based on training phase</li>
+                        <li><strong>Recovery:</strong> Use Zone 1 for active recovery days</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/zone-2-calculator.html" class="text-primary hover:underline">Zone 2 Calculator</a></li>
+                        <li><a href="/max-heart-rate-calculator.html" class="text-primary hover:underline">Max Heart Rate Calculator</a></li>
+                        <li><a href="/target-heart-rate-calculator.html" class="text-primary hover:underline">Target Heart Rate Calculator</a></li>
+                        <li><a href="/mhr-karvonen-calculator.html" class="text-primary hover:underline">Karvonen Method Calculator</a></li>
+                        <li><a href="/lactate-threshold-calculator.html" class="text-primary hover:underline">Lactate Threshold Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Heart Rate Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator.html" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/max-heart-rate-calculator.html" class="hover:text-white">Max HR Calculator</a></li>
+                        <li><a href="/target-heart-rate-calculator.html" class="hover:text-white">Target HR Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Heart Rate Zone Calculator implementation
+        class HRZoneCalculator extends Calculator {
+            calculate() {
+                const age = this.getInputValue('age');
+                const restingHR = this.getInputValue('restingHR', 0);
+                const method = this.form.querySelector('[name="method"]').value;
+                
+                if (!age || age < 18 || age > 80) {
+                    this.displayError('Please enter a valid age between 18 and 80.');
+                    return;
+                }
+                
+                let maxHR;
+                let methodName;
+                
+                // Calculate max heart rate based on method
+                switch (method) {
+                    case 'basic':
+                        maxHR = 220 - age;
+                        methodName = 'Basic Formula (220 - Age)';
+                        break;
+                    case 'tanaka':
+                        maxHR = 208 - (0.7 * age);
+                        methodName = 'Tanaka Formula';
+                        break;
+                    case 'karvonen':
+                        if (!restingHR || restingHR < 40 || restingHR > 100) {
+                            this.displayError('Please enter a valid resting heart rate (40-100 bpm) for the Karvonen method.');
+                            return;
+                        }
+                        maxHR = 220 - age;
+                        methodName = 'Karvonen Method (Heart Rate Reserve)';
+                        break;
+                }
+                
+                let zones = [];
+                
+                if (method === 'karvonen' && restingHR > 0) {
+                    // Karvonen method using heart rate reserve
+                    const hrReserve = maxHR - restingHR;
+                    zones = [
+                        {
+                            name: 'Zone 1 - Recovery',
+                            percentage: '50-60%',
+                            min: Math.round(restingHR + (hrReserve * 0.50)),
+                            max: Math.round(restingHR + (hrReserve * 0.60)),
+                            color: 'bg-blue-100 border-blue-400',
+                            description: 'Active recovery, very easy pace'
+                        },
+                        {
+                            name: 'Zone 2 - Aerobic Base',
+                            percentage: '60-70%',
+                            min: Math.round(restingHR + (hrReserve * 0.60)),
+                            max: Math.round(restingHR + (hrReserve * 0.70)),
+                            color: 'bg-green-100 border-green-400',
+                            description: 'Aerobic base building, conversational'
+                        },
+                        {
+                            name: 'Zone 3 - Aerobic',
+                            percentage: '70-80%',
+                            min: Math.round(restingHR + (hrReserve * 0.70)),
+                            max: Math.round(restingHR + (hrReserve * 0.80)),
+                            color: 'bg-yellow-100 border-yellow-400',
+                            description: 'Moderate effort, some conversation'
+                        },
+                        {
+                            name: 'Zone 4 - Lactate Threshold',
+                            percentage: '80-90%',
+                            min: Math.round(restingHR + (hrReserve * 0.80)),
+                            max: Math.round(restingHR + (hrReserve * 0.90)),
+                            color: 'bg-orange-100 border-orange-400',
+                            description: 'Hard effort, difficult to talk'
+                        },
+                        {
+                            name: 'Zone 5 - VO2 Max',
+                            percentage: '90-100%',
+                            min: Math.round(restingHR + (hrReserve * 0.90)),
+                            max: Math.round(maxHR),
+                            color: 'bg-red-100 border-red-400',
+                            description: 'Very hard, cannot speak'
+                        }
+                    ];
+                } else {
+                    // Standard percentage method
+                    zones = [
+                        {
+                            name: 'Zone 1 - Recovery',
+                            percentage: '50-60%',
+                            min: Math.round(maxHR * 0.50),
+                            max: Math.round(maxHR * 0.60),
+                            color: 'bg-blue-100 border-blue-400',
+                            description: 'Active recovery, very easy pace'
+                        },
+                        {
+                            name: 'Zone 2 - Aerobic Base',
+                            percentage: '60-70%',
+                            min: Math.round(maxHR * 0.60),
+                            max: Math.round(maxHR * 0.70),
+                            color: 'bg-green-100 border-green-400',
+                            description: 'Aerobic base building, conversational'
+                        },
+                        {
+                            name: 'Zone 3 - Aerobic',
+                            percentage: '70-80%',
+                            min: Math.round(maxHR * 0.70),
+                            max: Math.round(maxHR * 0.80),
+                            color: 'bg-yellow-100 border-yellow-400',
+                            description: 'Moderate effort, some conversation'
+                        },
+                        {
+                            name: 'Zone 4 - Lactate Threshold',
+                            percentage: '80-90%',
+                            min: Math.round(maxHR * 0.80),
+                            max: Math.round(maxHR * 0.90),
+                            color: 'bg-orange-100 border-orange-400',
+                            description: 'Hard effort, difficult to talk'
+                        },
+                        {
+                            name: 'Zone 5 - VO2 Max',
+                            percentage: '90-100%',
+                            min: Math.round(maxHR * 0.90),
+                            max: Math.round(maxHR),
+                            color: 'bg-red-100 border-red-400',
+                            description: 'Very hard, cannot speak'
+                        }
+                    ];
+                }
+                
+                // Generate zone cards HTML
+                const zoneCards = zones.map(zone => `
+                    <div class="p-4 rounded-lg border-2 ${zone.color} mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-semibold text-gray-800">${zone.name}</h4>
+                            <span class="text-sm font-medium text-gray-600">${zone.percentage}</span>
+                        </div>
+                        <div class="text-2xl font-bold text-gray-900 mb-1">${zone.min} - ${zone.max} BPM</div>
+                        <div class="text-sm text-gray-600">${zone.description}</div>
+                    </div>
+                `).join('');
+                
+                // Display results
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Heart Rate Training Zones</h3>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold text-gray-700">Estimated Max Heart Rate</div>
+                            <div class="text-3xl font-bold text-gray-900">${Math.round(maxHR)} BPM</div>
+                            <div class="text-sm text-gray-600">${methodName}</div>
+                        </div>
+                        
+                        ${zoneCards}
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mt-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Training Distribution Recommendation</h4>
+                            <p class="text-sm text-blue-700">Follow the 80/20 rule: Spend 80% of your training time in Zones 1-2 (easy pace) and 20% in Zones 3-5 (moderate to hard pace) for optimal endurance development.</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <button onclick="calculator.shareResult('My heart rate training zones calculated with RunBikeCalc')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                // Save values for next time
+                this.saveValues();
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new HRZoneCalculator('hrzone-form', 'results');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VO2 Max Calculator - Estimate Your Aerobic Fitness | RunBikeCalc</title>
+    <meta name="description" content="Free VO2 Max calculator using multiple methods. Estimate your aerobic fitness from running performance, age, and resting heart rate. Compare results across different formulas.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/vo2-max-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="VO2 Max Calculator - Estimate Your Aerobic Fitness">
+    <meta property="og:description" content="Calculate your VO2 Max using proven scientific methods">
+    <meta property="og:image" content="https://runbikecalc.com/images/vo2-max-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/vo2-max-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VO2 Max Calculator">
+    <meta name="twitter:description" content="Estimate your VO2 Max and aerobic fitness level">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/vo2-max-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "VO2 Max Calculator",
+        "url": "https://runbikecalc.com/vo2-max-calculator",
+        "description": "Calculate your VO2 Max and estimate aerobic fitness level",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link font-semibold text-primary">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item font-semibold text-primary">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Fitness Assessment</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">VO2 Max Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">VO2 Max Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate your VO2 Max using multiple proven methods. Estimate your aerobic fitness level from running performance, age, and physical characteristics.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator tabs -->
+                <div class="calc-card mb-8">
+                    <div class="border-b border-gray-200 mb-6">
+                        <nav class="-mb-px flex space-x-8">
+                            <button id="running-tab" class="tab-button active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium">
+                                From Running
+                            </button>
+                            <button id="cooper-tab" class="tab-button border-b-2 border-transparent text-gray-500 hover:text-gray-700 py-2 px-1 text-sm font-medium">
+                                Cooper Test
+                            </button>
+                            <button id="rockport-tab" class="tab-button border-b-2 border-transparent text-gray-500 hover:text-gray-700 py-2 px-1 text-sm font-medium">
+                                Rockport Walk
+                            </button>
+                        </nav>
+                    </div>
+                    
+                    <!-- From Running Performance Tab -->
+                    <div id="running-calculator" class="tab-content">
+                        <h2 class="text-2xl font-semibold mb-6">VO2 Max from Running Performance</h2>
+                        
+                        <form id="running-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age (years) *
+                                    </label>
+                                    <input type="number" 
+                                           id="age" 
+                                           name="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           required
+                                           min="18"
+                                           max="80"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Your current age in years</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Gender *
+                                    </label>
+                                    <select id="gender" name="gender" class="calc-input-number text-left" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Required for accurate calculation</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Distance *
+                                </label>
+                                <select id="distance" name="distance" class="calc-input-number text-left" required>
+                                    <option value="">Select distance</option>
+                                    <option value="1.5">1.5 km</option>
+                                    <option value="1">1 mile</option>
+                                    <option value="5">5 km</option>
+                                    <option value="10">10 km</option>
+                                    <option value="21.1">Half Marathon (21.1 km)</option>
+                                    <option value="42.2">Marathon (42.2 km)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your recent race distance</p>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Time *
+                                </label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <input type="number" 
+                                           id="hours" 
+                                           name="hours" 
+                                           class="calc-input-number" 
+                                           placeholder="0"
+                                           min="0"
+                                           max="23">
+                                    <input type="number" 
+                                           id="minutes" 
+                                           name="minutes" 
+                                           class="calc-input-number" 
+                                           placeholder="25"
+                                           required
+                                           min="0"
+                                           max="59">
+                                    <input type="number" 
+                                           id="seconds" 
+                                           name="seconds" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           min="0"
+                                           max="59">
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate VO2 Max
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Cooper Test Tab -->
+                    <div id="cooper-calculator" class="tab-content hidden">
+                        <h2 class="text-2xl font-semibold mb-6">Cooper 12-Minute Test</h2>
+                        
+                        <form id="cooper-form" class="space-y-6">
+                            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                                <h4 class="font-semibold text-blue-800 mb-2">Test Instructions</h4>
+                                <p class="text-sm text-blue-700">Run/walk as far as possible in exactly 12 minutes on a track or measured course. Record the total distance covered.</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="cooper-age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age (years) *
+                                    </label>
+                                    <input type="number" 
+                                           id="cooper-age" 
+                                           name="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           required
+                                           min="18"
+                                           max="80"
+                                           step="1">
+                                </div>
+                                
+                                <div>
+                                    <label for="cooper-gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Gender *
+                                    </label>
+                                    <select id="cooper-gender" name="gender" class="calc-input-number text-left" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="cooper-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Covered in 12 Minutes *
+                                </label>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <input type="number" 
+                                           id="cooper-distance" 
+                                           name="distance" 
+                                           class="calc-input-number" 
+                                           placeholder="2.5"
+                                           required
+                                           min="1"
+                                           max="5"
+                                           step="0.1">
+                                    <select id="cooper-units" name="units" class="calc-input-number text-left">
+                                        <option value="km">Kilometers</option>
+                                        <option value="miles">Miles</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Total distance covered in 12 minutes</p>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate VO2 Max
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Rockport Walk Test Tab -->
+                    <div id="rockport-calculator" class="tab-content hidden">
+                        <h2 class="text-2xl font-semibold mb-6">Rockport 1-Mile Walk Test</h2>
+                        
+                        <form id="rockport-form" class="space-y-6">
+                            <div class="bg-green-50 p-4 rounded-lg mb-6">
+                                <h4 class="font-semibold text-green-800 mb-2">Test Instructions</h4>
+                                <p class="text-sm text-green-700">Walk 1 mile as fast as possible. Record your time and heart rate immediately after finishing.</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="rockport-age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age (years) *
+                                    </label>
+                                    <input type="number" 
+                                           id="rockport-age" 
+                                           name="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           required
+                                           min="18"
+                                           max="80"
+                                           step="1">
+                                </div>
+                                
+                                <div>
+                                    <label for="rockport-gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Gender *
+                                    </label>
+                                    <select id="rockport-gender" name="gender" class="calc-input-number text-left" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Weight *
+                                    </label>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <input type="number" 
+                                               id="weight" 
+                                               name="weight" 
+                                               class="calc-input-number" 
+                                               placeholder="150"
+                                               required
+                                               min="80"
+                                               max="400"
+                                               step="1">
+                                        <select id="weight-units" name="weightUnits" class="calc-input-number text-left">
+                                            <option value="lbs">Pounds</option>
+                                            <option value="kg">Kilograms</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="heart-rate" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Heart Rate After Walk *
+                                    </label>
+                                    <input type="number" 
+                                           id="heart-rate" 
+                                           name="heartRate" 
+                                           class="calc-input-number" 
+                                           placeholder="140"
+                                           required
+                                           min="100"
+                                           max="200"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">BPM immediately after walk</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Walk Time *
+                                </label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="number" 
+                                           id="walk-minutes" 
+                                           name="minutes" 
+                                           class="calc-input-number" 
+                                           placeholder="15"
+                                           required
+                                           min="8"
+                                           max="30">
+                                    <input type="number" 
+                                           id="walk-seconds" 
+                                           name="seconds" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           min="0"
+                                           max="59">
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Minutes : Seconds to walk 1 mile</p>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate VO2 Max
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding VO2 Max</h2>
+                    <p>VO2 Max is the maximum amount of oxygen your body can consume during intense exercise. It's considered the gold standard for measuring aerobic fitness and cardiovascular health. A higher VO2 Max indicates better endurance capacity and overall fitness.</p>
+                    
+                    <h3>VO2 Max Values by Age and Gender</h3>
+                    
+                    <h4>Men (ml/kg/min)</h4>
+                    <ul>
+                        <li><strong>20-29 years:</strong> Excellent: >52, Good: 45-52, Average: 35-44, Below Average: <35</li>
+                        <li><strong>30-39 years:</strong> Excellent: >50, Good: 43-50, Average: 33-42, Below Average: <33</li>
+                        <li><strong>40-49 years:</strong> Excellent: >48, Good: 41-48, Average: 31-40, Below Average: <31</li>
+                        <li><strong>50-59 years:</strong> Excellent: >45, Good: 38-45, Average: 29-37, Below Average: <29</li>
+                        <li><strong>60+ years:</strong> Excellent: >42, Good: 35-42, Average: 26-34, Below Average: <26</li>
+                    </ul>
+                    
+                    <h4>Women (ml/kg/min)</h4>
+                    <ul>
+                        <li><strong>20-29 years:</strong> Excellent: >45, Good: 38-45, Average: 28-37, Below Average: <28</li>
+                        <li><strong>30-39 years:</strong> Excellent: >43, Good: 36-43, Average: 26-35, Below Average: <26</li>
+                        <li><strong>40-49 years:</strong> Excellent: >40, Good: 33-40, Average: 24-32, Below Average: <24</li>
+                        <li><strong>50-59 years:</strong> Excellent: >37, Good: 30-37, Average: 22-29, Below Average: <22</li>
+                        <li><strong>60+ years:</strong> Excellent: >35, Good: 28-35, Average: 20-27, Below Average: <20</li>
+                    </ul>
+                    
+                    <h3>Elite Athlete VO2 Max Values</h3>
+                    <ul>
+                        <li><strong>Cross-Country Skiers:</strong> 65-85 ml/kg/min</li>
+                        <li><strong>Distance Runners:</strong> 60-80 ml/kg/min</li>
+                        <li><strong>Cyclists:</strong> 60-75 ml/kg/min</li>
+                        <li><strong>Soccer Players:</strong> 55-70 ml/kg/min</li>
+                        <li><strong>Swimmers:</strong> 50-70 ml/kg/min</li>
+                    </ul>
+                    
+                    <h3>Test Methods Explained</h3>
+                    
+                    <h4>Running Performance Formula</h4>
+                    <p>Estimates VO2 Max based on race performance using established relationships between running speed and oxygen consumption. More accurate for trained runners.</p>
+                    
+                    <h4>Cooper 12-Minute Test</h4>
+                    <p>Developed by Dr. Kenneth Cooper, this test correlates the distance covered in 12 minutes with VO2 Max. Formula: VO2 Max = (Distance in meters - 504.9) / 44.73</p>
+                    
+                    <h4>Rockport 1-Mile Walk Test</h4>
+                    <p>A submaximal test suitable for beginners or those with health concerns. Uses walk time, heart rate, age, gender, and weight to estimate VO2 Max.</p>
+                    
+                    <h3>Factors Affecting VO2 Max</h3>
+                    <ul>
+                        <li><strong>Genetics:</strong> 25-50% determined by genetics</li>
+                        <li><strong>Age:</strong> Decreases ~1% per year after age 25</li>
+                        <li><strong>Training:</strong> Can improve 15-25% with training</li>
+                        <li><strong>Body Composition:</strong> Lower body fat typically means higher VO2 Max</li>
+                        <li><strong>Gender:</strong> Men typically 15-20% higher than women</li>
+                        <li><strong>Altitude:</strong> Training at altitude can improve VO2 Max</li>
+                    </ul>
+                    
+                    <h3>How to Improve Your VO2 Max</h3>
+                    <ul>
+                        <li><strong>High-Intensity Intervals:</strong> 3-5 minute intervals at 90-95% max HR</li>
+                        <li><strong>Tempo Runs:</strong> 20-40 minutes at comfortably hard pace</li>
+                        <li><strong>Long Slow Distance:</strong> Build aerobic base with easy runs</li>
+                        <li><strong>Hill Training:</strong> Adds intensity and strength</li>
+                        <li><strong>Cross-Training:</strong> Cycling, swimming, rowing</li>
+                        <li><strong>Consistency:</strong> Regular training 4-6 times per week</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- VO2 Max reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">VO2 Max Reference</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <div class="font-semibold text-red-600">Excellent</div>
+                            <div class="text-gray-600">Men: >50, Women: >40</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-orange-600">Good</div>
+                            <div class="text-gray-600">Men: 40-50, Women: 32-40</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-yellow-600">Fair</div>
+                            <div class="text-gray-600">Men: 30-39, Women: 24-31</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-600">Poor</div>
+                            <div class="text-gray-600">Men: <30, Women: <24</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/cooper-test-calculator.html" class="text-primary hover:underline">Cooper Test Calculator</a></li>
+                        <li><a href="/lactate-threshold-calculator.html" class="text-primary hover:underline">Lactate Threshold</a></li>
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Fitness Assessment</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max Calculator</a></li>
+                        <li><a href="/cooper-test-calculator.html" class="hover:text-white">Cooper Test</a></li>
+                        <li><a href="/lactate-threshold-calculator.html" class="hover:text-white">Lactate Threshold</a></li>
+                        <li><a href="/aerobic-vs-anaerobic-threshold.html" class="hover:text-white">Threshold Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                
+                // Add active to clicked tab
+                tab.classList.add('active', 'border-primary', 'text-primary');
+                tab.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Hide all content
+                contents.forEach(content => content.classList.add('hidden'));
+                
+                // Show target content
+                const targetId = tab.id.replace('-tab', '-calculator');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+        
+        // VO2 Max Calculator implementations
+        class RunningVO2Calculator extends Calculator {
+            constructor() {
+                super('running-form', 'results');
+                this.cooperCalculator = new CooperVO2Calculator();
+                this.rockportCalculator = new RockportVO2Calculator();
+            }
+            
+            calculate() {
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+                const distance = parseFloat(this.form.querySelector('[name="distance"]').value);
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                
+                if (!age || !gender || !distance || !minutes) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Convert time to total seconds
+                const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+                
+                // Convert distance to meters for calculation
+                let distanceInMeters;
+                if (distance === 1) {
+                    distanceInMeters = 1609.34; // 1 mile in meters
+                } else {
+                    distanceInMeters = distance * 1000; // km to meters
+                }
+                
+                // Calculate speed in m/s
+                const speedMPS = distanceInMeters / totalSeconds;
+                
+                // Jack Daniels formula for VO2 Max from running speed
+                // VO2 = -4.6 + 0.182258 * (speed in m/min) + 0.000104 * (speed in m/min)^2
+                const speedMPM = speedMPS * 60; // meters per minute
+                let vo2Max = -4.6 + (0.182258 * speedMPM) + (0.000104 * Math.pow(speedMPM, 2));
+                
+                // Adjust for age and gender
+                if (gender === 'female') {
+                    vo2Max *= 0.9; // Women typically 10% lower
+                }
+                
+                // Age adjustment (rough approximation)
+                const ageAdjustment = 1 - ((age - 25) * 0.01);
+                vo2Max *= Math.max(0.7, ageAdjustment);
+                
+                const fitnessLevel = this.categorizeVO2Max(vo2Max, age, gender);
+                const pace = this.calculatePace(totalSeconds, distance);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Estimated VO2 Max</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">VO2 Max</div>
+                            <div class="text-4xl font-bold">${vo2Max.toFixed(1)}</div>
+                            <div class="text-lg opacity-90 mt-2">ml/kg/min</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Fitness Level</h4>
+                                <div class="text-2xl font-bold text-secondary">${fitnessLevel}</div>
+                                <div class="text-sm text-gray-600">${gender}, ${age} years old</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Race Pace</h4>
+                                <div class="text-2xl font-bold text-gray-900">${pace}</div>
+                                <div class="text-sm text-gray-600">per ${distance === 1 ? 'mile' : 'km'}</div>
+                            </div>
+                        </div>
+                        
+                        ${this.generatePerformancePredictions(vo2Max, gender)}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My VO2 Max: ${vo2Max.toFixed(1)} ml/kg/min (${fitnessLevel})')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            calculatePace(totalSeconds, distance) {
+                const paceInSeconds = totalSeconds / distance;
+                const minutes = Math.floor(paceInSeconds / 60);
+                const seconds = Math.round(paceInSeconds % 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            categorizeVO2Max(vo2Max, age, gender) {
+                const isMale = gender === 'male';
+                
+                // Age-adjusted thresholds
+                let excellent, good, fair;
+                
+                if (isMale) {
+                    if (age < 30) {
+                        excellent = 52; good = 45; fair = 35;
+                    } else if (age < 40) {
+                        excellent = 50; good = 43; fair = 33;
+                    } else if (age < 50) {
+                        excellent = 48; good = 41; fair = 31;
+                    } else if (age < 60) {
+                        excellent = 45; good = 38; fair = 29;
+                    } else {
+                        excellent = 42; good = 35; fair = 26;
+                    }
+                } else {
+                    if (age < 30) {
+                        excellent = 45; good = 38; fair = 28;
+                    } else if (age < 40) {
+                        excellent = 43; good = 36; fair = 26;
+                    } else if (age < 50) {
+                        excellent = 40; good = 33; fair = 24;
+                    } else if (age < 60) {
+                        excellent = 37; good = 30; fair = 22;
+                    } else {
+                        excellent = 35; good = 28; fair = 20;
+                    }
+                }
+                
+                if (vo2Max >= excellent) return 'Excellent';
+                if (vo2Max >= good) return 'Good';
+                if (vo2Max >= fair) return 'Fair';
+                return 'Needs Improvement';
+            }
+            
+            generatePerformancePredictions(vo2Max, gender) {
+                // Rough predictions based on VO2 Max
+                const predictions = this.predictRaceTimes(vo2Max, gender);
+                
+                return `
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold text-blue-800 mb-3">Predicted Race Times</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>5K:</span>
+                                <span class="font-medium">${predictions.fiveK}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>10K:</span>
+                                <span class="font-medium">${predictions.tenK}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Half Marathon:</span>
+                                <span class="font-medium">${predictions.halfMarathon}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Marathon:</span>
+                                <span class="font-medium">${predictions.marathon}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            predictRaceTimes(vo2Max, gender) {
+                // Jack Daniels VDOT equivalent calculations (simplified)
+                const vdot = vo2Max * (gender === 'male' ? 1.0 : 1.06);
+                
+                // Rough time predictions (these are approximations)
+                const fiveKSeconds = 900 + (60 - vdot) * 15;
+                const tenKSeconds = fiveKSeconds * 2.1;
+                const halfMarathonSeconds = fiveKSeconds * 4.6;
+                const marathonSeconds = fiveKSeconds * 9.8;
+                
+                return {
+                    fiveK: this.formatTime(fiveKSeconds),
+                    tenK: this.formatTime(tenKSeconds),
+                    halfMarathon: this.formatTime(halfMarathonSeconds),
+                    marathon: this.formatTime(marathonSeconds)
+                };
+            }
+            
+            formatTime(totalSeconds) {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.round(totalSeconds % 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+        }
+        
+        class CooperVO2Calculator extends Calculator {
+            constructor() {
+                super('cooper-form', 'results');
+            }
+            
+            calculate() {
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+                const distance = this.getInputValue('distance');
+                const units = this.form.querySelector('[name="units"]').value;
+                
+                if (!age || !gender || !distance) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Convert distance to meters
+                const distanceInMeters = units === 'miles' ? distance * 1609.34 : distance * 1000;
+                
+                // Cooper formula: VO2 Max = (Distance in meters - 504.9) / 44.73
+                let vo2Max = (distanceInMeters - 504.9) / 44.73;
+                
+                // Ensure minimum value
+                vo2Max = Math.max(vo2Max, 15);
+                
+                const fitnessLevel = this.categorizeVO2Max(vo2Max, age, gender);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Cooper Test VO2 Max Result</h3>
+                        
+                        <div class="bg-secondary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">VO2 Max</div>
+                            <div class="text-4xl font-bold">${vo2Max.toFixed(1)}</div>
+                            <div class="text-lg opacity-90 mt-2">ml/kg/min</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Fitness Level</h4>
+                                <div class="text-2xl font-bold text-secondary">${fitnessLevel}</div>
+                                <div class="text-sm text-gray-600">${gender}, ${age} years old</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Distance Covered</h4>
+                                <div class="text-2xl font-bold text-gray-900">${distance} ${units}</div>
+                                <div class="text-sm text-gray-600">in 12 minutes</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.cooperCalculator.shareResult('My Cooper Test VO2 Max: ${vo2Max.toFixed(1)} ml/kg/min')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.cooperCalculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            categorizeVO2Max(vo2Max, age, gender) {
+                // Same categorization as running calculator
+                const isMale = gender === 'male';
+                
+                let excellent, good, fair;
+                
+                if (isMale) {
+                    if (age < 30) {
+                        excellent = 52; good = 45; fair = 35;
+                    } else if (age < 40) {
+                        excellent = 50; good = 43; fair = 33;
+                    } else if (age < 50) {
+                        excellent = 48; good = 41; fair = 31;
+                    } else if (age < 60) {
+                        excellent = 45; good = 38; fair = 29;
+                    } else {
+                        excellent = 42; good = 35; fair = 26;
+                    }
+                } else {
+                    if (age < 30) {
+                        excellent = 45; good = 38; fair = 28;
+                    } else if (age < 40) {
+                        excellent = 43; good = 36; fair = 26;
+                    } else if (age < 50) {
+                        excellent = 40; good = 33; fair = 24;
+                    } else if (age < 60) {
+                        excellent = 37; good = 30; fair = 22;
+                    } else {
+                        excellent = 35; good = 28; fair = 20;
+                    }
+                }
+                
+                if (vo2Max >= excellent) return 'Excellent';
+                if (vo2Max >= good) return 'Good';
+                if (vo2Max >= fair) return 'Fair';
+                return 'Needs Improvement';
+            }
+        }
+        
+        class RockportVO2Calculator extends Calculator {
+            constructor() {
+                super('rockport-form', 'results');
+            }
+            
+            calculate() {
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+                const weight = this.getInputValue('weight');
+                const weightUnits = this.form.querySelector('[name="weightUnits"]').value;
+                const heartRate = this.getInputValue('heartRate');
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                
+                if (!age || !gender || !weight || !heartRate || !minutes) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Convert weight to pounds if needed
+                const weightInPounds = weightUnits === 'kg' ? weight * 2.20462 : weight;
+                
+                // Convert time to total minutes
+                const totalMinutes = minutes + (seconds / 60);
+                
+                // Rockport formula
+                // VO2 Max = 132.853 - (0.0769 × weight) - (0.3877 × age) + (6.315 × gender) - (3.2649 × time) - (0.1565 × HR)
+                // Gender: 1 for male, 0 for female
+                const genderValue = gender === 'male' ? 1 : 0;
+                
+                let vo2Max = 132.853 - (0.0769 * weightInPounds) - (0.3877 * age) + (6.315 * genderValue) - (3.2649 * totalMinutes) - (0.1565 * heartRate);
+                
+                // Ensure reasonable bounds
+                vo2Max = Math.max(15, Math.min(80, vo2Max));
+                
+                const fitnessLevel = this.categorizeVO2Max(vo2Max, age, gender);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Rockport Walk Test VO2 Max Result</h3>
+                        
+                        <div class="bg-accent text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">VO2 Max</div>
+                            <div class="text-4xl font-bold">${vo2Max.toFixed(1)}</div>
+                            <div class="text-lg opacity-90 mt-2">ml/kg/min</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Fitness Level</h4>
+                                <div class="text-2xl font-bold text-accent">${fitnessLevel}</div>
+                                <div class="text-sm text-gray-600">${gender}, ${age} years old</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Walk Time</h4>
+                                <div class="text-2xl font-bold text-gray-900">${minutes}:${seconds.toString().padStart(2, '0')}</div>
+                                <div class="text-sm text-gray-600">1 mile walk time</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">Test Summary</h4>
+                            <div class="text-sm text-green-700 space-y-1">
+                                <p>• Weight: ${weight} ${weightUnits}</p>
+                                <p>• Post-walk HR: ${heartRate} BPM</p>
+                                <p>• Walk pace: ${(totalMinutes).toFixed(1)} min/mile</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.rockportCalculator.shareResult('My Rockport VO2 Max: ${vo2Max.toFixed(1)} ml/kg/min')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.rockportCalculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            categorizeVO2Max(vo2Max, age, gender) {
+                // Same categorization as other calculators
+                const isMale = gender === 'male';
+                
+                let excellent, good, fair;
+                
+                if (isMale) {
+                    if (age < 30) {
+                        excellent = 52; good = 45; fair = 35;
+                    } else if (age < 40) {
+                        excellent = 50; good = 43; fair = 33;
+                    } else if (age < 50) {
+                        excellent = 48; good = 41; fair = 31;
+                    } else if (age < 60) {
+                        excellent = 45; good = 38; fair = 29;
+                    } else {
+                        excellent = 42; good = 35; fair = 26;
+                    }
+                } else {
+                    if (age < 30) {
+                        excellent = 45; good = 38; fair = 28;
+                    } else if (age < 40) {
+                        excellent = 43; good = 36; fair = 26;
+                    } else if (age < 50) {
+                        excellent = 40; good = 33; fair = 24;
+                    } else if (age < 60) {
+                        excellent = 37; good = 30; fair = 22;
+                    } else {
+                        excellent = 35; good = 28; fair = 20;
+                    }
+                }
+                
+                if (vo2Max >= excellent) return 'Excellent';
+                if (vo2Max >= good) return 'Good';
+                if (vo2Max >= fair) return 'Fair';
+                return 'Needs Improvement';
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new RunningVO2Calculator();
+    </script>
+</body>
+</html>

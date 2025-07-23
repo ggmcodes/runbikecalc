@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Pace Calculator - Calculate Pace, Time & Distance | RunBikeCalc</title>
+    <meta name="description" content="Free running pace calculator. Calculate pace (min/mile or min/km), finish time, or distance. Perfect for marathon training, race planning, and workout pacing.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/running-pace-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Running Pace Calculator - Calculate Pace, Time & Distance">
+    <meta property="og:description" content="Free running pace calculator for training and race planning">
+    <meta property="og:image" content="https://runbikecalc.com/images/pace-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/running-pace-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running Pace Calculator">
+    <meta name="twitter:description" content="Calculate running pace, time, and distance for training and races">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/pace-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Running Pace Calculator",
+        "url": "https://runbikecalc.com/running-pace-calculator",
+        "description": "Calculate running pace, time, and distance for training and races",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Pace Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Running Pace Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate running pace, finish time, or distance. Perfect for marathon training, race planning, and workout pacing. Supports both miles and kilometers.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator tabs -->
+                <div class="calc-card mb-8">
+                    <div class="border-b border-gray-200 mb-6">
+                        <nav class="-mb-px flex space-x-8">
+                            <button id="pace-tab" class="tab-button active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium">
+                                Calculate Pace
+                            </button>
+                            <button id="time-tab" class="tab-button border-b-2 border-transparent text-gray-500 hover:text-gray-700 py-2 px-1 text-sm font-medium">
+                                Calculate Time
+                            </button>
+                            <button id="distance-tab" class="tab-button border-b-2 border-transparent text-gray-500 hover:text-gray-700 py-2 px-1 text-sm font-medium">
+                                Calculate Distance
+                            </button>
+                        </nav>
+                    </div>
+                    
+                    <!-- Calculate Pace Tab -->
+                    <div id="pace-calculator" class="tab-content">
+                        <h2 class="text-2xl font-semibold mb-6">Calculate Running Pace</h2>
+                        
+                        <form id="pace-form" class="space-y-6">
+                            <div>
+                                <label for="pace-units" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Units
+                                </label>
+                                <select id="pace-units" name="units" class="calc-input-number text-left">
+                                    <option value="miles">Miles</option>
+                                    <option value="km">Kilometers</option>
+                                </select>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="pace-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance *
+                                    </label>
+                                    <input type="number" 
+                                           id="pace-distance" 
+                                           name="distance" 
+                                           class="calc-input-number" 
+                                           placeholder="26.2"
+                                           required
+                                           min="0.1"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Distance covered</p>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Total Time *
+                                    </label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <input type="number" 
+                                               id="pace-hours" 
+                                               name="hours" 
+                                               class="calc-input-number" 
+                                               placeholder="3"
+                                               min="0"
+                                               max="23">
+                                        <input type="number" 
+                                               id="pace-minutes" 
+                                               name="minutes" 
+                                               class="calc-input-number" 
+                                               placeholder="30"
+                                               required
+                                               min="0"
+                                               max="59">
+                                        <input type="number" 
+                                               id="pace-seconds" 
+                                               name="seconds" 
+                                               class="calc-input-number" 
+                                               placeholder="0"
+                                               min="0"
+                                               max="59">
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate Pace
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Calculate Time Tab -->
+                    <div id="time-calculator" class="tab-content hidden">
+                        <h2 class="text-2xl font-semibold mb-6">Calculate Finish Time</h2>
+                        
+                        <form id="time-form" class="space-y-6">
+                            <div>
+                                <label for="time-units" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Units
+                                </label>
+                                <select id="time-units" name="units" class="calc-input-number text-left">
+                                    <option value="miles">Miles</option>
+                                    <option value="km">Kilometers</option>
+                                </select>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="time-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance *
+                                    </label>
+                                    <input type="number" 
+                                           id="time-distance" 
+                                           name="distance" 
+                                           class="calc-input-number" 
+                                           placeholder="26.2"
+                                           required
+                                           min="0.1"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Race or run distance</p>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Target Pace *
+                                    </label>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <input type="number" 
+                                               id="time-pace-min" 
+                                               name="paceMinutes" 
+                                               class="calc-input-number" 
+                                               placeholder="8"
+                                               required
+                                               min="3"
+                                               max="20">
+                                        <input type="number" 
+                                               id="time-pace-sec" 
+                                               name="paceSeconds" 
+                                               class="calc-input-number" 
+                                               placeholder="30"
+                                               min="0"
+                                               max="59">
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Minutes : Seconds per unit</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate Time
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Calculate Distance Tab -->
+                    <div id="distance-calculator" class="tab-content hidden">
+                        <h2 class="text-2xl font-semibold mb-6">Calculate Distance</h2>
+                        
+                        <form id="distance-form" class="space-y-6">
+                            <div>
+                                <label for="distance-units" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Units
+                                </label>
+                                <select id="distance-units" name="units" class="calc-input-number text-left">
+                                    <option value="miles">Miles</option>
+                                    <option value="km">Kilometers</option>
+                                </select>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Total Time *
+                                    </label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <input type="number" 
+                                               id="distance-hours" 
+                                               name="hours" 
+                                               class="calc-input-number" 
+                                               placeholder="1"
+                                               min="0"
+                                               max="23">
+                                        <input type="number" 
+                                               id="distance-minutes" 
+                                               name="minutes" 
+                                               class="calc-input-number" 
+                                               placeholder="30"
+                                               required
+                                               min="0"
+                                               max="59">
+                                        <input type="number" 
+                                               id="distance-seconds" 
+                                               name="seconds" 
+                                               class="calc-input-number" 
+                                               placeholder="0"
+                                               min="0"
+                                               max="59">
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Pace *
+                                    </label>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <input type="number" 
+                                               id="distance-pace-min" 
+                                               name="paceMinutes" 
+                                               class="calc-input-number" 
+                                               placeholder="8"
+                                               required
+                                               min="3"
+                                               max="20">
+                                        <input type="number" 
+                                               id="distance-pace-sec" 
+                                               name="paceSeconds" 
+                                               class="calc-input-number" 
+                                               placeholder="0"
+                                               min="0"
+                                               max="59">
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Minutes : Seconds per unit</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Calculate Distance
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Running Pace</h2>
+                    <p>Running pace is the time it takes to cover a specific distance, typically expressed as minutes per mile or minutes per kilometer. Understanding and using pace helps you train effectively, race strategically, and achieve your running goals.</p>
+                    
+                    <h3>Common Running Paces by Experience Level</h3>
+                    
+                    <h4>Beginner Runners</h4>
+                    <ul>
+                        <li><strong>Easy Pace:</strong> 10:00-12:00 per mile (6:12-7:27 per km)</li>
+                        <li><strong>Long Run:</strong> 10:30-13:00 per mile (6:31-8:04 per km)</li>
+                        <li><strong>5K Race:</strong> 9:00-11:00 per mile (5:35-6:50 per km)</li>
+                    </ul>
+                    
+                    <h4>Intermediate Runners</h4>
+                    <ul>
+                        <li><strong>Easy Pace:</strong> 8:30-10:00 per mile (5:16-6:12 per km)</li>
+                        <li><strong>Tempo Pace:</strong> 7:30-8:30 per mile (4:39-5:16 per km)</li>
+                        <li><strong>Marathon Pace:</strong> 8:00-9:30 per mile (4:58-5:54 per km)</li>
+                    </ul>
+                    
+                    <h4>Advanced Runners</h4>
+                    <ul>
+                        <li><strong>Easy Pace:</strong> 7:00-8:30 per mile (4:21-5:16 per km)</li>
+                        <li><strong>Tempo Pace:</strong> 6:00-7:00 per mile (3:44-4:21 per km)</li>
+                        <li><strong>Marathon Pace:</strong> 6:30-7:30 per mile (4:02-4:39 per km)</li>
+                    </ul>
+                    
+                    <h3>Types of Training Paces</h3>
+                    
+                    <h4>Easy/Recovery Pace</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Build aerobic base, active recovery</li>
+                        <li><strong>Effort:</strong> Conversational pace, 65-75% max HR</li>
+                        <li><strong>Usage:</strong> Most of your weekly mileage</li>
+                    </ul>
+                    
+                    <h4>Tempo/Threshold Pace</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Improve lactate threshold</li>
+                        <li><strong>Effort:</strong> Comfortably hard, 80-85% max HR</li>
+                        <li><strong>Usage:</strong> 20-40 minute sustained efforts</li>
+                    </ul>
+                    
+                    <h4>Interval Pace</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Improve VO2 max and speed</li>
+                        <li><strong>Effort:</strong> Hard, 90-95% max HR</li>
+                        <li><strong>Usage:</strong> Short repeats with recovery</li>
+                    </ul>
+                    
+                    <h4>Race Pace</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Practice goal race effort</li>
+                        <li><strong>Effort:</strong> Varies by race distance</li>
+                        <li><strong>Usage:</strong> Race simulation workouts</li>
+                    </ul>
+                    
+                    <h3>How to Use This Pace Calculator</h3>
+                    <p>This calculator has three modes to help with different training and racing scenarios:</p>
+                    
+                    <ul>
+                        <li><strong>Calculate Pace:</strong> Input distance and time to find your pace per mile/km</li>
+                        <li><strong>Calculate Time:</strong> Input distance and target pace to predict finish time</li>
+                        <li><strong>Calculate Distance:</strong> Input time and pace to see how far you'll go</li>
+                    </ul>
+                    
+                    <h3>Training Tips</h3>
+                    <ul>
+                        <li><strong>80/20 Rule:</strong> Run 80% of miles at easy pace, 20% at moderate/hard pace</li>
+                        <li><strong>Progressive Builds:</strong> Gradually increase pace during long runs</li>
+                        <li><strong>Negative Splits:</strong> Run second half faster than first half</li>
+                        <li><strong>Listen to Your Body:</strong> Adjust pace based on conditions and fatigue</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = world.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick pace reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Pace Reference</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>5K Pace</span>
+                            <span class="font-medium">6:00-9:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>10K Pace</span>
+                            <span class="font-medium">6:30-9:30/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Half Marathon</span>
+                            <span class="font-medium">7:00-10:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Marathon</span>
+                            <span class="font-medium">7:30-11:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Easy Run</span>
+                            <span class="font-medium">8:00-12:00/mile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running.html" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/pace-to-speed-converter.html" class="text-primary hover:underline">Pace to Speed Converter</a></li>
+                        <li><a href="/mileage-to-km-converter.html" class="text-primary hover:underline">Mile to KM Converter</a></li>
+                        <li><a href="/treadmill-pace-converter.html" class="text-primary hover:underline">Treadmill Pace Converter</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running.html" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                
+                // Add active to clicked tab
+                tab.classList.add('active', 'border-primary', 'text-primary');
+                tab.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Hide all content
+                contents.forEach(content => content.classList.add('hidden'));
+                
+                // Show target content
+                const targetId = tab.id.replace('-tab', '-calculator');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+        
+        // Running Pace Calculator implementations
+        class PaceCalculator extends Calculator {
+            constructor() {
+                super('pace-form', 'results');
+                this.timeCalculator = new TimeCalculator();
+                this.distanceCalculator = new DistanceCalculator();
+            }
+            
+            calculate() {
+                const distance = this.getInputValue('distance');
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                const units = this.form.querySelector('[name="units"]').value;
+                
+                if (!distance || distance <= 0) {
+                    this.displayError('Please enter a valid distance.');
+                    return;
+                }
+                
+                if (!minutes && !hours && !seconds) {
+                    this.displayError('Please enter a valid time.');
+                    return;
+                }
+                
+                // Convert total time to seconds
+                const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+                
+                if (totalSeconds <= 0) {
+                    this.displayError('Please enter a valid time.');
+                    return;
+                }
+                
+                // Calculate pace in seconds per unit
+                const paceInSeconds = totalSeconds / distance;
+                const paceMinutes = Math.floor(paceInSeconds / 60);
+                const paceSecondsRemainder = Math.round(paceInSeconds % 60);
+                
+                // Convert for alternate units
+                const isMetric = units === 'km';
+                const altDistance = isMetric ? distance * 0.621371 : distance * 1.60934;
+                const altPaceInSeconds = totalSeconds / altDistance;
+                const altPaceMinutes = Math.floor(altPaceInSeconds / 60);
+                const altPaceSecondsRemainder = Math.round(altPaceInSeconds % 60);
+                
+                const unitName = isMetric ? 'km' : 'mile';
+                const altUnitName = isMetric ? 'mile' : 'km';
+                
+                // Format total time
+                const totalTimeFormatted = this.formatTotalTime(hours, minutes, seconds);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Running Pace</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Pace per ${unitName}</div>
+                            <div class="text-4xl font-bold">${paceMinutes}:${paceSecondsRemainder.toString().padStart(2, '0')}</div>
+                            <div class="text-lg opacity-90 mt-2">${totalTimeFormatted} for ${distance} ${units}</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Pace per ${altUnitName}</h4>
+                                <div class="text-2xl font-bold text-gray-900">${altPaceMinutes}:${altPaceSecondsRemainder.toString().padStart(2, '0')}</div>
+                                <div class="text-sm text-gray-600">Converted pace</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Average Speed</h4>
+                                <div class="text-2xl font-bold text-gray-900">${(distance / (totalSeconds / 3600)).toFixed(2)}</div>
+                                <div class="text-sm text-gray-600">${units}/hour</div>
+                            </div>
+                        </div>
+                        
+                        ${this.generatePaceBreakdown(paceMinutes, paceSecondsRemainder, unitName)}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My running pace: ${paceMinutes}:${paceSecondsRemainder.toString().padStart(2, '0')} per ${unitName}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            formatTotalTime(hours, minutes, seconds) {
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            
+            generatePaceBreakdown(paceMin, paceSec, unit) {
+                const paceCategory = this.categorizePace(paceMin, paceSec, unit);
+                return `
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold text-blue-800 mb-2">Pace Analysis</h4>
+                        <p class="text-blue-700"><strong>Pace Category:</strong> ${paceCategory}</p>
+                    </div>
+                `;
+            }
+            
+            categorizePace(minutes, seconds, unit) {
+                const totalSeconds = (minutes * 60) + seconds;
+                const isMiles = unit === 'mile';
+                
+                // Convert to minutes per mile for comparison
+                const minutesPerMile = isMiles ? totalSeconds / 60 : (totalSeconds / 60) * 0.621371;
+                
+                if (minutesPerMile < 5.5) return 'Elite/Competitive';
+                if (minutesPerMile < 7) return 'Advanced';
+                if (minutesPerMile < 8.5) return 'Intermediate';
+                if (minutesPerMile < 10) return 'Beginner+';
+                if (minutesPerMile < 12) return 'Beginner';
+                return 'Walking/Easy Jogging';
+            }
+        }
+        
+        class TimeCalculator extends Calculator {
+            constructor() {
+                super('time-form', 'results');
+            }
+            
+            calculate() {
+                const distance = this.getInputValue('distance');
+                const paceMinutes = this.getInputValue('paceMinutes');
+                const paceSeconds = this.getInputValue('paceSeconds', 0);
+                const units = this.form.querySelector('[name="units"]').value;
+                
+                if (!distance || distance <= 0) {
+                    this.displayError('Please enter a valid distance.');
+                    return;
+                }
+                
+                if (!paceMinutes || paceMinutes <= 0) {
+                    this.displayError('Please enter a valid pace.');
+                    return;
+                }
+                
+                // Calculate total time in seconds
+                const paceInSeconds = (paceMinutes * 60) + paceSeconds;
+                const totalSeconds = paceInSeconds * distance;
+                
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.round(totalSeconds % 60);
+                
+                const paceFormatted = `${paceMinutes}:${paceSeconds.toString().padStart(2, '0')}`;
+                const timeFormatted = hours > 0 ? 
+                    `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` :
+                    `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Predicted Finish Time</h3>
+                        
+                        <div class="bg-secondary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Finish Time</div>
+                            <div class="text-4xl font-bold">${timeFormatted}</div>
+                            <div class="text-lg opacity-90 mt-2">${distance} ${units} at ${paceFormatted} pace</div>
+                        </div>
+                        
+                        ${this.generateSplitTimes(distance, paceInSeconds, units)}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.timeCalculator.shareResult('My predicted ${distance} ${units} finish time: ${timeFormatted}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.timeCalculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            generateSplitTimes(distance, paceInSeconds, units) {
+                const splits = [];
+                const commonSplits = units === 'miles' ? [1, 5, 10, 13.1, 26.2] : [1, 5, 10, 21.1, 42.2];
+                
+                commonSplits.forEach(split => {
+                    if (split <= distance) {
+                        const splitTime = split * paceInSeconds;
+                        const hours = Math.floor(splitTime / 3600);
+                        const minutes = Math.floor((splitTime % 3600) / 60);
+                        const seconds = Math.round(splitTime % 60);
+                        const timeFormatted = hours > 0 ? 
+                            `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` :
+                            `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        splits.push(`
+                            <div class="flex justify-between">
+                                <span>${split} ${units}</span>
+                                <span class="font-medium">${timeFormatted}</span>
+                            </div>
+                        `);
+                    }
+                });
+                
+                if (splits.length > 0) {
+                    return `
+                        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-3">Split Times</h4>
+                            <div class="space-y-2 text-sm">
+                                ${splits.join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                return '';
+            }
+        }
+        
+        class DistanceCalculator extends Calculator {
+            constructor() {
+                super('distance-form', 'results');
+            }
+            
+            calculate() {
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                const paceMinutes = this.getInputValue('paceMinutes');
+                const paceSeconds = this.getInputValue('paceSeconds', 0);
+                const units = this.form.querySelector('[name="units"]').value;
+                
+                if (!minutes && !hours && !seconds) {
+                    this.displayError('Please enter a valid time.');
+                    return;
+                }
+                
+                if (!paceMinutes || paceMinutes <= 0) {
+                    this.displayError('Please enter a valid pace.');
+                    return;
+                }
+                
+                // Calculate distance
+                const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+                const paceInSeconds = (paceMinutes * 60) + paceSeconds;
+                const distance = totalSeconds / paceInSeconds;
+                
+                const timeFormatted = hours > 0 ? 
+                    `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` :
+                    `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                const paceFormatted = `${paceMinutes}:${paceSeconds.toString().padStart(2, '0')}`;
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Distance Covered</h3>
+                        
+                        <div class="bg-accent text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Distance</div>
+                            <div class="text-4xl font-bold">${distance.toFixed(2)} ${units}</div>
+                            <div class="text-lg opacity-90 mt-2">${timeFormatted} at ${paceFormatted} pace</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">In ${units === 'miles' ? 'Kilometers' : 'Miles'}</h4>
+                                <div class="text-2xl font-bold text-gray-900">
+                                    ${units === 'miles' ? (distance * 1.60934).toFixed(2) : (distance * 0.621371).toFixed(2)}
+                                </div>
+                                <div class="text-sm text-gray-600">Converted distance</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-700">Average Speed</h4>
+                                <div class="text-2xl font-bold text-gray-900">${(distance / (totalSeconds / 3600)).toFixed(2)}</div>
+                                <div class="text-sm text-gray-600">${units}/hour</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.distanceCalculator.shareResult('I covered ${distance.toFixed(2)} ${units} in ${timeFormatted}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.distanceCalculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+        }
+        
+        // Initialize calculators
+        const calculator = new PaceCalculator();
+    </script>
+</body>
+</html>

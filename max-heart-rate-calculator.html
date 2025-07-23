@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Heart Rate Calculator - Multiple Formulas | RunBikeCalc</title>
+    <meta name="description" content="Calculate your maximum heart rate using multiple proven formulas. Compare Basic, Tanaka, Gelish, and Fox methods for accurate max HR estimation for training.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/max-heart-rate-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Maximum Heart Rate Calculator - Multiple Formulas">
+    <meta property="og:description" content="Calculate your max heart rate using proven scientific formulas">
+    <meta property="og:image" content="https://runbikecalc.com/images/max-hr-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/max-heart-rate-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maximum Heart Rate Calculator">
+    <meta name="twitter:description" content="Calculate your max heart rate using multiple proven formulas">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/max-hr-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Maximum Heart Rate Calculator",
+        "url": "https://runbikecalc.com/max-heart-rate-calculator",
+        "description": "Calculate maximum heart rate using multiple proven formulas",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link font-semibold text-primary">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item font-semibold text-primary">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Heart Rate Training</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Max HR Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Maximum Heart Rate Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate your maximum heart rate using multiple proven scientific formulas. Compare results from different methods to find the most accurate estimate for your training zones.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Your Max Heart Rate</h2>
+                    
+                    <form id="maxhr-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years) *
+                                </label>
+                                <input type="number" 
+                                       id="age" 
+                                       name="age" 
+                                       class="calc-input-number" 
+                                       placeholder="30"
+                                       required
+                                       min="18"
+                                       max="80"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your current age in years</p>
+                            </div>
+                            
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender (optional)
+                                </label>
+                                <select id="gender" name="gender" class="calc-input-number text-left">
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">For gender-specific formulas</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Maximum Heart Rate
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Maximum Heart Rate</h2>
+                    <p>Maximum heart rate (MHR) is the highest heart rate you can achieve during all-out physical exertion. It's a key metric for setting training zones and monitoring exercise intensity. MHR naturally decreases with age due to physiological changes.</p>
+                    
+                    <h3>Maximum Heart Rate Formulas Explained</h3>
+                    
+                    <h4>1. Basic Formula (220 - Age)</h4>
+                    <ul>
+                        <li><strong>Most Common:</strong> Widely used but has limitations</li>
+                        <li><strong>Accuracy:</strong> ±10-12 beats per minute standard deviation</li>
+                        <li><strong>Best For:</strong> General population, initial estimates</li>
+                        <li><strong>Limitation:</strong> Doesn't account for individual variation</li>
+                    </ul>
+                    
+                    <h4>2. Tanaka Formula (208 - 0.7 × Age)</h4>
+                    <ul>
+                        <li><strong>Research-Based:</strong> Based on large meta-analysis</li>
+                        <li><strong>Accuracy:</strong> More accurate than basic formula</li>
+                        <li><strong>Best For:</strong> Trained athletes and older adults</li>
+                        <li><strong>Advantage:</strong> Better for ages 40+</li>
+                    </ul>
+                    
+                    <h4>3. Gelish Formula (207 - 0.7 × Age)</h4>
+                    <ul>
+                        <li><strong>Similar to Tanaka:</strong> Slight variation in constant</li>
+                        <li><strong>Accuracy:</strong> Comparable to Tanaka method</li>
+                        <li><strong>Best For:</strong> General athletic population</li>
+                        <li><strong>Use Case:</strong> Alternative to Tanaka formula</li>
+                    </ul>
+                    
+                    <h4>4. Fox Formula (Male/Female Specific)</h4>
+                    <ul>
+                        <li><strong>Gender-Specific:</strong> Different formulas for men and women</li>
+                        <li><strong>Male:</strong> 220 - Age</li>
+                        <li><strong>Female:</strong> 226 - Age</li>
+                        <li><strong>Consideration:</strong> Accounts for gender differences</li>
+                    </ul>
+                    
+                    <h3>How to Use Your Maximum Heart Rate</h3>
+                    <p>Once you know your estimated MHR, you can:</p>
+                    <ul>
+                        <li><strong>Set Training Zones:</strong> Calculate heart rate training zones</li>
+                        <li><strong>Monitor Intensity:</strong> Ensure you're training at the right effort</li>
+                        <li><strong>Track Fitness:</strong> Monitor changes over time</li>
+                        <li><strong>Safety:</strong> Avoid overexertion during exercise</li>
+                    </ul>
+                    
+                    <h3>Limitations of Estimated Max HR</h3>
+                    <ul>
+                        <li><strong>Individual Variation:</strong> Formulas are population averages</li>
+                        <li><strong>Fitness Level:</strong> Training status can affect MHR</li>
+                        <li><strong>Genetics:</strong> Natural variation between individuals</li>
+                        <li><strong>Medication:</strong> Some medications can affect heart rate</li>
+                    </ul>
+                    
+                    <h3>Testing Your Actual Max HR</h3>
+                    <p>For the most accurate measurement, consider a supervised max HR test:</p>
+                    <ul>
+                        <li><strong>Professional Test:</strong> VO2 max test at sports lab</li>
+                        <li><strong>Field Test:</strong> Supervised incremental exercise test</li>
+                        <li><strong>Race Data:</strong> Analyze heart rate from all-out efforts</li>
+                        <li><strong>Safety First:</strong> Always consult a doctor before max testing</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/zone-2-calculator.html" class="text-primary hover:underline">Zone 2 Calculator</a></li>
+                        <li><a href="/target-heart-rate-calculator.html" class="text-primary hover:underline">Target Heart Rate Calculator</a></li>
+                        <li><a href="/mhr-karvonen-calculator.html" class="text-primary hover:underline">Karvonen Method Calculator</a></li>
+                        <li><a href="/lactate-threshold-calculator.html" class="text-primary hover:underline">Lactate Threshold Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Heart Rate Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator.html" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/max-heart-rate-calculator.html" class="hover:text-white">Max HR Calculator</a></li>
+                        <li><a href="/target-heart-rate-calculator.html" class="hover:text-white">Target HR Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Max Heart Rate Calculator implementation
+        class MaxHRCalculator extends Calculator {
+            calculate() {
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+                
+                if (!age || age < 18 || age > 80) {
+                    this.displayError('Please enter a valid age between 18 and 80.');
+                    return;
+                }
+                
+                // Calculate using different formulas
+                const formulas = [
+                    {
+                        name: 'Basic Formula',
+                        formula: '220 - Age',
+                        value: 220 - age,
+                        description: 'Most common formula, good for general estimates'
+                    },
+                    {
+                        name: 'Tanaka Formula',
+                        formula: '208 - (0.7 × Age)',
+                        value: 208 - (0.7 * age),
+                        description: 'More accurate for trained athletes and older adults'
+                    },
+                    {
+                        name: 'Gelish Formula',
+                        formula: '207 - (0.7 × Age)',
+                        value: 207 - (0.7 * age),
+                        description: 'Alternative research-based formula'
+                    }
+                ];
+                
+                // Add gender-specific formula if gender is selected
+                if (gender === 'male') {
+                    formulas.push({
+                        name: 'Fox Formula (Male)',
+                        formula: '220 - Age',
+                        value: 220 - age,
+                        description: 'Gender-specific formula for males'
+                    });
+                } else if (gender === 'female') {
+                    formulas.push({
+                        name: 'Fox Formula (Female)',
+                        formula: '226 - Age',
+                        value: 226 - age,
+                        description: 'Gender-specific formula for females'
+                    });
+                }
+                
+                // Calculate average and range
+                const values = formulas.map(f => f.value);
+                const average = values.reduce((a, b) => a + b, 0) / values.length;
+                const min = Math.min(...values);
+                const max = Math.max(...values);
+                
+                // Generate formula cards HTML
+                const formulaCards = formulas.map(formula => `
+                    <div class="bg-gray-50 p-4 rounded-lg border">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-semibold text-gray-800">${formula.name}</h4>
+                            <div class="text-2xl font-bold text-primary">${Math.round(formula.value)} BPM</div>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-1">Formula: ${formula.formula}</div>
+                        <div class="text-sm text-gray-600">${formula.description}</div>
+                    </div>
+                `).join('');
+                
+                // Display results
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Maximum Heart Rate Estimates</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Recommended Range</div>
+                            <div class="text-3xl font-bold">${Math.round(min)} - ${Math.round(max)} BPM</div>
+                            <div class="text-lg opacity-90 mt-2">Average: ${Math.round(average)} BPM</div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            ${formulaCards}
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Important Notes</h4>
+                            <ul class="text-sm text-yellow-700 space-y-1">
+                                <li>• These are estimates - actual max HR can vary ±10-15 BPM</li>
+                                <li>• For most accurate results, consider a supervised max HR test</li>
+                                <li>• Use the average value for setting training zones</li>
+                                <li>• Consult a doctor before attempting maximum heart rate testing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-100 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-gray-700 mb-2">Zone 2 Range</h4>
+                                <div class="text-xl font-bold text-green-600">${Math.round(average * 0.6)} - ${Math.round(average * 0.7)} BPM</div>
+                                <div class="text-sm text-gray-600">60-70% of average Max HR</div>
+                            </div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-gray-700 mb-2">Threshold Range</h4>
+                                <div class="text-xl font-bold text-orange-600">${Math.round(average * 0.8)} - ${Math.round(average * 0.9)} BPM</div>
+                                <div class="text-sm text-gray-600">80-90% of average Max HR</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My estimated max heart rate: ${Math.round(average)} BPM (${Math.round(min)}-${Math.round(max)} range)')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                // Save values for next time
+                this.saveValues();
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new MaxHRCalculator('maxhr-form', 'results');
+    </script>
+</body>
+</html>

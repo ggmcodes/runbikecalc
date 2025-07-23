@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes for calculators */
+@layer components {
+  /* Calculator input styling */
+  .calc-input {
+    @apply w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors;
+  }
+  
+  /* Mobile-optimized number input */
+  .calc-input-number {
+    @apply calc-input text-center font-mono;
+  }
+  
+  /* Calculator button styling */
+  .calc-button {
+    @apply w-full px-6 py-4 text-lg font-semibold text-white bg-primary rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-200 active:scale-95;
+  }
+  
+  /* Secondary button */
+  .calc-button-secondary {
+    @apply calc-button bg-gray-600 hover:bg-gray-700 focus:ring-gray-300;
+  }
+  
+  /* Result display */
+  .calc-result {
+    @apply p-6 bg-light rounded-lg border-2 border-secondary;
+  }
+  
+  /* Mobile-friendly touch target */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+  
+  /* Card component for calculator sections */
+  .calc-card {
+    @apply bg-white rounded-xl shadow-lg p-6 md:p-8;
+  }
+  
+  /* Navigation link styling */
+  .nav-link {
+    @apply text-gray-700 hover:text-primary font-medium transition-colors;
+  }
+  
+  /* Mobile menu item */
+  .mobile-menu-item {
+    @apply block px-4 py-3 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-primary transition-colors;
+  }
+}
+
+/* Ensure proper spacing on mobile */
+@layer utilities {
+  .safe-padding {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .safe-padding-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Smooth scrolling for better mobile experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift from scrollbar */
+@media (min-width: 768px) {
+  html {
+    margin-right: calc(100vw - 100%);
+  }
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  @apply ring-4 ring-primary ring-opacity-50 outline-none;
+}
+
+/* Print styles for calculator results */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .calc-result {
+    @apply border-black;
+  }
+}

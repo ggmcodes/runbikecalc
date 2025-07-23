@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://runbikecalc.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all search engines to index the site
+# No restrictions on calculator pages as they provide value
+
+# Block any potential admin or sensitive areas (none currently)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow caching of static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: *.css$
+Allow: *.js$
+Allow: *.png$
+Allow: *.jpg$
+Allow: *.gif$
+Allow: *.svg$
+Allow: *.ico$

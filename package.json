@@ -1,0 +1,21 @@
+{
+  "name": "runbikecalc",
+  "version": "1.0.0",
+  "description": "Calculator tools for endurance athletes - runners, cyclists, and triathletes",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify"
+  },
+  "keywords": [
+    "running calculator",
+    "cycling calculator",
+    "heart rate zones",
+    "vo2 max",
+    "endurance training"
+  ],
+  "author": "RunBikeCalc",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
