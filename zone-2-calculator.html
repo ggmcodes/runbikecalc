@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zone 2 Heart Rate Calculator - Find Your Aerobic Base Training Zone | RunBikeCalc</title>
-    <meta name="description" content="Calculate your Zone 2 heart rate for optimal aerobic base training. Free calculator for runners and cyclists. Get personalized training zones based on age and fitness level.">
+    <title>Zone 2 Heart Rate Calculator - 3 Methods + Average | RunBikeCalc</title>
+    <meta name="description" content="Calculate Zone 2 using three proven methods: Basic, Karvonen, and MAF. Compare methodologies and get averaged results for optimal aerobic base training.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://runbikecalc.com/zone-2-calculator">
@@ -115,7 +115,7 @@
         
         <!-- Page heading -->
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Zone 2 Heart Rate Calculator</h1>
-        <p class="text-lg text-gray-600 mb-8">Calculate your Zone 2 heart rate range for optimal aerobic base training. Zone 2 training improves fat oxidation, mitochondrial function, and endurance capacity.</p>
+        <p class="text-lg text-gray-600 mb-8">Calculate your Zone 2 heart rate using three proven methodologies: Basic Formula, Karvonen Method, and MAF Method. Compare results and get an averaged recommendation for optimal aerobic base training.</p>
         
         <!-- Ad placement - Top of content (desktop only) -->
         <div class="hidden md:block mb-8 text-center">
@@ -134,7 +134,7 @@
             <div class="md:col-span-2">
                 <!-- Calculator card -->
                 <div class="calc-card mb-8">
-                    <h2 class="text-2xl font-semibold mb-6">Zone 2 Calculator</h2>
+                    <h2 class="text-2xl font-semibold mb-6">Zone 2 Calculator - Three Methods</h2>
                     
                     <form id="zone2-form" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
@@ -156,35 +156,28 @@
                             
                             <div>
                                 <label for="restingHR" class="block text-sm font-medium text-gray-700 mb-2">
-                                    Resting Heart Rate (optional)
+                                    Resting Heart Rate (bpm) *
                                 </label>
                                 <input type="number" 
                                        id="restingHR" 
                                        name="restingHR" 
                                        class="calc-input-number" 
                                        placeholder="60"
+                                       required
                                        min="40"
                                        max="100"
                                        step="1">
-                                <p class="text-sm text-gray-600 mt-1">For more accurate Karvonen method</p>
+                                <p class="text-sm text-gray-600 mt-1">Required for Karvonen method accuracy</p>
                             </div>
                         </div>
                         
-                        <div>
-                            <label for="method" class="block text-sm font-medium text-gray-700 mb-2">
-                                Calculation Method
-                            </label>
-                            <select id="method" name="method" class="calc-input-number text-left">
-                                <option value="basic">Basic (220 - Age)</option>
-                                <option value="karvonen">Karvonen (Heart Rate Reserve)</option>
-                                <option value="tanaka">Tanaka Formula (208 - 0.7 × Age)</option>
-                                <option value="gelish">Gelish Formula (207 - 0.7 × Age)</option>
-                            </select>
-                            <p class="text-sm text-gray-600 mt-1">Choose your preferred calculation method</p>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">💡 Three Calculation Methods</h3>
+                            <p class="text-sm text-blue-700">This calculator uses three proven methodologies and provides an averaged result for the most accurate Zone 2 determination.</p>
                         </div>
                         
                         <button type="submit" class="calc-button">
-                            Calculate Zone 2 Range
+                            Calculate All Methods + Average
                         </button>
                     </form>
                     
@@ -192,40 +185,92 @@
                     <div id="results" class="hidden mt-8">
                         <!-- Results will be inserted here -->
                     </div>
+                    
+                    <!-- Method Comparison Table -->
+                    <div id="methodComparison" class="hidden mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Method Comparison</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse border border-gray-300">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th class="border border-gray-300 px-4 py-2 text-left">Method</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-center">Zone 2 Range</th>
+                                        <th class="border border-gray-300 px-4 py-2 text-center">Best For</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparisonTableBody">
+                                    <!-- Table rows will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Educational content -->
                 <article class="prose prose-lg max-w-none">
-                    <h2>What is Zone 2 Training?</h2>
-                    <p>Zone 2 training is aerobic base training performed at 60-70% of your maximum heart rate. This intensity allows you to maintain a conversation while exercising and primarily uses fat as fuel. Zone 2 training is crucial for building aerobic capacity, improving mitochondrial function, and enhancing fat oxidation.</p>
+                    <h2>The Three Zone 2 Calculation Methodologies</h2>
+                    <p>This calculator implements three scientifically-validated methods for determining Zone 2 heart rate, then averages them for the most accurate result. Each method has distinct advantages and historical significance in sports science.</p>
                     
-                    <h3>Benefits of Zone 2 Training</h3>
+                    <h3>1. Basic Formula Method (Fox-Haskell, 1970)</h3>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <p><strong>Formula:</strong> Zone 2 = 60-70% of (220 - Age)</p>
+                        <p><strong>History:</strong> Developed by Fox and Haskell in 1970, this became the foundational heart rate formula used worldwide. Originally derived from a small study of young men, it remains the most recognized despite limitations.</p>
+                        <p><strong>Best For:</strong> General population, fitness beginners, quick estimates</p>
+                        <p><strong>Limitations:</strong> ±10-12 bpm accuracy, doesn't account for individual fitness differences</p>
+                    </div>
+
+                    <h3>2. Karvonen Method (Heart Rate Reserve, 1957)</h3>
+                    <div class="bg-green-50 p-4 rounded-lg mb-4">
+                        <p><strong>Formula:</strong> Zone 2 = 60-70% of (Max HR - Resting HR) + Resting HR</p>
+                        <p><strong>History:</strong> Created by Finnish physiologist Martti Karvonen in 1957. This method considers individual cardiovascular fitness by incorporating resting heart rate, making it more personalized than basic formulas.</p>
+                        <p><strong>Best For:</strong> Trained athletes, individuals with known resting HR, personalized training</p>
+                        <p><strong>Advantages:</strong> More accurate for individuals, accounts for fitness level differences</p>
+                    </div>
+
+                    <h3>3. MAF Method (Maximum Aerobic Function, 1980s)</h3>
+                    <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                        <p><strong>Formula:</strong> Zone 2 = 180 - Age (with adjustments)</p>
+                        <p><strong>History:</strong> Developed by Dr. Phil Maffetone in the 1980s for aerobic base building. Based on the principle that 180 minus age represents the maximum aerobic heart rate where fat burning is optimized without anaerobic contribution.</p>
+                        <p><strong>Best For:</strong> Endurance athletes, fat adaptation training, aerobic base building</p>
+                        <p><strong>Philosophy:</strong> Focuses on pure aerobic development and metabolic efficiency</p>
+                    </div>
+
+                    <h3>Why Average All Three Methods?</h3>
+                    <p>Each method captures different physiological aspects of aerobic training. By averaging all three, we get a more robust estimate that accounts for:</p>
                     <ul>
-                        <li><strong>Improved Fat Oxidation:</strong> Trains your body to burn fat more efficiently</li>
-                        <li><strong>Enhanced Mitochondrial Function:</strong> Increases the number and efficiency of mitochondria</li>
-                        <li><strong>Better Endurance:</strong> Builds aerobic base for longer performances</li>
-                        <li><strong>Metabolic Health:</strong> Improves glucose metabolism and insulin sensitivity</li>
-                        <li><strong>Recovery:</strong> Low stress on the cardiovascular system</li>
+                        <li><strong>Individual variation</strong> (Karvonen adjustment)</li>
+                        <li><strong>Population norms</strong> (Basic formula baseline)</li>
+                        <li><strong>Metabolic efficiency</strong> (MAF focus on fat burning)</li>
                     </ul>
-                    
-                    <h3>How to Use Your Zone 2 Heart Rate</h3>
-                    <p>Once you know your Zone 2 range, aim to keep your heart rate within this zone during base training sessions. You should be able to hold a conversation comfortably. If you can't speak in full sentences, you're likely above Zone 2.</p>
-                    
-                    <h3>Zone 2 Training Guidelines</h3>
+
+                    <h3>The Science Behind Zone 2 Training</h3>
+                    <p>Zone 2 represents the highest intensity where aerobic metabolism predominates without significant lactate accumulation. At this intensity:</p>
                     <ul>
-                        <li>Start with 20-30 minute sessions if you're new to Zone 2 training</li>
-                        <li>Gradually increase duration to 45-90 minutes as fitness improves</li>
-                        <li>Include 2-4 Zone 2 sessions per week in your training plan</li>
-                        <li>Use a heart rate monitor to stay within your target zone</li>
+                        <li><strong>Mitochondrial Biogenesis:</strong> Stimulates creation of new mitochondria</li>
+                        <li><strong>Fat Oxidation:</strong> Maximizes fat burning capacity</li>
+                        <li><strong>Capillarization:</strong> Improves oxygen delivery to muscles</li>
+                        <li><strong>Metabolic Flexibility:</strong> Enhances ability to switch between fuel sources</li>
+                    </ul>
+
+                    <h3>Historical Development of Heart Rate Training</h3>
+                    <p>The evolution of heart rate training zones reflects our growing understanding of exercise physiology:</p>
+                    <ul>
+                        <li><strong>1957:</strong> Karvonen introduces heart rate reserve concept</li>
+                        <li><strong>1970:</strong> Fox-Haskell formula popularizes age-based calculations</li>
+                        <li><strong>1980s:</strong> Maffetone develops MAF for aerobic training</li>
+                        <li><strong>1990s:</strong> Lactate testing validates zone-based training</li>
+                        <li><strong>2000s:</strong> Power meters and advanced physiological testing emerge</li>
+                        <li><strong>Today:</strong> Integration of multiple methods for personalized training</li>
+                    </ul>
+
+                    <h3>Training Guidelines</h3>
+                    <ul>
+                        <li>Start with 20-30 minute sessions for beginners</li>
+                        <li>Progress to 45-90 minutes as aerobic capacity improves</li>
+                        <li>Include 2-4 Zone 2 sessions per week (80% of total training)</li>
+                        <li>Monitor using chest strap heart rate monitors for accuracy</li>
+                        <li>Maintain conversational pace throughout sessions</li>
                         <li>Focus on nasal breathing when possible</li>
-                    </ul>
-                    
-                    <h3>Calculation Methods Explained</h3>
-                    <ul>
-                        <li><strong>Basic (220 - Age):</strong> Simple but less accurate for individuals</li>
-                        <li><strong>Karvonen:</strong> More accurate, uses heart rate reserve (requires resting HR)</li>
-                        <li><strong>Tanaka:</strong> Better for older adults and trained athletes</li>
-                        <li><strong>Gelish:</strong> Alternative formula with similar accuracy to Tanaka</li>
                     </ul>
                 </article>
                 
@@ -326,109 +371,119 @@
             this.setAttribute('aria-expanded', !isExpanded);
         });
         
-        // Zone 2 Calculator implementation
+        // Zone 2 Calculator implementation with three methods
         class Zone2Calculator extends Calculator {
+            constructor() {
+                super('zone2-form', 'results');
+            }
+
+            calculateAllMethods(age, restingHR) {
+                const methods = {};
+                
+                // 1. Basic Formula (Fox-Haskell, 1970)
+                const basicMaxHR = 220 - age;
+                methods.basic = {
+                    name: 'Basic Formula',
+                    description: 'Fox-Haskell (1970)',
+                    maxHR: basicMaxHR,
+                    zone2Min: Math.round(basicMaxHR * 0.60),
+                    zone2Max: Math.round(basicMaxHR * 0.70),
+                    bestFor: 'General population, beginners'
+                };
+                
+                // 2. Karvonen Method (1957)
+                const karvonenMaxHR = 220 - age;
+                const hrReserve = karvonenMaxHR - restingHR;
+                methods.karvonen = {
+                    name: 'Karvonen Method',
+                    description: 'Heart Rate Reserve (1957)',
+                    maxHR: karvonenMaxHR,
+                    zone2Min: Math.round(restingHR + (hrReserve * 0.60)),
+                    zone2Max: Math.round(restingHR + (hrReserve * 0.70)),
+                    bestFor: 'Trained athletes, personalized training'
+                };
+                
+                // 3. MAF Method (Maffetone, 1980s)
+                const mafHR = 180 - age;
+                methods.maf = {
+                    name: 'MAF Method',
+                    description: 'Maximum Aerobic Function (1980s)',
+                    maxHR: mafHR, // MAF considers this the aerobic maximum
+                    zone2Min: Math.round(mafHR * 0.90), // Slightly below MAF
+                    zone2Max: Math.round(mafHR), // At MAF level
+                    bestFor: 'Endurance athletes, fat adaptation'
+                };
+                
+                return methods;
+            }
+
             calculate() {
                 const age = this.getInputValue('age');
-                const restingHR = this.getInputValue('restingHR', 0);
-                const method = this.form.querySelector('[name="method"]').value;
+                const restingHR = this.getInputValue('restingHR');
                 
                 if (!age || age < 18 || age > 80) {
                     this.displayError('Please enter a valid age between 18 and 80.');
                     return;
                 }
                 
-                let maxHR;
-                let zone2Min, zone2Max;
-                let methodName;
-                
-                // Calculate max heart rate based on method
-                switch (method) {
-                    case 'basic':
-                        maxHR = 220 - age;
-                        methodName = 'Basic Formula (220 - Age)';
-                        break;
-                    case 'tanaka':
-                        maxHR = 208 - (0.7 * age);
-                        methodName = 'Tanaka Formula';
-                        break;
-                    case 'gelish':
-                        maxHR = 207 - (0.7 * age);
-                        methodName = 'Gelish Formula';
-                        break;
-                    case 'karvonen':
-                        if (!restingHR || restingHR < 40 || restingHR > 100) {
-                            this.displayError('Please enter a valid resting heart rate (40-100 bpm) for the Karvonen method.');
-                            return;
-                        }
-                        maxHR = 220 - age; // Base calculation for Karvonen
-                        methodName = 'Karvonen Method (Heart Rate Reserve)';
-                        break;
+                if (!restingHR || restingHR < 40 || restingHR > 100) {
+                    this.displayError('Please enter a valid resting heart rate (40-100 bpm).');
+                    return;
                 }
                 
-                // Calculate Zone 2 range (60-70% of max HR or HRR)
-                if (method === 'karvonen' && restingHR > 0) {
-                    const hrReserve = maxHR - restingHR;
-                    zone2Min = Math.round(restingHR + (hrReserve * 0.60));
-                    zone2Max = Math.round(restingHR + (hrReserve * 0.70));
-                } else {
-                    zone2Min = Math.round(maxHR * 0.60);
-                    zone2Max = Math.round(maxHR * 0.70);
-                }
+                const methods = this.calculateAllMethods(age, restingHR);
                 
-                // Calculate other zones for context
-                const zone1Max = Math.round(maxHR * 0.60);
-                const zone3Min = Math.round(maxHR * 0.70);
-                const zone3Max = Math.round(maxHR * 0.80);
+                // Calculate averaged result
+                const avgZone2Min = Math.round((methods.basic.zone2Min + methods.karvonen.zone2Min + methods.maf.zone2Min) / 3);
+                const avgZone2Max = Math.round((methods.basic.zone2Max + methods.karvonen.zone2Max + methods.maf.zone2Max) / 3);
                 
-                // Display results
+                // Display main results
                 this.displayResult(`
                     <div class="calc-result">
-                        <h3 class="text-xl font-semibold mb-4">Your Zone 2 Heart Rate Range</h3>
+                        <h3 class="text-xl font-semibold mb-4">Your Zone 2 Heart Rate - Three Method Analysis</h3>
                         
-                        <div class="bg-primary text-white p-4 rounded-lg mb-6 text-center">
-                            <div class="text-3xl font-bold">${zone2Min} - ${zone2Max} BPM</div>
-                            <div class="text-lg opacity-90">Zone 2 Training Range</div>
+                        <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-sm opacity-90 mb-2">RECOMMENDED ZONE 2 RANGE</div>
+                            <div class="text-4xl font-bold">${avgZone2Min} - ${avgZone2Max} BPM</div>
+                            <div class="text-lg opacity-90 mt-2">Average of All Three Methods</div>
                         </div>
                         
-                        <div class="grid md:grid-cols-2 gap-4 mb-6">
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <h4 class="font-semibold text-gray-700">Estimated Max HR</h4>
-                                <div class="text-2xl font-bold text-gray-900">${Math.round(maxHR)} BPM</div>
-                                <div class="text-sm text-gray-600">${methodName}</div>
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg border-2 border-blue-200">
+                                <h4 class="font-semibold text-blue-800 mb-1">${methods.basic.name}</h4>
+                                <div class="text-2xl font-bold text-blue-900">${methods.basic.zone2Min}-${methods.basic.zone2Max}</div>
+                                <div class="text-sm text-blue-700">${methods.basic.description}</div>
                             </div>
                             
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <h4 class="font-semibold text-gray-700">Zone 2 Percentage</h4>
-                                <div class="text-2xl font-bold text-gray-900">60% - 70%</div>
-                                <div class="text-sm text-gray-600">of Max Heart Rate</div>
+                            <div class="bg-green-50 p-4 rounded-lg border-2 border-green-200">
+                                <h4 class="font-semibold text-green-800 mb-1">${methods.karvonen.name}</h4>
+                                <div class="text-2xl font-bold text-green-900">${methods.karvonen.zone2Min}-${methods.karvonen.zone2Max}</div>
+                                <div class="text-sm text-green-700">${methods.karvonen.description}</div>
+                            </div>
+                            
+                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-200">
+                                <h4 class="font-semibold text-yellow-800 mb-1">${methods.maf.name}</h4>
+                                <div class="text-2xl font-bold text-yellow-900">${methods.maf.zone2Min}-${methods.maf.zone2Max}</div>
+                                <div class="text-sm text-yellow-700">${methods.maf.description}</div>
                             </div>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="font-semibold mb-3">Training Zone Context</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between p-2 bg-blue-50 rounded">
-                                    <span>Zone 1 (Recovery)</span>
-                                    <span class="font-medium">< ${zone1Max} BPM</span>
-                                </div>
-                                <div class="flex justify-between p-2 bg-green-100 rounded border-2 border-green-500">
-                                    <span><strong>Zone 2 (Aerobic Base)</strong></span>
-                                    <span class="font-bold">${zone2Min} - ${zone2Max} BPM</span>
-                                </div>
-                                <div class="flex justify-between p-2 bg-yellow-50 rounded">
-                                    <span>Zone 3 (Aerobic)</span>
-                                    <span class="font-medium">${zone3Min} - ${zone3Max} BPM</span>
-                                </div>
-                            </div>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">📊 Why These Numbers Differ</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li><strong>Basic Formula:</strong> Population average, doesn't account for individual fitness</li>
+                                <li><strong>Karvonen:</strong> Personalized using your resting HR, more accurate for trained individuals</li>
+                                <li><strong>MAF:</strong> Conservative approach focused on pure aerobic development</li>
+                            </ul>
                         </div>
                         
-                        <div class="text-sm text-gray-600 mb-6">
-                            <p><strong>Training Tips:</strong> Stay within your Zone 2 range for aerobic base building. You should be able to maintain a conversation comfortably during Zone 2 training.</p>
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">🎯 Training Recommendation</h4>
+                            <p class="text-green-700 text-sm">Use the averaged range (${avgZone2Min}-${avgZone2Max} BPM) for most training. If you're new to Zone 2, start closer to ${avgZone2Min} BPM. Advanced athletes may use the Karvonen result for precision.</p>
                         </div>
                         
                         <div class="flex flex-wrap gap-4">
-                            <button onclick="calculator.shareResult('My Zone 2 heart rate range: ${zone2Min}-${zone2Max} BPM')" class="calc-button-secondary">
+                            <button onclick="calculator.shareResult('My Zone 2 heart rate range: ${avgZone2Min}-${avgZone2Max} BPM (3-method average)')" class="calc-button-secondary">
                                 Share Result
                             </button>
                             <button onclick="calculator.printResult()" class="calc-button-secondary">
@@ -438,13 +493,39 @@
                     </div>
                 `);
                 
+                // Show method comparison table
+                document.getElementById('methodComparison').classList.remove('hidden');
+                const tableBody = document.getElementById('comparisonTableBody');
+                tableBody.innerHTML = `
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2 font-medium">Basic Formula</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center font-bold">${methods.basic.zone2Min}-${methods.basic.zone2Max} bpm</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center text-sm">${methods.basic.bestFor}</td>
+                    </tr>
+                    <tr class="bg-green-50">
+                        <td class="border border-gray-300 px-4 py-2 font-medium">Karvonen Method</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center font-bold">${methods.karvonen.zone2Min}-${methods.karvonen.zone2Max} bpm</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center text-sm">${methods.karvonen.bestFor}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2 font-medium">MAF Method</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center font-bold">${methods.maf.zone2Min}-${methods.maf.zone2Max} bpm</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center text-sm">${methods.maf.bestFor}</td>
+                    </tr>
+                    <tr class="bg-blue-100 font-bold">
+                        <td class="border border-gray-300 px-4 py-2">AVERAGED RECOMMENDATION</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center text-primary">${avgZone2Min}-${avgZone2Max} bpm</td>
+                        <td class="border border-gray-300 px-4 py-2 text-center text-sm">Most accurate for general use</td>
+                    </tr>
+                `;
+                
                 // Save values for next time
                 this.saveValues();
             }
         }
         
         // Initialize calculator
-        const calculator = new Zone2Calculator('zone2-form', 'results');
+        const calculator = new Zone2Calculator();
     </script>
 </body>
 </html>

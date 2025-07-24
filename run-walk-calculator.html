@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run-Walk Calculator - Training Interval Timer & Pace Calculator | RunBikeCalc</title>
+    <meta name="description" content="Free run-walk calculator for beginners and injury recovery. Calculate optimal run-walk intervals, total time, and average pace for your training plan.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/run-walk-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Run-Walk Calculator - Training Interval Timer">
+    <meta property="og:description" content="Calculate optimal run-walk intervals for beginner training and injury recovery">
+    <meta property="og:image" content="https://runbikecalc.com/images/run-walk-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/run-walk-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Run-Walk Calculator">
+    <meta name="twitter:description" content="Calculate run-walk intervals for training">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/run-walk-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Run-Walk Calculator",
+        "url": "https://runbikecalc.com/run-walk-calculator",
+        "description": "Calculate optimal run-walk intervals for training and injury recovery",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Run-Walk Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Run-Walk Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate optimal run-walk intervals for beginner training, injury recovery, or endurance building. Find your perfect run-walk ratio and total workout time.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Run-Walk Intervals</h2>
+                    
+                    <form id="run-walk-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="totalDistance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Total Distance *
+                                </label>
+                                <input type="number" 
+                                       id="totalDistance" 
+                                       name="totalDistance" 
+                                       class="calc-input-number" 
+                                       placeholder="3.1"
+                                       required
+                                       min="0.1"
+                                       max="50"
+                                       step="0.1">
+                                <p class="text-sm text-gray-600 mt-1">Distance to cover (miles or km)</p>
+                            </div>
+                            
+                            <div>
+                                <label for="distanceUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Unit
+                                </label>
+                                <select id="distanceUnit" name="distanceUnit" class="calc-input-number text-left">
+                                    <option value="miles">Miles</option>
+                                    <option value="km">Kilometers</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your preferred unit</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="runMinutes" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Run Interval (minutes) *
+                                </label>
+                                <input type="number" 
+                                       id="runMinutes" 
+                                       name="runMinutes" 
+                                       class="calc-input-number" 
+                                       placeholder="2"
+                                       required
+                                       min="0.5"
+                                       max="60"
+                                       step="0.5">
+                                <p class="text-sm text-gray-600 mt-1">How long to run in each interval</p>
+                            </div>
+                            
+                            <div>
+                                <label for="walkMinutes" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Walk Interval (minutes) *
+                                </label>
+                                <input type="number" 
+                                       id="walkMinutes" 
+                                       name="walkMinutes" 
+                                       class="calc-input-number" 
+                                       placeholder="1"
+                                       required
+                                       min="0.5"
+                                       max="60"
+                                       step="0.5">
+                                <p class="text-sm text-gray-600 mt-1">How long to walk between runs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="runPace" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Running Pace *
+                                </label>
+                                <input type="text" 
+                                       id="runPace" 
+                                       name="runPace" 
+                                       class="calc-input-number" 
+                                       placeholder="9:00"
+                                       required
+                                       pattern="[0-9]{1,2}:[0-5][0-9]">
+                                <p class="text-sm text-gray-600 mt-1">Pace per mile/km (MM:SS format)</p>
+                            </div>
+                            
+                            <div>
+                                <label for="walkPace" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Walking Pace *
+                                </label>
+                                <input type="text" 
+                                       id="walkPace" 
+                                       name="walkPace" 
+                                       class="calc-input-number" 
+                                       placeholder="15:00"
+                                       required
+                                       pattern="[0-9]{1,2}:[0-5][0-9]">
+                                <p class="text-sm text-gray-600 mt-1">Walking pace per mile/km (MM:SS format)</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Run-Walk Plan
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Run-Walk Training</h2>
+                    <p>The run-walk method is a proven training technique that alternates between running and walking intervals. Originally popularized by Jeff Galloway, this method helps beginners build endurance, allows injured runners to maintain fitness, and can even improve performance in experienced athletes.</p>
+                    
+                    <h3>Benefits of Run-Walk Training</h3>
+                    
+                    <h4>For Beginners</h4>
+                    <ul>
+                        <li><strong>Gradual Progression:</strong> Builds running fitness without overwhelming your body</li>
+                        <li><strong>Reduced Injury Risk:</strong> Walking breaks reduce impact stress on joints</li>
+                        <li><strong>Mental Benefits:</strong> Makes long distances feel more manageable</li>
+                        <li><strong>Faster Recovery:</strong> Walking intervals help clear lactate buildup</li>
+                    </ul>
+                    
+                    <h4>For Experienced Runners</h4>
+                    <ul>
+                        <li><strong>Injury Recovery:</strong> Maintains fitness while healing from injury</li>
+                        <li><strong>Race Strategy:</strong> Can improve marathon times by preventing burnout</li>
+                        <li><strong>Volume Building:</strong> Allows for higher training volume</li>
+                        <li><strong>Active Recovery:</strong> Perfect for easy training days</li>
+                    </ul>
+                    
+                    <h3>Popular Run-Walk Ratios</h3>
+                    
+                    <h4>Beginner Ratios</h4>
+                    <ul>
+                        <li><strong>1:2 (Run 1, Walk 2):</strong> Very new runners - run 1 minute, walk 2 minutes</li>
+                        <li><strong>1:1 (Run 1, Walk 1):</strong> Building base fitness - equal run and walk intervals</li>
+                        <li><strong>2:1 (Run 2, Walk 1):</strong> Progressing beginners - more running than walking</li>
+                    </ul>
+                    
+                    <h4>Intermediate Ratios</h4>
+                    <ul>
+                        <li><strong>3:1 (Run 3, Walk 1):</strong> Building endurance with regular breaks</li>
+                        <li><strong>4:1 (Run 4, Walk 1):</strong> Mostly running with strategic walk breaks</li>
+                        <li><strong>5:1 (Run 5, Walk 1):</strong> Advanced run-walk for long distances</li>
+                    </ul>
+                    
+                    <h4>Advanced/Race Ratios</h4>
+                    <ul>
+                        <li><strong>10:1 (Run 10, Walk 1):</strong> Marathon strategy for sub-4:30 goals</li>
+                        <li><strong>15:1 (Run 15, Walk 1):</strong> For faster marathon times</li>
+                        <li><strong>Mile:30s:</strong> Run each mile, walk 30 seconds</li>
+                    </ul>
+                    
+                    <h3>How to Choose Your Ratio</h3>
+                    
+                    <h4>Factors to Consider</h4>
+                    <ul>
+                        <li><strong>Current Fitness Level:</strong> Beginners need more walking</li>
+                        <li><strong>Distance Goal:</strong> Longer distances may need more frequent breaks</li>
+                        <li><strong>Injury History:</strong> More walking for injury prevention</li>
+                        <li><strong>Weather Conditions:</strong> Hot weather may require more walking</li>
+                        <li><strong>Time Goals:</strong> Faster goals need less walking</li>
+                    </ul>
+                    
+                    <h4>Progression Guidelines</h4>
+                    <ol>
+                        <li><strong>Start Conservative:</strong> Begin with more walking than you think you need</li>
+                        <li><strong>Be Consistent:</strong> Use the same ratio for 2-3 weeks before changing</li>
+                        <li><strong>Gradual Changes:</strong> Increase running by 30-60 seconds at a time</li>
+                        <li><strong>Listen to Your Body:</strong> Some days you may need more walking</li>
+                    </ol>
+                    
+                    <h3>Training Tips</h3>
+                    
+                    <h4>Getting Started</h4>
+                    <ul>
+                        <li><strong>Use a Timer:</strong> Watch or app with interval alerts</li>
+                        <li><strong>Start Easy:</strong> Both running and walking should feel comfortable</li>
+                        <li><strong>Focus on Time:</strong> Don't worry about pace initially</li>
+                        <li><strong>Stay Consistent:</strong> Stick to your planned intervals</li>
+                    </ul>
+                    
+                    <h4>Advanced Strategies</h4>
+                    <ul>
+                        <li><strong>Heart Rate Control:</strong> Use walking breaks to manage heart rate</li>
+                        <li><strong>Terrain Adaptation:</strong> Walk uphills, run flats and downhills</li>
+                        <li><strong>Race Simulation:</strong> Practice your race-day run-walk plan</li>
+                        <li><strong>Fuel Strategy:</strong> Use walk breaks for hydration and nutrition</li>
+                    </ul>
+                    
+                    <h3>Common Mistakes to Avoid</h3>
+                    <ul>
+                        <li><strong>Running Too Fast:</strong> Running intervals should be conversational</li>
+                        <li><strong>Walking Too Slow:</strong> Maintain good walking form and pace</li>
+                        <li><strong>Inconsistent Intervals:</strong> Stick to your planned timing</li>
+                        <li><strong>Progressing Too Quickly:</strong> Increase gradually over weeks</li>
+                        <li><strong>Skipping Walk Breaks:</strong> Take all planned walking intervals</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick ratio reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Common Ratios</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Beginner</span>
+                            <span class="font-medium">1:2 or 1:1</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Intermediate</span>
+                            <span class="font-medium">2:1 or 3:1</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Advanced</span>
+                            <span class="font-medium">4:1 or 5:1</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Race Day</span>
+                            <span class="font-medium">10:1 or 15:1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="text-primary hover:underline">Calories Burned Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Run-Walk Calculator implementation
+        class RunWalkCalculator extends Calculator {
+            calculate() {
+                const totalDistance = this.getInputValue('totalDistance');
+                const distanceUnit = this.form.querySelector('[name="distanceUnit"]').value;
+                const runMinutes = this.getInputValue('runMinutes');
+                const walkMinutes = this.getInputValue('walkMinutes');
+                const runPaceInput = this.form.querySelector('[name="runPace"]').value;
+                const walkPaceInput = this.form.querySelector('[name="walkPace"]').value;
+                
+                if (!totalDistance || !runMinutes || !walkMinutes || !runPaceInput || !walkPaceInput) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Parse pace inputs (MM:SS format)
+                const runPace = this.parsePace(runPaceInput);
+                const walkPace = this.parsePace(walkPaceInput);
+                
+                if (!runPace || !walkPace) {
+                    this.displayError('Please enter pace in MM:SS format (e.g., 9:00).');
+                    return;
+                }
+                
+                // Calculate distances covered in each interval
+                const runDistancePerInterval = runMinutes / runPace; // in miles or km
+                const walkDistancePerInterval = walkMinutes / walkPace; // in miles or km
+                const totalDistancePerCycle = runDistancePerInterval + walkDistancePerInterval;
+                
+                // Calculate number of complete cycles needed
+                const completeCycles = Math.floor(totalDistance / totalDistancePerCycle);
+                const remainingDistance = totalDistance - (completeCycles * totalDistancePerCycle);
+                
+                // Calculate final partial interval
+                let finalRunTime = 0;
+                let finalWalkTime = 0;
+                let finalRunDistance = 0;
+                let finalWalkDistance = 0;
+                
+                if (remainingDistance > 0) {
+                    if (remainingDistance <= runDistancePerInterval) {
+                        // Only need partial run interval
+                        finalRunTime = remainingDistance * runPace;
+                        finalRunDistance = remainingDistance;
+                    } else {
+                        // Need full run interval + partial walk
+                        finalRunTime = runMinutes;
+                        finalRunDistance = runDistancePerInterval;
+                        finalWalkDistance = remainingDistance - runDistancePerInterval;
+                        finalWalkTime = finalWalkDistance * walkPace;
+                    }
+                }
+                
+                // Calculate totals
+                const totalRunTime = (completeCycles * runMinutes) + finalRunTime;
+                const totalWalkTime = (completeCycles * walkMinutes) + finalWalkTime;
+                const totalTime = totalRunTime + totalWalkTime;
+                
+                const totalRunDistance = (completeCycles * runDistancePerInterval) + finalRunDistance;
+                const totalWalkDistance = (completeCycles * walkDistancePerInterval) + finalWalkDistance;
+                
+                // Calculate average pace
+                const averagePace = totalTime / totalDistance;
+                
+                // Calculate percentages
+                const runPercentage = (totalRunTime / totalTime) * 100;
+                const walkPercentage = (totalWalkTime / totalTime) * 100;
+                
+                // Generate interval breakdown
+                const intervalBreakdown = this.generateIntervalBreakdown(
+                    completeCycles, runMinutes, walkMinutes, 
+                    finalRunTime, finalWalkTime, distanceUnit
+                );
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Run-Walk Plan</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-primary text-white p-6 rounded-lg text-center">
+                                <div class="text-lg font-semibold mb-2">Total Time</div>
+                                <div class="text-3xl font-bold">${this.formatTime(totalTime)}</div>
+                                <div class="text-sm opacity-90 mt-2">${totalDistance} ${distanceUnit}</div>
+                            </div>
+                            
+                            <div class="bg-secondary text-white p-6 rounded-lg text-center">
+                                <div class="text-lg font-semibold mb-2">Average Pace</div>
+                                <div class="text-3xl font-bold">${this.formatPace(averagePace)}</div>
+                                <div class="text-sm opacity-90 mt-2">per ${distanceUnit.slice(0, -1)}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Running</h4>
+                                <div class="text-2xl font-bold text-green-700">${this.formatTime(totalRunTime)}</div>
+                                <div class="text-sm text-green-600">${runPercentage.toFixed(1)}% of total</div>
+                                <div class="text-sm text-green-600">${totalRunDistance.toFixed(2)} ${distanceUnit}</div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Walking</h4>
+                                <div class="text-2xl font-bold text-blue-700">${this.formatTime(totalWalkTime)}</div>
+                                <div class="text-sm text-blue-600">${walkPercentage.toFixed(1)}% of total</div>
+                                <div class="text-sm text-blue-600">${totalWalkDistance.toFixed(2)} ${distanceUnit}</div>
+                            </div>
+                            
+                            <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-yellow-800">Intervals</h4>
+                                <div class="text-2xl font-bold text-yellow-700">${completeCycles + (finalRunTime > 0 ? 1 : 0)}</div>
+                                <div class="text-sm text-yellow-600">Total cycles</div>
+                                <div class="text-sm text-yellow-600">Run ${runMinutes}:Walk ${walkMinutes}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Interval Breakdown</h4>
+                            <div class="text-sm space-y-1">
+                                ${intervalBreakdown}
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Training Tips</h4>
+                            <div class="text-sm text-blue-700 space-y-1">
+                                <p>• Set a timer or use a run-walk app for consistent intervals</p>
+                                <p>• Maintain the same effort level throughout running segments</p>
+                                <p>• Walk briskly during walking intervals - don't stop completely</p>
+                                <p>• Practice your run-walk rhythm before race day</p>
+                                <p>• Consider walking through aid stations if racing</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My run-walk plan: ${this.formatTime(totalTime)} for ${totalDistance} ${distanceUnit} with ${runMinutes}:${walkMinutes} intervals')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            parsePace(paceString) {
+                const parts = paceString.split(':');
+                if (parts.length !== 2) return null;
+                
+                const minutes = parseInt(parts[0]);
+                const seconds = parseInt(parts[1]);
+                
+                if (isNaN(minutes) || isNaN(seconds) || seconds >= 60) return null;
+                
+                return minutes + (seconds / 60); // Return total minutes as decimal
+            }
+            
+            formatTime(totalMinutes) {
+                const hours = Math.floor(totalMinutes / 60);
+                const minutes = Math.floor(totalMinutes % 60);
+                const seconds = Math.round((totalMinutes % 1) * 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            
+            formatPace(paceMinutes) {
+                const minutes = Math.floor(paceMinutes);
+                const seconds = Math.round((paceMinutes % 1) * 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            generateIntervalBreakdown(completeCycles, runMinutes, walkMinutes, finalRunTime, finalWalkTime, unit) {
+                let breakdown = '';
+                
+                if (completeCycles > 0) {
+                    breakdown += `<p>• ${completeCycles} complete cycles of Run ${runMinutes} min, Walk ${walkMinutes} min</p>`;
+                }
+                
+                if (finalRunTime > 0 || finalWalkTime > 0) {
+                    let finalText = '• Final interval: ';
+                    if (finalRunTime > 0) {
+                        finalText += `Run ${this.formatTime(finalRunTime)}`;
+                    }
+                    if (finalWalkTime > 0) {
+                        if (finalRunTime > 0) finalText += ', ';
+                        finalText += `Walk ${this.formatTime(finalWalkTime)}`;
+                    }
+                    breakdown += `<p>${finalText}</p>`;
+                }
+                
+                return breakdown || '<p>No intervals needed for this distance</p>';
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new RunWalkCalculator('run-walk-form', 'results');
+    </script>
+</body>
+</html>

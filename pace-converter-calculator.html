@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace Converter Calculator - Convert Running Paces and Times | RunBikeCalc</title>
+    <meta name="description" content="Convert between different running paces, times, and distances with our comprehensive pace converter. Supports min/mile, min/km, mph, and km/h conversions.">
+    <meta name="keywords" content="pace converter, running pace calculator, pace conversion, min per mile, min per km, speed converter, running calculator">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pace Converter Calculator - Convert Running Paces and Times">
+    <meta property="og:description" content="Convert between different running paces, times, and distances with our comprehensive pace converter. Supports min/mile, min/km, mph, and km/h conversions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/pace-converter-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-pace-converter-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/pace-converter-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pace Converter Calculator",
+        "description": "Convert between different running paces, times, and distances with our comprehensive pace converter.",
+        "url": "https://runbikecalc.com/pace-converter-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/zone-2-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Zone 2 Calculator</a>
+                                <a href="/pace-converter-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pace Converter</a>
+                                <a href="/running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                                <a href="/vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/pace-converter-calculator" class="mobile-menu-item">Pace Converter</a>
+                    <a href="/running-pace-calculator" class="mobile-menu-item">Running Pace</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2">Pace Converter Calculator</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Pace Converter Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Convert between different pace formats: min/mile, min/km, mph, and km/h. Perfect for runners training with different measurement systems.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <form id="pace-converter-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="input-pace" class="block text-sm font-medium text-gray-700 mb-2">
+                                Enter Pace
+                            </label>
+                            <input type="text" id="input-pace" class="calc-input-number" placeholder="7:30" required>
+                            <p class="text-sm text-gray-500 mt-1">Format: MM:SS (e.g., 7:30)</p>
+                        </div>
+
+                        <div>
+                            <label for="input-unit" class="block text-sm font-medium text-gray-700 mb-2">
+                                Input Unit
+                            </label>
+                            <select id="input-unit" class="calc-input-number" required>
+                                <option value="">Select unit</option>
+                                <option value="min-mile">Minutes per Mile</option>
+                                <option value="min-km">Minutes per Kilometer</option>
+                                <option value="mph">Miles per Hour</option>
+                                <option value="kmh">Kilometers per Hour</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="calc-button">Convert Pace</button>
+                        <button type="button" id="share-result" class="calc-button-secondary">Share Result</button>
+                        <button type="reset" class="calc-button-secondary">Reset</button>
+                    </div>
+                </form>
+
+                <div id="pace-result" class="mt-8 hidden">
+                    <div class="calc-result">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2" id="min-mile">0:00</div>
+                                <div class="text-gray-600">Minutes per Mile</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-semibold text-secondary mb-2" id="min-km">0:00</div>
+                                <div class="text-gray-600">Minutes per Kilometer</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 grid md:grid-cols-2 gap-6 text-center">
+                            <div class="bg-blue-50 p-4 rounded">
+                                <div class="font-semibold text-blue-800" id="mph">0.0</div>
+                                <div class="text-sm text-blue-600">Miles per Hour</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded">
+                                <div class="font-semibold text-green-800" id="kmh">0.0</div>
+                                <div class="text-sm text-green-600">Kilometers per Hour</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">Common Race Times at This Pace</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm" id="race-times">
+                                <!-- Race times will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Pace Conversions</h2>
+                
+                <p>Pace conversion is essential for runners who train in different measurement systems or participate in international races. Understanding the relationship between pace formats helps you communicate with coaches, training partners, and race organizers worldwide.</p>
+
+                <h3>Common Pace Formats</h3>
+                
+                <ul>
+                    <li><strong>Minutes per Mile:</strong> Common in the United States</li>
+                    <li><strong>Minutes per Kilometer:</strong> Standard in most countries</li>
+                    <li><strong>Miles per Hour:</strong> Speed format used on treadmills</li>
+                    <li><strong>Kilometers per Hour:</strong> International speed format</li>
+                </ul>
+
+                <h3>Quick Reference Conversions</h3>
+                
+                <p>Here are some common pace conversions for reference:</p>
+                
+                <ul>
+                    <li>5:00/mile = 3:06/km = 12.0 mph = 19.3 km/h</li>
+                    <li>6:00/mile = 3:44/km = 10.0 mph = 16.1 km/h</li>
+                    <li>7:00/mile = 4:21/km = 8.6 mph = 13.8 km/h</li>
+                    <li>8:00/mile = 4:58/km = 7.5 mph = 12.1 km/h</li>
+                    <li>9:00/mile = 5:35/km = 6.7 mph = 10.7 km/h</li>
+                    <li>10:00/mile = 6:13/km = 6.0 mph = 9.7 km/h</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/pace-converter-calculator" class="hover:text-white">Pace Converter</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        class PaceConverterCalculator extends Calculator {
+            constructor() {
+                super('pace-converter-form', 'pace-result');
+                this.setupEventListeners();
+            }
+
+            parseTimeInput(input) {
+                if (input.includes(':')) {
+                    const [minutes, seconds] = input.split(':').map(Number);
+                    return minutes + (seconds / 60);
+                }
+                return parseFloat(input);
+            }
+
+            formatTime(minutes) {
+                const mins = Math.floor(minutes);
+                const secs = Math.round((minutes - mins) * 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            calculate(formData) {
+                const inputPace = formData.get('input-pace');
+                const inputUnit = formData.get('input-unit');
+
+                let value = this.parseTimeInput(inputPace);
+                let minPerMile, minPerKm, mph, kmh;
+
+                // Convert input to minutes per mile
+                switch (inputUnit) {
+                    case 'min-mile':
+                        minPerMile = value;
+                        break;
+                    case 'min-km':
+                        minPerMile = value * 1.609344;
+                        break;
+                    case 'mph':
+                        minPerMile = 60 / value;
+                        break;
+                    case 'kmh':
+                        minPerMile = 60 / (value / 1.609344);
+                        break;
+                }
+
+                // Calculate all other formats
+                minPerKm = minPerMile / 1.609344;
+                mph = 60 / minPerMile;
+                kmh = mph * 1.609344;
+
+                // Calculate race times
+                const raceTimes = {
+                    '1K': this.formatTime(minPerKm),
+                    '5K': this.formatTime(minPerKm * 5),
+                    '10K': this.formatTime(minPerKm * 10),
+                    '1 Mile': this.formatTime(minPerMile),
+                    'Half Marathon': this.formatTime(minPerMile * 13.1),
+                    'Marathon': this.formatTime(minPerMile * 26.2)
+                };
+
+                return {
+                    minPerMile: this.formatTime(minPerMile),
+                    minPerKm: this.formatTime(minPerKm),
+                    mph: mph.toFixed(1),
+                    kmh: kmh.toFixed(1),
+                    raceTimes
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('min-mile').textContent = result.minPerMile;
+                document.getElementById('min-km').textContent = result.minPerKm;
+                document.getElementById('mph').textContent = result.mph;
+                document.getElementById('kmh').textContent = result.kmh;
+
+                // Populate race times
+                const raceTimesContainer = document.getElementById('race-times');
+                raceTimesContainer.innerHTML = '';
+                Object.entries(result.raceTimes).forEach(([distance, time]) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between';
+                    div.innerHTML = `<span>${distance}:</span> <span>${time}</span>`;
+                    raceTimesContainer.appendChild(div);
+                });
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const minMile = document.getElementById('min-mile').textContent;
+                const minKm = document.getElementById('min-km').textContent;
+                const mph = document.getElementById('mph').textContent;
+                
+                return `Pace conversion: ${minMile}/mile = ${minKm}/km = ${mph} mph. Convert yours: ${window.location.href}`;
+            }
+        }
+
+        const paceConverter = new PaceConverterCalculator();
+
+        document.getElementById('share-result').addEventListener('click', () => {
+            paceConverter.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

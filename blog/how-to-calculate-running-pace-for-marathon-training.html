@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Calculate Running Pace for Marathon Training - Complete Guide 2024</title>
+    <meta name="description" content="Master marathon pace calculation with our complete guide. Learn how to determine your target paces for different training runs and race day strategy for PR success.">
+    <meta name="keywords" content="marathon pace calculator, running pace training, marathon training paces, race pace calculator, training pace zones, marathon strategy">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="How to Calculate Running Pace for Marathon Training - Complete Guide">
+    <meta property="og:description" content="Master marathon pace calculation with our complete guide. Learn target paces for training runs and race day strategy.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://runbikecalc.com/blog/how-to-calculate-running-pace-for-marathon-training">
+    <meta property="og:image" content="https://runbikecalc.com/images/marathon-pace-guide.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/blog/how-to-calculate-running-pace-for-marathon-training">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Calculate Running Pace for Marathon Training - Complete Guide",
+        "description": "Master marathon pace calculation with our complete guide. Learn how to determine your target paces for different training runs and race day strategy.",
+        "image": "https://runbikecalc.com/images/marathon-pace-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/images/logo.png"
+            }
+        },
+        "datePublished": "2024-12-18",
+        "dateModified": "2024-12-18",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/how-to-calculate-running-pace-for-marathon-training"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace Calculator</a>
+                                <a href="/race-time-predictor" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Race Time Predictor</a>
+                                <a href="/zone-2-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Zone 2 Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/blog" class="nav-link hover:text-primary">Blog</a>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/running-pace-calculator" class="mobile-menu-item">Running Pace Calculator</a>
+                    <a href="/blog" class="mobile-menu-item">Blog</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2"><a href="/blog" class="hover:text-primary">Blog</a></span>
+                <span class="before:content-['/'] before:mx-2">Marathon Pace Training</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Article Header -->
+        <div class="max-w-4xl mx-auto">
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <!-- Article Hero -->
+                <div class="h-64 md:h-96 bg-gradient-to-br from-green-500 to-blue-600 relative">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="text-sm font-semibold mb-2 opacity-90">RUNNING TRAINING</div>
+                            <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                                How to Calculate Running Pace for Marathon Training
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Meta -->
+                <div class="p-8 border-b border-gray-200">
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-4">
+                            <span>Published: December 18, 2024</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                            <span>•</span>
+                            <span>By RunBikeCalc Team</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Running</button>
+                            <button class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Marathon</button>
+                            <button class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Training</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <div class="p-8">
+                    <div class="prose prose-lg max-w-none">
+                        
+                        <!-- Introduction -->
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                            Successful marathon training hinges on running at the right paces during different types of workouts. Too fast, and you'll burn out or get injured. Too slow, and you won't develop the necessary fitness adaptations. This comprehensive guide will teach you how to calculate and use the optimal running paces for every aspect of your marathon training.
+                        </p>
+
+                        <!-- CTA Box -->
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-green-900 mb-3">🏃‍♂️ Calculate Your Training Paces</h3>
+                            <p class="text-green-800 mb-4">Use our free running pace calculator to determine your optimal training paces based on your current fitness level and race goals.</p>
+                            <a href="/running-pace-calculator" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                                Calculate Training Paces →
+                            </a>
+                        </div>
+
+                        <h2>Understanding Marathon Training Paces</h2>
+                        
+                        <p>Marathon training involves running at different intensities to develop various physiological adaptations. Each pace serves a specific purpose in your training program:</p>
+
+                        <h3>The Five Essential Training Paces</h3>
+
+                        <h4>1. Easy/Recovery Pace (Zone 1-2)</h4>
+                        <p><strong>Purpose:</strong> Build aerobic base, promote recovery, increase weekly mileage safely</p>
+                        <ul>
+                            <li><strong>Intensity:</strong> 65-75% of max heart rate</li>
+                            <li><strong>Effort:</strong> Conversational pace, you should be able to speak in full sentences</li>
+                            <li><strong>Pace Range:</strong> 60-90 seconds slower than marathon pace</li>
+                        </ul>
+
+                        <h4>2. Marathon Pace (Zone 2-3)</h4>
+                        <p><strong>Purpose:</strong> Develop race-specific fitness, practice goal pace</p>
+                        <ul>
+                            <li><strong>Intensity:</strong> 75-85% of max heart rate</li>
+                            <li><strong>Effort:</strong> Comfortably hard, sustainable for 26.2 miles</li>
+                            <li><strong>Usage:</strong> Long run segments, race pace workouts</li>
+                        </ul>
+
+                        <h4>3. Tempo/Threshold Pace (Zone 3-4)</h4>
+                        <p><strong>Purpose:</strong> Improve lactate clearance, increase sustainable pace</p>
+                        <ul>
+                            <li><strong>Intensity:</strong> 85-90% of max heart rate</li>
+                            <li><strong>Effort:</strong> Hard but controlled, sustainable for 45-60 minutes</li>
+                            <li><strong>Pace Range:</strong> 15-30 seconds faster than marathon pace</li>
+                        </ul>
+
+                        <h4>4. VO2 Max Pace (Zone 4-5)</h4>
+                        <p><strong>Purpose:</strong> Improve maximum oxygen uptake, increase speed</p>
+                        <ul>
+                            <li><strong>Intensity:</strong> 90-95% of max heart rate</li>
+                            <li><strong>Effort:</strong> Hard, sustainable for 8-12 minutes at a time</li>
+                            <li><strong>Pace Range:</strong> Approximately 5K race pace</li>
+                        </ul>
+
+                        <h4>5. Neuromuscular Power Pace (Zone 5)</h4>
+                        <p><strong>Purpose:</strong> Develop speed, improve running economy</p>
+                        <ul>
+                            <li><strong>Intensity:</strong> 95-100% of max heart rate</li>
+                            <li><strong>Effort:</strong> Very hard, sustainable for 2-5 minutes</li>
+                            <li><strong>Pace Range:</strong> Faster than 5K pace</li>
+                        </ul>
+
+                        <!-- Training Pace Calculator -->
+                        <div class="bg-primary text-white rounded-lg p-6 my-8">
+                            <h3 class="text-xl font-semibold mb-3">Determine Your Training Paces</h3>
+                            <p class="mb-4 opacity-90">Our running pace calculator uses your recent race time or time trial to calculate all your training paces automatically.</p>
+                            <a href="/running-pace-calculator" class="inline-block bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Use Pace Calculator
+                            </a>
+                        </div>
+
+                        <h2>Methods for Calculating Training Paces</h2>
+
+                        <h3>Method 1: Recent Race Time</h3>
+                        <p>The most accurate method uses a recent race performance to predict your marathon potential:</p>
+
+                        <h4>Using a 5K Race Time</h4>
+                        <ul>
+                            <li><strong>Marathon Pace:</strong> Add 75-90 seconds per mile to 5K pace</li>
+                            <li><strong>Easy Pace:</strong> Add 60-90 seconds to marathon pace</li>
+                            <li><strong>Tempo Pace:</strong> Subtract 15-30 seconds from marathon pace</li>
+                        </ul>
+
+                        <h4>Using a 10K Race Time</h4>
+                        <ul>
+                            <li><strong>Marathon Pace:</strong> Add 60-75 seconds per mile to 10K pace</li>
+                            <li><strong>Easy Pace:</strong> Add 60-90 seconds to marathon pace</li>
+                            <li><strong>Tempo Pace:</strong> Add 5-15 seconds to 10K pace</li>
+                        </ul>
+
+                        <h4>Using a Half Marathon Time</h4>
+                        <ul>
+                            <li><strong>Marathon Pace:</strong> Add 10-30 seconds per mile to half marathon pace</li>
+                            <li><strong>Easy Pace:</strong> Add 60-90 seconds to marathon pace</li>
+                            <li><strong>Tempo Pace:</strong> Subtract 10-20 seconds from half marathon pace</li>
+                        </ul>
+
+                        <h3>Method 2: Time Trial Test</h3>
+                        <p>If you don't have a recent race time, perform a time trial:</p>
+
+                        <h4>15-20 Minute Time Trial</h4>
+                        <ol>
+                            <li>Warm up thoroughly (10-15 minutes easy running)</li>
+                            <li>Run at maximum sustainable effort for 15-20 minutes</li>
+                            <li>Cool down (10 minutes easy)</li>
+                            <li>Use your average pace as your tempo pace</li>
+                            <li>Calculate other paces relative to tempo pace</li>
+                        </ol>
+
+                        <!-- Example Calculation -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-4">📊 Example Pace Calculation</h3>
+                            <div class="text-blue-800">
+                                <p class="mb-3"><strong>Runner Profile:</strong> Recent 10K time of 45:00 (7:15/mile pace)</p>
+                                <ul class="space-y-2">
+                                    <li>• <strong>Marathon Pace:</strong> 8:15-8:30/mile (10K pace + 60-75 seconds)</li>
+                                    <li>• <strong>Easy Pace:</strong> 9:15-10:00/mile (marathon pace + 60-90 seconds)</li>
+                                    <li>• <strong>Tempo Pace:</strong> 7:20-7:30/mile (10K pace + 5-15 seconds)</li>
+                                    <li>• <strong>VO2 Max Pace:</strong> 6:45-7:00/mile (5K pace estimate)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2>How to Use Training Paces Effectively</h2>
+
+                        <h3>Weekly Training Structure</h3>
+                        <p>A well-balanced marathon training week typically includes:</p>
+
+                        <ul>
+                            <li><strong>80% Easy/Recovery Pace:</strong> Base building, recovery runs</li>
+                            <li><strong>10% Marathon Pace:</strong> Race-specific workouts</li>
+                            <li><strong>5% Tempo Pace:</strong> Threshold training</li>
+                            <li><strong>5% VO2 Max/Speed:</strong> High-intensity intervals</li>
+                        </ul>
+
+                        <h3>Workout Examples by Training Phase</h3>
+
+                        <h4>Base Building Phase</h4>
+                        <ul>
+                            <li><strong>Long Runs:</strong> 90% easy pace, 10% marathon pace</li>
+                            <li><strong>Tempo Runs:</strong> 20-40 minutes at tempo pace</li>
+                            <li><strong>Easy Runs:</strong> All other runs at conversation pace</li>
+                        </ul>
+
+                        <h4>Build Phase</h4>
+                        <ul>
+                            <li><strong>Marathon Pace Runs:</strong> 6-10 miles at goal pace</li>
+                            <li><strong>Tempo Intervals:</strong> 3-5 x 1 mile at tempo pace</li>
+                            <li><strong>VO2 Max Intervals:</strong> 5-6 x 1000m at VO2 max pace</li>
+                        </ul>
+
+                        <h4>Peak Phase</h4>
+                        <ul>
+                            <li><strong>Race Simulation:</strong> 18-20 miles with 10-14 at marathon pace</li>
+                            <li><strong>Sharpening:</strong> Short intervals at 5K-10K pace</li>
+                            <li><strong>Easy Runs:</strong> Maintain fitness, promote recovery</li>
+                        </ul>
+
+                        <h2>Common Pace Calculation Mistakes</h2>
+
+                        <h3>Being Too Aggressive with Goal Pace</h3>
+                        <p>Many runners set unrealistic marathon goals based on shorter race times. Use conservative pace predictions, especially for your first marathon or after a training break.</p>
+
+                        <h3>Ignoring Environmental Factors</h3>
+                        <p>Adjust your training paces for:</p>
+                        <ul>
+                            <li><strong>Temperature:</strong> Add 5-10 seconds per mile for every 10°F above 60°F</li>
+                            <li><strong>Altitude:</strong> Add 3-5 seconds per mile for every 1000 feet above sea level</li>
+                            <li><strong>Humidity:</strong> Add 5-15 seconds per mile in high humidity</li>
+                            <li><strong>Hills:</strong> Run by effort, not pace, on significant elevation changes</li>
+                        </ul>
+
+                        <h3>Running Easy Days Too Fast</h3>
+                        <p>The most common mistake is running easy runs too fast. Remember: if you can't have a conversation during your easy runs, you're running too hard.</p>
+
+                        <!-- Tools Section -->
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Essential Pace Calculation Tools</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Free Calculators:</h4>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• <a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                                        <li>• <a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
+                                        <li>• <a href="/pace-converter-calculator" class="text-primary hover:underline">Pace Converter</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Training Tools:</h4>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• GPS watch with pace alerts</li>
+                                        <li>• Heart rate monitor</li>
+                                        <li>• Training log or app</li>
+                                        <li>• Track or measured course</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Progressive Pace Development</h2>
+
+                        <h3>Building Marathon Pace Fitness</h3>
+                        <p>Don't expect to run marathon pace comfortably immediately. Build up gradually:</p>
+
+                        <ul>
+                            <li><strong>Week 1-4:</strong> 2-3 miles at marathon pace within long runs</li>
+                            <li><strong>Week 5-8:</strong> 4-6 miles at marathon pace</li>
+                            <li><strong>Week 9-12:</strong> 6-10 miles at marathon pace</li>
+                            <li><strong>Week 13-16:</strong> 8-14 miles at marathon pace</li>
+                        </ul>
+
+                        <h3>Adjusting Paces During Training</h3>
+                        <p>Your fitness will improve throughout training, so reassess your paces:</p>
+
+                        <ul>
+                            <li><strong>Every 4-6 weeks:</strong> Perform a time trial or race</li>
+                            <li><strong>Monitor effort:</strong> If marathon pace feels easy, consider adjusting</li>
+                            <li><strong>Listen to your body:</strong> Some days require slower paces</li>
+                        </ul>
+
+                        <h2>Race Day Pace Strategy</h2>
+
+                        <h3>Negative Split Strategy</h3>
+                        <p>Plan to run the second half of the marathon slightly faster than the first:</p>
+
+                        <ul>
+                            <li><strong>Miles 1-6:</strong> 5-10 seconds slower than goal pace</li>
+                            <li><strong>Miles 7-13:</strong> Goal marathon pace</li>
+                            <li><strong>Miles 14-20:</strong> Goal pace or slightly faster</li>
+                            <li><strong>Miles 21-26.2:</strong> By effort, maintain or increase pace</li>
+                        </ul>
+
+                        <h3>Backup Pace Plans</h3>
+                        <p>Prepare multiple pace strategies:</p>
+
+                        <ul>
+                            <li><strong>A Goal:</strong> Aggressive but realistic target</li>
+                            <li><strong>B Goal:</strong> Conservative, achievable goal</li>
+                            <li><strong>C Goal:</strong> Finish healthy and happy</li>
+                        </ul>
+
+                        <!-- Final CTA -->
+                        <div class="bg-secondary text-white rounded-lg p-6 my-8">
+                            <h3 class="text-xl font-semibold mb-3">Ready to Calculate Your Training Paces?</h3>
+                            <p class="mb-4 opacity-90">Use our running pace calculator to determine your optimal training paces and start training smarter, not just harder.</p>
+                            <a href="/running-pace-calculator" class="inline-block bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Calculate Your Paces →
+                            </a>
+                        </div>
+
+                        <h2>Conclusion</h2>
+                        
+                        <p>Calculating and using the correct training paces is fundamental to successful marathon preparation. By understanding the purpose of each pace and how to calculate them accurately, you'll train more effectively and arrive at the start line properly prepared.</p>
+
+                        <p>Remember that paces are guidelines, not rigid rules. Listen to your body, adjust for conditions, and focus on the effort level rather than hitting exact pace targets every single run. Consistent training at the appropriate intensities will lead to marathon success.</p>
+
+                        <p>Use our <a href="/running-pace-calculator" class="text-primary hover:underline font-semibold">running pace calculator</a> to determine your personalized training zones and start building toward your marathon goal today.</p>
+
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <div class="p-8 bg-gray-50 border-t">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h4 class="font-semibold text-gray-900 mb-2">Related Articles</h4>
+                            <div class="space-y-1">
+                                <a href="/blog/what-is-zone-2-training-complete-guide" class="block text-primary hover:underline">Zone 2 Training: Complete Guide</a>
+                                <a href="/blog/heart-rate-zones-running" class="block text-primary hover:underline">Heart Rate Zones for Running</a>
+                                <a href="/blog/race-pace-calculator-strategies" class="block text-primary hover:underline">Race Pace Calculator Strategies</a>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-gray-600 mb-2">Share this article:</div>
+                            <div class="flex space-x-3">
+                                <button class="text-blue-600 hover:text-blue-800">Facebook</button>
+                                <button class="text-blue-400 hover:text-blue-600">Twitter</button>
+                                <button class="text-blue-700 hover:text-blue-900">LinkedIn</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Related Calculators</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/running-pace-calculator" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-green-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">🏃</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Running Pace Calculator</h4>
+                    <p class="text-gray-600 text-sm">Calculate your optimal training paces for marathon preparation.</p>
+                </a>
+                
+                <a href="/race-time-predictor" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">⏱️</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Race Time Predictor</h4>
+                    <p class="text-gray-600 text-sm">Predict your marathon time based on shorter race performances.</p>
+                </a>
+                
+                <a href="/pace-converter-calculator" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-accent rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">🔄</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Pace Converter</h4>
+                    <p class="text-gray-600 text-sm">Convert between different pace units and formats.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-12">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">728x90 Leaderboard Ad</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators and training insights for endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Popular Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/how-to-calculate-running-pace-for-marathon-training" class="hover:text-white">Marathon Pace Training</a></li>
+                        <li><a href="/blog/what-is-zone-2-training-complete-guide" class="hover:text-white">Zone 2 Training Guide</a></li>
+                        <li><a href="/blog/heart-rate-zones-running" class="hover:text-white">Heart Rate Zones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

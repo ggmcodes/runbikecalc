@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Distance Converter - Miles to Kilometers & Vice Versa | RunBikeCalc</title>
+    <meta name="description" content="Free running distance converter. Convert miles to kilometers, kilometers to miles, and other common running distances. Perfect for race planning and training.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/running-distance-converter">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Running Distance Converter - Miles to Kilometers">
+    <meta property="og:description" content="Convert running distances between miles and kilometers instantly">
+    <meta property="og:image" content="https://runbikecalc.com/images/distance-converter-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/running-distance-converter">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running Distance Converter">
+    <meta name="twitter:description" content="Convert miles to kilometers for running">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/distance-converter-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Running Distance Converter",
+        "url": "https://runbikecalc.com/running-distance-converter",
+        "description": "Convert running distances between miles, kilometers, and other units",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Distance Converter</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Running Distance Converter</h1>
+        <p class="text-lg text-gray-600 mb-8">Convert running distances between miles, kilometers, meters, and other units. Perfect for race planning, training schedules, and international race comparison.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Convert Distance</h2>
+                    
+                    <form id="distance-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="inputValue" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Enter Distance *
+                                </label>
+                                <input type="number" 
+                                       id="inputValue" 
+                                       name="inputValue" 
+                                       class="calc-input-number" 
+                                       placeholder="5"
+                                       required
+                                       min="0.001"
+                                       max="1000"
+                                       step="0.001">
+                                <p class="text-sm text-gray-600 mt-1">Enter the distance to convert</p>
+                            </div>
+                            
+                            <div>
+                                <label for="fromUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                    From Unit *
+                                </label>
+                                <select id="fromUnit" name="fromUnit" class="calc-input-number text-left" required>
+                                    <option value="">Select unit</option>
+                                    <option value="miles">Miles</option>
+                                    <option value="km">Kilometers (km)</option>
+                                    <option value="meters">Meters (m)</option>
+                                    <option value="yards">Yards (yd)</option>
+                                    <option value="feet">Feet (ft)</option>
+                                    <option value="nautical">Nautical Miles</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Original unit</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="toUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                To Unit *
+                            </label>
+                            <select id="toUnit" name="toUnit" class="calc-input-number text-left" required>
+                                <option value="">Select unit</option>
+                                <option value="miles">Miles</option>
+                                <option value="km">Kilometers (km)</option>
+                                <option value="meters">Meters (m)</option>
+                                <option value="yards">Yards (yd)</option>
+                                <option value="feet">Feet (ft)</option>
+                                <option value="nautical">Nautical Miles</option>
+                            </select>
+                            <p class="text-sm text-gray-600 mt-1">Target unit for conversion</p>
+                        </div>
+                        
+                        <!-- Quick conversion buttons -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-lg font-semibold mb-4">Quick Conversions</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="5" data-from="km" data-to="miles">
+                                    5K to Miles
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="10" data-from="km" data-to="miles">
+                                    10K to Miles
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="21.0975" data-from="km" data-to="miles">
+                                    Half Marathon
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="42.195" data-from="km" data-to="miles">
+                                    Marathon
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="3.1" data-from="miles" data-to="km">
+                                    5K Race
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="6.2" data-from="miles" data-to="km">
+                                    10K Race
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="13.1" data-from="miles" data-to="km">
+                                    Half Marathon
+                                </button>
+                                <button type="button" class="quick-convert calc-button-secondary text-sm py-2" data-value="26.2" data-from="miles" data-to="km">
+                                    Marathon
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Convert Distance
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Common race distances reference -->
+                <div class="calc-card mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Common Race Distances</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Race</th>
+                                    <th class="text-right py-2">Miles</th>
+                                    <th class="text-right py-2">Kilometers</th>
+                                    <th class="text-right py-2">Meters</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr>
+                                    <td class="py-2 font-medium">5K</td>
+                                    <td class="text-right py-2">3.11 mi</td>
+                                    <td class="text-right py-2">5.00 km</td>
+                                    <td class="text-right py-2">5,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">8K</td>
+                                    <td class="text-right py-2">4.97 mi</td>
+                                    <td class="text-right py-2">8.00 km</td>
+                                    <td class="text-right py-2">8,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">10K</td>
+                                    <td class="text-right py-2">6.21 mi</td>
+                                    <td class="text-right py-2">10.00 km</td>
+                                    <td class="text-right py-2">10,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">15K</td>
+                                    <td class="text-right py-2">9.32 mi</td>
+                                    <td class="text-right py-2">15.00 km</td>
+                                    <td class="text-right py-2">15,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">10 Mile</td>
+                                    <td class="text-right py-2">10.00 mi</td>
+                                    <td class="text-right py-2">16.09 km</td>
+                                    <td class="text-right py-2">16,093 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">20K</td>
+                                    <td class="text-right py-2">12.43 mi</td>
+                                    <td class="text-right py-2">20.00 km</td>
+                                    <td class="text-right py-2">20,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">Half Marathon</td>
+                                    <td class="text-right py-2">13.11 mi</td>
+                                    <td class="text-right py-2">21.10 km</td>
+                                    <td class="text-right py-2">21,098 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">25K</td>
+                                    <td class="text-right py-2">15.53 mi</td>
+                                    <td class="text-right py-2">25.00 km</td>
+                                    <td class="text-right py-2">25,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">30K</td>
+                                    <td class="text-right py-2">18.64 mi</td>
+                                    <td class="text-right py-2">30.00 km</td>
+                                    <td class="text-right py-2">30,000 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">Marathon</td>
+                                    <td class="text-right py-2">26.22 mi</td>
+                                    <td class="text-right py-2">42.20 km</td>
+                                    <td class="text-right py-2">42,195 m</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">50K</td>
+                                    <td class="text-right py-2">31.07 mi</td>
+                                    <td class="text-right py-2">50.00 km</td>
+                                    <td class="text-right py-2">50,000 m</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Distance Conversions</h2>
+                    <p>Converting between different distance units is essential for runners who participate in international races, follow training plans from different countries, or use various tracking devices and apps.</p>
+                    
+                    <h3>Common Conversion Factors</h3>
+                    
+                    <h4>Metric to Imperial</h4>
+                    <ul>
+                        <li><strong>1 kilometer = 0.621371 miles</strong></li>
+                        <li><strong>1 meter = 3.28084 feet</strong></li>
+                        <li><strong>1 meter = 1.09361 yards</strong></li>
+                    </ul>
+                    
+                    <h4>Imperial to Metric</h4>
+                    <ul>
+                        <li><strong>1 mile = 1.609344 kilometers</strong></li>
+                        <li><strong>1 mile = 1,609.344 meters</strong></li>
+                        <li><strong>1 yard = 0.9144 meters</strong></li>
+                        <li><strong>1 foot = 0.3048 meters</strong></li>
+                    </ul>
+                    
+                    <h3>Why Distance Conversion Matters</h3>
+                    
+                    <h4>International Racing</h4>
+                    <p>Most international races use metric distances (5K, 10K, Marathon), while many US races also offer mile-based distances. Understanding conversions helps you:</p>
+                    <ul>
+                        <li>Compare your times across different race formats</li>
+                        <li>Set appropriate goals for international events</li>
+                        <li>Understand training plans from different countries</li>
+                        <li>Convert GPS watch data between units</li>
+                    </ul>
+                    
+                    <h4>Training Applications</h4>
+                    <ul>
+                        <li><strong>Workout Planning:</strong> Convert coach-prescribed distances</li>
+                        <li><strong>Track Running:</strong> Understanding lap distances in different units</li>
+                        <li><strong>Route Planning:</strong> Converting mapped routes between units</li>
+                        <li><strong>Progress Tracking:</strong> Consistent unit use for progress measurement</li>
+                    </ul>
+                    
+                    <h3>Track and Field Standard Distances</h3>
+                    
+                    <h4>Track Distances (400m standard track)</h4>
+                    <ul>
+                        <li><strong>1 lap = 400 meters = 0.25 miles</strong></li>
+                        <li><strong>2 laps = 800 meters = 0.5 miles</strong></li>
+                        <li><strong>4 laps = 1,600 meters ≈ 1 mile (1 mile = 1,609.34m)</strong></li>
+                        <li><strong>10 laps = 4,000 meters = 2.49 miles</strong></li>
+                        <li><strong>12.5 laps = 5,000 meters (5K) = 3.11 miles</strong></li>
+                        <li><strong>25 laps = 10,000 meters (10K) = 6.21 miles</strong></li>
+                    </ul>
+                    
+                    <h4>Common Track Workout Distances</h4>
+                    <ul>
+                        <li><strong>100m:</strong> 0.0621 miles (109.36 yards)</li>
+                        <li><strong>200m:</strong> 0.1243 miles (218.72 yards)</li>
+                        <li><strong>400m:</strong> 0.2485 miles (437.45 yards)</li>
+                        <li><strong>800m:</strong> 0.4971 miles (0.5 mile = 804.67m)</li>
+                        <li><strong>1500m:</strong> 0.9321 miles (1 mile = 1609.34m)</li>
+                    </ul>
+                    
+                    <h3>Precision in Race Distances</h3>
+                    
+                    <h4>Official Race Measurements</h4>
+                    <p>Race distances are measured along the shortest possible route (tangent line). Key measurements:</p>
+                    <ul>
+                        <li><strong>5K:</strong> Exactly 5,000 meters</li>
+                        <li><strong>10K:</strong> Exactly 10,000 meters</li>
+                        <li><strong>Half Marathon:</strong> Exactly 21,097.5 meters (13.1094 miles)</li>
+                        <li><strong>Marathon:</strong> Exactly 42,195 meters (26.2188 miles)</li>
+                    </ul>
+                    
+                    <h4>GPS Watch Considerations</h4>
+                    <ul>
+                        <li><strong>GPS Accuracy:</strong> ±1-3% typical accuracy</li>
+                        <li><strong>Course Tangents:</strong> GPS tracks your actual path, not race line</li>
+                        <li><strong>Tall Buildings/Trees:</strong> Can affect GPS signal accuracy</li>
+                        <li><strong>Calibration:</strong> Some watches allow manual calibration</li>
+                    </ul>
+                    
+                    <h3>Mental Math for Quick Conversions</h3>
+                    
+                    <h4>Kilometers to Miles (Quick Estimates)</h4>
+                    <ul>
+                        <li><strong>Multiply by 0.6:</strong> Close approximation (actual: 0.621)</li>
+                        <li><strong>5K ≈ 3 miles</strong> (actual: 3.11 miles)</li>
+                        <li><strong>10K ≈ 6 miles</strong> (actual: 6.21 miles)</li>
+                        <li><strong>Half Marathon ≈ 13 miles</strong> (actual: 13.11 miles)</li>
+                    </ul>
+                    
+                    <h4>Miles to Kilometers (Quick Estimates)</h4>
+                    <ul>
+                        <li><strong>Multiply by 1.6:</strong> Close approximation (actual: 1.609)</li>
+                        <li><strong>1 mile ≈ 1.6K</strong> (actual: 1.609K)</li>
+                        <li><strong>5 miles ≈ 8K</strong> (actual: 8.05K)</li>
+                        <li><strong>10 miles ≈ 16K</strong> (actual: 16.09K)</li>
+                    </ul>
+                    
+                    <h3>Using Conversions in Training</h3>
+                    
+                    <h4>Pace Conversions</h4>
+                    <p>When converting distances, remember that pace conversions follow the same ratios:</p>
+                    <ul>
+                        <li><strong>Mile pace to km pace:</strong> Divide by 1.609</li>
+                        <li><strong>Km pace to mile pace:</strong> Multiply by 1.609</li>
+                        <li><strong>Example:</strong> 8:00/mile = 4:58/km</li>
+                    </ul>
+                    
+                    <h4>Training Plan Adaptations</h4>
+                    <ul>
+                        <li><strong>European Plans:</strong> Often use kilometer-based distances</li>
+                        <li><strong>US Plans:</strong> Typically use mile-based distances</li>
+                        <li><strong>Mixed Plans:</strong> Some use both (e.g., 5K races, mile repeats)</li>
+                        <li><strong>Consistency:</strong> Pick one unit system for your training log</li>
+                    </ul>
+                    
+                    <h3>Technology and Distance Measurement</h3>
+                    
+                    <h4>GPS Devices</h4>
+                    <ul>
+                        <li><strong>Satellite Systems:</strong> GPS, GLONASS, Galileo</li>
+                        <li><strong>Accuracy Factors:</strong> Weather, terrain, urban environment</li>
+                        <li><strong>Smoothing Algorithms:</strong> Reduce GPS noise in distance calculation</li>
+                        <li><strong>Calibration Options:</strong> Manual adjustment for known distances</li>
+                    </ul>
+                    
+                    <h4>Smartphone Apps</h4>
+                    <ul>
+                        <li><strong>GPS Tracking:</strong> Similar accuracy to dedicated devices</li>
+                        <li><strong>Battery Optimization:</strong> May reduce GPS sampling rate</li>
+                        <li><strong>Unit Settings:</strong> Choose preferred measurement system</li>
+                        <li><strong>Route Mapping:</strong> Pre-plan routes with accurate distances</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick conversion reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Reference</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>1 mile</span>
+                            <span class="font-medium">1.609 km</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>1 km</span>
+                            <span class="font-medium">0.621 miles</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>5K</span>
+                            <span class="font-medium">3.11 miles</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>10K</span>
+                            <span class="font-medium">6.21 miles</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Half Marathon</span>
+                            <span class="font-medium">21.1 km</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Marathon</span>
+                            <span class="font-medium">42.2 km</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/treadmill-pace-calculator.html" class="text-primary hover:underline">Treadmill Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="text-primary hover:underline">Calories Burned Calculator</a></li>
+                        <li><a href="/run-walk-calculator.html" class="text-primary hover:underline">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/running-distance-converter.html" class="hover:text-white">Distance Converter</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Quick conversion buttons
+        document.querySelectorAll('.quick-convert').forEach(button => {
+            button.addEventListener('click', function() {
+                const value = this.dataset.value;
+                const fromUnit = this.dataset.from;
+                const toUnit = this.dataset.to;
+                
+                document.getElementById('inputValue').value = value;
+                document.getElementById('fromUnit').value = fromUnit;
+                document.getElementById('toUnit').value = toUnit;
+                
+                calculator.calculate();
+            });
+        });
+        
+        // Auto-calculate on input change
+        document.getElementById('inputValue').addEventListener('input', function() {
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+            
+            if (this.value && fromUnit && toUnit) {
+                calculator.calculate();
+            }
+        });
+        
+        // Auto-calculate on unit change
+        document.getElementById('fromUnit').addEventListener('change', function() {
+            const inputValue = document.getElementById('inputValue').value;
+            const toUnit = document.getElementById('toUnit').value;
+            
+            if (inputValue && this.value && toUnit) {
+                calculator.calculate();
+            }
+        });
+        
+        document.getElementById('toUnit').addEventListener('change', function() {
+            const inputValue = document.getElementById('inputValue').value;
+            const fromUnit = document.getElementById('fromUnit').value;
+            
+            if (inputValue && fromUnit && this.value) {
+                calculator.calculate();
+            }
+        });
+        
+        // Distance Converter Calculator implementation
+        class DistanceConverter extends Calculator {
+            calculate() {
+                const inputValue = this.getInputValue('inputValue');
+                const fromUnit = this.form.querySelector('[name="fromUnit"]').value;
+                const toUnit = this.form.querySelector('[name="toUnit"]').value;
+                
+                if (!inputValue || !fromUnit || !toUnit) {
+                    this.displayError('Please enter a distance and select both units.');
+                    return;
+                }
+                
+                if (fromUnit === toUnit) {
+                    this.displayError('Please select different units to convert between.');
+                    return;
+                }
+                
+                // Convert input to meters first (base unit)
+                const meters = this.convertToMeters(inputValue, fromUnit);
+                if (meters === null) {
+                    this.displayError('Invalid unit selected.');
+                    return;
+                }
+                
+                // Convert from meters to target unit
+                const result = this.convertFromMeters(meters, toUnit);
+                if (result === null) {
+                    this.displayError('Invalid unit selected.');
+                    return;
+                }
+                
+                // Generate all unit conversions for reference
+                const allConversions = this.generateAllConversions(meters);
+                
+                // Generate race equivalents
+                const raceEquivalents = this.generateRaceEquivalents(meters);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Distance Conversion Result</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">${inputValue} ${this.getUnitDisplay(fromUnit)} =</div>
+                            <div class="text-4xl font-bold">${this.formatResult(result)}</div>
+                            <div class="text-lg opacity-90 mt-2">${this.getUnitDisplay(toUnit)}</div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">All Unit Conversions</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                ${allConversions}
+                            </div>
+                        </div>
+                        
+                        ${raceEquivalents ? `
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-3">Race Distance Comparison</h4>
+                            <div class="text-sm text-blue-700 space-y-1">
+                                ${raceEquivalents}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('${inputValue} ${this.getUnitDisplay(fromUnit)} = ${this.formatResult(result)} ${this.getUnitDisplay(toUnit)}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            convertToMeters(value, unit) {
+                const conversions = {
+                    'meters': 1,
+                    'km': 1000,
+                    'miles': 1609.344,
+                    'yards': 0.9144,
+                    'feet': 0.3048,
+                    'nautical': 1852
+                };
+                
+                return conversions[unit] ? value * conversions[unit] : null;
+            }
+            
+            convertFromMeters(meters, unit) {
+                const conversions = {
+                    'meters': 1,
+                    'km': 1000,
+                    'miles': 1609.344,
+                    'yards': 0.9144,
+                    'feet': 0.3048,
+                    'nautical': 1852
+                };
+                
+                return conversions[unit] ? meters / conversions[unit] : null;
+            }
+            
+            getUnitDisplay(unit) {
+                const displays = {
+                    'meters': 'meters',
+                    'km': 'kilometers',
+                    'miles': 'miles',
+                    'yards': 'yards',
+                    'feet': 'feet',
+                    'nautical': 'nautical miles'
+                };
+                
+                return displays[unit] || unit;
+            }
+            
+            formatResult(value) {
+                if (value >= 100) {
+                    return value.toFixed(2);
+                } else if (value >= 10) {
+                    return value.toFixed(3);
+                } else if (value >= 1) {
+                    return value.toFixed(4);
+                } else {
+                    return value.toFixed(6);
+                }
+            }
+            
+            generateAllConversions(meters) {
+                const units = ['miles', 'km', 'meters', 'yards', 'feet', 'nautical'];
+                const conversions = [];
+                
+                units.forEach(unit => {
+                    const value = this.convertFromMeters(meters, unit);
+                    const display = this.getUnitDisplay(unit);
+                    conversions.push(`
+                        <div class="flex justify-between py-1">
+                            <span>${display}:</span>
+                            <span class="font-medium">${this.formatResult(value)}</span>
+                        </div>
+                    `);
+                });
+                
+                return conversions.join('');
+            }
+            
+            generateRaceEquivalents(meters) {
+                const raceDistances = [
+                    { name: '5K', meters: 5000 },
+                    { name: '8K', meters: 8000 },
+                    { name: '10K', meters: 10000 },
+                    { name: '15K', meters: 15000 },
+                    { name: '10 Mile', meters: 16093.4 },
+                    { name: '20K', meters: 20000 },
+                    { name: 'Half Marathon', meters: 21097.5 },
+                    { name: '25K', meters: 25000 },
+                    { name: '30K', meters: 30000 },
+                    { name: 'Marathon', meters: 42195 },
+                    { name: '50K', meters: 50000 }
+                ];
+                
+                // Find closest race distance
+                let closest = null;
+                let minDiff = Infinity;
+                
+                raceDistances.forEach(race => {
+                    const diff = Math.abs(meters - race.meters);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        closest = race;
+                    }
+                });
+                
+                if (!closest || minDiff > closest.meters * 0.5) {
+                    return null; // No close race distance found
+                }
+                
+                const percentDiff = ((meters - closest.meters) / closest.meters * 100);
+                const diffDescription = Math.abs(percentDiff) < 1 ? 
+                    'Almost exactly' : 
+                    percentDiff > 0 ? 
+                        `${Math.abs(percentDiff).toFixed(1)}% longer than` : 
+                        `${Math.abs(percentDiff).toFixed(1)}% shorter than`;
+                
+                return `
+                    <p>• ${diffDescription} a ${closest.name} race</p>
+                    <p>• ${closest.name} = ${this.formatResult(this.convertFromMeters(closest.meters, 'miles'))} miles (${this.formatResult(this.convertFromMeters(closest.meters, 'km'))} km)</p>
+                `;
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new DistanceConverter('distance-form', 'results');
+    </script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP Testing Guide: How to Find Your Functional Threshold Power 2024</title>
+    <meta name="description" content="Master FTP testing with our complete guide. Learn the best methods for testing your Functional Threshold Power, including 20-minute tests, ramp tests, and when to retest for optimal power-based training.">
+    <meta name="keywords" content="FTP test, functional threshold power, FTP testing guide, cycling power training, FTP calculator, power meter training">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FTP Testing Guide: How to Find Your Functional Threshold Power">
+    <meta property="og:description" content="Master FTP testing with our complete guide. Learn the best methods for testing your Functional Threshold Power for optimal cycling training.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://runbikecalc.com/blog/ftp-testing-guide-cyclists">
+    <meta property="og:image" content="https://runbikecalc.com/images/ftp-testing-guide.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/blog/ftp-testing-guide-cyclists">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "FTP Testing Guide: How to Find Your Functional Threshold Power",
+        "description": "Master FTP testing with our complete guide. Learn the best methods for testing your Functional Threshold Power for optimal cycling training.",
+        "image": "https://runbikecalc.com/images/ftp-testing-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/images/logo.png"
+            }
+        },
+        "datePublished": "2024-12-17",
+        "dateModified": "2024-12-17",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/ftp-testing-guide-cyclists"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/ftp-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FTP Calculator</a>
+                                <a href="/power-to-weight-ratio-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Power-to-Weight Ratio</a>
+                                <a href="/watts-to-calories-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Watts to Calories</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/blog" class="nav-link hover:text-primary">Blog</a>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/ftp-calculator" class="mobile-menu-item">FTP Calculator</a>
+                    <a href="/blog" class="mobile-menu-item">Blog</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2"><a href="/blog" class="hover:text-primary">Blog</a></span>
+                <span class="before:content-['/'] before:mx-2">FTP Testing Guide</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Article Header -->
+        <div class="max-w-4xl mx-auto">
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <!-- Article Hero -->
+                <div class="h-64 md:h-96 bg-gradient-to-br from-orange-500 to-red-600 relative">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="text-sm font-semibold mb-2 opacity-90">CYCLING TRAINING</div>
+                            <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                                FTP Testing Guide: How to Find Your Functional Threshold Power
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Meta -->
+                <div class="p-8 border-b border-gray-200">
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-4">
+                            <span>Published: December 17, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                            <span>•</span>
+                            <span>By RunBikeCalc Team</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs">Cycling</button>
+                            <button class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">FTP</button>
+                            <button class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Testing</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <div class="p-8">
+                    <div class="prose prose-lg max-w-none">
+                        
+                        <!-- Introduction -->
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                            Functional Threshold Power (FTP) is the cornerstone of power-based cycling training. It represents the highest power output you can sustain for approximately one hour and serves as the foundation for setting training zones and tracking fitness progress. This comprehensive guide will teach you how to accurately test your FTP, when to retest, and how to use this critical metric to optimize your cycling performance.
+                        </p>
+
+                        <!-- CTA Box -->
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-orange-900 mb-3">🚴‍♂️ Calculate Your FTP Training Zones</h3>
+                            <p class="text-orange-800 mb-4">Use our free FTP calculator to determine your training zones based on your Functional Threshold Power test results.</p>
+                            <a href="/ftp-calculator" class="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                                Calculate FTP Zones →
+                            </a>
+                        </div>
+
+                        <h2>What is Functional Threshold Power (FTP)?</h2>
+                        
+                        <p>Functional Threshold Power (FTP) is defined as the highest average power output a cyclist can sustain for approximately one hour. More technically, it represents the power output at your lactate threshold - the point where lactate accumulation in your blood begins to exceed your body's ability to clear it.</p>
+
+                        <p>FTP is crucial for cyclists because it:</p>
+
+                        <ul>
+                            <li><strong>Establishes Training Zones:</strong> All power-based training zones are calculated as percentages of FTP</li>
+                            <li><strong>Tracks Fitness Progress:</strong> Changes in FTP indicate improvements or declines in fitness</li>
+                            <li><strong>Guides Race Strategy:</strong> Helps determine sustainable power outputs for different race durations</li>
+                            <li><strong>Optimizes Training:</strong> Ensures you're training at the correct intensities for specific adaptations</li>
+                        </ul>
+
+                        <h3>FTP vs. Other Power Metrics</h3>
+
+                        <ul>
+                            <li><strong>FTP vs. Peak Power:</strong> FTP is sustainable power; peak power is maximum short-term output</li>
+                            <li><strong>FTP vs. VO2 Max Power:</strong> FTP is typically 75-85% of VO2 max power</li>
+                            <li><strong>FTP vs. Critical Power:</strong> FTP is more practical for training; critical power is more scientifically precise</li>
+                        </ul>
+
+                        <h2>FTP Testing Methods</h2>
+
+                        <h3>1. The 20-Minute Test (Most Popular)</h3>
+                        <p>The 20-minute test is the most widely used FTP testing protocol because it's practical and reasonably accurate.</p>
+
+                        <h4>Protocol:</h4>
+                        <ol>
+                            <li><strong>Warm-up (20 minutes):</strong>
+                                <ul>
+                                    <li>10 minutes easy spinning</li>
+                                    <li>3 x 1-minute efforts at 100-110% estimated FTP (1 minute recovery)</li>
+                                    <li>5 minutes easy spinning</li>
+                                </ul>
+                            </li>
+                            <li><strong>Test (20 minutes):</strong> Maximum sustainable effort for 20 minutes</li>
+                            <li><strong>Cool-down (10-15 minutes):</strong> Easy spinning</li>
+                            <li><strong>FTP Calculation:</strong> Average power × 0.95</li>
+                        </ol>
+
+                        <h4>Advantages:</h4>
+                        <ul>
+                            <li>Quick and practical</li>
+                            <li>Easy to complete indoors</li>
+                            <li>Widely accepted standard</li>
+                            <li>Good for regular testing</li>
+                        </ul>
+
+                        <h4>Disadvantages:</h4>
+                        <ul>
+                            <li>Requires good pacing judgment</li>
+                            <li>Can be mentally challenging</li>
+                            <li>0.95 multiplier may not be accurate for everyone</li>
+                        </ul>
+
+                        <h3>2. The Ramp Test</h3>
+                        <p>The ramp test is increasingly popular due to its simplicity and reduced mental stress.</p>
+
+                        <h4>Protocol:</h4>
+                        <ol>
+                            <li><strong>Warm-up (15 minutes):</strong> Easy spinning with a few short accelerations</li>
+                            <li><strong>Test:</strong> Increase power by 20 watts every minute until exhaustion</li>
+                            <li><strong>FTP Calculation:</strong> Maximum 1-minute power × 0.75</li>
+                        </ol>
+
+                        <h4>Advantages:</h4>
+                        <ul>
+                            <li>No pacing required</li>
+                            <li>Less mentally demanding</li>
+                            <li>Shorter duration</li>
+                            <li>Good for beginners</li>
+                        </ul>
+
+                        <h4>Disadvantages:</h4>
+                        <ul>
+                            <li>May not suit all physiological profiles</li>
+                            <li>Less specific to sustained efforts</li>
+                            <li>Multiplier varies between individuals</li>
+                        </ul>
+
+                        <h3>3. The 8-Minute Test</h3>
+                        <p>A shorter alternative that's less mentally demanding than the 20-minute test.</p>
+
+                        <h4>Protocol:</h4>
+                        <ol>
+                            <li><strong>Warm-up (15-20 minutes):</strong> Progressive build with short efforts</li>
+                            <li><strong>Test:</strong> 2 × 8-minute all-out efforts with 10 minutes recovery</li>
+                            <li><strong>FTP Calculation:</strong> 90% of average power from both efforts</li>
+                        </ol>
+
+                        <!-- FTP Test Comparison -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-4">📊 FTP Test Comparison</h3>
+                            <div class="text-blue-800">
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <div>
+                                        <h4 class="font-semibold mb-2">20-Minute Test</h4>
+                                        <ul class="text-sm space-y-1">
+                                            <li>• Duration: ~45 min total</li>
+                                            <li>• Accuracy: High</li>
+                                            <li>• Difficulty: Moderate-High</li>
+                                            <li>• Best for: Experienced cyclists</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold mb-2">Ramp Test</h4>
+                                        <ul class="text-sm space-y-1">
+                                            <li>• Duration: ~25 min total</li>
+                                            <li>• Accuracy: Good</li>
+                                            <li>• Difficulty: Low-Moderate</li>
+                                            <li>• Best for: Beginners</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold mb-2">8-Minute Test</h4>
+                                        <ul class="text-sm space-y-1">
+                                            <li>• Duration: ~40 min total</li>
+                                            <li>• Accuracy: Good</li>
+                                            <li>• Difficulty: Moderate</li>
+                                            <li>• Best for: Time-constrained</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>How to Prepare for FTP Testing</h2>
+
+                        <h3>Training Preparation</h3>
+                        <ul>
+                            <li><strong>Base Fitness:</strong> Build several weeks of consistent training</li>
+                            <li><strong>Recovery:</strong> Take 1-2 easy days before testing</li>
+                            <li><strong>Avoid Hard Training:</strong> No intense workouts 48 hours prior</li>
+                            <li><strong>Practice:</strong> Do a practice test to learn pacing</li>
+                        </ul>
+
+                        <h3>Day of Testing</h3>
+                        <ul>
+                            <li><strong>Nutrition:</strong> Eat a normal meal 2-3 hours before</li>
+                            <li><strong>Hydration:</strong> Be well-hydrated but not over-hydrated</li>
+                            <li><strong>Equipment Check:</strong> Ensure power meter is calibrated</li>
+                            <li><strong>Environment:</strong> Control temperature and minimize distractions</li>
+                        </ul>
+
+                        <h3>Mental Preparation</h3>
+                        <ul>
+                            <li><strong>Set Realistic Goals:</strong> Base expectations on recent training</li>
+                            <li><strong>Pacing Strategy:</strong> Plan your effort distribution</li>
+                            <li><strong>Motivation:</strong> Have music or entertainment ready</li>
+                            <li><strong>Acceptance:</strong> Some tests go better than others</li>
+                        </ul>
+
+                        <!-- Calculator CTA -->
+                        <div class="bg-primary text-white rounded-lg p-6 my-8">
+                            <h3 class="text-xl font-semibold mb-3">Calculate Your Training Zones</h3>
+                            <p class="mb-4 opacity-90">Once you have your FTP, use our calculator to determine your precise training zones for optimal power-based training.</p>
+                            <a href="/ftp-calculator" class="inline-block bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Calculate FTP Zones
+                            </a>
+                        </div>
+
+                        <h2>Executing the Perfect FTP Test</h2>
+
+                        <h3>20-Minute Test Pacing Strategy</h3>
+                        <ul>
+                            <li><strong>Minutes 0-2:</strong> Start conservatively, 10-15 watts below target</li>
+                            <li><strong>Minutes 2-10:</strong> Settle into target power, find rhythm</li>
+                            <li><strong>Minutes 10-15:</strong> Maintain target, resist urge to increase</li>
+                            <li><strong>Minutes 15-18:</strong> Gradually increase if feeling strong</li>
+                            <li><strong>Minutes 18-20:</strong> Give everything you have left</li>
+                        </ul>
+
+                        <h3>Common Testing Mistakes</h3>
+
+                        <h4>Starting Too Hard</h4>
+                        <p>The most common error is starting above sustainable power. This leads to rapid fatigue and lower overall average power.</p>
+
+                        <h4>Poor Pacing</h4>
+                        <p>Large power fluctuations reduce efficiency. Aim for steady, consistent power output throughout the test.</p>
+
+                        <h4>Inadequate Warm-up</h4>
+                        <p>Skipping or rushing the warm-up reduces power output and increases injury risk.</p>
+
+                        <h4>Environmental Factors</h4>
+                        <p>Testing in hot conditions, when dehydrated, or after poor sleep will negatively impact results.</p>
+
+                        <h2>Using Your FTP Results</h2>
+
+                        <h3>Power Training Zones</h3>
+                        <p>FTP serves as the basis for all power-based training zones:</p>
+
+                        <ul>
+                            <li><strong>Zone 1 (Active Recovery):</strong> Less than 55% FTP</li>
+                            <li><strong>Zone 2 (Endurance):</strong> 56-75% FTP</li>
+                            <li><strong>Zone 3 (Tempo):</strong> 76-90% FTP</li>
+                            <li><strong>Zone 4 (Lactate Threshold):</strong> 91-105% FTP</li>
+                            <li><strong>Zone 5 (VO2 Max):</strong> 106-120% FTP</li>
+                            <li><strong>Zone 6 (Anaerobic Capacity):</strong> 121-150% FTP</li>
+                            <li><strong>Zone 7 (Neuromuscular Power):</strong> Over 150% FTP</li>
+                        </ul>
+
+                        <h3>Training Applications</h3>
+
+                        <h4>Endurance Training</h4>
+                        <ul>
+                            <li><strong>Base Miles:</strong> 65-75% FTP for aerobic development</li>
+                            <li><strong>Tempo Efforts:</strong> 76-90% FTP for sustained power</li>
+                            <li><strong>Sweet Spot:</strong> 84-97% FTP for efficient training</li>
+                        </ul>
+
+                        <h4>Threshold Training</h4>
+                        <ul>
+                            <li><strong>FTP Intervals:</strong> 95-105% FTP for lactate threshold improvement</li>
+                            <li><strong>Over-Unders:</strong> Alternating above and below FTP</li>
+                            <li><strong>Sustained Efforts:</strong> Long intervals at FTP</li>
+                        </ul>
+
+                        <h2>When to Retest Your FTP</h2>
+
+                        <h3>Frequency Guidelines</h3>
+                        <ul>
+                            <li><strong>Beginners:</strong> Every 6-8 weeks</li>
+                            <li><strong>Intermediate:</strong> Every 8-12 weeks</li>
+                            <li><strong>Advanced:</strong> Every 12-16 weeks</li>
+                            <li><strong>In-Season:</strong> Monthly or before key events</li>
+                        </ul>
+
+                        <h3>Signs You Need to Retest</h3>
+                        <ul>
+                            <li><strong>Workouts Feel Easy:</strong> Consistently hitting power targets with ease</li>
+                            <li><strong>Performance Improvements:</strong> Better race results or time trial performances</li>
+                            <li><strong>Training Block Completion:</strong> After 4-6 weeks of focused training</li>
+                            <li><strong>Seasonal Changes:</strong> Beginning of new training phases</li>
+                        </ul>
+
+                        <h3>Avoiding Overesting</h3>
+                        <p>Too frequent testing can be counterproductive:</p>
+                        <ul>
+                            <li><strong>Physical Stress:</strong> FTP tests are demanding and require recovery</li>
+                            <li><strong>Mental Fatigue:</strong> Constant testing can reduce motivation</li>
+                            <li><strong>Minor Fluctuations:</strong> Day-to-day variations don't reflect true fitness changes</li>
+                        </ul>
+
+                        <!-- Warning Box -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-yellow-900 mb-3">⚠️ FTP Testing Considerations</h3>
+                            <ul class="text-yellow-800 space-y-2">
+                                <li>• Results can vary by 5-10 watts between tests due to various factors</li>
+                                <li>• Indoor vs. outdoor tests may yield different results</li>
+                                <li>• Focus on trends over time rather than single test results</li>
+                                <li>• Consider using multiple testing methods to validate results</li>
+                            </ul>
+                        </div>
+
+                        <h2>Factors Affecting FTP Test Results</h2>
+
+                        <h3>Physiological Factors</h3>
+                        <ul>
+                            <li><strong>Fitness Level:</strong> Higher fitness = higher FTP</li>
+                            <li><strong>Body Weight:</strong> Affects power-to-weight ratio</li>
+                            <li><strong>Training History:</strong> Experience with sustained efforts</li>
+                            <li><strong>Muscle Fiber Type:</strong> Slow-twitch favors FTP performance</li>
+                        </ul>
+
+                        <h3>Environmental Factors</h3>
+                        <ul>
+                            <li><strong>Temperature:</strong> Heat reduces power output</li>
+                            <li><strong>Altitude:</strong> Higher altitude decreases FTP</li>
+                            <li><strong>Humidity:</strong> High humidity impairs performance</li>
+                            <li><strong>Air Quality:</strong> Pollution affects oxygen availability</li>
+                        </ul>
+
+                        <h3>Equipment Factors</h3>
+                        <ul>
+                            <li><strong>Power Meter Accuracy:</strong> Different meters may read differently</li>
+                            <li><strong>Bike Position:</strong> Aerodynamics vs. power output</li>
+                            <li><strong>Trainer Resistance:</strong> Indoor trainers may affect pacing</li>
+                        </ul>
+
+                        <!-- Tools Section -->
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">🛠️ Essential FTP Testing Tools</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Free Calculators:</h4>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• <a href="/ftp-calculator" class="text-primary hover:underline">FTP Calculator</a></li>
+                                        <li>• <a href="/power-to-weight-ratio-calculator" class="text-primary hover:underline">Power-to-Weight Calculator</a></li>
+                                        <li>• <a href="/watts-to-calories-calculator" class="text-primary hover:underline">Watts to Calories</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Required Equipment:</h4>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• Power meter (crank, pedal, or hub-based)</li>
+                                        <li>• Indoor trainer or outdoor route</li>
+                                        <li>• Heart rate monitor (optional)</li>
+                                        <li>• Cycling computer or training app</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Advanced FTP Testing Concepts</h2>
+
+                        <h3>Durability vs. FTP</h3>
+                        <p>Recent research suggests that the ability to sustain power over time (durability) is as important as absolute FTP for endurance performance.</p>
+
+                        <h3>FTP Variants</h3>
+                        <ul>
+                            <li><strong>Outdoor FTP:</strong> Often 5-10% higher than indoor due to cooling and biomechanical differences</li>
+                            <li><strong>Climb-Specific FTP:</strong> May differ from flat road FTP</li>
+                            <li><strong>Time Trial FTP:</strong> Aerodynamic position may affect sustainable power</li>
+                        </ul>
+
+                        <h3>Using FTP with Other Metrics</h3>
+                        <ul>
+                            <li><strong>W/kg Ratio:</strong> Power-to-weight for climbing performance</li>
+                            <li><strong>TTE (Time to Exhaustion):</strong> How long you can sustain FTP</li>
+                            <li><strong>VLaMax:</strong> Anaerobic power production capacity</li>
+                        </ul>
+
+                        <!-- Final CTA -->
+                        <div class="bg-secondary text-white rounded-lg p-6 my-8">
+                            <h3 class="text-xl font-semibold mb-3">Ready to Test Your FTP?</h3>
+                            <p class="mb-4 opacity-90">Calculate your training zones based on your FTP test results and start training with precision power targets.</p>
+                            <a href="/ftp-calculator" class="inline-block bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Calculate Your Training Zones →
+                            </a>
+                        </div>
+
+                        <h2>Conclusion</h2>
+                        
+                        <p>FTP testing is an essential skill for any cyclist serious about power-based training. Whether you choose the 20-minute test, ramp test, or another protocol, the key is consistency in your approach and using the results to guide your training decisions.</p>
+
+                        <p>Remember that FTP is just one metric in your training arsenal. Use it in conjunction with perceived effort, heart rate, and performance indicators to get a complete picture of your fitness and progress.</p>
+
+                        <p>Regular FTP testing will help you track improvements, adjust training zones, and ensure you're always training at the optimal intensity for your goals. Use our <a href="/ftp-calculator" class="text-primary hover:underline font-semibold">FTP calculator</a> to determine your training zones and start maximizing your cycling potential today.</p>
+
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <div class="p-8 bg-gray-50 border-t">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h4 class="font-semibold text-gray-900 mb-2">Related Articles</h4>
+                            <div class="space-y-1">
+                                <a href="/blog/power-to-weight-ratio-cycling" class="block text-primary hover:underline">Power-to-Weight Ratio for Cycling</a>
+                                <a href="/blog/what-is-zone-2-training-complete-guide" class="block text-primary hover:underline">Zone 2 Training Guide</a>
+                                <a href="/blog/watts-to-calories-cycling" class="block text-primary hover:underline">Calories Burned Cycling Calculator</a>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-gray-600 mb-2">Share this article:</div>
+                            <div class="flex space-x-3">
+                                <button class="text-blue-600 hover:text-blue-800">Facebook</button>
+                                <button class="text-blue-400 hover:text-blue-600">Twitter</button>
+                                <button class="text-blue-700 hover:text-blue-900">LinkedIn</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Related Calculators</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/ftp-calculator" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-orange-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">⚡</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">FTP Calculator</h4>
+                    <p class="text-gray-600 text-sm">Calculate your cycling training zones based on Functional Threshold Power.</p>
+                </a>
+                
+                <a href="/power-to-weight-ratio-calculator" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-secondary rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">📊</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Power-to-Weight Ratio</h4>
+                    <p class="text-gray-600 text-sm">Calculate your watts per kilogram for climbing performance analysis.</p>
+                </a>
+                
+                <a href="/watts-to-calories-calculator" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="h-12 w-12 bg-accent rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-white font-bold">🔥</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Watts to Calories</h4>
+                    <p class="text-gray-600 text-sm">Convert power output to calories burned for nutrition planning.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-12">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">728x90 Leaderboard Ad</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators and training insights for endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Popular Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight Ratio</a></li>
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/ftp-testing-guide-cyclists" class="hover:text-white">FTP Testing Guide</a></li>
+                        <li><a href="/blog/power-to-weight-ratio-cycling" class="hover:text-white">Power-to-Weight Ratio</a></li>
+                        <li><a href="/blog/what-is-zone-2-training-complete-guide" class="hover:text-white">Zone 2 Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

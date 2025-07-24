@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Time Predictor - Predict Marathon, Half Marathon & 5K Times | RunBikeCalc</title>
+    <meta name="description" content="Free race time predictor based on recent race performance or VO2 Max. Predict marathon, half marathon, 10K, and 5K times using proven mathematical models.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/race-time-predictor">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Race Time Predictor - Predict Marathon & Race Times">
+    <meta property="og:description" content="Predict your race times across all distances based on recent performance">
+    <meta property="og:image" content="https://runbikecalc.com/images/race-predictor-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/race-time-predictor">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Race Time Predictor">
+    <meta name="twitter:description" content="Predict marathon and race times from recent performance">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/race-predictor-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Race Time Predictor",
+        "url": "https://runbikecalc.com/race-time-predictor",
+        "description": "Predict race times across all distances based on recent performance",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Race Time Predictor</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Race Time Predictor</h1>
+        <p class="text-lg text-gray-600 mb-8">Predict your race times across all distances based on recent race performance or VO2 Max. Uses proven mathematical models for accurate time predictions.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator tabs -->
+                <div class="calc-card mb-8">
+                    <div class="border-b border-gray-200 mb-6">
+                        <nav class="-mb-px flex space-x-8">
+                            <button id="race-tab" class="tab-button active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium">
+                                From Race Time
+                            </button>
+                            <button id="vo2-tab" class="tab-button border-b-2 border-transparent text-gray-500 hover:text-gray-700 py-2 px-1 text-sm font-medium">
+                                From VO2 Max
+                            </button>
+                        </nav>
+                    </div>
+                    
+                    <!-- From Race Time Tab -->
+                    <div id="race-calculator" class="tab-content">
+                        <h2 class="text-2xl font-semibold mb-6">Predict from Recent Race</h2>
+                        
+                        <form id="race-form" class="space-y-6">
+                            <div>
+                                <label for="raceDistance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Recent Race Distance *
+                                </label>
+                                <select id="raceDistance" name="raceDistance" class="calc-input-number text-left" required>
+                                    <option value="">Select race distance</option>
+                                    <option value="1">1 Mile</option>
+                                    <option value="5">5K (3.1 miles)</option>
+                                    <option value="10">10K (6.2 miles)</option>
+                                    <option value="15">15K (9.3 miles)</option>
+                                    <option value="21.1">Half Marathon (21.1K)</option>
+                                    <option value="42.2">Marathon (42.2K)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your recent race distance</p>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Time *
+                                </label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <input type="number" 
+                                           id="race-hours" 
+                                           name="hours" 
+                                           class="calc-input-number" 
+                                           placeholder="1"
+                                           min="0"
+                                           max="8">
+                                    <input type="number" 
+                                           id="race-minutes" 
+                                           name="minutes" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           required
+                                           min="0"
+                                           max="59">
+                                    <input type="number" 
+                                           id="race-seconds" 
+                                           name="seconds" 
+                                           class="calc-input-number" 
+                                           placeholder="0"
+                                           min="0"
+                                           max="59">
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age (optional)
+                                    </label>
+                                    <input type="number" 
+                                           id="age" 
+                                           name="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           min="18"
+                                           max="80"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">For age-graded predictions</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Gender (optional)
+                                    </label>
+                                    <select id="gender" name="gender" class="calc-input-number text-left">
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">For more accurate predictions</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Predict Race Times
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- From VO2 Max Tab -->
+                    <div id="vo2-calculator" class="tab-content hidden">
+                        <h2 class="text-2xl font-semibold mb-6">Predict from VO2 Max</h2>
+                        
+                        <form id="vo2-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="vo2max" class="block text-sm font-medium text-gray-700 mb-2">
+                                        VO2 Max *
+                                    </label>
+                                    <input type="number" 
+                                           id="vo2max" 
+                                           name="vo2max" 
+                                           class="calc-input-number" 
+                                           placeholder="50"
+                                           required
+                                           min="20"
+                                           max="80"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Your VO2 Max (ml/kg/min)</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="vo2-age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age *
+                                    </label>
+                                    <input type="number" 
+                                           id="vo2-age" 
+                                           name="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           required
+                                           min="18"
+                                           max="80"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Your current age in years</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="vo2-gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender *
+                                </label>
+                                <select id="vo2-gender" name="gender" class="calc-input-number text-left" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Required for accurate calculations</p>
+                            </div>
+                            
+                            <button type="submit" class="calc-button">
+                                Predict Race Times
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>How Race Time Prediction Works</h2>
+                    <p>Race time prediction uses mathematical models based on physiological principles and statistical analysis of thousands of race performances. These calculators help you set realistic goals and plan your training strategy.</p>
+                    
+                    <h3>Prediction Methods</h3>
+                    
+                    <h4>Jack Daniels VDOT Formula</h4>
+                    <p>Based on VO2 Max and running economy, this method converts race performances into equivalent times across all distances. It's widely used by coaches and athletes for training and race planning.</p>
+                    
+                    <h4>Riegel Formula</h4>
+                    <p>Uses the relationship: T2 = T1 × (D2/D1)^1.06, where T = time and D = distance. This simple formula works well for distances from 5K to marathon.</p>
+                    
+                    <h4>Cameron Model</h4>
+                    <p>Accounts for the different physiological demands of various race distances, providing more accurate predictions especially for longer races.</p>
+                    
+                    <h3>Race Distance Characteristics</h3>
+                    
+                    <h4>5K Races</h4>
+                    <ul>
+                        <li><strong>Primary System:</strong> Aerobic with significant anaerobic contribution</li>
+                        <li><strong>VO2 Max Usage:</strong> 95-100%</li>
+                        <li><strong>Training Focus:</strong> VO2 max intervals, lactate threshold</li>
+                        <li><strong>Pacing:</strong> Slight negative split or even pace</li>
+                    </ul>
+                    
+                    <h4>10K Races</h4>
+                    <ul>
+                        <li><strong>Primary System:</strong> Primarily aerobic</li>
+                        <li><strong>VO2 Max Usage:</strong> 90-95%</li>
+                        <li><strong>Training Focus:</strong> Lactate threshold, tempo runs</li>
+                        <li><strong>Pacing:</strong> Even pace or slight negative split</li>
+                    </ul>
+                    
+                    <h4>Half Marathon</h4>
+                    <ul>
+                        <li><strong>Primary System:</strong> Aerobic endurance</li>
+                        <li><strong>VO2 Max Usage:</strong> 85-90%</li>
+                        <li><strong>Training Focus:</strong> Tempo runs, long runs</li>
+                        <li><strong>Pacing:</strong> Even pace or progressive</li>
+                    </ul>
+                    
+                    <h4>Marathon</h4>
+                    <ul>
+                        <li><strong>Primary System:</strong> Aerobic endurance and efficiency</li>
+                        <li><strong>VO2 Max Usage:</strong> 75-85%</li>
+                        <li><strong>Training Focus:</strong> Long runs, aerobic base</li>
+                        <li><strong>Pacing:</strong> Even pace or negative split</li>
+                    </ul>
+                    
+                    <h3>Factors Affecting Race Performance</h3>
+                    
+                    <h4>Training Factors</h4>
+                    <ul>
+                        <li><strong>Aerobic Base:</strong> Foundation for all distances</li>
+                        <li><strong>Specific Training:</strong> Distance-specific workouts</li>
+                        <li><strong>Training Volume:</strong> Weekly mileage and consistency</li>
+                        <li><strong>Recovery:</strong> Adequate rest between hard sessions</li>
+                    </ul>
+                    
+                    <h4>Environmental Factors</h4>
+                    <ul>
+                        <li><strong>Weather:</strong> Temperature, humidity, wind</li>
+                        <li><strong>Course:</strong> Hills, surface type, turns</li>
+                        <li><strong>Altitude:</strong> Elevation and acclimatization</li>
+                        <li><strong>Competition:</strong> Field strength and tactics</li>
+                    </ul>
+                    
+                    <h4>Individual Factors</h4>
+                    <ul>
+                        <li><strong>Running Economy:</strong> Efficiency of movement</li>
+                        <li><strong>Lactate Threshold:</strong> Sustainable pace</li>
+                        <li><strong>Fatigue Resistance:</strong> Ability to maintain pace</li>
+                        <li><strong>Mental Strength:</strong> Focus and determination</li>
+                    </ul>
+                    
+                    <h3>Using Predictions Effectively</h3>
+                    
+                    <h4>Goal Setting</h4>
+                    <ul>
+                        <li>Use predictions as starting points, not absolutes</li>
+                        <li>Consider recent training and fitness trends</li>
+                        <li>Account for race conditions and course difficulty</li>
+                        <li>Set A, B, and C goals for different scenarios</li>
+                    </ul>
+                    
+                    <h4>Training Planning</h4>
+                    <ul>
+                        <li>Use predicted times to set training paces</li>
+                        <li>Focus on limiters identified by prediction gaps</li>
+                        <li>Plan race-specific workouts at goal pace</li>
+                        <li>Adjust training based on workout performances</li>
+                    </ul>
+                    
+                    <h4>Race Strategy</h4>
+                    <ul>
+                        <li>Plan conservative early pace based on predictions</li>
+                        <li>Have alternative strategies for different scenarios</li>
+                        <li>Use splits to monitor pace execution</li>
+                        <li>Be prepared to adjust based on conditions</li>
+                    </ul>
+                    
+                    <h3>Limitations of Predictions</h3>
+                    <ul>
+                        <li><strong>Individual Variation:</strong> Some runners are better at certain distances</li>
+                        <li><strong>Training State:</strong> Current fitness may differ from recent race</li>
+                        <li><strong>Environmental Conditions:</strong> Weather and course affect performance</li>
+                        <li><strong>Race Experience:</strong> Pacing and tactical experience matter</li>
+                        <li><strong>Motivation:</strong> Goal importance affects performance</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Performance Equivalents</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="font-semibold text-gray-700">Sub-3 Hour Marathon:</div>
+                        <div class="ml-2 space-y-1 text-gray-600">
+                            <div>5K: ~20:00</div>
+                            <div>10K: ~41:30</div>
+                            <div>Half: ~1:24:00</div>
+                        </div>
+                        
+                        <div class="font-semibold text-gray-700 mt-3">Sub-4 Hour Marathon:</div>
+                        <div class="ml-2 space-y-1 text-gray-600">
+                            <div>5K: ~26:30</div>
+                            <div>10K: ~55:00</div>
+                            <div>Half: ~1:52:00</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                        <li><a href="/calories-burned-running.html" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                        <li><a href="/lactate-threshold-calculator.html" class="text-primary hover:underline">Lactate Threshold</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running.html" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                
+                // Add active to clicked tab
+                tab.classList.add('active', 'border-primary', 'text-primary');
+                tab.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Hide all content
+                contents.forEach(content => content.classList.add('hidden'));
+                
+                // Show target content
+                const targetId = tab.id.replace('-tab', '-calculator');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+        
+        // Race Time Predictor implementations
+        class RaceTimePredictor extends Calculator {
+            constructor() {
+                super('race-form', 'results');
+                this.vo2Calculator = new VO2RacePredictor();
+            }
+            
+            calculate() {
+                const raceDistance = parseFloat(this.form.querySelector('[name="raceDistance"]').value);
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                const age = this.getInputValue('age', 0);
+                const gender = this.form.querySelector('[name="gender"]').value;
+                
+                if (!raceDistance || !minutes) {
+                    this.displayError('Please select race distance and enter time.');
+                    return;
+                }
+                
+                // Convert time to total seconds
+                const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+                
+                // Calculate VDOT equivalent from race performance
+                const vdot = this.calculateVDOT(raceDistance, totalSeconds);
+                
+                // Predict times for all standard distances
+                const predictions = this.predictAllTimes(vdot, age, gender);
+                
+                // Format race time
+                const raceTimeFormatted = this.formatTime(totalSeconds);
+                const distanceName = this.getDistanceName(raceDistance);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Predicted Race Times</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Based on ${distanceName}</div>
+                            <div class="text-2xl font-bold">${raceTimeFormatted}</div>
+                            <div class="text-lg opacity-90 mt-2">VDOT: ${vdot}</div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            ${predictions.map(pred => `
+                                <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <div class="font-semibold text-gray-900">${pred.name}</div>
+                                        <div class="text-sm text-gray-600">${pred.distance}</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-xl font-bold text-primary">${pred.time}</div>
+                                        <div class="text-sm text-gray-600">${pred.pace}/mi</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Training Paces</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-blue-700">
+                                <div>
+                                    <strong>Easy:</strong> ${this.calculateTrainingPace(vdot, 'easy')}
+                                </div>
+                                <div>
+                                    <strong>Marathon:</strong> ${this.calculateTrainingPace(vdot, 'marathon')}
+                                </div>
+                                <div>
+                                    <strong>Threshold:</strong> ${this.calculateTrainingPace(vdot, 'threshold')}
+                                </div>
+                                <div>
+                                    <strong>Interval:</strong> ${this.calculateTrainingPace(vdot, 'interval')}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My predicted marathon time: ${predictions.find(p => p.name === 'Marathon').time}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            calculateVDOT(distance, timeInSeconds) {
+                // Simplified VDOT calculation based on Jack Daniels formula
+                const velocity = (distance * 1000) / timeInSeconds; // meters per second
+                const velocityMPM = velocity * 60; // meters per minute
+                
+                // VDOT approximation: VO2 = -4.6 + 0.182258 * (velocity in m/min) + 0.000104 * (velocity in m/min)^2
+                let vdot = -4.6 + (0.182258 * velocityMPM) + (0.000104 * Math.pow(velocityMPM, 2));
+                
+                return Math.round(Math.max(20, Math.min(80, vdot)));
+            }
+            
+            predictAllTimes(vdot, age, gender) {
+                const races = [
+                    { name: '1 Mile', distance: '1.6K', distanceKm: 1.609, targetPace: this.vdotToPace(vdot, 1.609) },
+                    { name: '5K', distance: '3.1 miles', distanceKm: 5, targetPace: this.vdotToPace(vdot, 5) },
+                    { name: '10K', distance: '6.2 miles', distanceKm: 10, targetPace: this.vdotToPace(vdot, 10) },
+                    { name: '15K', distance: '9.3 miles', distanceKm: 15, targetPace: this.vdotToPace(vdot, 15) },
+                    { name: 'Half Marathon', distance: '13.1 miles', distanceKm: 21.1, targetPace: this.vdotToPace(vdot, 21.1) },
+                    { name: 'Marathon', distance: '26.2 miles', distanceKm: 42.2, targetPace: this.vdotToPace(vdot, 42.2) }
+                ];
+                
+                return races.map(race => {
+                    const totalSeconds = race.targetPace * race.distanceKm;
+                    const paceSeconds = totalSeconds / (race.distanceKm * 0.621371); // pace per mile
+                    
+                    return {
+                        name: race.name,
+                        distance: race.distance,
+                        time: this.formatTime(totalSeconds),
+                        pace: this.formatPace(paceSeconds)
+                    };
+                });
+            }
+            
+            vdotToPace(vdot, distanceKm) {
+                // Simplified conversion from VDOT to pace (seconds per km)
+                // This is an approximation of the Daniels formula
+                let basePace = 60 / (vdot * 0.8 + 3.5); // base pace in min/km
+                
+                // Adjust for distance (longer races are run at slower pace)
+                let distanceFactor = 1;
+                if (distanceKm >= 42.2) distanceFactor = 1.1; // Marathon
+                else if (distanceKm >= 21.1) distanceFactor = 1.05; // Half marathon
+                else if (distanceKm >= 15) distanceFactor = 1.02; // 15K
+                else if (distanceKm >= 10) distanceFactor = 1.0; // 10K
+                else if (distanceKm >= 5) distanceFactor = 0.98; // 5K
+                else distanceFactor = 0.95; // Mile
+                
+                return basePace * distanceFactor * 60; // return seconds per km
+            }
+            
+            calculateTrainingPace(vdot, type) {
+                let factor;
+                switch (type) {
+                    case 'easy': factor = 1.3; break;
+                    case 'marathon': factor = 1.1; break;
+                    case 'threshold': factor = 1.0; break;
+                    case 'interval': factor = 0.95; break;
+                    default: factor = 1.0;
+                }
+                
+                const paceSecondsPerKm = this.vdotToPace(vdot, 10) * factor;
+                const paceSecondsPerMile = paceSecondsPerKm * 1.609;
+                
+                return this.formatPace(paceSecondsPerMile);
+            }
+            
+            formatTime(totalSeconds) {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.round(totalSeconds % 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            
+            formatPace(secondsPerMile) {
+                const minutes = Math.floor(secondsPerMile / 60);
+                const seconds = Math.round(secondsPerMile % 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            getDistanceName(distance) {
+                const distances = {
+                    1: '1 Mile',
+                    5: '5K',
+                    10: '10K',
+                    15: '15K',
+                    21.1: 'Half Marathon',
+                    42.2: 'Marathon'
+                };
+                return distances[distance] || `${distance}K`;
+            }
+        }
+        
+        class VO2RacePredictor extends Calculator {
+            constructor() {
+                super('vo2-form', 'results');
+            }
+            
+            calculate() {
+                const vo2max = this.getInputValue('vo2max');
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+                
+                if (!vo2max || !age || !gender) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Convert VO2 Max to VDOT (approximately equivalent for predictions)
+                const vdot = vo2max * (gender === 'male' ? 1.0 : 1.06);
+                
+                // Predict times for all standard distances
+                const predictions = calculator.predictAllTimes(vdot, age, gender);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Predicted Race Times from VO2 Max</h3>
+                        
+                        <div class="bg-secondary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">VO2 Max: ${vo2max} ml/kg/min</div>
+                            <div class="text-2xl font-bold">VDOT: ${Math.round(vdot)}</div>
+                            <div class="text-lg opacity-90 mt-2">${gender}, ${age} years old</div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            ${predictions.map(pred => `
+                                <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <div class="font-semibold text-gray-900">${pred.name}</div>
+                                        <div class="text-sm text-gray-600">${pred.distance}</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-xl font-bold text-secondary">${pred.time}</div>
+                                        <div class="text-sm text-gray-600">${pred.pace}/mi</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">Training Paces</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                                <div>
+                                    <strong>Easy:</strong> ${calculator.calculateTrainingPace(vdot, 'easy')}
+                                </div>
+                                <div>
+                                    <strong>Marathon:</strong> ${calculator.calculateTrainingPace(vdot, 'marathon')}
+                                </div>
+                                <div>
+                                    <strong>Threshold:</strong> ${calculator.calculateTrainingPace(vdot, 'threshold')}
+                                </div>
+                                <div>
+                                    <strong>Interval:</strong> ${calculator.calculateTrainingPace(vdot, 'interval')}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.vo2Calculator.shareResult('My predicted marathon from VO2 Max: ${predictions.find(p => p.name === 'Marathon').time}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.vo2Calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new RaceTimePredictor();
+    </script>
+</body>
+</html>

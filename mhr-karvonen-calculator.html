@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karvonen Formula Heart Rate Calculator - Accurate Training Zones | RunBikeCalc</title>
+    <meta name="description" content="Calculate precise heart rate training zones using the Karvonen Formula. More accurate than basic calculations by incorporating your resting heart rate.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/mhr-karvonen-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Karvonen Formula Heart Rate Calculator - RunBikeCalc">
+    <meta property="og:description" content="Calculate precise heart rate training zones using the Karvonen Formula with your resting heart rate.">
+    <meta property="og:image" content="https://runbikecalc.com/images/karvonen-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/mhr-karvonen-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karvonen Formula Heart Rate Calculator">
+    <meta name="twitter:description" content="Calculate precise heart rate training zones using the Karvonen Formula.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/karvonen-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Karvonen Formula Heart Rate Calculator",
+        "url": "https://runbikecalc.com/mhr-karvonen-calculator",
+        "description": "Calculate precise heart rate training zones using the Karvonen Formula for endurance training",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "@id": "https://runbikecalc.com/mhr-karvonen-calculator#offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator" class="nav-link">VO2 Max</a>
+                    <a href="/about" class="nav-link">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-8 text-sm">
+            <a href="/" class="text-primary hover:underline">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Calculators</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-600">Karvonen Formula Calculator</span>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Karvonen Formula Heart Rate Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate more accurate heart rate training zones using the Karvonen Formula, 
+                which incorporates your resting heart rate for personalized results.
+            </p>
+        </section>
+
+        <!-- Calculator section -->
+        <section class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Input form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6">Enter Your Details</h2>
+                    <form id="karvonenForm" class="space-y-6">
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-2">Age (years)</label>
+                            <input type="number" id="age" class="calc-input-number" placeholder="e.g., 30" min="10" max="100" required>
+                        </div>
+                        
+                        <div>
+                            <label for="restingHR" class="block text-sm font-medium text-gray-700 mb-2">Resting Heart Rate (bpm)</label>
+                            <input type="number" id="restingHR" class="calc-input-number" placeholder="e.g., 60" min="30" max="120" required>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Training Zones
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results -->
+                <div id="results" class="bg-white rounded-xl shadow-lg p-8 hidden">
+                    <h2 class="text-2xl font-bold mb-6">Your Karvonen Training Zones</h2>
+                    <div id="resultContent" class="space-y-4">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-4xl mx-auto mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">What is the Karvonen Formula?</h3>
+                    <p class="text-gray-600">The Karvonen Formula is a method for calculating target heart rate zones that takes into account your resting heart rate, making it more personalized and accurate than basic age-based formulas.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">How is it different from basic heart rate calculations?</h3>
+                    <p class="text-gray-600">Unlike the basic 220-age formula, the Karvonen method uses your heart rate reserve (maximum HR minus resting HR) to calculate zones, providing more accurate training intensities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="max-w-4xl mx-auto mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Related Calculators</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/heart-rate-zone-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Heart Rate Zone Calculator</h3>
+                    <p class="text-gray-600">Basic 5-zone heart rate calculator</p>
+                </a>
+                <a href="/max-heart-rate-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Max Heart Rate Calculator</h3>
+                    <p class="text-gray-600">Calculate your maximum heart rate</p>
+                </a>
+                <a href="/zone-2-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Zone 2 Calculator</h3>
+                    <p class="text-gray-600">Find your aerobic base training zone</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        class KarvonenCalculator extends Calculator {
+            constructor() {
+                super('karvonenForm', 'results');
+            }
+
+            calculate() {
+                const age = this.getInputValue('age');
+                const restingHR = this.getInputValue('restingHR');
+                
+                if (!age || !restingHR) return;
+                
+                const maxHR = 220 - age;
+                const heartRateReserve = maxHR - restingHR;
+                
+                const zones = [
+                    {name: 'Zone 1 (Active Recovery)', min: Math.round(restingHR + (heartRateReserve * 0.50)), max: Math.round(restingHR + (heartRateReserve * 0.60))},
+                    {name: 'Zone 2 (Aerobic Base)', min: Math.round(restingHR + (heartRateReserve * 0.60)), max: Math.round(restingHR + (heartRateReserve * 0.70))},
+                    {name: 'Zone 3 (Aerobic)', min: Math.round(restingHR + (heartRateReserve * 0.70)), max: Math.round(restingHR + (heartRateReserve * 0.80))},
+                    {name: 'Zone 4 (Lactate Threshold)', min: Math.round(restingHR + (heartRateReserve * 0.80)), max: Math.round(restingHR + (heartRateReserve * 0.90))},
+                    {name: 'Zone 5 (VO2 Max)', min: Math.round(restingHR + (heartRateReserve * 0.90)), max: Math.round(restingHR + (heartRateReserve * 1.00))}
+                ];
+                
+                let resultHTML = `
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-primary">${maxHR} bpm</div>
+                        <div class="text-gray-600">Maximum Heart Rate</div>
+                    </div>
+                    <div class="space-y-3">
+                `;
+                
+                zones.forEach(zone => {
+                    resultHTML += `
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                            <span class="font-medium">${zone.name}</span>
+                            <span class="text-primary font-bold">${zone.min} - ${zone.max} bpm</span>
+                        </div>
+                    `;
+                });
+                
+                resultHTML += '</div>';
+                
+                this.displayResult(resultHTML);
+            }
+        }
+
+        new KarvonenCalculator();
+    </script>
+</body>
+</html>

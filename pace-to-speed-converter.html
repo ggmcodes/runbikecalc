@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace to Speed Converter - Convert Min/Mile to MPH & KPH | RunBikeCalc</title>
+    <meta name="description" content="Convert running pace (minutes per mile/km) to speed (mph/kph) instantly. Free online pace to speed converter for runners and athletes.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/pace-to-speed-converter">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pace to Speed Converter - RunBikeCalc">
+    <meta property="og:description" content="Convert running pace to speed instantly with our free online converter.">
+    <meta property="og:image" content="https://runbikecalc.com/images/pace-speed-converter-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/pace-to-speed-converter">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pace to Speed Converter">
+    <meta name="twitter:description" content="Convert running pace to speed instantly.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/pace-speed-converter-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pace to Speed Converter",
+        "url": "https://runbikecalc.com/pace-to-speed-converter",
+        "description": "Convert running pace (minutes per mile/km) to speed (mph/kph) for training and racing",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator" class="nav-link">VO2 Max</a>
+                    <a href="/about" class="nav-link">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-8 text-sm">
+            <a href="/" class="text-primary hover:underline">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/running-pace-calculator" class="text-primary hover:underline">Running Calculators</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-600">Pace to Speed Converter</span>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Pace to Speed Converter
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Convert your running pace (minutes per mile or kilometer) to speed (mph or kph) 
+                for training analysis and race planning.
+            </p>
+        </section>
+
+        <!-- Calculator section -->
+        <section class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Input form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6">Enter Your Pace</h2>
+                    <form id="paceConverterForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-4">Pace Unit</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="paceUnit" value="mile" checked class="text-primary">
+                                    <span>Minutes per Mile</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="paceUnit" value="km" class="text-primary">
+                                    <span>Minutes per KM</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="paceMinutes" class="block text-sm font-medium text-gray-700 mb-2">Minutes</label>
+                            <input type="number" id="paceMinutes" class="calc-input-number" placeholder="e.g., 8" min="3" max="30" required>
+                        </div>
+                        
+                        <div>
+                            <label for="paceSeconds" class="block text-sm font-medium text-gray-700 mb-2">Seconds</label>
+                            <input type="number" id="paceSeconds" class="calc-input-number" placeholder="e.g., 30" min="0" max="59">
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Convert to Speed
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results -->
+                <div id="results" class="bg-white rounded-xl shadow-lg p-8 hidden">
+                    <h2 class="text-2xl font-bold mb-6">Speed Results</h2>
+                    <div id="resultContent" class="space-y-4">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-4xl mx-auto mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Why convert pace to speed?</h3>
+                    <p class="text-gray-600">Converting pace to speed helps compare running performance with other activities, understand treadmill settings, and analyze training data in different formats.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">What's the difference between pace and speed?</h3>
+                    <p class="text-gray-600">Pace measures how long it takes to cover a distance (e.g., 8:00 per mile), while speed measures how much distance is covered in a time period (e.g., 7.5 mph).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        class PaceSpeedConverter extends Calculator {
+            constructor() {
+                super('paceConverterForm', 'results');
+            }
+
+            calculate() {
+                const minutes = this.getInputValue('paceMinutes') || 0;
+                const seconds = this.getInputValue('paceSeconds') || 0;
+                const paceUnit = document.querySelector('input[name="paceUnit"]:checked').value;
+                
+                if (!minutes && !seconds) return;
+                
+                const totalMinutes = minutes + (seconds / 60);
+                
+                let speedMph, speedKph;
+                
+                if (paceUnit === 'mile') {
+                    speedMph = 60 / totalMinutes;
+                    speedKph = speedMph * 1.60934;
+                } else {
+                    speedKph = 60 / totalMinutes;
+                    speedMph = speedKph / 1.60934;
+                }
+                
+                const resultHTML = `
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">${speedMph.toFixed(2)} mph</div>
+                            <div class="text-gray-600">Miles per Hour</div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-secondary">${speedKph.toFixed(2)} kph</div>
+                            <div class="text-gray-600">Kilometers per Hour</div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-semibold mb-2">Conversion Details</h3>
+                            <p class="text-sm text-gray-600">
+                                Pace: ${minutes}:${seconds.toString().padStart(2, '0')} per ${paceUnit === 'mile' ? 'mile' : 'kilometer'}
+                            </p>
+                        </div>
+                    </div>
+                `;
+                
+                this.displayResult(resultHTML);
+            }
+        }
+
+        new PaceSpeedConverter();
+    </script>
+</body>
+</html>

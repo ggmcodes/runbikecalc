@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treadmill Pace Calculator - Convert Speed to Pace & Incline Training | RunBikeCalc</title>
+    <meta name="description" content="Free treadmill pace calculator. Convert MPH/KPH to pace, calculate incline equivalent, and plan treadmill workouts. Perfect for indoor training and bad weather runs.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/treadmill-pace-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Treadmill Pace Calculator - Speed to Pace Converter">
+    <meta property="og:description" content="Convert treadmill speed to running pace and calculate incline equivalents">
+    <meta property="og:image" content="https://runbikecalc.com/images/treadmill-pace-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/treadmill-pace-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Treadmill Pace Calculator">
+    <meta name="twitter:description" content="Convert treadmill speed to running pace">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/treadmill-pace-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Treadmill Pace Calculator",
+        "url": "https://runbikecalc.com/treadmill-pace-calculator",
+        "description": "Convert treadmill speed to running pace and calculate incline equivalents for indoor training",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Treadmill Pace Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Treadmill Pace Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Convert treadmill speed (MPH/KPH) to running pace, calculate incline equivalents, and plan effective indoor training workouts. Perfect for treadmill training and bad weather runs.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Treadmill Pace & Speed Calculator</h2>
+                    
+                    <!-- Conversion tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8">
+                                <button class="conversion-tab active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium" data-conversion="speed-to-pace">
+                                    Speed to Pace
+                                </button>
+                                <button class="conversion-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-conversion="pace-to-speed">
+                                    Pace to Speed
+                                </button>
+                                <button class="conversion-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-conversion="incline-equivalent">
+                                    Incline Equivalent
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                    <form id="treadmill-form" class="space-y-6">
+                        <!-- Speed to Pace conversion -->
+                        <div id="speed-to-pace-fields" class="conversion-fields">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="speed" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Treadmill Speed *
+                                    </label>
+                                    <input type="number" 
+                                           id="speed" 
+                                           name="speed" 
+                                           class="calc-input-number" 
+                                           placeholder="6.0"
+                                           required
+                                           min="1"
+                                           max="20"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Speed displayed on treadmill</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="speedUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Speed Unit
+                                    </label>
+                                    <select id="speedUnit" name="speedUnit" class="calc-input-number text-left">
+                                        <option value="mph">Miles per Hour (MPH)</option>
+                                        <option value="kph">Kilometers per Hour (KPH)</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Unit shown on your treadmill</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pace to Speed conversion -->
+                        <div id="pace-to-speed-fields" class="conversion-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="targetPace" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Target Pace *
+                                    </label>
+                                    <input type="text" 
+                                           id="targetPace" 
+                                           name="targetPace" 
+                                           class="calc-input-number" 
+                                           placeholder="8:00"
+                                           pattern="[0-9]{1,2}:[0-5][0-9]">
+                                    <p class="text-sm text-gray-600 mt-1">Desired pace (MM:SS format)</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="paceUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Pace Unit
+                                    </label>
+                                    <select id="paceUnit" name="paceUnit" class="calc-input-number text-left">
+                                        <option value="mile">Per Mile</option>
+                                        <option value="km">Per Kilometer</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Pace measurement unit</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Incline Equivalent conversion -->
+                        <div id="incline-equivalent-fields" class="conversion-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="flatPace" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Flat Ground Pace *
+                                    </label>
+                                    <input type="text" 
+                                           id="flatPace" 
+                                           name="flatPace" 
+                                           class="calc-input-number" 
+                                           placeholder="8:00"
+                                           pattern="[0-9]{1,2}:[0-5][0-9]">
+                                    <p class="text-sm text-gray-600 mt-1">Your flat ground running pace</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="incline" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Treadmill Incline *
+                                    </label>
+                                    <input type="number" 
+                                           id="incline" 
+                                           name="incline" 
+                                           class="calc-input-number" 
+                                           placeholder="5.0"
+                                           min="0"
+                                           max="15"
+                                           step="0.5">
+                                    <p class="text-sm text-gray-600 mt-1">Incline percentage (%)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Common incline field for first two tabs -->
+                        <div id="incline-field" class="incline-optional">
+                            <label for="commonIncline" class="block text-sm font-medium text-gray-700 mb-2">
+                                Incline (optional)
+                            </label>
+                            <input type="number" 
+                                   id="commonIncline" 
+                                   name="commonIncline" 
+                                   class="calc-input-number" 
+                                   placeholder="0.0"
+                                   min="0"
+                                   max="15"
+                                   step="0.5">
+                            <p class="text-sm text-gray-600 mt-1">Treadmill incline percentage (0% = flat)</p>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Speed conversion reference -->
+                <div class="calc-card mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Common Speed/Pace Conversions</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Speed (MPH)</th>
+                                    <th class="text-right py-2">Pace/Mile</th>
+                                    <th class="text-right py-2">Speed (KPH)</th>
+                                    <th class="text-right py-2">Pace/KM</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr>
+                                    <td class="py-2 font-medium">4.0</td>
+                                    <td class="text-right py-2">15:00</td>
+                                    <td class="text-right py-2">6.4</td>
+                                    <td class="text-right py-2">9:22</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">5.0</td>
+                                    <td class="text-right py-2">12:00</td>
+                                    <td class="text-right py-2">8.0</td>
+                                    <td class="text-right py-2">7:30</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">6.0</td>
+                                    <td class="text-right py-2">10:00</td>
+                                    <td class="text-right py-2">9.7</td>
+                                    <td class="text-right py-2">6:13</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">6.5</td>
+                                    <td class="text-right py-2">9:14</td>
+                                    <td class="text-right py-2">10.5</td>
+                                    <td class="text-right py-2">5:43</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">7.0</td>
+                                    <td class="text-right py-2">8:34</td>
+                                    <td class="text-right py-2">11.3</td>
+                                    <td class="text-right py-2">5:19</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">7.5</td>
+                                    <td class="text-right py-2">8:00</td>
+                                    <td class="text-right py-2">12.1</td>
+                                    <td class="text-right py-2">4:58</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">8.0</td>
+                                    <td class="text-right py-2">7:30</td>
+                                    <td class="text-right py-2">12.9</td>
+                                    <td class="text-right py-2">4:39</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">8.5</td>
+                                    <td class="text-right py-2">7:04</td>
+                                    <td class="text-right py-2">13.7</td>
+                                    <td class="text-right py-2">4:23</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">9.0</td>
+                                    <td class="text-right py-2">6:40</td>
+                                    <td class="text-right py-2">14.5</td>
+                                    <td class="text-right py-2">4:08</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-medium">10.0</td>
+                                    <td class="text-right py-2">6:00</td>
+                                    <td class="text-right py-2">16.1</td>
+                                    <td class="text-right py-2">3:44</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Treadmill Training</h2>
+                    <p>Treadmill running offers consistent, controlled training conditions regardless of weather, terrain, or time of day. Understanding how to convert between speed and pace, and how incline affects your workout, is essential for effective indoor training.</p>
+                    
+                    <h3>Speed vs. Pace Conversion</h3>
+                    
+                    <h4>Speed to Pace Formula</h4>
+                    <ul>
+                        <li><strong>MPH to Pace per Mile:</strong> Pace = 60 ÷ Speed</li>
+                        <li><strong>KPH to Pace per KM:</strong> Pace = 60 ÷ Speed</li>
+                        <li><strong>Example:</strong> 6.0 MPH = 60 ÷ 6 = 10:00 per mile</li>
+                    </ul>
+                    
+                    <h4>Pace to Speed Formula</h4>
+                    <ul>
+                        <li><strong>Pace per Mile to MPH:</strong> Speed = 60 ÷ Pace (in minutes)</li>
+                        <li><strong>Pace per KM to KPH:</strong> Speed = 60 ÷ Pace (in minutes)</li>
+                        <li><strong>Example:</strong> 8:00 per mile = 60 ÷ 8 = 7.5 MPH</li>
+                    </ul>
+                    
+                    <h3>Treadmill vs. Outdoor Running</h3>
+                    
+                    <h4>Key Differences</h4>
+                    <ul>
+                        <li><strong>Moving Belt:</strong> Belt assists leg turnover slightly</li>
+                        <li><strong>No Air Resistance:</strong> Reduces energy expenditure by 2-8%</li>
+                        <li><strong>Consistent Surface:</strong> No terrain variations or obstacles</li>
+                        <li><strong>Climate Control:</strong> No wind, temperature, or humidity changes</li>
+                        <li><strong>Mental Challenges:</strong> Can feel more monotonous than outdoor running</li>
+                    </ul>
+                    
+                    <h4>Treadmill Calibration</h4>
+                    <ul>
+                        <li><strong>Speed Accuracy:</strong> Most treadmills are accurate within 3-5%</li>
+                        <li><strong>Belt Length:</strong> Longer belts typically more accurate</li>
+                        <li><strong>Maintenance:</strong> Well-maintained treadmills more reliable</li>
+                        <li><strong>GPS Comparison:</strong> Test against known outdoor distances</li>
+                    </ul>
+                    
+                    <h3>Incline Training Benefits</h3>
+                    
+                    <h4>Why Use Incline</h4>
+                    <ul>
+                        <li><strong>Simulate Hills:</strong> Prepare for outdoor terrain</li>
+                        <li><strong>Increase Intensity:</strong> Higher calorie burn and cardiovascular demand</li>
+                        <li><strong>Muscle Activation:</strong> Targets glutes, hamstrings, and calves</li>
+                        <li><strong>Reduce Impact:</strong> Can run slower while maintaining intensity</li>
+                        <li><strong>Power Development:</strong> Builds running strength and power</li>
+                    </ul>
+                    
+                    <h4>Incline Equivalency</h4>
+                    <p>Research suggests that 1% incline approximates the energy cost of outdoor running on flat ground due to air resistance. Higher inclines provide specific training benefits:</p>
+                    <ul>
+                        <li><strong>1-2%:</strong> Simulates flat outdoor running</li>
+                        <li><strong>3-5%:</strong> Moderate hill training, aerobic benefit</li>
+                        <li><strong>6-8%:</strong> Steep hill simulation, strength building</li>
+                        <li><strong>9-12%:</strong> Power hiking/mountaineering training</li>
+                        <li><strong>12%+:</strong> Extreme hill training, short intervals only</li>
+                    </ul>
+                    
+                    <h3>Treadmill Workout Types</h3>
+                    
+                    <h4>Steady State Runs</h4>
+                    <ul>
+                        <li><strong>Easy Runs:</strong> 60-70% max HR, conversational pace</li>
+                        <li><strong>Tempo Runs:</strong> Comfortably hard pace, 15-40 minutes</li>
+                        <li><strong>Long Runs:</strong> Extended duration at easy to moderate pace</li>
+                        <li><strong>Recovery Runs:</strong> Very easy pace, active recovery</li>
+                    </ul>
+                    
+                    <h4>Interval Training</h4>
+                    <ul>
+                        <li><strong>Speed Intervals:</strong> High speed, flat or slight incline</li>
+                        <li><strong>Hill Intervals:</strong> Moderate speed, high incline</li>
+                        <li><strong>Pyramid Workouts:</strong> Varying speeds and distances</li>
+                        <li><strong>Ladder Workouts:</strong> Progressive speed or incline increases</li>
+                    </ul>
+                    
+                    <h4>Progressive Workouts</h4>
+                    <ul>
+                        <li><strong>Fartlek:</strong> Speed play with varying intensities</li>
+                        <li><strong>Progression Runs:</strong> Gradually increasing speed</li>
+                        <li><strong>Negative Splits:</strong> Faster second half</li>
+                        <li><strong>Cut-downs:</strong> Decreasing pace each segment</li>
+                    </ul>
+                    
+                    <h3>Treadmill Safety and Best Practices</h3>
+                    
+                    <h4>Safety Tips</h4>
+                    <ul>
+                        <li><strong>Emergency Stop:</strong> Know location of emergency stop clip</li>
+                        <li><strong>Gradual Changes:</strong> Adjust speed/incline slowly</li>
+                        <li><strong>Proper Mounting:</strong> Start belt before stepping on</li>
+                        <li><strong>Handrail Use:</strong> Use briefly for balance, not support</li>
+                        <li><strong>Hydration:</strong> Keep water bottle accessible</li>
+                    </ul>
+                    
+                    <h4>Form and Technique</h4>
+                    <ul>
+                        <li><strong>Natural Stride:</strong> Don't overstride or understride</li>
+                        <li><strong>Foot Placement:</strong> Land midfoot, not on heels</li>
+                        <li><strong>Arm Swing:</strong> Natural arm movement, avoid handrails</li>
+                        <li><strong>Posture:</strong> Upright stance, slight forward lean</li>
+                        <li><strong>Cadence:</strong> Maintain 170-180 steps per minute</li>
+                    </ul>
+                    
+                    <h3>Troubleshooting Common Issues</h3>
+                    
+                    <h4>Treadmill Feels Harder</h4>
+                    <ul>
+                        <li><strong>Mental Factor:</strong> Boredom and monotony increase perceived effort</li>
+                        <li><strong>Heat Buildup:</strong> Indoor air circulation may be poor</li>
+                        <li><strong>Dehydration:</strong> Indoor environment can increase fluid loss</li>
+                        <li><strong>Different Mechanics:</strong> Slight changes in running form</li>
+                    </ul>
+                    
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><strong>Entertainment:</strong> Music, podcasts, TV, or audiobooks</li>
+                        <li><strong>Ventilation:</strong> Use fans or improve air circulation</li>
+                        <li><strong>Hydration:</strong> Drink more frequently than outdoor runs</li>
+                        <li><strong>Variety:</strong> Change speeds, inclines, or workout types</li>
+                        <li><strong>Goals:</strong> Set specific workout objectives</li>
+                    </ul>
+                    
+                    <h3>Training Adaptations</h3>
+                    
+                    <h4>Cardiovascular Benefits</h4>
+                    <ul>
+                        <li><strong>Heart Rate Control:</strong> Precise intensity management</li>
+                        <li><strong>Consistent Effort:</strong> No external pace variations</li>
+                        <li><strong>Progressive Overload:</strong> Gradual speed/incline increases</li>
+                        <li><strong>Recovery Monitoring:</strong> Heart rate recovery between intervals</li>
+                    </ul>
+                    
+                    <h4>Muscle Adaptations</h4>
+                    <ul>
+                        <li><strong>Incline Running:</strong> Increased posterior chain activation</li>
+                        <li><strong>Speed Work:</strong> Improved neuromuscular coordination</li>
+                        <li><strong>Consistent Surface:</strong> Reduced injury risk from uneven terrain</li>
+                    </ul>
+                    
+                    <h3>Seasonal and Weather Considerations</h3>
+                    
+                    <h4>When to Use Treadmills</h4>
+                    <ul>
+                        <li><strong>Extreme Weather:</strong> Ice, snow, lightning, extreme heat</li>
+                        <li><strong>Air Quality:</strong> High pollution or smoke days</li>
+                        <li><strong>Safety Concerns:</strong> Dark conditions or unsafe areas</li>
+                        <li><strong>Specific Training:</strong> Precise pace or incline workouts</li>
+                        <li><strong>Time Constraints:</strong> Limited daylight or schedule</li>
+                    </ul>
+                    
+                    <h4>Balancing Indoor/Outdoor Training</h4>
+                    <ul>
+                        <li><strong>80/20 Rule:</strong> Many runners do 20% treadmill, 80% outdoor</li>
+                        <li><strong>Quality Workouts:</strong> Use treadmill for specific intensity sessions</li>
+                        <li><strong>Long Runs:</strong> Generally better outdoors for race specificity</li>
+                        <li><strong>Recovery Runs:</strong> Treadmill good for easy, controlled pace</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick conversion reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Conversions</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>5.0 MPH</span>
+                            <span class="font-medium">12:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>6.0 MPH</span>
+                            <span class="font-medium">10:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>7.0 MPH</span>
+                            <span class="font-medium">8:34/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>7.5 MPH</span>
+                            <span class="font-medium">8:00/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>8.0 MPH</span>
+                            <span class="font-medium">7:30/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>9.0 MPH</span>
+                            <span class="font-medium">6:40/mile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Incline guide -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Incline Guide</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>0-1%</span>
+                            <span class="font-medium">Flat</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>2-4%</span>
+                            <span class="font-medium">Gentle hill</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>5-7%</span>
+                            <span class="font-medium">Moderate hill</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>8-10%</span>
+                            <span class="font-medium">Steep hill</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>11%+</span>
+                            <span class="font-medium">Very steep</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="text-primary hover:underline">Calories Burned Calculator</a></li>
+                        <li><a href="/running-distance-converter.html" class="text-primary hover:underline">Distance Converter</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/treadmill-pace-calculator.html" class="hover:text-white">Treadmill Pace</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        document.querySelectorAll('.conversion-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const conversion = this.dataset.conversion;
+                
+                // Update active tab
+                document.querySelectorAll('.conversion-tab').forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                this.classList.add('active', 'border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Show/hide conversion fields
+                document.querySelectorAll('.conversion-fields').forEach(field => {
+                    field.classList.add('hidden');
+                });
+                document.getElementById(conversion + '-fields').classList.remove('hidden');
+                
+                // Show/hide incline field
+                const inclineField = document.getElementById('incline-field');
+                if (conversion === 'incline-equivalent') {
+                    inclineField.classList.add('hidden');
+                } else {
+                    inclineField.classList.remove('hidden');
+                }
+                
+                // Update required fields
+                calculator.updateRequiredFields(conversion);
+            });
+        });
+        
+        // Treadmill Calculator implementation
+        class TreadmillCalculator extends Calculator {
+            constructor(formId, resultId) {
+                super(formId, resultId);
+                this.currentConversion = 'speed-to-pace';
+            }
+            
+            updateRequiredFields(conversion) {
+                this.currentConversion = conversion;
+                
+                // Clear all required attributes
+                this.form.querySelectorAll('input').forEach(field => {
+                    field.required = false;
+                });
+                
+                // Set required fields based on conversion type
+                if (conversion === 'speed-to-pace') {
+                    document.getElementById('speed').required = true;
+                } else if (conversion === 'pace-to-speed') {
+                    document.getElementById('targetPace').required = true;
+                } else if (conversion === 'incline-equivalent') {
+                    document.getElementById('flatPace').required = true;
+                    document.getElementById('incline').required = true;
+                }
+            }
+            
+            calculate() {
+                if (this.currentConversion === 'speed-to-pace') {
+                    this.calculateSpeedToPace();
+                } else if (this.currentConversion === 'pace-to-speed') {
+                    this.calculatePaceToSpeed();
+                } else if (this.currentConversion === 'incline-equivalent') {
+                    this.calculateInclineEquivalent();
+                }
+                
+                this.saveValues();
+            }
+            
+            calculateSpeedToPace() {
+                const speed = this.getInputValue('speed');
+                const speedUnit = this.form.querySelector('[name="speedUnit"]').value;
+                const incline = this.getInputValue('commonIncline', 0);
+                
+                if (!speed) {
+                    this.displayError('Please enter treadmill speed.');
+                    return;
+                }
+                
+                // Convert speed to pace
+                const paceMinutes = 60 / speed;
+                const pace = this.formatPace(paceMinutes);
+                
+                // Calculate equivalent speeds
+                const speedMPH = speedUnit === 'mph' ? speed : speed * 0.621371;
+                const speedKPH = speedUnit === 'kph' ? speed : speed * 1.609344;
+                const paceMile = speedUnit === 'mph' ? pace : this.formatPace(60 / speedMPH);
+                const paceKM = speedUnit === 'kph' ? pace : this.formatPace(60 / speedKPH);
+                
+                // Calculate incline effects
+                const inclineEffects = this.calculateInclineEffects(incline, speedMPH);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Speed to Pace Conversion</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Your Running Pace</div>
+                            <div class="text-4xl font-bold">${pace}</div>
+                            <div class="text-lg opacity-90 mt-2">per ${speedUnit === 'mph' ? 'mile' : 'kilometer'}</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Speed (MPH)</h4>
+                                <div class="text-2xl font-bold">${speedMPH.toFixed(1)}</div>
+                                <div class="text-sm opacity-90">Miles per hour</div>
+                            </div>
+                            
+                            <div class="bg-accent text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Speed (KPH)</h4>
+                                <div class="text-2xl font-bold">${speedKPH.toFixed(1)}</div>
+                                <div class="text-sm opacity-90">Kilometers per hour</div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Pace per Mile</h4>
+                                <div class="text-2xl font-bold text-blue-700">${paceMile}</div>
+                                <div class="text-sm text-blue-600">Minutes per mile</div>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Pace per KM</h4>
+                                <div class="text-2xl font-bold text-green-700">${paceKM}</div>
+                                <div class="text-sm text-green-600">Minutes per kilometer</div>
+                            </div>
+                        </div>
+                        
+                        ${incline > 0 ? `
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Incline Effects (${incline}%)</h4>
+                            <div class="text-sm text-yellow-700 space-y-1">
+                                ${inclineEffects}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('Treadmill: ${speed} ${speedUnit.toUpperCase()} = ${pace} pace')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            calculatePaceToSpeed() {
+                const paceInput = this.form.querySelector('[name="targetPace"]').value;
+                const paceUnit = this.form.querySelector('[name="paceUnit"]').value;
+                const incline = this.getInputValue('commonIncline', 0);
+                
+                if (!paceInput) {
+                    this.displayError('Please enter target pace.');
+                    return;
+                }
+                
+                const paceMinutes = this.parsePace(paceInput);
+                if (!paceMinutes) {
+                    this.displayError('Please enter pace in MM:SS format (e.g., 8:00).');
+                    return;
+                }
+                
+                // Convert pace to speed
+                const speed = 60 / paceMinutes;
+                
+                // Calculate equivalent values
+                const speedMPH = paceUnit === 'mile' ? speed : speed * 0.621371;
+                const speedKPH = paceUnit === 'km' ? speed : speed * 1.609344;
+                const paceMile = paceUnit === 'mile' ? paceInput : this.formatPace(60 / speedMPH);
+                const paceKM = paceUnit === 'km' ? paceInput : this.formatPace(60 / speedKPH);
+                
+                // Calculate incline effects
+                const inclineEffects = this.calculateInclineEffects(incline, speedMPH);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Pace to Speed Conversion</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Treadmill Speed Setting</div>
+                            <div class="text-4xl font-bold">${speed.toFixed(1)}</div>
+                            <div class="text-lg opacity-90 mt-2">${paceUnit === 'mile' ? 'MPH' : 'KPH'}</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Speed (MPH)</h4>
+                                <div class="text-2xl font-bold">${speedMPH.toFixed(1)}</div>
+                                <div class="text-sm opacity-90">Miles per hour</div>
+                            </div>
+                            
+                            <div class="bg-accent text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Speed (KPH)</h4>
+                                <div class="text-2xl font-bold">${speedKPH.toFixed(1)}</div>
+                                <div class="text-sm opacity-90">Kilometers per hour</div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Pace per Mile</h4>
+                                <div class="text-2xl font-bold text-blue-700">${paceMile}</div>
+                                <div class="text-sm text-blue-600">Minutes per mile</div>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Pace per KM</h4>
+                                <div class="text-2xl font-bold text-green-700">${paceKM}</div>
+                                <div class="text-sm text-green-600">Minutes per kilometer</div>
+                            </div>
+                        </div>
+                        
+                        ${incline > 0 ? `
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Incline Effects (${incline}%)</h4>
+                            <div class="text-sm text-yellow-700 space-y-1">
+                                ${inclineEffects}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('Target pace ${paceInput} = ${speed.toFixed(1)} ${paceUnit === 'mile' ? 'MPH' : 'KPH'} on treadmill')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            calculateInclineEquivalent() {
+                const flatPaceInput = this.form.querySelector('[name="flatPace"]').value;
+                const incline = this.getInputValue('incline');
+                
+                if (!flatPaceInput || incline === null) {
+                    this.displayError('Please enter flat ground pace and incline percentage.');
+                    return;
+                }
+                
+                const flatPaceMinutes = this.parsePace(flatPaceInput);
+                if (!flatPaceMinutes) {
+                    this.displayError('Please enter pace in MM:SS format (e.g., 8:00).');
+                    return;
+                }
+                
+                // Calculate equivalent flat pace for incline running
+                // Research shows approximately 10-15 seconds per mile per 1% grade
+                const inclineAdjustment = incline * 12; // 12 seconds per mile per 1% grade
+                const equivalentPaceSeconds = (flatPaceMinutes * 60) - inclineAdjustment;
+                const equivalentPaceMinutes = equivalentPaceSeconds / 60;
+                const equivalentPace = this.formatPace(equivalentPaceMinutes);
+                
+                // Calculate speeds
+                const flatSpeed = 60 / flatPaceMinutes;
+                const inclineSpeed = 60 / equivalentPaceMinutes;
+                
+                // Generate training recommendations
+                const recommendations = this.generateInclineRecommendations(incline, flatSpeed);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Incline Equivalent Calculator</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Flat Ground</h4>
+                                <div class="text-2xl font-bold text-blue-700">${flatPaceInput}</div>
+                                <div class="text-sm text-blue-600">Pace at 0% incline</div>
+                                <div class="text-lg font-medium text-blue-700 mt-2">${flatSpeed.toFixed(1)} MPH</div>
+                            </div>
+                            
+                            <div class="bg-primary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">At ${incline}% Incline</h4>
+                                <div class="text-2xl font-bold">${equivalentPace}</div>
+                                <div class="text-sm opacity-90">Equivalent pace</div>
+                                <div class="text-lg font-medium mt-2">${inclineSpeed.toFixed(1)} MPH</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Incline Training Benefits</h4>
+                            <div class="text-sm text-yellow-700 space-y-1">
+                                <p>• Running at ${incline}% incline builds strength and power</p>
+                                <p>• Equivalent effort to flat ground running at ${flatPaceInput} pace</p>
+                                <p>• Targets glutes, hamstrings, and calves more than flat running</p>
+                                <p>• Reduces impact stress while maintaining cardiovascular intensity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Training Recommendations</h4>
+                            <div class="text-sm space-y-1">
+                                ${recommendations}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('${incline}% incline at ${equivalentPace} pace = ${flatPaceInput} flat ground effort')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            parsePace(paceString) {
+                const parts = paceString.split(':');
+                if (parts.length !== 2) return null;
+                
+                const minutes = parseInt(parts[0]);
+                const seconds = parseInt(parts[1]);
+                
+                if (isNaN(minutes) || isNaN(seconds) || seconds >= 60) return null;
+                
+                return minutes + (seconds / 60);
+            }
+            
+            formatPace(paceMinutes) {
+                const minutes = Math.floor(paceMinutes);
+                const seconds = Math.round((paceMinutes % 1) * 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            calculateInclineEffects(incline, speedMPH) {
+                if (incline <= 0) return '';
+                
+                const effects = [];
+                
+                if (incline <= 2) {
+                    effects.push('• Minimal effect - simulates flat outdoor running with air resistance');
+                } else if (incline <= 5) {
+                    effects.push('• Moderate hill training - builds aerobic strength');
+                    effects.push('• Increases calorie burn by approximately ' + Math.round(incline * 3) + '%');
+                } else if (incline <= 8) {
+                    effects.push('• Steep hill training - significant strength building');
+                    effects.push('• Targets posterior chain muscles (glutes, hamstrings, calves)');
+                    effects.push('• Increases calorie burn by approximately ' + Math.round(incline * 4) + '%');
+                } else {
+                    effects.push('• Extreme hill training - power and strength focus');
+                    effects.push('• Best used for short intervals');
+                    effects.push('• Significantly reduces impact stress on joints');
+                }
+                
+                return effects.join('\\n');
+            }
+            
+            generateInclineRecommendations(incline, flatSpeed) {
+                const recommendations = [];
+                
+                if (incline <= 3) {
+                    recommendations.push('• Good for easy runs and recovery workouts');
+                    recommendations.push('• Can maintain longer durations');
+                } else if (incline <= 6) {
+                    recommendations.push('• Ideal for tempo runs and steady state workouts');
+                    recommendations.push('• Duration: 15-45 minutes');
+                } else if (incline <= 10) {
+                    recommendations.push('• Best for interval training and hill repeats');
+                    recommendations.push('• Duration: 2-8 minute intervals');
+                } else {
+                    recommendations.push('• Use for short power intervals only');
+                    recommendations.push('• Duration: 30 seconds to 2 minutes');
+                }
+                
+                recommendations.push('• Always warm up with 5-10 minutes at lower incline');
+                recommendations.push('• Cool down gradually by reducing incline slowly');
+                
+                return recommendations.join('\\n');
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new TreadmillCalculator('treadmill-form', 'results');
+    </script>
+</body>
+</html>

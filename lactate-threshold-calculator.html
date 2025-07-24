@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lactate Threshold Calculator - Find Your LTHR and Training Zones | RunBikeCalc</title>
+    <meta name="description" content="Calculate your lactate threshold heart rate (LTHR) and training zones with our comprehensive calculator. Includes time trial methods, heart rate analysis, and training recommendations.">
+    <meta name="keywords" content="lactate threshold calculator, LTHR calculator, threshold heart rate, training zones, lactate threshold pace, running threshold test">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lactate Threshold Calculator - Find Your LTHR and Training Zones">
+    <meta property="og:description" content="Calculate your lactate threshold heart rate (LTHR) and training zones with our comprehensive calculator. Includes time trial methods, heart rate analysis, and training recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/lactate-threshold-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-lactate-threshold-calculator.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lactate Threshold Calculator - Find Your LTHR and Training Zones">
+    <meta name="twitter:description" content="Calculate your lactate threshold heart rate (LTHR) and training zones with our comprehensive calculator. Includes time trial methods, heart rate analysis, and training recommendations.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/twitter-lactate-threshold-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/lactate-threshold-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Lactate Threshold Calculator",
+        "description": "Calculate your lactate threshold heart rate (LTHR) and training zones with our comprehensive calculator. Includes time trial methods, heart rate analysis, and training recommendations.",
+        "url": "https://runbikecalc.com/lactate-threshold-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/zone-2-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Zone 2 Calculator</a>
+                                <a href="/heart-rate-zones-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                                <a href="/running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                                <a href="/vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                                <a href="/lactate-threshold-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lactate Threshold</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/zone-2-calculator" class="mobile-menu-item">Zone 2 Calculator</a>
+                    <a href="/heart-rate-zones-calculator" class="mobile-menu-item">Heart Rate Zones</a>
+                    <a href="/running-pace-calculator" class="mobile-menu-item">Running Pace</a>
+                    <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                    <a href="/lactate-threshold-calculator" class="mobile-menu-item">Lactate Threshold</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2">Lactate Threshold Calculator</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Lactate Threshold Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate your lactate threshold heart rate (LTHR) and training zones using time trial methods. Get personalized training recommendations for optimal performance improvement.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <!-- Calculator Tabs -->
+                <div class="flex flex-wrap border-b mb-6">
+                    <button class="tab-button active px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="time-trial">
+                        Time Trial Test
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="hr-analysis">
+                        HR Analysis
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="training-zones">
+                        Training Zones
+                    </button>
+                </div>
+
+                <!-- Time Trial Test Tab -->
+                <div id="time-trial-tab" class="tab-content">
+                    <form id="time-trial-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="test-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Test Duration
+                                </label>
+                                <select id="test-duration" class="calc-input-number" required>
+                                    <option value="">Select test duration</option>
+                                    <option value="20">20-minute time trial</option>
+                                    <option value="30">30-minute time trial</option>
+                                    <option value="60">60-minute time trial</option>
+                                    <option value="custom">Custom duration</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Choose your time trial length</p>
+                            </div>
+
+                            <div id="custom-duration-div" class="hidden">
+                                <label for="custom-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Custom Duration (minutes)
+                                </label>
+                                <input type="number" id="custom-duration" class="calc-input-number" placeholder="45" min="10" max="120" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Enter duration in minutes</p>
+                            </div>
+
+                            <div>
+                                <label for="average-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Average Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="average-hr" class="calc-input-number" placeholder="165" min="100" max="220" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Average HR during the test</p>
+                            </div>
+
+                            <div>
+                                <label for="max-hr-test" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Maximum Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="max-hr-test" class="calc-input-number" placeholder="175" min="120" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Peak HR during the test</p>
+                            </div>
+
+                            <div>
+                                <label for="test-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Covered (km)
+                                </label>
+                                <input type="number" id="test-distance" class="calc-input-number" placeholder="8.5" min="1" max="50" step="0.1">
+                                <p class="text-sm text-gray-500 mt-1">Total distance during test</p>
+                            </div>
+
+                            <div>
+                                <label for="resting-hr-trial" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="resting-hr-trial" class="calc-input-number" placeholder="60" min="35" max="100" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Morning resting HR</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Lactate Threshold</button>
+                            <button type="button" id="share-trial" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="trial-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="lthr">0</div>
+                                    <div class="text-gray-600">Lactate Threshold HR</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="threshold-pace">0:00</div>
+                                    <div class="text-gray-600">Threshold Pace (min/km)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
+                                <div class="bg-blue-50 p-4 rounded">
+                                    <div class="font-semibold text-blue-800" id="lt-percentage">0%</div>
+                                    <div class="text-sm text-blue-600">% of Max HR</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded">
+                                    <div class="font-semibold text-green-800" id="hr-reserve">0%</div>
+                                    <div class="text-sm text-green-600">% of HR Reserve</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded">
+                                    <div class="font-semibold text-orange-800" id="training-intensity">Moderate</div>
+                                    <div class="text-sm text-orange-600">Training Intensity</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Test Analysis</h4>
+                                <p class="text-gray-600" id="test-analysis">Analysis will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HR Analysis Tab -->
+                <div id="hr-analysis-tab" class="tab-content hidden">
+                    <form id="hr-analysis-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="known-lthr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Known LTHR (bpm)
+                                </label>
+                                <input type="number" id="known-lthr" class="calc-input-number" placeholder="165" min="100" max="200" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Your established lactate threshold HR</p>
+                            </div>
+
+                            <div>
+                                <label for="max-hr-analysis" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Maximum Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="max-hr-analysis" class="calc-input-number" placeholder="185" min="150" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Your maximum heart rate</p>
+                            </div>
+
+                            <div>
+                                <label for="resting-hr-analysis" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="resting-hr-analysis" class="calc-input-number" placeholder="55" min="35" max="100" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Morning resting heart rate</p>
+                            </div>
+
+                            <div>
+                                <label for="age-analysis" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years)
+                                </label>
+                                <input type="number" id="age-analysis" class="calc-input-number" placeholder="35" min="15" max="80" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Your current age</p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="training-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Level
+                                </label>
+                                <select id="training-level" class="calc-input-number">
+                                    <option value="beginner">Beginner (0-1 years)</option>
+                                    <option value="intermediate">Intermediate (1-3 years)</option>
+                                    <option value="advanced">Advanced (3-5 years)</option>
+                                    <option value="elite">Elite (5+ years)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your training experience level</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Analyze Heart Rate Data</button>
+                            <button type="button" id="share-analysis" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="analysis-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="lthr-analysis">0</div>
+                                    <div class="text-gray-600">Lactate Threshold HR</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="hr-efficiency">Good</div>
+                                    <div class="text-gray-600">HR Efficiency Rating</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-4 gap-3 text-center">
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <div class="font-semibold text-blue-800" id="max-percentage">0%</div>
+                                    <div class="text-sm text-blue-600">% Max HR</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded">
+                                    <div class="font-semibold text-green-800" id="reserve-percentage">0%</div>
+                                    <div class="text-sm text-green-600">% HR Reserve</div>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded">
+                                    <div class="font-semibold text-orange-800" id="drift-tolerance">±3 bpm</div>
+                                    <div class="text-sm text-orange-600">Drift Tolerance</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <div class="font-semibold text-purple-800" id="training-years">0</div>
+                                    <div class="text-sm text-purple-600">Training Experience</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">Heart Rate Analysis</h4>
+                                <p class="text-blue-700" id="hr-detailed-analysis">Detailed analysis will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Zones Tab -->
+                <div id="training-zones-tab" class="tab-content hidden">
+                    <form id="zones-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="zones-lthr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Lactate Threshold HR (bpm)
+                                </label>
+                                <input type="number" id="zones-lthr" class="calc-input-number" placeholder="165" min="100" max="200" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Your LTHR from testing</p>
+                            </div>
+
+                            <div>
+                                <label for="zones-resting" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="zones-resting" class="calc-input-number" placeholder="55" min="35" max="100" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Morning resting HR</p>
+                            </div>
+
+                            <div>
+                                <label for="zones-max" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Maximum Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="zones-max" class="calc-input-number" placeholder="185" min="150" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Your maximum heart rate</p>
+                            </div>
+
+                            <div>
+                                <label for="sport-type" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Sport
+                                </label>
+                                <select id="sport-type" class="calc-input-number">
+                                    <option value="running">Running</option>
+                                    <option value="cycling">Cycling</option>
+                                    <option value="triathlon">Triathlon</option>
+                                    <option value="swimming">Swimming</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Sport-specific zone adjustments</p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="zone-method" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Zone Calculation Method
+                                </label>
+                                <select id="zone-method" class="calc-input-number">
+                                    <option value="lthr">LTHR-Based Zones</option>
+                                    <option value="coggan">Coggan Power Zones</option>
+                                    <option value="friel">Friel Training Zones</option>
+                                    <option value="karvonen">Karvonen Method</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Choose your preferred zone system</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Training Zones</button>
+                            <button type="button" id="share-zones" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="zones-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="text-center mb-6">
+                                <div class="text-2xl font-bold text-primary mb-2" id="zones-method-display">LTHR-Based Training Zones</div>
+                                <div class="text-gray-600">Based on LTHR: <span id="zones-lthr-display">165</span> bpm</div>
+                            </div>
+                            
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead>
+                                        <tr class="border-b">
+                                            <th class="text-left py-2">Zone</th>
+                                            <th class="text-center py-2">Name</th>
+                                            <th class="text-center py-2">HR Range</th>
+                                            <th class="text-center py-2">% LTHR</th>
+                                            <th class="text-center py-2">Purpose</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="zones-table">
+                                        <!-- Training zones will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Weekly Training Distribution</h4>
+                                    <div class="space-y-2 text-sm" id="training-distribution">
+                                        <!-- Distribution will be populated here -->
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Zone-Specific Benefits</h4>
+                                    <div class="space-y-2 text-sm" id="zone-benefits">
+                                        <!-- Benefits will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">Training Recommendations</h4>
+                                <p class="text-green-700" id="zones-recommendations">Recommendations will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">728x90 Leaderboard Ad</div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Lactate Threshold</h2>
+                
+                <p>Lactate threshold represents the exercise intensity at which lactate begins to accumulate in the blood faster than it can be removed. This physiological marker is crucial for endurance athletes as it indicates the highest sustainable intensity for prolonged exercise.</p>
+
+                <h3>What is Lactate Threshold?</h3>
+                
+                <p>Lactate threshold occurs when the rate of lactate production exceeds the rate of lactate clearance, typically at 2-4 mmol/L blood lactate concentration. This intensity corresponds to approximately 80-90% of maximum heart rate for trained individuals.</p>
+
+                <h4>Physiological Significance</h4>
+                
+                <ul>
+                    <li><strong>Metabolic Crossover:</strong> The point where fat oxidation decreases and carbohydrate becomes the primary fuel</li>
+                    <li><strong>Ventilatory Changes:</strong> Breathing rate increases disproportionately to oxygen consumption</li>
+                    <li><strong>Acidosis Buffering:</strong> The body's ability to buffer acid reaches its limit</li>
+                    <li><strong>Performance Predictor:</strong> Strong correlation with endurance performance across distances</li>
+                </ul>
+
+                <h3>Testing Methods</h3>
+                
+                <p>Several field tests can estimate lactate threshold without laboratory equipment:</p>
+
+                <h4>Time Trial Methods</h4>
+                
+                <ul>
+                    <li><strong>20-Minute Test:</strong> Average HR of final 20 minutes approximates LTHR</li>
+                    <li><strong>30-Minute Test:</strong> More conservative, reduces influence of anaerobic contribution</li>
+                    <li><strong>60-Minute Test:</strong> Most accurate field test, but requires high fitness level</li>
+                    <li><strong>Talk Test:</strong> Threshold occurs at the intensity where conversation becomes difficult</li>
+                </ul>
+
+                <h4>Heart Rate Deflection Test</h4>
+                
+                <p>Perform incremental steps of increasing intensity while monitoring heart rate. The point where heart rate begins to plateau despite increasing pace indicates lactate threshold.</p>
+
+                <h3>Training Zone Applications</h3>
+                
+                <p>Lactate threshold heart rate (LTHR) serves as the anchor for training zone calculation:</p>
+
+                <h4>LTHR-Based Zones</h4>
+                
+                <ul>
+                    <li><strong>Zone 1 (Recovery):</strong> <85% LTHR - Active recovery and easy aerobic work</li>
+                    <li><strong>Zone 2 (Aerobic Base):</strong> 85-89% LTHR - Aerobic base building</li>
+                    <li><strong>Zone 3 (Tempo):</strong> 90-94% LTHR - Aerobic tempo work</li>
+                    <li><strong>Zone 4 (Lactate Threshold):</strong> 95-105% LTHR - Threshold and sweet spot training</li>
+                    <li><strong>Zone 5 (VO2 Max):</strong> >105% LTHR - Maximum aerobic power development</li>
+                </ul>
+
+                <h4>Threshold Training Benefits</h4>
+                
+                <p>Training at or near lactate threshold provides specific adaptations:</p>
+                
+                <ul>
+                    <li><strong>Improved Lactate Clearance:</strong> Enhanced ability to remove lactate from working muscles</li>
+                    <li><strong>Increased Buffering Capacity:</strong> Better tolerance to acidosis</li>
+                    <li><strong>Enhanced Fat Oxidation:</strong> Improved efficiency at utilizing fat as fuel</li>
+                    <li><strong>Capillarization:</strong> Increased capillary density in working muscles</li>
+                </ul>
+
+                <h3>Training Prescription</h3>
+                
+                <p>Effective threshold training involves specific duration and intensity guidelines:</p>
+
+                <h4>Continuous Threshold Sessions</h4>
+                
+                <ul>
+                    <li><strong>Tempo Runs:</strong> 20-40 minutes at 95-100% LTHR</li>
+                    <li><strong>Sweet Spot:</strong> 30-90 minutes at 90-95% LTHR</li>
+                    <li><strong>Cruise Intervals:</strong> 3-8 x 5-15 minutes at 100-105% LTHR</li>
+                </ul>
+
+                <h4>Interval Threshold Training</h4>
+                
+                <ul>
+                    <li><strong>Classic Intervals:</strong> 4-6 x 8 minutes at LTHR with 2-minute recovery</li>
+                    <li><strong>Progression Intervals:</strong> Start below threshold, finish above</li>
+                    <li><strong>Over-Under Intervals:</strong> Alternate between 95% and 105% LTHR</li>
+                </ul>
+
+                <h3>Monitoring and Progression</h3>
+                
+                <p>Regular testing helps track threshold improvements:</p>
+
+                <h4>Testing Frequency</h4>
+                
+                <ul>
+                    <li><strong>Beginners:</strong> Test every 6-8 weeks</li>
+                    <li><strong>Intermediate:</strong> Test every 4-6 weeks</li>
+                    <li><strong>Advanced:</strong> Test every 3-4 weeks during build phases</li>
+                </ul>
+
+                <h4>Expected Improvements</h4>
+                
+                <ul>
+                    <li><strong>Novice Athletes:</strong> 5-15% improvement in first year</li>
+                    <li><strong>Trained Athletes:</strong> 2-5% annual improvement</li>
+                    <li><strong>Elite Athletes:</strong> 1-3% improvement with specific focus</li>
+                </ul>
+
+                <h3>Factors Affecting Lactate Threshold</h3>
+                
+                <p>Several factors influence threshold values and testing accuracy:</p>
+
+                <h4>Training Factors</h4>
+                
+                <ul>
+                    <li><strong>Training Volume:</strong> Higher aerobic volume improves threshold</li>
+                    <li><strong>Training Intensity:</strong> Specific threshold work raises LTHR</li>
+                    <li><strong>Training History:</strong> Years of consistent training elevate threshold</li>
+                </ul>
+
+                <h4>Individual Factors</h4>
+                
+                <ul>
+                    <li><strong>Genetics:</strong> Natural variation in lactate production and clearance</li>
+                    <li><strong>Muscle Fiber Type:</strong> Higher percentage of Type I fibers correlates with higher threshold</li>
+                    <li><strong>Body Composition:</strong> Lower body fat percentage generally correlates with higher threshold</li>
+                </ul>
+
+                <h3>Sport-Specific Considerations</h3>
+                
+                <p>Different sports may require modified approaches to threshold training:</p>
+
+                <h4>Running</h4>
+                <p>Threshold pace corresponds to roughly 15K-half marathon race pace. Focus on continuous tempo runs and cruise intervals.</p>
+
+                <h4>Cycling</h4>
+                <p>Power meters provide more precise threshold measurement than heart rate. Functional Threshold Power (FTP) testing complements LTHR testing.</p>
+
+                <h4>Swimming</h4>
+                <p>Heart rate response is blunted in water. Use pace-based threshold sets and perceived exertion as primary guides.</p>
+
+                <p>Understanding and training your lactate threshold is essential for maximizing endurance performance. Regular testing, proper zone-based training, and progressive overload will help you achieve significant improvements in your sustainable exercise intensity.</p>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">300x250 Rectangle Ad</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes. Optimize your training with precise calculations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/heart-rate-zones-calculator" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+                
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active', 'text-primary', 'border-primary');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                });
+                button.classList.add('active', 'text-primary', 'border-primary');
+                button.classList.remove('text-gray-500', 'border-transparent');
+                
+                // Update tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(`${tabName}-tab`).classList.remove('hidden');
+            });
+        });
+
+        // Show/hide custom duration field
+        document.getElementById('test-duration').addEventListener('change', function() {
+            const customDiv = document.getElementById('custom-duration-div');
+            if (this.value === 'custom') {
+                customDiv.classList.remove('hidden');
+            } else {
+                customDiv.classList.add('hidden');
+            }
+        });
+
+        // Time Trial Calculator
+        class TimeTrialCalculator extends Calculator {
+            constructor() {
+                super('time-trial-form', 'trial-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const testDuration = formData.get('test-duration');
+                const customDuration = parseFloat(formData.get('custom-duration')) || 0;
+                const averageHR = parseFloat(formData.get('average-hr'));
+                const maxHR = parseFloat(formData.get('max-hr-test')) || averageHR + 10;
+                const distance = parseFloat(formData.get('test-distance')) || 0;
+                const restingHR = parseFloat(formData.get('resting-hr-trial')) || 60;
+
+                // Determine actual test duration
+                let duration = testDuration === 'custom' ? customDuration : parseFloat(testDuration);
+
+                // Estimate LTHR based on test duration and average HR
+                let lthr;
+                if (duration >= 60) {
+                    lthr = Math.round(averageHR * 1.00); // 60-min = ~100% LTHR
+                } else if (duration >= 30) {
+                    lthr = Math.round(averageHR * 0.97); // 30-min = ~97% LTHR
+                } else if (duration >= 20) {
+                    lthr = Math.round(averageHR * 0.95); // 20-min = ~95% LTHR
+                } else {
+                    lthr = Math.round(averageHR * 0.92); // Shorter tests = ~92% LTHR
+                }
+
+                // Calculate threshold pace if distance provided
+                let thresholdPace = '0:00';
+                if (distance > 0) {
+                    const paceSeconds = (duration * 60) / distance;
+                    const minutes = Math.floor(paceSeconds / 60);
+                    const seconds = Math.round(paceSeconds % 60);
+                    thresholdPace = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+
+                // Calculate percentages
+                const ltPercentage = Math.round((lthr / maxHR) * 100);
+                const hrReserve = Math.round(((lthr - restingHR) / (maxHR - restingHR)) * 100);
+
+                // Determine training intensity
+                let intensity = 'Moderate';
+                if (ltPercentage >= 90) intensity = 'Very High';
+                else if (ltPercentage >= 85) intensity = 'High';
+                else if (ltPercentage >= 80) intensity = 'Moderate-High';
+                else if (ltPercentage >= 75) intensity = 'Moderate';
+
+                // Generate analysis
+                let analysis = `Based on your ${duration}-minute time trial with an average heart rate of ${averageHR} bpm, your estimated lactate threshold heart rate (LTHR) is ${lthr} bpm. `;
+                
+                if (ltPercentage >= 88) {
+                    analysis += `This represents ${ltPercentage}% of your maximum heart rate, indicating excellent threshold efficiency. You can sustain high intensities for extended periods.`;
+                } else if (ltPercentage >= 82) {
+                    analysis += `At ${ltPercentage}% of your max HR, this shows good threshold development. Focus on tempo training to improve your sustainable pace.`;
+                } else {
+                    analysis += `At ${ltPercentage}% of max HR, there's room to improve your lactate threshold through structured training. Build your aerobic base first, then add threshold work.`;
+                }
+
+                return {
+                    lthr,
+                    thresholdPace,
+                    ltPercentage: `${ltPercentage}%`,
+                    hrReserve: `${hrReserve}%`,
+                    intensity,
+                    analysis
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('lthr').textContent = result.lthr;
+                document.getElementById('threshold-pace').textContent = result.thresholdPace;
+                document.getElementById('lt-percentage').textContent = result.ltPercentage;
+                document.getElementById('hr-reserve').textContent = result.hrReserve;
+                document.getElementById('training-intensity').textContent = result.intensity;
+                document.getElementById('test-analysis').textContent = result.analysis;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const lthr = document.getElementById('lthr').textContent;
+                const pace = document.getElementById('threshold-pace').textContent;
+                const percentage = document.getElementById('lt-percentage').textContent;
+                
+                return `My lactate threshold: ${lthr} bpm (${percentage} max HR) at ${pace}/km pace! Calculate yours: ${window.location.href}`;
+            }
+        }
+
+        // HR Analysis Calculator
+        class HRAnalysisCalculator extends Calculator {
+            constructor() {
+                super('hr-analysis-form', 'analysis-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const lthr = parseFloat(formData.get('known-lthr'));
+                const maxHR = parseFloat(formData.get('max-hr-analysis')) || (lthr * 1.15);
+                const restingHR = parseFloat(formData.get('resting-hr-analysis')) || 60;
+                const age = parseInt(formData.get('age-analysis')) || 35;
+                const trainingLevel = formData.get('training-level');
+
+                // Calculate percentages
+                const maxPercentage = Math.round((lthr / maxHR) * 100);
+                const reservePercentage = Math.round(((lthr - restingHR) / (maxHR - restingHR)) * 100);
+
+                // Determine efficiency rating
+                let efficiency = 'Average';
+                if (maxPercentage >= 88) efficiency = 'Excellent';
+                else if (maxPercentage >= 85) efficiency = 'Very Good';
+                else if (maxPercentage >= 82) efficiency = 'Good';
+                else if (maxPercentage >= 78) efficiency = 'Average';
+                else efficiency = 'Below Average';
+
+                // Training experience mapping
+                const experienceMap = {
+                    'beginner': 'Beginner',
+                    'intermediate': '2-3 years',
+                    'advanced': '4-5 years',
+                    'elite': '5+ years'
+                };
+
+                // Drift tolerance based on training level
+                const driftMap = {
+                    'beginner': '±5 bpm',
+                    'intermediate': '±4 bpm',
+                    'advanced': '±3 bpm',
+                    'elite': '±2 bpm'
+                };
+
+                // Generate detailed analysis
+                let analysis = `Your lactate threshold of ${lthr} bpm represents ${maxPercentage}% of your maximum heart rate, which is ${efficiency.toLowerCase()} for your training level. `;
+                
+                if (efficiency === 'Excellent') {
+                    analysis += `This indicates superior aerobic efficiency and lactate clearance capacity. Your training should focus on maintaining this threshold while developing VO2 max and neuromuscular power.`;
+                } else if (efficiency === 'Very Good' || efficiency === 'Good') {
+                    analysis += `You have good threshold development. Focus on tempo training 1-2 times per week, with intervals at 95-105% LTHR to continue improving your sustainable pace.`;
+                } else {
+                    analysis += `There's significant potential to improve your lactate threshold. Prioritize aerobic base building with 80% of training below threshold, then gradually add tempo work.`;
+                }
+
+                analysis += ` Based on your ${trainingLevel} training level, aim for consistency in threshold sessions with ${driftMap[trainingLevel]} heart rate variation.`;
+
+                return {
+                    lthr,
+                    efficiency,
+                    maxPercentage: `${maxPercentage}%`,
+                    reservePercentage: `${reservePercentage}%`,
+                    driftTolerance: driftMap[trainingLevel],
+                    trainingYears: experienceMap[trainingLevel],
+                    analysis
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('lthr-analysis').textContent = result.lthr;
+                document.getElementById('hr-efficiency').textContent = result.efficiency;
+                document.getElementById('max-percentage').textContent = result.maxPercentage;
+                document.getElementById('reserve-percentage').textContent = result.reservePercentage;
+                document.getElementById('drift-tolerance').textContent = result.driftTolerance;
+                document.getElementById('training-years').textContent = result.trainingYears;
+                document.getElementById('hr-detailed-analysis').textContent = result.analysis;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const lthr = document.getElementById('lthr-analysis').textContent;
+                const efficiency = document.getElementById('hr-efficiency').textContent;
+                const percentage = document.getElementById('max-percentage').textContent;
+                
+                return `My heart rate analysis: LTHR ${lthr} bpm (${percentage} max HR) - ${efficiency} efficiency! Analyze yours: ${window.location.href}`;
+            }
+        }
+
+        // Training Zones Calculator
+        class TrainingZonesCalculator extends Calculator {
+            constructor() {
+                super('zones-form', 'zones-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const lthr = parseFloat(formData.get('zones-lthr'));
+                const restingHR = parseFloat(formData.get('zones-resting')) || 60;
+                const maxHR = parseFloat(formData.get('zones-max')) || Math.round(lthr * 1.15);
+                const sportType = formData.get('sport-type');
+                const method = formData.get('zone-method');
+
+                // Define zone systems
+                const zoneSystems = {
+                    lthr: {
+                        name: 'LTHR-Based Training Zones',
+                        zones: [
+                            { zone: '1', name: 'Recovery', lthrPercent: [0, 85], purpose: 'Active recovery, easy aerobic work' },
+                            { zone: '2', name: 'Aerobic Base', lthrPercent: [85, 89], purpose: 'Aerobic base building, fat oxidation' },
+                            { zone: '3', name: 'Tempo', lthrPercent: [90, 94], purpose: 'Aerobic tempo, moderate efforts' },
+                            { zone: '4', name: 'Lactate Threshold', lthrPercent: [95, 105], purpose: 'Threshold and sweet spot training' },
+                            { zone: '5', name: 'VO2 Max', lthrPercent: [106, 120], purpose: 'Maximum aerobic power development' }
+                        ]
+                    },
+                    coggan: {
+                        name: 'Coggan Power Zones (HR)',
+                        zones: [
+                            { zone: '1', name: 'Active Recovery', lthrPercent: [0, 68], purpose: 'Recovery and regeneration' },
+                            { zone: '2', name: 'Endurance', lthrPercent: [69, 83], purpose: 'Aerobic base development' },
+                            { zone: '3', name: 'Tempo', lthrPercent: [84, 94], purpose: 'Aerobic capacity building' },
+                            { zone: '4', name: 'Lactate Threshold', lthrPercent: [95, 105], purpose: 'Sustainable hard efforts' },
+                            { zone: '5', name: 'VO2 Max', lthrPercent: [106, 120], purpose: 'Maximal aerobic capacity' }
+                        ]
+                    },
+                    friel: {
+                        name: 'Friel Training Zones',
+                        zones: [
+                            { zone: '1', name: 'Recovery', lthrPercent: [0, 85], purpose: 'Easy aerobic, recovery' },
+                            { zone: '2', name: 'Extensive Endurance', lthrPercent: [85, 89], purpose: 'Aerobic base building' },
+                            { zone: '3', name: 'Intensive Endurance', lthrPercent: [90, 94], purpose: 'Tempo and cruise intervals' },
+                            { zone: '4', name: 'Sub-Threshold', lthrPercent: [95, 99], purpose: 'Sweet spot training' },
+                            { zone: '5a', name: 'Super-Threshold', lthrPercent: [100, 102], purpose: 'Lactate threshold' },
+                            { zone: '5b', name: 'Aerobic Power', lthrPercent: [103, 106], purpose: 'VO2 max development' }
+                        ]
+                    },
+                    karvonen: {
+                        name: 'Karvonen Heart Rate Reserve',
+                        zones: [
+                            { zone: '1', name: 'Very Light', lthrPercent: [0, 77], purpose: 'Recovery and warm-up' },
+                            { zone: '2', name: 'Light', lthrPercent: [78, 85], purpose: 'Fat burning, base building' },
+                            { zone: '3', name: 'Moderate', lthrPercent: [86, 93], purpose: 'Aerobic development' },
+                            { zone: '4', name: 'Hard', lthrPercent: [94, 101], purpose: 'Lactate threshold training' },
+                            { zone: '5', name: 'Maximum', lthrPercent: [102, 120], purpose: 'VO2 max and neuromuscular' }
+                        ]
+                    }
+                };
+
+                const selectedSystem = zoneSystems[method];
+                const zones = selectedSystem.zones.map(zone => {
+                    const minHR = Math.round(lthr * zone.lthrPercent[0] / 100);
+                    const maxHR = Math.round(lthr * zone.lthrPercent[1] / 100);
+                    return {
+                        ...zone,
+                        hrRange: `${minHR}-${maxHR}`,
+                        lthrRange: `${zone.lthrPercent[0]}-${zone.lthrPercent[1]}%`
+                    };
+                });
+
+                // Training distribution recommendations
+                const distribution = [
+                    { zone: 'Zone 1-2', percentage: '75-80%', description: 'Easy aerobic base' },
+                    { zone: 'Zone 3', percentage: '10-15%', description: 'Tempo efforts' },
+                    { zone: 'Zone 4', percentage: '5-10%', description: 'Threshold work' },
+                    { zone: 'Zone 5', percentage: '3-5%', description: 'VO2 max intervals' }
+                ];
+
+                // Zone-specific benefits
+                const benefits = [
+                    'Zone 1-2: Improve fat oxidation and aerobic efficiency',
+                    'Zone 3: Develop aerobic power and tempo pace',
+                    'Zone 4: Increase lactate clearance and threshold power',
+                    'Zone 5: Maximize aerobic capacity and neuromuscular power'
+                ];
+
+                // Generate recommendations
+                let recommendations = `For ${sportType} training using the ${selectedSystem.name.toLowerCase()}, focus on polarized training with 80% of time in zones 1-2 and 20% in zones 4-5. `;
+                
+                if (method === 'lthr') {
+                    recommendations += 'Perform threshold work 1-2 times per week, tempo work every 7-10 days, and VO2 max intervals once per week during build phases.';
+                } else if (method === 'coggan') {
+                    recommendations += 'This system works well with power meters. Use heart rate as a secondary metric, especially for longer efforts.';
+                } else if (method === 'friel') {
+                    recommendations += 'This detailed system allows for precise training prescription. Focus on sub-threshold work for time-trial performance.';
+                } else {
+                    recommendations += 'The Karvonen method accounts for individual heart rate reserve. Adjust zones based on perceived exertion and performance.';
+                }
+
+                return {
+                    methodName: selectedSystem.name,
+                    lthr,
+                    zones,
+                    distribution,
+                    benefits,
+                    recommendations
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('zones-method-display').textContent = result.methodName;
+                document.getElementById('zones-lthr-display').textContent = result.lthr;
+                document.getElementById('zones-recommendations').textContent = result.recommendations;
+
+                // Populate zones table
+                const tableBody = document.getElementById('zones-table');
+                tableBody.innerHTML = '';
+                result.zones.forEach(zone => {
+                    const tr = document.createElement('tr');
+                    tr.className = 'border-b hover:bg-gray-50';
+                    tr.innerHTML = `
+                        <td class="py-2 font-semibold">${zone.zone}</td>
+                        <td class="text-center py-2">${zone.name}</td>
+                        <td class="text-center py-2">${zone.hrRange} bpm</td>
+                        <td class="text-center py-2">${zone.lthrRange}</td>
+                        <td class="py-2 text-sm">${zone.purpose}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+
+                // Populate training distribution
+                const distributionContainer = document.getElementById('training-distribution');
+                distributionContainer.innerHTML = '';
+                result.distribution.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between';
+                    div.innerHTML = `<span>${item.zone}:</span> <span>${item.percentage}</span>`;
+                    distributionContainer.appendChild(div);
+                });
+
+                // Populate zone benefits
+                const benefitsContainer = document.getElementById('zone-benefits');
+                benefitsContainer.innerHTML = '';
+                result.benefits.forEach(benefit => {
+                    const div = document.createElement('div');
+                    div.className = 'text-sm';
+                    div.textContent = benefit;
+                    benefitsContainer.appendChild(div);
+                });
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const method = document.getElementById('zones-method-display').textContent;
+                const lthr = document.getElementById('zones-lthr-display').textContent;
+                
+                return `My training zones calculated using ${method} with LTHR ${lthr} bpm! Get your zones: ${window.location.href}`;
+            }
+        }
+
+        // Initialize calculators
+        const timeTrialCalculator = new TimeTrialCalculator();
+        const hrAnalysisCalculator = new HRAnalysisCalculator();
+        const trainingZonesCalculator = new TrainingZonesCalculator();
+
+        // Share button event listeners
+        document.getElementById('share-trial').addEventListener('click', () => {
+            timeTrialCalculator.shareResult();
+        });
+
+        document.getElementById('share-analysis').addEventListener('click', () => {
+            hrAnalysisCalculator.shareResult();
+        });
+
+        document.getElementById('share-zones').addEventListener('click', () => {
+            trainingZonesCalculator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

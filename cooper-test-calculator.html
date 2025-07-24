@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper Test Calculator - Estimate VO2 Max from 12-Minute Run | RunBikeCalc</title>
+    <meta name="description" content="Calculate your VO2 Max and fitness level with the Cooper Test Calculator. Enter your 12-minute run distance to get accurate fitness assessment and training zones.">
+    <meta name="keywords" content="cooper test calculator, 12 minute run test, vo2 max from cooper test, fitness test calculator, aerobic fitness assessment, running fitness test">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cooper Test Calculator - Estimate VO2 Max from 12-Minute Run">
+    <meta property="og:description" content="Calculate your VO2 Max and fitness level with the Cooper Test Calculator. Enter your 12-minute run distance to get accurate fitness assessment and training zones.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/cooper-test-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-cooper-test-calculator.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cooper Test Calculator - Estimate VO2 Max from 12-Minute Run">
+    <meta name="twitter:description" content="Calculate your VO2 Max and fitness level with the Cooper Test Calculator. Enter your 12-minute run distance to get accurate fitness assessment and training zones.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/twitter-cooper-test-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/cooper-test-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Cooper Test Calculator",
+        "description": "Calculate your VO2 Max and fitness level with the Cooper Test Calculator. Enter your 12-minute run distance to get accurate fitness assessment and training zones.",
+        "url": "https://runbikecalc.com/cooper-test-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/zone-2-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Zone 2 Calculator</a>
+                                <a href="/heart-rate-zones-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                                <a href="/running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                                <a href="/vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                                <a href="/cooper-test-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cooper Test</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/zone-2-calculator" class="mobile-menu-item">Zone 2 Calculator</a>
+                    <a href="/heart-rate-zones-calculator" class="mobile-menu-item">Heart Rate Zones</a>
+                    <a href="/running-pace-calculator" class="mobile-menu-item">Running Pace</a>
+                    <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                    <a href="/cooper-test-calculator" class="mobile-menu-item">Cooper Test</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2">Cooper Test Calculator</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Cooper Test Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate your VO2 Max and aerobic fitness level using the Cooper 12-minute run test. Get accurate fitness assessment and personalized training recommendations.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <!-- Calculator Tabs -->
+                <div class="flex flex-wrap border-b mb-6">
+                    <button class="tab-button active px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="basic">
+                        Cooper Test
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="comparison">
+                        Age Comparison
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="training">
+                        Training Zones
+                    </button>
+                </div>
+
+                <!-- Basic Cooper Test Tab -->
+                <div id="basic-tab" class="tab-content">
+                    <form id="cooper-test-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance Covered (meters)
+                                </label>
+                                <input type="number" id="distance" class="calc-input-number" placeholder="2400" min="1000" max="4000" step="10" required>
+                                <p class="text-sm text-gray-500 mt-1">Distance covered in 12 minutes</p>
+                            </div>
+
+                            <div>
+                                <label for="distance-miles" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Distance (miles)
+                                </label>
+                                <input type="number" id="distance-miles" class="calc-input-number" placeholder="1.49" min="0.6" max="2.5" step="0.01">
+                                <p class="text-sm text-gray-500 mt-1">Alternative: distance in miles</p>
+                            </div>
+
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years)
+                                </label>
+                                <input type="number" id="age" class="calc-input-number" placeholder="30" min="13" max="80" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Your current age</p>
+                            </div>
+
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender
+                                </label>
+                                <select id="gender" class="calc-input-number" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Affects fitness level standards</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Cooper Test Results</button>
+                            <button type="button" id="share-basic" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="cooper-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="vo2-max">0</div>
+                                    <div class="text-gray-600">VO2 Max (ml/kg/min)</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="fitness-level">Unknown</div>
+                                    <div class="text-gray-600">Fitness Level</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
+                                <div class="bg-blue-50 p-4 rounded">
+                                    <div class="font-semibold text-blue-800" id="average-pace">0:00</div>
+                                    <div class="text-sm text-blue-600">Average Pace (min/km)</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded">
+                                    <div class="font-semibold text-green-800" id="average-speed">0.0</div>
+                                    <div class="text-sm text-green-600">Average Speed (km/h)</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded">
+                                    <div class="font-semibold text-orange-800" id="fitness-percentile">0th</div>
+                                    <div class="text-sm text-orange-600">Age Group Percentile</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Fitness Assessment</h4>
+                                <p class="text-gray-600" id="fitness-assessment">Assessment will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Age Comparison Tab -->
+                <div id="comparison-tab" class="tab-content hidden">
+                    <form id="comparison-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="comp-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Your Distance (meters)
+                                </label>
+                                <input type="number" id="comp-distance" class="calc-input-number" placeholder="2400" min="1000" max="4000" step="10" required>
+                            </div>
+
+                            <div>
+                                <label for="comp-age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Your Age
+                                </label>
+                                <input type="number" id="comp-age" class="calc-input-number" placeholder="30" min="13" max="80" step="1" required>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="comp-gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender
+                                </label>
+                                <select id="comp-gender" class="calc-input-number" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Compare to Age Standards</button>
+                            <button type="button" id="share-comparison" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="comparison-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="text-center mb-6">
+                                <div class="text-2xl font-bold text-primary mb-2" id="comparison-rating">Excellent</div>
+                                <div class="text-gray-600">Your Rating for Age Group</div>
+                            </div>
+                            
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm">
+                                    <thead>
+                                        <tr class="border-b">
+                                            <th class="text-left py-2">Fitness Level</th>
+                                            <th class="text-center py-2">Distance Required</th>
+                                            <th class="text-center py-2">VO2 Max Range</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="standards-table">
+                                        <!-- Standards will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">Age Group Analysis</h4>
+                                <p class="text-blue-700" id="age-analysis">Analysis will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Zones Tab -->
+                <div id="training-tab" class="tab-content hidden">
+                    <form id="training-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="training-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Cooper Test Distance (meters)
+                                </label>
+                                <input type="number" id="training-distance" class="calc-input-number" placeholder="2400" min="1000" max="4000" step="10" required>
+                            </div>
+
+                            <div>
+                                <label for="resting-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (optional)
+                                </label>
+                                <input type="number" id="resting-hr" class="calc-input-number" placeholder="60" min="40" max="100" step="1">
+                                <p class="text-sm text-gray-500 mt-1">For more accurate training zones</p>
+                            </div>
+
+                            <div>
+                                <label for="training-age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age
+                                </label>
+                                <input type="number" id="training-age" class="calc-input-number" placeholder="30" min="13" max="80" step="1" required>
+                            </div>
+
+                            <div>
+                                <label for="max-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Max Heart Rate (optional)
+                                </label>
+                                <input type="number" id="max-hr" class="calc-input-number" placeholder="190" min="150" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Leave blank to estimate from age</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Training Zones</button>
+                            <button type="button" id="share-training" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="training-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="text-center mb-6">
+                                <div class="text-2xl font-bold text-primary mb-2" id="training-vo2">0</div>
+                                <div class="text-gray-600">Estimated VO2 Max</div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-800 mb-3">Heart Rate Zones</h4>
+                                        <div class="space-y-2 text-sm" id="hr-zones">
+                                            <!-- HR zones will be populated here -->
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-800 mb-3">Training Paces</h4>
+                                        <div class="space-y-2 text-sm" id="training-paces">
+                                            <!-- Training paces will be populated here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">Training Recommendations</h4>
+                                <p class="text-green-700" id="training-recommendations">Recommendations will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">728x90 Leaderboard Ad</div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding the Cooper Test</h2>
+                
+                <p>The Cooper Test, developed by Dr. Kenneth Cooper in 1968, is a widely used field test to estimate aerobic fitness and VO2 Max. The test requires running as far as possible in exactly 12 minutes, making it accessible and practical for athletes, fitness enthusiasts, and military personnel.</p>
+
+                <h3>How the Cooper Test Works</h3>
+                
+                <p>The Cooper Test is based on the principle that aerobic power (VO2 Max) correlates strongly with the distance you can sustain over a 12-minute period. The original formula developed by Cooper is:</p>
+                
+                <p><strong>VO2 Max = (Distance in meters - 504.9) / 44.73</strong></p>
+                
+                <p>This formula provides a reasonable estimate of VO2 Max for most individuals, though individual variations in running economy can affect accuracy.</p>
+
+                <h4>Test Requirements and Setup</h4>
+                
+                <ul>
+                    <li><strong>Duration:</strong> Exactly 12 minutes of continuous running</li>
+                    <li><strong>Surface:</strong> Flat, measured track or course</li>
+                    <li><strong>Weather:</strong> Avoid extreme temperatures or wind</li>
+                    <li><strong>Warm-up:</strong> 10-15 minutes of light jogging and dynamic stretching</li>
+                    <li><strong>Pacing:</strong> Start conservatively and maintain steady effort</li>
+                </ul>
+
+                <h3>Fitness Level Standards</h3>
+                
+                <p>Cooper Test results are categorized by age and gender. Here are the general fitness classifications:</p>
+
+                <h4>Male Standards (20-29 years)</h4>
+                <ul>
+                    <li><strong>Excellent:</strong> >2800m (VO2 Max >51.3)</li>
+                    <li><strong>Good:</strong> 2400-2800m (VO2 Max 42.6-51.3)</li>
+                    <li><strong>Average:</strong> 2200-2399m (VO2 Max 38.1-42.5)</li>
+                    <li><strong>Below Average:</strong> 1600-2199m (VO2 Max 24.5-38.0)</li>
+                    <li><strong>Poor:</strong> <1600m (VO2 Max <24.5)</li>
+                </ul>
+
+                <h4>Female Standards (20-29 years)</h4>
+                <ul>
+                    <li><strong>Excellent:</strong> >2700m (VO2 Max >49.0)</li>
+                    <li><strong>Good:</strong> 2200-2700m (VO2 Max 37.8-49.0)</li>
+                    <li><strong>Average:</strong> 1800-2199m (VO2 Max 28.9-37.7)</li>
+                    <li><strong>Below Average:</strong> 1500-1799m (VO2 Max 22.2-28.8)</li>
+                    <li><strong>Poor:</strong> <1500m (VO2 Max <22.2)</li>
+                </ul>
+
+                <h3>Test Accuracy and Limitations</h3>
+                
+                <p>The Cooper Test provides a good estimate of aerobic fitness, but several factors can affect accuracy:</p>
+                
+                <ul>
+                    <li><strong>Running Economy:</strong> Efficient runners may achieve higher distances at lower VO2 Max values</li>
+                    <li><strong>Pacing Strategy:</strong> Poor pacing can lead to underestimation of fitness</li>
+                    <li><strong>Environmental Conditions:</strong> Heat, humidity, and wind affect performance</li>
+                    <li><strong>Motivation and Experience:</strong> Test familiarity and mental toughness influence results</li>
+                </ul>
+
+                <h4>Improving Your Cooper Test Performance</h4>
+                
+                <p>To improve your Cooper Test distance and VO2 Max:</p>
+                
+                <ul>
+                    <li><strong>Aerobic Base Training:</strong> 70-80% of training at conversational pace</li>
+                    <li><strong>Tempo Runs:</strong> Sustained efforts at lactate threshold pace</li>
+                    <li><strong>Interval Training:</strong> Short, high-intensity repeats with recovery</li>
+                    <li><strong>Long Runs:</strong> Develop aerobic capacity and endurance</li>
+                    <li><strong>Pacing Practice:</strong> Learn to distribute effort evenly over 12 minutes</li>
+                </ul>
+
+                <h3>Using Cooper Test Results for Training</h3>
+                
+                <p>Your Cooper Test results can guide training zone development:</p>
+                
+                <ul>
+                    <li><strong>Recovery Pace:</strong> 1:30-2:00 slower than Cooper Test pace</li>
+                    <li><strong>Aerobic Base:</strong> 1:00-1:30 slower than Cooper Test pace</li>
+                    <li><strong>Tempo Pace:</strong> 15-30 seconds slower than Cooper Test pace</li>
+                    <li><strong>VO2 Max Intervals:</strong> 5-15 seconds faster than Cooper Test pace</li>
+                </ul>
+
+                <h4>Retesting and Progress Monitoring</h4>
+                
+                <p>Retest every 6-8 weeks to monitor fitness improvements. Expect:</p>
+                
+                <ul>
+                    <li><strong>Beginners:</strong> 5-10% improvement in first 8 weeks</li>
+                    <li><strong>Intermediate:</strong> 2-5% improvement every 6-8 weeks</li>
+                    <li><strong>Advanced:</strong> 1-3% improvement with consistent training</li>
+                </ul>
+
+                <h3>Comparison with Laboratory Testing</h3>
+                
+                <p>While the Cooper Test is convenient and practical, laboratory VO2 Max testing remains the gold standard. The Cooper Test typically estimates within ±10-15% of laboratory values, making it useful for field assessment and training monitoring.</p>
+
+                <p>For athletes requiring precise VO2 Max measurements for training prescription or research purposes, consider laboratory testing with metabolic analysis equipment.</p>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">300x250 Rectangle Ad</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes. Optimize your training with precise calculations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/heart-rate-zones-calculator" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+                
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active', 'text-primary', 'border-primary');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                });
+                button.classList.add('active', 'text-primary', 'border-primary');
+                button.classList.remove('text-gray-500', 'border-transparent');
+                
+                // Update tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(`${tabName}-tab`).classList.remove('hidden');
+            });
+        });
+
+        // Distance unit conversion
+        document.getElementById('distance').addEventListener('input', function() {
+            const meters = parseFloat(this.value);
+            if (!isNaN(meters)) {
+                const miles = (meters * 0.000621371).toFixed(2);
+                document.getElementById('distance-miles').value = miles;
+            }
+        });
+
+        document.getElementById('distance-miles').addEventListener('input', function() {
+            const miles = parseFloat(this.value);
+            if (!isNaN(miles)) {
+                const meters = Math.round(miles / 0.000621371);
+                document.getElementById('distance').value = meters;
+            }
+        });
+
+        // Cooper Test Standards
+        const cooperStandards = {
+            male: {
+                '13-19': { excellent: 2700, good: 2300, average: 2050, fair: 1750, poor: 1750 },
+                '20-29': { excellent: 2800, good: 2400, average: 2200, fair: 1600, poor: 1600 },
+                '30-39': { excellent: 2700, good: 2300, average: 1900, fair: 1500, poor: 1500 },
+                '40-49': { excellent: 2500, good: 2100, average: 1700, fair: 1400, poor: 1400 },
+                '50-59': { excellent: 2400, good: 2000, average: 1600, fair: 1300, poor: 1300 },
+                '60+': { excellent: 2100, good: 1700, average: 1400, fair: 1100, poor: 1100 }
+            },
+            female: {
+                '13-19': { excellent: 2300, good: 2000, average: 1700, fair: 1400, poor: 1400 },
+                '20-29': { excellent: 2700, good: 2200, average: 1800, fair: 1500, poor: 1500 },
+                '30-39': { excellent: 2500, good: 2000, average: 1700, fair: 1400, poor: 1400 },
+                '40-49': { excellent: 2300, good: 1900, average: 1500, fair: 1200, poor: 1200 },
+                '50-59': { excellent: 2200, good: 1700, average: 1400, fair: 1100, poor: 1100 },
+                '60+': { excellent: 1900, good: 1400, average: 1200, fair: 1000, poor: 1000 }
+            }
+        };
+
+        // Get age group
+        function getAgeGroup(age) {
+            if (age >= 13 && age <= 19) return '13-19';
+            if (age >= 20 && age <= 29) return '20-29';
+            if (age >= 30 && age <= 39) return '30-39';
+            if (age >= 40 && age <= 49) return '40-49';
+            if (age >= 50 && age <= 59) return '50-59';
+            return '60+';
+        }
+
+        // Get fitness level from distance
+        function getFitnessLevel(distance, age, gender) {
+            const ageGroup = getAgeGroup(age);
+            const standards = cooperStandards[gender][ageGroup];
+            
+            if (distance >= standards.excellent) return 'Excellent';
+            if (distance >= standards.good) return 'Good';
+            if (distance >= standards.average) return 'Average';
+            if (distance >= standards.fair) return 'Fair';
+            return 'Poor';
+        }
+
+        // Cooper Test Calculator
+        class CooperTestCalculator extends Calculator {
+            constructor() {
+                super('cooper-test-form', 'cooper-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const distance = parseFloat(formData.get('distance'));
+                const age = parseInt(formData.get('age'));
+                const gender = formData.get('gender');
+
+                // Calculate VO2 Max using Cooper formula
+                const vo2Max = ((distance - 504.9) / 44.73).toFixed(1);
+                
+                // Calculate pace and speed
+                const timeInSeconds = 12 * 60; // 12 minutes
+                const distanceKm = distance / 1000;
+                const averageSpeed = ((distanceKm / (timeInSeconds / 3600))).toFixed(1);
+                const pacePerKm = timeInSeconds / distanceKm;
+                const paceMinutes = Math.floor(pacePerKm / 60);
+                const paceSeconds = Math.round(pacePerKm % 60);
+                const averagePace = `${paceMinutes}:${paceSeconds.toString().padStart(2, '0')}`;
+
+                // Get fitness level
+                const fitnessLevel = getFitnessLevel(distance, age, gender);
+                
+                // Calculate percentile (simplified)
+                const ageGroup = getAgeGroup(age);
+                const standards = cooperStandards[gender][ageGroup];
+                let percentile = 50;
+                if (distance >= standards.excellent) percentile = 90;
+                else if (distance >= standards.good) percentile = 75;
+                else if (distance >= standards.average) percentile = 50;
+                else if (distance >= standards.fair) percentile = 25;
+                else percentile = 10;
+
+                // Fitness assessment
+                let assessment = `Based on your Cooper Test result of ${distance}m, your estimated VO2 Max is ${vo2Max} ml/kg/min, which places you in the "${fitnessLevel}" category for ${gender}s aged ${age}. `;
+                
+                if (fitnessLevel === 'Excellent') {
+                    assessment += "This indicates superior aerobic fitness. Focus on maintaining this level with consistent training and consider performance-specific training for competitive goals.";
+                } else if (fitnessLevel === 'Good') {
+                    assessment += "This represents good aerobic fitness. You can improve further with structured interval training and consistent aerobic base building.";
+                } else if (fitnessLevel === 'Average') {
+                    assessment += "This is typical for your age group. Regular aerobic exercise 3-4 times per week can help improve your fitness level significantly.";
+                } else {
+                    assessment += "There's significant room for improvement. Start with a gradual running program focusing on building an aerobic base with walk-run intervals.";
+                }
+
+                return {
+                    vo2Max,
+                    fitnessLevel,
+                    averagePace,
+                    averageSpeed,
+                    percentile: `${percentile}th`,
+                    assessment
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('vo2-max').textContent = result.vo2Max;
+                document.getElementById('fitness-level').textContent = result.fitnessLevel;
+                document.getElementById('average-pace').textContent = result.averagePace;
+                document.getElementById('average-speed').textContent = `${result.averageSpeed} km/h`;
+                document.getElementById('fitness-percentile').textContent = result.percentile;
+                document.getElementById('fitness-assessment').textContent = result.assessment;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const vo2Max = document.getElementById('vo2-max').textContent;
+                const fitnessLevel = document.getElementById('fitness-level').textContent;
+                const distance = document.getElementById('distance').value;
+                
+                return `My Cooper Test: ${distance}m in 12 minutes! VO2 Max: ${vo2Max} ml/kg/min (${fitnessLevel}). Test yours: ${window.location.href}`;
+            }
+        }
+
+        // Age Comparison Calculator
+        class ComparisonCalculator extends Calculator {
+            constructor() {
+                super('comparison-form', 'comparison-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const distance = parseFloat(formData.get('comp-distance'));
+                const age = parseInt(formData.get('comp-age'));
+                const gender = formData.get('comp-gender');
+
+                const ageGroup = getAgeGroup(age);
+                const standards = cooperStandards[gender][ageGroup];
+                const rating = getFitnessLevel(distance, age, gender);
+
+                // Create standards table data
+                const tableData = [
+                    { level: 'Excellent', distance: `${standards.excellent}m+`, vo2: `${((standards.excellent - 504.9) / 44.73).toFixed(1)}+` },
+                    { level: 'Good', distance: `${standards.good}-${standards.excellent-1}m`, vo2: `${((standards.good - 504.9) / 44.73).toFixed(1)}-${((standards.excellent-1 - 504.9) / 44.73).toFixed(1)}` },
+                    { level: 'Average', distance: `${standards.average}-${standards.good-1}m`, vo2: `${((standards.average - 504.9) / 44.73).toFixed(1)}-${((standards.good-1 - 504.9) / 44.73).toFixed(1)}` },
+                    { level: 'Fair', distance: `${standards.fair}-${standards.average-1}m`, vo2: `${((standards.fair - 504.9) / 44.73).toFixed(1)}-${((standards.average-1 - 504.9) / 44.73).toFixed(1)}` },
+                    { level: 'Poor', distance: `<${standards.fair}m`, vo2: `<${((standards.fair - 504.9) / 44.73).toFixed(1)}` }
+                ];
+
+                // Age analysis
+                let analysis = `For ${gender}s in the ${ageGroup} age group, your result of ${distance}m places you in the "${rating}" category. `;
+                
+                if (rating === 'Excellent') {
+                    analysis += `You're performing better than 90% of people in your age group. To reach the next level, consider sport-specific training and advanced periodization.`;
+                } else if (rating === 'Good') {
+                    analysis += `You're above average for your age group. To reach "Excellent" level, you need to cover ${standards.excellent}m or more. Focus on VO2 Max intervals and tempo runs.`;
+                } else if (rating === 'Average') {
+                    analysis += `You're performing at the median for your age group. To improve to "Good" level, aim for ${standards.good}m. Increase training frequency and add interval work.`;
+                } else {
+                    analysis += `There's significant room for improvement. Focus on building an aerobic base with consistent, easy-paced running before adding intensity.`;
+                }
+
+                return {
+                    rating,
+                    tableData,
+                    analysis
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('comparison-rating').textContent = result.rating;
+                document.getElementById('age-analysis').textContent = result.analysis;
+
+                // Populate standards table
+                const tableBody = document.getElementById('standards-table');
+                tableBody.innerHTML = '';
+                result.tableData.forEach((row, index) => {
+                    const tr = document.createElement('tr');
+                    tr.className = row.level === result.rating ? 'bg-blue-100 font-semibold' : '';
+                    tr.innerHTML = `
+                        <td class="py-2">${row.level}</td>
+                        <td class="text-center py-2">${row.distance}</td>
+                        <td class="text-center py-2">${row.vo2}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const rating = document.getElementById('comparison-rating').textContent;
+                const distance = document.getElementById('comp-distance').value;
+                
+                return `Cooper Test age comparison: ${distance}m = "${rating}" for my age group! Compare yours: ${window.location.href}`;
+            }
+        }
+
+        // Training Zones Calculator
+        class TrainingZonesCalculator extends Calculator {
+            constructor() {
+                super('training-form', 'training-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                const distance = parseFloat(formData.get('training-distance'));
+                const age = parseInt(formData.get('training-age'));
+                const restingHR = parseInt(formData.get('resting-hr')) || 60;
+                const maxHR = parseInt(formData.get('max-hr')) || (220 - age);
+
+                // Calculate VO2 Max
+                const vo2Max = ((distance - 504.9) / 44.73).toFixed(1);
+                
+                // Calculate Cooper Test pace (per km)
+                const cooperPaceSeconds = (12 * 60) / (distance / 1000);
+                
+                // Training paces based on Cooper Test pace
+                const paces = {
+                    recovery: cooperPaceSeconds + 90,
+                    easy: cooperPaceSeconds + 60,
+                    tempo: cooperPaceSeconds - 20,
+                    vo2max: cooperPaceSeconds - 10,
+                    speed: cooperPaceSeconds - 30
+                };
+
+                // Format pace function
+                const formatPace = (seconds) => {
+                    const minutes = Math.floor(seconds / 60);
+                    const secs = Math.round(seconds % 60);
+                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                };
+
+                // Heart rate zones using Karvonen method
+                const hrReserve = maxHR - restingHR;
+                const hrZones = [
+                    { name: 'Recovery', min: Math.round(restingHR + hrReserve * 0.50), max: Math.round(restingHR + hrReserve * 0.60) },
+                    { name: 'Aerobic Base', min: Math.round(restingHR + hrReserve * 0.60), max: Math.round(restingHR + hrReserve * 0.70) },
+                    { name: 'Tempo', min: Math.round(restingHR + hrReserve * 0.70), max: Math.round(restingHR + hrReserve * 0.80) },
+                    { name: 'Lactate Threshold', min: Math.round(restingHR + hrReserve * 0.80), max: Math.round(restingHR + hrReserve * 0.90) },
+                    { name: 'VO2 Max', min: Math.round(restingHR + hrReserve * 0.90), max: maxHR }
+                ];
+
+                // Training recommendations based on VO2 Max
+                let recommendations = '';
+                if (vo2Max >= 50) {
+                    recommendations = 'Your high fitness level allows for advanced training. Focus on 80/20 training: 80% easy pace, 20% moderate to high intensity. Include 1-2 VO2 Max sessions and 1 tempo run per week.';
+                } else if (vo2Max >= 40) {
+                    recommendations = 'You have good fitness. Build your aerobic base with 70% easy running. Add 1 tempo run and 1 interval session per week. Gradually increase weekly mileage by 10%.';
+                } else if (vo2Max >= 30) {
+                    recommendations = 'Focus on building your aerobic base with mostly easy-paced running. Add one tempo run every 2 weeks. Prioritize consistency over intensity. Consider run-walk intervals if needed.';
+                } else {
+                    recommendations = 'Start with a walk-run program focusing on time rather than distance. Gradually increase running portions. Focus on 3-4 sessions per week at an easy conversational pace before adding any intensity.';
+                }
+
+                return {
+                    vo2Max,
+                    hrZones,
+                    paces,
+                    formatPace,
+                    recommendations
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('training-vo2').textContent = `${result.vo2Max} ml/kg/min`;
+                document.getElementById('training-recommendations').textContent = result.recommendations;
+
+                // Populate HR zones
+                const hrZonesContainer = document.getElementById('hr-zones');
+                hrZonesContainer.innerHTML = '';
+                result.hrZones.forEach(zone => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between';
+                    div.innerHTML = `<span>${zone.name}:</span> <span>${zone.min}-${zone.max} bpm</span>`;
+                    hrZonesContainer.appendChild(div);
+                });
+
+                // Populate training paces
+                const pacesContainer = document.getElementById('training-paces');
+                pacesContainer.innerHTML = '';
+                const paceLabels = {
+                    recovery: 'Recovery',
+                    easy: 'Easy/Long Run',
+                    tempo: 'Tempo',
+                    vo2max: 'VO2 Max Intervals',
+                    speed: 'Speed Work'
+                };
+                
+                Object.entries(result.paces).forEach(([key, seconds]) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between';
+                    div.innerHTML = `<span>${paceLabels[key]}:</span> <span>${result.formatPace(seconds)}/km</span>`;
+                    pacesContainer.appendChild(div);
+                });
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const vo2Max = document.getElementById('training-vo2').textContent;
+                
+                return `My Cooper Test training zones calculated! VO2 Max: ${vo2Max}. Get your personalized training zones: ${window.location.href}`;
+            }
+        }
+
+        // Initialize calculators
+        const cooperCalculator = new CooperTestCalculator();
+        const comparisonCalculator = new ComparisonCalculator();
+        const trainingCalculator = new TrainingZonesCalculator();
+
+        // Share button event listeners
+        document.getElementById('share-basic').addEventListener('click', () => {
+            cooperCalculator.shareResult();
+        });
+
+        document.getElementById('share-comparison').addEventListener('click', () => {
+            comparisonCalculator.shareResult();
+        });
+
+        document.getElementById('share-training').addEventListener('click', () => {
+            trainingCalculator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

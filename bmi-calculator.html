@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Body Mass Index Calculator for Athletes | RunBikeCalc</title>
+    <meta name="description" content="Calculate your BMI (Body Mass Index) with our athlete-focused calculator. Get accurate BMI calculations with athlete-specific interpretations and health recommendations.">
+    <meta name="keywords" content="BMI calculator, body mass index calculator, BMI for athletes, healthy weight calculator, BMI chart">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BMI Calculator - Body Mass Index Calculator for Athletes">
+    <meta property="og:description" content="Calculate your BMI (Body Mass Index) with our athlete-focused calculator. Get accurate BMI calculations with athlete-specific interpretations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/bmi-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-bmi-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/bmi-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BMI Calculator",
+        "description": "Calculate your BMI (Body Mass Index) with our athlete-focused calculator.",
+        "url": "https://runbikecalc.com/bmi-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/bmi-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BMI Calculator</a>
+                                <a href="/pace-converter-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pace Converter</a>
+                                <a href="/vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/bmi-calculator" class="mobile-menu-item">BMI Calculator</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2">BMI Calculator</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                BMI Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate your Body Mass Index (BMI) with athlete-specific interpretations. Get personalized health recommendations based on your BMI and activity level.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <form id="bmi-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                Weight
+                            </label>
+                            <div class="flex gap-2">
+                                <input type="number" id="weight" class="calc-input-number flex-1" placeholder="70" min="30" max="300" step="0.1" required>
+                                <select id="weight-unit" class="calc-input-number w-24">
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="height" class="block text-sm font-medium text-gray-700 mb-2">
+                                Height
+                            </label>
+                            <div class="flex gap-2">
+                                <input type="number" id="height" class="calc-input-number flex-1" placeholder="175" min="100" max="250" step="0.1" required>
+                                <select id="height-unit" class="calc-input-number w-24">
+                                    <option value="cm">cm</option>
+                                    <option value="ft">ft</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                Age (years)
+                            </label>
+                            <input type="number" id="age" class="calc-input-number" placeholder="30" min="15" max="100" step="1">
+                            <p class="text-sm text-gray-500 mt-1">Optional - for age-adjusted interpretation</p>
+                        </div>
+
+                        <div>
+                            <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                Gender
+                            </label>
+                            <select id="gender" class="calc-input-number">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <p class="text-sm text-gray-500 mt-1">Optional - for body fat estimation</p>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label for="activity-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                Activity Level
+                            </label>
+                            <select id="activity-level" class="calc-input-number">
+                                <option value="sedentary">Sedentary (little to no exercise)</option>
+                                <option value="lightly-active">Lightly Active (light exercise 1-3 days/week)</option>
+                                <option value="moderately-active">Moderately Active (moderate exercise 3-5 days/week)</option>
+                                <option value="very-active">Very Active (hard exercise 6-7 days/week)</option>
+                                <option value="athlete">Athlete (very hard exercise, physical job)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="calc-button">Calculate BMI</button>
+                        <button type="button" id="share-result" class="calc-button-secondary">Share Result</button>
+                        <button type="reset" class="calc-button-secondary">Reset</button>
+                    </div>
+                </form>
+
+                <div id="bmi-result" class="mt-8 hidden">
+                    <div class="calc-result">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2" id="bmi-value">0.0</div>
+                                <div class="text-gray-600">Your BMI</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-semibold text-secondary mb-2" id="bmi-category">Normal</div>
+                                <div class="text-gray-600">BMI Category</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-blue-50 p-4 rounded">
+                                <div class="font-semibold text-blue-800" id="healthy-weight-range">60-80 kg</div>
+                                <div class="text-sm text-blue-600">Healthy Weight Range</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded">
+                                <div class="font-semibold text-green-800" id="weight-status">Healthy</div>
+                                <div class="text-sm text-green-600">Weight Status</div>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded">
+                                <div class="font-semibold text-orange-800" id="body-fat-estimate">15-20%</div>
+                                <div class="text-sm text-orange-600">Estimated Body Fat</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">BMI Analysis</h4>
+                            <p class="text-gray-600" id="bmi-analysis">Analysis will appear here...</p>
+                        </div>
+
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Health Recommendations</h4>
+                            <p class="text-blue-700" id="health-recommendations">Recommendations will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding BMI for Athletes</h2>
+                
+                <p>Body Mass Index (BMI) is a simple calculation using height and weight to categorize weight status. While useful for general population screening, BMI has important limitations for athletes and highly active individuals.</p>
+
+                <h3>BMI Categories</h3>
+                
+                <ul>
+                    <li><strong>Underweight:</strong> BMI less than 18.5</li>
+                    <li><strong>Normal weight:</strong> BMI 18.5-24.9</li>
+                    <li><strong>Overweight:</strong> BMI 25.0-29.9</li>
+                    <li><strong>Obese:</strong> BMI 30.0 and above</li>
+                </ul>
+
+                <h3>BMI Limitations for Athletes</h3>
+                
+                <p>BMI doesn't distinguish between muscle and fat mass, which can lead to misclassification of athletic individuals:</p>
+                
+                <ul>
+                    <li><strong>Muscular Athletes:</strong> May have high BMI due to muscle mass, not excess fat</li>
+                    <li><strong>Endurance Athletes:</strong> Often have very low BMI, which may appear "underweight"</li>
+                    <li><strong>Body Composition:</strong> BMI doesn't account for body fat percentage</li>
+                </ul>
+
+                <h4>Sport-Specific Considerations</h4>
+                
+                <ul>
+                    <li><strong>Distance Runners:</strong> Often have BMI 18-22, optimized for endurance</li>
+                    <li><strong>Cyclists:</strong> Similar to runners, with emphasis on power-to-weight ratio</li>
+                    <li><strong>Strength Athletes:</strong> May have BMI >25 due to muscle mass</li>
+                    <li><strong>Team Sport Athletes:</strong> BMI varies by position and sport demands</li>
+                </ul>
+
+                <h3>Alternative Assessments</h3>
+                
+                <p>For athletes, consider these additional measurements:</p>
+                
+                <ul>
+                    <li><strong>Body Fat Percentage:</strong> More accurate for body composition</li>
+                    <li><strong>Waist Circumference:</strong> Indicator of abdominal fat</li>
+                    <li><strong>Performance Metrics:</strong> Power-to-weight ratios</li>
+                    <li><strong>Health Markers:</strong> Blood pressure, cholesterol, fitness tests</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/bmi-calculator" class="hover:text-white">BMI Calculator</a></li>
+                        <li><a href="/pace-converter-calculator" class="hover:text-white">Pace Converter</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        class BMICalculator extends Calculator {
+            constructor() {
+                super('bmi-form', 'bmi-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                let weight = parseFloat(formData.get('weight'));
+                let height = parseFloat(formData.get('height'));
+                const weightUnit = formData.get('weight-unit');
+                const heightUnit = formData.get('height-unit');
+                const age = parseInt(formData.get('age')) || 30;
+                const gender = formData.get('gender');
+                const activityLevel = formData.get('activity-level');
+
+                // Convert to metric
+                if (weightUnit === 'lbs') {
+                    weight = weight * 0.453592;
+                }
+                if (heightUnit === 'ft') {
+                    height = height * 30.48;
+                }
+
+                const heightInMeters = height / 100;
+                const bmi = weight / (heightInMeters * heightInMeters);
+
+                // Determine BMI category
+                let category, weightStatus;
+                if (bmi < 18.5) {
+                    category = 'Underweight';
+                    weightStatus = 'Below Normal';
+                } else if (bmi < 25) {
+                    category = 'Normal Weight';
+                    weightStatus = 'Healthy';
+                } else if (bmi < 30) {
+                    category = 'Overweight';
+                    weightStatus = 'Above Normal';
+                } else {
+                    category = 'Obese';
+                    weightStatus = 'High Risk';
+                }
+
+                // Calculate healthy weight range
+                const minHealthyWeight = 18.5 * (heightInMeters * heightInMeters);
+                const maxHealthyWeight = 24.9 * (heightInMeters * heightInMeters);
+                const healthyWeightRange = weightUnit === 'lbs' 
+                    ? `${Math.round(minHealthyWeight * 2.20462)}-${Math.round(maxHealthyWeight * 2.20462)} lbs`
+                    : `${Math.round(minHealthyWeight)}-${Math.round(maxHealthyWeight)} kg`;
+
+                // Estimate body fat percentage (rough estimation)
+                let bodyFatEstimate = 'Not available';
+                if (gender) {
+                    let bodyFat;
+                    if (gender === 'male') {
+                        bodyFat = (1.20 * bmi) + (0.23 * age) - 16.2;
+                    } else {
+                        bodyFat = (1.20 * bmi) + (0.23 * age) - 5.4;
+                    }
+                    bodyFatEstimate = `${Math.round(bodyFat)}%`;
+                }
+
+                // Generate analysis
+                let analysis = `Your BMI of ${bmi.toFixed(1)} places you in the "${category}" category. `;
+                
+                if (activityLevel === 'athlete' || activityLevel === 'very-active') {
+                    if (category === 'Overweight' && bmi < 27) {
+                        analysis += `As an athlete, your higher BMI may be due to increased muscle mass rather than excess fat. Consider body composition analysis for a more accurate assessment.`;
+                    } else if (category === 'Normal Weight') {
+                        analysis += `Your BMI is in the healthy range and appropriate for an active individual. Maintain your current weight through balanced nutrition and training.`;
+                    } else if (category === 'Underweight') {
+                        analysis += `Your BMI is below normal range. While common in endurance athletes, ensure adequate nutrition to support training and recovery.`;
+                    }
+                } else {
+                    if (category === 'Normal Weight') {
+                        analysis += `This is considered a healthy BMI range associated with lower risk of chronic diseases.`;
+                    } else if (category === 'Overweight') {
+                        analysis += `This BMI range is associated with increased health risks. Consider lifestyle modifications including diet and exercise.`;
+                    } else if (category === 'Underweight') {
+                        analysis += `This BMI may indicate inadequate nutrition or underlying health issues. Consider consulting a healthcare provider.`;
+                    }
+                }
+
+                // Generate recommendations
+                let recommendations = '';
+                if (category === 'Normal Weight') {
+                    recommendations = 'Maintain your current weight through balanced nutrition and regular physical activity. Focus on body composition rather than just weight.';
+                } else if (category === 'Overweight') {
+                    recommendations = 'Consider gradual weight loss through caloric deficit, increased physical activity, and improved nutrition quality. Aim for 1-2 pounds per week weight loss.';
+                } else if (category === 'Underweight') {
+                    recommendations = 'Focus on gaining weight through increased caloric intake with nutrient-dense foods. Include strength training to build muscle mass.';
+                } else {
+                    recommendations = 'Consult with healthcare providers for comprehensive weight management strategies. Consider medical evaluation for underlying conditions.';
+                }
+
+                return {
+                    bmi: bmi.toFixed(1),
+                    category,
+                    weightStatus,
+                    healthyWeightRange,
+                    bodyFatEstimate,
+                    analysis,
+                    recommendations
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('bmi-value').textContent = result.bmi;
+                document.getElementById('bmi-category').textContent = result.category;
+                document.getElementById('healthy-weight-range').textContent = result.healthyWeightRange;
+                document.getElementById('weight-status').textContent = result.weightStatus;
+                document.getElementById('body-fat-estimate').textContent = result.bodyFatEstimate;
+                document.getElementById('bmi-analysis').textContent = result.analysis;
+                document.getElementById('health-recommendations').textContent = result.recommendations;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const bmi = document.getElementById('bmi-value').textContent;
+                const category = document.getElementById('bmi-category').textContent;
+                
+                return `My BMI: ${bmi} (${category}). Calculate yours: ${window.location.href}`;
+            }
+        }
+
+        const bmiCalculator = new BMICalculator();
+
+        document.getElementById('share-result').addEventListener('click', () => {
+            bmiCalculator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

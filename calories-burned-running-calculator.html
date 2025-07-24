@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Burned Running Calculator - Accurate Calorie Burn Calculator | RunBikeCalc</title>
+    <meta name="description" content="Free calories burned running calculator. Calculate accurate calorie burn based on weight, distance, pace, and terrain. Get precise results for your running workouts.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/calories-burned-running-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Calories Burned Running Calculator - Accurate Calorie Burn">
+    <meta property="og:description" content="Calculate accurate calories burned while running based on weight, distance, and pace">
+    <meta property="og:image" content="https://runbikecalc.com/images/calories-burned-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/calories-burned-running-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calories Burned Running Calculator">
+    <meta name="twitter:description" content="Calculate calories burned while running">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/calories-burned-calculator-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calories Burned Running Calculator",
+        "url": "https://runbikecalc.com/calories-burned-running-calculator",
+        "description": "Calculate calories burned while running based on weight, distance, pace, and terrain",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Calories Burned Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Calories Burned Running Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate accurate calories burned while running based on your weight, distance, pace, and terrain. Get precise results to track your fitness progress and plan your nutrition.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Calories Burned</h2>
+                    
+                    <!-- Method tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8">
+                                <button class="method-tab active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium" data-method="distance">
+                                    By Distance
+                                </button>
+                                <button class="method-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-method="time">
+                                    By Time
+                                </button>
+                                <button class="method-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-method="advanced">
+                                    Advanced
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                    <form id="calories-form" class="space-y-6">
+                        <!-- Common fields -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight *
+                                </label>
+                                <input type="number" 
+                                       id="weight" 
+                                       name="weight" 
+                                       class="calc-input-number" 
+                                       placeholder="150"
+                                       required
+                                       min="80"
+                                       max="400"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your current weight (lbs)</p>
+                            </div>
+                            
+                            <div>
+                                <label for="weightUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Weight Unit
+                                </label>
+                                <select id="weightUnit" name="weightUnit" class="calc-input-number text-left">
+                                    <option value="lbs">Pounds (lbs)</option>
+                                    <option value="kg">Kilograms (kg)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your preferred unit</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Distance method fields -->
+                        <div id="distance-fields" class="method-fields">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance *
+                                    </label>
+                                    <input type="number" 
+                                           id="distance" 
+                                           name="distance" 
+                                           class="calc-input-number" 
+                                           placeholder="3.1"
+                                           min="0.1"
+                                           max="100"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Distance you ran</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="distanceUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance Unit
+                                    </label>
+                                    <select id="distanceUnit" name="distanceUnit" class="calc-input-number text-left">
+                                        <option value="miles">Miles</option>
+                                        <option value="km">Kilometers</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Choose distance unit</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="pace" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Running Pace (optional)
+                                </label>
+                                <input type="text" 
+                                       id="pace" 
+                                       name="pace" 
+                                       class="calc-input-number" 
+                                       placeholder="9:00"
+                                       pattern="[0-9]{1,2}:[0-5][0-9]">
+                                <p class="text-sm text-gray-600 mt-1">Pace per mile/km (MM:SS format) - improves accuracy</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Time method fields -->
+                        <div id="time-fields" class="method-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Duration *
+                                    </label>
+                                    <input type="number" 
+                                           id="duration" 
+                                           name="duration" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           min="1"
+                                           max="600"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Total running time (minutes)</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="intensity" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Intensity Level *
+                                    </label>
+                                    <select id="intensity" name="intensity" class="calc-input-number text-left">
+                                        <option value="">Select intensity</option>
+                                        <option value="light">Light (5-6 mph, 12-10 min/mile)</option>
+                                        <option value="moderate">Moderate (6-7 mph, 10-8.5 min/mile)</option>
+                                        <option value="vigorous">Vigorous (7-8 mph, 8.5-7.5 min/mile)</option>
+                                        <option value="high">High (8+ mph, <7.5 min/mile)</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Choose your running intensity</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Advanced method fields -->
+                        <div id="advanced-fields" class="method-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="advDistance" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance *
+                                    </label>
+                                    <input type="number" 
+                                           id="advDistance" 
+                                           name="advDistance" 
+                                           class="calc-input-number" 
+                                           placeholder="3.1"
+                                           min="0.1"
+                                           max="100"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Distance you ran</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="advDistanceUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance Unit
+                                    </label>
+                                    <select id="advDistanceUnit" name="advDistanceUnit" class="calc-input-number text-left">
+                                        <option value="miles">Miles</option>
+                                        <option value="km">Kilometers</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Choose distance unit</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="terrain" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Terrain Type
+                                    </label>
+                                    <select id="terrain" name="terrain" class="calc-input-number text-left">
+                                        <option value="flat">Flat Road/Track</option>
+                                        <option value="hills">Hilly Terrain</option>
+                                        <option value="trail">Trail Running</option>
+                                        <option value="treadmill">Treadmill</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Type of terrain you ran on</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="temperature" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Temperature (optional)
+                                    </label>
+                                    <input type="number" 
+                                           id="temperature" 
+                                           name="temperature" 
+                                           class="calc-input-number" 
+                                           placeholder="70"
+                                           min="0"
+                                           max="120"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Temperature in °F (affects calorie burn)</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="advPace" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Running Pace *
+                                </label>
+                                <input type="text" 
+                                       id="advPace" 
+                                       name="advPace" 
+                                       class="calc-input-number" 
+                                       placeholder="9:00"
+                                       pattern="[0-9]{1,2}:[0-5][0-9]">
+                                <p class="text-sm text-gray-600 mt-1">Pace per mile/km (MM:SS format)</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Calories Burned
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Calorie Burn During Running</h2>
+                    <p>Running is one of the most effective exercises for burning calories. The number of calories you burn depends on several factors including your body weight, running speed, distance, terrain, and even environmental conditions.</p>
+                    
+                    <h3>Factors Affecting Calorie Burn</h3>
+                    
+                    <h4>Body Weight</h4>
+                    <p>Heavier individuals burn more calories because it takes more energy to move a larger mass. On average, you burn about 100 calories per mile for every 150 pounds of body weight.</p>
+                    
+                    <h4>Running Speed/Pace</h4>
+                    <p>Faster running burns more calories per minute, but the relationship isn't linear. Running at a moderate pace for a longer duration often burns more total calories than sprinting for a short time.</p>
+                    
+                    <h4>Distance vs. Time</h4>
+                    <p>Distance is the primary factor in total calorie burn. Whether you run a mile in 6 minutes or 12 minutes, you'll burn roughly the same number of calories (with faster running burning slightly more due to increased effort).</p>
+                    
+                    <h4>Terrain and Environment</h4>
+                    <ul>
+                        <li><strong>Hills:</strong> Uphill running can increase calorie burn by 10-20%</li>
+                        <li><strong>Trails:</strong> Uneven surfaces require more energy for balance</li>
+                        <li><strong>Wind:</strong> Headwinds increase resistance and calorie burn</li>
+                        <li><strong>Temperature:</strong> Extreme heat or cold increases energy expenditure</li>
+                        <li><strong>Altitude:</strong> Higher elevations require more energy</li>
+                    </ul>
+                    
+                    <h3>Calorie Burn by Running Speed</h3>
+                    <p>For a 150-pound person running for 30 minutes:</p>
+                    <ul>
+                        <li><strong>5 mph (12 min/mile):</strong> ~240 calories</li>
+                        <li><strong>6 mph (10 min/mile):</strong> ~300 calories</li>
+                        <li><strong>7 mph (8.5 min/mile):</strong> ~375 calories</li>
+                        <li><strong>8 mph (7.5 min/mile):</strong> ~450 calories</li>
+                        <li><strong>9 mph (6.7 min/mile):</strong> ~525 calories</li>
+                        <li><strong>10 mph (6 min/mile):</strong> ~600 calories</li>
+                    </ul>
+                    
+                    <h3>Metabolic Equivalents (METs)</h3>
+                    <p>METs measure the energy cost of physical activities. One MET equals your resting metabolic rate. Running METs:</p>
+                    <ul>
+                        <li><strong>5 mph:</strong> 8 METs</li>
+                        <li><strong>6 mph:</strong> 10 METs</li>
+                        <li><strong>7 mph:</strong> 11.5 METs</li>
+                        <li><strong>8 mph:</strong> 13.5 METs</li>
+                        <li><strong>9 mph:</strong> 15 METs</li>
+                        <li><strong>10+ mph:</strong> 16+ METs</li>
+                    </ul>
+                    
+                    <h3>Post-Exercise Calorie Burn (EPOC)</h3>
+                    <p>After intense running, your body continues burning calories at an elevated rate. This "afterburn effect" or EPOC (Excess Post-Exercise Oxygen Consumption) can add 6-15% to your total calorie burn, especially after high-intensity workouts.</p>
+                    
+                    <h3>Accuracy of Calorie Calculations</h3>
+                    
+                    <h4>Most Accurate Methods</h4>
+                    <ul>
+                        <li><strong>Laboratory Testing:</strong> Direct or indirect calorimetry</li>
+                        <li><strong>Heart Rate Monitors:</strong> With personal data calibration</li>
+                        <li><strong>GPS Watches:</strong> With accurate weight, pace, and terrain data</li>
+                    </ul>
+                    
+                    <h4>Estimation Accuracy</h4>
+                    <ul>
+                        <li><strong>Formula-based calculators:</strong> ±10-20% accuracy</li>
+                        <li><strong>Fitness trackers:</strong> ±15-25% accuracy</li>
+                        <li><strong>Cardio machine displays:</strong> ±20-30% accuracy</li>
+                    </ul>
+                    
+                    <h3>Tips for Maximizing Calorie Burn</h3>
+                    
+                    <h4>During Your Run</h4>
+                    <ul>
+                        <li><strong>Add Hills:</strong> Include inclines in your route</li>
+                        <li><strong>Vary Your Pace:</strong> Interval training burns more calories</li>
+                        <li><strong>Use Your Arms:</strong> Active arm swing increases energy expenditure</li>
+                        <li><strong>Choose Challenging Terrain:</strong> Trails and uneven surfaces</li>
+                        <li><strong>Run Against Wind:</strong> Natural resistance training</li>
+                    </ul>
+                    
+                    <h4>Training Strategies</h4>
+                    <ul>
+                        <li><strong>Build Mileage Gradually:</strong> More distance = more calories</li>
+                        <li><strong>Add Strength Training:</strong> Muscle mass increases resting metabolism</li>
+                        <li><strong>Include Speed Work:</strong> High-intensity intervals</li>
+                        <li><strong>Long Runs:</strong> Extended duration for maximum burn</li>
+                    </ul>
+                    
+                    <h3>Calorie Burn vs. Weight Loss</h3>
+                    <p>Remember that weight loss requires a calorie deficit. One pound of fat equals approximately 3,500 calories, so you'd need to burn an extra 500 calories per day to lose 1 pound per week through exercise alone.</p>
+                    
+                    <h4>Realistic Expectations</h4>
+                    <ul>
+                        <li><strong>3-mile run:</strong> Burns 300-450 calories (depends on weight/pace)</li>
+                        <li><strong>5K race:</strong> Burns 300-500 calories</li>
+                        <li><strong>10K race:</strong> Burns 600-1000 calories</li>
+                        <li><strong>Half marathon:</strong> Burns 1300-2000 calories</li>
+                        <li><strong>Marathon:</strong> Burns 2600-4000 calories</li>
+                    </ul>
+                    
+                    <h3>Common Mistakes in Calorie Estimation</h3>
+                    <ul>
+                        <li><strong>Overestimating Burn:</strong> Many devices and apps overestimate</li>
+                        <li><strong>Ignoring Body Adaptation:</strong> Efficiency improves with training</li>
+                        <li><strong>Not Accounting for Fitness Level:</strong> Fitter individuals may burn fewer calories</li>
+                        <li><strong>Compensatory Eating:</strong> Exercise often increases appetite</li>
+                        <li><strong>Reduced Daily Activity:</strong> Being less active after intense workouts</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Quick calorie reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Calories Per Mile</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>120 lbs</span>
+                            <span class="font-medium">~80 cal/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>150 lbs</span>
+                            <span class="font-medium">~100 cal/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>180 lbs</span>
+                            <span class="font-medium">~120 cal/mile</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>200 lbs</span>
+                            <span class="font-medium">~135 cal/mile</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2">Approximate values for moderate pace</p>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/run-walk-calculator.html" class="text-primary hover:underline">Run-Walk Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="hover:text-white">Race Time Predictor</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        document.querySelectorAll('.method-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const method = this.dataset.method;
+                
+                // Update active tab
+                document.querySelectorAll('.method-tab').forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                this.classList.add('active', 'border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Show/hide method fields
+                document.querySelectorAll('.method-fields').forEach(field => {
+                    field.classList.add('hidden');
+                });
+                document.getElementById(method + '-fields').classList.remove('hidden');
+                
+                // Update required fields
+                calculator.updateRequiredFields(method);
+            });
+        });
+        
+        // Calories Burned Calculator implementation
+        class CaloriesBurnedCalculator extends Calculator {
+            constructor(formId, resultId) {
+                super(formId, resultId);
+                this.currentMethod = 'distance';
+            }
+            
+            updateRequiredFields(method) {
+                this.currentMethod = method;
+                
+                // Clear all required attributes
+                this.form.querySelectorAll('input, select').forEach(field => {
+                    if (!['weight', 'weightUnit'].includes(field.name)) {
+                        field.required = false;
+                    }
+                });
+                
+                // Set required fields based on method
+                if (method === 'distance') {
+                    document.getElementById('distance').required = true;
+                } else if (method === 'time') {
+                    document.getElementById('duration').required = true;
+                    document.getElementById('intensity').required = true;
+                } else if (method === 'advanced') {
+                    document.getElementById('advDistance').required = true;
+                    document.getElementById('advPace').required = true;
+                }
+            }
+            
+            calculate() {
+                const weight = this.getInputValue('weight');
+                const weightUnit = this.form.querySelector('[name="weightUnit"]').value;
+                
+                if (!weight) {
+                    this.displayError('Please enter your body weight.');
+                    return;
+                }
+                
+                // Convert weight to kg for calculations
+                const weightKg = weightUnit === 'lbs' ? weight * 0.453592 : weight;
+                
+                let calories = 0;
+                let method = '';
+                let details = {};
+                
+                if (this.currentMethod === 'distance') {
+                    calories = this.calculateByDistance(weightKg);
+                    method = 'Distance-based calculation';
+                } else if (this.currentMethod === 'time') {
+                    calories = this.calculateByTime(weightKg);
+                    method = 'Time-based calculation';
+                } else if (this.currentMethod === 'advanced') {
+                    const result = this.calculateAdvanced(weightKg);
+                    calories = result.calories;
+                    details = result.details;
+                    method = 'Advanced calculation with terrain factors';
+                }
+                
+                if (calories === null) return; // Error already displayed
+                
+                // Calculate additional metrics
+                const caloriesPerMinute = this.calculateCaloriesPerMinute(calories, this.currentMethod);
+                const fatBurn = calories * 0.7; // Approximate fat calories (70% of total)
+                const carbBurn = calories * 0.3; // Approximate carb calories (30% of total)
+                
+                // Generate recommendations
+                const recommendations = this.generateRecommendations(calories, weight, weightUnit);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Calories Burned Results</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Total Calories Burned</div>
+                            <div class="text-4xl font-bold">${Math.round(calories)}</div>
+                            <div class="text-lg opacity-90 mt-2">calories</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Fat Calories</h4>
+                                <div class="text-2xl font-bold text-green-700">${Math.round(fatBurn)}</div>
+                                <div class="text-sm text-green-600">~70% of total</div>
+                            </div>
+                            
+                            <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-orange-800">Carb Calories</h4>
+                                <div class="text-2xl font-bold text-orange-700">${Math.round(carbBurn)}</div>
+                                <div class="text-sm text-orange-600">~30% of total</div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Rate</h4>
+                                <div class="text-2xl font-bold text-blue-700">${caloriesPerMinute.toFixed(1)}</div>
+                                <div class="text-sm text-blue-600">calories/minute</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Calculation Details</h4>
+                            <div class="text-sm text-gray-700 space-y-1">
+                                <p>• Method: ${method}</p>
+                                <p>• Body Weight: ${weight} ${weightUnit} (${weightKg.toFixed(1)} kg)</p>
+                                ${details.distance ? `<p>• Distance: ${details.distance} ${details.unit}</p>` : ''}
+                                ${details.pace ? `<p>• Pace: ${details.pace}</p>` : ''}
+                                ${details.duration ? `<p>• Duration: ${details.duration} minutes</p>` : ''}
+                                ${details.terrain ? `<p>• Terrain: ${details.terrain} (${details.terrainMultiplier}x multiplier)</p>` : ''}
+                                ${details.temperature ? `<p>• Temperature: ${details.temperature}°F (${details.tempMultiplier}x multiplier)</p>` : ''}
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Nutrition & Recovery</h4>
+                            <div class="text-sm text-blue-700 space-y-1">
+                                ${recommendations}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('I burned ${Math.round(calories)} calories during my run!')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            calculateByDistance(weightKg) {
+                const distance = this.getInputValue('distance');
+                const distanceUnit = this.form.querySelector('[name="distanceUnit"]').value;
+                const paceInput = this.form.querySelector('[name="pace"]').value;
+                
+                if (!distance) {
+                    this.displayError('Please enter the distance.');
+                    return null;
+                }
+                
+                // Convert distance to km for calculation
+                const distanceKm = distanceUnit === 'miles' ? distance * 1.60934 : distance;
+                
+                // Base calorie calculation: ~1 cal/kg/km
+                let calories = weightKg * distanceKm;
+                
+                // Adjust for pace if provided
+                if (paceInput) {
+                    const pace = this.parsePace(paceInput);
+                    if (pace) {
+                        // Convert pace to speed (km/h or mph)
+                        const speed = distanceUnit === 'miles' ? 60 / pace : 60 / pace;
+                        const met = this.calculateMET(speed, distanceUnit === 'miles');
+                        
+                        // Use MET formula: calories = MET × weight(kg) × time(hours)
+                        const timeHours = distanceKm / (distanceUnit === 'miles' ? speed * 1.60934 : speed);
+                        calories = met * weightKg * timeHours;
+                    }
+                }
+                
+                return calories;
+            }
+            
+            calculateByTime(weightKg) {
+                const duration = this.getInputValue('duration');
+                const intensity = this.form.querySelector('[name="intensity"]').value;
+                
+                if (!duration || !intensity) {
+                    this.displayError('Please enter duration and select intensity level.');
+                    return null;
+                }
+                
+                // MET values for different intensities
+                const metValues = {
+                    'light': 8,    // 5-6 mph
+                    'moderate': 10, // 6-7 mph
+                    'vigorous': 12, // 7-8 mph
+                    'high': 15     // 8+ mph
+                };
+                
+                const met = metValues[intensity];
+                const timeHours = duration / 60;
+                
+                return met * weightKg * timeHours;
+            }
+            
+            calculateAdvanced(weightKg) {
+                const distance = this.getInputValue('advDistance');
+                const distanceUnit = this.form.querySelector('[name="advDistanceUnit"]').value;
+                const paceInput = this.form.querySelector('[name="advPace"]').value;
+                const terrain = this.form.querySelector('[name="terrain"]').value;
+                const temperature = this.getInputValue('temperature');
+                
+                if (!distance || !paceInput) {
+                    this.displayError('Please enter distance and pace for advanced calculation.');
+                    return null;
+                }
+                
+                const pace = this.parsePace(paceInput);
+                if (!pace) {
+                    this.displayError('Please enter pace in MM:SS format.');
+                    return null;
+                }
+                
+                // Calculate base calories using MET formula
+                const speed = distanceUnit === 'miles' ? 60 / pace : 60 / pace;
+                const met = this.calculateMET(speed, distanceUnit === 'miles');
+                
+                const distanceKm = distanceUnit === 'miles' ? distance * 1.60934 : distance;
+                const speedKmh = distanceUnit === 'miles' ? speed * 1.60934 : speed;
+                const timeHours = distanceKm / speedKmh;
+                
+                let calories = met * weightKg * timeHours;
+                
+                // Terrain multipliers
+                const terrainMultipliers = {
+                    'flat': 1.0,
+                    'hills': 1.15,
+                    'trail': 1.1,
+                    'treadmill': 0.95
+                };
+                
+                const terrainMultiplier = terrainMultipliers[terrain] || 1.0;
+                calories *= terrainMultiplier;
+                
+                // Temperature adjustment
+                let tempMultiplier = 1.0;
+                if (temperature) {
+                    if (temperature > 80) {
+                        tempMultiplier = 1.05; // Hot weather increases energy expenditure
+                    } else if (temperature < 32) {
+                        tempMultiplier = 1.03; // Cold weather slightly increases energy expenditure
+                    }
+                }
+                calories *= tempMultiplier;
+                
+                return {
+                    calories: calories,
+                    details: {
+                        distance: distance,
+                        unit: distanceUnit,
+                        pace: this.formatPace(pace),
+                        duration: Math.round(timeHours * 60),
+                        terrain: terrain.charAt(0).toUpperCase() + terrain.slice(1),
+                        terrainMultiplier: terrainMultiplier,
+                        temperature: temperature,
+                        tempMultiplier: tempMultiplier
+                    }
+                };
+            }
+            
+            calculateMET(speed, isMiles = true) {
+                // Convert to mph if needed
+                const speedMph = isMiles ? speed : speed * 0.621371;
+                
+                // MET values based on running speed
+                if (speedMph < 5) return 8;
+                else if (speedMph < 6) return 8.5;
+                else if (speedMph < 6.7) return 10;
+                else if (speedMph < 7) return 11;
+                else if (speedMph < 7.5) return 11.5;
+                else if (speedMph < 8) return 12.5;
+                else if (speedMph < 8.6) return 13.5;
+                else if (speedMph < 9) return 14;
+                else if (speedMph < 10) return 15;
+                else if (speedMph < 11) return 16;
+                else return 18;
+            }
+            
+            parsePace(paceString) {
+                const parts = paceString.split(':');
+                if (parts.length !== 2) return null;
+                
+                const minutes = parseInt(parts[0]);
+                const seconds = parseInt(parts[1]);
+                
+                if (isNaN(minutes) || isNaN(seconds) || seconds >= 60) return null;
+                
+                return minutes + (seconds / 60);
+            }
+            
+            formatPace(paceMinutes) {
+                const minutes = Math.floor(paceMinutes);
+                const seconds = Math.round((paceMinutes % 1) * 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            calculateCaloriesPerMinute(totalCalories, method) {
+                let duration = 30; // default
+                
+                if (method === 'time') {
+                    duration = this.getInputValue('duration') || 30;
+                } else if (method === 'distance' || method === 'advanced') {
+                    const paceInput = method === 'distance' ? 
+                        this.form.querySelector('[name="pace"]').value : 
+                        this.form.querySelector('[name="advPace"]').value;
+                    const distanceInput = method === 'distance' ? 
+                        this.getInputValue('distance') : 
+                        this.getInputValue('advDistance');
+                    
+                    if (paceInput && distanceInput) {
+                        const pace = this.parsePace(paceInput);
+                        if (pace) {
+                            duration = pace * distanceInput;
+                        }
+                    }
+                }
+                
+                return totalCalories / duration;
+            }
+            
+            generateRecommendations(calories, weight, weightUnit) {
+                let recommendations = [];
+                
+                if (calories > 300) {
+                    recommendations.push('• Consider post-workout nutrition within 30 minutes');
+                }
+                
+                if (calories > 500) {
+                    recommendations.push('• Aim for 3:1 or 4:1 carb to protein ratio for recovery');
+                    recommendations.push('• Hydrate with 16-24 oz fluid per pound of weight lost');
+                }
+                
+                if (calories > 800) {
+                    recommendations.push('• Consider sports drinks during runs over 1 hour');
+                    recommendations.push('• Plan for 200-300 calories per hour during long runs');
+                }
+                
+                recommendations.push('• Replace fluids lost through sweat');
+                recommendations.push('• Include some protein for muscle recovery');
+                
+                return recommendations.join('\\n');
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new CaloriesBurnedCalculator('calories-form', 'results');
+    </script>
+</body>
+</html>

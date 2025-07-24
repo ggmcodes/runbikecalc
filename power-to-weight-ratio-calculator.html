@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power-to-Weight Ratio Calculator - Watts per Kg for Cycling Performance | RunBikeCalc</title>
+    <meta name="description" content="Free power-to-weight ratio calculator for cycling. Calculate watts per kg, compare performance levels, and analyze your cycling power output relative to body weight.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/power-to-weight-ratio-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Power-to-Weight Ratio Calculator - Watts per Kg Analysis">
+    <meta property="og:description" content="Calculate and analyze your cycling power-to-weight ratio for performance optimization">
+    <meta property="og:image" content="https://runbikecalc.com/images/power-weight-ratio-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/power-to-weight-ratio-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Power-to-Weight Ratio Calculator">
+    <meta name="twitter:description" content="Calculate watts per kg for cycling performance">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/power-weight-ratio-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Power-to-Weight Ratio Calculator",
+        "url": "https://runbikecalc.com/power-to-weight-ratio-calculator",
+        "description": "Calculate and analyze cycling power-to-weight ratio for performance assessment",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link font-semibold text-primary">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item font-semibold text-primary">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Cycling Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Power-to-Weight Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Power-to-Weight Ratio Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate your cycling power-to-weight ratio (watts per kg), compare with performance benchmarks, and analyze your climbing and racing potential.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Power-to-Weight Ratio</h2>
+                    
+                    <!-- Calculation tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8">
+                                <button class="calc-tab active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium" data-calc="basic">
+                                    Basic Calculator
+                                </button>
+                                <button class="calc-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-calc="advanced">
+                                    Advanced Analysis
+                                </button>
+                                <button class="calc-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-calc="zones">
+                                    Power Zones
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                    <form id="power-weight-form" class="space-y-6">
+                        <!-- Basic calculation fields -->
+                        <div id="basic-fields" class="calc-fields">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="power" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Power Output (Watts) *
+                                    </label>
+                                    <input type="number" 
+                                           id="power" 
+                                           name="power" 
+                                           class="calc-input-number" 
+                                           placeholder="250"
+                                           required
+                                           min="50"
+                                           max="800"
+                                           step="5">
+                                    <p class="text-sm text-gray-600 mt-1">Your power output in watts</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Body Weight *
+                                    </label>
+                                    <input type="number" 
+                                           id="weight" 
+                                           name="weight" 
+                                           class="calc-input-number" 
+                                           placeholder="70"
+                                           required
+                                           min="40"
+                                           max="150"
+                                           step="0.5">
+                                    <p class="text-sm text-gray-600 mt-1">Your weight in kilograms</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="weightUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Weight Unit
+                                </label>
+                                <select id="weightUnit" name="weightUnit" class="calc-input-number text-left">
+                                    <option value="kg">Kilograms (kg)</option>
+                                    <option value="lbs">Pounds (lbs)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your preferred unit</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Advanced analysis fields -->
+                        <div id="advanced-fields" class="calc-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="ftp" class="block text-sm font-medium text-gray-700 mb-2">
+                                        FTP (Watts) *
+                                    </label>
+                                    <input type="number" 
+                                           id="ftp" 
+                                           name="ftp" 
+                                           class="calc-input-number" 
+                                           placeholder="275"
+                                           min="100"
+                                           max="600"
+                                           step="5">
+                                    <p class="text-sm text-gray-600 mt-1">Functional Threshold Power</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="advWeight" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Body Weight *
+                                    </label>
+                                    <input type="number" 
+                                           id="advWeight" 
+                                           name="advWeight" 
+                                           class="calc-input-number" 
+                                           placeholder="70"
+                                           min="40"
+                                           max="150"
+                                           step="0.5">
+                                    <p class="text-sm text-gray-600 mt-1">Your weight in kg</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="maxPower" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Peak Power (5s) - Optional
+                                    </label>
+                                    <input type="number" 
+                                           id="maxPower" 
+                                           name="maxPower" 
+                                           class="calc-input-number" 
+                                           placeholder="800"
+                                           min="200"
+                                           max="2000"
+                                           step="10">
+                                    <p class="text-sm text-gray-600 mt-1">Maximum 5-second power</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="vo2MaxPower" class="block text-sm font-medium text-gray-700 mb-2">
+                                        VO2 Max Power (5min) - Optional
+                                    </label>
+                                    <input type="number" 
+                                           id="vo2MaxPower" 
+                                           name="vo2MaxPower" 
+                                           class="calc-input-number" 
+                                           placeholder="320"
+                                           min="150"
+                                           max="700"
+                                           step="5">
+                                    <p class="text-sm text-gray-600 mt-1">5-minute maximum power</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Power zones fields -->
+                        <div id="zones-fields" class="calc-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="zonesFTP" class="block text-sm font-medium text-gray-700 mb-2">
+                                        FTP (Watts) *
+                                    </label>
+                                    <input type="number" 
+                                           id="zonesFTP" 
+                                           name="zonesFTP" 
+                                           class="calc-input-number" 
+                                           placeholder="275"
+                                           min="100"
+                                           max="600"
+                                           step="5">
+                                    <p class="text-sm text-gray-600 mt-1">Functional Threshold Power</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="zonesWeight" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Body Weight *
+                                    </label>
+                                    <input type="number" 
+                                           id="zonesWeight" 
+                                           name="zonesWeight" 
+                                           class="calc-input-number" 
+                                           placeholder="70"
+                                           min="40"
+                                           max="150"
+                                           step="0.5">
+                                    <p class="text-sm text-gray-600 mt-1">Your weight in kg</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Power-to-Weight
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Performance benchmarks -->
+                <div class="calc-card mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Performance Benchmarks (W/kg)</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-3">Men</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-red-50 rounded">
+                                    <span>Recreational</span>
+                                    <span class="font-medium">2.0-3.0</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Trained</span>
+                                    <span class="font-medium">3.0-4.0</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-yellow-50 rounded">
+                                    <span>Competitive</span>
+                                    <span class="font-medium">4.0-5.0</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>Elite</span>
+                                    <span class="font-medium">5.0-6.0</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>World Class</span>
+                                    <span class="font-medium">6.0+</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-3">Women</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-red-50 rounded">
+                                    <span>Recreational</span>
+                                    <span class="font-medium">1.8-2.8</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Trained</span>
+                                    <span class="font-medium">2.8-3.6</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-yellow-50 rounded">
+                                    <span>Competitive</span>
+                                    <span class="font-medium">3.6-4.5</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>Elite</span>
+                                    <span class="font-medium">4.5-5.5</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>World Class</span>
+                                    <span class="font-medium">5.5+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Power-to-Weight Ratio</h2>
+                    <p>Power-to-weight ratio, measured in watts per kilogram (W/kg), is one of the most important metrics in cycling performance. It determines your ability to accelerate, climb hills, and compete at various levels of cycling.</p>
+                    
+                    <h3>Why Power-to-Weight Matters</h3>
+                    
+                    <h4>Climbing Performance</h4>
+                    <ul>
+                        <li><strong>Gravity Factor:</strong> Higher power-to-weight ratios overcome gravity more efficiently</li>
+                        <li><strong>Hill Climbing:</strong> Primary determinant of climbing speed and ability</li>
+                        <li><strong>Mountain Stages:</strong> Critical for success in mountainous terrain</li>
+                        <li><strong>Gradient Sensitivity:</strong> More important as gradients increase</li>
+                    </ul>
+                    
+                    <h4>Acceleration and Racing</h4>
+                    <ul>
+                        <li><strong>Quick Starts:</strong> Higher ratios enable faster acceleration</li>
+                        <li><strong>Breakaway Potential:</strong> Important for creating and maintaining gaps</li>
+                        <li><strong>Sprint Leadouts:</strong> Helps in positioning for final sprint</li>
+                        <li><strong>Repeated Efforts:</strong> Crucial for criteriums and punchy courses</li>
+                    </ul>
+                    
+                    <h3>Factors Affecting Power-to-Weight</h3>
+                    
+                    <h4>Power Development</h4>
+                    <ul>
+                        <li><strong>Training Adaptations:</strong> Systematic training increases power output</li>
+                        <li><strong>Muscle Fiber Types:</strong> Genetic factors influence maximum power potential</li>
+                        <li><strong>Neuromuscular Efficiency:</strong> Better coordination improves power transfer</li>
+                        <li><strong>Cardiovascular Fitness:</strong> Heart and lungs support sustained power</li>
+                    </ul>
+                    
+                    <h4>Weight Management</h4>
+                    <ul>
+                        <li><strong>Body Composition:</strong> Higher muscle-to-fat ratio improves performance</li>
+                        <li><strong>Optimal Weight:</strong> Balance between power and weight for best ratio</li>
+                        <li><strong>Seasonal Variation:</strong> Weight often fluctuates throughout the year</li>
+                        <li><strong>Health Considerations:</strong> Extreme weight loss can reduce power</li>
+                    </ul>
+                    
+                    <h3>Training to Improve Power-to-Weight</h3>
+                    
+                    <h4>Power Development Strategies</h4>
+                    <ul>
+                        <li><strong>Threshold Training:</strong> Improve FTP through sustained efforts</li>
+                        <li><strong>VO2 Max Intervals:</strong> 3-8 minute high-intensity efforts</li>
+                        <li><strong>Neuromuscular Power:</strong> Short sprints and explosive efforts</li>
+                        <li><strong>Strength Training:</strong> Gym work to build muscle power</li>
+                    </ul>
+                    
+                    <h4>Weight Management Approaches</h4>
+                    <ul>
+                        <li><strong>Gradual Loss:</strong> Slow, sustainable weight reduction</li>
+                        <li><strong>Nutrition Timing:</strong> Fuel training while managing overall intake</li>
+                        <li><strong>Body Composition:</strong> Focus on maintaining muscle mass</li>
+                        <li><strong>Professional Guidance:</strong> Work with sports nutritionist</li>
+                    </ul>
+                    
+                    <h3>Power-to-Weight in Different Cycling Disciplines</h3>
+                    
+                    <h4>Road Racing</h4>
+                    <ul>
+                        <li><strong>General Classification:</strong> 5.5+ W/kg for Grand Tour contention</li>
+                        <li><strong>Climbing Specialists:</strong> 6.0+ W/kg for mountain stage wins</li>
+                        <li><strong>All-Rounders:</strong> 5.0-5.5 W/kg with good absolute power</li>
+                        <li><strong>Domestiques:</strong> 4.5-5.5 W/kg depending on role</li>
+                    </ul>
+                    
+                    <h4>Time Trialing</h4>
+                    <ul>
+                        <li><strong>Flat Courses:</strong> Absolute power more important than W/kg</li>
+                        <li><strong>Hilly Courses:</strong> Power-to-weight becomes more critical</li>
+                        <li><strong>Mountain TTs:</strong> Climbing power-to-weight is decisive</li>
+                        <li><strong>Aerodynamics:</strong> Can partially offset lower power-to-weight</li>
+                    </ul>
+                    
+                    <h4>Track Cycling</h4>
+                    <ul>
+                        <li><strong>Sprint Events:</strong> Peak power more important than sustained W/kg</li>
+                        <li><strong>Endurance Events:</strong> Threshold power-to-weight crucial</li>
+                        <li><strong>Pursuit:</strong> High sustained power-to-weight needed</li>
+                        <li><strong>Omnium:</strong> Balanced power-to-weight across disciplines</li>
+                    </ul>
+                    
+                    <h4>Mountain Biking</h4>
+                    <ul>
+                        <li><strong>Cross-Country:</strong> 4.5-5.5 W/kg for elite competition</li>
+                        <li><strong>Enduro:</strong> Power-to-weight for climbs, absolute power for descents</li>
+                        <li><strong>Downhill:</strong> Less critical, technique and bike handling dominate</li>
+                        <li><strong>Marathon:</strong> Sustained power-to-weight for long climbs</li>
+                    </ul>
+                    
+                    <h3>Measuring and Testing Power-to-Weight</h3>
+                    
+                    <h4>Power Measurement</h4>
+                    <ul>
+                        <li><strong>Power Meters:</strong> Crank, pedal, or hub-based systems</li>
+                        <li><strong>Smart Trainers:</strong> Indoor power measurement and training</li>
+                        <li><strong>Laboratory Testing:</strong> Precise measurement in controlled conditions</li>
+                        <li><strong>Field Testing:</strong> Functional threshold power tests</li>
+                    </ul>
+                    
+                    <h4>Weight Tracking</h4>
+                    <ul>
+                        <li><strong>Consistent Timing:</strong> Weigh at same time daily</li>
+                        <li><strong>Body Composition:</strong> Consider muscle vs fat changes</li>
+                        <li><strong>Hydration Status:</strong> Account for fluid fluctuations</li>
+                        <li><strong>Long-term Trends:</strong> Focus on patterns, not daily changes</li>
+                    </ul>
+                    
+                    <h3>Limitations and Considerations</h3>
+                    
+                    <h4>When Power-to-Weight Isn't Everything</h4>
+                    <ul>
+                        <li><strong>Flat Terrain:</strong> Absolute power and aerodynamics matter more</li>
+                        <li><strong>Sprinting:</strong> Peak power output often more important</li>
+                        <li><strong>Technical Skills:</strong> Bike handling can overcome power deficits</li>
+                        <li><strong>Tactics:</strong> Smart racing can beat superior power-to-weight</li>
+                    </ul>
+                    
+                    <h4>Health and Safety</h4>
+                    <ul>
+                        <li><strong>Minimum Weight:</strong> Don't compromise health for power-to-weight</li>
+                        <li><strong>Eating Disorders:</strong> Be aware of unhealthy weight loss practices</li>
+                        <li><strong>Performance Plateaus:</strong> Extreme approaches may reduce power</li>
+                        <li><strong>Recovery:</strong> Adequate nutrition needed for training adaptations</li>
+                    </ul>
+                    
+                    <h3>Age and Gender Considerations</h3>
+                    
+                    <h4>Age-Related Changes</h4>
+                    <ul>
+                        <li><strong>Power Decline:</strong> Gradual decrease with age, starting around 30</li>
+                        <li><strong>Weight Changes:</strong> Metabolism and body composition shifts</li>
+                        <li><strong>Training Response:</strong> Adaptation may slow with age</li>
+                        <li><strong>Realistic Goals:</strong> Adjust expectations for age category</li>
+                    </ul>
+                    
+                    <h4>Gender Differences</h4>
+                    <ul>
+                        <li><strong>Absolute Power:</strong> Males typically have higher absolute power</li>
+                        <li><strong>Body Composition:</strong> Different muscle mass and fat distribution</li>
+                        <li><strong>Relative Performance:</strong> Power-to-weight helps normalize differences</li>
+                        <li><strong>Training Principles:</strong> Same methods apply regardless of gender</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Performance levels -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Performance Levels</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Recreational</span>
+                            <span class="font-medium">2.0-3.0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Trained</span>
+                            <span class="font-medium">3.0-4.0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Competitive</span>
+                            <span class="font-medium">4.0-5.0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Elite</span>
+                            <span class="font-medium">5.0-6.0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>World Class</span>
+                            <span class="font-medium">6.0+ W/kg</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Climbing speeds -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Climbing Speed</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>3.0 W/kg</span>
+                            <span class="font-medium">12 km/h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>4.0 W/kg</span>
+                            <span class="font-medium">16 km/h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>5.0 W/kg</span>
+                            <span class="font-medium">20 km/h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>6.0 W/kg</span>
+                            <span class="font-medium">24 km/h</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2">Approximate speeds on 7% gradient</p>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/ftp-calculator.html" class="text-primary hover:underline">FTP Calculator</a></li>
+                        <li><a href="/watts-to-calories-calculator.html" class="text-primary hover:underline">Watts-to-Calories Calculator</a></li>
+                        <li><a href="/cadence-speed-calculator.html" class="text-primary hover:underline">Cadence-Speed Calculator</a></li>
+                        <li><a href="/bike-gearing-calculator.html" class="text-primary hover:underline">Bike Gearing Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Cycling Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/bike-gearing-calculator.html" class="hover:text-white">Bike Gearing</a></li>
+                        <li><a href="/cadence-speed-calculator.html" class="hover:text-white">Cadence-Speed</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Tab functionality
+        document.querySelectorAll('.calc-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const calc = this.dataset.calc;
+                
+                // Update active tab
+                document.querySelectorAll('.calc-tab').forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                this.classList.add('active', 'border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500');
+                
+                // Show/hide calc fields
+                document.querySelectorAll('.calc-fields').forEach(field => {
+                    field.classList.add('hidden');
+                });
+                document.getElementById(calc + '-fields').classList.remove('hidden');
+                
+                // Update required fields
+                calculator.updateRequiredFields(calc);
+            });
+        });
+        
+        // Power-to-Weight Calculator implementation
+        class PowerToWeightCalculator extends Calculator {
+            constructor(formId, resultId) {
+                super(formId, resultId);
+                this.currentCalc = 'basic';
+            }
+            
+            updateRequiredFields(calc) {
+                this.currentCalc = calc;
+                
+                // Clear all required attributes
+                this.form.querySelectorAll('input').forEach(field => {
+                    field.required = false;
+                });
+                
+                // Set required fields based on calculation type
+                if (calc === 'basic') {
+                    document.getElementById('power').required = true;
+                    document.getElementById('weight').required = true;
+                } else if (calc === 'advanced') {
+                    document.getElementById('ftp').required = true;
+                    document.getElementById('advWeight').required = true;
+                } else if (calc === 'zones') {
+                    document.getElementById('zonesFTP').required = true;
+                    document.getElementById('zonesWeight').required = true;
+                }
+            }
+            
+            calculate() {
+                if (this.currentCalc === 'basic') {
+                    this.calculateBasic();
+                } else if (this.currentCalc === 'advanced') {
+                    this.calculateAdvanced();
+                } else if (this.currentCalc === 'zones') {
+                    this.calculateZones();
+                }
+                
+                this.saveValues();
+            }
+            
+            calculateBasic() {
+                const power = this.getInputValue('power');
+                const weight = this.getInputValue('weight');
+                const weightUnit = this.form.querySelector('[name="weightUnit"]').value;
+                
+                if (!power || !weight) {
+                    this.displayError('Please enter power and weight.');
+                    return;
+                }
+                
+                // Convert weight to kg if needed
+                const weightKg = weightUnit === 'kg' ? weight : weight * 0.453592;
+                
+                // Calculate power-to-weight ratio
+                const powerToWeight = power / weightKg;
+                
+                // Analyze performance level
+                const analysis = this.analyzePerformanceLevel(powerToWeight);
+                
+                // Generate climbing estimates
+                const climbingSpeed = this.estimateClimbingSpeed(powerToWeight);
+                
+                // Generate recommendations
+                const recommendations = this.generateRecommendations(powerToWeight, power, weightKg);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Power-to-Weight Analysis</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Power-to-Weight Ratio</div>
+                            <div class="text-4xl font-bold">${powerToWeight.toFixed(2)}</div>
+                            <div class="text-lg opacity-90 mt-2">watts per kilogram</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Power Output</h4>
+                                <div class="text-2xl font-bold">${power}W</div>
+                                <div class="text-sm opacity-90">Total power</div>
+                            </div>
+                            
+                            <div class="bg-accent text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Body Weight</h4>
+                                <div class="text-2xl font-bold">${weightKg.toFixed(1)} kg</div>
+                                <div class="text-sm opacity-90">${weight} ${weightUnit}</div>
+                            </div>
+                            
+                            <div class="bg-green-600 text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Performance Level</h4>
+                                <div class="text-lg font-bold">${analysis.level}</div>
+                                <div class="text-sm opacity-90">${analysis.category}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-${analysis.color}-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-${analysis.color}-800 mb-2">Performance Analysis</h4>
+                            <div class="text-sm text-${analysis.color}-700 space-y-1">
+                                <p>• <strong>Level:</strong> ${analysis.level} (${powerToWeight.toFixed(2)} W/kg)</p>
+                                <p>• <strong>Classification:</strong> ${analysis.description}</p>
+                                <p>• <strong>Climbing Ability:</strong> ${climbingSpeed.description}</p>
+                                <p>• <strong>Estimated 7% Climb Speed:</strong> ${climbingSpeed.speed.toFixed(1)} km/h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Training Recommendations</h4>
+                            <div class="text-sm text-blue-700 space-y-1">
+                                ${recommendations}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My power-to-weight ratio: ${powerToWeight.toFixed(2)} W/kg (${analysis.level} level)')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            calculateAdvanced() {
+                const ftp = this.getInputValue('ftp');
+                const weight = this.getInputValue('advWeight');
+                const maxPower = this.getInputValue('maxPower');
+                const vo2MaxPower = this.getInputValue('vo2MaxPower');
+                
+                if (!ftp || !weight) {
+                    this.displayError('Please enter FTP and weight.');
+                    return;
+                }
+                
+                // Calculate ratios
+                const ftpRatio = ftp / weight;
+                const maxRatio = maxPower ? maxPower / weight : null;
+                const vo2Ratio = vo2MaxPower ? vo2MaxPower / weight : null;
+                
+                // Analyze each power duration
+                const ftpAnalysis = this.analyzePerformanceLevel(ftpRatio);
+                const powerProfile = this.generatePowerProfile(ftpRatio, maxRatio, vo2Ratio);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Advanced Power Analysis</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">FTP Power-to-Weight</div>
+                            <div class="text-4xl font-bold">${ftpRatio.toFixed(2)}</div>
+                            <div class="text-lg opacity-90 mt-2">W/kg threshold power</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">FTP</h4>
+                                <div class="text-2xl font-bold">${ftp}W</div>
+                                <div class="text-sm opacity-90">${ftpRatio.toFixed(2)} W/kg</div>
+                            </div>
+                            
+                            ${maxPower ? `
+                            <div class="bg-accent text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Peak Power</h4>
+                                <div class="text-2xl font-bold">${maxPower}W</div>
+                                <div class="text-sm opacity-90">${maxRatio.toFixed(2)} W/kg</div>
+                            </div>
+                            ` : ''}
+                            
+                            ${vo2MaxPower ? `
+                            <div class="bg-green-600 text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">VO2 Max Power</h4>
+                                <div class="text-2xl font-bold">${vo2MaxPower}W</div>
+                                <div class="text-sm opacity-90">${vo2Ratio.toFixed(2)} W/kg</div>
+                            </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Power Profile Analysis</h4>
+                            <div class="text-sm space-y-1">
+                                ${powerProfile}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My FTP: ${ftpRatio.toFixed(2)} W/kg (${ftpAnalysis.level} level)')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            calculateZones() {
+                const ftp = this.getInputValue('zonesFTP');
+                const weight = this.getInputValue('zonesWeight');
+                
+                if (!ftp || !weight) {
+                    this.displayError('Please enter FTP and weight.');
+                    return;
+                }
+                
+                const ftpRatio = ftp / weight;
+                const zones = this.generatePowerZones(ftp, ftpRatio);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Power Training Zones</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">FTP Power-to-Weight</div>
+                            <div class="text-4xl font-bold">${ftpRatio.toFixed(2)}</div>
+                            <div class="text-lg opacity-90 mt-2">W/kg (${ftp}W total)</div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            ${zones}
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My power zones based on ${ftp}W FTP (${ftpRatio.toFixed(2)} W/kg)')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            analyzePerformanceLevel(ratio) {
+                if (ratio < 2.5) {
+                    return {
+                        level: 'Recreational',
+                        category: 'Beginner',
+                        color: 'red',
+                        description: 'Starting cyclist, focus on building base fitness'
+                    };
+                } else if (ratio < 3.5) {
+                    return {
+                        level: 'Trained',
+                        category: 'Club Level',
+                        color: 'orange',
+                        description: 'Regular training, local group rides and events'
+                    };
+                } else if (ratio < 4.5) {
+                    return {
+                        level: 'Competitive',
+                        category: 'Racing',
+                        color: 'yellow',
+                        description: 'Competitive racing, regional level performance'
+                    };
+                } else if (ratio < 5.5) {
+                    return {
+                        level: 'Elite',
+                        category: 'High Level',
+                        color: 'green',
+                        description: 'Elite racing, national level competition'
+                    };
+                } else {
+                    return {
+                        level: 'World Class',
+                        category: 'Professional',
+                        color: 'blue',
+                        description: 'Professional racing, international competition'
+                    };
+                }
+            }
+            
+            estimateClimbingSpeed(ratio) {
+                // Rough estimate for 7% gradient climbing speed
+                const speed = ratio * 4; // Very approximate
+                
+                if (speed < 12) {
+                    return {
+                        speed: speed,
+                        description: 'Slow climbing pace, focus on endurance'
+                    };
+                } else if (speed < 16) {
+                    return {
+                        speed: speed,
+                        description: 'Moderate climbing pace, good for recreational riding'
+                    };
+                } else if (speed < 20) {
+                    return {
+                        speed: speed,
+                        description: 'Good climbing pace, can handle most hills well'
+                    };
+                } else if (speed < 24) {
+                    return {
+                        speed: speed,
+                        description: 'Strong climbing pace, competitive level'
+                    };
+                } else {
+                    return {
+                        speed: speed,
+                        description: 'Excellent climbing pace, elite performance'
+                    };
+                }
+            }
+            
+            generateRecommendations(ratio, power, weight) {
+                const recommendations = [];
+                
+                if (ratio < 3.0) {
+                    recommendations.push('• Focus on building aerobic base with long, steady rides');
+                    recommendations.push('• Add 2-3 threshold training sessions per week');
+                    recommendations.push('• Consider weight management if appropriate');
+                } else if (ratio < 4.0) {
+                    recommendations.push('• Add VO2 max intervals to improve peak power');
+                    recommendations.push('• Include climbing-specific training');
+                    recommendations.push('• Work on both power development and weight optimization');
+                } else if (ratio < 5.0) {
+                    recommendations.push('• Focus on race-specific training intensities');
+                    recommendations.push('• Add neuromuscular power work for sprinting');
+                    recommendations.push('• Fine-tune power and weight for optimal performance');
+                } else {
+                    recommendations.push('• Maintain current fitness with varied training');
+                    recommendations.push('• Focus on race tactics and positioning');
+                    recommendations.push('• Consider specialization in climbing or time trials');
+                }
+                
+                if (power < 200) {
+                    recommendations.push('• Build absolute power through strength training');
+                } else if (power > 350) {
+                    recommendations.push('• Excellent absolute power - good for sprinting and flats');
+                }
+                
+                recommendations.push('• Monitor both power and weight trends over time');
+                recommendations.push('• Work with coach to optimize training for your goals');
+                
+                return recommendations.join('\\n');
+            }
+            
+            generatePowerProfile(ftpRatio, maxRatio, vo2Ratio) {
+                const profile = [];
+                
+                profile.push(`• <strong>FTP (1 hour):</strong> ${ftpRatio.toFixed(2)} W/kg`);
+                
+                if (vo2Ratio) {
+                    profile.push(`• <strong>VO2 Max (5 min):</strong> ${vo2Ratio.toFixed(2)} W/kg`);
+                    const vo2Percentage = ((vo2Ratio / ftpRatio - 1) * 100);
+                    profile.push(`• <strong>VO2/FTP Ratio:</strong> ${(vo2Ratio/ftpRatio).toFixed(2)} (${vo2Percentage > 0 ? '+' : ''}${vo2Percentage.toFixed(0)}%)`);
+                }
+                
+                if (maxRatio) {
+                    profile.push(`• <strong>Peak Power (5 sec):</strong> ${maxRatio.toFixed(2)} W/kg`);
+                    const maxPercentage = ((maxRatio / ftpRatio - 1) * 100);
+                    profile.push(`• <strong>Peak/FTP Ratio:</strong> ${(maxRatio/ftpRatio).toFixed(2)} (${maxPercentage > 0 ? '+' : ''}${maxPercentage.toFixed(0)}%)`);
+                }
+                
+                // Analyze strengths
+                if (vo2Ratio && maxRatio) {
+                    const vo2Strong = vo2Ratio / ftpRatio > 1.15;
+                    const maxStrong = maxRatio / ftpRatio > 2.5;
+                    
+                    if (vo2Strong && maxStrong) {
+                        profile.push('• <strong>Profile:</strong> Excellent across all durations - versatile rider');
+                    } else if (vo2Strong) {
+                        profile.push('• <strong>Profile:</strong> Strong VO2 max - good for climbing and breakaways');
+                    } else if (maxStrong) {
+                        profile.push('• <strong>Profile:</strong> High peak power - good for sprinting');
+                    } else {
+                        profile.push('• <strong>Profile:</strong> Time trial specialist - strong sustained power');
+                    }
+                }
+                
+                return profile.join('\\n');
+            }
+            
+            generatePowerZones(ftp, ftpRatio) {
+                const zones = [
+                    { name: 'Zone 1 - Active Recovery', min: 0, max: 55, color: 'gray', description: 'Easy spinning, recovery rides' },
+                    { name: 'Zone 2 - Endurance', min: 56, max: 75, color: 'blue', description: 'Aerobic base building, long rides' },
+                    { name: 'Zone 3 - Tempo', min: 76, max: 90, color: 'green', description: 'Comfortable hard, group ride pace' },
+                    { name: 'Zone 4 - Lactate Threshold', min: 91, max: 105, color: 'yellow', description: 'Threshold intervals, time trial pace' },
+                    { name: 'Zone 5 - VO2 Max', min: 106, max: 120, color: 'orange', description: 'Hard intervals, 3-8 minute efforts' },
+                    { name: 'Zone 6 - Anaerobic Capacity', min: 121, max: 150, color: 'red', description: 'Very hard, 30 seconds to 2 minutes' },
+                    { name: 'Zone 7 - Neuromuscular Power', min: 151, max: 300, color: 'purple', description: 'All-out sprints, <15 seconds' }
+                ];
+                
+                return zones.map(zone => {
+                    const minWatts = Math.round(ftp * zone.min / 100);
+                    const maxWatts = Math.round(ftp * zone.max / 100);
+                    const minRatio = (ftpRatio * zone.min / 100);
+                    const maxRatio = (ftpRatio * zone.max / 100);
+                    
+                    return `
+                        <div class="bg-${zone.color}-50 border border-${zone.color}-200 p-4 rounded-lg">
+                            <div class="flex justify-between items-start mb-2">
+                                <h5 class="font-semibold text-${zone.color}-800">${zone.name}</h5>
+                                <span class="text-sm font-medium text-${zone.color}-700">${zone.min}-${zone.max}%</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-${zone.color}-600">Power:</span>
+                                    <span class="font-medium text-${zone.color}-800">${minWatts}-${maxWatts}W</span>
+                                </div>
+                                <div>
+                                    <span class="text-${zone.color}-600">W/kg:</span>
+                                    <span class="font-medium text-${zone.color}-800">${minRatio.toFixed(1)}-${maxRatio.toFixed(1)}</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-${zone.color}-600 mt-2">${zone.description}</p>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new PowerToWeightCalculator('power-weight-form', 'results');
+    </script>
+</body>
+</html>

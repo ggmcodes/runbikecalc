@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadence Speed Calculator - Cycling RPM to Speed & Power Analysis | RunBikeCalc</title>
+    <meta name="description" content="Free cadence speed calculator for cycling. Calculate speed from RPM, analyze optimal cadence, and find your ideal pedaling rate for maximum efficiency and power.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/cadence-speed-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cadence Speed Calculator - RPM to Speed Analysis">
+    <meta property="og:description" content="Calculate cycling speed from cadence and analyze optimal pedaling rates">
+    <meta property="og:image" content="https://runbikecalc.com/images/cadence-speed-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/cadence-speed-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cadence Speed Calculator">
+    <meta name="twitter:description" content="Calculate speed from cycling cadence">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/cadence-speed-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Cadence Speed Calculator",
+        "url": "https://runbikecalc.com/cadence-speed-calculator",
+        "description": "Calculate cycling speed from cadence and analyze optimal pedaling rates for performance",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    
+    <!-- Google AdSense (placeholder - replace with actual code) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link font-semibold text-primary">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item font-semibold text-primary">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Cycling Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Cadence Speed Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Cadence Speed Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate cycling speed from cadence (RPM), analyze optimal pedaling rates, and find your ideal cadence for maximum efficiency, power, and performance.</p>
+        
+        <!-- Ad placement - Top of content (desktop only) -->
+        <div class="hidden md:block mb-8 text-center">
+            <!-- AdSense 728x90 Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Speed from Cadence</h2>
+                    
+                    <form id="cadence-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="cadence" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Cadence (RPM) *
+                                </label>
+                                <input type="number" 
+                                       id="cadence" 
+                                       name="cadence" 
+                                       class="calc-input-number" 
+                                       placeholder="90"
+                                       required
+                                       min="30"
+                                       max="200"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Pedaling rate in revolutions per minute</p>
+                            </div>
+                            
+                            <div>
+                                <label for="chainring" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Chainring Teeth *
+                                </label>
+                                <input type="number" 
+                                       id="chainring" 
+                                       name="chainring" 
+                                       class="calc-input-number" 
+                                       placeholder="50"
+                                       required
+                                       min="20"
+                                       max="60"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Front chainring teeth</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="cassette" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Cassette Teeth *
+                                </label>
+                                <input type="number" 
+                                       id="cassette" 
+                                       name="cassette" 
+                                       class="calc-input-number" 
+                                       placeholder="15"
+                                       required
+                                       min="8"
+                                       max="50"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Rear cassette/cog teeth</p>
+                            </div>
+                            
+                            <div>
+                                <label for="wheelSize" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Wheel Size
+                                </label>
+                                <select id="wheelSize" name="wheelSize" class="calc-input-number text-left">
+                                    <option value="2096">700c (23mm tire) - 2096mm</option>
+                                    <option value="2105">700c (25mm tire) - 2105mm</option>
+                                    <option value="2136">700c (28mm tire) - 2136mm</option>
+                                    <option value="2146">700c (32mm tire) - 2146mm</option>
+                                    <option value="2070">650b (27.5") - 2070mm</option>
+                                    <option value="2055">26" MTB - 2055mm</option>
+                                    <option value="2133">29" MTB - 2133mm</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Wheel circumference</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="power" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Power Output (optional)
+                                </label>
+                                <input type="number" 
+                                       id="power" 
+                                       name="power" 
+                                       class="calc-input-number" 
+                                       placeholder="250"
+                                       min="50"
+                                       max="800"
+                                       step="5">
+                                <p class="text-sm text-gray-600 mt-1">Power in watts for efficiency analysis</p>
+                            </div>
+                            
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight (optional)
+                                </label>
+                                <input type="number" 
+                                       id="weight" 
+                                       name="weight" 
+                                       class="calc-input-number" 
+                                       placeholder="70"
+                                       min="40"
+                                       max="150"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Weight in kg for power analysis</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Speed & Analysis
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Cadence zones reference -->
+                <div class="calc-card mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Cadence Training Zones</h3>
+                    <div class="space-y-4">
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-red-800">40-60 RPM</span>
+                                <span class="text-sm text-red-600">Power/Strength</span>
+                            </div>
+                            <p class="text-xs text-red-600 mt-1">Low cadence, high force - builds strength</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-orange-800">60-80 RPM</span>
+                                <span class="text-sm text-orange-600">Endurance</span>
+                            </div>
+                            <p class="text-xs text-orange-600 mt-1">Moderate cadence for long rides</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-green-800">80-100 RPM</span>
+                                <span class="text-sm text-green-600">Optimal</span>
+                            </div>
+                            <p class="text-xs text-green-600 mt-1">Most efficient for road cycling</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-blue-800">100-120 RPM</span>
+                                <span class="text-sm text-blue-600">High Cadence</span>
+                            </div>
+                            <p class="text-xs text-blue-600 mt-1">Sprint training and neuromuscular power</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-purple-800">120+ RPM</span>
+                                <span class="text-sm text-purple-600">Sprint</span>
+                            </div>
+                            <p class="text-xs text-purple-600 mt-1">Elite sprinting and track racing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Cycling Cadence</h2>
+                    <p>Cadence, measured in revolutions per minute (RPM), is the rate at which you pedal. Finding your optimal cadence is crucial for maximizing efficiency, power output, and reducing fatigue during cycling.</p>
+                    
+                    <h3>The Science of Cadence</h3>
+                    
+                    <h4>Physiological Factors</h4>
+                    <ul>
+                        <li><strong>Muscle Fiber Types:</strong> Fast-twitch fibers prefer higher cadence, slow-twitch prefer lower</li>
+                        <li><strong>Cardiovascular Load:</strong> Higher cadence increases heart rate and oxygen consumption</li>
+                        <li><strong>Muscular Load:</strong> Lower cadence increases muscular force and fatigue</li>
+                        <li><strong>Metabolic Efficiency:</strong> Optimal cadence varies based on power output and duration</li>
+                    </ul>
+                    
+                    <h4>Biomechanical Considerations</h4>
+                    <ul>
+                        <li><strong>Force Application:</strong> Lower cadence = higher force per pedal stroke</li>
+                        <li><strong>Muscle Recruitment:</strong> Different cadences recruit different muscle groups</li>
+                        <li><strong>Joint Stress:</strong> Very low cadence can increase knee and hip stress</li>
+                        <li><strong>Pedaling Mechanics:</strong> Higher cadence requires better coordination</li>
+                    </ul>
+                    
+                    <h3>Optimal Cadence Ranges</h3>
+                    
+                    <h4>Road Cycling</h4>
+                    <ul>
+                        <li><strong>Recreational:</strong> 80-90 RPM for comfort and efficiency</li>
+                        <li><strong>Competitive:</strong> 90-100 RPM for racing and group rides</li>
+                        <li><strong>Time Trials:</strong> 85-95 RPM for sustained power</li>
+                        <li><strong>Climbing:</strong> 70-85 RPM depending on gradient and power</li>
+                    </ul>
+                    
+                    <h4>Mountain Biking</h4>
+                    <ul>
+                        <li><strong>Cross-Country:</strong> 80-95 RPM on smooth terrain</li>
+                        <li><strong>Technical Climbing:</strong> 60-80 RPM for control and torque</li>
+                        <li><strong>Descending:</strong> Variable, often lower for control</li>
+                        <li><strong>Enduro/Trail:</strong> 70-90 RPM depending on terrain</li>
+                    </ul>
+                    
+                    <h4>Track Cycling</h4>
+                    <ul>
+                        <li><strong>Endurance Events:</strong> 95-110 RPM</li>
+                        <li><strong>Sprint Events:</strong> 120-180+ RPM</li>
+                        <li><strong>Pursuit:</strong> 100-115 RPM</li>
+                        <li><strong>Keirin:</strong> Variable, 90-160+ RPM</li>
+                    </ul>
+                    
+                    <h3>Factors Affecting Optimal Cadence</h3>
+                    
+                    <h4>Individual Factors</h4>
+                    <ul>
+                        <li><strong>Fitness Level:</strong> Trained cyclists can sustain higher cadences</li>
+                        <li><strong>Leg Length:</strong> Longer legs may prefer slightly lower cadence</li>
+                        <li><strong>Muscle Fiber Composition:</strong> Genetic predisposition affects preference</li>
+                        <li><strong>Experience:</strong> Neuromuscular adaptation improves high-cadence efficiency</li>
+                    </ul>
+                    
+                    <h4>External Factors</h4>
+                    <ul>
+                        <li><strong>Power Output:</strong> Higher power often requires moderate cadence</li>
+                        <li><strong>Terrain:</strong> Hills, headwinds, and surface affect optimal cadence</li>
+                        <li><strong>Gearing:</strong> Available gear ratios constrain cadence choices</li>
+                        <li><strong>Duration:</strong> Longer efforts may require lower, more sustainable cadence</li>
+                    </ul>
+                    
+                    <h3>Cadence Training Methods</h3>
+                    
+                    <h4>High Cadence Training</h4>
+                    <ul>
+                        <li><strong>Spin-ups:</strong> 30-second intervals building to 120+ RPM</li>
+                        <li><strong>Fast Pedaling:</strong> 5-10 minute intervals at 100-110 RPM</li>
+                        <li><strong>Single-leg Drills:</strong> Improve pedaling smoothness</li>
+                        <li><strong>Fixed Gear Training:</strong> Forces consistent pedaling rhythm</li>
+                    </ul>
+                    
+                    <h4>Low Cadence Training</h4>
+                    <ul>
+                        <li><strong>Big Gear Intervals:</strong> 5-20 minutes at 60-70 RPM</li>
+                        <li><strong>Hill Repeats:</strong> Climbing at controlled low cadence</li>
+                        <li><strong>Strength Endurance:</strong> Sustained efforts at 70-80 RPM</li>
+                        <li><strong>Force Development:</strong> Short, high-force intervals</li>
+                    </ul>
+                    
+                    <h4>Variable Cadence Training</h4>
+                    <ul>
+                        <li><strong>Cadence Pyramids:</strong> Progressive increases and decreases</li>
+                        <li><strong>Gear Restriction:</strong> Maintain speed with limited gears</li>
+                        <li><strong>Race Simulation:</strong> Practice cadence changes for race conditions</li>
+                        <li><strong>Terrain Adaptation:</strong> Match cadence to gradient changes</li>
+                    </ul>
+                    
+                    <h3>Cadence and Power Relationship</h3>
+                    
+                    <h4>Power-Cadence Curve</h4>
+                    <ul>
+                        <li><strong>U-shaped Relationship:</strong> Efficiency peaks at moderate cadence</li>
+                        <li><strong>Individual Variation:</strong> Optimal point varies between cyclists</li>
+                        <li><strong>Power Dependency:</strong> Higher power outputs may shift optimal cadence</li>
+                        <li><strong>Training Effect:</strong> Optimal cadence can be modified through training</li>
+                    </ul>
+                    
+                    <h4>Efficiency Considerations</h4>
+                    <ul>
+                        <li><strong>Gross Efficiency:</strong> Total energy cost per unit of work</li>
+                        <li><strong>Delta Efficiency:</strong> Marginal efficiency at different power levels</li>
+                        <li><strong>Metabolic Cost:</strong> Oxygen consumption and lactate production</li>
+                        <li><strong>Mechanical Work:</strong> Force × velocity relationship</li>
+                    </ul>
+                    
+                    <h3>Technology and Cadence Monitoring</h3>
+                    
+                    <h4>Measurement Tools</h4>
+                    <ul>
+                        <li><strong>Cycling Computers:</strong> Real-time cadence display</li>
+                        <li><strong>Power Meters:</strong> Integrated cadence and power data</li>
+                        <li><strong>Smartphone Apps:</strong> Basic cadence tracking</li>
+                        <li><strong>Trainers:</strong> Indoor training with cadence feedback</li>
+                    </ul>
+                    
+                    <h4>Data Analysis</h4>
+                    <ul>
+                        <li><strong>Average Cadence:</strong> Overall session metrics</li>
+                        <li><strong>Cadence Distribution:</strong> Time spent in different zones</li>
+                        <li><strong>Power-Cadence Analysis:</strong> Efficiency at different RPMs</li>
+                        <li><strong>Trend Analysis:</strong> Changes over time and training phases</li>
+                    </ul>
+                    
+                    <h3>Cadence Adaptation Strategies</h3>
+                    
+                    <h4>Gradual Progression</h4>
+                    <ul>
+                        <li><strong>5 RPM Increments:</strong> Small, sustainable increases</li>
+                        <li><strong>Weekly Adaptation:</strong> Allow neuromuscular system to adapt</li>
+                        <li><strong>Mixed Training:</strong> Combine high and low cadence work</li>
+                        <li><strong>Consistency:</strong> Regular practice of target cadence</li>
+                    </ul>
+                    
+                    <h4>Common Mistakes</h4>
+                    <ul>
+                        <li><strong>Too Fast Too Soon:</strong> Jumping to very high cadences immediately</li>
+                        <li><strong>Ignoring Terrain:</strong> Not adapting cadence to conditions</li>
+                        <li><strong>Single Focus:</strong> Training only one cadence range</li>
+                        <li><strong>Poor Technique:</strong> Bouncing or inefficient movement at high RPM</li>
+                    </ul>
+                    
+                    <h3>Sport-Specific Cadence Applications</h3>
+                    
+                    <h4>Triathlon</h4>
+                    <ul>
+                        <li><strong>Draft-Legal:</strong> Higher cadence (95-105 RPM) for quick accelerations</li>
+                        <li><strong>Non-Draft:</strong> Moderate cadence (85-95 RPM) for efficiency</li>
+                        <li><strong>Run Preparation:</strong> Higher cadence may preserve running muscles</li>
+                        <li><strong>Bike-Run Transition:</strong> Practice race-specific cadence</li>
+                    </ul>
+                    
+                    <h4>Criterium Racing</h4>
+                    <ul>
+                        <li><strong>High Average:</strong> 95-105 RPM for repeated accelerations</li>
+                        <li><strong>Sprint Preparation:</strong> Ability to reach 130+ RPM</li>
+                        <li><strong>Cornering:</strong> Cadence control through turns</li>
+                        <li><strong>Pack Dynamics:</strong> Quick cadence adjustments</li>
+                    </ul>
+                    
+                    <h4>Gran Fondo/Sportive</h4>
+                    <ul>
+                        <li><strong>Sustainable:</strong> 80-90 RPM for long duration</li>
+                        <li><strong>Climbing Strategy:</strong> 70-85 RPM on long climbs</li>
+                        <li><strong>Energy Conservation:</strong> Avoid extremes of cadence</li>
+                        <li><strong>Comfort Focus:</strong> Maintain natural, comfortable rhythm</li>
+                    </ul>
+                </article>
+                
+                <!-- Mobile ad placement -->
+                <div class="md:hidden my-8 text-center">
+                    <!-- AdSense 300x250 Rectangle -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:250px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Desktop sidebar ad -->
+                <div class="hidden md:block mb-8 sticky top-24">
+                    <!-- AdSense 300x600 Half Page -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- Optimal cadence guide -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Optimal Cadence</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Beginner</span>
+                            <span class="font-medium">70-80 RPM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Recreational</span>
+                            <span class="font-medium">80-90 RPM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Competitive</span>
+                            <span class="font-medium">90-100 RPM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sprint</span>
+                            <span class="font-medium">120+ RPM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Power zones -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Power Analysis</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Recreational</span>
+                            <span class="font-medium">2-3 W/kg</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Trained</span>
+                            <span class="font-medium">3-4 W/kg</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Competitive</span>
+                            <span class="font-medium">4-5 W/kg</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Elite</span>
+                            <span class="font-medium">5+ W/kg</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/bike-gearing-calculator.html" class="text-primary hover:underline">Bike Gearing Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="text-primary hover:underline">Power-to-Weight Calculator</a></li>
+                        <li><a href="/ftp-calculator.html" class="text-primary hover:underline">FTP Calculator</a></li>
+                        <li><a href="/watts-to-calories-calculator.html" class="text-primary hover:underline">Watts-to-Calories Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Cycling Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cadence-speed-calculator.html" class="hover:text-white">Cadence-Speed</a></li>
+                        <li><a href="/bike-gearing-calculator.html" class="hover:text-white">Bike Gearing</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Cadence Speed Calculator implementation
+        class CadenceSpeedCalculator extends Calculator {
+            calculate() {
+                const cadence = this.getInputValue('cadence');
+                const chainring = this.getInputValue('chainring');
+                const cassette = this.getInputValue('cassette');
+                const wheelSize = parseInt(this.form.querySelector('[name="wheelSize"]').value);
+                const power = this.getInputValue('power');
+                const weight = this.getInputValue('weight');
+                
+                if (!cadence || !chainring || !cassette) {
+                    this.displayError('Please enter cadence, chainring, and cassette teeth.');
+                    return;
+                }
+                
+                // Calculate gear ratio and development
+                const gearRatio = chainring / cassette;
+                const developmentMM = gearRatio * wheelSize;
+                const developmentM = developmentMM / 1000;
+                
+                // Calculate speed
+                const speedKMH = (developmentMM * cadence * 60) / 1000000;
+                const speedMPH = speedKMH * 0.621371;
+                
+                // Analyze cadence
+                const cadenceAnalysis = this.analyzeCadence(cadence);
+                
+                // Generate power analysis if provided
+                const powerAnalysis = power && weight ? this.analyzePower(power, weight, speedKMH) : null;
+                
+                // Generate cadence recommendations
+                const recommendations = this.generateRecommendations(cadence, gearRatio, power);
+                
+                // Generate speed comparison table
+                const speedTable = this.generateSpeedTable(developmentMM, cadence);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Cadence Speed Analysis</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Your Speed</div>
+                            <div class="text-4xl font-bold">${speedKMH.toFixed(1)} km/h</div>
+                            <div class="text-lg opacity-90 mt-2">${speedMPH.toFixed(1)} mph at ${cadence} RPM</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Gear Ratio</h4>
+                                <div class="text-2xl font-bold">${gearRatio.toFixed(2)}</div>
+                                <div class="text-sm opacity-90">${chainring}T × ${cassette}T</div>
+                            </div>
+                            
+                            <div class="bg-accent text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Development</h4>
+                                <div class="text-2xl font-bold">${developmentM.toFixed(2)}m</div>
+                                <div class="text-sm opacity-90">per revolution</div>
+                            </div>
+                            
+                            ${powerAnalysis ? `
+                            <div class="bg-green-600 text-white p-4 rounded-lg text-center">
+                                <h4 class="font-semibold">Power/Weight</h4>
+                                <div class="text-2xl font-bold">${powerAnalysis.powerToWeight.toFixed(1)}</div>
+                                <div class="text-sm opacity-90">watts/kg</div>
+                            </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="bg-${cadenceAnalysis.color}-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-${cadenceAnalysis.color}-800 mb-2">Cadence Analysis</h4>
+                            <div class="text-sm text-${cadenceAnalysis.color}-700 space-y-1">
+                                <p>• <strong>Zone:</strong> ${cadenceAnalysis.zone} (${cadence} RPM)</p>
+                                <p>• <strong>Classification:</strong> ${cadenceAnalysis.description}</p>
+                                <p>• <strong>Application:</strong> ${cadenceAnalysis.application}</p>
+                                ${cadenceAnalysis.efficiency ? `<p>• <strong>Efficiency:</strong> ${cadenceAnalysis.efficiency}</p>` : ''}
+                            </div>
+                        </div>
+                        
+                        ${powerAnalysis ? `
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Power Analysis</h4>
+                            <div class="text-sm text-blue-700 space-y-1">
+                                <p>• <strong>Power Output:</strong> ${power}W</p>
+                                <p>• <strong>Power-to-Weight:</strong> ${powerAnalysis.powerToWeight.toFixed(1)} W/kg</p>
+                                <p>• <strong>Performance Level:</strong> ${powerAnalysis.level}</p>
+                                <p>• <strong>Estimated Speed:</strong> ${speedKMH.toFixed(1)} km/h (${speedMPH.toFixed(1)} mph)</p>
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Speed at Different Cadences</h4>
+                            <div class="text-sm">
+                                ${speedTable}
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Training Recommendations</h4>
+                            <div class="text-sm text-yellow-700 space-y-1">
+                                ${recommendations}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('${cadence} RPM = ${speedKMH.toFixed(1)} km/h with ${chainring}×${cassette} gearing')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                this.saveValues();
+            }
+            
+            analyzeCadence(cadence) {
+                if (cadence < 60) {
+                    return {
+                        zone: 'Power/Strength',
+                        color: 'red',
+                        description: 'Very low cadence, high force per pedal stroke',
+                        application: 'Strength training, climbing steep grades',
+                        efficiency: 'Less efficient for sustained efforts'
+                    };
+                } else if (cadence < 80) {
+                    return {
+                        zone: 'Endurance',
+                        color: 'orange',
+                        description: 'Moderate cadence, good for long rides',
+                        application: 'Long-distance cycling, comfortable cruising',
+                        efficiency: 'Good efficiency for recreational cycling'
+                    };
+                } else if (cadence < 100) {
+                    return {
+                        zone: 'Optimal',
+                        color: 'green',
+                        description: 'Ideal cadence for most road cycling',
+                        application: 'Racing, training, group rides',
+                        efficiency: 'Most efficient for competitive cycling'
+                    };
+                } else if (cadence < 120) {
+                    return {
+                        zone: 'High Cadence',
+                        color: 'blue',
+                        description: 'Fast pedaling, requires good technique',
+                        application: 'Sprint training, neuromuscular development',
+                        efficiency: 'Good for short, high-intensity efforts'
+                    };
+                } else {
+                    return {
+                        zone: 'Sprint',
+                        color: 'purple',
+                        description: 'Very high cadence for elite performance',
+                        application: 'Track sprinting, elite racing',
+                        efficiency: 'Specialized for maximum power output'
+                    };
+                }
+            }
+            
+            analyzePower(power, weight, speed) {
+                const powerToWeight = power / weight;
+                
+                let level;
+                if (powerToWeight < 2.5) {
+                    level = 'Recreational';
+                } else if (powerToWeight < 3.5) {
+                    level = 'Trained';
+                } else if (powerToWeight < 4.5) {
+                    level = 'Competitive';
+                } else if (powerToWeight < 5.5) {
+                    level = 'Elite';
+                } else {
+                    level = 'World Class';
+                }
+                
+                return {
+                    powerToWeight: powerToWeight,
+                    level: level
+                };
+            }
+            
+            generateRecommendations(cadence, gearRatio, power) {
+                const recommendations = [];
+                
+                if (cadence < 70) {
+                    recommendations.push('• Consider increasing cadence for better efficiency');
+                    recommendations.push('• Practice high-cadence drills 2-3 times per week');
+                    recommendations.push('• Use easier gearing to achieve higher RPM');
+                } else if (cadence < 85) {
+                    recommendations.push('• Good endurance cadence, suitable for long rides');
+                    recommendations.push('• Add some higher cadence work for racing preparation');
+                } else if (cadence < 100) {
+                    recommendations.push('• Excellent cadence range for most cycling applications');
+                    recommendations.push('• Practice maintaining this cadence at different power outputs');
+                } else if (cadence < 115) {
+                    recommendations.push('• High cadence - ensure smooth pedaling technique');
+                    recommendations.push('• Good for sprint training and neuromuscular development');
+                } else {
+                    recommendations.push('• Very high cadence - focus on technique and control');
+                    recommendations.push('• Suitable for track cycling and sprint training');
+                }
+                
+                if (gearRatio > 3.5) {
+                    recommendations.push('• High gear ratio - ensure adequate cadence training');
+                } else if (gearRatio < 2.0) {
+                    recommendations.push('• Low gear ratio - good for climbing and recovery rides');
+                }
+                
+                recommendations.push('• Practice cadence drills: spin-ups, single-leg pedaling');
+                recommendations.push('• Monitor cadence during different training intensities');
+                
+                return recommendations.join('\\n');
+            }
+            
+            generateSpeedTable(developmentMM, currentCadence) {
+                const cadences = [60, 70, 80, 90, 100, 110, 120];
+                const speeds = cadences.map(rpm => {
+                    const kmh = (developmentMM * rpm * 60) / 1000000;
+                    const mph = kmh * 0.621371;
+                    const isCurrent = rpm === currentCadence;
+                    return `<div class="flex justify-between ${isCurrent ? 'font-bold text-primary' : ''}">
+                        <span>${rpm} RPM:</span>
+                        <span>${kmh.toFixed(1)} km/h (${mph.toFixed(1)} mph)</span>
+                    </div>`;
+                });
+                
+                return speeds.join('');
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new CadenceSpeedCalculator('cadence-form', 'results');
+    </script>
+</body>
+</html>

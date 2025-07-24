@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerobic vs Anaerobic Calculator - Analyze Your Energy Systems | RunBikeCalc</title>
+    <meta name="description" content="Calculate your aerobic and anaerobic energy system contributions with our comprehensive calculator. Analyze training zones, metabolic demands, and optimize your performance.">
+    <meta name="keywords" content="aerobic anaerobic calculator, energy systems calculator, metabolic analysis, aerobic capacity, anaerobic power, training zones, sports science">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aerobic vs Anaerobic Calculator - Analyze Your Energy Systems">
+    <meta property="og:description" content="Calculate your aerobic and anaerobic energy system contributions with our comprehensive calculator. Analyze training zones, metabolic demands, and optimize your performance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/aerobic-anaerobic-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-aerobic-anaerobic-calculator.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aerobic vs Anaerobic Calculator - Analyze Your Energy Systems">
+    <meta name="twitter:description" content="Calculate your aerobic and anaerobic energy system contributions with our comprehensive calculator. Analyze training zones, metabolic demands, and optimize your performance.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/twitter-aerobic-anaerobic-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/aerobic-anaerobic-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Aerobic vs Anaerobic Calculator",
+        "description": "Calculate your aerobic and anaerobic energy system contributions with our comprehensive calculator. Analyze training zones, metabolic demands, and optimize your performance.",
+        "url": "https://runbikecalc.com/aerobic-anaerobic-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="nav-link hover:text-primary">Calculators</button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="/zone-2-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Zone 2 Calculator</a>
+                                <a href="/heart-rate-zones-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                                <a href="/running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                                <a href="/vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                                <a href="/aerobic-anaerobic-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Aerobic vs Anaerobic</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                    <a href="/contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/zone-2-calculator" class="mobile-menu-item">Zone 2 Calculator</a>
+                    <a href="/heart-rate-zones-calculator" class="mobile-menu-item">Heart Rate Zones</a>
+                    <a href="/running-pace-calculator" class="mobile-menu-item">Running Pace</a>
+                    <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                    <a href="/aerobic-anaerobic-calculator" class="mobile-menu-item">Aerobic vs Anaerobic</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                    <a href="/contact" class="mobile-menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="/" class="hover:text-primary">Home</a>
+                <span class="before:content-['/'] before:mx-2">Aerobic vs Anaerobic Calculator</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Aerobic vs Anaerobic Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Analyze your energy system contributions and metabolic demands. Calculate aerobic and anaerobic contributions for different exercise intensities and durations.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <!-- Calculator Tabs -->
+                <div class="flex flex-wrap border-b mb-6">
+                    <button class="tab-button active px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="energy-systems">
+                        Energy Systems
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="race-analysis">
+                        Race Analysis
+                    </button>
+                    <button class="tab-button px-6 py-3 font-medium text-gray-500 border-b-2 border-transparent hover:text-primary" data-tab="training-balance">
+                        Training Balance
+                    </button>
+                </div>
+
+                <!-- Energy Systems Tab -->
+                <div id="energy-systems-tab" class="tab-content">
+                    <form id="energy-systems-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="exercise-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Exercise Duration
+                                </label>
+                                <select id="exercise-duration" class="calc-input-number" required>
+                                    <option value="">Select duration</option>
+                                    <option value="10">10 seconds</option>
+                                    <option value="30">30 seconds</option>
+                                    <option value="60">1 minute</option>
+                                    <option value="120">2 minutes</option>
+                                    <option value="300">5 minutes</option>
+                                    <option value="600">10 minutes</option>
+                                    <option value="1200">20 minutes</option>
+                                    <option value="1800">30 minutes</option>
+                                    <option value="3600">60 minutes</option>
+                                    <option value="7200">2 hours</option>
+                                    <option value="custom">Custom duration</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Exercise duration for analysis</p>
+                            </div>
+
+                            <div id="custom-duration-div" class="hidden">
+                                <label for="custom-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Custom Duration (seconds)
+                                </label>
+                                <input type="number" id="custom-duration" class="calc-input-number" placeholder="900" min="5" max="14400" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Enter duration in seconds</p>
+                            </div>
+
+                            <div>
+                                <label for="exercise-intensity" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Exercise Intensity
+                                </label>
+                                <select id="exercise-intensity" class="calc-input-number" required>
+                                    <option value="">Select intensity</option>
+                                    <option value="max">Maximum (100% effort)</option>
+                                    <option value="high">High (90-95% effort)</option>
+                                    <option value="moderate-high">Moderate-High (80-90% effort)</option>
+                                    <option value="moderate">Moderate (70-80% effort)</option>
+                                    <option value="light">Light (50-70% effort)</option>
+                                    <option value="very-light">Very Light (<50% effort)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Perceived effort level</p>
+                            </div>
+
+                            <div>
+                                <label for="fitness-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Fitness Level
+                                </label>
+                                <select id="fitness-level" class="calc-input-number" required>
+                                    <option value="">Select fitness level</option>
+                                    <option value="untrained">Untrained</option>
+                                    <option value="recreational">Recreational athlete</option>
+                                    <option value="trained">Trained athlete</option>
+                                    <option value="well-trained">Well-trained athlete</option>
+                                    <option value="elite">Elite athlete</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your training background</p>
+                            </div>
+
+                            <div>
+                                <label for="sport-type" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Sport Type
+                                </label>
+                                <select id="sport-type" class="calc-input-number" required>
+                                    <option value="">Select sport</option>
+                                    <option value="running">Running</option>
+                                    <option value="cycling">Cycling</option>
+                                    <option value="swimming">Swimming</option>
+                                    <option value="rowing">Rowing</option>
+                                    <option value="triathlon">Triathlon</option>
+                                    <option value="team-sports">Team Sports</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Primary sport or activity</p>
+                            </div>
+
+                            <div>
+                                <label for="body-weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight (kg)
+                                </label>
+                                <input type="number" id="body-weight" class="calc-input-number" placeholder="70" min="40" max="150" step="0.1">
+                                <p class="text-sm text-gray-500 mt-1">Used for metabolic calculations</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Energy Systems</button>
+                            <button type="button" id="share-energy" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="energy-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="aerobic-contribution">0%</div>
+                                    <div class="text-gray-600">Aerobic Contribution</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="anaerobic-contribution">0%</div>
+                                    <div class="text-gray-600">Anaerobic Contribution</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-4 gap-3 text-center">
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <div class="font-semibold text-blue-800" id="phosphocreatine">0%</div>
+                                    <div class="text-sm text-blue-600">Phosphocreatine</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded">
+                                    <div class="font-semibold text-green-800" id="glycolytic">0%</div>
+                                    <div class="text-sm text-green-600">Glycolytic</div>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded">
+                                    <div class="font-semibold text-orange-800" id="oxidative">0%</div>
+                                    <div class="text-sm text-orange-600">Oxidative</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <div class="font-semibold text-purple-800" id="energy-demand">Moderate</div>
+                                    <div class="text-sm text-purple-600">Energy Demand</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Energy System Analysis</h4>
+                                <p class="text-gray-600" id="energy-analysis">Analysis will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race Analysis Tab -->
+                <div id="race-analysis-tab" class="tab-content hidden">
+                    <form id="race-analysis-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="race-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Distance
+                                </label>
+                                <select id="race-distance" class="calc-input-number" required>
+                                    <option value="">Select race distance</option>
+                                    <option value="100m">100m Sprint</option>
+                                    <option value="400m">400m</option>
+                                    <option value="800m">800m</option>
+                                    <option value="1500m">1500m/Mile</option>
+                                    <option value="5k">5K</option>
+                                    <option value="10k">10K</option>
+                                    <option value="half-marathon">Half Marathon</option>
+                                    <option value="marathon">Marathon</option>
+                                    <option value="cycling-sprint">Cycling Sprint (1km)</option>
+                                    <option value="cycling-pursuit">Cycling Pursuit (4km)</option>
+                                    <option value="cycling-tt">Cycling Time Trial (40km)</option>
+                                    <option value="triathlon-sprint">Sprint Triathlon</option>
+                                    <option value="triathlon-olympic">Olympic Triathlon</option>
+                                    <option value="triathlon-ironman">Ironman</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Choose your race distance</p>
+                            </div>
+
+                            <div>
+                                <label for="race-time" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Time (minutes)
+                                </label>
+                                <input type="number" id="race-time" class="calc-input-number" placeholder="25" min="0.2" max="720" step="0.1">
+                                <p class="text-sm text-gray-500 mt-1">Your race time in minutes</p>
+                            </div>
+
+                            <div>
+                                <label for="performance-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Performance Level
+                                </label>
+                                <select id="performance-level" class="calc-input-number" required>
+                                    <option value="">Select level</option>
+                                    <option value="recreational">Recreational</option>
+                                    <option value="competitive">Competitive</option>
+                                    <option value="regional">Regional</option>
+                                    <option value="national">National</option>
+                                    <option value="international">International</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your competitive level</p>
+                            </div>
+
+                            <div>
+                                <label for="training-focus" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Training Focus
+                                </label>
+                                <select id="training-focus" class="calc-input-number">
+                                    <option value="base">Base Building</option>
+                                    <option value="speed">Speed Development</option>
+                                    <option value="power">Power/Strength</option>
+                                    <option value="endurance">Endurance</option>
+                                    <option value="mixed">Mixed Training</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your current training emphasis</p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="race-strategy" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Strategy
+                                </label>
+                                <select id="race-strategy" class="calc-input-number">
+                                    <option value="even">Even pacing</option>
+                                    <option value="negative">Negative split</option>
+                                    <option value="positive">Positive split</option>
+                                    <option value="variable">Variable pacing</option>
+                                    <option value="tactical">Tactical race</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your typical race pacing strategy</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Analyze Race Demands</button>
+                            <button type="button" id="share-race" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="race-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="race-aerobic">0%</div>
+                                    <div class="text-gray-600">Aerobic Demand</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="race-anaerobic">0%</div>
+                                    <div class="text-gray-600">Anaerobic Demand</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
+                                <div class="bg-blue-50 p-4 rounded">
+                                    <div class="font-semibold text-blue-800" id="primary-system">Aerobic</div>
+                                    <div class="text-sm text-blue-600">Primary Energy System</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded">
+                                    <div class="font-semibold text-green-800" id="training-priority">Endurance</div>
+                                    <div class="text-sm text-green-600">Training Priority</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded">
+                                    <div class="font-semibold text-orange-800" id="key-workout">Tempo Runs</div>
+                                    <div class="text-sm text-orange-600">Key Workout Type</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">Race Analysis</h4>
+                                <p class="text-blue-700" id="race-detailed-analysis">Analysis will appear here...</p>
+                            </div>
+
+                            <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">Training Recommendations</h4>
+                                <p class="text-green-700" id="race-training-recommendations">Recommendations will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Balance Tab -->
+                <div id="training-balance-tab" class="tab-content hidden">
+                    <form id="training-balance-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="current-aerobic" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Aerobic Training (hours/week)
+                                </label>
+                                <input type="number" id="current-aerobic" class="calc-input-number" placeholder="8" min="0" max="30" step="0.5" required>
+                                <p class="text-sm text-gray-500 mt-1">Easy pace, long runs, base training</p>
+                            </div>
+
+                            <div>
+                                <label for="current-anaerobic" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Anaerobic Training (hours/week)
+                                </label>
+                                <input type="number" id="current-anaerobic" class="calc-input-number" placeholder="2" min="0" max="10" step="0.5" required>
+                                <p class="text-sm text-gray-500 mt-1">Intervals, tempo, threshold work</p>
+                            </div>
+
+                            <div>
+                                <label for="goal-event" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Goal Event
+                                </label>
+                                <select id="goal-event" class="calc-input-number" required>
+                                    <option value="">Select goal event</option>
+                                    <option value="sprint">Sprint Events (<2 min)</option>
+                                    <option value="middle">Middle Distance (2-8 min)</option>
+                                    <option value="distance">Distance Events (8-30 min)</option>
+                                    <option value="long">Long Distance (30+ min)</option>
+                                    <option value="ultra">Ultra Endurance (2+ hours)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your primary goal event duration</p>
+                            </div>
+
+                            <div>
+                                <label for="training-phase" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Phase
+                                </label>
+                                <select id="training-phase" class="calc-input-number" required>
+                                    <option value="">Select phase</option>
+                                    <option value="base">Base/Preparation</option>
+                                    <option value="build">Build/Specific</option>
+                                    <option value="peak">Peak/Competition</option>
+                                    <option value="recovery">Recovery/Transition</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Current training phase</p>
+                            </div>
+
+                            <div>
+                                <label for="weekly-hours" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Total Training Hours/Week
+                                </label>
+                                <input type="number" id="weekly-hours" class="calc-input-number" placeholder="10" min="3" max="40" step="0.5" required>
+                                <p class="text-sm text-gray-500 mt-1">Total weekly training time</p>
+                            </div>
+
+                            <div>
+                                <label for="training-experience" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Experience
+                                </label>
+                                <select id="training-experience" class="calc-input-number" required>
+                                    <option value="">Select experience</option>
+                                    <option value="beginner">Beginner (<1 year)</option>
+                                    <option value="novice">Novice (1-2 years)</option>
+                                    <option value="intermediate">Intermediate (2-5 years)</option>
+                                    <option value="advanced">Advanced (5-10 years)</option>
+                                    <option value="expert">Expert (10+ years)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Years of structured training</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Analyze Training Balance</button>
+                            <button type="button" id="share-balance" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <div id="balance-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary mb-2" id="optimal-aerobic">0%</div>
+                                    <div class="text-gray-600">Optimal Aerobic %</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-semibold text-secondary mb-2" id="optimal-anaerobic">0%</div>
+                                    <div class="text-gray-600">Optimal Anaerobic %</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 grid md:grid-cols-4 gap-3 text-center">
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <div class="font-semibold text-blue-800" id="current-ratio">80:20</div>
+                                    <div class="text-sm text-blue-600">Current Ratio</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded">
+                                    <div class="font-semibold text-green-800" id="optimal-ratio">85:15</div>
+                                    <div class="text-sm text-green-600">Optimal Ratio</div>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded">
+                                    <div class="font-semibold text-orange-800" id="balance-rating">Good</div>
+                                    <div class="text-sm text-orange-600">Balance Rating</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <div class="font-semibold text-purple-800" id="adjustment-needed">Minor</div>
+                                    <div class="text-sm text-purple-600">Adjustment Needed</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Current vs Optimal</h4>
+                                    <div class="space-y-2 text-sm" id="current-vs-optimal">
+                                        <!-- Comparison will be populated here -->
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Weekly Structure</h4>
+                                    <div class="space-y-2 text-sm" id="weekly-structure">
+                                        <!-- Weekly structure will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">Training Balance Recommendations</h4>
+                                <p class="text-green-700" id="balance-recommendations">Recommendations will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">728x90 Leaderboard Ad</div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Energy Systems</h2>
+                
+                <p>The human body utilizes three distinct energy systems to fuel exercise: the phosphocreatine system, the glycolytic system, and the oxidative system. Understanding how these systems contribute to performance is crucial for optimizing training and competition strategies.</p>
+
+                <h3>The Three Energy Systems</h3>
+                
+                <p>Each energy system operates simultaneously but contributes differently based on exercise intensity and duration:</p>
+
+                <h4>1. Phosphocreatine (ATP-PC) System</h4>
+                
+                <ul>
+                    <li><strong>Duration:</strong> 0-10 seconds</li>
+                    <li><strong>Characteristics:</strong> Immediate energy, no oxygen required, no metabolic byproducts</li>
+                    <li><strong>Primary Use:</strong> Maximum power activities like sprinting, jumping, throwing</li>
+                    <li><strong>Recovery:</strong> 30 seconds for 50% replenishment, 3-5 minutes for full recovery</li>
+                </ul>
+
+                <h4>2. Glycolytic (Lactic Acid) System</h4>
+                
+                <ul>
+                    <li><strong>Duration:</strong> 10 seconds to 2-3 minutes</li>
+                    <li><strong>Characteristics:</strong> Fast energy production, no oxygen required, produces lactate</li>
+                    <li><strong>Primary Use:</strong> High-intensity activities like 400m-1500m running, cycling sprints</li>
+                    <li><strong>Limitation:</strong> Lactate accumulation causes fatigue and reduced performance</li>
+                </ul>
+
+                <h4>3. Oxidative (Aerobic) System</h4>
+                
+                <ul>
+                    <li><strong>Duration:</strong> 2+ minutes</li>
+                    <li><strong>Characteristics:</strong> Requires oxygen, can utilize fats and carbohydrates, no limiting byproducts</li>
+                    <li><strong>Primary Use:</strong> Endurance activities, sustainable exercise</li>
+                    <li><strong>Advantage:</strong> Unlimited capacity when oxygen supply meets demand</li>
+                </ul>
+
+                <h3>Energy System Contribution by Duration</h3>
+                
+                <p>The relative contribution of each system varies predictably with exercise duration:</p>
+
+                <h4>Sprint Events (0-30 seconds)</h4>
+                <ul>
+                    <li><strong>10 seconds:</strong> 85% ATP-PC, 15% Glycolytic, 0% Oxidative</li>
+                    <li><strong>30 seconds:</strong> 70% ATP-PC, 25% Glycolytic, 5% Oxidative</li>
+                </ul>
+
+                <h4>Middle Distance (30 seconds - 5 minutes)</h4>
+                <ul>
+                    <li><strong>1 minute:</strong> 50% ATP-PC, 45% Glycolytic, 5% Oxidative</li>
+                    <li><strong>2 minutes:</strong> 25% ATP-PC, 65% Glycolytic, 10% Oxidative</li>
+                    <li><strong>5 minutes:</strong> 10% ATP-PC, 35% Glycolytic, 55% Oxidative</li>
+                </ul>
+
+                <h4>Distance Events (5+ minutes)</h4>
+                <ul>
+                    <li><strong>10 minutes:</strong> 5% ATP-PC, 15% Glycolytic, 80% Oxidative</li>
+                    <li><strong>30+ minutes:</strong> 2% ATP-PC, 8% Glycolytic, 90% Oxidative</li>
+                </ul>
+
+                <h3>Training Applications</h3>
+                
+                <p>Understanding energy system contributions guides training prescription:</p>
+
+                <h4>Aerobic System Development</h4>
+                
+                <ul>
+                    <li><strong>Base Training:</strong> 60-80% of training time at conversational pace</li>
+                    <li><strong>Threshold Training:</strong> 10-20% at lactate threshold intensity</li>
+                    <li><strong>VO2 Max Training:</strong> 5-10% at maximum aerobic power</li>
+                    <li><strong>Benefits:</strong> Improved oxygen delivery, increased mitochondrial density, enhanced fat oxidation</li>
+                </ul>
+
+                <h4>Anaerobic System Development</h4>
+                
+                <ul>
+                    <li><strong>Lactate Tolerance:</strong> Intervals at 95-110% VO2 max for 30 seconds to 5 minutes</li>
+                    <li><strong>Lactate Production:</strong> Short, maximal efforts with incomplete recovery</li>
+                    <li><strong>Neuromuscular Power:</strong> 5-15 second all-out efforts with full recovery</li>
+                    <li><strong>Benefits:</strong> Increased buffering capacity, improved lactate clearance, enhanced glycolytic power</li>
+                </ul>
+
+                <h3>Sport-Specific Energy Demands</h3>
+                
+                <p>Different sports have unique energy system requirements:</p>
+
+                <h4>Running Events</h4>
+                <ul>
+                    <li><strong>100m:</strong> 95% anaerobic, 5% aerobic</li>
+                    <li><strong>400m:</strong> 80% anaerobic, 20% aerobic</li>
+                    <li><strong>800m:</strong> 60% anaerobic, 40% aerobic</li>
+                    <li><strong>1500m:</strong> 35% anaerobic, 65% aerobic</li>
+                    <li><strong>5K:</strong> 15% anaerobic, 85% aerobic</li>
+                    <li><strong>Marathon:</strong> 5% anaerobic, 95% aerobic</li>
+                </ul>
+
+                <h4>Cycling Events</h4>
+                <ul>
+                    <li><strong>Track Sprint:</strong> 90% anaerobic, 10% aerobic</li>
+                    <li><strong>1km TT:</strong> 70% anaerobic, 30% aerobic</li>
+                    <li><strong>4km Pursuit:</strong> 50% anaerobic, 50% aerobic</li>
+                    <li><strong>Road Time Trial:</strong> 20% anaerobic, 80% aerobic</li>
+                    <li><strong>Road Race:</strong> 15% anaerobic, 85% aerobic</li>
+                </ul>
+
+                <h4>Team Sports</h4>
+                <ul>
+                    <li><strong>Soccer:</strong> 30% anaerobic, 70% aerobic</li>
+                    <li><strong>Basketball:</strong> 60% anaerobic, 40% aerobic</li>
+                    <li><strong>Ice Hockey:</strong> 80% anaerobic, 20% aerobic</li>
+                </ul>
+
+                <h3>Factors Affecting Energy System Contribution</h3>
+                
+                <p>Several factors influence the relative contribution of energy systems:</p>
+
+                <h4>Training Status</h4>
+                <ul>
+                    <li><strong>Trained Athletes:</strong> More efficient aerobic system, higher lactate threshold</li>
+                    <li><strong>Untrained Individuals:</strong> Greater reliance on anaerobic systems, earlier fatigue</li>
+                </ul>
+
+                <h4>Environmental Conditions</h4>
+                <ul>
+                    <li><strong>Altitude:</strong> Reduced oxygen availability increases anaerobic contribution</li>
+                    <li><strong>Heat:</strong> Increased cardiovascular stress shifts energy system balance</li>
+                    <li><strong>Cold:</strong> May impair muscle function and energy system efficiency</li>
+                </ul>
+
+                <h4>Nutritional Status</h4>
+                <ul>
+                    <li><strong>Carbohydrate Availability:</strong> Affects glycolytic capacity and aerobic carbohydrate oxidation</li>
+                    <li><strong>Fat Adaptation:</strong> Can shift aerobic system toward greater fat oxidation</li>
+                </ul>
+
+                <h3>Practical Applications for Athletes</h3>
+                
+                <p>Use energy system knowledge to optimize training and performance:</p>
+
+                <h4>Training Periodization</h4>
+                
+                <ul>
+                    <li><strong>Base Phase:</strong> Emphasize aerobic system development (80-90% of training)</li>
+                    <li><strong>Build Phase:</strong> Add sport-specific energy system training</li>
+                    <li><strong>Peak Phase:</strong> Fine-tune energy system balance for goal events</li>
+                </ul>
+
+                <h4>Workout Design</h4>
+                
+                <ul>
+                    <li><strong>Interval Length:</strong> Match work duration to target energy system</li>
+                    <li><strong>Recovery Ratio:</strong> Adjust rest periods for specific adaptations</li>
+                    <li><strong>Intensity Distribution:</strong> Balance training across energy systems</li>
+                </ul>
+
+                <h4>Race Strategy</h4>
+                
+                <ul>
+                    <li><strong>Pacing:</strong> Distribute energy system contributions optimally</li>
+                    <li><strong>Tactical Decisions:</strong> Consider energy cost of different race scenarios</li>
+                    <li><strong>Fueling:</strong> Support dominant energy systems with appropriate nutrition</li>
+                </ul>
+
+                <h3>Monitoring and Assessment</h3>
+                
+                <p>Several methods can assess energy system contributions:</p>
+
+                <h4>Laboratory Testing</h4>
+                <ul>
+                    <li><strong>VO2 Max Test:</strong> Assesses aerobic system capacity</li>
+                    <li><strong>Lactate Testing:</strong> Determines anaerobic threshold</li>
+                    <li><strong>Wingate Test:</strong> Evaluates anaerobic power and capacity</li>
+                </ul>
+
+                <h4>Field Testing</h4>
+                <ul>
+                    <li><strong>Time Trials:</strong> Sport-specific assessment of energy system balance</li>
+                    <li><strong>Critical Power/Pace:</strong> Determines aerobic/anaerobic boundary</li>
+                    <li><strong>Repeated Sprint Tests:</strong> Assesses anaerobic capacity and recovery</li>
+                </ul>
+
+                <p>Understanding and applying energy system principles is fundamental to maximizing athletic performance. By matching training methods to energy system demands and monitoring adaptations over time, athletes can optimize their preparation for competition and achieve their performance goals.</p>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Placement -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <div class="text-gray-500">Advertisement</div>
+                <div class="text-sm text-gray-400 mt-2">300x250 Rectangle Ad</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes. Optimize your training with precise calculations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/heart-rate-zones-calculator" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+                
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active', 'text-primary', 'border-primary');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                });
+                button.classList.add('active', 'text-primary', 'border-primary');
+                button.classList.remove('text-gray-500', 'border-transparent');
+                
+                // Update tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(`${tabName}-tab`).classList.remove('hidden');
+            });
+        });
+
+        // Show/hide custom duration field
+        document.getElementById('exercise-duration').addEventListener('change', function() {
+            const customDiv = document.getElementById('custom-duration-div');
+            if (this.value === 'custom') {
+                customDiv.classList.remove('hidden');
+            } else {
+                customDiv.classList.add('hidden');
+            }
+        });
+
+        // Energy Systems Calculator
+        class EnergySystemsCalculator extends Calculator {
+            constructor() {
+                super('energy-systems-form', 'energy-result');
+                this.setupEventListeners();
+            }
+
+            getEnergyContributions(duration, intensity, fitnessLevel) {
+                // Base contributions by duration (in seconds)
+                let aerobic, anaerobic, phosphocreatine, glycolytic, oxidative;
+                
+                if (duration <= 10) {
+                    aerobic = 5; anaerobic = 95;
+                    phosphocreatine = 85; glycolytic = 10; oxidative = 5;
+                } else if (duration <= 30) {
+                    aerobic = 15; anaerobic = 85;
+                    phosphocreatine = 70; glycolytic = 15; oxidative = 15;
+                } else if (duration <= 60) {
+                    aerobic = 25; anaerobic = 75;
+                    phosphocreatine = 50; glycolytic = 25; oxidative = 25;
+                } else if (duration <= 120) {
+                    aerobic = 40; anaerobic = 60;
+                    phosphocreatine = 25; glycolytic = 35; oxidative = 40;
+                } else if (duration <= 300) {
+                    aerobic = 65; anaerobic = 35;
+                    phosphocreatine = 10; glycolytic = 25; oxidative = 65;
+                } else if (duration <= 600) {
+                    aerobic = 80; anaerobic = 20;
+                    phosphocreatine = 5; glycolytic = 15; oxidative = 80;
+                } else if (duration <= 1800) {
+                    aerobic = 90; anaerobic = 10;
+                    phosphocreatine = 2; glycolytic = 8; oxidative = 90;
+                } else {
+                    aerobic = 95; anaerobic = 5;
+                    phosphocreatine = 1; glycolytic = 4; oxidative = 95;
+                }
+
+                // Adjust for intensity
+                const intensityFactors = {
+                    'max': { aerobic: 0.8, anaerobic: 1.2 },
+                    'high': { aerobic: 0.9, anaerobic: 1.1 },
+                    'moderate-high': { aerobic: 1.0, anaerobic: 1.0 },
+                    'moderate': { aerobic: 1.1, anaerobic: 0.9 },
+                    'light': { aerobic: 1.2, anaerobic: 0.8 },
+                    'very-light': { aerobic: 1.3, anaerobic: 0.7 }
+                };
+
+                const factor = intensityFactors[intensity] || { aerobic: 1.0, anaerobic: 1.0 };
+                aerobic = Math.min(100, aerobic * factor.aerobic);
+                anaerobic = Math.max(0, 100 - aerobic);
+
+                // Adjust for fitness level
+                const fitnessFactors = {
+                    'untrained': { aerobic: 0.8, anaerobic: 1.2 },
+                    'recreational': { aerobic: 0.9, anaerobic: 1.1 },
+                    'trained': { aerobic: 1.0, anaerobic: 1.0 },
+                    'well-trained': { aerobic: 1.1, anaerobic: 0.9 },
+                    'elite': { aerobic: 1.2, anaerobic: 0.8 }
+                };
+
+                const fitnessFactor = fitnessFactors[fitnessLevel] || { aerobic: 1.0, anaerobic: 1.0 };
+                aerobic = Math.min(100, aerobic * fitnessFactor.aerobic);
+                anaerobic = Math.max(0, 100 - aerobic);
+
+                return {
+                    aerobic: Math.round(aerobic),
+                    anaerobic: Math.round(anaerobic),
+                    phosphocreatine: Math.round(phosphocreatine * (anaerobic / 100)),
+                    glycolytic: Math.round(glycolytic * (anaerobic / 100)),
+                    oxidative: Math.round(aerobic)
+                };
+            }
+
+            calculate(formData) {
+                const durationSelection = formData.get('exercise-duration');
+                const customDuration = parseFloat(formData.get('custom-duration')) || 0;
+                const intensity = formData.get('exercise-intensity');
+                const fitnessLevel = formData.get('fitness-level');
+                const sportType = formData.get('sport-type');
+                const bodyWeight = parseFloat(formData.get('body-weight')) || 70;
+
+                // Determine actual duration
+                let duration = durationSelection === 'custom' ? customDuration : parseFloat(durationSelection);
+
+                // Get energy system contributions
+                const contributions = this.getEnergyContributions(duration, intensity, fitnessLevel);
+
+                // Determine energy demand level
+                let energyDemand = 'Moderate';
+                if (duration <= 30 && intensity === 'max') energyDemand = 'Very High';
+                else if (duration <= 60 && (intensity === 'max' || intensity === 'high')) energyDemand = 'High';
+                else if (duration <= 300 && intensity === 'high') energyDemand = 'Moderate-High';
+                else if (duration > 1800) energyDemand = 'Low-Moderate';
+
+                // Generate analysis
+                let analysis = `For a ${duration}-second ${intensity} intensity ${sportType} effort, your energy systems contribute approximately ${contributions.aerobic}% aerobic and ${contributions.anaerobic}% anaerobic energy. `;
+                
+                if (contributions.aerobic >= 80) {
+                    analysis += `This is primarily an aerobic activity. Focus your training on developing your aerobic base, improving VO2 max, and enhancing fat oxidation capacity. Long, steady efforts and tempo work will be most beneficial.`;
+                } else if (contributions.aerobic >= 50) {
+                    analysis += `This represents a mixed energy demand with both systems playing important roles. Training should include both aerobic base development and specific anaerobic capacity work. Include threshold training and lactate tolerance sessions.`;
+                } else {
+                    analysis += `This is predominantly an anaerobic activity requiring high power output and lactate tolerance. Focus on high-intensity interval training, lactate buffering, and neuromuscular power development. Recovery between sessions is crucial.`;
+                }
+
+                return {
+                    aerobic: `${contributions.aerobic}%`,
+                    anaerobic: `${contributions.anaerobic}%`,
+                    phosphocreatine: `${contributions.phosphocreatine}%`,
+                    glycolytic: `${contributions.glycolytic}%`,
+                    oxidative: `${contributions.oxidative}%`,
+                    energyDemand,
+                    analysis
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('aerobic-contribution').textContent = result.aerobic;
+                document.getElementById('anaerobic-contribution').textContent = result.anaerobic;
+                document.getElementById('phosphocreatine').textContent = result.phosphocreatine;
+                document.getElementById('glycolytic').textContent = result.glycolytic;
+                document.getElementById('oxidative').textContent = result.oxidative;
+                document.getElementById('energy-demand').textContent = result.energyDemand;
+                document.getElementById('energy-analysis').textContent = result.analysis;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const aerobic = document.getElementById('aerobic-contribution').textContent;
+                const anaerobic = document.getElementById('anaerobic-contribution').textContent;
+                const demand = document.getElementById('energy-demand').textContent;
+                
+                return `My energy system analysis: ${aerobic} aerobic, ${anaerobic} anaerobic (${demand} demand). Analyze yours: ${window.location.href}`;
+            }
+        }
+
+        // Race Analysis Calculator
+        class RaceAnalysisCalculator extends Calculator {
+            constructor() {
+                super('race-analysis-form', 'race-result');
+                this.setupEventListeners();
+            }
+
+            getRaceData(distance) {
+                const raceData = {
+                    '100m': { aerobic: 5, anaerobic: 95, primarySystem: 'Anaerobic', trainingPriority: 'Speed/Power', keyWorkout: 'Sprint Intervals' },
+                    '400m': { aerobic: 20, anaerobic: 80, primarySystem: 'Anaerobic', trainingPriority: 'Lactate Tolerance', keyWorkout: 'Long Sprints' },
+                    '800m': { aerobic: 40, anaerobic: 60, primarySystem: 'Mixed', trainingPriority: 'VO2 Max', keyWorkout: 'VO2 Max Intervals' },
+                    '1500m': { aerobic: 65, anaerobic: 35, primarySystem: 'Aerobic', trainingPriority: 'VO2 Max', keyWorkout: 'Mile Repeats' },
+                    '5k': { aerobic: 85, anaerobic: 15, primarySystem: 'Aerobic', trainingPriority: 'Threshold', keyWorkout: 'Tempo Runs' },
+                    '10k': { aerobic: 90, anaerobic: 10, primarySystem: 'Aerobic', trainingPriority: 'Threshold', keyWorkout: 'Threshold Intervals' },
+                    'half-marathon': { aerobic: 95, anaerobic: 5, primarySystem: 'Aerobic', trainingPriority: 'Endurance', keyWorkout: 'Long Runs' },
+                    'marathon': { aerobic: 98, anaerobic: 2, primarySystem: 'Aerobic', trainingPriority: 'Endurance', keyWorkout: 'Marathon Pace Runs' },
+                    'cycling-sprint': { aerobic: 10, anaerobic: 90, primarySystem: 'Anaerobic', trainingPriority: 'Power', keyWorkout: 'Sprint Intervals' },
+                    'cycling-pursuit': { aerobic: 50, anaerobic: 50, primarySystem: 'Mixed', trainingPriority: 'Threshold', keyWorkout: 'Pursuit Simulation' },
+                    'cycling-tt': { aerobic: 80, anaerobic: 20, primarySystem: 'Aerobic', trainingPriority: 'Threshold', keyWorkout: 'Time Trial Efforts' },
+                    'triathlon-sprint': { aerobic: 70, anaerobic: 30, primarySystem: 'Mixed', trainingPriority: 'Mixed Training', keyWorkout: 'Brick Sessions' },
+                    'triathlon-olympic': { aerobic: 85, anaerobic: 15, primarySystem: 'Aerobic', trainingPriority: 'Threshold', keyWorkout: 'Threshold Sets' },
+                    'triathlon-ironman': { aerobic: 98, anaerobic: 2, primarySystem: 'Aerobic', trainingPriority: 'Endurance', keyWorkout: 'Long Training' }
+                };
+
+                return raceData[distance] || { aerobic: 80, anaerobic: 20, primarySystem: 'Aerobic', trainingPriority: 'Mixed', keyWorkout: 'Varied Training' };
+            }
+
+            calculate(formData) {
+                const distance = formData.get('race-distance');
+                const raceTime = parseFloat(formData.get('race-time')) || 30;
+                const performanceLevel = formData.get('performance-level');
+                const trainingFocus = formData.get('training-focus');
+                const raceStrategy = formData.get('race-strategy');
+
+                const raceData = this.getRaceData(distance);
+                
+                // Adjust based on performance level
+                const levelAdjustments = {
+                    'recreational': { aerobic: 0.95, anaerobic: 1.05 },
+                    'competitive': { aerobic: 1.0, anaerobic: 1.0 },
+                    'regional': { aerobic: 1.02, anaerobic: 0.98 },
+                    'national': { aerobic: 1.05, anaerobic: 0.95 },
+                    'international': { aerobic: 1.08, anaerobic: 0.92 }
+                };
+
+                const adjustment = levelAdjustments[performanceLevel] || { aerobic: 1.0, anaerobic: 1.0 };
+                const adjustedAerobic = Math.min(100, Math.round(raceData.aerobic * adjustment.aerobic));
+                const adjustedAnaerobic = 100 - adjustedAerobic;
+
+                // Generate detailed analysis
+                let analysis = `Your ${distance} race demands ${adjustedAerobic}% aerobic and ${adjustedAnaerobic}% anaerobic energy contribution. As a ${performanceLevel} athlete, your ${raceData.primarySystem.toLowerCase()} system is the primary determinant of performance. `;
+                
+                if (raceData.primarySystem === 'Aerobic') {
+                    analysis += `Success depends heavily on your aerobic capacity, lactate threshold, and metabolic efficiency. Focus on building a strong aerobic base while maintaining speed with specific interval work.`;
+                } else if (raceData.primarySystem === 'Anaerobic') {
+                    analysis += `Peak performance requires exceptional anaerobic power and lactate tolerance. Emphasize high-intensity training while maintaining aerobic fitness for recovery between efforts.`;
+                } else {
+                    analysis += `This event requires balanced development of both energy systems. Training should include both high-volume aerobic work and specific high-intensity sessions targeting race pace and faster.`;
+                }
+
+                // Generate training recommendations
+                let recommendations = `For optimal ${distance} performance, emphasize ${raceData.trainingPriority.toLowerCase()} development with ${raceData.keyWorkout.toLowerCase()} as key sessions. `;
+                
+                if (adjustedAerobic >= 85) {
+                    recommendations += `Follow an 80/20 training distribution: 80% easy aerobic volume, 20% threshold and VO2 max work. Include regular tempo runs and one VO2 max session per week.`;
+                } else if (adjustedAerobic >= 60) {
+                    recommendations += `Use a 70/30 distribution: 70% aerobic base building, 30% high-intensity work. Include lactate threshold training 2x/week and VO2 max intervals weekly.`;
+                } else {
+                    recommendations += `Employ a 60/40 approach: 60% aerobic conditioning, 40% anaerobic development. Include frequent lactate tolerance work and neuromuscular power sessions.`;
+                }
+
+                return {
+                    aerobic: `${adjustedAerobic}%`,
+                    anaerobic: `${adjustedAnaerobic}%`,
+                    primarySystem: raceData.primarySystem,
+                    trainingPriority: raceData.trainingPriority,
+                    keyWorkout: raceData.keyWorkout,
+                    analysis,
+                    recommendations
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('race-aerobic').textContent = result.aerobic;
+                document.getElementById('race-anaerobic').textContent = result.anaerobic;
+                document.getElementById('primary-system').textContent = result.primarySystem;
+                document.getElementById('training-priority').textContent = result.trainingPriority;
+                document.getElementById('key-workout').textContent = result.keyWorkout;
+                document.getElementById('race-detailed-analysis').textContent = result.analysis;
+                document.getElementById('race-training-recommendations').textContent = result.recommendations;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const distance = document.getElementById('race-distance').value;
+                const aerobic = document.getElementById('race-aerobic').textContent;
+                const anaerobic = document.getElementById('race-anaerobic').textContent;
+                
+                return `${distance} race analysis: ${aerobic} aerobic, ${anaerobic} anaerobic energy demands! Get your race analysis: ${window.location.href}`;
+            }
+        }
+
+        // Training Balance Calculator
+        class TrainingBalanceCalculator extends Calculator {
+            constructor() {
+                super('training-balance-form', 'balance-result');
+                this.setupEventListeners();
+            }
+
+            getOptimalRatios(goalEvent, trainingPhase, experience) {
+                const eventRatios = {
+                    'sprint': { aerobic: 40, anaerobic: 60 },
+                    'middle': { aerobic: 60, anaerobic: 40 },
+                    'distance': { aerobic: 80, anaerobic: 20 },
+                    'long': { aerobic: 85, anaerobic: 15 },
+                    'ultra': { aerobic: 90, anaerobic: 10 }
+                };
+
+                const phaseAdjustments = {
+                    'base': { aerobic: 1.1, anaerobic: 0.7 },
+                    'build': { aerobic: 1.0, anaerobic: 1.0 },
+                    'peak': { aerobic: 0.9, anaerobic: 1.3 },
+                    'recovery': { aerobic: 1.2, anaerobic: 0.5 }
+                };
+
+                const experienceAdjustments = {
+                    'beginner': { aerobic: 1.15, anaerobic: 0.6 },
+                    'novice': { aerobic: 1.1, anaerobic: 0.7 },
+                    'intermediate': { aerobic: 1.0, anaerobic: 1.0 },
+                    'advanced': { aerobic: 0.95, anaerobic: 1.2 },
+                    'expert': { aerobic: 0.9, anaerobic: 1.4 }
+                };
+
+                const baseRatio = eventRatios[goalEvent] || { aerobic: 80, anaerobic: 20 };
+                const phaseAdj = phaseAdjustments[trainingPhase] || { aerobic: 1.0, anaerobic: 1.0 };
+                const expAdj = experienceAdjustments[experience] || { aerobic: 1.0, anaerobic: 1.0 };
+
+                let optimalAerobic = baseRatio.aerobic * phaseAdj.aerobic * expAdj.aerobic;
+                optimalAerobic = Math.min(95, Math.max(30, optimalAerobic));
+                const optimalAnaerobic = 100 - optimalAerobic;
+
+                return {
+                    aerobic: Math.round(optimalAerobic),
+                    anaerobic: Math.round(optimalAnaerobic)
+                };
+            }
+
+            calculate(formData) {
+                const currentAerobic = parseFloat(formData.get('current-aerobic'));
+                const currentAnaerobic = parseFloat(formData.get('current-anaerobic'));
+                const goalEvent = formData.get('goal-event');
+                const trainingPhase = formData.get('training-phase');
+                const weeklyHours = parseFloat(formData.get('weekly-hours'));
+                const experience = formData.get('training-experience');
+
+                // Calculate current ratio
+                const totalCurrent = currentAerobic + currentAnaerobic;
+                const currentAerobicPercent = Math.round((currentAerobic / totalCurrent) * 100);
+                const currentAnaerobicPercent = 100 - currentAerobicPercent;
+
+                // Get optimal ratios
+                const optimal = this.getOptimalRatios(goalEvent, trainingPhase, experience);
+
+                // Calculate balance rating
+                const aerobicDiff = Math.abs(currentAerobicPercent - optimal.aerobic);
+                const anaerobicDiff = Math.abs(currentAnaerobicPercent - optimal.anaerobic);
+                const totalDiff = aerobicDiff + anaerobicDiff;
+
+                let balanceRating, adjustmentNeeded;
+                if (totalDiff <= 10) {
+                    balanceRating = 'Excellent';
+                    adjustmentNeeded = 'None';
+                } else if (totalDiff <= 20) {
+                    balanceRating = 'Good';
+                    adjustmentNeeded = 'Minor';
+                } else if (totalDiff <= 30) {
+                    balanceRating = 'Fair';
+                    adjustmentNeeded = 'Moderate';
+                } else {
+                    balanceRating = 'Poor';
+                    adjustmentNeeded = 'Major';
+                }
+
+                // Calculate optimal hours
+                const optimalAerobicHours = (weeklyHours * optimal.aerobic / 100).toFixed(1);
+                const optimalAnaerobicHours = (weeklyHours * optimal.anaerobic / 100).toFixed(1);
+
+                // Generate recommendations
+                let recommendations = `Based on your ${goalEvent} goals and current ${trainingPhase} phase, optimal training distribution is ${optimal.aerobic}% aerobic (${optimalAerobicHours}h) and ${optimal.anaerobic}% anaerobic (${optimalAnaerobicHours}h) per week. `;
+                
+                if (currentAerobicPercent < optimal.aerobic) {
+                    recommendations += `Increase your aerobic training volume by adding easy-paced runs or rides. Reduce high-intensity sessions temporarily to improve your aerobic base.`;
+                } else if (currentAerobicPercent > optimal.aerobic) {
+                    recommendations += `Add more high-intensity training while maintaining your aerobic fitness. Include interval sessions, tempo work, and sport-specific efforts.`;
+                } else {
+                    recommendations += `Your current training balance is appropriate. Focus on consistency and gradual progression within your current training distribution.`;
+                }
+
+                return {
+                    currentRatio: `${currentAerobicPercent}:${currentAnaerobicPercent}`,
+                    optimalRatio: `${optimal.aerobic}:${optimal.anaerobic}`,
+                    balanceRating,
+                    adjustmentNeeded,
+                    optimalAerobic: `${optimal.aerobic}%`,
+                    optimalAnaerobic: `${optimal.anaerobic}%`,
+                    currentAerobicHours: currentAerobic.toFixed(1),
+                    currentAnaerobicHours: currentAnaerobic.toFixed(1),
+                    optimalAerobicHours,
+                    optimalAnaerobicHours,
+                    recommendations
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('optimal-aerobic').textContent = result.optimalAerobic;
+                document.getElementById('optimal-anaerobic').textContent = result.optimalAnaerobic;
+                document.getElementById('current-ratio').textContent = result.currentRatio;
+                document.getElementById('optimal-ratio').textContent = result.optimalRatio;
+                document.getElementById('balance-rating').textContent = result.balanceRating;
+                document.getElementById('adjustment-needed').textContent = result.adjustmentNeeded;
+                document.getElementById('balance-recommendations').textContent = result.recommendations;
+
+                // Populate current vs optimal
+                const comparisonContainer = document.getElementById('current-vs-optimal');
+                comparisonContainer.innerHTML = `
+                    <div class="flex justify-between"><span>Current Aerobic:</span> <span>${result.currentAerobicHours}h</span></div>
+                    <div class="flex justify-between"><span>Optimal Aerobic:</span> <span>${result.optimalAerobicHours}h</span></div>
+                    <div class="flex justify-between"><span>Current Anaerobic:</span> <span>${result.currentAnaerobicHours}h</span></div>
+                    <div class="flex justify-between"><span>Optimal Anaerobic:</span> <span>${result.optimalAnaerobicHours}h</span></div>
+                `;
+
+                // Populate weekly structure
+                const structureContainer = document.getElementById('weekly-structure');
+                structureContainer.innerHTML = `
+                    <div>Easy aerobic: ${(result.optimalAerobicHours * 0.7).toFixed(1)}h</div>
+                    <div>Moderate aerobic: ${(result.optimalAerobicHours * 0.3).toFixed(1)}h</div>
+                    <div>Threshold work: ${(result.optimalAnaerobicHours * 0.6).toFixed(1)}h</div>
+                    <div>High intensity: ${(result.optimalAnaerobicHours * 0.4).toFixed(1)}h</div>
+                `;
+                
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const current = document.getElementById('current-ratio').textContent;
+                const optimal = document.getElementById('optimal-ratio').textContent;
+                const rating = document.getElementById('balance-rating').textContent;
+                
+                return `My training balance: Currently ${current}, optimal ${optimal} (${rating} balance). Analyze yours: ${window.location.href}`;
+            }
+        }
+
+        // Initialize calculators
+        const energySystemsCalculator = new EnergySystemsCalculator();
+        const raceAnalysisCalculator = new RaceAnalysisCalculator();
+        const trainingBalanceCalculator = new TrainingBalanceCalculator();
+
+        // Share button event listeners
+        document.getElementById('share-energy').addEventListener('click', () => {
+            energySystemsCalculator.shareResult();
+        });
+
+        document.getElementById('share-race').addEventListener('click', () => {
+            raceAnalysisCalculator.shareResult();
+        });
+
+        document.getElementById('share-balance').addEventListener('click', () => {
+            trainingBalanceCalculator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
