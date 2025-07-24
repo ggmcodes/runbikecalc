@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Guides & Blog - Expert Endurance Training Articles | RunBikeCalc</title>
+    <meta name="description" content="Expert training guides for runners, cyclists, and triathletes. Learn about Zone 2 training, VO2 max, FTP, running pace, and lactate threshold with 2025 research.">
+    <meta name="keywords" content="endurance training guides, zone 2 training, VO2 max training, FTP training, running pace training, lactate threshold, triathlon training">
+    <link rel="canonical" href="https://runbikecalc.com/blog">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Training Guides & Blog - Expert Endurance Training Articles">
+    <meta property="og:description" content="Expert training guides for runners, cyclists, and triathletes with 2025 research and personal experience.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://runbikecalc.com/blog">
+    <meta property="og:type" content="website">
+    
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold">RunBikeCalc</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-blue-200">Home</a>
+                <div class="relative group">
+                    <button class="hover:text-blue-200 flex items-center">
+                        Calculators
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-1">
+                            <a href="../heart-rate-zones" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                            <a href="../running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                            <a href="../bike-gearing-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bike Gearing</a>
+                            <a href="../vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                            <a href="../calorie-burn-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Calorie Burn</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog" class="text-blue-200 font-semibold">Blog</a>
+                <a href="../about.html" class="hover:text-blue-200">About</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <nav class="text-sm mb-6">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="../index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+                </li>
+                <li class="flex items-center mx-2">
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li class="text-gray-500">Training Guides & Blog</li>
+            </ol>
+        </nav>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Training Guides & Blog</h1>
+                <p class="text-xl text-gray-600 mb-6">Expert training guides backed by 2025 research and personal experience from competitive endurance sports</p>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" alt="Endurance athlete analyzing training data for optimal performance" class="w-full h-64 object-cover rounded-lg shadow-lg">
+            </div>
+
+            <!-- Featured Guides -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Training Guides</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Zone 2 Training Guide -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Zone 2 aerobic base training for endurance athletes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Featured Guide</span>
+                                <span class="ml-3 text-sm text-gray-500">16 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="what-is-zone-2-training-complete-guide.html" class="hover:text-blue-600">Complete Zone 2 Training Guide 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Master Zone 2 training with proven protocols, testing methods, and periodization strategies. Learn how to build your aerobic base effectively with insights from competitive endurance sports.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Updated January 2025</span>
+                                <a href="what-is-zone-2-training-complete-guide.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Guide →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- FTP Training Guide -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Cyclist training with power meter for FTP improvement" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">New</span>
+                                <span class="ml-3 text-sm text-gray-500">16 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="ftp-training-guide-2025.html" class="hover:text-blue-600">Complete FTP Training Guide 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Master functional threshold power with proven testing protocols, training zones, and periodization strategies. Includes personal experience from Ironman 70.3 training.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Published January 2025</span>
+                                <a href="ftp-training-guide-2025.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Guide →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- VO2 Max Training Guide -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Runner performing high-intensity VO2 max intervals" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Performance</span>
+                                <span class="ml-3 text-sm text-gray-500">14 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="vo2-max-training-guide-2025.html" class="hover:text-blue-600">VO2 Max Training Guide 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Comprehensive guide to VO2 max training with 2025 neuromuscular research, proven interval protocols, and sport-specific applications for runners and cyclists.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Updated January 2025</span>
+                                <a href="vo2-max-training-guide-2025.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Guide →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Running Pace Training Guide -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc535cd2e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Runners training at different paces for optimal performance" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Strategy</span>
+                                <span class="ml-3 text-sm text-gray-500">16 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="running-pace-training-guide-2025.html" class="hover:text-blue-600">Running Pace Training Guide 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Master the 7-zone pace framework with distance-specific strategies, negative splits, and advanced pacing techniques. Includes personal pace evolution examples.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">Published January 2025</span>
+                                <a href="running-pace-training-guide-2025.html" class="text-blue-600 hover:text-blue-800 font-medium">Read Guide →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Additional Training Articles -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Additional Training Articles</h2>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Lactate Threshold Guide -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Athlete performing lactate threshold test" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="lactate-threshold-training-guide-2025.html" class="hover:text-blue-600">Lactate Threshold Training Guide 2025</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to lactate threshold testing and training with advanced protocols and monitoring methods.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">12 min read</span>
+                                <a href="lactate-threshold-training-guide-2025.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Heart Rate Zones -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc535cd2e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Heart rate monitor displaying training zones" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="heart-rate-zones-running.html" class="hover:text-blue-600">Heart Rate Zones for Running</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Understanding heart rate zones for effective running training and performance optimization.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">8 min read</span>
+                                <a href="heart-rate-zones-running.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- VO2 Max Training Methods -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Athletes performing high-intensity interval training" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="vo2-max-training-methods.html" class="hover:text-blue-600">VO2 Max Training Methods</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Proven methods and protocols for improving your maximal oxygen uptake and aerobic power.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">10 min read</span>
+                                <a href="vo2-max-training-methods.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lactate Threshold for Triathletes -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc535cd2e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Triathlete training across multiple disciplines" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="lactate-threshold-training-triathletes.html" class="hover:text-blue-600">Lactate Threshold Training for Triathletes</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Sport-specific lactate threshold training for swim, bike, and run disciplines in triathlon.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">11 min read</span>
+                                <a href="lactate-threshold-training-triathletes.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Marathon Training Pace -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Marathon runners maintaining pace during race" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="how-to-calculate-running-pace-for-marathon-training.html" class="hover:text-blue-600">Marathon Pace Calculation</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">How to calculate and apply running pace for effective marathon training and race strategy.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">9 min read</span>
+                                <a href="how-to-calculate-running-pace-for-marathon-training.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Aerobic vs Anaerobic Training -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc535cd2e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" alt="Athletes training at different intensities" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                <a href="aerobic-vs-anaerobic-training.html" class="hover:text-blue-600">Aerobic vs Anaerobic Training</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Understanding the differences between aerobic and anaerobic training systems for optimal performance.</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-500">7 min read</span>
+                                <a href="aerobic-vs-anaerobic-training.html" class="text-blue-600 hover:text-blue-800">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- About the Author -->
+            <section class="bg-white rounded-lg shadow-lg p-8 mb-16">
+                <div class="flex items-center space-x-6">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Glen Meade - Ironman 70.3 finisher and endurance training expert" class="w-24 h-24 rounded-full object-cover">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Glen Meade</h3>
+                        <p class="text-lg text-blue-600 mb-3">Ironman 70.3 Finisher & Training Expert</p>
+                        <p class="text-gray-600">Glen is an avid cyclist and Ironman 70.3 finisher who created these tools and guides based on personal training experience and the latest exercise science research. All training protocols have been tested in real-world competitive scenarios.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Signup -->
+            <section class="bg-blue-50 rounded-lg p-8 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Stay Updated with Latest Training Insights</h3>
+                <p class="text-gray-600 mb-6">Get notified when new training guides are published with cutting-edge research and proven protocols.</p>
+                <div class="max-w-md mx-auto flex space-x-3">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200">Subscribe</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-300">Your ultimate resource for endurance sports calculations and training guidance.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Calculators</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../heart-rate-zones" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="../running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="../bike-gearing-calculator" class="hover:text-white">Bike Gearing</a></li>
+                        <li><a href="../vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Training Guides</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="what-is-zone-2-training-complete-guide.html" class="hover:text-white">Zone 2 Training</a></li>
+                        <li><a href="vo2-max-training-guide-2025.html" class="hover:text-white">VO2 Max Training</a></li>
+                        <li><a href="running-pace-training-guide-2025.html" class="hover:text-white">Running Pace Training</a></li>
+                        <li><a href="ftp-training-guide-2025.html" class="hover:text-white">FTP Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">About</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="../blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "RunBikeCalc Training Guides",
+        "description": "Expert training guides for runners, cyclists, and triathletes with 2025 research and personal experience",
+        "url": "https://runbikecalc.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Glen Meade",
+            "description": "Ironman 70.3 finisher and endurance training expert"
+        }
+    }
+    </script>
+</body>
+</html>

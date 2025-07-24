@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Pace Calculator 2025 - Calculate Optimal Running Paces for 5K, 10K, Half Marathon & Marathon</title>
+    <meta name="description" content="Calculate your optimal race pace for any distance with training recommendations. Free race pace calculator with split times, negative split strategy, and personalized training zones.">
+    <meta name="keywords" content="race pace calculator, running pace calculator, marathon pace, half marathon pace, 5k pace, 10k pace, race strategy 2025">
+    <link rel="canonical" href="https://runbikecalc.com/race-pace-calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Race Pace Calculator 2025 - Optimal Running Paces & Training">
+    <meta property="og:description" content="Calculate your optimal race pace for any distance with training recommendations and split times.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://runbikecalc.com/race-pace-calculator">
+    <meta property="og:type" content="website">
+    
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">RunBikeCalc</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-200">Home</a>
+                <div class="relative group">
+                    <button class="hover:text-blue-200 flex items-center">
+                        Calculators
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-1">
+                            <a href="heart-rate-zones" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                            <a href="running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                            <a href="bike-gearing-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bike Gearing</a>
+                            <a href="vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                            <a href="calorie-burn-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Calorie Burn</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog" class="hover:text-blue-200">Blog</a>
+                <a href="about.html" class="hover:text-blue-200">About</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <nav class="text-sm mb-6">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+                </li>
+                <li class="flex items-center mx-2">
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="running" class="text-blue-600 hover:text-blue-800">Running</a>
+                </li>
+                <li class="flex items-center mx-2">
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li class="text-gray-500">Race Pace Calculator</li>
+            </ol>
+        </nav>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Race Pace Calculator</h1>
+                <p class="text-xl text-gray-600 mb-6">Calculate your optimal race pace for any distance with training recommendations and split times</p>
+                <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" alt="Runners at race start line preparing for optimal pacing strategy" class="w-full h-64 object-cover rounded-lg shadow-lg">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Calculator Form -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Race Pace Calculator</h2>
+                    
+                    <form id="racePaceForm" class="space-y-6">
+                        <!-- Input Method Selection -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Choose Input Method:</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="inputMethod" value="recentRace" class="mr-2" checked>
+                                    <span>Recent Race Time</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="inputMethod" value="targetTime" class="mr-2">
+                                    <span>Target Race Time</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="inputMethod" value="vo2max" class="mr-2">
+                                    <span>VO2 Max</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Recent Race Input -->
+                        <div id="recentRaceInput" class="input-section">
+                            <label for="recentDistance" class="block text-sm font-medium text-gray-700 mb-2">Recent Race Distance</label>
+                            <select id="recentDistance" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="5k">5K</option>
+                                <option value="10k">10K</option>
+                                <option value="15k">15K</option>
+                                <option value="half">Half Marathon</option>
+                                <option value="marathon">Marathon</option>
+                                <option value="custom">Custom Distance</option>
+                            </select>
+
+                            <div id="customDistanceInput" class="mt-4 hidden">
+                                <label for="customDistance" class="block text-sm font-medium text-gray-700 mb-2">Custom Distance (km)</label>
+                                <input type="number" id="customDistance" step="0.1" min="1" max="200" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+
+                            <label for="recentTime" class="block text-sm font-medium text-gray-700 mb-2 mt-4">Recent Race Time</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div>
+                                    <input type="number" id="recentHours" min="0" max="23" placeholder="Hours" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <input type="number" id="recentMinutes" min="0" max="59" placeholder="Minutes" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <input type="number" id="recentSeconds" min="0" max="59" placeholder="Seconds" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Target Time Input -->
+                        <div id="targetTimeInput" class="input-section hidden">
+                            <label for="targetDistance" class="block text-sm font-medium text-gray-700 mb-2">Target Race Distance</label>
+                            <select id="targetDistance" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="5k">5K</option>
+                                <option value="10k">10K</option>
+                                <option value="15k">15K</option>
+                                <option value="half">Half Marathon</option>
+                                <option value="marathon">Marathon</option>
+                            </select>
+
+                            <label for="targetTime" class="block text-sm font-medium text-gray-700 mb-2 mt-4">Target Race Time</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div>
+                                    <input type="number" id="targetHours" min="0" max="23" placeholder="Hours" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <input type="number" id="targetMinutes" min="0" max="59" placeholder="Minutes" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <input type="number" id="targetSeconds" min="0" max="59" placeholder="Seconds" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VO2 Max Input -->
+                        <div id="vo2maxInput" class="input-section hidden">
+                            <label for="vo2max" class="block text-sm font-medium text-gray-700 mb-2">VO2 Max (ml/kg/min)</label>
+                            <input type="number" id="vo2max" step="0.1" min="30" max="90" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+
+                            <label for="vo2Distance" class="block text-sm font-medium text-gray-700 mb-2 mt-4">Target Race Distance</label>
+                            <select id="vo2Distance" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="5k">5K</option>
+                                <option value="10k">10K</option>
+                                <option value="15k">15K</option>
+                                <option value="half">Half Marathon</option>
+                                <option value="marathon">Marathon</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Options -->
+                        <div>
+                            <label for="raceConditions" class="block text-sm font-medium text-gray-700 mb-2">Race Conditions</label>
+                            <select id="raceConditions" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="ideal">Ideal (Cool, No Wind, Flat)</option>
+                                <option value="hot">Hot Weather (75°F+)</option>
+                                <option value="hilly">Hilly Course</option>
+                                <option value="windy">Windy Conditions</option>
+                                <option value="challenging">Very Challenging (Hot + Hilly)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="experienceLevel" class="block text-sm font-medium text-gray-700 mb-2">Running Experience</label>
+                            <select id="experienceLevel" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="beginner">Beginner (0-2 years)</option>
+                                <option value="intermediate">Intermediate (2-5 years)</option>
+                                <option value="advanced">Advanced (5+ years)</option>
+                                <option value="elite">Elite/Competitive</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200">
+                            Calculate Race Pace
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Race Strategy</h2>
+                    <div id="results" class="hidden">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                    <div id="defaultMessage" class="text-center text-gray-500 py-8">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        <p>Enter your race information to get personalized pace recommendations and training zones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Content -->
+            <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Use Your Race Pace Strategy</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Pacing Strategy Tips</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Start conservatively:</strong> Begin 10-15 seconds per mile slower than goal pace</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Settle into rhythm:</strong> Find your target pace by mile 3-5</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Stay consistent:</strong> Maintain even effort through the middle miles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Finish strong:</strong> Gradually increase pace in final 25% if feeling good</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Training Applications</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Tempo runs:</strong> Practice race pace for 20-40 minute segments</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Race simulation:</strong> Practice goal pace during long runs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Interval training:</strong> Use faster paces for speed development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>Recovery runs:</strong> Use easy pace for active recovery days</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-900 mb-3">Pro Tip: Negative Split Strategy</h3>
+                    <p class="text-blue-800">For races longer than 10K, consider running the first half 1-2% slower than goal pace and the second half 1-2% faster. This strategy helps you finish strong and often results in faster overall times.</p>
+                </div>
+            </div>
+
+            <!-- Related Tools -->
+            <div class="mt-12 bg-gray-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Training Tools</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="running-pace-calculator" class="block bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Running Pace Calculator</h3>
+                        <p class="text-gray-600">Calculate pace for any distance and time combination</p>
+                    </a>
+                    <a href="heart-rate-zones" class="block bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zones</h3>
+                        <p class="text-gray-600">Determine your optimal training heart rate zones</p>
+                    </a>
+                    <a href="vo2-max-calculator" class="block bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">VO2 Max Calculator</h3>
+                        <p class="text-gray-600">Estimate your aerobic fitness level</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-300">Your ultimate resource for endurance sports calculations and training guidance.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Calculators</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="heart-rate-zones" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="bike-gearing-calculator" class="hover:text-white">Bike Gearing</a></li>
+                        <li><a href="vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Training Guides</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="blog/what-is-zone-2-training-complete-guide.html" class="hover:text-white">Zone 2 Training</a></li>
+                        <li><a href="blog/vo2-max-training-guide-2025.html" class="hover:text-white">VO2 Max Training</a></li>
+                        <li><a href="blog/running-pace-training-guide-2025.html" class="hover:text-white">Running Pace Training</a></li>
+                        <li><a href="blog/ftp-training-guide-2025.html" class="hover:text-white">FTP Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">About</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calculator-base.js"></script>
+    <script src="js/race-pace-calculator.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Race Pace Calculator",
+        "description": "Calculate your optimal race pace for any distance with training recommendations and split times.",
+        "url": "https://runbikecalc.com/race-pace-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        }
+    }
+    </script>
+</body>
+</html>

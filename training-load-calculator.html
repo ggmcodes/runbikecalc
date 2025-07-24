@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Load Calculator 2025 - Manage Training Stress & Recovery for Optimal Performance</title>
+    <meta name="description" content="Calculate training stress score (TSS), chronic training load (CTL), and acute training load (ATL) to optimize your training and prevent overtraining. Free training load calculator.">
+    <meta name="keywords" content="training load calculator, TSS calculator, training stress score, CTL ATL, training peaks, periodization calculator 2025">
+    <link rel="canonical" href="https://runbikecalc.com/training-load-calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Training Load Calculator 2025 - Optimize Training & Recovery">
+    <meta property="og:description" content="Calculate training stress and manage your training load for optimal performance and recovery.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://runbikecalc.com/training-load-calculator">
+    <meta property="og:type" content="website">
+    
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">RunBikeCalc</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-200">Home</a>
+                <div class="relative group">
+                    <button class="hover:text-blue-200 flex items-center">
+                        Calculators
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-1">
+                            <a href="heart-rate-zones" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Heart Rate Zones</a>
+                            <a href="running-pace-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Running Pace</a>
+                            <a href="bike-gearing-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bike Gearing</a>
+                            <a href="vo2-max-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">VO2 Max</a>
+                            <a href="calorie-burn-calculator" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Calorie Burn</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog" class="hover:text-blue-200">Blog</a>
+                <a href="about.html" class="hover:text-blue-200">About</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <nav class="text-sm mb-6">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+                </li>
+                <li class="flex items-center mx-2">
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="utility" class="text-blue-600 hover:text-blue-800">Utility</a>
+                </li>
+                <li class="flex items-center mx-2">
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li class="text-gray-500">Training Load Calculator</li>
+            </ol>
+        </nav>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Training Load Calculator</h1>
+                <p class="text-xl text-gray-600 mb-6">Calculate training stress, manage fatigue, and optimize your periodization strategy</p>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" alt="Athlete analyzing training load data for optimal performance" class="w-full h-64 object-cover rounded-lg shadow-lg">
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Input Panel -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-lg p-6 sticky top-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Training Data</h2>
+                        
+                        <form id="trainingLoadForm" class="space-y-6">
+                            <!-- Athlete Profile -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">Athlete Profile</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="sport" class="block text-sm font-medium text-gray-700 mb-2">Primary Sport</label>
+                                        <select id="sport" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="running">Running</option>
+                                            <option value="cycling">Cycling</option>
+                                            <option value="triathlon">Triathlon</option>
+                                            <option value="swimming">Swimming</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="experienceLevel" class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
+                                        <select id="experienceLevel" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="beginner">Beginner (0-2 years)</option>
+                                            <option value="intermediate">Intermediate (2-5 years)</option>
+                                            <option value="advanced">Advanced (5+ years)</option>
+                                            <option value="elite">Elite/Professional</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="baselineFTP" class="block text-sm font-medium text-gray-700 mb-2">Baseline FTP/Threshold (watts or pace)</label>
+                                        <input type="number" id="baselineFTP" step="1" min="100" max="500" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="250">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Training Session -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">Add Training Session</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="sessionDate" class="block text-sm font-medium text-gray-700 mb-2">Session Date</label>
+                                        <input type="date" id="sessionDate" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    </div>
+
+                                    <div>
+                                        <label for="sessionType" class="block text-sm font-medium text-gray-700 mb-2">Session Type</label>
+                                        <select id="sessionType" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="recovery">Recovery/Easy</option>
+                                            <option value="endurance">Endurance/Base</option>
+                                            <option value="tempo">Tempo/Threshold</option>
+                                            <option value="vo2max">VO2 Max/Intervals</option>
+                                            <option value="anaerobic">Anaerobic/Neuromuscular</option>
+                                            <option value="race">Race/Time Trial</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="duration" class="block text-sm font-medium text-gray-700 mb-2">Duration (minutes)</label>
+                                        <input type="number" id="duration" min="15" max="480" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="60">
+                                    </div>
+
+                                    <div>
+                                        <label for="intensity" class="block text-sm font-medium text-gray-700 mb-2">Intensity Factor (IF)</label>
+                                        <input type="number" id="intensity" step="0.01" min="0.5" max="1.5" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="0.85">
+                                        <p class="text-xs text-gray-500 mt-1">0.5 = Recovery, 0.7 = Endurance, 0.85 = Tempo, 1.0 = Threshold, 1.2+ = High Intensity</p>
+                                    </div>
+
+                                    <div>
+                                        <label for="rpe" class="block text-sm font-medium text-gray-700 mb-2">RPE (Rate of Perceived Exertion)</label>
+                                        <select id="rpe" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            <option value="1">1 - Very Easy</option>
+                                            <option value="2">2 - Easy</option>
+                                            <option value="3">3 - Moderate</option>
+                                            <option value="4">4 - Somewhat Hard</option>
+                                            <option value="5">5 - Hard</option>
+                                            <option value="6">6 - Hard+</option>
+                                            <option value="7">7 - Very Hard</option>
+                                            <option value="8">8 - Very Hard+</option>
+                                            <option value="9">9 - Max Effort</option>
+                                            <option value="10">10 - Maximal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="trainingLoadCalc.addSession()" class="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-200">
+                                    Add Session
+                                </button>
+                                <button type="submit" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">
+                                    Calculate Load
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="lg:col-span-2">
+                    <div class="space-y-6">
+                        <!-- Current Metrics -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Current Training Metrics</h2>
+                            <div id="currentMetrics" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <!-- Metrics will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Training Load Chart -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-4">Training Load Trends</h2>
+                            <div class="h-64">
+                                <canvas id="trainingLoadChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Training Sessions Log -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-4">Recent Training Sessions</h2>
+                            <div id="sessionsList" class="space-y-3">
+                                <p class="text-gray-500 text-center py-4">Add training sessions to see your training log</p>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-4">Training Recommendations</h2>
+                            <div id="recommendations" class="space-y-4">
+                                <!-- Recommendations will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Periodization Calendar -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-4">Periodization Calendar</h2>
+                            <div id="periodizationCalendar">
+                                <!-- Calendar will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Content -->
+            <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Understanding Training Load Metrics</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Metrics Explained</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold text-gray-900">TSS (Training Stress Score)</h4>
+                                <p class="text-gray-600 text-sm">Quantifies the training stress of a single workout based on intensity and duration.</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-semibold text-gray-900">CTL (Chronic Training Load)</h4>
+                                <p class="text-gray-600 text-sm">Your fitness level - represents long-term training adaptations over 42 days.</p>
+                            </div>
+                            <div class="border-l-4 border-yellow-500 pl-4">
+                                <h4 class="font-semibold text-gray-900">ATL (Acute Training Load)</h4>
+                                <p class="text-gray-600 text-sm">Your fatigue level - represents recent training stress over 7 days.</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-semibold text-gray-900">TSB (Training Stress Balance)</h4>
+                                <p class="text-gray-600 text-sm">Your form/freshness - calculated as CTL minus ATL. Positive values indicate freshness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Training Load Guidelines</h3>
+                        <div class="space-y-3">
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-900">TSB: +10 to +25</h4>
+                                <p class="text-green-800 text-sm">Peak form - ideal for racing and key workouts</p>
+                            </div>
+                            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-yellow-900">TSB: -10 to +10</h4>
+                                <p class="text-yellow-800 text-sm">Training ready - good for quality training sessions</p>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-orange-900">TSB: -30 to -10</h4>
+                                <p class="text-orange-800 text-sm">Productive overreaching - building fitness but watch fatigue</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-900">TSB: Below -30</h4>
+                                <p class="text-red-800 text-sm">High fatigue risk - consider rest or reduced training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-900 mb-3">Pro Tip: Periodization Strategy</h3>
+                    <p class="text-blue-800">Build your CTL gradually during base phases (3-8 TSS points per week), maintain it during build phases, and reduce training 7-14 days before key events to optimize TSB for peak performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-300">Your ultimate resource for endurance sports calculations and training guidance.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Calculators</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="heart-rate-zones" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="bike-gearing-calculator" class="hover:text-white">Bike Gearing</a></li>
+                        <li><a href="vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="race-pace-calculator" class="hover:text-white">Race Pace Calculator</a></li>
+                        <li><a href="training-load-calculator" class="hover:text-white">Training Load Calculator</a></li>
+                        <li><a href="zone-2-training-plan-generator" class="hover:text-white">Zone 2 Training Plans</a></li>
+                        <li><a href="advanced-heart-rate-zones-calculator" class="hover:text-white">Advanced HR Zones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-3">About</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calculator-base.js"></script>
+    <script src="js/training-load-calculator.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Training Load Calculator",
+        "description": "Calculate training stress score (TSS), chronic training load (CTL), and acute training load (ATL) to optimize your training and prevent overtraining.",
+        "url": "https://runbikecalc.com/training-load-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        }
+    }
+    </script>
+</body>
+</html>

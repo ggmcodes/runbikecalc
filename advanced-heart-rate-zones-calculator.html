@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Heart Rate Zones Calculator 2025 - Personalized Training Zones | RunBikeCalc</title>
+    <meta name="description" content="Calculate personalized heart rate training zones with our advanced 2025 calculator. Features multiple zone systems, sport-specific adjustments, and AI-powered recommendations for optimal training.">
+    <meta name="keywords" content="heart rate zones calculator 2025, training zones calculator, heart rate training zones, personalized heart rate zones, zone calculation methods, heart rate zone comparison">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Advanced Heart Rate Zones Calculator 2025 - Personalized Training Zones">
+    <meta property="og:description" content="Calculate personalized heart rate training zones with multiple zone systems and sport-specific adjustments for optimal training.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/advanced-heart-rate-zones-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-heart-rate-zones-calculator.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/advanced-heart-rate-zones-calculator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Advanced Heart Rate Zones Calculator",
+        "description": "Calculate personalized heart rate training zones with multiple zone systems and sport-specific adjustments for optimal training.",
+        "url": "https://runbikecalc.com/advanced-heart-rate-zones-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link hover:text-primary">Home</a>
+                    <a href="/heart-rate-tools" class="nav-link hover:text-primary">HR</a>
+                    <a href="/running-tools" class="nav-link hover:text-primary">Run</a>
+                    <a href="/cycling-tools" class="nav-link hover:text-primary">Bike</a>
+                    <a href="/vo2-tools" class="nav-link hover:text-primary">VO2</a>
+                    <a href="/utility-tools" class="nav-link hover:text-primary">Tools</a>
+                    <a href="/blog" class="nav-link hover:text-primary">Blog</a>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
+                    <a href="/running-tools" class="mobile-menu-item">Run</a>
+                    <a href="/cycling-tools" class="mobile-menu-item">Bike</a>
+                    <a href="/vo2-tools" class="mobile-menu-item">VO2</a>
+                    <a href="/utility-tools" class="mobile-menu-item">Tools</a>
+                    <a href="/blog" class="mobile-link hover:text-primary">Blog</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav aria-label="Breadcrumb" class="mb-6">
+                <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                    <li><a href="/" class="hover:text-primary">Home</a></li>
+                    <li class="before:content-['/'] before:mx-2"><a href="/heart-rate-tools" class="hover:text-primary">Heart Rate Tools</a></li>
+                    <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Advanced Heart Rate Zones Calculator</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Advanced Heart Rate Zones Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate personalized heart rate training zones using multiple methodologies. Compare different zone systems, get sport-specific adjustments, and receive AI-powered training recommendations.
+            </p>
+        </div>
+
+        <!-- Feature Highlights -->
+        <div class="max-w-6xl mx-auto mb-12">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">5 Zone Systems</h3>
+                    <p class="text-gray-600">Compare Karvonen, LTHR, Coggan, Friel, and basic age-based zones</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏃</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Sport-Specific</h3>
+                    <p class="text-gray-600">Adjustments for running, cycling, swimming, and other endurance sports</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Visual Comparison</h3>
+                    <p class="text-gray-600">Side-by-side zone comparison with interactive charts and recommendations</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">AI Recommendations</h3>
+                    <p class="text-gray-600">Personalized training advice based on your physiology and goals</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <form id="hr-zones-form" class="space-y-8">
+                    <!-- Basic Information -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Basic Information</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years)
+                                </label>
+                                <input type="number" id="age" class="calc-input-number" placeholder="35" min="15" max="80" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Your current age</p>
+                            </div>
+
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender
+                                </label>
+                                <select id="gender" class="calc-input-number" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other/Prefer not to say</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Used for max HR estimation refinement</p>
+                            </div>
+
+                            <div>
+                                <label for="resting-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="resting-hr" class="calc-input-number" placeholder="55" min="35" max="100" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Morning resting HR (required for Karvonen method)</p>
+                            </div>
+
+                            <div>
+                                <label for="fitness-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Fitness Level
+                                </label>
+                                <select id="fitness-level" class="calc-input-number" required>
+                                    <option value="">Select fitness level</option>
+                                    <option value="sedentary">Sedentary (no regular exercise)</option>
+                                    <option value="beginner">Beginner (0-1 years training)</option>
+                                    <option value="intermediate">Intermediate (1-3 years training)</option>
+                                    <option value="advanced">Advanced (3-5 years training)</option>
+                                    <option value="elite">Elite (5+ years, competitive)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your training background</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heart Rate Data -->
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Heart Rate Data (Optional but Recommended)</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="max-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Maximum Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="max-hr" class="calc-input-number" placeholder="185" min="150" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Known max HR from testing (leave blank for estimation)</p>
+                            </div>
+
+                            <div>
+                                <label for="lthr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Lactate Threshold HR (bpm)
+                                </label>
+                                <input type="number" id="lthr" class="calc-input-number" placeholder="165" min="120" max="200" step="1">
+                                <p class="text-sm text-gray-500 mt-1">From 30-min time trial or lab testing</p>
+                            </div>
+
+                            <div>
+                                <label for="anaerobic-threshold" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Anaerobic Threshold HR (bpm)
+                                </label>
+                                <input type="number" id="anaerobic-threshold" class="calc-input-number" placeholder="175" min="130" max="210" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Higher intensity threshold (if known)</p>
+                            </div>
+
+                            <div>
+                                <label for="hr-drift" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Typical HR Drift (bpm/hour)
+                                </label>
+                                <input type="number" id="hr-drift" class="calc-input-number" placeholder="5" min="0" max="20" step="1">
+                                <p class="text-sm text-gray-500 mt-1">How much HR increases during long efforts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sport and Training Preferences -->
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Sport and Training Preferences</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="primary-sport" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Sport
+                                </label>
+                                <select id="primary-sport" class="calc-input-number" required>
+                                    <option value="">Select primary sport</option>
+                                    <option value="running">Running</option>
+                                    <option value="cycling">Cycling</option>
+                                    <option value="triathlon">Triathlon</option>
+                                    <option value="swimming">Swimming</option>
+                                    <option value="rowing">Rowing</option>
+                                    <option value="cross-country-skiing">Cross-Country Skiing</option>
+                                    <option value="general-fitness">General Fitness</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Sport-specific zone adjustments</p>
+                            </div>
+
+                            <div>
+                                <label for="training-goal" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Training Goal
+                                </label>
+                                <select id="training-goal" class="calc-input-number" required>
+                                    <option value="">Select training goal</option>
+                                    <option value="general-fitness">General fitness and health</option>
+                                    <option value="weight-loss">Weight loss and fat burning</option>
+                                    <option value="endurance-base">Aerobic base building</option>
+                                    <option value="race-performance">Race performance</option>
+                                    <option value="marathon-ultra">Marathon/Ultra endurance</option>
+                                    <option value="short-distance">5K-10K speed</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Goal-specific zone emphasis</p>
+                            </div>
+
+                            <div>
+                                <label for="training-environment" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Environment
+                                </label>
+                                <select id="training-environment" class="calc-input-number">
+                                    <option value="sea-level">Sea level</option>
+                                    <option value="moderate-altitude">Moderate altitude (3,000-6,000 ft)</option>
+                                    <option value="high-altitude">High altitude (6,000+ ft)</option>
+                                    <option value="variable">Variable altitude</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Altitude affects heart rate response</p>
+                            </div>
+
+                            <div>
+                                <label for="temperature-preference" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Typical Training Temperature
+                                </label>
+                                <select id="temperature-preference" class="calc-input-number">
+                                    <option value="cool">Cool (50-65°F / 10-18°C)</option>
+                                    <option value="moderate">Moderate (65-75°F / 18-24°C)</option>
+                                    <option value="warm">Warm (75-85°F / 24-29°C)</option>
+                                    <option value="hot">Hot (85°F+ / 29°C+)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Temperature affects zone targets</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone System Preferences -->
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Zone System Preferences</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-3">
+                                    Zone Systems to Compare
+                                </label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="include-basic" class="mr-2" checked>
+                                        <span class="text-sm">Basic Age-Based (220-age)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="include-karvonen" class="mr-2" checked>
+                                        <span class="text-sm">Karvonen (Heart Rate Reserve)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="include-lthr" class="mr-2" checked>
+                                        <span class="text-sm">LTHR-Based Zones</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="include-coggan" class="mr-2" checked>
+                                        <span class="text-sm">Coggan Power Zones (HR)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="include-friel" class="mr-2">
+                                        <span class="text-sm">Friel Training Zones</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="zone-precision" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Zone Precision
+                                </label>
+                                <select id="zone-precision" class="calc-input-number">
+                                    <option value="standard">Standard (±2 bpm)</option>
+                                    <option value="precise">Precise (±1 bpm)</option>
+                                    <option value="conservative">Conservative (±3 bpm)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Zone boundary precision preference</p>
+                            </div>
+
+                            <div>
+                                <label for="hr-monitor-accuracy" class="block text-sm font-medium text-gray-700 mb-2">
+                                    HR Monitor Accuracy
+                                </label>
+                                <select id="hr-monitor-accuracy" class="calc-input-number">
+                                    <option value="chest-strap">Chest strap (±1 bpm)</option>
+                                    <option value="wrist-optical">Wrist optical (±3-5 bpm)</option>
+                                    <option value="basic-monitor">Basic monitor (±5-10 bpm)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Adjust recommendations for monitor type</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="calc-button">Calculate Heart Rate Zones</button>
+                        <button type="button" id="share-zones" class="calc-button-secondary">Share Results</button>
+                        <button type="reset" class="calc-button-secondary">Reset</button>
+                    </div>
+                </form>
+
+                <!-- Results Section -->
+                <div id="hr-zones-result" class="mt-12 hidden">
+                    <div class="calc-result">
+                        <!-- Overview Stats -->
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl font-bold text-primary mb-4">Your Heart Rate Training Zones</h2>
+                            <div class="grid md:grid-cols-4 gap-4">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-800" id="estimated-max-hr">185</div>
+                                    <div class="text-sm text-blue-600">Estimated Max HR</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-800" id="resting-display">55</div>
+                                    <div class="text-sm text-green-600">Resting HR</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-800" id="hr-reserve">130</div>
+                                    <div class="text-sm text-purple-600">HR Reserve</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-800" id="zone-systems-count">4</div>
+                                    <div class="text-sm text-orange-600">Zone Systems</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zone Comparison Table -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Zone System Comparison</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm border-collapse border border-gray-300">
+                                    <thead>
+                                        <tr class="bg-gray-50">
+                                            <th class="border border-gray-300 p-3 text-left">Zone</th>
+                                            <th class="border border-gray-300 p-3 text-center">Name</th>
+                                            <th class="border border-gray-300 p-3 text-center" id="system1-header">Karvonen</th>
+                                            <th class="border border-gray-300 p-3 text-center" id="system2-header">LTHR</th>
+                                            <th class="border border-gray-300 p-3 text-center" id="system3-header">Coggan</th>
+                                            <th class="border border-gray-300 p-3 text-center">Purpose</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="zones-comparison-table">
+                                        <!-- Zone comparison will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Zone System -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">AI-Powered Recommendation</h3>
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                                <h4 class="font-semibold text-green-800 mb-3">🤖 Recommended Zone System for You</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-green-700 mb-2" id="recommended-system">Karvonen Method</h5>
+                                        <p class="text-green-700 text-sm" id="recommendation-reason">
+                                            Based on your fitness level and available heart rate data, the Karvonen method provides the most personalized zones.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-green-700 mb-2">Your Optimal Zones:</h5>
+                                        <div class="space-y-1 text-sm" id="recommended-zones">
+                                            <!-- Recommended zones will be populated here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Training Recommendations -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Personalized Training Recommendations</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-3">Weekly Training Distribution</h4>
+                                    <div class="space-y-2 text-sm" id="training-distribution">
+                                        <!-- Training distribution will be populated here -->
+                                    </div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-3">Sport-Specific Adjustments</h4>
+                                    <div class="space-y-2 text-sm" id="sport-adjustments">
+                                        <!-- Sport adjustments will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Environmental Considerations -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+                            <h4 class="font-semibold text-yellow-800 mb-3">Environmental Considerations</h4>
+                            <div class="text-yellow-800 text-sm" id="environmental-advice">
+                                <!-- Environmental advice will be populated here -->
+                            </div>
+                        </div>
+
+                        <!-- Zone Details -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Detailed Zone Breakdown</h3>
+                            <div class="grid md:grid-cols-5 gap-4" id="zone-details">
+                                <!-- Zone detail cards will be populated here -->
+                            </div>
+                        </div>
+
+                        <!-- Visual Chart Placeholder -->
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+                            <h4 class="font-semibold text-gray-800 mb-3">Heart Rate Zone Visualization</h4>
+                            <div class="h-64 flex items-center justify-center bg-white rounded border" id="zone-chart">
+                                <p class="text-gray-500">Interactive zone chart would appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Heart Rate Training Zones</h2>
+                
+                <p>Heart rate training zones provide a scientific framework for organizing training intensity to maximize specific physiological adaptations. This advanced calculator compares multiple zone systems to help you find the most appropriate method for your physiology and goals.</p>
+
+                <h3>Zone System Comparison</h3>
+
+                <h4>1. Karvonen Method (Heart Rate Reserve)</h4>
+                <p>Uses the difference between maximum and resting heart rate to calculate personalized zones. Most accurate for individuals with known resting and maximum heart rates.</p>
+
+                <h4>2. LTHR-Based Zones</h4>
+                <p>Anchored to lactate threshold heart rate, providing sport-specific and fitness-level appropriate zones. Ideal for trained athletes with known threshold values.</p>
+
+                <h4>3. Coggan Power Zones (HR)</h4>
+                <p>Originally designed for power training but adapted for heart rate. Emphasizes the distinction between aerobic and anaerobic training zones.</p>
+
+                <h4>4. Friel Training Zones</h4>
+                <p>Detailed 7-zone system providing precise training targets. Popular among coaches for its specificity and progression clarity.</p>
+
+                <h4>5. Basic Age-Based Method</h4>
+                <p>Simple 220-age formula providing general zones. Least accurate but useful as a starting point for beginners.</p>
+
+                <h3>Sport-Specific Considerations</h3>
+
+                <h4>Running</h4>
+                <p>Higher heart rates due to impact and full body recruitment. Standard zones typically apply without modification.</p>
+
+                <h4>Cycling</h4>
+                <p>Slightly lower heart rates due to supported position. May require 5-10 beat upward adjustment for equivalent training stress.</p>
+
+                <h4>Swimming</h4>
+                <p>Significantly lower heart rates due to horizontal position and water cooling. Typically 10-15 beats lower than running zones.</p>
+
+                <h3>Environmental Factors</h3>
+
+                <h4>Altitude</h4>
+                <p>Higher altitudes increase heart rate at submaximal intensities. Zones may need adjustment above 3,000 feet elevation.</p>
+
+                <h4>Temperature</h4>
+                <p>Heat increases heart rate for the same exercise intensity. Hot weather training may require zone modifications.</p>
+
+                <h4>Humidity</h4>
+                <p>High humidity impairs cooling and elevates heart rate. Consider 5-10 beat upward drift in humid conditions.</p>
+
+                <p>This calculator accounts for these factors to provide the most accurate and practical heart rate zones for your specific situation.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes. Optimize your training with precise calculations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Heart Rate Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/advanced-heart-rate-zones-calculator" class="hover:text-white">Advanced HR Zones</a></li>
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/lactate-threshold-calculator" class="hover:text-white">Lactate Threshold</a></li>
+                        <li><a href="/max-heart-rate-calculator" class="hover:text-white">Max Heart Rate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-training-plan-generator" class="hover:text-white">Zone 2 Training Plans</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Advanced Heart Rate Zones Calculator
+        class AdvancedHRZonesCalculator extends Calculator {
+            constructor() {
+                super('hr-zones-form', 'hr-zones-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                // Extract form data
+                const age = parseInt(formData.get('age'));
+                const gender = formData.get('gender');
+                const restingHR = parseInt(formData.get('resting-hr'));
+                const fitnessLevel = formData.get('fitness-level');
+                
+                const maxHR = parseInt(formData.get('max-hr')) || this.estimateMaxHR(age, gender, fitnessLevel);
+                const lthr = parseInt(formData.get('lthr')) || Math.round(maxHR * 0.85);
+                const anaerobicThreshold = parseInt(formData.get('anaerobic-threshold')) || Math.round(maxHR * 0.92);
+                
+                const primarySport = formData.get('primary-sport');
+                const trainingGoal = formData.get('training-goal');
+                const environment = formData.get('training-environment');
+                const temperature = formData.get('temperature-preference');
+                
+                // Calculate HR reserve
+                const hrReserve = maxHR - restingHR;
+
+                // Determine which zone systems to include
+                const includedSystems = this.getIncludedSystems();
+                
+                // Calculate zones for each system
+                const zoneSystems = {};
+                
+                if (includedSystems.basic) {
+                    zoneSystems.basic = this.calculateBasicZones(maxHR);
+                }
+                
+                if (includedSystems.karvonen) {
+                    zoneSystems.karvonen = this.calculateKarvonenZones(maxHR, restingHR, hrReserve);
+                }
+                
+                if (includedSystems.lthr) {
+                    zoneSystems.lthr = this.calculateLTHRZones(lthr);
+                }
+                
+                if (includedSystems.coggan) {
+                    zoneSystems.coggan = this.calculateCogganZones(lthr);
+                }
+                
+                if (includedSystems.friel) {
+                    zoneSystems.friel = this.calculateFrielZones(lthr);
+                }
+
+                // Apply sport-specific adjustments
+                const adjustedSystems = this.applySportAdjustments(zoneSystems, primarySport);
+
+                // Generate recommendations
+                const recommendation = this.generateRecommendation(formData, adjustedSystems);
+                const trainingDistribution = this.generateTrainingDistribution(trainingGoal, fitnessLevel);
+                const environmentalAdvice = this.generateEnvironmentalAdvice(environment, temperature, primarySport);
+
+                return {
+                    maxHR,
+                    restingHR,
+                    hrReserve,
+                    zoneSystems: adjustedSystems,
+                    systemCount: Object.keys(adjustedSystems).length,
+                    recommendation,
+                    trainingDistribution,
+                    environmentalAdvice
+                };
+            }
+
+            estimateMaxHR(age, gender, fitnessLevel) {
+                let baseMaxHR = 220 - age;
+                
+                // Gender adjustments
+                if (gender === 'female') {
+                    baseMaxHR = 226 - age; // Tanaka formula for women
+                }
+                
+                // Fitness level adjustments
+                const fitnessAdjustments = {
+                    'sedentary': -5,
+                    'beginner': 0,
+                    'intermediate': 2,
+                    'advanced': 3,
+                    'elite': 5
+                };
+                
+                return Math.round(baseMaxHR + (fitnessAdjustments[fitnessLevel] || 0));
+            }
+
+            getIncludedSystems() {
+                return {
+                    basic: document.getElementById('include-basic').checked,
+                    karvonen: document.getElementById('include-karvonen').checked,
+                    lthr: document.getElementById('include-lthr').checked,
+                    coggan: document.getElementById('include-coggan').checked,
+                    friel: document.getElementById('include-friel').checked
+                };
+            }
+
+            calculateBasicZones(maxHR) {
+                return {
+                    name: 'Basic Age-Based',
+                    zones: [
+                        { zone: 1, name: 'Recovery', min: Math.round(maxHR * 0.50), max: Math.round(maxHR * 0.60), purpose: 'Active recovery' },
+                        { zone: 2, name: 'Aerobic Base', min: Math.round(maxHR * 0.60), max: Math.round(maxHR * 0.70), purpose: 'Fat burning, base building' },
+                        { zone: 3, name: 'Aerobic', min: Math.round(maxHR * 0.70), max: Math.round(maxHR * 0.80), purpose: 'Aerobic development' },
+                        { zone: 4, name: 'Threshold', min: Math.round(maxHR * 0.80), max: Math.round(maxHR * 0.90), purpose: 'Lactate threshold' },
+                        { zone: 5, name: 'VO2 Max', min: Math.round(maxHR * 0.90), max: Math.round(maxHR * 1.00), purpose: 'Maximum aerobic power' }
+                    ]
+                };
+            }
+
+            calculateKarvonenZones(maxHR, restingHR, hrReserve) {
+                return {
+                    name: 'Karvonen (HR Reserve)',
+                    zones: [
+                        { zone: 1, name: 'Recovery', 
+                          min: Math.round(restingHR + hrReserve * 0.50), 
+                          max: Math.round(restingHR + hrReserve * 0.60), 
+                          purpose: 'Active recovery' },
+                        { zone: 2, name: 'Aerobic Base', 
+                          min: Math.round(restingHR + hrReserve * 0.60), 
+                          max: Math.round(restingHR + hrReserve * 0.70), 
+                          purpose: 'Fat burning, base building' },
+                        { zone: 3, name: 'Aerobic', 
+                          min: Math.round(restingHR + hrReserve * 0.70), 
+                          max: Math.round(restingHR + hrReserve * 0.80), 
+                          purpose: 'Aerobic development' },
+                        { zone: 4, name: 'Threshold', 
+                          min: Math.round(restingHR + hrReserve * 0.80), 
+                          max: Math.round(restingHR + hrReserve * 0.90), 
+                          purpose: 'Lactate threshold' },
+                        { zone: 5, name: 'VO2 Max', 
+                          min: Math.round(restingHR + hrReserve * 0.90), 
+                          max: Math.round(restingHR + hrReserve * 1.00), 
+                          purpose: 'Maximum aerobic power' }
+                    ]
+                };
+            }
+
+            calculateLTHRZones(lthr) {
+                return {
+                    name: 'LTHR-Based',
+                    zones: [
+                        { zone: 1, name: 'Recovery', 
+                          min: Math.round(lthr * 0.68), 
+                          max: Math.round(lthr * 0.83), 
+                          purpose: 'Active recovery' },
+                        { zone: 2, name: 'Aerobic Base', 
+                          min: Math.round(lthr * 0.84), 
+                          max: Math.round(lthr * 0.94), 
+                          purpose: 'Aerobic base building' },
+                        { zone: 3, name: 'Tempo', 
+                          min: Math.round(lthr * 0.95), 
+                          max: Math.round(lthr * 0.99), 
+                          purpose: 'Tempo training' },
+                        { zone: 4, name: 'Threshold', 
+                          min: Math.round(lthr * 1.00), 
+                          max: Math.round(lthr * 1.02), 
+                          purpose: 'Lactate threshold' },
+                        { zone: 5, name: 'VO2 Max', 
+                          min: Math.round(lthr * 1.03), 
+                          max: Math.round(lthr * 1.15), 
+                          purpose: 'VO2 max intervals' }
+                    ]
+                };
+            }
+
+            calculateCogganZones(lthr) {
+                return {
+                    name: 'Coggan Power (HR)',
+                    zones: [
+                        { zone: 1, name: 'Active Recovery', 
+                          min: Math.round(lthr * 0.68), 
+                          max: Math.round(lthr * 0.83), 
+                          purpose: 'Recovery' },
+                        { zone: 2, name: 'Endurance', 
+                          min: Math.round(lthr * 0.84), 
+                          max: Math.round(lthr * 0.94), 
+                          purpose: 'Base endurance' },
+                        { zone: 3, name: 'Tempo', 
+                          min: Math.round(lthr * 0.95), 
+                          max: Math.round(lthr * 1.05), 
+                          purpose: 'Tempo work' },
+                        { zone: 4, name: 'Lactate Threshold', 
+                          min: Math.round(lthr * 1.06), 
+                          max: Math.round(lthr * 1.15), 
+                          purpose: 'Threshold power' },
+                        { zone: 5, name: 'VO2 Max', 
+                          min: Math.round(lthr * 1.16), 
+                          max: Math.round(lthr * 1.30), 
+                          purpose: 'Aerobic capacity' }
+                    ]
+                };
+            }
+
+            calculateFrielZones(lthr) {
+                return {
+                    name: 'Friel Training Zones',
+                    zones: [
+                        { zone: 1, name: 'Recovery', 
+                          min: Math.round(lthr * 0.65), 
+                          max: Math.round(lthr * 0.81), 
+                          purpose: 'Recovery' },
+                        { zone: 2, name: 'Extensive Endurance', 
+                          min: Math.round(lthr * 0.82), 
+                          max: Math.round(lthr * 0.89), 
+                          purpose: 'Base building' },
+                        { zone: 3, name: 'Intensive Endurance', 
+                          min: Math.round(lthr * 0.90), 
+                          max: Math.round(lthr * 0.93), 
+                          purpose: 'Tempo' },
+                        { zone: '4a', name: 'Sub-Threshold', 
+                          min: Math.round(lthr * 0.94), 
+                          max: Math.round(lthr * 0.99), 
+                          purpose: 'Sweet spot' },
+                        { zone: '4b', name: 'Super-Threshold', 
+                          min: Math.round(lthr * 1.00), 
+                          max: Math.round(lthr * 1.02), 
+                          purpose: 'Threshold' },
+                        { zone: '5a', name: 'Aerobic Power', 
+                          min: Math.round(lthr * 1.03), 
+                          max: Math.round(lthr * 1.06), 
+                          purpose: 'VO2 max' },
+                        { zone: '5b', name: 'Anaerobic', 
+                          min: Math.round(lthr * 1.07), 
+                          max: Math.round(lthr * 1.15), 
+                          purpose: 'Neuromuscular' }
+                    ]
+                };
+            }
+
+            applySportAdjustments(zoneSystems, sport) {
+                const adjustments = {
+                    'running': 0,
+                    'cycling': 5,
+                    'swimming': -12,
+                    'rowing': -3,
+                    'cross-country-skiing': 2,
+                    'triathlon': 0,
+                    'general-fitness': 0
+                };
+
+                const adjustment = adjustments[sport] || 0;
+                
+                if (adjustment === 0) return zoneSystems;
+
+                const adjustedSystems = {};
+                for (const [key, system] of Object.entries(zoneSystems)) {
+                    adjustedSystems[key] = {
+                        ...system,
+                        zones: system.zones.map(zone => ({
+                            ...zone,
+                            min: Math.max(60, zone.min + adjustment),
+                            max: Math.max(70, zone.max + adjustment)
+                        }))
+                    };
+                }
+
+                return adjustedSystems;
+            }
+
+            generateRecommendation(formData, zoneSystems) {
+                const fitnessLevel = formData.get('fitness-level');
+                const hasMaxHR = formData.get('max-hr');
+                const hasLTHR = formData.get('lthr');
+                const trainingGoal = formData.get('training-goal');
+
+                let recommendedSystem = 'karvonen';
+                let reason = 'The Karvonen method accounts for your individual resting heart rate, providing personalized zones.';
+
+                if (hasLTHR && fitnessLevel !== 'sedentary' && fitnessLevel !== 'beginner') {
+                    recommendedSystem = 'lthr';
+                    reason = 'With your known lactate threshold and training experience, LTHR-based zones provide the most sport-specific accuracy.';
+                } else if (!hasMaxHR && (fitnessLevel === 'sedentary' || fitnessLevel === 'beginner')) {
+                    recommendedSystem = 'basic';
+                    reason = 'As a beginner, the basic age-based method provides a simple starting point for zone-based training.';
+                }
+
+                const zones = zoneSystems[recommendedSystem]?.zones || [];
+
+                return {
+                    system: zoneSystems[recommendedSystem]?.name || 'Karvonen Method',
+                    reason: reason,
+                    zones: zones
+                };
+            }
+
+            generateTrainingDistribution(goal, fitnessLevel) {
+                const distributions = {
+                    'general-fitness': [
+                        { zone: 'Zone 1-2', percentage: '80-85%', description: 'Easy aerobic work' },
+                        { zone: 'Zone 3', percentage: '10-15%', description: 'Moderate efforts' },
+                        { zone: 'Zone 4-5', percentage: '5%', description: 'High intensity' }
+                    ],
+                    'weight-loss': [
+                        { zone: 'Zone 1-2', percentage: '85-90%', description: 'Fat burning focus' },
+                        { zone: 'Zone 3', percentage: '8-12%', description: 'Moderate tempo' },
+                        { zone: 'Zone 4-5', percentage: '2-5%', description: 'Minimal high intensity' }
+                    ],
+                    'endurance-base': [
+                        { zone: 'Zone 1-2', percentage: '80-85%', description: 'Aerobic base building' },
+                        { zone: 'Zone 3', percentage: '10-15%', description: 'Tempo development' },
+                        { zone: 'Zone 4-5', percentage: '5-10%', description: 'Limited intensity' }
+                    ],
+                    'race-performance': [
+                        { zone: 'Zone 1-2', percentage: '70-75%', description: 'Aerobic foundation' },
+                        { zone: 'Zone 3', percentage: '15-20%', description: 'Race pace work' },
+                        { zone: 'Zone 4-5', percentage: '10-15%', description: 'Speed/power' }
+                    ],
+                    'marathon-ultra': [
+                        { zone: 'Zone 1-2', percentage: '85-90%', description: 'Aerobic efficiency' },
+                        { zone: 'Zone 3', percentage: '8-12%', description: 'Marathon pace' },
+                        { zone: 'Zone 4-5', percentage: '2-5%', description: 'Minimal intensity' }
+                    ],
+                    'short-distance': [
+                        { zone: 'Zone 1-2', percentage: '65-70%', description: 'Recovery and base' },
+                        { zone: 'Zone 3', percentage: '15-20%', description: 'Tempo training' },
+                        { zone: 'Zone 4-5', percentage: '15-20%', description: 'Speed development' }
+                    ]
+                };
+
+                return distributions[goal] || distributions['general-fitness'];
+            }
+
+            generateEnvironmentalAdvice(environment, temperature, sport) {
+                let advice = [];
+
+                // Altitude advice
+                if (environment === 'moderate-altitude') {
+                    advice.push('At moderate altitude, expect heart rates 5-10 bpm higher for the same perceived effort during the first 2-3 weeks of acclimatization.');
+                } else if (environment === 'high-altitude') {
+                    advice.push('At high altitude, heart rates can be 10-15 bpm higher initially. Allow 3-4 weeks for partial acclimatization and adjust zones accordingly.');
+                }
+
+                // Temperature advice
+                if (temperature === 'hot') {
+                    advice.push('In hot conditions, heart rate can increase 10-20 bpm due to thermoregulatory stress. Consider training in cooler parts of the day or reducing intensity targets by 5-10 bpm.');
+                } else if (temperature === 'warm') {
+                    advice.push('Warm weather training may elevate heart rate by 5-10 bpm. Ensure proper hydration and consider slight downward zone adjustments on hot days.');
+                }
+
+                // Sport-specific environmental advice
+                if (sport === 'cycling' && temperature === 'hot') {
+                    advice.push('Cycling in heat benefits from airflow cooling. Heart rate elevation may be less pronounced than in running, but hydration remains critical.');
+                } else if (sport === 'swimming') {
+                    advice.push('Swimming heart rates are naturally lower due to water cooling and horizontal position. Your calculated zones account for this difference.');
+                }
+
+                if (advice.length === 0) {
+                    advice.push('Your training environment is ideal for consistent heart rate zone training. Monitor for seasonal variations and adjust as needed.');
+                }
+
+                return advice;
+            }
+
+            displayResult(result) {
+                // Update overview stats
+                document.getElementById('estimated-max-hr').textContent = result.maxHR;
+                document.getElementById('resting-display').textContent = result.restingHR;
+                document.getElementById('hr-reserve').textContent = result.hrReserve;
+                document.getElementById('zone-systems-count').textContent = result.systemCount;
+
+                // Populate zone comparison table
+                this.populateZoneComparison(result.zoneSystems);
+
+                // Display recommendation
+                this.displayRecommendation(result.recommendation);
+
+                // Display training distribution
+                this.displayTrainingDistribution(result.trainingDistribution);
+
+                // Display environmental advice
+                this.displayEnvironmentalAdvice(result.environmentalAdvice);
+
+                // Create zone detail cards
+                this.createZoneDetailCards(result.recommendation.zones);
+
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            populateZoneComparison(zoneSystems) {
+                const table = document.getElementById('zones-comparison-table');
+                table.innerHTML = '';
+
+                const systemKeys = Object.keys(zoneSystems);
+                const maxZones = Math.max(...Object.values(zoneSystems).map(s => s.zones.length));
+
+                // Update headers
+                const headers = ['system1-header', 'system2-header', 'system3-header'];
+                headers.forEach((headerId, index) => {
+                    const header = document.getElementById(headerId);
+                    if (header && systemKeys[index]) {
+                        header.textContent = zoneSystems[systemKeys[index]].name;
+                        header.style.display = 'table-cell';
+                    } else if (header) {
+                        header.style.display = 'none';
+                    }
+                });
+
+                // Populate rows
+                for (let i = 0; i < maxZones; i++) {
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50';
+
+                    const firstSystem = Object.values(zoneSystems)[0];
+                    const zone = firstSystem.zones[i];
+
+                    if (zone) {
+                        row.innerHTML = `
+                            <td class="border border-gray-300 p-3 font-semibold">${zone.zone}</td>
+                            <td class="border border-gray-300 p-3 text-center">${zone.name}</td>
+                            ${systemKeys.map(key => {
+                                const system = zoneSystems[key];
+                                const systemZone = system.zones[i];
+                                return systemZone ? 
+                                    `<td class="border border-gray-300 p-3 text-center">${systemZone.min}-${systemZone.max}</td>` :
+                                    '<td class="border border-gray-300 p-3 text-center">-</td>';
+                            }).slice(0, 3).join('')}
+                            <td class="border border-gray-300 p-3 text-sm">${zone.purpose}</td>
+                        `;
+                    }
+
+                    table.appendChild(row);
+                }
+            }
+
+            displayRecommendation(recommendation) {
+                document.getElementById('recommended-system').textContent = recommendation.system;
+                document.getElementById('recommendation-reason').textContent = recommendation.reason;
+
+                const zonesContainer = document.getElementById('recommended-zones');
+                zonesContainer.innerHTML = '';
+                recommendation.zones.forEach(zone => {
+                    const div = document.createElement('div');
+                    div.textContent = `Zone ${zone.zone}: ${zone.min}-${zone.max} bpm`;
+                    zonesContainer.appendChild(div);
+                });
+            }
+
+            displayTrainingDistribution(distribution) {
+                const container = document.getElementById('training-distribution');
+                container.innerHTML = '';
+                distribution.forEach(item => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<strong>${item.zone}:</strong> ${item.percentage} - ${item.description}`;
+                    container.appendChild(div);
+                });
+            }
+
+            displayEnvironmentalAdvice(advice) {
+                const container = document.getElementById('environmental-advice');
+                container.innerHTML = '';
+                advice.forEach(item => {
+                    const p = document.createElement('p');
+                    p.className = 'mb-2';
+                    p.textContent = item;
+                    container.appendChild(p);
+                });
+            }
+
+            createZoneDetailCards(zones) {
+                const container = document.getElementById('zone-details');
+                container.innerHTML = '';
+
+                const colors = ['bg-blue-100 text-blue-800', 'bg-green-100 text-green-800', 'bg-yellow-100 text-yellow-800', 'bg-orange-100 text-orange-800', 'bg-red-100 text-red-800'];
+
+                zones.forEach((zone, index) => {
+                    const card = document.createElement('div');
+                    card.className = `${colors[index % colors.length]} p-4 rounded-lg`;
+                    card.innerHTML = `
+                        <div class="text-2xl font-bold mb-2">Zone ${zone.zone}</div>
+                        <div class="text-lg font-semibold mb-1">${zone.name}</div>
+                        <div class="text-sm font-semibold mb-2">${zone.min}-${zone.max} bpm</div>
+                        <div class="text-sm">${zone.purpose}</div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            getShareText() {
+                const maxHR = document.getElementById('estimated-max-hr').textContent;
+                const system = document.getElementById('recommended-system').textContent;
+                
+                return `My personalized heart rate zones: Max HR ${maxHR} bpm using ${system}! Calculate yours: ${window.location.href}`;
+            }
+        }
+
+        // Initialize calculator
+        const hrZonesCalculator = new AdvancedHRZonesCalculator();
+
+        // Share button event listener
+        document.getElementById('share-zones').addEventListener('click', () => {
+            hrZonesCalculator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
