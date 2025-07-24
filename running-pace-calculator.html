@@ -57,6 +57,97 @@
         }
     }
     </script>
+
+    <!-- FAQ Schema Markup for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a good running pace for beginners?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good beginner running pace is typically 10-12 minutes per mile (6:00-7:30 per km). You should be able to hold a conversation while running. Start slowly and gradually increase speed as your fitness improves."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my running pace?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate running pace, divide your total time by the distance covered. For example, if you run 5 miles in 40 minutes, your pace is 40 ÷ 5 = 8 minutes per mile."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between pace and speed?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pace measures time per distance (e.g., 8:00 per mile), while speed measures distance per time (e.g., 7.5 mph). Pace is more commonly used in running because it's easier to maintain consistent effort levels."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate are pace calculators?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pace calculators are highly accurate for mathematical calculations. However, real-world factors like weather, terrain, fatigue, and fitness level can affect actual performance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I run at the same pace every day?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, vary your paces for optimal training. Follow the 80/20 rule: 80% of runs at easy pace (conversational), 20% at moderate to hard pace. This prevents overtraining and improves different energy systems."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- HowTo Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate Running Pace",
+        "description": "Learn how to calculate your running pace using distance and time",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Enter your distance",
+                "text": "Input the total distance you ran in miles or kilometers",
+                "position": 1
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Enter your time",
+                "text": "Input the total time it took to complete the distance (hours, minutes, seconds)",
+                "position": 2
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Calculate pace",
+                "text": "Click calculate to get your pace per mile or kilometer",
+                "position": 3
+            }
+        ],
+        "totalTime": "PT1M",
+        "supply": [
+            {
+                "@type": "HowToSupply",
+                "name": "Running distance data"
+            },
+            {
+                "@type": "HowToSupply", 
+                "name": "Running time data"
+            }
+        ]
+    }
+    </script>
     
     <!-- Google AdSense (placeholder - replace with actual code) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
@@ -82,22 +173,24 @@
                 <!-- Desktop navigation -->
                 <div class="hidden md:flex space-x-6">
                     <a href="/" class="nav-link">Home</a>
-                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
-                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
-                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
-                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
-                    <a href="/about.html" class="nav-link">About</a>
+                    <a href="/heart-rate-zone-calculator" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator" class="nav-link">VO2 Max</a>
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="/about" class="nav-link">About</a>
                 </div>
             </div>
             
             <!-- Mobile navigation -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
                 <a href="/" class="mobile-menu-item">Home</a>
-                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
-                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
-                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
-                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
-                <a href="/about.html" class="mobile-menu-item">About</a>
+                <a href="/heart-rate-zone-calculator" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                <a href="/blog" class="mobile-menu-item">Blog</a>
+                <a href="/about" class="mobile-menu-item">About</a>
             </div>
         </nav>
     </header>
@@ -437,6 +530,35 @@
                         <li><strong>Negative Splits:</strong> Run second half faster than first half</li>
                         <li><strong>Listen to Your Body:</strong> Adjust pace based on conditions and fatigue</li>
                     </ul>
+
+                    <!-- FAQ Section for Featured Snippets -->
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="space-y-6 mt-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2">What is a good running pace for beginners?</h4>
+                            <p class="text-gray-700">A good beginner running pace is typically 10-12 minutes per mile (6:00-7:30 per km). You should be able to hold a conversation while running. Start slowly and gradually increase speed as your fitness improves.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2">How do I calculate my running pace?</h4>
+                            <p class="text-gray-700">To calculate running pace, divide your total time by the distance covered. For example, if you run 5 miles in 40 minutes, your pace is 40 ÷ 5 = 8 minutes per mile. Use our calculator above for instant results.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2">What's the difference between pace and speed?</h4>
+                            <p class="text-gray-700">Pace measures time per distance (e.g., 8:00 per mile), while speed measures distance per time (e.g., 7.5 mph). Pace is more commonly used in running because it's easier to maintain consistent effort levels.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2">How accurate are pace calculators?</h4>
+                            <p class="text-gray-700">Pace calculators are highly accurate for mathematical calculations. However, real-world factors like weather, terrain, fatigue, and fitness level can affect actual performance. Use calculators as a guide and adjust based on conditions.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2">Should I run at the same pace every day?</h4>
+                            <p class="text-gray-700">No, vary your paces for optimal training. Follow the 80/20 rule: 80% of runs at easy pace (conversational), 20% at moderate to hard pace. This prevents overtraining and improves different energy systems.</p>
+                        </div>
+                    </div>
                 </article>
                 
                 <!-- Mobile ad placement -->
