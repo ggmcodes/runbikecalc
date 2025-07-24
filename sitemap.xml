@@ -270,13 +270,13 @@
     <url>
         <loc>https://runbikecalc.com/about</loc>
         <lastmod>2025-07-23</lastmod>
-        <changefreq>quarterly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://runbikecalc.com/contact</loc>
         <lastmod>2025-07-23</lastmod>
-        <changefreq>quarterly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
