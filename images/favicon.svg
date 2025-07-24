@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#2563eb"/>
+  
+  <!-- Running figure (simplified) -->
+  <g transform="translate(6, 8)">
+    <!-- Head -->
+    <circle cx="3" cy="3" r="1.5" fill="white"/>
+    <!-- Body -->
+    <line x1="3" y1="4.5" x2="3" y2="9" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="3" y1="6" x2="4.5" y2="5" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
+    <line x1="3" y1="6" x2="1.5" y2="7" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="3" y1="9" x2="1.5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="3" y1="9" x2="4.5" y2="11" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Cycling wheel -->
+  <g transform="translate(18, 12)">
+    <circle cx="4" cy="4" r="4" stroke="#10b981" stroke-width="1.5" fill="none"/>
+    <!-- Spokes -->
+    <line x1="4" y1="1" x2="4" y2="7" stroke="#10b981" stroke-width="0.5"/>
+    <line x1="1" y1="4" x2="7" y2="4" stroke="#10b981" stroke-width="0.5"/>
+    <!-- Hub -->
+    <circle cx="4" cy="4" r="1" fill="#10b981"/>
+  </g>
+  
+  <!-- Calculator element -->
+  <g transform="translate(12, 22)">
+    <rect x="0" y="0" width="8" height="5" rx="0.5" stroke="#f59e0b" stroke-width="1" fill="none"/>
+    <!-- Display -->
+    <rect x="0.5" y="0.5" width="7" height="2" fill="#f59e0b" opacity="0.4"/>
+    <!-- Buttons -->
+    <circle cx="2" cy="3.5" r="0.4" fill="#f59e0b"/>
+    <circle cx="4" cy="3.5" r="0.4" fill="#f59e0b"/>
+    <circle cx="6" cy="3.5" r="0.4" fill="#f59e0b"/>
+  </g>
+</svg>
