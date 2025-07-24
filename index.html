@@ -33,7 +33,6 @@
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -56,9 +55,6 @@
     }
     </script>
     
-    <!-- Google AdSense (placeholder - replace with actual code) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-     crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Skip to main content for accessibility -->
@@ -80,10 +76,11 @@
                 <!-- Desktop navigation -->
                 <div class="hidden md:flex space-x-6">
                     <a href="/" class="nav-link font-semibold text-primary">Home</a>
-                    <a href="/heart-rate-zone-calculator" class="nav-link">Heart Rate</a>
-                    <a href="/running-pace-calculator" class="nav-link">Running</a>
-                    <a href="/bike-gearing-calculator" class="nav-link">Cycling</a>
-                    <a href="/vo2-max-calculator" class="nav-link">VO2 Max</a>
+                    <a href="/heart-rate-tools" class="nav-link">HR</a>
+                    <a href="/running-tools" class="nav-link">Run</a>
+                    <a href="/cycling-tools" class="nav-link">Bike</a>
+                    <a href="/vo2-tools" class="nav-link">VO2</a>
+                    <a href="/utility-tools" class="nav-link">Tools</a>
                     <a href="/blog" class="nav-link">Blog</a>
                     <a href="/about" class="nav-link">About</a>
                 </div>
@@ -92,10 +89,11 @@
             <!-- Mobile navigation -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
                 <a href="/" class="mobile-menu-item font-semibold text-primary">Home</a>
-                <a href="/heart-rate-zone-calculator" class="mobile-menu-item">Heart Rate</a>
-                <a href="/running-pace-calculator" class="mobile-menu-item">Running</a>
-                <a href="/bike-gearing-calculator" class="mobile-menu-item">Cycling</a>
-                <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
+                <a href="/running-tools" class="mobile-menu-item">Run</a>
+                <a href="/cycling-tools" class="mobile-menu-item">Bike</a>
+                <a href="/vo2-tools" class="mobile-menu-item">VO2</a>
+                <a href="/utility-tools" class="mobile-menu-item">Tools</a>
                 <a href="/blog" class="mobile-menu-item">Blog</a>
                 <a href="/about" class="mobile-menu-item">About</a>
             </div>
@@ -121,17 +119,6 @@
                      class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg">
             </div>
             
-            <!-- Top banner ad (desktop only) -->
-            <div class="hidden md:block mb-8">
-                <!-- AdSense 728x90 Leaderboard -->
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:728px;height:90px"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="XXXXXXXXXX"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
         </section>
         
         <!-- Calculator categories -->
@@ -190,34 +177,23 @@
                         <p class="text-gray-600">Optimize your run-walk intervals for marathon training</p>
                     </a>
                     
-                    <a href="/calories-burned-running.html" class="calc-card hover:shadow-xl transition-shadow group">
+                    <a href="/calories-burned-running-calculator" class="calc-card hover:shadow-xl transition-shadow group">
                         <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Calories Burned Running</h3>
                         <p class="text-gray-600">Calculate calories burned during your running workouts</p>
                     </a>
                     
-                    <a href="/mileage-to-km-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                    <a href="/running-distance-converter" class="calc-card hover:shadow-xl transition-shadow group">
                         <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Mile to KM Converter</h3>
                         <p class="text-gray-600">Convert between miles and kilometers for running distances</p>
                     </a>
                     
-                    <a href="/treadmill-pace-converter.html" class="calc-card hover:shadow-xl transition-shadow group">
+                    <a href="/treadmill-pace-calculator" class="calc-card hover:shadow-xl transition-shadow group">
                         <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Treadmill Pace Converter</h3>
                         <p class="text-gray-600">Convert between treadmill speed (mph/kph) and running pace</p>
                     </a>
                 </div>
             </div>
             
-            <!-- Mobile ad placement -->
-            <div class="md:hidden my-8 text-center">
-                <!-- AdSense 300x250 Rectangle -->
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:300px;height:250px"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="XXXXXXXXXX"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
             
             <!-- Cycling Calculators -->
             <div class="mb-12">
@@ -273,7 +249,7 @@
                         <p class="text-gray-600">Determine your lactate threshold pace and heart rate</p>
                     </a>
                     
-                    <a href="/aerobic-vs-anaerobic-threshold.html" class="calc-card hover:shadow-xl transition-shadow group">
+                    <a href="/aerobic-anaerobic-calculator" class="calc-card hover:shadow-xl transition-shadow group">
                         <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Aerobic vs Anaerobic Threshold</h3>
                         <p class="text-gray-600">Calculate both aerobic and anaerobic threshold values</p>
                     </a>
@@ -314,6 +290,11 @@
                     <a href="/calories-per-hour-calculator.html" class="calc-card hover:shadow-xl transition-shadow group">
                         <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Calories per Hour</h3>
                         <p class="text-gray-600">Calculate hourly calorie burn for various activities</p>
+                    </a>
+                    
+                    <a href="/sweat-test-calculator" class="calc-card hover:shadow-xl transition-shadow group">
+                        <h3 class="text-xl font-semibold text-primary mb-2 group-hover:text-blue-700">Sweat Test Calculator</h3>
+                        <p class="text-gray-600">Determine your fluid replacement needs and optimal hydration strategy</p>
                     </a>
                 </div>
             </div>
@@ -364,9 +345,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Tools</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="/pace-to-speed-converter.html" class="hover:text-white">Pace Converter</a></li>
-                        <li><a href="/mileage-to-km-converter.html" class="hover:text-white">Mile to KM</a></li>
-                        <li><a href="/calories-burned-running.html" class="hover:text-white">Calorie Calculator</a></li>
+                        <li><a href="/pace-to-speed-converter" class="hover:text-white">Pace Converter</a></li>
+                        <li><a href="/running-distance-converter" class="hover:text-white">Mile to KM</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calorie Calculator</a></li>
                         <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
                     </ul>
                 </div>

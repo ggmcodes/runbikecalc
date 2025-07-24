@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Training Tools - Pace Calculators & Performance Analysis | RunBikeCalc</title>
+    <meta name="description" content="Complete collection of running training tools. Calculate pace, race times, calories burned, and distance conversions for optimal running performance.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/running-tools">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Running Training Tools - Pace Calculators & Performance Analysis">
+    <meta property="og:description" content="Complete collection of running training tools for runners and endurance athletes">
+    <meta property="og:image" content="https://runbikecalc.com/images/running-tools-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/running-tools">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Running Training Tools",
+        "url": "https://runbikecalc.com/running-tools",
+        "description": "Complete collection of running training tools for runners and endurance athletes",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-tools" class="nav-link">HR</a>
+                    <a href="/running-tools" class="nav-link font-semibold text-primary">Run</a>
+                    <a href="/cycling-tools" class="nav-link">Bike</a>
+                    <a href="/vo2-tools" class="nav-link">VO2</a>
+                    <a href="/utility-tools" class="nav-link">Tools</a>
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="/about" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
+                <a href="/running-tools" class="mobile-menu-item font-semibold text-primary">Run</a>
+                <a href="/cycling-tools" class="mobile-menu-item">Bike</a>
+                <a href="/vo2-tools" class="mobile-menu-item">VO2</a>
+                <a href="/utility-tools" class="mobile-menu-item">Tools</a>
+                <a href="/blog" class="mobile-menu-item">Blog</a>
+                <a href="/about" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Running Tools</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">🏃 Running Training Tools</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Enhance your running performance with our comprehensive training calculators. 
+                Calculate pace, predict race times, track calories, and optimize your training strategy.
+            </p>
+        </div>
+        
+        <!-- Tools Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Running Pace Calculator -->
+            <a href="/running-pace-calculator" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">⏱️</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Running Pace Calculator</h3>
+                <p class="text-gray-600 mb-4">Calculate pace, time, and distance for your runs. Perfect for training planning and race strategy.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Pace calculations<br>
+                    ✓ Time predictions<br>
+                    ✓ Distance planning
+                </div>
+            </a>
+            
+            <!-- Race Time Predictor -->
+            <a href="/race-time-predictor" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">🏆</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Race Time Predictor</h3>
+                <p class="text-gray-600 mb-4">Predict race times based on recent performance or VO2 max. Set realistic goals for your next race.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Performance-based predictions<br>
+                    ✓ Multiple race distances<br>
+                    ✓ Goal setting guidance
+                </div>
+            </a>
+            
+            <!-- Run-Walk Calculator -->
+            <a href="/run-walk-calculator" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">🚶‍♂️</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Run-Walk Calculator</h3>
+                <p class="text-gray-600 mb-4">Optimize your run-walk intervals for marathon training and race day strategy.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Interval optimization<br>
+                    ✓ Marathon strategy<br>
+                    ✓ Beginner-friendly
+                </div>
+            </a>
+            
+            <!-- Calories Burned Calculator -->
+            <a href="/calories-burned-running-calculator" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">🔥</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Calories Burned Running</h3>
+                <p class="text-gray-600 mb-4">Calculate calories burned during your running workouts based on pace, weight, and duration.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Accurate calorie estimates<br>
+                    ✓ Weight and pace factors<br>
+                    ✓ Nutrition planning
+                </div>
+            </a>
+            
+            <!-- Treadmill Pace Calculator -->
+            <a href="/treadmill-pace-calculator" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">🏃‍♀️</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Treadmill Pace Converter</h3>
+                <p class="text-gray-600 mb-4">Convert between treadmill speed (mph/kph) and running pace for indoor training.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Speed to pace conversion<br>
+                    ✓ Indoor training optimization<br>
+                    ✓ Multiple units supported
+                </div>
+            </a>
+            
+            <!-- Distance Converter -->
+            <a href="/running-distance-converter" class="calc-card hover:shadow-xl transition-shadow group">
+                <div class="text-3xl mb-4">📏</div>
+                <h3 class="text-xl font-semibold text-primary mb-3 group-hover:text-blue-700">Distance Converter</h3>
+                <p class="text-gray-600 mb-4">Convert between miles and kilometers for running distances and international race planning.</p>
+                <div class="text-sm text-gray-500">
+                    ✓ Miles to kilometers<br>
+                    ✓ Common race distances<br>
+                    ✓ International compatibility
+                </div>
+            </a>
+        </div>
+        
+        <!-- Information Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center">Smart Running Training</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-semibold mb-3">Data-Driven Training</h3>
+                    <p class="text-gray-600">Use precise calculations to plan workouts, set goals, and track progress scientifically.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-3">Goal Achievement</h3>
+                    <p class="text-gray-600">Set realistic race goals based on current fitness and structured training plans.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🔄</div>
+                    <h3 class="text-xl font-semibold mb-3">Continuous Improvement</h3>
+                    <p class="text-gray-600">Regular assessment and adjustment of training based on performance data.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Training Tips -->
+        <div class="bg-green-600 text-white rounded-xl p-8 md:p-12 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-6">Running Training Tips</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div>
+                    <h4 class="font-semibold mb-2">🎯 Consistent Pacing</h4>
+                    <p class="text-sm opacity-90">Use pace calculators to maintain consistent effort during long runs and races.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">📈 Progressive Training</h4>
+                    <p class="text-sm opacity-90">Gradually increase distance and intensity based on calculated training zones.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">🍎 Fuel Planning</h4>
+                    <p class="text-sm opacity-90">Use calorie calculators to plan nutrition strategy for long runs and races.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">🏁 Race Strategy</h4>
+                    <p class="text-sm opacity-90">Use race predictors to set realistic goals and develop pacing strategies.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/run-walk-calculator" class="hover:text-white">Run-Walk Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calories Burned</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Other Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-tools" class="hover:text-white">Heart Rate Tools</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">Cycling Tools</a></li>
+                        <li><a href="/vo2-tools" class="hover:text-white">VO2 & Fitness</a></li>
+                        <li><a href="/utility-tools" class="hover:text-white">Utility Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    </script>
+</body>
+</html>

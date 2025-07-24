@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweat Test Calculator - Determine Your Fluid Replacement Needs | RunBikeCalc</title>
+    <meta name="description" content="Calculate your sweat rate and fluid replacement needs with our free sweat test calculator. Optimize hydration for endurance training and racing performance.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/sweat-test-calculator">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sweat Test Calculator - Determine Your Fluid Replacement Needs">
+    <meta property="og:description" content="Calculate your sweat rate and fluid replacement needs for optimal hydration during training and racing">
+    <meta property="og:image" content="https://runbikecalc.com/images/sweat-test-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/sweat-test-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sweat Test Calculator">
+    <meta name="twitter:description" content="Calculate your sweat rate and fluid replacement needs for endurance sports">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/sweat-test-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Sweat Test Calculator",
+        "url": "https://runbikecalc.com/sweat-test-calculator",
+        "description": "Calculate your sweat rate and fluid replacement needs for endurance sports",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator" class="nav-link">VO2 Max</a>
+                    <a href="/blog" class="nav-link">Blog</a>
+                    <a href="/about" class="nav-link">About</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator" class="mobile-menu-item">VO2 Max</a>
+                <a href="/blog" class="mobile-menu-item">Blog</a>
+                <a href="/about" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Hydration Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Sweat Test Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Sweat Test Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Determine your individual sweat rate and calculate personalized fluid replacement needs for optimal hydration during training and racing.</p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Your Sweat Rate</h2>
+                    
+                    <form id="sweat-test-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="preWeight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Pre-Exercise Weight *
+                                </label>
+                                <div class="flex">
+                                    <input type="number" 
+                                           id="preWeight" 
+                                           name="preWeight" 
+                                           class="calc-input-number rounded-r-none" 
+                                           placeholder="150"
+                                           required
+                                           min="80"
+                                           max="400"
+                                           step="0.1">
+                                    <select id="preWeightUnit" name="preWeightUnit" class="border border-l-0 border-gray-300 rounded-r-md px-3 py-2 bg-gray-50">
+                                        <option value="lbs">lbs</option>
+                                        <option value="kg">kg</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Weight before exercise (nude, after urination)</p>
+                            </div>
+                            
+                            <div>
+                                <label for="postWeight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Post-Exercise Weight *
+                                </label>
+                                <div class="flex">
+                                    <input type="number" 
+                                           id="postWeight" 
+                                           name="postWeight" 
+                                           class="calc-input-number rounded-r-none" 
+                                           placeholder="148"
+                                           required
+                                           min="80"
+                                           max="400"
+                                           step="0.1">
+                                    <select id="postWeightUnit" name="postWeightUnit" class="border border-l-0 border-gray-300 rounded-r-md px-3 py-2 bg-gray-50">
+                                        <option value="lbs">lbs</option>
+                                        <option value="kg">kg</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Weight after exercise (nude, after toweling off)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="exerciseDuration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Exercise Duration *
+                                </label>
+                                <input type="number" 
+                                       id="exerciseDuration" 
+                                       name="exerciseDuration" 
+                                       class="calc-input-number" 
+                                       placeholder="60"
+                                       required
+                                       min="15"
+                                       max="480"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Duration of exercise in minutes</p>
+                            </div>
+                            
+                            <div>
+                                <label for="fluidIntake" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Fluid Intake During Exercise
+                                </label>
+                                <div class="flex">
+                                    <input type="number" 
+                                           id="fluidIntake" 
+                                           name="fluidIntake" 
+                                           class="calc-input-number rounded-r-none" 
+                                           placeholder="16"
+                                           min="0"
+                                           max="200"
+                                           step="0.1">
+                                    <select id="fluidUnit" name="fluidUnit" class="border border-l-0 border-gray-300 rounded-r-md px-3 py-2 bg-gray-50">
+                                        <option value="fl oz">fl oz</option>
+                                        <option value="ml">ml</option>
+                                        <option value="liters">liters</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Total fluid consumed during exercise</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="urineOutput" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Urine Output During Exercise
+                                </label>
+                                <div class="flex">
+                                    <input type="number" 
+                                           id="urineOutput" 
+                                           name="urineOutput" 
+                                           class="calc-input-number rounded-r-none" 
+                                           placeholder="0"
+                                           min="0"
+                                           max="50"
+                                           step="0.1">
+                                    <select id="urineUnit" name="urineUnit" class="border border-l-0 border-gray-300 rounded-r-md px-3 py-2 bg-gray-50">
+                                        <option value="fl oz">fl oz</option>
+                                        <option value="ml">ml</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Urine output during exercise (if any)</p>
+                            </div>
+                            
+                            <div>
+                                <label for="temperature" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Temperature (optional)
+                                </label>
+                                <div class="flex">
+                                    <input type="number" 
+                                           id="temperature" 
+                                           name="temperature" 
+                                           class="calc-input-number rounded-r-none" 
+                                           placeholder="75"
+                                           min="-10"
+                                           max="120"
+                                           step="1">
+                                    <select id="tempUnit" name="tempUnit" class="border border-l-0 border-gray-300 rounded-r-md px-3 py-2 bg-gray-50">
+                                        <option value="F">°F</option>
+                                        <option value="C">°C</option>
+                                    </select>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Environmental temperature</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Sweat Rate
+                        </button>
+                    </form>
+                    
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>How to Perform a Sweat Test</h2>
+                    <p>A sweat test helps determine your individual fluid replacement needs by measuring how much fluid you lose through sweat during exercise. This information is crucial for developing an effective hydration strategy.</p>
+                    
+                    <h3>Sweat Test Protocol</h3>
+                    <ol>
+                        <li><strong>Preparation:</strong> Avoid alcohol, caffeine, and excessive sodium 24 hours before testing</li>
+                        <li><strong>Pre-exercise:</strong> Urinate, then weigh yourself nude</li>
+                        <li><strong>Exercise:</strong> Train for 60-90 minutes at your typical intensity</li>
+                        <li><strong>Track intake:</strong> Measure all fluids consumed during exercise</li>
+                        <li><strong>Post-exercise:</strong> Towel off sweat, urinate if needed, then weigh yourself nude</li>
+                    </ol>
+                    
+                    <h3>Understanding Your Results</h3>
+                    <p>Your sweat rate indicates how much fluid you lose per hour of exercise. Use this to:</p>
+                    <ul>
+                        <li><strong>Develop hydration strategy:</strong> Aim to replace 125-150% of fluid lost</li>
+                        <li><strong>Prevent dehydration:</strong> Don't lose more than 2% of body weight</li>
+                        <li><strong>Optimize performance:</strong> Maintain proper electrolyte balance</li>
+                        <li><strong>Adjust for conditions:</strong> Increase intake in hot/humid weather</li>
+                    </ul>
+                    
+                    <h3>Factors Affecting Sweat Rate</h3>
+                    <ul>
+                        <li>Environmental temperature and humidity</li>
+                        <li>Exercise intensity and duration</li>
+                        <li>Individual fitness level</li>
+                        <li>Heat acclimatization status</li>
+                        <li>Body size and composition</li>
+                        <li>Clothing and equipment</li>
+                    </ul>
+                    
+                    <h3>Hydration Guidelines</h3>
+                    <p>Based on your sweat test results:</p>
+                    <ul>
+                        <li><strong>Pre-exercise:</strong> Drink 16-24 oz of fluid 2-3 hours before</li>
+                        <li><strong>During exercise:</strong> Replace 150-250 ml every 15-20 minutes</li>
+                        <li><strong>Post-exercise:</strong> Drink 150% of weight lost within 6 hours</li>
+                        <li><strong>Electrolytes:</strong> Include sodium for sessions longer than 1 hour</li>
+                    </ul>
+                </article>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/calories-burned-running-calculator" class="text-primary hover:underline">Calories Burned Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                        <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/ftp-calculator" class="text-primary hover:underline">FTP Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hydration Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/sweat-test-calculator" class="hover:text-white">Sweat Test Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calorie Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy-policy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Sweat Test Calculator implementation
+        class SweatTestCalculator extends Calculator {
+            calculate() {
+                const preWeight = this.getInputValue('preWeight');
+                const postWeight = this.getInputValue('postWeight');
+                const exerciseDuration = this.getInputValue('exerciseDuration');
+                const fluidIntake = this.getInputValue('fluidIntake', 0);
+                const urineOutput = this.getInputValue('urineOutput', 0);
+                const temperature = this.getInputValue('temperature', null);
+                
+                const preWeightUnit = this.form.querySelector('[name="preWeightUnit"]').value;
+                const postWeightUnit = this.form.querySelector('[name="postWeightUnit"]').value;
+                const fluidUnit = this.form.querySelector('[name="fluidUnit"]').value;
+                const urineUnit = this.form.querySelector('[name="urineUnit"]').value;
+                const tempUnit = this.form.querySelector('[name="tempUnit"]').value;
+                
+                if (!preWeight || !postWeight || !exerciseDuration) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+                
+                if (preWeight <= postWeight) {
+                    this.displayError('Pre-exercise weight must be greater than post-exercise weight.');
+                    return;
+                }
+                
+                if (exerciseDuration < 15) {
+                    this.displayError('Exercise duration must be at least 15 minutes for accurate results.');
+                    return;
+                }
+                
+                // Convert weights to pounds for calculation
+                let preWeightLbs = preWeightUnit === 'kg' ? preWeight * 2.20462 : preWeight;
+                let postWeightLbs = postWeightUnit === 'kg' ? postWeight * 2.20462 : postWeight;
+                
+                // Convert fluids to ounces for calculation
+                let fluidIntakeOz = this.convertToOunces(fluidIntake, fluidUnit);
+                let urineOutputOz = this.convertToOunces(urineOutput, urineUnit);
+                
+                // Calculate weight loss in pounds
+                const weightLoss = preWeightLbs - postWeightLbs;
+                const weightLossPercent = (weightLoss / preWeightLbs) * 100;
+                
+                // Calculate fluid loss (weight loss + fluid intake - urine output)
+                // 1 pound = 16 fl oz of fluid
+                const totalFluidLoss = (weightLoss * 16) + fluidIntakeOz - urineOutputOz;
+                
+                // Calculate sweat rate per hour
+                const hoursExercised = exerciseDuration / 60;
+                const sweatRatePerHour = totalFluidLoss / hoursExercised;
+                
+                // Calculate replacement recommendations
+                const replacementFluidOz = sweatRatePerHour * 1.25; // 125% replacement
+                const replacementFluidMl = replacementFluidOz * 29.5735;
+                const replacementFluidLiters = replacementFluidMl / 1000;
+                
+                // Calculate per 15-minute intervals
+                const per15MinOz = sweatRatePerHour / 4;
+                const per15MinMl = per15MinOz * 29.5735;
+                
+                // Hydration status assessment
+                let hydrationStatus, statusColor, statusAdvice;
+                if (weightLossPercent < 1) {
+                    hydrationStatus = 'Well Hydrated';
+                    statusColor = 'text-green-600';
+                    statusAdvice = 'Excellent hydration maintenance during exercise.';
+                } else if (weightLossPercent < 2) {
+                    hydrationStatus = 'Mild Dehydration';
+                    statusColor = 'text-yellow-600';
+                    statusAdvice = 'Acceptable fluid loss. Consider increasing fluid intake slightly.';
+                } else if (weightLossPercent < 3) {
+                    hydrationStatus = 'Moderate Dehydration';
+                    statusColor = 'text-orange-600';
+                    statusAdvice = 'Significant fluid loss. Increase fluid intake during exercise.';
+                } else {
+                    hydrationStatus = 'Severe Dehydration';
+                    statusColor = 'text-red-600';
+                    statusAdvice = 'Excessive fluid loss. Significantly increase fluid intake and consider shorter intervals.';
+                }
+                
+                // Temperature context
+                let tempContext = '';
+                if (temperature !== null) {
+                    const tempF = tempUnit === 'C' ? (temperature * 9/5) + 32 : temperature;
+                    if (tempF < 60) {
+                        tempContext = ' in cool conditions';
+                    } else if (tempF < 75) {
+                        tempContext = ' in moderate conditions';
+                    } else if (tempF < 85) {
+                        tempContext = ' in warm conditions';
+                    } else {
+                        tempContext = ' in hot conditions';
+                    }
+                }
+                
+                // Display results
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Sweat Test Results</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">Sweat Rate</h4>
+                                <div class="text-2xl font-bold text-blue-900">${this.formatNumber(sweatRatePerHour)} fl oz/hr</div>
+                                <div class="text-sm text-blue-700">${this.formatNumber(sweatRatePerHour * 29.5735)} ml/hr</div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Weight Loss</h4>
+                                <div class="text-2xl font-bold text-gray-900">${this.formatNumber(weightLoss)} lbs</div>
+                                <div class="text-sm text-gray-700">${this.formatNumber(weightLossPercent)}% of body weight</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-${statusColor.includes('green') ? 'green' : statusColor.includes('yellow') ? 'yellow' : statusColor.includes('orange') ? 'orange' : 'red'}-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold ${statusColor} mb-2">Hydration Status${tempContext}</h4>
+                            <div class="text-lg font-bold ${statusColor}">${hydrationStatus}</div>
+                            <div class="text-sm ${statusColor} mt-1">${statusAdvice}</div>
+                        </div>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-4">Recommended Fluid Replacement</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-sm opacity-90">Per Hour</div>
+                                    <div class="text-xl font-bold">${this.formatNumber(replacementFluidOz)} fl oz</div>
+                                    <div class="text-sm opacity-90">${this.formatNumber(replacementFluidLiters)} liters</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm opacity-90">Every 15 Minutes</div>
+                                    <div class="text-xl font-bold">${this.formatNumber(per15MinOz)} fl oz</div>
+                                    <div class="text-sm opacity-90">${this.formatNumber(per15MinMl)} ml</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">💡 Key Recommendations</h4>
+                            <ul class="text-sm text-yellow-700 space-y-1">
+                                <li>• Start drinking early in your workout</li>
+                                <li>• Include electrolytes for sessions longer than 1 hour</li>
+                                <li>• Adjust intake based on environmental conditions</li>
+                                <li>• Practice your hydration strategy during training</li>
+                                <li>• Repeat this test in different conditions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <button onclick="calculator.shareResult('My sweat rate: ${this.formatNumber(sweatRatePerHour)} fl oz/hr - calculated with RunBikeCalc')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+                
+                // Save values for next time
+                this.saveValues();
+            }
+            
+            convertToOunces(value, unit) {
+                if (!value) return 0;
+                switch (unit) {
+                    case 'ml':
+                        return value / 29.5735;
+                    case 'liters':
+                        return value * 33.814;
+                    case 'fl oz':
+                    default:
+                        return value;
+                }
+            }
+        }
+        
+        // Initialize calculator
+        const calculator = new SweatTestCalculator('sweat-test-form', 'results');
+        
+        // Sync weight units
+        document.getElementById('preWeightUnit').addEventListener('change', function() {
+            document.getElementById('postWeightUnit').value = this.value;
+        });
+        
+        document.getElementById('postWeightUnit').addEventListener('change', function() {
+            document.getElementById('preWeightUnit').value = this.value;
+        });
+    </script>
+</body>
+</html>
