@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone 2 Training Plan Generator 2025 - Personalized Aerobic Base Plans | RunBikeCalc</title>
+    <meta name="description" content="Generate personalized Zone 2 training plans with our advanced 2025 calculator. Get custom weekly schedules, progression protocols, and monitoring guidelines based on your fitness level and goals.">
+    <meta name="keywords" content="zone 2 training plan generator, aerobic base training plan, zone 2 workout schedule, personalized training plan, aerobic base building, zone 2 periodization">
+    <meta name="author" content="RunBikeCalc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zone 2 Training Plan Generator 2025 - Personalized Aerobic Base Plans">
+    <meta property="og:description" content="Generate personalized Zone 2 training plans with our advanced calculator. Custom weekly schedules and progression protocols based on your goals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/zone-2-training-plan-generator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-zone-2-training-plan.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/zone-2-training-plan-generator">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981', 
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Zone 2 Training Plan Generator",
+        "description": "Generate personalized Zone 2 training plans with custom weekly schedules and progression protocols based on your fitness level and goals.",
+        "url": "https://runbikecalc.com/zone-2-training-plan-generator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link hover:text-primary">Home</a>
+                    <a href="/heart-rate-tools" class="nav-link hover:text-primary">HR</a>
+                    <a href="/running-tools" class="nav-link hover:text-primary">Run</a>
+                    <a href="/cycling-tools" class="nav-link hover:text-primary">Bike</a>
+                    <a href="/vo2-tools" class="nav-link hover:text-primary">VO2</a>
+                    <a href="/utility-tools" class="nav-link hover:text-primary">Tools</a>
+                    <a href="/blog" class="nav-link hover:text-primary">Blog</a>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="space-y-2">
+                    <a href="/" class="mobile-menu-item">Home</a>
+                    <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
+                    <a href="/running-tools" class="mobile-menu-item">Run</a>
+                    <a href="/cycling-tools" class="mobile-menu-item">Bike</a>
+                    <a href="/vo2-tools" class="mobile-menu-item">VO2</a>
+                    <a href="/utility-tools" class="mobile-menu-item">Tools</a>
+                    <a href="/blog" class="mobile-menu-item">Blog</a>
+                    <a href="/about" class="mobile-menu-item">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav aria-label="Breadcrumb" class="mb-6">
+                <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                    <li><a href="/" class="hover:text-primary">Home</a></li>
+                    <li class="before:content-['/'] before:mx-2"><a href="/heart-rate-tools" class="hover:text-primary">Heart Rate Tools</a></li>
+                    <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Zone 2 Training Plan Generator</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Zone 2 Training Plan Generator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Generate personalized Zone 2 training plans based on your fitness level, goals, and available training time. Get weekly schedules with progression protocols and monitoring guidelines.
+            </p>
+        </div>
+
+        <!-- Feature Highlights -->
+        <div class="max-w-6xl mx-auto mb-12">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Personalized Plans</h3>
+                    <p class="text-gray-600">Custom training schedules based on your fitness level, goals, and time availability</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📈</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Progressive Loading</h3>
+                    <p class="text-gray-600">Scientifically-based progression protocols to safely build your aerobic engine</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Monitoring Tools</h3>
+                    <p class="text-gray-600">Built-in tracking methods and progression markers to measure your improvements</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <form id="training-plan-form" class="space-y-8">
+                    <!-- Personal Information -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Personal Information</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age (years)
+                                </label>
+                                <input type="number" id="age" class="calc-input-number" placeholder="35" min="15" max="80" step="1" required>
+                                <p class="text-sm text-gray-500 mt-1">Your current age</p>
+                            </div>
+
+                            <div>
+                                <label for="resting-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resting Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="resting-hr" class="calc-input-number" placeholder="55" min="35" max="100" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Morning resting HR (optional)</p>
+                            </div>
+
+                            <div>
+                                <label for="max-hr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Maximum Heart Rate (bpm)
+                                </label>
+                                <input type="number" id="max-hr" class="calc-input-number" placeholder="185" min="150" max="220" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Known max HR or leave blank for estimation</p>
+                            </div>
+
+                            <div>
+                                <label for="lthr" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Lactate Threshold HR (bpm)
+                                </label>
+                                <input type="number" id="lthr" class="calc-input-number" placeholder="165" min="120" max="200" step="1">
+                                <p class="text-sm text-gray-500 mt-1">Known LTHR or leave blank for estimation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training Background -->
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Training Background</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="experience-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Experience
+                                </label>
+                                <select id="experience-level" class="calc-input-number" required>
+                                    <option value="">Select your experience level</option>
+                                    <option value="beginner">Beginner (0-1 years)</option>
+                                    <option value="intermediate">Intermediate (1-3 years)</option>
+                                    <option value="advanced">Advanced (3-5 years)</option>
+                                    <option value="elite">Elite (5+ years)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Years of consistent endurance training</p>
+                            </div>
+
+                            <div>
+                                <label for="current-volume" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Weekly Volume (hours)
+                                </label>
+                                <input type="number" id="current-volume" class="calc-input-number" placeholder="6" min="2" max="25" step="0.5" required>
+                                <p class="text-sm text-gray-500 mt-1">Hours per week you currently train</p>
+                            </div>
+
+                            <div>
+                                <label for="primary-sport" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Sport
+                                </label>
+                                <select id="primary-sport" class="calc-input-number" required>
+                                    <option value="">Select primary sport</option>
+                                    <option value="running">Running</option>
+                                    <option value="cycling">Cycling</option>
+                                    <option value="triathlon">Triathlon</option>
+                                    <option value="swimming">Swimming</option>
+                                    <option value="rowing">Rowing</option>
+                                    <option value="cross-country-skiing">Cross-Country Skiing</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your main endurance activity</p>
+                            </div>
+
+                            <div>
+                                <label for="zone2-experience" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Zone 2 Training Experience
+                                </label>
+                                <select id="zone2-experience" class="calc-input-number" required>
+                                    <option value="">Select Zone 2 experience</option>
+                                    <option value="none">No prior Zone 2 training</option>
+                                    <option value="some">Some Zone 2 training (< 6 months)</option>
+                                    <option value="experienced">Experienced (6+ months)</option>
+                                    <option value="advanced">Advanced Zone 2 practitioner</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your experience with structured Zone 2 training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Goals and Timeline -->
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Goals and Timeline</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="primary-goal" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Goal
+                                </label>
+                                <select id="primary-goal" class="calc-input-number" required>
+                                    <option value="">Select your primary goal</option>
+                                    <option value="aerobic-base">Build aerobic base</option>
+                                    <option value="fat-adaptation">Improve fat oxidation</option>
+                                    <option value="endurance-events">Prepare for long events (70.3, marathon+)</option>
+                                    <option value="general-fitness">General fitness and health</option>
+                                    <option value="recovery-tool">Use Zone 2 for recovery</option>
+                                    <option value="weight-management">Weight management</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your main training objective</p>
+                            </div>
+
+                            <div>
+                                <label for="plan-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Plan Duration (weeks)
+                                </label>
+                                <select id="plan-duration" class="calc-input-number" required>
+                                    <option value="">Select plan length</option>
+                                    <option value="4">4 weeks (Introduction)</option>
+                                    <option value="8">8 weeks (Foundation)</option>
+                                    <option value="12">12 weeks (Development)</option>
+                                    <option value="16">16 weeks (Advanced Build)</option>
+                                    <option value="20">20 weeks (Base Season)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">How long you want to focus on Zone 2</p>
+                            </div>
+
+                            <div>
+                                <label for="available-days" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Available Training Days per Week
+                                </label>
+                                <select id="available-days" class="calc-input-number" required>
+                                    <option value="">Select training days</option>
+                                    <option value="3">3 days per week</option>
+                                    <option value="4">4 days per week</option>
+                                    <option value="5">5 days per week</option>
+                                    <option value="6">6 days per week</option>
+                                    <option value="7">7 days per week</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Days you can realistically train</p>
+                            </div>
+
+                            <div>
+                                <label for="session-duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Preferred Session Duration
+                                </label>
+                                <select id="session-duration" class="calc-input-number" required>
+                                    <option value="">Select session length</option>
+                                    <option value="short">Short (30-45 minutes)</option>
+                                    <option value="medium">Medium (45-75 minutes)</option>
+                                    <option value="long">Long (75-120 minutes)</option>
+                                    <option value="mixed">Mixed durations</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Typical session length you prefer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Options -->
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Advanced Options</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="periodization-style" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Periodization Style
+                                </label>
+                                <select id="periodization-style" class="calc-input-number">
+                                    <option value="linear">Linear progression</option>
+                                    <option value="block">Block periodization</option>
+                                    <option value="reverse">Reverse periodization</option>
+                                    <option value="polarized">Polarized training</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Training progression approach</p>
+                            </div>
+
+                            <div>
+                                <label for="monitoring-preference" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Monitoring Preference
+                                </label>
+                                <select id="monitoring-preference" class="calc-input-number">
+                                    <option value="hr-only">Heart rate only</option>
+                                    <option value="hr-pace">Heart rate + pace</option>
+                                    <option value="hr-power">Heart rate + power (cycling)</option>
+                                    <option value="all-metrics">All available metrics</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">How you prefer to monitor training</p>
+                            </div>
+
+                            <div>
+                                <label for="recovery-focus" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Recovery Focus Level
+                                </label>
+                                <select id="recovery-focus" class="calc-input-number">
+                                    <option value="standard">Standard recovery</option>
+                                    <option value="conservative">Conservative (extra recovery)</option>
+                                    <option value="aggressive">Aggressive (minimal recovery)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your recovery philosophy</p>
+                            </div>
+
+                            <div>
+                                <label for="cross-training" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Cross-Training Interest
+                                </label>
+                                <select id="cross-training" class="calc-input-number">
+                                    <option value="none">Single sport focus</option>
+                                    <option value="some">Some cross-training</option>
+                                    <option value="multisport">Multi-sport training</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Interest in other activities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="calc-button">Generate Training Plan</button>
+                        <button type="button" id="share-plan" class="calc-button-secondary">Share Plan</button>
+                        <button type="reset" class="calc-button-secondary">Reset</button>
+                    </div>
+                </form>
+
+                <!-- Results Section -->
+                <div id="training-plan-result" class="mt-12 hidden">
+                    <div class="calc-result">
+                        <!-- Plan Overview -->
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl font-bold text-primary mb-4">Your Personalized Zone 2 Training Plan</h2>
+                            <div class="grid md:grid-cols-4 gap-4">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-800" id="plan-duration-display">12</div>
+                                    <div class="text-sm text-blue-600">Weeks</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-800" id="zone2-range-display">125-140</div>
+                                    <div class="text-sm text-green-600">Zone 2 HR Range</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-800" id="weekly-volume-display">6.5</div>
+                                    <div class="text-sm text-purple-600">Hours/Week</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-800" id="sessions-per-week-display">4</div>
+                                    <div class="text-sm text-orange-600">Sessions/Week</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Weekly Schedule -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Weekly Schedule Template</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm border-collapse border border-gray-300">
+                                    <thead>
+                                        <tr class="bg-gray-50">
+                                            <th class="border border-gray-300 p-3 text-left">Day</th>
+                                            <th class="border border-gray-300 p-3 text-center">Activity</th>
+                                            <th class="border border-gray-300 p-3 text-center">Duration</th>
+                                            <th class="border border-gray-300 p-3 text-center">Intensity</th>
+                                            <th class="border border-gray-300 p-3 text-left">Purpose</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="weekly-schedule">
+                                        <!-- Schedule will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Progression Protocol -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Progression Protocol</h3>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Phase 1: Foundation</h4>
+                                    <div class="space-y-2 text-sm" id="phase-1-details">
+                                        <!-- Phase 1 details will be populated here -->
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Phase 2: Development</h4>
+                                    <div class="space-y-2 text-sm" id="phase-2-details">
+                                        <!-- Phase 2 details will be populated here -->
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Phase 3: Optimization</h4>
+                                    <div class="space-y-2 text-sm" id="phase-3-details">
+                                        <!-- Phase 3 details will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Monitoring Guidelines -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold mb-4">Monitoring and Assessment</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-3">Key Metrics to Track</h4>
+                                    <div class="space-y-2 text-sm" id="monitoring-metrics">
+                                        <!-- Monitoring metrics will be populated here -->
+                                    </div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-3">Progress Indicators</h4>
+                                    <div class="space-y-2 text-sm" id="progress-indicators">
+                                        <!-- Progress indicators will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personalized Recommendations -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-yellow-900 mb-3">Personalized Recommendations</h3>
+                            <div class="text-yellow-800" id="personalized-recommendations">
+                                <!-- Recommendations will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Zone 2 Training Plan Fundamentals</h2>
+                
+                <p>Effective Zone 2 training plans are built on scientific principles that maximize aerobic adaptation while minimizing injury risk. This generator uses evidence-based protocols to create personalized training schedules that progress systematically toward your goals.</p>
+
+                <h3>Key Principles of Zone 2 Plan Design</h3>
+
+                <h4>1. Progressive Overload</h4>
+                <p>Zone 2 training plans gradually increase training stress through duration progression rather than intensity increases. Most athletes begin with 30-45 minute sessions and progress to 90+ minutes over 8-12 weeks.</p>
+
+                <h4>2. Frequency Optimization</h4>
+                <p>The optimal frequency for Zone 2 training depends on your experience level and available time. Beginners benefit from 3-4 sessions per week, while advanced athletes may train Zone 2 daily.</p>
+
+                <h4>3. Recovery Integration</h4>
+                <p>While Zone 2 training is low-intensity, it still requires appropriate recovery. Plans include easy days, complete rest days, and deload weeks to prevent overreaching.</p>
+
+                <h3>Periodization Approaches</h3>
+
+                <h4>Linear Periodization</h4>
+                <p>Traditional approach with steady progression in volume and duration. Week-to-week increases of 10-15% in total Zone 2 time.</p>
+
+                <h4>Block Periodization</h4>
+                <p>Concentrated blocks of Zone 2 focus alternating with recovery or other training emphases. Effective for experienced athletes.</p>
+
+                <h4>Polarized Training</h4>
+                <p>80% of training time in Zone 1-2, 20% in Zone 4-5. Zone 2 forms the foundation with minimal Zone 3 "gray zone" training.</p>
+
+                <h3>Monitoring Zone 2 Training</h3>
+
+                <h4>Heart Rate Tracking</h4>
+                <p>Primary metric for Zone 2 training. Look for decreased heart rate drift over time and improved pace at target heart rates.</p>
+
+                <h4>Subjective Measures</h4>
+                <p>Rate of perceived exertion should remain conversational (3-4 out of 10). Ability to maintain nasal breathing is another useful indicator.</p>
+
+                <h4>Performance Metrics</h4>
+                <p>Track pace or power output at Zone 2 heart rates. Improvements indicate positive adaptations and training effectiveness.</p>
+
+                <h3>Common Zone 2 Plan Mistakes</h3>
+
+                <h4>Too Much, Too Soon</h4>
+                <p>Rapid increases in Zone 2 volume can lead to overuse injuries. Follow the 10% rule for weekly volume increases.</p>
+
+                <h4>Intensity Creep</h4>
+                <p>Training above Zone 2 defeats the purpose. Stay disciplined with heart rate targets even if pace feels "easy."</p>
+
+                <h4>Inadequate Progression</h4>
+                <p>Static training loads don't provide sufficient stimulus for adaptation. Plans must include systematic progression.</p>
+
+                <h3>Sport-Specific Considerations</h3>
+
+                <h4>Running</h4>
+                <p>Zone 2 running should feel comfortable and sustainable. Most runners find their Zone 2 pace is 60-90 seconds slower per mile than 5K pace.</p>
+
+                <h4>Cycling</h4>
+                <p>Cycling allows for longer Zone 2 sessions due to lower impact. Power meter users can target 56-75% of FTP as a guide.</p>
+
+                <h4>Swimming</h4>
+                <p>Swimming Zone 2 uses pace as the primary guide. Heart rate response is blunted in water, making HR less reliable.</p>
+
+                <p>This training plan generator takes all these factors into account to create a personalized program that maximizes your Zone 2 training effectiveness while fitting your lifestyle and goals.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes. Optimize your training with precise calculations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-calculator" class="hover:text-white">Zone 2 Calculator</a></li>
+                        <li><a href="/lactate-threshold-calculator" class="hover:text-white">Lactate Threshold</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/zone-2-training-plan-generator" class="hover:text-white">Zone 2 Training Plans</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Zone 2 Training Plan Generator
+        class Zone2TrainingPlanGenerator extends Calculator {
+            constructor() {
+                super('training-plan-form', 'training-plan-result');
+                this.setupEventListeners();
+            }
+
+            calculate(formData) {
+                // Extract form data
+                const age = parseInt(formData.get('age'));
+                const restingHR = parseInt(formData.get('resting-hr')) || 60;
+                const maxHR = parseInt(formData.get('max-hr')) || (220 - age);
+                const lthr = parseInt(formData.get('lthr')) || Math.round(maxHR * 0.85);
+                
+                const experienceLevel = formData.get('experience-level');
+                const currentVolume = parseFloat(formData.get('current-volume'));
+                const primarySport = formData.get('primary-sport');
+                const zone2Experience = formData.get('zone2-experience');
+                
+                const primaryGoal = formData.get('primary-goal');
+                const planDuration = parseInt(formData.get('plan-duration'));
+                const availableDays = parseInt(formData.get('available-days'));
+                const sessionDuration = formData.get('session-duration');
+                
+                const periodizationStyle = formData.get('periodization-style');
+                const monitoringPreference = formData.get('monitoring-preference');
+                const recoveryFocus = formData.get('recovery-focus');
+                const crossTraining = formData.get('cross-training');
+
+                // Calculate Zone 2 heart rate range
+                const zone2Min = Math.round(lthr * 0.65);
+                const zone2Max = Math.round(lthr * 0.75);
+
+                // Determine session characteristics based on inputs
+                const sessionConfig = this.getSessionConfig(experienceLevel, sessionDuration, availableDays);
+                const weeklySchedule = this.generateWeeklySchedule(availableDays, sessionConfig, primarySport, crossTraining);
+                const progressionProtocol = this.generateProgressionProtocol(planDuration, experienceLevel, periodizationStyle);
+                const monitoringGuidelines = this.generateMonitoringGuidelines(monitoringPreference, primarySport);
+                const personalizedRecommendations = this.generateRecommendations(formData, zone2Min, zone2Max);
+
+                return {
+                    planDuration,
+                    zone2Range: `${zone2Min}-${zone2Max}`,
+                    weeklyVolume: sessionConfig.weeklyVolume,
+                    sessionsPerWeek: availableDays,
+                    weeklySchedule,
+                    progressionProtocol,
+                    monitoringGuidelines,
+                    personalizedRecommendations
+                };
+            }
+
+            getSessionConfig(experienceLevel, sessionDuration, availableDays) {
+                const baseDurations = {
+                    'beginner': { short: 30, medium: 45, long: 60 },
+                    'intermediate': { short: 45, medium: 60, long: 75 },
+                    'advanced': { short: 60, medium: 75, long: 90 },
+                    'elite': { short: 75, medium: 90, long: 120 }
+                };
+
+                const durations = baseDurations[experienceLevel];
+                let sessionLength;
+
+                if (sessionDuration === 'short') sessionLength = durations.short;
+                else if (sessionDuration === 'medium') sessionLength = durations.medium;
+                else if (sessionDuration === 'long') sessionLength = durations.long;
+                else sessionLength = durations.medium; // mixed default
+
+                const weeklyVolume = (sessionLength / 60) * availableDays;
+
+                return {
+                    sessionLength,
+                    weeklyVolume: weeklyVolume.toFixed(1)
+                };
+            }
+
+            generateWeeklySchedule(availableDays, sessionConfig, primarySport, crossTraining) {
+                const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                const schedule = [];
+
+                // Define activity types based on sport and cross-training preference
+                const activities = this.getActivityTypes(primarySport, crossTraining);
+
+                for (let i = 0; i < 7; i++) {
+                    const dayName = days[i];
+                    
+                    if (i < availableDays) {
+                        // Training day
+                        let duration, intensity, purpose, activity;
+
+                        if (i === 0 || i === availableDays - 1) {
+                            // Longer sessions on first and last training days
+                            duration = `${Math.round(sessionConfig.sessionLength * 1.2)} min`;
+                            intensity = 'Zone 2 (65-75% LTHR)';
+                            purpose = 'Aerobic base building, fat oxidation';
+                            activity = activities.primary;
+                        } else if (i === Math.floor(availableDays / 2)) {
+                            // Medium session in middle
+                            duration = `${sessionConfig.sessionLength} min`;
+                            intensity = 'Zone 2 (65-75% LTHR)';
+                            purpose = 'Steady aerobic development';
+                            activity = activities.secondary || activities.primary;
+                        } else {
+                            // Shorter sessions
+                            duration = `${Math.round(sessionConfig.sessionLength * 0.8)} min`;
+                            intensity = 'Zone 2 (65-75% LTHR)';
+                            purpose = 'Active recovery in Zone 2';
+                            activity = activities.primary;
+                        }
+
+                        schedule.push({
+                            day: dayName,
+                            activity,
+                            duration,
+                            intensity,
+                            purpose
+                        });
+                    } else {
+                        // Rest day
+                        schedule.push({
+                            day: dayName,
+                            activity: 'Rest',
+                            duration: '-',
+                            intensity: 'Complete rest or easy walk',
+                            purpose: 'Recovery and adaptation'
+                        });
+                    }
+                }
+
+                return schedule;
+            }
+
+            getActivityTypes(primarySport, crossTraining) {
+                const sportMap = {
+                    'running': { primary: 'Zone 2 Run', secondary: 'Easy Bike' },
+                    'cycling': { primary: 'Zone 2 Bike', secondary: 'Easy Run' },
+                    'triathlon': { primary: 'Zone 2 Bike/Run', secondary: 'Easy Swim' },
+                    'swimming': { primary: 'Zone 2 Swim', secondary: 'Easy Run' },
+                    'rowing': { primary: 'Zone 2 Row', secondary: 'Easy Run' },
+                    'cross-country-skiing': { primary: 'Zone 2 Ski', secondary: 'Easy Run' }
+                };
+
+                const activities = sportMap[primarySport] || { primary: 'Zone 2 Training', secondary: 'Easy Cross-Training' };
+
+                if (crossTraining === 'none') {
+                    activities.secondary = activities.primary;
+                }
+
+                return activities;
+            }
+
+            generateProgressionProtocol(planDuration, experienceLevel, periodizationStyle) {
+                const phases = [];
+
+                if (planDuration <= 4) {
+                    // Short plan - single phase
+                    phases.push({
+                        phase: 1,
+                        name: 'Foundation Building',
+                        weeks: `1-${planDuration}`,
+                        focus: 'Establish Zone 2 base and movement patterns',
+                        progression: 'Increase duration by 5-10 minutes every 2 weeks'
+                    });
+                } else if (planDuration <= 8) {
+                    // Medium plan - two phases
+                    const phase1Weeks = Math.floor(planDuration / 2);
+                    phases.push({
+                        phase: 1,
+                        name: 'Foundation',
+                        weeks: `1-${phase1Weeks}`,
+                        focus: 'Build aerobic base and Zone 2 efficiency',
+                        progression: 'Increase session duration by 10 minutes bi-weekly'
+                    });
+                    phases.push({
+                        phase: 2,
+                        name: 'Development',
+                        weeks: `${phase1Weeks + 1}-${planDuration}`,
+                        focus: 'Optimize fat oxidation and aerobic capacity',
+                        progression: 'Add longer sessions and maintain consistency'
+                    });
+                } else {
+                    // Long plan - three phases
+                    const phase1Weeks = Math.floor(planDuration / 3);
+                    const phase2Weeks = Math.floor(planDuration * 2 / 3);
+                    
+                    phases.push({
+                        phase: 1,
+                        name: 'Foundation',
+                        weeks: `1-${phase1Weeks}`,
+                        focus: 'Establish Zone 2 base and build volume gradually',
+                        progression: 'Increase duration by 10 minutes every 2 weeks'
+                    });
+                    phases.push({
+                        phase: 2,
+                        name: 'Development',
+                        weeks: `${phase1Weeks + 1}-${phase2Weeks}`,
+                        focus: 'Maximize aerobic adaptations and fat oxidation',
+                        progression: 'Maintain volume, focus on consistency'
+                    });
+                    phases.push({
+                        phase: 3,
+                        name: 'Optimization',
+                        weeks: `${phase2Weeks + 1}-${planDuration}`,
+                        focus: 'Fine-tune Zone 2 efficiency and prepare for next phase',
+                        progression: 'Stabilize fitness, prepare for higher intensities'
+                    });
+                }
+
+                return phases;
+            }
+
+            generateMonitoringGuidelines(preference, sport) {
+                const metrics = [];
+                const indicators = [];
+
+                // Base metrics for all preferences
+                metrics.push('Heart rate during sessions');
+                metrics.push('Rate of perceived exertion (should stay 3-4/10)');
+                metrics.push('Session duration progression');
+
+                indicators.push('Decreased heart rate drift over time');
+                indicators.push('Improved conversational ability during sessions');
+                indicators.push('Reduced perceived effort at same intensity');
+
+                // Add preference-specific metrics
+                if (preference.includes('pace')) {
+                    metrics.push('Pace at Zone 2 heart rate');
+                    indicators.push('Faster pace at same heart rate over time');
+                }
+
+                if (preference.includes('power')) {
+                    metrics.push('Power output at Zone 2 heart rate');
+                    indicators.push('Higher power at same heart rate and RPE');
+                }
+
+                if (preference === 'all-metrics') {
+                    metrics.push('Heart rate variability trends');
+                    metrics.push('Resting heart rate changes');
+                    indicators.push('Improved recovery heart rate');
+                    indicators.push('Better sleep quality scores');
+                }
+
+                return { metrics, indicators };
+            }
+
+            generateRecommendations(formData, zone2Min, zone2Max) {
+                const recommendations = [];
+                
+                const age = parseInt(formData.get('age'));
+                const experienceLevel = formData.get('experience-level');
+                const primaryGoal = formData.get('primary-goal');
+                const zone2Experience = formData.get('zone2-experience');
+                const recoveryFocus = formData.get('recovery-focus');
+
+                // Age-specific recommendations
+                if (age > 50) {
+                    recommendations.push("As a master athlete, prioritize consistency over intensity. Your Zone 2 adaptations may take slightly longer but will be more durable.");
+                }
+
+                // Experience-based recommendations
+                if (experienceLevel === 'beginner') {
+                    recommendations.push("Start conservatively and focus on building the habit of Zone 2 training. Consistency is more important than perfect execution.");
+                }
+
+                // Goal-specific recommendations
+                if (primaryGoal === 'endurance-events') {
+                    recommendations.push("For long-distance events, gradually build your longest Zone 2 sessions to 2-3 hours to simulate race demands.");
+                } else if (primaryGoal === 'weight-management') {
+                    recommendations.push("Zone 2 training maximizes fat oxidation. Consider fasted morning sessions 1-2 times per week for enhanced fat adaptation.");
+                }
+
+                // Zone 2 experience recommendations
+                if (zone2Experience === 'none') {
+                    recommendations.push("New to Zone 2? Start with the talk test - you should be able to speak in full sentences throughout the session.");
+                }
+
+                // Recovery-specific recommendations
+                if (recoveryFocus === 'conservative') {
+                    recommendations.push("With your conservative recovery approach, consider adding an extra rest day every 2-3 weeks and monitor your resting heart rate trends.");
+                }
+
+                // Heart rate guidance
+                recommendations.push(`Your Zone 2 heart rate range is ${zone2Min}-${zone2Max} bpm. Start at the lower end and progress to the upper range as adaptations occur.`);
+
+                // Nutrition guidance
+                recommendations.push("Fuel longer Zone 2 sessions (90+ minutes) with easy-to-digest carbohydrates every 60-90 minutes to maintain energy and training quality.");
+
+                return recommendations;
+            }
+
+            displayResult(result) {
+                // Update overview stats
+                document.getElementById('plan-duration-display').textContent = result.planDuration;
+                document.getElementById('zone2-range-display').textContent = result.zone2Range;
+                document.getElementById('weekly-volume-display').textContent = result.weeklyVolume;
+                document.getElementById('sessions-per-week-display').textContent = result.sessionsPerWeek;
+
+                // Populate weekly schedule
+                const scheduleTable = document.getElementById('weekly-schedule');
+                scheduleTable.innerHTML = '';
+                result.weeklySchedule.forEach(day => {
+                    const row = document.createElement('tr');
+                    row.className = day.activity === 'Rest' ? 'bg-gray-50' : 'hover:bg-blue-50';
+                    row.innerHTML = `
+                        <td class="border border-gray-300 p-3 font-medium">${day.day}</td>
+                        <td class="border border-gray-300 p-3 text-center">${day.activity}</td>
+                        <td class="border border-gray-300 p-3 text-center">${day.duration}</td>
+                        <td class="border border-gray-300 p-3 text-center">${day.intensity}</td>
+                        <td class="border border-gray-300 p-3">${day.purpose}</td>
+                    `;
+                    scheduleTable.appendChild(row);
+                });
+
+                // Populate progression phases
+                result.progressionProtocol.forEach((phase, index) => {
+                    const container = document.getElementById(`phase-${phase.phase}-details`);
+                    container.innerHTML = `
+                        <div><strong>Weeks:</strong> ${phase.weeks}</div>
+                        <div><strong>Focus:</strong> ${phase.focus}</div>
+                        <div><strong>Progression:</strong> ${phase.progression}</div>
+                    `;
+                });
+
+                // Populate monitoring guidelines
+                const metricsContainer = document.getElementById('monitoring-metrics');
+                metricsContainer.innerHTML = '';
+                result.monitoringGuidelines.metrics.forEach(metric => {
+                    const div = document.createElement('div');
+                    div.textContent = `• ${metric}`;
+                    metricsContainer.appendChild(div);
+                });
+
+                const indicatorsContainer = document.getElementById('progress-indicators');
+                indicatorsContainer.innerHTML = '';
+                result.monitoringGuidelines.indicators.forEach(indicator => {
+                    const div = document.createElement('div');
+                    div.textContent = `• ${indicator}`;
+                    indicatorsContainer.appendChild(div);
+                });
+
+                // Populate recommendations
+                const recommendationsContainer = document.getElementById('personalized-recommendations');
+                recommendationsContainer.innerHTML = '';
+                result.personalizedRecommendations.forEach(recommendation => {
+                    const p = document.createElement('p');
+                    p.className = 'mb-3';
+                    p.textContent = recommendation;
+                    recommendationsContainer.appendChild(p);
+                });
+
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const duration = document.getElementById('plan-duration-display').textContent;
+                const zone2Range = document.getElementById('zone2-range-display').textContent;
+                const volume = document.getElementById('weekly-volume-display').textContent;
+                
+                return `My personalized Zone 2 training plan: ${duration} weeks, ${zone2Range} bpm target, ${volume} hrs/week! Generate yours: ${window.location.href}`;
+            }
+        }
+
+        // Initialize calculator
+        const trainingPlanGenerator = new Zone2TrainingPlanGenerator();
+
+        // Share button event listener
+        document.getElementById('share-plan').addEventListener('click', () => {
+            trainingPlanGenerator.shareResult();
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
