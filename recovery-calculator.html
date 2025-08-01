@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Calculator - Optimize Rest Between Workouts | RunBikeCalc</title>
+    <meta name="description" content="Calculate optimal recovery time between workouts based on intensity, duration, and fitness level. Prevent overtraining and maximize performance gains.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/recovery-calculator.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Recovery Calculator - Science-Based Recovery Planning">
+    <meta property="og:description" content="Calculate optimal recovery time based on workout intensity and personal factors">
+    <meta property="og:url" content="https://runbikecalc.com/recovery-calculator.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Recovery Calculator",
+        "url": "https://runbikecalc.com/recovery-calculator.html",
+        "description": "Calculate optimal recovery time between training sessions",
+        "applicationCategory": "SportsApplication"
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/running-tools.html" class="nav-link">Running</a>
+                    <a href="/cycling-tools.html" class="nav-link">Cycling</a>
+                    <a href="/utility-tools.html" class="nav-link font-semibold text-primary">Training Tools</a>
+                    <a href="/blog.html" class="nav-link">Blog</a>
+                </div>
+            </div>
+            
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t pt-4">
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/running-tools.html" class="mobile-menu-item">Running</a>
+                <a href="/cycling-tools.html" class="mobile-menu-item">Cycling</a>
+                <a href="/utility-tools.html" class="mobile-menu-item font-semibold text-primary">Training Tools</a>
+                <a href="/blog.html" class="mobile-menu-item">Blog</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/utility-tools.html" class="hover:text-primary">Training Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Recovery Calculator</li>
+            </ol>
+        </nav>
+        
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Recovery Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate optimal recovery time between workouts based on intensity, duration, and personal factors. Train smarter, not harder.</p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main Calculator -->
+            <div class="md:col-span-2">
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Recovery Time</h2>
+                    
+                    <form id="recovery-form" class="space-y-6">
+                        <!-- Workout Details -->
+                        <div class="border-b pb-6">
+                            <h3 class="text-lg font-semibold mb-4">Workout Details</h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="workout-type" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Workout Type
+                                    </label>
+                                    <select id="workout-type" class="calc-input-number text-left">
+                                        <option value="easy">Easy/Recovery Run</option>
+                                        <option value="long">Long Run</option>
+                                        <option value="tempo">Tempo/Threshold</option>
+                                        <option value="intervals">Intervals/Track</option>
+                                        <option value="race">Race/Time Trial</option>
+                                        <option value="strength">Strength Training</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Duration (minutes)
+                                    </label>
+                                    <input type="number" 
+                                           id="duration" 
+                                           class="calc-input-number" 
+                                           placeholder="60"
+                                           min="10"
+                                           max="600">
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <label for="perceived-effort" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Perceived Effort (1-10)
+                                </label>
+                                <input type="range" 
+                                       id="perceived-effort" 
+                                       min="1" 
+                                       max="10" 
+                                       value="5"
+                                       class="w-full">
+                                <div class="flex justify-between text-xs text-gray-600 mt-1">
+                                    <span>Very Easy</span>
+                                    <span>Moderate</span>
+                                    <span>Maximum</span>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="text-2xl font-bold text-primary" id="effort-display">5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Personal Factors -->
+                        <div class="border-b pb-6">
+                            <h3 class="text-lg font-semibold mb-4">Personal Factors</h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="fitness-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Fitness Level
+                                    </label>
+                                    <select id="fitness-level" class="calc-input-number text-left">
+                                        <option value="beginner">Beginner (&lt;6 months)</option>
+                                        <option value="intermediate">Intermediate (6mo-2yr)</option>
+                                        <option value="advanced">Advanced (2-5yr)</option>
+                                        <option value="elite">Elite (5+ years)</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Age
+                                    </label>
+                                    <input type="number" 
+                                           id="age" 
+                                           class="calc-input-number" 
+                                           placeholder="30"
+                                           min="15"
+                                           max="100">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mt-4">
+                                <div>
+                                    <label for="sleep-quality" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Sleep Quality
+                                    </label>
+                                    <select id="sleep-quality" class="calc-input-number text-left">
+                                        <option value="excellent">Excellent (8+ hours)</option>
+                                        <option value="good">Good (7-8 hours)</option>
+                                        <option value="fair">Fair (6-7 hours)</option>
+                                        <option value="poor">Poor (&lt;6 hours)</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="stress-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Life Stress Level
+                                    </label>
+                                    <select id="stress-level" class="calc-input-number text-left">
+                                        <option value="low">Low</option>
+                                        <option value="moderate">Moderate</option>
+                                        <option value="high">High</option>
+                                        <option value="very-high">Very High</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Factors -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Additional Factors</h3>
+                            
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="muscle-soreness" class="mr-2">
+                                    <span class="text-sm">Experiencing muscle soreness</span>
+                                </label>
+                                
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="illness-recent" class="mr-2">
+                                    <span class="text-sm">Recently recovered from illness</span>
+                                </label>
+                                
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="altitude" class="mr-2">
+                                    <span class="text-sm">Training at altitude (&gt;5000ft)</span>
+                                </label>
+                                
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="heat-training" class="mr-2">
+                                    <span class="text-sm">Training in heat/humidity</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calc-button">
+                            Calculate Recovery Time
+                        </button>
+                    </form>
+                    
+                    <!-- Results -->
+                    <div id="recovery-result" class="hidden mt-8"></div>
+                </div>
+                
+                <!-- Educational Content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Recovery Science</h2>
+                    
+                    <h3>Why Recovery Matters</h3>
+                    <p>Recovery is when your body adapts to training stress and becomes stronger. Without adequate recovery, you risk overtraining, injury, and performance decline.</p>
+                    
+                    <h3>Recovery Time Guidelines</h3>
+                    
+                    <h4>By Workout Type:</h4>
+                    <ul>
+                        <li><strong>Easy Runs:</strong> 8-24 hours</li>
+                        <li><strong>Long Runs:</strong> 24-48 hours</li>
+                        <li><strong>Tempo Runs:</strong> 24-48 hours</li>
+                        <li><strong>Interval Training:</strong> 48-72 hours</li>
+                        <li><strong>Races:</strong> 3-7 days (depending on distance)</li>
+                        <li><strong>Strength Training:</strong> 24-48 hours for same muscle groups</li>
+                    </ul>
+                    
+                    <h3>Factors Affecting Recovery</h3>
+                    
+                    <h4>1. Training Variables</h4>
+                    <ul>
+                        <li>Workout intensity and duration</li>
+                        <li>Training volume and frequency</li>
+                        <li>Type of exercise (impact level)</li>
+                    </ul>
+                    
+                    <h4>2. Personal Factors</h4>
+                    <ul>
+                        <li><strong>Age:</strong> Recovery slows with age (add 10-20% after 40)</li>
+                        <li><strong>Fitness Level:</strong> Fitter athletes recover faster</li>
+                        <li><strong>Genetics:</strong> Individual variation in recovery capacity</li>
+                    </ul>
+                    
+                    <h4>3. Lifestyle Factors</h4>
+                    <ul>
+                        <li><strong>Sleep:</strong> Most important recovery tool (7-9 hours optimal)</li>
+                        <li><strong>Nutrition:</strong> Protein and carbs within 30 minutes post-workout</li>
+                        <li><strong>Hydration:</strong> Replace fluids lost during exercise</li>
+                        <li><strong>Stress:</strong> Mental stress delays physical recovery</li>
+                    </ul>
+                    
+                    <h3>Signs You Need More Recovery</h3>
+                    <ul>
+                        <li>Elevated resting heart rate (5+ bpm above normal)</li>
+                        <li>Persistent muscle soreness</li>
+                        <li>Declining performance</li>
+                        <li>Mood changes or irritability</li>
+                        <li>Poor sleep quality</li>
+                        <li>Frequent illness or injury</li>
+                        <li>Loss of motivation</li>
+                    </ul>
+                    
+                    <h3>Active Recovery Strategies</h3>
+                    <ul>
+                        <li><strong>Light Activity:</strong> Easy walking, swimming, or cycling</li>
+                        <li><strong>Stretching:</strong> Gentle yoga or static stretching</li>
+                        <li><strong>Foam Rolling:</strong> Self-myofascial release</li>
+                        <li><strong>Massage:</strong> Professional or self-massage</li>
+                        <li><strong>Ice Baths:</strong> 10-15 minutes at 50-60°F</li>
+                        <li><strong>Compression:</strong> Garments or boots</li>
+                    </ul>
+                </article>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <!-- Recovery Status Check -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Recovery Check</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="text-sm font-medium text-gray-700">Resting Heart Rate</label>
+                            <div class="flex items-center mt-1">
+                                <span class="text-sm mr-2">Normal</span>
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm text-gray-600">+5 bpm = need recovery</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-gray-700">Energy Level</label>
+                            <select class="calc-input-number text-left text-sm">
+                                <option>High</option>
+                                <option>Normal</option>
+                                <option>Low</option>
+                                <option>Very Low</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-gray-700">Muscle Soreness</label>
+                            <select class="calc-input-number text-left text-sm">
+                                <option>None</option>
+                                <option>Mild</option>
+                                <option>Moderate</option>
+                                <option>Severe</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/training-load-calculator.html" class="text-primary hover:underline">Training Load Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                        <li><a href="/nutrition-calculator.html" class="text-primary hover:underline">Nutrition Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Science-based training calculators for endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/recovery-calculator.html" class="hover:text-white">Recovery Calculator</a></li>
+                        <li><a href="/training-load-calculator.html" class="hover:text-white">Training Load</a></li>
+                        <li><a href="/nutrition-calculator.html" class="hover:text-white">Nutrition</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white">Privacy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Effort slider display
+        const effortSlider = document.getElementById('perceived-effort');
+        const effortDisplay = document.getElementById('effort-display');
+        effortSlider.addEventListener('input', function() {
+            effortDisplay.textContent = this.value;
+        });
+        
+        // Recovery Calculator
+        class RecoveryCalculator extends Calculator {
+            constructor() {
+                super('recovery-form', 'recovery-result');
+            }
+            
+            calculate() {
+                // Get all inputs
+                const workoutType = document.getElementById('workout-type').value;
+                const duration = parseFloat(document.getElementById('duration').value) || 60;
+                const effort = parseInt(document.getElementById('perceived-effort').value);
+                const fitnessLevel = document.getElementById('fitness-level').value;
+                const age = parseInt(document.getElementById('age').value) || 30;
+                const sleepQuality = document.getElementById('sleep-quality').value;
+                const stressLevel = document.getElementById('stress-level').value;
+                
+                // Additional factors
+                const muscleSoreness = document.getElementById('muscle-soreness').checked;
+                const recentIllness = document.getElementById('illness-recent').checked;
+                const altitude = document.getElementById('altitude').checked;
+                const heat = document.getElementById('heat-training').checked;
+                
+                // Base recovery times (hours)
+                const baseRecovery = {
+                    'easy': 12,
+                    'long': 36,
+                    'tempo': 36,
+                    'intervals': 48,
+                    'race': 72,
+                    'strength': 36
+                };
+                
+                let recoveryHours = baseRecovery[workoutType];
+                
+                // Adjust for duration and effort
+                recoveryHours *= (duration / 60) * (effort / 5);
+                
+                // Fitness level adjustment
+                const fitnessMultiplier = {
+                    'beginner': 1.3,
+                    'intermediate': 1.1,
+                    'advanced': 0.9,
+                    'elite': 0.8
+                };
+                recoveryHours *= fitnessMultiplier[fitnessLevel];
+                
+                // Age adjustment (add 2% per year over 30)
+                if (age > 30) {
+                    recoveryHours *= 1 + ((age - 30) * 0.02);
+                }
+                
+                // Sleep quality adjustment
+                const sleepMultiplier = {
+                    'excellent': 0.9,
+                    'good': 1.0,
+                    'fair': 1.15,
+                    'poor': 1.3
+                };
+                recoveryHours *= sleepMultiplier[sleepQuality];
+                
+                // Stress adjustment
+                const stressMultiplier = {
+                    'low': 0.95,
+                    'moderate': 1.0,
+                    'high': 1.15,
+                    'very-high': 1.3
+                };
+                recoveryHours *= stressMultiplier[stressLevel];
+                
+                // Additional factors
+                if (muscleSoreness) recoveryHours *= 1.2;
+                if (recentIllness) recoveryHours *= 1.3;
+                if (altitude) recoveryHours *= 1.15;
+                if (heat) recoveryHours *= 1.1;
+                
+                // Round to nearest hour
+                recoveryHours = Math.round(recoveryHours);
+                
+                // Calculate recovery strategies
+                const strategies = this.getRecoveryStrategies(workoutType, effort);
+                
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Recovery Recommendation</h3>
+                        
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Recommended Recovery Time</div>
+                            <div class="text-5xl font-bold">${recoveryHours}</div>
+                            <div class="text-lg opacity-90 mt-2">hours</div>
+                            <div class="text-sm opacity-80 mt-3">Next hard workout: ${this.getNextWorkoutTime(recoveryHours)}</div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-800">Light Activity OK</h4>
+                                <div class="text-lg font-medium text-green-900">${Math.round(recoveryHours * 0.5)} hours</div>
+                                <div class="text-sm text-green-700">Easy movement, walking, stretching</div>
+                            </div>
+                            <div class="bg-blue-100 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-800">Moderate Training</h4>
+                                <div class="text-lg font-medium text-blue-900">${Math.round(recoveryHours * 0.75)} hours</div>
+                                <div class="text-sm text-blue-700">Easy runs, recovery rides</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Recommended Recovery Strategies</h4>
+                            <div class="space-y-2">
+                                ${strategies.map(s => `<div class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span class="text-gray-700">${s}</span>
+                                </div>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="recoveryCalculator.saveToCalendar(${recoveryHours})" class="calc-button-secondary">
+                                Add to Calendar
+                            </button>
+                            <button onclick="recoveryCalculator.shareResult('Recovery time: ${recoveryHours} hours')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+            }
+            
+            getNextWorkoutTime(hours) {
+                const nextDate = new Date();
+                nextDate.setHours(nextDate.getHours() + hours);
+                return nextDate.toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    month: 'short', 
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit'
+                });
+            }
+            
+            getRecoveryStrategies(workoutType, effort) {
+                const strategies = [];
+                
+                // Always recommend these
+                strategies.push('Hydrate well - aim for half your body weight in ounces');
+                strategies.push('Get quality sleep - aim for 8+ hours tonight');
+                
+                // Based on effort
+                if (effort >= 8) {
+                    strategies.push('Consider ice bath or cold therapy (10-15 min)');
+                    strategies.push('Protein within 30 minutes post-workout');
+                }
+                
+                if (effort >= 6) {
+                    strategies.push('Foam rolling and stretching session');
+                    strategies.push('Elevate legs for 10-15 minutes');
+                }
+                
+                // Based on workout type
+                if (workoutType === 'intervals' || workoutType === 'race') {
+                    strategies.push('Easy walk or swim tomorrow for active recovery');
+                    strategies.push('Compression garments may help');
+                }
+                
+                if (workoutType === 'strength') {
+                    strategies.push('Focus on protein intake (1g per lb body weight)');
+                }
+                
+                if (workoutType === 'long') {
+                    strategies.push('Replenish glycogen with carbohydrates');
+                    strategies.push('Consider massage or self-massage');
+                }
+                
+                return strategies;
+            }
+            
+            saveToCalendar(hours) {
+                // This would integrate with calendar APIs
+                alert(`Next hard workout scheduled for ${this.getNextWorkoutTime(hours)}`);
+            }
+        }
+        
+        // Initialize calculator
+        const recoveryCalculator = new RecoveryCalculator();
+    </script>
+</body>
+</html>
