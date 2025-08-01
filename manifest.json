@@ -1,0 +1,67 @@
+{
+  "name": "RunBikeCalc - Training Calculators",
+  "short_name": "RunBikeCalc",
+  "description": "Free calculators for runners, cyclists, and endurance athletes. Calculate pace, heart rate zones, VO2 max, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["sports", "health", "fitness"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "label": "Running Pace Calculator"
+    },
+    {
+      "src": "/images/screenshot-2.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "label": "Heart Rate Zone Calculator"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Running Pace",
+      "short_name": "Pace",
+      "description": "Calculate running pace",
+      "url": "/running-pace-calculator.html",
+      "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Heart Rate Zones",
+      "short_name": "HR Zones",
+      "description": "Calculate training zones",
+      "url": "/heart-rate-zone-calculator.html",
+      "icons": [{"src": "/images/hr-icon.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "VO2 Max",
+      "short_name": "VO2",
+      "description": "Calculate VO2 Max",
+      "url": "/vo2-max-calculator.html",
+      "icons": [{"src": "/images/vo2-icon.png", "sizes": "96x96"}]
+    }
+  ]
+}

@@ -46,6 +46,26 @@ class Calculator {
       if (window.innerWidth < 768) {
         this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+      
+      // Save calculation to history
+      this.saveToHistory();
+    }
+  }
+  
+  saveToHistory() {
+    // Get calculator name from page title or form ID
+    const calculatorName = document.title.split(' - ')[0] || this.form.id.replace('-form', '');
+    
+    // Get form data
+    const formData = new FormData(this.form);
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
+    }
+    
+    // Save using PWAManager
+    if (window.PWAManager) {
+      window.PWAManager.saveCalculation(calculatorName, data);
     }
   }
 
@@ -180,6 +200,129 @@ const CalcUtils = {
   }
 };
 
+// PWA Support
+const PWAManager = {
+  init: function() {
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered:', registration.scope);
+            
+            // Check for updates periodically
+            setInterval(() => {
+              registration.update();
+            }, 60000); // Check every minute
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed:', err);
+          });
+      });
+    }
+    
+    // Add install prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      this.showInstallButton(deferredPrompt);
+    });
+    
+    // Handle app installed
+    window.addEventListener('appinstalled', () => {
+      console.log('PWA was installed');
+      this.hideInstallButton();
+    });
+    
+    // Check if app is installed
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      console.log('App is running in standalone mode');
+    }
+  },
+  
+  showInstallButton: function(deferredPrompt) {
+    const installBanner = document.createElement('div');
+    installBanner.id = 'install-banner';
+    installBanner.className = 'fixed bottom-0 left-0 right-0 bg-primary text-white p-4 shadow-lg z-50 transform transition-transform duration-300';
+    installBanner.innerHTML = `
+      <div class="container mx-auto flex items-center justify-between">
+        <div>
+          <p class="font-semibold">Install RunBikeCalc App</p>
+          <p class="text-sm opacity-90">Access calculators offline, faster loading</p>
+        </div>
+        <div class="flex gap-2">
+          <button id="install-btn" class="bg-white text-primary px-4 py-2 rounded font-semibold hover:bg-gray-100">
+            Install
+          </button>
+          <button id="dismiss-btn" class="text-white opacity-75 hover:opacity-100">
+            Not now
+          </button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(installBanner);
+    
+    // Slide up animation
+    setTimeout(() => {
+      installBanner.style.transform = 'translateY(0)';
+    }, 100);
+    
+    // Handle install click
+    document.getElementById('install-btn').addEventListener('click', async () => {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response: ${outcome}`);
+      this.hideInstallButton();
+    });
+    
+    // Handle dismiss
+    document.getElementById('dismiss-btn').addEventListener('click', () => {
+      this.hideInstallButton();
+      localStorage.setItem('pwa-install-dismissed', Date.now());
+    });
+  },
+  
+  hideInstallButton: function() {
+    const banner = document.getElementById('install-banner');
+    if (banner) {
+      banner.style.transform = 'translateY(100%)';
+      setTimeout(() => banner.remove(), 300);
+    }
+  },
+  
+  // Save calculator results for offline access
+  saveCalculation: function(calculatorName, data) {
+    const calculations = JSON.parse(localStorage.getItem('saved-calculations') || '[]');
+    calculations.unshift({
+      calculator: calculatorName,
+      data: data,
+      timestamp: Date.now()
+    });
+    
+    // Keep only last 50 calculations
+    if (calculations.length > 50) {
+      calculations.length = 50;
+    }
+    
+    localStorage.setItem('saved-calculations', JSON.stringify(calculations));
+    
+    // Trigger background sync if available
+    if ('sync' in self.registration) {
+      self.registration.sync.register('sync-calculator-results');
+    }
+  },
+  
+  getSavedCalculations: function() {
+    return JSON.parse(localStorage.getItem('saved-calculations') || '[]');
+  }
+};
+
+// Initialize PWA features
+PWAManager.init();
+
 // Export for use in other files
 window.Calculator = Calculator;
 window.CalcUtils = CalcUtils;
+window.PWAManager = PWAManager;
