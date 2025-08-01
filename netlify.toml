@@ -1,0 +1,25 @@
+[[redirects]]
+  from = "http://www.runbikecalc.com/*"
+  to = "https://runbikecalc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.runbikecalc.com/*"
+  to = "https://runbikecalc.com/:splat"
+  status = 301
+  force = true
+
+# Pretty URLs - serve .html files without extension
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 200
+  conditions = {Country = ["*"]}
+
+# Ensure blog query parameters don't cause 404s
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+  query = {category = ":category"}

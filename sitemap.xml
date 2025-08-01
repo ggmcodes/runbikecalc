@@ -14,31 +14,31 @@
 
     <!-- Category Pages -->
     <url>
-        <loc>https://runbikecalc.com/heart-rate-tools</loc>
+        <loc>https://runbikecalc.com/heart-rate-tools.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/running-tools</loc>
+        <loc>https://runbikecalc.com/running-tools.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/cycling-tools</loc>
+        <loc>https://runbikecalc.com/cycling-tools.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/vo2-tools</loc>
+        <loc>https://runbikecalc.com/vo2-tools.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/utility-tools</loc>
+        <loc>https://runbikecalc.com/utility-tools.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -46,31 +46,31 @@
 
     <!-- Heart Rate & Training Zone Calculators -->
     <url>
-        <loc>https://runbikecalc.com/zone-2-calculator</loc>
+        <loc>https://runbikecalc.com/zone-2-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/heart-rate-zone-calculator</loc>
+        <loc>https://runbikecalc.com/heart-rate-zone-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/max-heart-rate-calculator</loc>
+        <loc>https://runbikecalc.com/max-heart-rate-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/target-heart-rate-calculator</loc>
+        <loc>https://runbikecalc.com/target-heart-rate-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/mhr-karvonen-calculator</loc>
+        <loc>https://runbikecalc.com/mhr-karvonen-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -78,37 +78,37 @@
 
     <!-- Running Calculators -->
     <url>
-        <loc>https://runbikecalc.com/running-pace-calculator</loc>
+        <loc>https://runbikecalc.com/running-pace-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/race-time-predictor</loc>
+        <loc>https://runbikecalc.com/race-time-predictor.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/run-walk-calculator</loc>
+        <loc>https://runbikecalc.com/run-walk-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/calories-burned-running-calculator</loc>
+        <loc>https://runbikecalc.com/calories-burned-running-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/running-distance-converter</loc>
+        <loc>https://runbikecalc.com/running-distance-converter.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/treadmill-pace-calculator</loc>
+        <loc>https://runbikecalc.com/treadmill-pace-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -116,31 +116,31 @@
 
     <!-- Cycling Calculators -->
     <url>
-        <loc>https://runbikecalc.com/bike-gearing-calculator</loc>
+        <loc>https://runbikecalc.com/bike-gearing-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/cadence-speed-calculator</loc>
+        <loc>https://runbikecalc.com/cadence-speed-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/power-to-weight-ratio-calculator</loc>
+        <loc>https://runbikecalc.com/power-to-weight-ratio-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/ftp-calculator</loc>
+        <loc>https://runbikecalc.com/ftp-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/watts-to-calories-calculator</loc>
+        <loc>https://runbikecalc.com/watts-to-calories-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -148,31 +148,31 @@
 
     <!-- VO2 Max & Fitness Calculators -->
     <url>
-        <loc>https://runbikecalc.com/vo2-max-calculator</loc>
+        <loc>https://runbikecalc.com/vo2-max-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/cooper-test-calculator</loc>
+        <loc>https://runbikecalc.com/cooper-test-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/lactate-threshold-calculator</loc>
+        <loc>https://runbikecalc.com/lactate-threshold-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/aerobic-anaerobic-calculator</loc>
+        <loc>https://runbikecalc.com/aerobic-anaerobic-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/sweat-test-calculator</loc>
+        <loc>https://runbikecalc.com/sweat-test-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -180,19 +180,19 @@
 
     <!-- Utility & Conversion Calculators -->
     <url>
-        <loc>https://runbikecalc.com/pace-converter-calculator</loc>
+        <loc>https://runbikecalc.com/pace-converter-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/pace-to-speed-converter</loc>
+        <loc>https://runbikecalc.com/pace-to-speed-converter.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/bmi-calculator</loc>
+        <loc>https://runbikecalc.com/bmi-calculator.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -200,97 +200,97 @@
 
     <!-- Blog Pages -->
     <url>
-        <loc>https://runbikecalc.com/blog</loc>
+        <loc>https://runbikecalc.com/blog.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/what-is-zone-2-training-complete-guide</loc>
+        <loc>https://runbikecalc.com/blog/what-is-zone-2-training-complete-guide.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/how-to-calculate-running-pace-for-marathon-training</loc>
+        <loc>https://runbikecalc.com/blog/how-to-calculate-running-pace-for-marathon-training.html</loc>
         <lastmod>2024-12-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/ftp-testing-guide-cyclists</loc>
+        <loc>https://runbikecalc.com/blog/ftp-testing-guide-cyclists.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/vo2-max-training-methods</loc>
+        <loc>https://runbikecalc.com/blog/vo2-max-training-methods.html</loc>
         <lastmod>2024-12-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/heart-rate-zones-running</loc>
+        <loc>https://runbikecalc.com/blog/heart-rate-zones-running.html</loc>
         <lastmod>2024-12-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/power-to-weight-ratio-cycling</loc>
+        <loc>https://runbikecalc.com/blog/power-to-weight-ratio-cycling.html</loc>
         <lastmod>2024-12-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/lactate-threshold-training-triathletes</loc>
+        <loc>https://runbikecalc.com/blog/lactate-threshold-training-triathletes.html</loc>
         <lastmod>2024-12-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/calories-burned-calculator-endurance-sports</loc>
+        <loc>https://runbikecalc.com/blog/calories-burned-calculator-endurance-sports.html</loc>
         <lastmod>2024-12-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/run-walk-method-beginners</loc>
+        <loc>https://runbikecalc.com/blog/run-walk-method-beginners.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/aerobic-vs-anaerobic-training</loc>
+        <loc>https://runbikecalc.com/blog/aerobic-vs-anaerobic-training.html</loc>
         <lastmod>2024-12-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/10k-training-plan-2025</loc>
+        <loc>https://runbikecalc.com/blog/10k-training-plan-2025.html</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/best-running-shoes-2025</loc>
+        <loc>https://runbikecalc.com/blog/best-running-shoes-2025.html</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/half-marathon-training-guide-2025</loc>
+        <loc>https://runbikecalc.com/blog/half-marathon-training-guide-2025.html</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/running-for-beginners-ultimate-guide-2025</loc>
+        <loc>https://runbikecalc.com/blog/running-for-beginners-ultimate-guide-2025.html</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/blog/cycling-for-weight-loss-2025</loc>
+        <loc>https://runbikecalc.com/blog/cycling-for-weight-loss-2025.html</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -298,13 +298,13 @@
 
     <!-- Legal Pages -->
     <url>
-        <loc>https://runbikecalc.com/about</loc>
+        <loc>https://runbikecalc.com/about.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/contact</loc>
+        <loc>https://runbikecalc.com/contact.html</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
