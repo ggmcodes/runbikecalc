@@ -43,6 +43,7 @@ https://www.runbikecalc.com/* https://runbikecalc.com/:splat 301!
 /cycling-tools      /cycling-tools.html      200
 /vo2-tools          /vo2-tools.html          200
 /utility-tools      /utility-tools.html      200
+/utility            /utility-tools.html      301
 
 # Blog articles (without .html to match current structure)
 /blog/*             /blog/:splat.html        200
