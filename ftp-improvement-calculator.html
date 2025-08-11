@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    
+    <title>FTP Improvement Calculator: Track Power Gains & Progress 2025 | RunBikeCalc</title>
+    <meta name="description" content="Calculate FTP improvement over time, predict future gains, and track your cycling power progression. Free calculator with training recommendations and performance analytics.">
+    <meta name="keywords" content="FTP improvement calculator, cycling power gains, FTP progress tracker, functional threshold power improvement, cycling performance calculator">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/ftp-improvement-calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FTP Improvement Calculator - Track Your Power Gains">
+    <meta property="og:description" content="Calculate and predict FTP improvements with our free calculator. Track your cycling power gains over time.">
+    <meta property="og:image" content="https://runbikecalc.com/images/ftp-improvement.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FTP Improvement Calculator",
+        "description": "Calculate FTP improvements and predict future power gains for cyclists",
+        "url": "https://runbikecalc.com/ftp-improvement-calculator",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2025.1"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much can I improve my FTP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Beginners can expect 15-25% FTP improvement in their first 6 months with consistent training. Intermediate cyclists typically see 5-15% annual gains, while advanced riders may improve 2-8% per year."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to improve FTP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Initial FTP improvements appear within 4-6 weeks of structured training. Significant gains require 8-12 weeks of consistent threshold and base training. Maximum improvements typically occur over 16-24 weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What factors affect FTP improvement?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Training consistency, current fitness level, age, genetics, recovery quality, and training methodology all impact FTP gains. Structured training with proper periodization yields the best results."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/ftp-calculator" class="hover:text-blue-600">FTP Calculator</a>
+                    <a href="/power-to-weight-ratio-calculator" class="hover:text-blue-600">Power/Weight</a>
+                    <a href="/cycling-tools" class="hover:text-blue-600">Cycling Tools</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">FTP Improvement Calculator</h1>
+                <p class="text-xl mb-6">Track your power gains, predict future FTP, and optimize your training progression</p>
+                <div class="flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Free Calculator</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Progress Tracking</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Goal Setting</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Calculator Card -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Input Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Enter Your FTP Data</h2>
+                        
+                        <div class="space-y-4">
+                            <!-- Current FTP -->
+                            <div>
+                                <label for="current-ftp" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current FTP
+                                </label>
+                                <div class="relative">
+                                    <input type="number" id="current-ftp" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-lg"
+                                           placeholder="Enter current FTP (e.g., 250)" min="100" max="500" />
+                                    <span class="absolute right-3 top-3 text-gray-400">watts</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Previous FTP (Optional) -->
+                            <div>
+                                <label for="previous-ftp" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Previous FTP (Optional)
+                                </label>
+                                <div class="relative">
+                                    <input type="number" id="previous-ftp" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                                           placeholder="Previous FTP for comparison" min="100" max="500" />
+                                    <span class="absolute right-3 top-3 text-gray-400">watts</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Time Between Tests -->
+                            <div>
+                                <label for="time-period" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Time Between Tests
+                                </label>
+                                <select id="time-period" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                    <option value="4">4 weeks</option>
+                                    <option value="6">6 weeks</option>
+                                    <option value="8" selected>8 weeks</option>
+                                    <option value="12">12 weeks (3 months)</option>
+                                    <option value="16">16 weeks (4 months)</option>
+                                    <option value="24">24 weeks (6 months)</option>
+                                    <option value="52">52 weeks (1 year)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Experience Level -->
+                            <div>
+                                <label for="experience-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Experience
+                                </label>
+                                <select id="experience-level" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                    <option value="beginner">Beginner (0-1 year)</option>
+                                    <option value="intermediate" selected>Intermediate (1-3 years)</option>
+                                    <option value="advanced">Advanced (3-5 years)</option>
+                                    <option value="expert">Expert (5+ years)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Age -->
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age
+                                </label>
+                                <input type="number" id="age" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                                       placeholder="Enter age" min="16" max="80" />
+                            </div>
+
+                            <button onclick="calculateImprovement()" 
+                                    class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                                Calculate Improvement & Predictions
+                            </button>
+                        </div>
+
+                        <!-- Quick Tips -->
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">📈 Maximizing FTP Gains</h3>
+                            <p class="text-sm text-blue-700 mb-2">
+                                • Test FTP every 6-8 weeks<br>
+                                • Focus on 80% base training, 20% intensity<br>
+                                • Include 2×20min threshold intervals weekly
+                            </p>
+                            <a href="/blog/how-to-increase-lactate-threshold" class="text-blue-600 hover:underline text-sm font-medium">
+                                → Complete Training Guide
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Improvement Analysis</h2>
+                        
+                        <div id="improvement-results" class="space-y-4">
+                            <div class="text-center text-gray-500 py-8">
+                                <div class="text-6xl mb-4">⚡</div>
+                                <p>Enter your FTP data to see improvement analysis and future predictions</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Chart -->
+                        <div id="progress-chart" class="mt-6 hidden">
+                            <h3 class="font-semibold mb-3">Expected Progress Timeline</h3>
+                            <div id="chart-container" class="h-48 bg-gray-100 rounded flex items-center justify-center">
+                                <span class="text-gray-500">Visual progress chart will appear here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal Setting Calculator -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold mb-6">FTP Goal Calculator</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Set Your FTP Goal</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="goal-ftp" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Target FTP Goal
+                                </label>
+                                <div class="relative">
+                                    <input type="number" id="goal-ftp" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                                           placeholder="Enter goal FTP" min="100" max="600" />
+                                    <span class="absolute right-3 top-3 text-gray-400">watts</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="goal-timeline" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Timeline to Goal
+                                </label>
+                                <select id="goal-timeline" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                    <option value="12">3 months</option>
+                                    <option value="24" selected>6 months</option>
+                                    <option value="36">9 months</option>
+                                    <option value="52">1 year</option>
+                                </select>
+                            </div>
+                            
+                            <button onclick="calculateGoal()" 
+                                    class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                                Calculate Goal Requirements
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Goal Analysis</h3>
+                        <div id="goal-results" class="space-y-3">
+                            <div class="text-center text-gray-500 py-8">
+                                <div class="text-4xl mb-2">🎯</div>
+                                <p>Set a goal to see feasibility analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FTP Improvement Factors -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Factors That Help -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-green-600">What Increases FTP</h2>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <h3 class="font-semibold text-green-800">Structured Training</h3>
+                            <p class="text-sm text-green-700">Periodized plans with base building and threshold work</p>
+                        </div>
+                        
+                        <div class="p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <h3 class="font-semibold text-green-800">Consistency</h3>
+                            <p class="text-sm text-green-700">Regular training over months and years</p>
+                        </div>
+                        
+                        <div class="p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <h3 class="font-semibold text-green-800">Progressive Overload</h3>
+                            <p class="text-sm text-green-700">Gradually increasing training stress over time</p>
+                        </div>
+                        
+                        <div class="p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <h3 class="font-semibold text-green-800">Recovery & Nutrition</h3>
+                            <p class="text-sm text-green-700">Adequate sleep, stress management, proper fueling</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Factors That Limit -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-red-600">What Limits FTP Gains</h2>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-red-50 rounded border-l-4 border-red-500">
+                            <h3 class="font-semibold text-red-800">Training Age</h3>
+                            <p class="text-sm text-red-700">Years of consistent training (diminishing returns)</p>
+                        </div>
+                        
+                        <div class="p-3 bg-red-50 rounded border-l-4 border-red-500">
+                            <h3 class="font-semibold text-red-800">Genetics</h3>
+                            <p class="text-sm text-red-700">Individual response to training varies significantly</p>
+                        </div>
+                        
+                        <div class="p-3 bg-red-50 rounded border-l-4 border-red-500">
+                            <h3 class="font-semibold text-red-800">Age</h3>
+                            <p class="text-sm text-red-700">Natural decline in power after peak years (30-35)</p>
+                        </div>
+                        
+                        <div class="p-3 bg-red-50 rounded border-l-4 border-red-500">
+                            <h3 class="font-semibold text-red-800">Overtraining</h3>
+                            <p class="text-sm text-red-700">Too much intensity without adequate recovery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typical FTP Gains -->
+            <div class="bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-xl p-8 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Expected FTP Gains by Experience</h2>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">Beginner</h3>
+                        <div class="text-3xl font-bold mb-2">15-25%</div>
+                        <p class="text-sm opacity-90">First 6 months</p>
+                        <p class="text-xs opacity-75">Major adaptations</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">Intermediate</h3>
+                        <div class="text-3xl font-bold mb-2">8-15%</div>
+                        <p class="text-sm opacity-90">Annual gains</p>
+                        <p class="text-xs opacity-75">Steady progress</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">Advanced</h3>
+                        <div class="text-3xl font-bold mb-2">3-8%</div>
+                        <p class="text-sm opacity-90">Annual gains</p>
+                        <p class="text-xs opacity-75">Smaller improvements</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h3 class="font-semibold mb-2">Expert</h3>
+                        <div class="text-3xl font-bold mb-2">1-5%</div>
+                        <p class="text-sm opacity-90">Annual gains</p>
+                        <p class="text-xs opacity-75">Marginal gains</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center text-sm opacity-90">
+                    <p><strong>Note:</strong> Individual responses vary significantly. Genetics, training history, and lifestyle factors all impact improvement rates.</p>
+                </div>
+            </div>
+
+            <!-- Training Recommendations -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-6">Training Recommendations for FTP Improvement</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-blue-600">Base Phase (8-12 weeks)</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 85% Zone 2 aerobic training</li>
+                            <li>• 10% Zone 3 tempo work</li>
+                            <li>• 5% Zone 4+ intensity</li>
+                            <li>• Focus: Aerobic capacity building</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-green-600">Build Phase (6-8 weeks)</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 70% Zone 2 training</li>
+                            <li>• 15% Zone 3 tempo</li>
+                            <li>• 15% Zone 4-5 threshold/VO2</li>
+                            <li>• Focus: FTP-specific adaptations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-red-600">Peak Phase (4-6 weeks)</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 65% Zone 2 training</li>
+                            <li>• 10% Zone 3 tempo</li>
+                            <li>• 25% Zone 4-6 high intensity</li>
+                            <li>• Focus: Performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Calculators -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">FTP Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate your FTP from 20-minute, 8-minute, or ramp tests</p>
+                    <a href="/ftp-calculator" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Power-to-Weight Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate watts per kilogram and compare to racing categories</p>
+                    <a href="/power-to-weight-ratio-calculator" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Training Load Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate training stress and plan optimal recovery</p>
+                    <a href="/training-load-calculator" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateImprovement() {
+            const currentFtp = parseInt(document.getElementById('current-ftp').value);
+            const previousFtp = parseInt(document.getElementById('previous-ftp').value);
+            const timePeriod = parseInt(document.getElementById('time-period').value);
+            const experienceLevel = document.getElementById('experience-level').value;
+            const age = parseInt(document.getElementById('age').value);
+            
+            if (!currentFtp || currentFtp < 100 || currentFtp > 500) {
+                alert('Please enter a valid current FTP between 100-500 watts');
+                return;
+            }
+            
+            const resultsDiv = document.getElementById('improvement-results');
+            let resultsHTML = '';
+            
+            // If we have previous FTP, calculate actual improvement
+            if (previousFtp && previousFtp >= 100 && previousFtp <= 500) {
+                const absoluteGain = currentFtp - previousFtp;
+                const percentGain = ((currentFtp - previousFtp) / previousFtp * 100);
+                const weeklyGain = absoluteGain / timePeriod;
+                const annualizedGain = (weeklyGain * 52);
+                
+                resultsHTML += `
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+                        <h3 class="font-semibold text-green-800 mb-2">Actual Improvement</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="font-semibold">Absolute Gain:</p>
+                                <p class="text-lg font-bold text-green-600">${absoluteGain > 0 ? '+' : ''}${absoluteGain}w</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Percentage Gain:</p>
+                                <p class="text-lg font-bold text-green-600">${percentGain > 0 ? '+' : ''}${percentGain.toFixed(1)}%</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-green-700 mt-2">Over ${timePeriod} weeks (${weeklyGain.toFixed(1)}w/week)</p>
+                    </div>
+                `;
+            }
+            
+            // Experience-based improvement expectations
+            const improvementRates = {
+                beginner: { annual: [15, 25], quarterly: [8, 15] },
+                intermediate: { annual: [8, 15], quarterly: [3, 8] },
+                advanced: { annual: [3, 8], quarterly: [1, 4] },
+                expert: { annual: [1, 5], quarterly: [0.5, 2] }
+            };
+            
+            const rates = improvementRates[experienceLevel];
+            const timeMultiplier = timePeriod / 52; // Convert to annual multiplier
+            
+            const expectedMinGain = Math.round(currentFtp * (rates.annual[0] / 100) * timeMultiplier);
+            const expectedMaxGain = Math.round(currentFtp * (rates.annual[1] / 100) * timeMultiplier);
+            
+            // Age adjustment
+            let ageAdjustment = 1.0;
+            if (age) {
+                if (age < 25) ageAdjustment = 1.1;
+                else if (age > 35) ageAdjustment = Math.max(0.7, 1.0 - (age - 35) * 0.02);
+            }
+            
+            const adjustedMinGain = Math.round(expectedMinGain * ageAdjustment);
+            const adjustedMaxGain = Math.round(expectedMaxGain * ageAdjustment);
+            
+            resultsHTML += `
+                <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+                    <h3 class="font-semibold text-blue-800 mb-2">Expected Gains (${timePeriod} weeks)</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="font-semibold">Conservative:</p>
+                            <p class="text-lg font-bold text-blue-600">${currentFtp + adjustedMinGain}w (+${adjustedMinGain}w)</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Optimistic:</p>
+                            <p class="text-lg font-bold text-blue-600">${currentFtp + adjustedMaxGain}w (+${adjustedMaxGain}w)</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-700 mt-2">Based on ${experienceLevel} level${age ? ` and age ${age}` : ''}</p>
+                </div>
+            `;
+            
+            // Future predictions (6 months and 1 year)
+            const sixMonthMin = Math.round(currentFtp * (rates.annual[0] / 100) * 0.5 * ageAdjustment);
+            const sixMonthMax = Math.round(currentFtp * (rates.annual[1] / 100) * 0.5 * ageAdjustment);
+            const yearMin = Math.round(currentFtp * (rates.annual[0] / 100) * ageAdjustment);
+            const yearMax = Math.round(currentFtp * (rates.annual[1] / 100) * ageAdjustment);
+            
+            resultsHTML += `
+                <div class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+                    <h3 class="font-semibold text-purple-800 mb-2">Future Predictions</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>6 months:</span>
+                            <span class="font-semibold">${currentFtp + sixMonthMin}-${currentFtp + sixMonthMax}w</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>1 year:</span>
+                            <span class="font-semibold">${currentFtp + yearMin}-${currentFtp + yearMax}w</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-purple-700 mt-2">Assumes consistent structured training</p>
+                </div>
+            `;
+            
+            resultsDiv.innerHTML = resultsHTML;
+            
+            // Show progress chart
+            document.getElementById('progress-chart').classList.remove('hidden');
+        }
+        
+        function calculateGoal() {
+            const currentFtp = parseInt(document.getElementById('current-ftp').value);
+            const goalFtp = parseInt(document.getElementById('goal-ftp').value);
+            const timeline = parseInt(document.getElementById('goal-timeline').value);
+            const experienceLevel = document.getElementById('experience-level').value;
+            
+            if (!currentFtp || !goalFtp) {
+                alert('Please enter both current FTP and goal FTP');
+                return;
+            }
+            
+            const requiredGain = goalFtp - currentFtp;
+            const requiredPercentage = (requiredGain / currentFtp) * 100;
+            const timeInYears = timeline / 52;
+            const annualRequiredGain = requiredPercentage / timeInYears;
+            
+            // Experience level realistic ranges
+            const realisticRanges = {
+                beginner: [15, 25],
+                intermediate: [8, 15],
+                advanced: [3, 8],
+                expert: [1, 5]
+            };
+            
+            const [minRealistic, maxRealistic] = realisticRanges[experienceLevel];
+            
+            let feasibility, feasibilityColor, feasibilityBg;
+            if (annualRequiredGain <= maxRealistic) {
+                feasibility = 'Highly Achievable';
+                feasibilityColor = 'text-green-800';
+                feasibilityBg = 'bg-green-50 border-green-500';
+            } else if (annualRequiredGain <= maxRealistic * 1.5) {
+                feasibility = 'Challenging but Possible';
+                feasibilityColor = 'text-yellow-800';
+                feasibilityBg = 'bg-yellow-50 border-yellow-500';
+            } else {
+                feasibility = 'Unrealistic';
+                feasibilityColor = 'text-red-800';
+                feasibilityBg = 'bg-red-50 border-red-500';
+            }
+            
+            const resultsDiv = document.getElementById('goal-results');
+            resultsDiv.innerHTML = `
+                <div class="border-l-4 ${feasibilityBg} p-4 rounded">
+                    <h3 class="font-semibold ${feasibilityColor} mb-2">Goal Feasibility: ${feasibility}</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Required gain:</span>
+                            <span class="font-semibold">${requiredGain}w (${requiredPercentage.toFixed(1)}%)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Timeline:</span>
+                            <span class="font-semibold">${timeline} weeks</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Required annual gain:</span>
+                            <span class="font-semibold">${annualRequiredGain.toFixed(1)}%/year</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Typical range for ${experienceLevel}:</span>
+                            <span class="font-semibold">${minRealistic}-${maxRealistic}%/year</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-gray-50 rounded">
+                    <h4 class="font-semibold mb-2">Recommendations:</h4>
+                    <ul class="text-sm space-y-1">
+                        ${feasibility === 'Highly Achievable' ? 
+                            '<li>• Maintain consistent training schedule</li><li>• Focus on periodized plan with base/build phases</li><li>• Include 2 threshold sessions per week</li>' :
+                            feasibility === 'Challenging but Possible' ?
+                            '<li>• Maximize training consistency</li><li>• Consider working with a coach</li><li>• Prioritize recovery and nutrition</li><li>• May need to extend timeline</li>' :
+                            '<li>• Goal may be too ambitious for timeline</li><li>• Consider extending target date</li><li>• Focus on process over outcome goals</li><li>• Consult with experienced coach</li>'
+                        }
+                    </ul>
+                </div>
+            `;
+        }
+        
+        // Auto-calculate on input change
+        document.getElementById('current-ftp').addEventListener('input', function() {
+            if (this.value >= 100 && this.value <= 500) {
+                calculateImprovement();
+            }
+        });
+        
+        document.getElementById('previous-ftp').addEventListener('input', function() {
+            const currentFtp = document.getElementById('current-ftp').value;
+            if (currentFtp >= 100 && currentFtp <= 500) {
+                calculateImprovement();
+            }
+        });
+        
+        ['time-period', 'experience-level', 'age'].forEach(id => {
+            document.getElementById(id).addEventListener('change', function() {
+                const currentFtp = document.getElementById('current-ftp').value;
+                if (currentFtp >= 100 && currentFtp <= 500) {
+                    calculateImprovement();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    
+    <title>Lactate Threshold Pace Predictor: Race Time Calculator 2025 | RunBikeCalc</title>
+    <meta name="description" content="Predict race times from lactate threshold pace. Calculate 5K, 10K, half marathon, and marathon times using your LTHR pace. Free running performance predictor.">
+    <meta name="keywords" content="lactate threshold pace predictor, race time predictor, running pace calculator, LTHR pace calculator, marathon time predictor, race performance calculator">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/lactate-threshold-pace-predictor">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lactate Threshold Pace Predictor - Race Time Calculator">
+    <meta property="og:description" content="Predict race times from your lactate threshold pace. Accurate predictions for 5K to marathon distances.">
+    <meta property="og:image" content="https://runbikecalc.com/images/pace-predictor.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Lactate Threshold Pace Predictor",
+        "description": "Predict race times from lactate threshold pace across multiple distances",
+        "url": "https://runbikecalc.com/lactate-threshold-pace-predictor",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2025.1"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How accurate is lactate threshold pace for predicting race times?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LTHR pace predictions are 85-95% accurate for well-trained runners. Accuracy is highest for 10K-half marathon distances, which closely match threshold intensity. 5K and marathon predictions require adjustments for anaerobic and aerobic capacity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the relationship between lactate threshold pace and race paces?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lactate threshold pace typically corresponds to ~15K-half marathon race pace. 10K pace is 10-15 seconds faster per mile, 5K pace is 25-35 seconds faster, while marathon pace is 15-30 seconds slower per mile."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I find my lactate threshold pace?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Run a 30-minute time trial at maximum sustainable effort. Your average pace from minutes 10-30 is your lactate threshold pace. Alternatively, use the pace from a well-executed 15K or 10-mile race."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/running-pace-calculator" class="hover:text-blue-600">Pace Calculator</a>
+                    <a href="/race-time-predictor" class="hover:text-blue-600">Race Predictor</a>
+                    <a href="/running-tools" class="hover:text-blue-600">Running Tools</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Lactate Threshold Pace Predictor</h1>
+                <p class="text-xl mb-6">Predict race times across all distances from your lactate threshold pace</p>
+                <div class="flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Free Calculator</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">5K to Marathon</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Science-Based</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Calculator Card -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Input Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Enter Your Threshold Data</h2>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Lactate Threshold Pace
+                                </label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="relative">
+                                        <input type="number" id="lt-pace-min" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                                               placeholder="6" min="4" max="15" />
+                                        <span class="absolute right-3 top-3 text-gray-400">min</span>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="number" id="lt-pace-sec" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                                               placeholder="30" min="0" max="59" />
+                                        <span class="absolute right-3 top-3 text-gray-400">sec</span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">Per mile or per kilometer</p>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Units
+                                </label>
+                                <select id="units" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                    <option value="miles">Miles (min/mile)</option>
+                                    <option value="km">Kilometers (min/km)</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Running Experience Level
+                                </label>
+                                <select id="experience" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                                    <option value="beginner">Beginner (0-2 years)</option>
+                                    <option value="recreational">Recreational (2-5 years)</option>
+                                    <option value="competitive" selected>Competitive (5+ years)</option>
+                                    <option value="elite">Elite/Professional</option>
+                                </select>
+                            </div>
+
+                            <button onclick="predictRaceTimes()" 
+                                    class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                                Predict Race Times
+                            </button>
+                        </div>
+
+                        <!-- How to Find LT Pace -->
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">How to Find Your LT Pace</h3>
+                            <p class="text-sm text-blue-700 mb-2">
+                                1. Run a 30-minute time trial at maximum sustainable effort<br>
+                                2. Use average pace from minutes 10-30<br>
+                                3. Or use pace from recent 15K-10 mile race
+                            </p>
+                            <a href="/blog/lthr-test-protocol-guide-2025" class="text-blue-600 hover:underline text-sm font-medium">
+                                → Complete Testing Guide
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Race Time Predictions</h2>
+                        
+                        <div id="prediction-results" class="space-y-3">
+                            <div class="text-center text-gray-500 py-8">
+                                <div class="text-6xl mb-4">🏃‍♂️</div>
+                                <p>Enter your lactate threshold pace to see predicted race times</p>
+                            </div>
+                        </div>
+
+                        <!-- Confidence Levels -->
+                        <div id="confidence-info" class="mt-6 hidden">
+                            <h3 class="font-semibold mb-3">Prediction Confidence</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>10K - Half Marathon</span>
+                                    <span class="font-medium text-green-600">95% confident</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>5K</span>
+                                    <span class="font-medium text-yellow-600">85% confident</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Marathon</span>
+                                    <span class="font-medium text-orange-600">80% confident</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Pace Guide -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-6">Training Pace Guide</h2>
+                
+                <div id="training-paces" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center text-gray-500 py-8 col-span-full">
+                        Calculate race predictions first to see training pace recommendations
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pace Relationship Chart -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Lactate Threshold Science -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4">Lactate Threshold & Race Pace</h2>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <h3 class="font-semibold text-green-800">What is LT Pace?</h3>
+                            <p class="text-sm text-green-700">The fastest pace you can sustain for 45-60 minutes with steady lactate levels. Corresponds to ~15K-half marathon race effort.</p>
+                        </div>
+                        
+                        <div class="p-3 bg-blue-50 rounded border-l-4 border-blue-500">
+                            <h3 class="font-semibold text-blue-800">Why It Predicts Performance</h3>
+                            <p class="text-sm text-blue-700">LT pace reflects your metabolic efficiency and aerobic capacity. Faster race paces add anaerobic contribution, slower paces require more endurance.</p>
+                        </div>
+                        
+                        <div class="p-3 bg-yellow-50 rounded border-l-4 border-yellow-500">
+                            <h3 class="font-semibold text-yellow-800">Accuracy Factors</h3>
+                            <p class="text-sm text-yellow-700">Experience level, training background, race distance specialization, and environmental conditions all affect prediction accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pace Relationships -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4">Typical Pace Relationships</h2>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-red-50 rounded">
+                            <span class="font-semibold text-red-800">5K Pace</span>
+                            <span class="text-red-600">LT - 25-35 sec/mile</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-orange-50 rounded">
+                            <span class="font-semibold text-orange-800">10K Pace</span>
+                            <span class="text-orange-600">LT - 10-15 sec/mile</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="font-semibold text-green-800">15K-Half Pace</span>
+                            <span class="text-green-600">≈ LT Pace</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-semibold text-blue-800">Marathon Pace</span>
+                            <span class="text-blue-600">LT + 15-30 sec/mile</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-100 rounded">
+                        <p class="text-xs text-gray-600">
+                            <strong>Note:</strong> Relationships vary by individual. Elite runners have smaller gaps between paces than recreational runners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Improvement Calculator -->
+            <div class="bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-xl p-8 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Race Time Improvement Calculator</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold mb-3">Improve LT Pace by 10 seconds:</h3>
+                        <div id="improvement-predictions" class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>5K improvement:</span>
+                                <span id="improve-5k" class="font-bold">Calculate first →</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>10K improvement:</span>
+                                <span id="improve-10k" class="font-bold">Calculate first →</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Half Marathon improvement:</span>
+                                <span id="improve-half" class="font-bold">Calculate first →</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Marathon improvement:</span>
+                                <span id="improve-marathon" class="font-bold">Calculate first →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">How to Improve LT Pace:</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li>• 2×20 min threshold intervals weekly</li>
+                            <li>• 80% easy aerobic base training</li>
+                            <li>• Tempo runs (85-95% LT pace)</li>
+                            <li>• Consistent training over 8-12 weeks</li>
+                        </ul>
+                        <a href="/blog/how-to-increase-lactate-threshold" class="inline-block mt-3 bg-white/20 px-4 py-2 rounded text-sm font-medium hover:bg-white/30">
+                            Complete Training Guide →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Calculators -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Running Pace Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate pace, time, or distance for any running workout</p>
+                    <a href="/running-pace-calculator" class="text-green-600 hover:text-green-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">LTHR Zone Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate heart rate training zones from lactate threshold</p>
+                    <a href="/lthr-zone-calculator" class="text-green-600 hover:text-green-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Race Time Predictor</h3>
+                    <p class="text-sm text-gray-600 mb-4">Predict race times from recent race results</p>
+                    <a href="/race-time-predictor" class="text-green-600 hover:text-green-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function predictRaceTimes() {
+            const ltPaceMin = parseInt(document.getElementById('lt-pace-min').value);
+            const ltPaceSec = parseInt(document.getElementById('lt-pace-sec').value) || 0;
+            const units = document.getElementById('units').value;
+            const experience = document.getElementById('experience').value;
+            
+            if (!ltPaceMin || ltPaceMin < 4 || ltPaceMin > 15) {
+                alert('Please enter a valid lactate threshold pace');
+                return;
+            }
+            
+            // Convert to seconds per unit
+            const ltPaceSeconds = (ltPaceMin * 60) + ltPaceSec;
+            
+            // Experience-based adjustments
+            const experienceFactors = {
+                beginner: { fiveK: -20, tenK: -8, half: 0, marathon: 20 },
+                recreational: { fiveK: -25, tenK: -12, half: 0, marathon: 18 },
+                competitive: { fiveK: -30, tenK: -15, half: 0, marathon: 15 },
+                elite: { fiveK: -35, tenK: -18, half: 0, marathon: 12 }
+            };
+            
+            const factors = experienceFactors[experience];
+            
+            // Calculate race paces (in seconds per unit)
+            const fiveKPace = ltPaceSeconds + factors.fiveK;
+            const tenKPace = ltPaceSeconds + factors.tenK;
+            const halfPace = ltPaceSeconds + factors.half;
+            const marathonPace = ltPaceSeconds + factors.marathon;
+            
+            // Race distances
+            const distances = {
+                fiveK: units === 'miles' ? 3.107 : 5.0,
+                tenK: units === 'miles' ? 6.214 : 10.0,
+                half: units === 'miles' ? 13.109 : 21.097,
+                marathon: units === 'miles' ? 26.219 : 42.195
+            };
+            
+            // Calculate race times
+            const fiveKTime = fiveKPace * distances.fiveK;
+            const tenKTime = tenKPace * distances.tenK;
+            const halfTime = halfPace * distances.half;
+            const marathonTime = marathonPace * distances.marathon;
+            
+            // Format time function
+            function formatTime(totalSeconds) {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.floor(totalSeconds % 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            
+            // Format pace function
+            function formatPace(seconds) {
+                const min = Math.floor(seconds / 60);
+                const sec = Math.floor(seconds % 60);
+                return `${min}:${sec.toString().padStart(2, '0')}`;
+            }
+            
+            // Display results
+            const resultsDiv = document.getElementById('prediction-results');
+            resultsDiv.innerHTML = `
+                <div class="space-y-4">
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-red-800">5K Race</h3>
+                            <span class="font-bold text-red-600">${formatTime(fiveKTime)}</span>
+                        </div>
+                        <p class="text-sm text-red-700">Pace: ${formatPace(fiveKPace)}/${units === 'miles' ? 'mi' : 'km'}</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-orange-800">10K Race</h3>
+                            <span class="font-bold text-orange-600">${formatTime(tenKTime)}</span>
+                        </div>
+                        <p class="text-sm text-orange-700">Pace: ${formatPace(tenKPace)}/${units === 'miles' ? 'mi' : 'km'}</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-green-800">Half Marathon</h3>
+                            <span class="font-bold text-green-600">${formatTime(halfTime)}</span>
+                        </div>
+                        <p class="text-sm text-green-700">Pace: ${formatPace(halfPace)}/${units === 'miles' ? 'mi' : 'km'}</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-blue-800">Marathon</h3>
+                            <span class="font-bold text-blue-600">${formatTime(marathonTime)}</span>
+                        </div>
+                        <p class="text-sm text-blue-700">Pace: ${formatPace(marathonPace)}/${units === 'miles' ? 'mi' : 'km'}</p>
+                    </div>
+                </div>
+            `;
+            
+            // Show confidence info
+            document.getElementById('confidence-info').classList.remove('hidden');
+            
+            // Calculate training paces
+            const easyPace = ltPaceSeconds + 45; // 45 seconds slower
+            const tempoPace = ltPaceSeconds - 5; // 5 seconds faster
+            const intervalPace = ltPaceSeconds - 20; // 20 seconds faster
+            
+            // Display training paces
+            const trainingDiv = document.getElementById('training-paces');
+            trainingDiv.innerHTML = `
+                <div class="p-4 bg-blue-50 rounded border border-blue-200">
+                    <h3 class="font-semibold text-blue-800 mb-2">Easy/Recovery</h3>
+                    <p class="text-lg font-bold text-blue-600">${formatPace(easyPace)}</p>
+                    <p class="text-xs text-blue-700">80% of training</p>
+                </div>
+                
+                <div class="p-4 bg-green-50 rounded border border-green-200">
+                    <h3 class="font-semibold text-green-800 mb-2">Tempo Runs</h3>
+                    <p class="text-lg font-bold text-green-600">${formatPace(tempoPace)}</p>
+                    <p class="text-xs text-green-700">Comfortably hard</p>
+                </div>
+                
+                <div class="p-4 bg-red-50 rounded border border-red-200">
+                    <h3 class="font-semibold text-red-800 mb-2">Threshold</h3>
+                    <p class="text-lg font-bold text-red-600">${formatPace(ltPaceSeconds)}</p>
+                    <p class="text-xs text-red-700">LT pace intervals</p>
+                </div>
+                
+                <div class="p-4 bg-purple-50 rounded border border-purple-200">
+                    <h3 class="font-semibold text-purple-800 mb-2">Intervals</h3>
+                    <p class="text-lg font-bold text-purple-600">${formatPace(intervalPace)}</p>
+                    <p class="text-xs text-purple-700">VO2max intervals</p>
+                </div>
+            `;
+            
+            // Calculate improvement predictions
+            const improvedLtPace = ltPaceSeconds - 10; // 10 seconds faster
+            const improved5K = (improvedLtPace + factors.fiveK) * distances.fiveK;
+            const improved10K = (improvedLtPace + factors.tenK) * distances.tenK;
+            const improvedHalf = (improvedLtPace + factors.half) * distances.half;
+            const improvedMarathon = (improvedLtPace + factors.marathon) * distances.marathon;
+            
+            document.getElementById('improve-5k').textContent = `-${Math.round(fiveKTime - improved5K)}s`;
+            document.getElementById('improve-10k').textContent = `-${Math.round(tenKTime - improved10K)}s`;
+            document.getElementById('improve-half').textContent = `-${Math.round((halfTime - improvedHalf) / 60)} min`;
+            document.getElementById('improve-marathon').textContent = `-${Math.round((marathonTime - improvedMarathon) / 60)} min`;
+        }
+        
+        // Auto-calculate on input change
+        document.getElementById('lt-pace-min').addEventListener('input', function() {
+            if (this.value >= 4 && this.value <= 15) {
+                predictRaceTimes();
+            }
+        });
+        
+        document.getElementById('lt-pace-sec').addEventListener('input', function() {
+            const minutes = document.getElementById('lt-pace-min').value;
+            if (minutes >= 4 && minutes <= 15) {
+                predictRaceTimes();
+            }
+        });
+        
+        document.getElementById('units').addEventListener('change', function() {
+            const minutes = document.getElementById('lt-pace-min').value;
+            if (minutes >= 4 && minutes <= 15) {
+                predictRaceTimes();
+            }
+        });
+        
+        document.getElementById('experience').addEventListener('change', function() {
+            const minutes = document.getElementById('lt-pace-min').value;
+            if (minutes >= 4 && minutes <= 15) {
+                predictRaceTimes();
+            }
+        });
+    </script>
+</body>
+</html>
