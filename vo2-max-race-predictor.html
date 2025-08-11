@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    
+    <title>VO2 Max Race Time Predictor 2025: Calculate Times for All Distances | RunBikeCalc</title>
+    <meta name="description" content="Predict race times from VO2 max. Calculate expected times for 1500m, Mile, 5K, 10K, Half Marathon, Marathon, and ultra distances. Free calculator with training recommendations.">
+    <meta name="keywords" content="VO2 max race predictor, race time calculator, VO2 max to race times, 5K time prediction, marathon time from VO2 max, running performance calculator">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/vo2-max-race-predictor">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="VO2 Max Race Time Predictor - Calculate Times for All Distances">
+    <meta property="og:description" content="Predict race times from your VO2 max. Accurate predictions for all running distances.">
+    <meta property="og:image" content="https://runbikecalc.com/images/vo2-race-predictor.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "VO2 Max Race Time Predictor",
+        "description": "Predict race times from VO2 max across all running distances",
+        "url": "https://runbikecalc.com/vo2-max-race-predictor",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2025.1"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How accurate is VO2 max for predicting race times?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VO2 max race predictions are 85-95% accurate for well-trained runners. Accuracy is highest for 5K-10K distances which are most dependent on aerobic power. Longer distances require additional factors like lactate threshold and running economy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What VO2 max do I need for a sub-20 5K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For a sub-20 minute 5K, you typically need a VO2 max of 48-52 ml/kg/min for men and 44-48 ml/kg/min for women, depending on running economy and training."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I improve my VO2 max?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Improve VO2 max with interval training at 95-100% max heart rate (3-8 minute intervals), tempo runs, and consistent aerobic base training. Most runners can improve VO2 max by 5-15% with proper training."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/vo2-max-calculator" class="hover:text-blue-600">VO2 Max Calculator</a>
+                    <a href="/race-time-predictor" class="hover:text-blue-600">Race Predictor</a>
+                    <a href="/vo2-tools" class="hover:text-blue-600">VO2 Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">VO2 Max Race Time Predictor</h1>
+                <p class="text-xl mb-6">Predict race times for all distances based on your VO2 max</p>
+                <div class="flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Free Calculator</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">All Distances</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Training Zones</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Calculator Card -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Input Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Enter Your Data</h2>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label for="vo2max" class="block text-sm font-medium text-gray-700 mb-2">
+                                    VO2 Max (ml/kg/min)
+                                </label>
+                                <input type="number" id="vo2max" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-lg"
+                                       placeholder="Enter VO2 max (e.g., 50)" min="20" max="90" step="0.1" />
+                                <p class="text-xs text-gray-500 mt-1">Typical range: 35-85 ml/kg/min</p>
+                            </div>
+                            
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender
+                                </label>
+                                <select id="gender" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="training-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Level
+                                </label>
+                                <select id="training-level" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                    <option value="beginner">Beginner (0-2 years)</option>
+                                    <option value="intermediate" selected>Intermediate (2-5 years)</option>
+                                    <option value="advanced">Advanced (5+ years)</option>
+                                    <option value="elite">Elite/Competitive</option>
+                                </select>
+                            </div>
+
+                            <button onclick="predictRaceTimes()" 
+                                    class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                                Predict Race Times
+                            </button>
+                        </div>
+
+                        <!-- VO2 Max Reference -->
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">Don't Know Your VO2 Max?</h3>
+                            <p class="text-sm text-blue-700 mb-2">
+                                Estimate from recent race: Use our VO2 Max Calculator with a recent race time to determine your current VO2 max.
+                            </p>
+                            <a href="/vo2-max-calculator" class="text-blue-600 hover:underline text-sm font-medium">
+                                → Calculate Your VO2 Max
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Predicted Race Times</h2>
+                        
+                        <div id="race-predictions" class="space-y-3">
+                            <div class="text-center text-gray-500 py-8">
+                                <div class="text-6xl mb-4">🏃‍♂️</div>
+                                <p>Enter your VO2 max to see predicted race times</p>
+                            </div>
+                        </div>
+
+                        <!-- Performance Level -->
+                        <div id="performance-level" class="mt-6 hidden">
+                            <h3 class="font-semibold mb-3">Performance Classification</h3>
+                            <div id="performance-details" class="p-4 rounded-lg">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VO2 Max Standards -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Men's Standards -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-600">Men's VO2 Max Standards</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Category</th>
+                                    <th class="text-center py-2">Age 20-29</th>
+                                    <th class="text-center py-2">Age 30-39</th>
+                                    <th class="text-center py-2">Age 40-49</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-purple-600">Elite</td>
+                                    <td class="text-center">60+</td>
+                                    <td class="text-center">58+</td>
+                                    <td class="text-center">55+</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-blue-600">Excellent</td>
+                                    <td class="text-center">52-60</td>
+                                    <td class="text-center">50-58</td>
+                                    <td class="text-center">48-55</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-green-600">Good</td>
+                                    <td class="text-center">47-51</td>
+                                    <td class="text-center">44-49</td>
+                                    <td class="text-center">42-47</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-yellow-600">Fair</td>
+                                    <td class="text-center">42-46</td>
+                                    <td class="text-center">40-43</td>
+                                    <td class="text-center">37-41</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-red-600">Poor</td>
+                                    <td class="text-center">&lt;42</td>
+                                    <td class="text-center">&lt;40</td>
+                                    <td class="text-center">&lt;37</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Women's Standards -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-pink-600">Women's VO2 Max Standards</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Category</th>
+                                    <th class="text-center py-2">Age 20-29</th>
+                                    <th class="text-center py-2">Age 30-39</th>
+                                    <th class="text-center py-2">Age 40-49</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-purple-600">Elite</td>
+                                    <td class="text-center">55+</td>
+                                    <td class="text-center">52+</td>
+                                    <td class="text-center">50+</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-blue-600">Excellent</td>
+                                    <td class="text-center">47-54</td>
+                                    <td class="text-center">45-51</td>
+                                    <td class="text-center">42-49</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-green-600">Good</td>
+                                    <td class="text-center">42-46</td>
+                                    <td class="text-center">39-44</td>
+                                    <td class="text-center">36-41</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-yellow-600">Fair</td>
+                                    <td class="text-center">37-41</td>
+                                    <td class="text-center">35-38</td>
+                                    <td class="text-center">32-35</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 font-semibold text-red-600">Poor</td>
+                                    <td class="text-center">&lt;37</td>
+                                    <td class="text-center">&lt;35</td>
+                                    <td class="text-center">&lt;32</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Recommendations -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-6">Training to Improve VO2 Max</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-red-600">VO2 Max Intervals</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 5×5 minutes @ 95-100% max HR</li>
+                            <li>• 8×3 minutes @ 95-100% max HR</li>
+                            <li>• 3-5 minute recoveries</li>
+                            <li>• 1-2 sessions per week max</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-orange-600">Tempo Runs</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 20-40 minutes @ threshold</li>
+                            <li>• 85-90% max HR</li>
+                            <li>• Improves lactate clearance</li>
+                            <li>• Supports VO2 max gains</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <h3 class="font-semibold text-lg mb-3 text-blue-600">Aerobic Base</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• 70-80% of training volume</li>
+                            <li>• Zone 2 heart rate</li>
+                            <li>• Builds mitochondria</li>
+                            <li>• Foundation for VO2 max</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Race Time vs VO2 Max Chart -->
+            <div class="bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl p-8 mb-8">
+                <h2 class="text-2xl font-bold mb-4">VO2 Max Requirements by Goal</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold mb-3">5K Goals:</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li>• Sub-25 min: ~40-42 ml/kg/min</li>
+                            <li>• Sub-22 min: ~45-47 ml/kg/min</li>
+                            <li>• Sub-20 min: ~50-52 ml/kg/min</li>
+                            <li>• Sub-18 min: ~55-58 ml/kg/min</li>
+                            <li>• Sub-16 min: ~62-65 ml/kg/min</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">Marathon Goals:</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li>• Sub-4:30: ~38-40 ml/kg/min</li>
+                            <li>• Sub-4:00: ~42-44 ml/kg/min</li>
+                            <li>• Sub-3:30: ~48-50 ml/kg/min</li>
+                            <li>• Sub-3:00: ~54-56 ml/kg/min</li>
+                            <li>• Sub-2:30: ~62-65 ml/kg/min</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Calculators -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">VO2 Max Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate your VO2 max from recent race results or fitness tests</p>
+                    <a href="/vo2-max-calculator" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Race Time Predictor</h3>
+                    <p class="text-sm text-gray-600 mb-4">Predict race times from recent race performances</p>
+                    <a href="/race-time-predictor" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Running Pace Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate pace, time, or distance for training and racing</p>
+                    <a href="/running-pace-calculator" class="text-purple-600 hover:text-purple-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function predictRaceTimes() {
+            const vo2max = parseFloat(document.getElementById('vo2max').value);
+            const gender = document.getElementById('gender').value;
+            const trainingLevel = document.getElementById('training-level').value;
+            
+            if (!vo2max || vo2max < 20 || vo2max > 90) {
+                alert('Please enter a valid VO2 max between 20-90 ml/kg/min');
+                return;
+            }
+            
+            // Velocity at VO2 max (meters per minute)
+            // Formula: vVO2max = 29.54 + 5.000663 * VO2max - 0.007546 * VO2max^2
+            const vVO2max = 29.54 + 5.000663 * vo2max - 0.007546 * vo2max * vo2max;
+            
+            // Percentage of vVO2max sustainable for different distances
+            // Adjusted by training level
+            const sustainablePercentages = {
+                beginner: {
+                    '1500m': 0.98,
+                    'Mile': 0.97,
+                    '5K': 0.92,
+                    '10K': 0.88,
+                    'Half': 0.82,
+                    'Marathon': 0.75,
+                    '50K': 0.70,
+                    '100K': 0.62
+                },
+                intermediate: {
+                    '1500m': 1.00,
+                    'Mile': 0.99,
+                    '5K': 0.94,
+                    '10K': 0.90,
+                    'Half': 0.84,
+                    'Marathon': 0.78,
+                    '50K': 0.72,
+                    '100K': 0.64
+                },
+                advanced: {
+                    '1500m': 1.02,
+                    'Mile': 1.01,
+                    '5K': 0.96,
+                    '10K': 0.92,
+                    'Half': 0.86,
+                    'Marathon': 0.80,
+                    '50K': 0.74,
+                    '100K': 0.66
+                },
+                elite: {
+                    '1500m': 1.04,
+                    'Mile': 1.03,
+                    '5K': 0.98,
+                    '10K': 0.94,
+                    'Half': 0.88,
+                    'Marathon': 0.82,
+                    '50K': 0.76,
+                    '100K': 0.68
+                }
+            };
+            
+            const percentages = sustainablePercentages[trainingLevel];
+            
+            // Race distances in meters
+            const distances = {
+                '1500m': 1500,
+                'Mile': 1609.34,
+                '5K': 5000,
+                '10K': 10000,
+                'Half': 21097.5,
+                'Marathon': 42195,
+                '50K': 50000,
+                '100K': 100000
+            };
+            
+            // Gender adjustment (women typically have 5-10% better running economy)
+            const genderFactor = gender === 'female' ? 1.05 : 1.0;
+            
+            // Calculate race times
+            const predictions = {};
+            for (const [race, distance] of Object.entries(distances)) {
+                const velocity = vVO2max * percentages[race] * genderFactor;
+                const timeMinutes = distance / velocity;
+                predictions[race] = timeMinutes;
+            }
+            
+            // Format time function
+            function formatTime(minutes) {
+                const hours = Math.floor(minutes / 60);
+                const mins = Math.floor(minutes % 60);
+                const secs = Math.floor((minutes % 1) * 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                } else {
+                    return `${mins}:${secs.toString().padStart(2, '0')}`;
+                }
+            }
+            
+            // Display results
+            const resultsDiv = document.getElementById('race-predictions');
+            resultsDiv.innerHTML = `
+                <div class="space-y-3">
+                    <div class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-purple-800">1500m</h3>
+                            <span class="font-bold text-purple-600">${formatTime(predictions['1500m'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-purple-800">Mile (1609m)</h3>
+                            <span class="font-bold text-purple-600">${formatTime(predictions['Mile'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-red-800">5K</h3>
+                            <span class="font-bold text-red-600">${formatTime(predictions['5K'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-orange-500 bg-orange-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-orange-800">10K</h3>
+                            <span class="font-bold text-orange-600">${formatTime(predictions['10K'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-green-800">Half Marathon</h3>
+                            <span class="font-bold text-green-600">${formatTime(predictions['Half'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-blue-800">Marathon</h3>
+                            <span class="font-bold text-blue-600">${formatTime(predictions['Marathon'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-indigo-500 bg-indigo-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-indigo-800">50K Ultra</h3>
+                            <span class="font-bold text-indigo-600">${formatTime(predictions['50K'])}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold text-purple-800">100K Ultra</h3>
+                            <span class="font-bold text-purple-600">${formatTime(predictions['100K'])}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Show performance level
+            const performanceDiv = document.getElementById('performance-level');
+            const performanceDetails = document.getElementById('performance-details');
+            performanceDiv.classList.remove('hidden');
+            
+            let category, bgColor, textColor;
+            if (gender === 'male') {
+                if (vo2max >= 60) { category = 'Elite'; bgColor = 'bg-purple-50'; textColor = 'text-purple-800'; }
+                else if (vo2max >= 52) { category = 'Excellent'; bgColor = 'bg-blue-50'; textColor = 'text-blue-800'; }
+                else if (vo2max >= 47) { category = 'Good'; bgColor = 'bg-green-50'; textColor = 'text-green-800'; }
+                else if (vo2max >= 42) { category = 'Fair'; bgColor = 'bg-yellow-50'; textColor = 'text-yellow-800'; }
+                else { category = 'Below Average'; bgColor = 'bg-red-50'; textColor = 'text-red-800'; }
+            } else {
+                if (vo2max >= 55) { category = 'Elite'; bgColor = 'bg-purple-50'; textColor = 'text-purple-800'; }
+                else if (vo2max >= 47) { category = 'Excellent'; bgColor = 'bg-blue-50'; textColor = 'text-blue-800'; }
+                else if (vo2max >= 42) { category = 'Good'; bgColor = 'bg-green-50'; textColor = 'text-green-800'; }
+                else if (vo2max >= 37) { category = 'Fair'; bgColor = 'bg-yellow-50'; textColor = 'text-yellow-800'; }
+                else { category = 'Below Average'; bgColor = 'bg-red-50'; textColor = 'text-red-800'; }
+            }
+            
+            performanceDetails.className = `p-4 rounded-lg ${bgColor}`;
+            performanceDetails.innerHTML = `
+                <h4 class="font-semibold ${textColor} mb-2">Category: ${category}</h4>
+                <p class="text-sm ${textColor}">VO2 Max: ${vo2max} ml/kg/min</p>
+                <p class="text-xs mt-2">Based on ${gender === 'male' ? "men's" : "women's"} standards for ages 20-29</p>
+            `;
+        }
+        
+        // Auto-calculate on input change
+        document.getElementById('vo2max').addEventListener('input', function() {
+            if (this.value && this.value >= 20 && this.value <= 90) {
+                predictRaceTimes();
+            }
+        });
+        
+        document.getElementById('gender').addEventListener('change', function() {
+            const vo2max = document.getElementById('vo2max').value;
+            if (vo2max && vo2max >= 20 && vo2max <= 90) {
+                predictRaceTimes();
+            }
+        });
+        
+        document.getElementById('training-level').addEventListener('change', function() {
+            const vo2max = document.getElementById('vo2max').value;
+            if (vo2max && vo2max >= 20 && vo2max <= 90) {
+                predictRaceTimes();
+            }
+        });
+    </script>
+</body>
+</html>

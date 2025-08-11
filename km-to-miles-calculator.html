@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    
+    <title>KM to Miles Calculator 2025: Instant Distance Converter | RunBikeCalc</title>
+    <meta name="description" content="Convert kilometers to miles instantly. 1k = 0.62mi, 1.6k = 1mi, 5k = 3.1mi, 10k = 6.2mi. Complete conversion table for running, cycling, and ultra distances up to 100k.">
+    <meta name="keywords" content="km to miles calculator, kilometers to miles converter, 1.6k in miles, 5k in miles, 10k in miles, marathon km to miles, 100k in miles">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://runbikecalc.com/km-to-miles-calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="KM to Miles Calculator - Instant Distance Converter">
+    <meta property="og:description" content="Convert any distance from kilometers to miles instantly. Complete conversion table included.">
+    <meta property="og:image" content="https://runbikecalc.com/images/km-miles-converter.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Schema.org WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "KM to Miles Calculator",
+        "description": "Convert kilometers to miles and miles to kilometers instantly",
+        "url": "https://runbikecalc.com/km-to-miles-calculator",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2025.1"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many miles is 1.6 kilometers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "1.6 kilometers equals 0.994 miles, which is approximately 1 mile. This is why a 1600m track race is often called the metric mile."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many miles is 5K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "5 kilometers equals 3.107 miles. A 5K race is the most popular running distance worldwide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many miles is 10K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "10 kilometers equals 6.214 miles. The 10K is a standard road racing and track distance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many miles is 100K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "100 kilometers equals 62.137 miles. The 100K is a popular ultra-marathon distance."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/running-tools" class="hover:text-blue-600">Running Tools</a>
+                    <a href="/utility-tools" class="hover:text-blue-600">Utility Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-green-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">KM to Miles Calculator</h1>
+                <p class="text-xl mb-6">Instant kilometer to mile conversion with complete reference tables</p>
+                <div class="flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Free Calculator</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Ultra Distances</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Instant Results</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Calculator Card -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- KM to Miles -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 text-blue-600">Kilometers to Miles</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="km-input" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Enter Kilometers
+                                </label>
+                                <input type="number" id="km-input" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                                       placeholder="Enter km (e.g., 5)" step="0.1" />
+                            </div>
+                            
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-600 mb-1">Result:</p>
+                                <p id="km-result" class="text-2xl font-bold text-blue-600">0 miles</p>
+                            </div>
+
+                            <!-- Quick Presets -->
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="convertKm(1)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">1K</button>
+                                <button onclick="convertKm(1.6)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">1.6K</button>
+                                <button onclick="convertKm(5)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">5K</button>
+                                <button onclick="convertKm(10)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">10K</button>
+                                <button onclick="convertKm(21.097)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">Half</button>
+                                <button onclick="convertKm(42.195)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">Full</button>
+                                <button onclick="convertKm(50)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">50K</button>
+                                <button onclick="convertKm(100)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">100K</button>
+                                <button onclick="convertKm(160.934)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">100mi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miles to KM -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 text-green-600">Miles to Kilometers</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="miles-input" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Enter Miles
+                                </label>
+                                <input type="number" id="miles-input" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-lg"
+                                       placeholder="Enter miles (e.g., 3.1)" step="0.1" />
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-600 mb-1">Result:</p>
+                                <p id="miles-result" class="text-2xl font-bold text-green-600">0 kilometers</p>
+                            </div>
+
+                            <!-- Quick Presets -->
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="convertMiles(1)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">1mi</button>
+                                <button onclick="convertMiles(3.1)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">5K</button>
+                                <button onclick="convertMiles(6.2)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">10K</button>
+                                <button onclick="convertMiles(10)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">10mi</button>
+                                <button onclick="convertMiles(13.1)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">Half</button>
+                                <button onclick="convertMiles(26.2)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">Full</button>
+                                <button onclick="convertMiles(31)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">50K</button>
+                                <button onclick="convertMiles(62)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">100K</button>
+                                <button onclick="convertMiles(100)" class="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200 text-sm">100mi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversion Tables -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- KM to Miles Table -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-600">Kilometers to Miles Reference</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Kilometers</th>
+                                    <th class="text-right py-2">Miles</th>
+                                    <th class="text-right py-2">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">1.0 km</td>
+                                    <td class="text-right font-semibold">0.621 mi</td>
+                                    <td class="text-right text-gray-600">Track</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">1.1 km</td>
+                                    <td class="text-right font-semibold">0.684 mi</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">1.2 km</td>
+                                    <td class="text-right font-semibold">0.746 mi</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">1.5 km</td>
+                                    <td class="text-right font-semibold">0.932 mi</td>
+                                    <td class="text-right text-gray-600">1500m</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-yellow-50">
+                                    <td class="py-2 font-semibold">1.6 km</td>
+                                    <td class="text-right font-bold text-yellow-700">0.994 mi</td>
+                                    <td class="text-right text-gray-600">≈ 1 mile</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">2.0 km</td>
+                                    <td class="text-right font-semibold">1.243 mi</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">3.0 km</td>
+                                    <td class="text-right font-semibold">1.864 mi</td>
+                                    <td class="text-right text-gray-600">3K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-blue-50">
+                                    <td class="py-2 font-semibold">5.0 km</td>
+                                    <td class="text-right font-bold text-blue-700">3.107 mi</td>
+                                    <td class="text-right text-gray-600">5K Race</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-blue-50">
+                                    <td class="py-2 font-semibold">10 km</td>
+                                    <td class="text-right font-bold text-blue-700">6.214 mi</td>
+                                    <td class="text-right text-gray-600">10K Race</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">15 km</td>
+                                    <td class="text-right font-semibold">9.321 mi</td>
+                                    <td class="text-right text-gray-600">15K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">20 km</td>
+                                    <td class="text-right font-semibold">12.427 mi</td>
+                                    <td class="text-right text-gray-600">20K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-green-50">
+                                    <td class="py-2 font-semibold">21.097 km</td>
+                                    <td class="text-right font-bold text-green-700">13.109 mi</td>
+                                    <td class="text-right text-gray-600">Half Marathon</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">25 km</td>
+                                    <td class="text-right font-semibold">15.534 mi</td>
+                                    <td class="text-right text-gray-600">25K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">30 km</td>
+                                    <td class="text-right font-semibold">18.641 mi</td>
+                                    <td class="text-right text-gray-600">30K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-green-50">
+                                    <td class="py-2 font-semibold">42.195 km</td>
+                                    <td class="text-right font-bold text-green-700">26.219 mi</td>
+                                    <td class="text-right text-gray-600">Marathon</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">50 km</td>
+                                    <td class="text-right font-bold text-purple-700">31.069 mi</td>
+                                    <td class="text-right text-gray-600">50K Ultra</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">60 km</td>
+                                    <td class="text-right font-semibold">37.282 mi</td>
+                                    <td class="text-right text-gray-600">60K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">70 km</td>
+                                    <td class="text-right font-semibold">43.496 mi</td>
+                                    <td class="text-right text-gray-600">70K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">80 km</td>
+                                    <td class="text-right font-semibold">49.710 mi</td>
+                                    <td class="text-right text-gray-600">80K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">90 km</td>
+                                    <td class="text-right font-semibold">55.923 mi</td>
+                                    <td class="text-right text-gray-600">90K</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">100 km</td>
+                                    <td class="text-right font-bold text-purple-700">62.137 mi</td>
+                                    <td class="text-right text-gray-600">100K Ultra</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Miles to KM Table -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-green-600">Miles to Kilometers Reference</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Miles</th>
+                                    <th class="text-right py-2">Kilometers</th>
+                                    <th class="text-right py-2">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50 bg-yellow-50">
+                                    <td class="py-2 font-semibold">1 mile</td>
+                                    <td class="text-right font-bold text-yellow-700">1.609 km</td>
+                                    <td class="text-right text-gray-600">Mile</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">2 miles</td>
+                                    <td class="text-right font-semibold">3.219 km</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">3 miles</td>
+                                    <td class="text-right font-semibold">4.828 km</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-blue-50">
+                                    <td class="py-2 font-semibold">3.1 miles</td>
+                                    <td class="text-right font-bold text-blue-700">5.0 km</td>
+                                    <td class="text-right text-gray-600">5K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">5 miles</td>
+                                    <td class="text-right font-semibold">8.047 km</td>
+                                    <td class="text-right text-gray-600">5 Miler</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">6 miles</td>
+                                    <td class="text-right font-semibold">9.656 km</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-blue-50">
+                                    <td class="py-2 font-semibold">6.2 miles</td>
+                                    <td class="text-right font-bold text-blue-700">10.0 km</td>
+                                    <td class="text-right text-gray-600">10K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">10 miles</td>
+                                    <td class="text-right font-semibold">16.093 km</td>
+                                    <td class="text-right text-gray-600">10 Miler</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-green-50">
+                                    <td class="py-2 font-semibold">13.1 miles</td>
+                                    <td class="text-right font-bold text-green-700">21.097 km</td>
+                                    <td class="text-right text-gray-600">Half Marathon</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">15 miles</td>
+                                    <td class="text-right font-semibold">24.140 km</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">20 miles</td>
+                                    <td class="text-right font-semibold">32.187 km</td>
+                                    <td class="text-right text-gray-600">20 Miler</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-green-50">
+                                    <td class="py-2 font-semibold">26.2 miles</td>
+                                    <td class="text-right font-bold text-green-700">42.195 km</td>
+                                    <td class="text-right text-gray-600">Marathon</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">30 miles</td>
+                                    <td class="text-right font-semibold">48.280 km</td>
+                                    <td class="text-right text-gray-600">30 Miler</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">31.07 miles</td>
+                                    <td class="text-right font-bold text-purple-700">50.0 km</td>
+                                    <td class="text-right text-gray-600">50K</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-2">40 miles</td>
+                                    <td class="text-right font-semibold">64.374 km</td>
+                                    <td class="text-right text-gray-600">-</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">50 miles</td>
+                                    <td class="text-right font-bold text-purple-700">80.467 km</td>
+                                    <td class="text-right text-gray-600">50 Miler</td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">62.14 miles</td>
+                                    <td class="text-right font-bold text-purple-700">100.0 km</td>
+                                    <td class="text-right text-gray-600">100K</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-purple-50">
+                                    <td class="py-2 font-semibold">100 miles</td>
+                                    <td class="text-right font-bold text-purple-700">160.934 km</td>
+                                    <td class="text-right text-gray-600">100 Miler</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formula and Info -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Conversion Formulas</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">Kilometers to Miles</h3>
+                        <p class="text-lg font-mono">miles = km × 0.621371</p>
+                        <p class="text-sm text-gray-600 mt-2">Example: 5km × 0.621371 = 3.107 miles</p>
+                    </div>
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h3 class="font-semibold text-green-800 mb-2">Miles to Kilometers</h3>
+                        <p class="text-lg font-mono">km = miles × 1.60934</p>
+                        <p class="text-sm text-gray-600 mt-2">Example: 3.1 miles × 1.60934 = 4.989 km</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Calculators -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Running Pace Calculator</h3>
+                    <p class="text-sm text-gray-600 mb-4">Calculate pace, time, or distance for any run</p>
+                    <a href="/running-pace-calculator" class="text-blue-600 hover:text-blue-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Race Time Predictor</h3>
+                    <p class="text-sm text-gray-600 mb-4">Predict race times across all distances</p>
+                    <a href="/race-time-predictor" class="text-blue-600 hover:text-blue-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-3">Pace Converter</h3>
+                    <p class="text-sm text-gray-600 mb-4">Convert pace between km and miles</p>
+                    <a href="/pace-converter-calculator" class="text-blue-600 hover:text-blue-700 font-medium">
+                        Try Calculator →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Conversion constants
+        const KM_TO_MILES = 0.621371;
+        const MILES_TO_KM = 1.60934;
+
+        // KM to Miles conversion
+        function convertKm(value) {
+            const input = document.getElementById('km-input');
+            const result = document.getElementById('km-result');
+            
+            if (value !== undefined) {
+                input.value = value;
+            }
+            
+            const km = parseFloat(input.value) || 0;
+            const miles = km * KM_TO_MILES;
+            result.textContent = `${miles.toFixed(3)} miles`;
+        }
+
+        // Miles to KM conversion
+        function convertMiles(value) {
+            const input = document.getElementById('miles-input');
+            const result = document.getElementById('miles-result');
+            
+            if (value !== undefined) {
+                input.value = value;
+            }
+            
+            const miles = parseFloat(input.value) || 0;
+            const km = miles * MILES_TO_KM;
+            result.textContent = `${km.toFixed(3)} kilometers`;
+        }
+
+        // Auto-convert on input
+        document.getElementById('km-input').addEventListener('input', function() {
+            convertKm();
+        });
+
+        document.getElementById('miles-input').addEventListener('input', function() {
+            convertMiles();
+        });
+    </script>
+</body>
+</html>
