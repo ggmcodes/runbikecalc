@@ -7,19 +7,19 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/running-pace-calculator.html</loc>
+        <loc>https://runbikecalc.com/running-pace-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/heart-rate-zone-calculator.html</loc>
+        <loc>https://runbikecalc.com/heart-rate-zone-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/vo2-max-calculator.html</loc>
+        <loc>https://runbikecalc.com/vo2-max-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -31,7 +31,7 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/treadmill-pace-calculator.html</loc>
+        <loc>https://runbikecalc.com/treadmill-pace-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -43,7 +43,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/ftp-calculator.html</loc>
+        <loc>https://runbikecalc.com/ftp-calculator</loc>
         <lastmod>2025-08-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>
@@ -55,7 +55,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/race-pace-calculator.html</loc>
+        <loc>https://runbikecalc.com/race-pace-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -67,7 +67,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/lactate-threshold-calculator.html</loc>
+        <loc>https://runbikecalc.com/lactate-threshold-calculator</loc>
         <lastmod>2025-08-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.95</priority>
@@ -115,7 +115,7 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/zone-2-training-plan-generator.html</loc>
+        <loc>https://runbikecalc.com/zone-2-training-plan-generator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -127,7 +127,7 @@
         <priority>0.90</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/race-time-predictor.html</loc>
+        <loc>https://runbikecalc.com/race-time-predictor</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -151,7 +151,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/advanced-heart-rate-zones-calculator.html</loc>
+        <loc>https://runbikecalc.com/advanced-heart-rate-zones-calculator</loc>
         <lastmod>2024-08-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -390,4 +390,10 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
-<url><loc>https://runbikecalc.com/blog/ftp-test-week-by-week-training-plan-2025</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/why-your-ftp-dropped</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/ftp-calculator-vs-zwift-vs-trainerroad</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/lthr-test-protocol-guide-2025</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/lactate-vs-anaerobic-threshold</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/how-to-increase-lactate-threshold</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/what-is-ftp-beginner-guide</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/couch-to-20-min-ftp-test</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/lthr-zone-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/lactate-threshold-pace-predictor</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/ftp-improvement-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/km-to-miles-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/vo2-max-race-predictor</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url></urlset>
+<url><loc>https://runbikecalc.com/blog/ftp-test-week-by-week-training-plan-2025</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/why-your-ftp-dropped</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/ftp-calculator-vs-zwift-vs-trainerroad</loc><lastmod>2025-08-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/lthr-test-protocol-guide-2025</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/lactate-vs-anaerobic-threshold</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/how-to-increase-lactate-threshold</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/what-is-ftp-beginner-guide</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/blog/couch-to-20-min-ftp-test</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url><url><loc>https://runbikecalc.com/lthr-zone-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/lactate-threshold-pace-predictor</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/ftp-improvement-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/km-to-miles-calculator</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url><url><loc>https://runbikecalc.com/vo2-max-race-predictor</loc><lastmod>2025-08-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>    <url>
+        <loc>https://runbikecalc.com/studies</loc>
+        <lastmod>2025-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>

@@ -1,49 +1,28 @@
-# Redirect www to non-www
-http://www.runbikecalc.com/* https://runbikecalc.com/:splat 301!
-https://www.runbikecalc.com/* https://runbikecalc.com/:splat 301!
+# Netlify redirects for RunBikeCalc
 
-# Handle clean URLs - redirect non-.html to .html
-/about              /about.html              200
-/contact            /contact.html            200
-/blog               /blog.html               200
+# Clean URLs - remove .html extensions (except for blog posts)
+/pace-calculator.html /pace-calculator 301!
+/vo2-max-calculator.html /vo2-max-calculator 301!
+/heart-rate-zone-calculator.html /heart-rate-zone-calculator 301!
+/ftp-calculator.html /ftp-calculator 301!
+/calorie-burn-calculator.html /calorie-burn-calculator 301!
+/race-time-predictor.html /race-time-predictor 301!
+/treadmill-pace-calculator.html /treadmill-pace-calculator 301!
+/lactate-threshold-calculator.html /lactate-threshold-calculator 301!
+/ftp-training-calculator.html /ftp-training-calculator 301!
+/zone-2-training-plan-generator.html /zone-2-training-plan-generator 301!
+/advanced-heart-rate-zones-calculator.html /advanced-heart-rate-zones-calculator 301!
 
-# Calculator pages
-/zone-2-calculator                      /zone-2-calculator.html                     200
-/zone-2-training-plan-generator         /zone-2-training-plan-generator.html        200
-/heart-rate-zone-calculator             /heart-rate-zone-calculator.html            200
-/max-heart-rate-calculator              /max-heart-rate-calculator.html             200
-/target-heart-rate-calculator           /target-heart-rate-calculator.html          200
-/mhr-karvonen-calculator                 /mhr-karvonen-calculator.html               200
-/advanced-heart-rate-zones-calculator   /advanced-heart-rate-zones-calculator.html  200
-/running-pace-calculator                /running-pace-calculator.html               200
-/race-time-predictor                    /race-time-predictor.html                   200
-/race-pace-calculator                   /race-pace-calculator.html                  200
-/run-walk-calculator                    /run-walk-calculator.html                   200
-/calories-burned-running-calculator     /calories-burned-running-calculator.html    200
-/running-distance-converter             /running-distance-converter.html            200
-/treadmill-pace-calculator              /treadmill-pace-calculator.html             200
-/bike-gearing-calculator                /bike-gearing-calculator.html               200
-/cadence-speed-calculator               /cadence-speed-calculator.html              200
-/power-to-weight-ratio-calculator       /power-to-weight-ratio-calculator.html      200
-/ftp-calculator                         /ftp-calculator.html                        200
-/watts-to-calories-calculator           /watts-to-calories-calculator.html          200
-/vo2-max-calculator                     /vo2-max-calculator.html                    200
-/cooper-test-calculator                 /cooper-test-calculator.html                200
-/lactate-threshold-calculator           /lactate-threshold-calculator.html          200
-/aerobic-anaerobic-calculator           /aerobic-anaerobic-calculator.html          200
-/sweat-test-calculator                  /sweat-test-calculator.html                 200
-/pace-converter-calculator              /pace-converter-calculator.html             200
-/pace-to-speed-converter                /pace-to-speed-converter.html               200
-/bmi-calculator                         /bmi-calculator.html                        200
-/training-load-calculator               /training-load-calculator.html              200
+# Page aliases
+/calculators.html /calculators 301!
+/guides.html /guides 301!
+/glossary.html /glossary 301!
+/studies.html /studies 301!
+/heart-rate-zones.html /heart-rate-zones 301!
 
-# Tool category pages
-/heart-rate-tools   /heart-rate-tools.html   200
-/running-tools      /running-tools.html      200
-/cycling-tools      /cycling-tools.html      200
-/vo2-tools          /vo2-tools.html          200
-/utility-tools      /utility-tools.html      200
-/utility            /utility-tools.html      301
+# Blog posts keep .html extension but need proper handling
+/blog/ /blog/index.html 200
 
-# Blog articles (without .html to match current structure)
-/blog/*             /blog/:splat.html        200
+# Default clean URL handling (after specific redirects)
+/*.html /:splat 301!
+/* /:splat.html 200
