@@ -96,6 +96,56 @@
         ]
     }
     </script>
+
+    <!-- FAQ Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a good VO2 max for my age?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VO2 max values vary by age and gender. For men 20-29: Excellent >52 ml/kg/min, Good 46-52, Average 35-45, Below Average <35. For women 20-29: Excellent >44 ml/kg/min, Good 38-44, Average 28-37, Below Average <28. Values typically decrease 8-10% per decade after age 30."
+                }
+            },
+            {
+                "@type": "Question", 
+                "name": "How accurate is this VO2 max calculator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Accuracy depends on the test method: Cooper 12-minute test has ±5-10% accuracy, running performance estimates have ±3-8% accuracy, and Rockport walk test has ±10-15% accuracy. Laboratory tests with metabolic equipment are most accurate at ±1-2%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I improve my VO2 max?",
+                "acceptedAnswer": {
+                    "@type": "Answer", 
+                    "text": "Yes, VO2 max can be improved through specific training: high-intensity intervals at 90-95% max HR, threshold training at lactate threshold pace, and base building with long easy runs. Typical improvements are 15-25% for beginners and 5-15% for trained athletes over 8-12 weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What VO2 max do elite athletes have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Elite endurance athletes have exceptional VO2 max values: cross-country skiers 85-90 ml/kg/min, marathon runners 70-85, cyclists 65-75, and swimmers 60-70. Individual genetics account for 20-30% of VO2 max potential."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I test my VO2 max?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Testing frequency depends on goals: competitive athletes every 6-8 weeks during training cycles, recreational athletes every 3-4 months, beginners monthly for first 6 months then quarterly, maintenance phase 2-3 times per year. Allow 48-72 hours of rest before testing."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Skip to main content for accessibility -->
@@ -585,6 +635,175 @@
             </aside>
         </div>
     
+        <!-- Comprehensive FAQ Section -->
+    <section class="mt-12">
+        <h2 class="text-xl font-bold text-gray-800 mb-6">Frequently Asked Questions About VO2 Max</h2>
+        <div class="space-y-6">
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">What is a good VO2 max for my age?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-4">VO2 max values vary significantly by age and gender. Here are the general classifications:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-blue-800 mb-2">Men (20-29 years)</h4>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>Excellent: >52 ml/kg/min</li>
+                                <li>Good: 46-52 ml/kg/min</li>
+                                <li>Average: 35-45 ml/kg/min</li>
+                                <li>Below Average: <35 ml/kg/min</li>
+                            </ul>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-pink-800 mb-2">Women (20-29 years)</h4>
+                            <ul class="text-sm text-pink-700 space-y-1">
+                                <li>Excellent: >44 ml/kg/min</li>
+                                <li>Good: 38-44 ml/kg/min</li>
+                                <li>Average: 28-37 ml/kg/min</li>
+                                <li>Below Average: <28 ml/kg/min</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Note: Values decrease with age, typically by 8-10% per decade after age 30.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">How accurate is this VO2 max calculator?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-3">Our calculator uses scientifically validated formulas with varying accuracy levels:</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span><strong>Cooper 12-minute test:</strong> ±5-10% accuracy when performed correctly</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span><strong>Running performance:</strong> ±3-8% accuracy for recent race times</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-600 mr-2">⚠</span>
+                            <span><strong>Rockport walk test:</strong> ±10-15% accuracy, best for beginners</span>
+                        </li>
+                    </ul>
+                    <p class="text-sm text-gray-600">For most accurate results, use a laboratory VO2 max test with metabolic cart equipment.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Can I improve my VO2 max?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-4">Yes! VO2 max can be improved through specific training methods:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-red-800 mb-2">High Intensity</h4>
+                            <p class="text-sm text-red-700">3-5 minute intervals at 90-95% max HR, 2-3x per week</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-orange-800 mb-2">Threshold Training</h4>
+                            <p class="text-sm text-orange-700">20-40 minute tempo runs at lactate threshold pace</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-green-800 mb-2">Base Building</h4>
+                            <p class="text-sm text-green-700">Long, easy runs in Zone 2 to build aerobic capacity</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Typical improvements: 15-25% for beginners, 5-15% for trained athletes over 8-12 weeks.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">What VO2 max do elite athletes have?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-4">Elite endurance athletes typically have exceptional VO2 max values:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-800">85-90</div>
+                            <div class="text-xs text-blue-600">Cross-country skiers</div>
+                        </div>
+                        <div class="text-center p-3 bg-green-50 rounded-lg">
+                            <div class="text-2xl font-bold text-green-800">70-85</div>
+                            <div class="text-xs text-green-600">Marathon runners</div>
+                        </div>
+                        <div class="text-center p-3 bg-purple-50 rounded-lg">
+                            <div class="text-2xl font-bold text-purple-800">65-75</div>
+                            <div class="text-xs text-purple-600">Cyclists</div>
+                        </div>
+                        <div class="text-center p-3 bg-red-50 rounded-lg">
+                            <div class="text-2xl font-bold text-red-800">60-70</div>
+                            <div class="text-xs text-red-600">Swimmers</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Values in ml/kg/min. Individual genetics account for 20-30% of VO2 max potential.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">How often should I test my VO2 max?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-3">Testing frequency depends on your goals and training phase:</p>
+                    <ul class="space-y-2 mb-4">
+                        <li><strong>Competitive athletes:</strong> Every 6-8 weeks during training cycles</li>
+                        <li><strong>Recreational athletes:</strong> Every 3-4 months to track progress</li>
+                        <li><strong>Beginners:</strong> Monthly for the first 6 months, then quarterly</li>
+                        <li><strong>Maintenance phase:</strong> 2-3 times per year</li>
+                    </ul>
+                    <p class="text-sm text-gray-600">Allow 48-72 hours of rest before testing for most accurate results.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">What factors affect VO2 max results?</h3>
+                <div class="prose text-gray-600">
+                    <p class="mb-4">Several factors can influence your VO2 max test results:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Positive Factors:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Proper rest (7-9 hours sleep)</li>
+                                <li>• Adequate hydration</li>
+                                <li>• Optimal temperature (60-70°F)</li>
+                                <li>• Good nutrition timing</li>
+                                <li>• Appropriate warm-up</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">Negative Factors:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Recent illness or stress</li>
+                                <li>• Dehydration</li>
+                                <li>• Extreme temperatures</li>
+                                <li>• Recent intense training</li>
+                                <li>• Poor testing conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- People Also Calculate Section -->
+        <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mt-8">
+            <h3 class="text-lg font-semibold text-green-800 mb-4">🔗 People Who Calculate VO2 Max Also Use:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/heart-rate-zone-calculator.html" class="bg-white p-4 rounded-lg border border-green-200 hover:border-green-400 transition-colors group">
+                    <h4 class="font-medium text-green-800 group-hover:text-green-600 mb-2">Heart Rate Zone Calculator</h4>
+                    <p class="text-sm text-green-700">Use your VO2 max to set accurate training zones for optimal workout intensity.</p>
+                </a>
+                <a href="/race-time-predictor.html" class="bg-white p-4 rounded-lg border border-green-200 hover:border-green-400 transition-colors group">
+                    <h4 class="font-medium text-green-800 group-hover:text-green-600 mb-2">Race Time Predictor</h4>
+                    <p class="text-sm text-green-700">Predict your race performance based on your current VO2 max fitness level.</p>
+                </a>
+                <a href="/running-pace-calculator.html" class="bg-white p-4 rounded-lg border border-green-200 hover:border-green-400 transition-colors group">
+                    <h4 class="font-medium text-green-800 group-hover:text-green-600 mb-2">Running Pace Calculator</h4>
+                    <p class="text-sm text-green-700">Convert your VO2 max into specific training paces for different workout types.</p>
+                </a>
+            </div>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-green-700">💡 <strong>Pro Tip:</strong> Track your VO2 max improvements by calculating training paces every 4-6 weeks as your fitness improves.</p>
+            </div>
+        </div>
+    </section>
+
         <\!-- Related Calculators Section -->
     <section class="mt-12">
         <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>

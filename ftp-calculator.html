@@ -76,6 +76,54 @@
         }]
     }
     </script>
+
+    <!-- HowTo Schema for "How to Calculate FTP" -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate FTP (Functional Threshold Power)",
+        "description": "Complete guide to calculating your FTP using the 20-minute test method for cycling training zones",
+        "totalTime": "PT45M",
+        "supply": [
+            "Power meter or smart trainer",
+            "Heart rate monitor", 
+            "Stopwatch or cycling computer"
+        ],
+        "tool": [
+            "Bike with power meter",
+            "Indoor trainer (optional)",
+            "Fan for cooling"
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Prepare for the test",
+                "text": "Rest 48-72 hours before testing. Eat a light meal 2-3 hours prior. Calibrate your power meter. Set up good ventilation."
+            },
+            {
+                "@type": "HowToStep", 
+                "name": "Complete the warm-up",
+                "text": "Warm up for 20 minutes progressively: 10 minutes easy spinning, 5 minutes building to moderate effort, 3×1 minute intervals at 90% expected FTP with 1 minute recovery, 2 minutes easy spinning."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Execute the 20-minute test",
+                "text": "Start the test at 95% of your expected FTP. Maintain the highest sustainable power for exactly 20 minutes. Pace evenly - avoid starting too hard. Record your average power for the full 20 minutes."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Calculate your FTP",
+                "text": "Multiply your 20-minute average power by 0.95. For example: 263 watts × 0.95 = 250 watts FTP. This accounts for the slight power drop you could sustain for a full hour."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Set your training zones",
+                "text": "Use your FTP to calculate 7 power zones: Zone 1 (<55% FTP), Zone 2 (55-75%), Zone 3 (75-90%), Zone 4 (90-105%), Zone 5 (105-120%), Zone 6 (120-150%), Zone 7 (>150%)."
+            }
+        ]
+    }
+    </script>
     
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -789,6 +837,424 @@
                         <div class="bg-white rounded-lg p-6">
                             <h3 class="text-lg font-semibold mb-3">Why is my indoor FTP different from outdoor?</h3>
                             <p class="text-gray-700">Indoor FTP is often 5-10% lower due to: limited cooling (even with fans), psychological factors, different bike position, lack of micro-rests from coasting, and reduced muscle recruitment from no balance requirements. Test in the environment where you'll primarily train for most relevant zones.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Complete FTP Training Guide & Advanced FAQ -->
+                <section class="mt-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Complete FTP Training Guide 2025</h2>
+                    
+                    <!-- FTP Testing Protocols -->
+                    <div class="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-6 mb-8">
+                        <h3 class="text-lg font-semibold text-red-800 mb-4">🚴 Complete FTP Testing Protocols</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white p-4 rounded-lg border border-red-200">
+                                <h4 class="font-semibold text-red-800 mb-3">20-Minute Test</h4>
+                                <div class="text-sm text-red-700 space-y-2">
+                                    <p><strong>Warm-up:</strong> 20 min progressive</p>
+                                    <p><strong>Test:</strong> 20 min all-out effort</p>
+                                    <p><strong>FTP:</strong> Average watts × 0.95</p>
+                                    <p><strong>Accuracy:</strong> ±3-5%</p>
+                                    <p><strong>Best for:</strong> Experienced cyclists</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-red-200">
+                                <h4 class="font-semibold text-red-800 mb-3">8-Minute Test</h4>
+                                <div class="text-sm text-red-700 space-y-2">
+                                    <p><strong>Warm-up:</strong> 15 min + 3×1 min</p>
+                                    <p><strong>Test:</strong> 2×8 min (10 min rest)</p>
+                                    <p><strong>FTP:</strong> Average of both efforts</p>
+                                    <p><strong>Accuracy:</strong> ±2-4%</p>
+                                    <p><strong>Best for:</strong> Time-constrained athletes</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-red-200">
+                                <h4 class="font-semibold text-red-800 mb-3">Ramp Test</h4>
+                                <div class="text-sm text-red-700 space-y-2">
+                                    <p><strong>Protocol:</strong> +20W every minute</p>
+                                    <p><strong>Duration:</strong> Until failure</p>
+                                    <p><strong>FTP:</strong> Max watts × 0.75</p>
+                                    <p><strong>Accuracy:</strong> ±5-8%</p>
+                                    <p><strong>Best for:</strong> Zwift/TrainerRoad users</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced FAQ Section -->
+                    <div class="space-y-6">
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">How do I know if my FTP test was accurate?</h3>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">Several indicators help validate your FTP test results:</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h4 class="font-medium text-gray-800 mb-3">Good Test Indicators:</h4>
+                                        <ul class="text-sm text-gray-600 space-y-2">
+                                            <li class="flex items-start">
+                                                <span class="text-green-500 mr-2">✓</span>
+                                                <span><strong>Even pacing:</strong> Power consistent throughout test</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-green-500 mr-2">✓</span>
+                                                <span><strong>High RPE:</strong> 9/10 effort at finish</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-green-500 mr-2">✓</span>
+                                                <span><strong>Heart rate drift:</strong> HR continues rising</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-green-500 mr-2">✓</span>
+                                                <span><strong>Repeatability:</strong> Within 5% of previous tests</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-green-500 mr-2">✓</span>
+                                                <span><strong>Validation:</strong> Can sustain 95-105% for intervals</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800 mb-3">Poor Test Signs:</h4>
+                                        <ul class="text-sm text-gray-600 space-y-2">
+                                            <li class="flex items-start">
+                                                <span class="text-red-500 mr-2">✗</span>
+                                                <span><strong>Started too hard:</strong> Power drops significantly</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-500 mr-2">✗</span>
+                                                <span><strong>Finished strong:</strong> Had more to give</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-500 mr-2">✗</span>
+                                                <span><strong>Environmental issues:</strong> Heat, poor ventilation</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-500 mr-2">✗</span>
+                                                <span><strong>Equipment problems:</strong> Trainer resistance, calibration</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="text-red-500 mr-2">✗</span>
+                                                <span><strong>Inconsistent power:</strong> Large spikes and drops</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                                    <p class="text-sm text-blue-800"><strong>Pro Tip:</strong> If you can complete 2×20 min intervals at your calculated FTP with 2-3 min rest, your test was likely accurate.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">What should my FTP be for my weight and age?</h3>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">FTP varies significantly by training background, genetics, and body composition. Here are general guidelines:</p>
+                                <div class="overflow-x-auto mb-4">
+                                    <table class="w-full text-sm">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="text-left p-3 font-medium text-gray-800">Category</th>
+                                                <th class="text-left p-3 font-medium text-gray-800">Men (W/kg)</th>
+                                                <th class="text-left p-3 font-medium text-gray-800">Women (W/kg)</th>
+                                                <th class="text-left p-3 font-medium text-gray-800">Absolute Power</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-gray-600">
+                                            <tr class="border-t">
+                                                <td class="p-3 font-medium">Beginner</td>
+                                                <td class="p-3">1.5-2.5 W/kg</td>
+                                                <td class="p-3">1.2-2.0 W/kg</td>
+                                                <td class="p-3">100-200W</td>
+                                            </tr>
+                                            <tr class="border-t bg-gray-25">
+                                                <td class="p-3 font-medium">Recreational</td>
+                                                <td class="p-3">2.5-3.5 W/kg</td>
+                                                <td class="p-3">2.0-3.0 W/kg</td>
+                                                <td class="p-3">200-280W</td>
+                                            </tr>
+                                            <tr class="border-t">
+                                                <td class="p-3 font-medium">Competitive</td>
+                                                <td class="p-3">3.5-4.5 W/kg</td>
+                                                <td class="p-3">3.0-4.0 W/kg</td>
+                                                <td class="p-3">280-360W</td>
+                                            </tr>
+                                            <tr class="border-t bg-gray-25">
+                                                <td class="p-3 font-medium">Elite/Pro</td>
+                                                <td class="p-3">4.5-6.0+ W/kg</td>
+                                                <td class="p-3">4.0-5.5+ W/kg</td>
+                                                <td class="p-3">360-450W+</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <h4 class="font-medium text-yellow-800 mb-2">Age Factors:</h4>
+                                        <ul class="text-sm text-yellow-700 space-y-1">
+                                            <li>• Peak power typically 25-35 years old</li>
+                                            <li>• 5-10% decline per decade after 35</li>
+                                            <li>• Masters athletes can maintain high W/kg</li>
+                                            <li>• Training consistency more important than age</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <h4 class="font-medium text-green-800 mb-2">Improvement Timeline:</h4>
+                                        <ul class="text-sm text-green-700 space-y-1">
+                                            <li>• Beginners: 20-40% in first year</li>
+                                            <li>• Recreational: 10-20% with structured training</li>
+                                            <li>• Competitive: 5-10% with periodization</li>
+                                            <li>• Test every 6-8 weeks to track progress</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">How do I structure training with my FTP?</h3>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">FTP-based training uses 7 power zones for different physiological adaptations:</p>
+                                <div class="space-y-4">
+                                    <div class="border-l-4 border-gray-400 pl-4">
+                                        <h4 class="font-medium text-gray-800 mb-2">Zone 1 (Active Recovery) - <55% FTP</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Purpose:</p>
+                                                <p class="text-gray-600">Active recovery, easy spinning</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Duration:</p>
+                                                <p class="text-gray-600">30-90 minutes</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Frequency:</p>
+                                                <p class="text-gray-600">Recovery days, easy rides</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-l-4 border-blue-400 pl-4">
+                                        <h4 class="font-medium text-blue-800 mb-2">Zone 2 (Endurance) - 55-75% FTP</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Purpose:</p>
+                                                <p class="text-gray-600">Aerobic base, fat oxidation</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Duration:</p>
+                                                <p class="text-gray-600">1-6+ hours</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Frequency:</p>
+                                                <p class="text-gray-600">70-80% of total training</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-l-4 border-green-400 pl-4">
+                                        <h4 class="font-medium text-green-800 mb-2">Zone 3 (Tempo) - 75-90% FTP</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Purpose:</p>
+                                                <p class="text-gray-600">Aerobic development, sustainable power</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Duration:</p>
+                                                <p class="text-gray-600">20-90 minutes</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Frequency:</p>
+                                                <p class="text-gray-600">1-2x per week</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-l-4 border-orange-400 pl-4">
+                                        <h4 class="font-medium text-orange-800 mb-2">Zone 4 (Lactate Threshold) - 90-105% FTP</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Purpose:</p>
+                                                <p class="text-gray-600">Lactate buffering, race pace</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Duration:</p>
+                                                <p class="text-gray-600">8-40 minute intervals</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Frequency:</p>
+                                                <p class="text-gray-600">1-2x per week</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-l-4 border-red-400 pl-4">
+                                        <h4 class="font-medium text-red-800 mb-2">Zone 5 (VO2 Max) - 105-120% FTP</h4>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Purpose:</p>
+                                                <p class="text-gray-600">VO2 max, cardiac output</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Duration:</p>
+                                                <p class="text-gray-600">3-8 minute intervals</p>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-800 mb-1">Frequency:</p>
+                                                <p class="text-gray-600">1x per week, build phases</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                                    <p class="text-sm text-purple-800"><strong>Training Distribution:</strong> Follow 80/20 rule - 80% Zone 1-2, 20% Zone 4-7. Avoid Zone 3 trap (too hard for easy days, too easy for hard days).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Common FTP testing mistakes and how to avoid them</h3>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">Avoid these common errors that lead to inaccurate FTP results:</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h4 class="font-medium text-red-800 mb-3">⚠️ Common Mistakes:</h4>
+                                        <div class="space-y-3">
+                                            <div class="border-l-4 border-red-400 pl-3">
+                                                <h5 class="font-medium text-red-700">Inadequate Warm-up</h5>
+                                                <p class="text-sm text-gray-600">Jumping straight into test without 15-20 min progressive warm-up</p>
+                                            </div>
+                                            <div class="border-l-4 border-red-400 pl-3">
+                                                <h5 class="font-medium text-red-700">Wrong Pacing Strategy</h5>
+                                                <p class="text-sm text-gray-600">Starting too hard or conservatively, not maintaining even effort</p>
+                                            </div>
+                                            <div class="border-l-4 border-red-400 pl-3">
+                                                <h5 class="font-medium text-red-700">Poor Test Conditions</h5>
+                                                <p class="text-sm text-gray-600">Testing when fatigued, sick, or in extreme heat without adequate cooling</p>
+                                            </div>
+                                            <div class="border-l-4 border-red-400 pl-3">
+                                                <h5 class="font-medium text-red-700">Equipment Issues</h5>
+                                                <p class="text-sm text-gray-600">Uncalibrated power meter, wrong trainer resistance, poor bike fit</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-green-800 mb-3">✅ Best Practices:</h4>
+                                        <div class="space-y-3">
+                                            <div class="border-l-4 border-green-400 pl-3">
+                                                <h5 class="font-medium text-green-700">Proper Preparation</h5>
+                                                <p class="text-sm text-gray-600">Rest 48-72 hours, good sleep, proper nutrition, calibrate equipment</p>
+                                            </div>
+                                            <div class="border-l-4 border-green-400 pl-3">
+                                                <h5 class="font-medium text-green-700">Smart Pacing</h5>
+                                                <p class="text-sm text-gray-600">Start at 95% expected FTP, increase gradually if feeling good</p>
+                                            </div>
+                                            <div class="border-l-4 border-green-400 pl-3">
+                                                <h5 class="font-medium text-green-700">Optimal Environment</h5>
+                                                <p class="text-sm text-gray-600">Good ventilation, favorite music, eliminate distractions</p>
+                                            </div>
+                                            <div class="border-l-4 border-green-400 pl-3">
+                                                <h5 class="font-medium text-green-700">Consistent Protocol</h5>
+                                                <p class="text-sm text-gray-600">Same warm-up, position, time of day for comparable results</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">How often should I retest my FTP?</h3>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">FTP testing frequency depends on your training phase, experience level, and goals:</p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <h4 class="font-medium text-blue-800 mb-3">Beginners (0-2 years)</h4>
+                                        <ul class="text-sm text-blue-700 space-y-2">
+                                            <li><strong>Frequency:</strong> Every 4-6 weeks</li>
+                                            <li><strong>Reason:</strong> Rapid fitness gains</li>
+                                            <li><strong>Focus:</strong> Learning to pace efforts</li>
+                                            <li><strong>Alternative:</strong> Use RPE + ramp tests</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <h4 class="font-medium text-green-800 mb-3">Experienced (2-5 years)</h4>
+                                        <ul class="text-sm text-green-700 space-y-2">
+                                            <li><strong>Frequency:</strong> Every 6-8 weeks</li>
+                                            <li><strong>Reason:</strong> Steady but slower gains</li>
+                                            <li><strong>Focus:</strong> Training periodization</li>
+                                            <li><strong>Timing:</strong> End of build blocks</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <h4 class="font-medium text-purple-800 mb-3">Advanced/Elite (5+ years)</h4>
+                                        <ul class="text-sm text-purple-700 space-y-2">
+                                            <li><strong>Frequency:</strong> 3-4 times per year</li>
+                                            <li><strong>Reason:</strong> Minimal FTP changes</li>
+                                            <li><strong>Focus:</strong> Race-specific power</li>
+                                            <li><strong>Alternative:</strong> Critical power testing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bg-yellow-50 p-4 rounded-lg mt-4">
+                                    <h4 class="font-medium text-yellow-800 mb-2">Signs You Need to Retest:</h4>
+                                    <ul class="text-sm text-yellow-700 space-y-1">
+                                        <li>• Training at FTP feels significantly easier</li>
+                                        <li>• Completing intervals above current FTP</li>
+                                        <li>• Recent race performances exceed predictions</li>
+                                        <li>• Heart rate drift decreasing at same power</li>
+                                        <li>• After 6+ weeks of consistent training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FTP Calculator Integration -->
+                    <div class="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-6 mt-8">
+                        <h3 class="text-lg font-semibold text-orange-800 mb-4">🔧 Complete Your FTP Training Setup:</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-orange-800 mb-3">Power-Based Training:</h4>
+                                <div class="space-y-2">
+                                    <a href="/power-to-weight-ratio-calculator.html" class="block bg-white p-3 rounded-lg border border-orange-200 hover:border-orange-400 transition-colors group">
+                                        <div class="flex items-center">
+                                            <span class="text-orange-600 mr-2">⚡</span>
+                                            <span class="font-medium text-orange-800 group-hover:text-orange-600">Power-to-Weight Calculator</span>
+                                        </div>
+                                        <p class="text-sm text-orange-700 mt-1">Compare your FTP to body weight for climbing performance</p>
+                                    </a>
+                                    <a href="/watts-to-calories-calculator.html" class="block bg-white p-3 rounded-lg border border-orange-200 hover:border-orange-400 transition-colors group">
+                                        <div class="flex items-center">
+                                            <span class="text-orange-600 mr-2">🔥</span>
+                                            <span class="font-medium text-orange-800 group-hover:text-orange-600">Watts to Calories</span>
+                                        </div>
+                                        <p class="text-sm text-orange-700 mt-1">Calculate energy expenditure from power output</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-orange-800 mb-3">Bike Setup Optimization:</h4>
+                                <div class="space-y-2">
+                                    <a href="/bike-gearing-calculator.html" class="block bg-white p-3 rounded-lg border border-orange-200 hover:border-orange-400 transition-colors group">
+                                        <div class="flex items-center">
+                                            <span class="text-orange-600 mr-2">⚙️</span>
+                                            <span class="font-medium text-orange-800 group-hover:text-orange-600">Bike Gearing Calculator</span>
+                                        </div>
+                                        <p class="text-sm text-orange-700 mt-1">Optimize gearing for your FTP and target cadence</p>
+                                    </a>
+                                    <a href="/cadence-speed-calculator.html" class="block bg-white p-3 rounded-lg border border-orange-200 hover:border-orange-400 transition-colors group">
+                                        <div class="flex items-center">
+                                            <span class="text-orange-600 mr-2">🔄</span>
+                                            <span class="font-medium text-orange-800 group-hover:text-orange-600">Cadence Speed Calculator</span>
+                                        </div>
+                                        <p class="text-sm text-orange-700 mt-1">Find optimal cadence for sustained FTP efforts</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-white rounded-lg border border-orange-200">
+                            <p class="text-sm text-orange-800"><strong>Complete Workflow:</strong> Test FTP → Set power zones → Calculate W/kg → Optimize gearing → Plan nutrition → Track progress with regular retests</p>
                         </div>
                     </div>
                 </section>
