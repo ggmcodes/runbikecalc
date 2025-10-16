@@ -8,7 +8,27 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- New Hub Pages -->
+    <!-- Training Hub Pages -->
+    <url>
+        <loc>https://runbikecalc.com/heart-rate-training-hub</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/marathon-training-hub</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/cycling-power-hub</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Calculator Hub Pages -->
     <url>
         <loc>https://runbikecalc.com/running-calculators</loc>
         <lastmod>2025-10-07</lastmod>
