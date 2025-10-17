@@ -1176,6 +1176,96 @@ CALCULATOR_LINKS = {
         ],
         'hub_url': '/cycling-power-hub.html',
         'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'km-to-miles-calculator.html': {
+        'title': 'Master Distance Conversions',
+        'subtitle': 'Learn how to use both metric and imperial systems for training',
+        'blog_posts': [
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Train for 42.2km (26.2 miles) with our complete guide.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/running-pace-training-guide-2025.html',
+                'emoji': '⏱️',
+                'color': 'green',
+                'tag': 'PACE TRAINING',
+                'title': 'Running Pace Training',
+                'desc': 'Master pace training in kilometers or miles per hour.',
+                'time': '11 min read'
+            },
+            {
+                'url': '/blog/10k-training-plan-2025.html',
+                'emoji': '🎯',
+                'color': 'purple',
+                'tag': '10K',
+                'title': '10K Training Plan',
+                'desc': 'Complete 10 kilometer (6.2 mile) training program.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/5k-to-10k-progression-guide.html',
+                'emoji': '📈',
+                'color': 'orange',
+                'tag': 'PROGRESSION',
+                'title': '5K to 10K Progression',
+                'desc': 'Progress from 5km to 10km with structured training.',
+                'time': '9 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'sweat-test-calculator.html': {
+        'title': 'Optimize Hydration Strategy',
+        'subtitle': 'Learn how to calculate and implement proper hydration for training',
+        'blog_posts': [
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Hydration strategies for marathon distance training and racing.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/how-to-lose-weight-running-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Lose Weight Running',
+                'desc': 'Proper hydration for weight loss and performance.',
+                'time': '13 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'green',
+                'tag': 'CYCLING',
+                'title': 'FTP Training Guide',
+                'desc': 'Hydration during intense cycling training sessions.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'HIGH INTENSITY',
+                'title': 'VO2 Max Training',
+                'desc': 'Stay hydrated during high-intensity interval training.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
     }
 }
 
@@ -1233,7 +1323,7 @@ def create_learn_more_html(calc_file, config):
 
 
 def add_learn_more_to_calculator(filepath, config):
-    """Add Learn More section before </main> tag"""
+    """Add Learn More section before </main> or <footer> tag"""
 
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -1247,8 +1337,14 @@ def add_learn_more_to_calculator(filepath, config):
         # Generate the Learn More HTML
         learn_more_section = create_learn_more_html(filepath, config)
 
-        # Insert before </main>
-        content = content.replace('    </main>', f'{learn_more_section}\n\n    </main>')
+        # Insert before </main> or <footer>
+        if '    </main>' in content:
+            content = content.replace('    </main>', f'{learn_more_section}\n\n    </main>')
+        elif '<footer' in content:
+            content = content.replace('    <footer', f'{learn_more_section}\n\n    <footer')
+        else:
+            print(f"⚠️  {os.path.basename(filepath)} - No </main> or <footer> tag found")
+            return False
 
         # Write back
         with open(filepath, 'w', encoding='utf-8') as f:
