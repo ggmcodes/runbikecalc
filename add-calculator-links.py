@@ -726,6 +726,231 @@ CALCULATOR_LINKS = {
         ],
         'hub_url': '/marathon-training-hub.html',
         'hub_title': 'Marathon Training Hub'
+    },
+
+    'zone-2-calculator.html': {
+        'title': 'Master Zone 2 Training',
+        'subtitle': 'Build your aerobic base with the most important training zone',
+        'blog_posts': [
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'COMPLETE GUIDE',
+                'title': 'Complete Zone 2 Training Guide',
+                'desc': 'Deep dive into Zone 2 - the foundation of endurance training.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'ALL ZONES',
+                'title': 'Heart Rate Zones for Running',
+                'desc': 'Understand Zone 2 within the complete 5-zone system.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'APPLICATION',
+                'title': 'Marathon Training Guide',
+                'desc': 'Apply Zone 2 training to marathon preparation.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Zone 2 training for optimal fat burning.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'target-heart-rate-calculator.html': {
+        'title': 'Train at the Right Intensity',
+        'subtitle': 'Learn how to use target heart rate zones for optimal training',
+        'blog_posts': [
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'HR ZONES',
+                'title': 'Heart Rate Zones for Running',
+                'desc': 'Complete guide to training with all 5 heart rate zones.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'ZONE 2',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Master the most important training zone for endurance.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/lactate-threshold-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'orange',
+                'tag': 'THRESHOLD',
+                'title': 'Lactate Threshold Training',
+                'desc': 'Train at threshold with precise heart rate guidance.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'HIGH INTENSITY',
+                'title': 'VO2 Max Training',
+                'desc': 'High-intensity training with target heart rates.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'treadmill-pace-calculator.html': {
+        'title': 'Master Treadmill Training',
+        'subtitle': 'Learn how to train effectively on the treadmill',
+        'blog_posts': [
+            {
+                'url': '/blog/running-pace-training-guide-2025.html',
+                'emoji': '⏱️',
+                'color': 'blue',
+                'tag': 'PACE TRAINING',
+                'title': 'Running Pace Training Guide',
+                'desc': 'Apply pace training principles to treadmill workouts.',
+                'time': '11 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'green',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Use treadmill training for marathon preparation.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'HR ZONES',
+                'title': 'Heart Rate Zones',
+                'desc': 'Combine pace and heart rate on the treadmill.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/how-to-lose-weight-running-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Lose Weight Running',
+                'desc': 'Effective treadmill workouts for weight loss.',
+                'time': '13 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'recovery-calculator.html': {
+        'title': 'Optimize Your Recovery',
+        'subtitle': 'Learn how to balance training and recovery for maximum progress',
+        'blog_posts': [
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'ACTIVE RECOVERY',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Use Zone 2 for active recovery between hard sessions.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'TRAINING',
+                'title': 'Marathon Training Guide',
+                'desc': 'Balance hard training with proper recovery strategies.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'CYCLING',
+                'title': 'FTP Training Guide',
+                'desc': 'Recovery strategies for power-based training.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'HIGH INTENSITY',
+                'title': 'VO2 Max Training',
+                'desc': 'Recovery protocols for high-intensity training.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'aerobic-anaerobic-calculator.html': {
+        'title': 'Understand Your Energy Systems',
+        'subtitle': 'Learn how to train both aerobic and anaerobic systems effectively',
+        'blog_posts': [
+            {
+                'url': '/blog/aerobic-vs-anaerobic-training.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'ENERGY SYSTEMS',
+                'title': 'Aerobic vs Anaerobic Training',
+                'desc': 'Complete guide to both energy systems and how to train them.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'AEROBIC',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Master aerobic training with Zone 2 endurance work.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'red',
+                'tag': 'ANAEROBIC',
+                'title': 'VO2 Max Training',
+                'desc': 'Develop anaerobic capacity with high-intensity training.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'blue',
+                'tag': 'ALL ZONES',
+                'title': 'Heart Rate Zones',
+                'desc': 'Train both systems with the complete zone system.',
+                'time': '8 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
     }
 }
 

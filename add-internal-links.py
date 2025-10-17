@@ -866,6 +866,350 @@ BLOG_LINKS = {
         ],
         'hub_url': '/marathon-training-hub.html',
         'hub_title': 'Marathon Training Hub'
+    },
+
+    'how-to-calculate-running-pace-for-marathon-training.html': {
+        'related_posts': [
+            {
+                'url': '/blog/running-pace-training-guide-2025.html',
+                'emoji': '⏱️',
+                'color': 'blue',
+                'tag': 'PACE TRAINING',
+                'title': 'Running Pace Training Guide',
+                'desc': 'Complete guide to pace-based training for all distances.',
+                'time': '11 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'green',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Apply pace calculations to comprehensive marathon training.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'HR + PACE',
+                'title': 'Heart Rate Zones',
+                'desc': 'Combine pace and heart rate training for best results.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/half-marathon-training-guide-2025.html',
+                'emoji': '🏃‍♂️',
+                'color': 'purple',
+                'tag': 'HALF MARATHON',
+                'title': 'Half Marathon Training',
+                'desc': 'Practice pace strategies on the half marathon distance.',
+                'time': '12 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'how-to-increase-lactate-threshold.html': {
+        'related_posts': [
+            {
+                'url': '/blog/lactate-threshold-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'orange',
+                'tag': 'COMPLETE GUIDE',
+                'title': 'Lactate Threshold Training Guide',
+                'desc': 'Comprehensive guide with proven methods to increase threshold.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'ZONE 4',
+                'title': 'Heart Rate Zones for Running',
+                'desc': 'Understand Zone 4 training for threshold improvement.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'BASE FIRST',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Build aerobic foundation before threshold work.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'HIGH INTENSITY',
+                'title': 'VO2 Max Training Guide',
+                'desc': 'Combine threshold and VO2 max for complete fitness.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'ftp-test-week-by-week-training-plan-2025.html': {
+        'related_posts': [
+            {
+                'url': '/blog/ftp-testing-guide-cyclists.html',
+                'emoji': '🧪',
+                'color': 'blue',
+                'tag': 'TESTING',
+                'title': 'FTP Testing Guide',
+                'desc': 'Learn all FTP testing methods and protocols.',
+                'time': '7 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Train systematically after testing to improve FTP.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/what-is-ftp-beginner-guide.html',
+                'emoji': '📚',
+                'color': 'green',
+                'tag': 'BEGINNER',
+                'title': 'What is FTP?',
+                'desc': 'Complete introduction to Functional Threshold Power.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/couch-to-20-min-ftp-test.html',
+                'emoji': '🚴‍♂️',
+                'color': 'purple',
+                'tag': 'BEGINNER',
+                'title': 'Couch to 20-Min FTP Test',
+                'desc': 'Build fitness to complete your first FTP test.',
+                'time': '9 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'couch-to-20-min-ftp-test.html': {
+        'related_posts': [
+            {
+                'url': '/blog/what-is-ftp-beginner-guide.html',
+                'emoji': '📚',
+                'color': 'green',
+                'tag': 'START HERE',
+                'title': 'What is FTP? Beginner Guide',
+                'desc': 'Understand FTP basics before starting your training.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/ftp-test-week-by-week-training-plan-2025.html',
+                'emoji': '📅',
+                'color': 'blue',
+                'tag': 'TRAINING PLAN',
+                'title': 'FTP Test Training Plan',
+                'desc': 'Week-by-week plan to prepare for FTP testing.',
+                'time': '11 min read'
+            },
+            {
+                'url': '/blog/ftp-testing-guide-cyclists.html',
+                'emoji': '🧪',
+                'color': 'orange',
+                'tag': 'TESTING',
+                'title': 'FTP Testing Guide',
+                'desc': 'Master the 20-minute FTP test protocol.',
+                'time': '7 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'purple',
+                'tag': 'BASE TRAINING',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Build aerobic base for cycling fitness.',
+                'time': '15 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'why-your-ftp-dropped.html': {
+        'related_posts': [
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'REBUILD',
+                'title': 'FTP Training Guide',
+                'desc': 'Structured training to rebuild and improve your FTP.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/ftp-testing-guide-cyclists.html',
+                'emoji': '🧪',
+                'color': 'blue',
+                'tag': 'RETEST',
+                'title': 'FTP Testing Guide',
+                'desc': 'Accurate testing methods to track your progress.',
+                'time': '7 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'BASE BUILDING',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Rebuild aerobic foundation with Zone 2 training.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/power-to-weight-ratio-cycling.html',
+                'emoji': '⚖️',
+                'color': 'purple',
+                'tag': 'PERFORMANCE',
+                'title': 'Power-to-Weight Ratio',
+                'desc': 'Focus on ratio improvement, not just absolute FTP.',
+                'time': '6 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'lactate-threshold-training-triathletes.html': {
+        'related_posts': [
+            {
+                'url': '/blog/lactate-threshold-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'orange',
+                'tag': 'COMPLETE GUIDE',
+                'title': 'Lactate Threshold Training',
+                'desc': 'Complete threshold training guide for all endurance athletes.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'blue',
+                'tag': 'CYCLING',
+                'title': 'FTP Training Guide',
+                'desc': 'Threshold training for the cycling leg of triathlons.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'AEROBIC BASE',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Build the aerobic base needed for triathlon success.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'RUNNING',
+                'title': 'Heart Rate Zones',
+                'desc': 'Zone 4 training for the run leg of triathlons.',
+                'time': '8 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'lactate-vs-anaerobic-threshold.html': {
+        'related_posts': [
+            {
+                'url': '/blog/lactate-threshold-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'orange',
+                'tag': 'TRAINING',
+                'title': 'Lactate Threshold Training',
+                'desc': 'Train at your lactate threshold for performance gains.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/aerobic-vs-anaerobic-training.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'ENERGY SYSTEMS',
+                'title': 'Aerobic vs Anaerobic Training',
+                'desc': 'Understand both energy systems for complete fitness.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'ZONES',
+                'title': 'Heart Rate Zones',
+                'desc': 'Use heart rate zones to train both thresholds effectively.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '🎯',
+                'color': 'blue',
+                'tag': 'VO2 MAX',
+                'title': 'VO2 Max Training',
+                'desc': 'Train above threshold with VO2 max intervals.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'lthr-test-protocol-guide-2025.html': {
+        'related_posts': [
+            {
+                'url': '/blog/lactate-threshold-training-guide-2025.html',
+                'emoji': '🔥',
+                'color': 'orange',
+                'tag': 'TRAINING',
+                'title': 'Lactate Threshold Training',
+                'desc': 'Use your LTHR to structure threshold training.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/heart-rate-zones-running.html',
+                'emoji': '💓',
+                'color': 'red',
+                'tag': 'HR ZONES',
+                'title': 'Heart Rate Zones',
+                'desc': 'Calculate all training zones from your LTHR.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/how-to-increase-lactate-threshold.html',
+                'emoji': '📈',
+                'color': 'green',
+                'tag': 'IMPROVEMENT',
+                'title': 'How to Increase Lactate Threshold',
+                'desc': 'Proven methods to improve your threshold over time.',
+                'time': '9 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'APPLICATION',
+                'title': 'Marathon Training',
+                'desc': 'Apply LTHR training to marathon preparation.',
+                'time': '18 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
     }
 }
 
