@@ -951,6 +951,231 @@ CALCULATOR_LINKS = {
         ],
         'hub_url': '/heart-rate-training-hub.html',
         'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'bike-gearing-calculator.html': {
+        'title': 'Optimize Your Cycling Performance',
+        'subtitle': 'Learn how gear selection affects your training and racing',
+        'blog_posts': [
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'POWER TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Use optimal gearing for power-based training.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '💪',
+                'color': 'green',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Choose the right gears for fat-burning workouts.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/power-to-weight-ratio-cycling.html',
+                'emoji': '⚖️',
+                'color': 'purple',
+                'tag': 'PERFORMANCE',
+                'title': 'Power-to-Weight Ratio',
+                'desc': 'Optimize gear selection for climbing and racing.',
+                'time': '6 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'blue',
+                'tag': 'BASE TRAINING',
+                'title': 'Zone 2 Training',
+                'desc': 'Find the perfect cadence and gearing for Zone 2 rides.',
+                'time': '15 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'cadence-speed-calculator.html': {
+        'title': 'Perfect Your Cycling Cadence',
+        'subtitle': 'Learn how to optimize cadence for different training goals',
+        'blog_posts': [
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'FTP TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Maintain optimal cadence during FTP intervals.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'ZONE 2',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Find your ideal Zone 2 cadence for aerobic development.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/power-to-weight-ratio-cycling.html',
+                'emoji': '⚖️',
+                'color': 'purple',
+                'tag': 'EFFICIENCY',
+                'title': 'Power-to-Weight Ratio',
+                'desc': 'Optimize cadence for maximum power efficiency.',
+                'time': '6 min read'
+            },
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '💪',
+                'color': 'blue',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Best cadence strategies for fat burning.',
+                'time': '10 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
+    },
+
+    'bmi-calculator.html': {
+        'title': 'Optimize Your Health & Performance',
+        'subtitle': 'Learn how body composition affects training and racing',
+        'blog_posts': [
+            {
+                'url': '/blog/how-to-lose-weight-running-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'How to Lose Weight Running',
+                'desc': 'Achieve your optimal weight through running.',
+                'time': '13 min read'
+            },
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '🚴',
+                'color': 'green',
+                'tag': 'CYCLING',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Lose weight effectively with cycling training.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/power-to-weight-ratio-cycling.html',
+                'emoji': '⚖️',
+                'color': 'purple',
+                'tag': 'PERFORMANCE',
+                'title': 'Power-to-Weight Ratio',
+                'desc': 'How body weight directly impacts cycling performance.',
+                'time': '6 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training',
+                'desc': 'Optimize weight for marathon performance.',
+                'time': '18 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'training-load-calculator.html': {
+        'title': 'Balance Training & Recovery',
+        'subtitle': 'Learn how to optimize training load for maximum progress',
+        'blog_posts': [
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Manage training load through marathon preparation.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'FTP TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Balance high-intensity FTP work with recovery.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/vo2-max-training-guide-2025.html',
+                'emoji': '⚡',
+                'color': 'purple',
+                'tag': 'HIGH INTENSITY',
+                'title': 'VO2 Max Training',
+                'desc': 'Manage training load during intense intervals.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'green',
+                'tag': 'RECOVERY',
+                'title': 'Zone 2 Training',
+                'desc': 'Use Zone 2 for active recovery and load management.',
+                'time': '15 min read'
+            }
+        ],
+        'hub_url': '/heart-rate-training-hub.html',
+        'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'watts-to-calories-calculator.html': {
+        'title': 'Understand Energy Expenditure',
+        'subtitle': 'Learn how power output relates to calorie burn and training',
+        'blog_posts': [
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '💪',
+                'color': 'green',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Use power-based calorie tracking for weight loss.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'FTP TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Understand energy demands of FTP training.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'blue',
+                'tag': 'FAT BURNING',
+                'title': 'Zone 2 Training',
+                'desc': 'Optimize fat burning with power-based Zone 2 training.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/power-to-weight-ratio-cycling.html',
+                'emoji': '⚖️',
+                'color': 'purple',
+                'tag': 'PERFORMANCE',
+                'title': 'Power-to-Weight Ratio',
+                'desc': 'Balance power output with body weight for performance.',
+                'time': '6 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
     }
 }
 

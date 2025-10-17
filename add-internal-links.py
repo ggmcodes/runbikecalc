@@ -1210,6 +1210,135 @@ BLOG_LINKS = {
         ],
         'hub_url': '/heart-rate-training-hub.html',
         'hub_title': 'Heart Rate Training Hub'
+    },
+
+    'best-running-shoes-2025.html': {
+        'related_posts': [
+            {
+                'url': '/blog/running-for-beginners-ultimate-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'blue',
+                'tag': 'BEGINNER GUIDE',
+                'title': 'Running for Beginners',
+                'desc': 'Complete guide to starting your running journey with the right shoes.',
+                'time': '16 min read'
+            },
+            {
+                'url': '/blog/couch-to-5k-complete-guide-2025.html',
+                'emoji': '👟',
+                'color': 'green',
+                'tag': 'C25K',
+                'title': 'Couch to 5K Guide',
+                'desc': 'Start your running journey with proper footwear and training.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'purple',
+                'tag': 'MARATHON',
+                'title': 'Marathon Training Guide',
+                'desc': 'Choose the right shoes for marathon training distances.',
+                'time': '18 min read'
+            },
+            {
+                'url': '/blog/how-to-lose-weight-running-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'Lose Weight Running',
+                'desc': 'Proper shoes are essential for weight loss running programs.',
+                'time': '13 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'calories-burned-calculator-endurance-sports.html': {
+        'related_posts': [
+            {
+                'url': '/blog/how-to-lose-weight-running-2025.html',
+                'emoji': '💪',
+                'color': 'orange',
+                'tag': 'WEIGHT LOSS',
+                'title': 'How to Lose Weight Running',
+                'desc': 'Use calorie tracking for effective weight loss through running.',
+                'time': '13 min read'
+            },
+            {
+                'url': '/blog/cycling-for-weight-loss-2025.html',
+                'emoji': '🚴',
+                'color': 'green',
+                'tag': 'CYCLING',
+                'title': 'Cycling for Weight Loss',
+                'desc': 'Maximize calorie burn with structured cycling training.',
+                'time': '10 min read'
+            },
+            {
+                'url': '/blog/what-is-zone-2-training-complete-guide.html',
+                'emoji': '🎯',
+                'color': 'blue',
+                'tag': 'FAT BURNING',
+                'title': 'Zone 2 Training Guide',
+                'desc': 'Optimize fat burning with Zone 2 aerobic training.',
+                'time': '15 min read'
+            },
+            {
+                'url': '/blog/marathon-training-guide-2025.html',
+                'emoji': '🏃',
+                'color': 'purple',
+                'tag': 'ENDURANCE',
+                'title': 'Marathon Training Guide',
+                'desc': 'Build endurance while managing calorie expenditure.',
+                'time': '18 min read'
+            }
+        ],
+        'hub_url': '/marathon-training-hub.html',
+        'hub_title': 'Marathon Training Hub'
+    },
+
+    'ftp-calculator-vs-zwift-vs-trainerroad.html': {
+        'related_posts': [
+            {
+                'url': '/blog/ftp-testing-guide-cyclists.html',
+                'emoji': '🧪',
+                'color': 'blue',
+                'tag': 'FTP TESTING',
+                'title': 'FTP Testing Guide',
+                'desc': 'Compare different FTP testing methods and platforms.',
+                'time': '7 min read'
+            },
+            {
+                'url': '/blog/what-is-ftp-beginner-guide.html',
+                'emoji': '📚',
+                'color': 'green',
+                'tag': 'BEGINNER',
+                'title': 'What is FTP? Beginner Guide',
+                'desc': 'Understand FTP basics before choosing a testing platform.',
+                'time': '8 min read'
+            },
+            {
+                'url': '/blog/ftp-training-guide-2025.html',
+                'emoji': '🚴',
+                'color': 'orange',
+                'tag': 'TRAINING',
+                'title': 'FTP Training Guide',
+                'desc': 'Use your FTP for structured training regardless of platform.',
+                'time': '12 min read'
+            },
+            {
+                'url': '/blog/ftp-test-week-by-week-training-plan-2025.html',
+                'emoji': '📅',
+                'color': 'purple',
+                'tag': 'PREPARATION',
+                'title': 'FTP Test Training Plan',
+                'desc': 'Prepare for your first FTP test with any platform.',
+                'time': '11 min read'
+            }
+        ],
+        'hub_url': '/cycling-power-hub.html',
+        'hub_title': 'Cycling Power Training Hub'
     }
 }
 
