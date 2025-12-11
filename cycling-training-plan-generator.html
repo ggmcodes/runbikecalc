@@ -354,36 +354,42 @@
     <script src="js/training-plan-cycling.js"></script>
     <script src="js/training-plan-export.js"></script>
     <script>
-        const planGenerator = new CyclingPlanGenerator('training-plan-form', 'training-plan-result');
+        try {
+            const planGenerator = new CyclingPlanGenerator('training-plan-form', 'training-plan-result');
+        } catch (e) {
+            console.error('Error initializing plan generator:', e);
+        }
 
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
-        document.getElementById('toggle-advanced').addEventListener('click', function() {
-            document.getElementById('advanced-options').classList.toggle('hidden');
-            document.getElementById('advanced-chevron').classList.toggle('rotate-180');
-        });
+        const toggleAdvanced = document.getElementById('toggle-advanced');
+        const advancedOptions = document.getElementById('advanced-options');
+        const advancedChevron = document.getElementById('advanced-chevron');
+        if (toggleAdvanced && advancedOptions) {
+            toggleAdvanced.addEventListener('click', function() {
+                advancedOptions.classList.toggle('hidden');
+                if (advancedChevron) advancedChevron.classList.toggle('rotate-180');
+            });
+        }
 
-        document.getElementById('race-date').addEventListener('change', function() {
-            const raceDate = new Date(this.value);
-            const today = new Date();
-            const diffWeeks = Math.floor((raceDate - today) / (1000 * 60 * 60 * 24 * 7));
-            if (diffWeeks > 0) {
-                document.getElementById('weeks-until-race').value = Math.min(52, Math.max(8, diffWeeks));
-            }
-        });
-
-    // Mobile Training Plans submenu toggle
-    const plansToggle = document.getElementById('mobile-plans-toggle');
-    const plansSubmenu = document.getElementById('mobile-plans-submenu');
-    const plansChevron = document.getElementById('mobile-plans-chevron');
-    if (plansToggle && plansSubmenu && plansChevron) {
-        plansToggle.addEventListener('click', function() {
-            plansSubmenu.classList.toggle('hidden');
-            plansChevron.classList.toggle('rotate-180');
-        });
-    }
-</script>
+        const raceDateInput = document.getElementById('race-date');
+        const weeksInput = document.getElementById('weeks-until-race');
+        if (raceDateInput && weeksInput) {
+            raceDateInput.addEventListener('change', function() {
+                const raceDate = new Date(this.value);
+                const today = new Date();
+                const diffWeeks = Math.floor((raceDate - today) / (1000 * 60 * 60 * 24 * 7));
+                if (diffWeeks > 0) {
+                    weeksInput.value = Math.min(52, Math.max(8, diffWeeks));
+                }
+            });
+        }
+    </script>
     </body>
 </html>
