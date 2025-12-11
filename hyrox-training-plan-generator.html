@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrox Training Plan Generator | Free Periodized Plans | RunBikeCalc</title>
+    <meta name="description" content="Generate a personalized Hyrox training plan for Open, Pro, or Doubles. Periodized program covering running, all 8 stations, strength, and race simulations. Export to calendar free.">
+    <meta name="keywords" content="hyrox training plan, hyrox workout, hyrox preparation, fitness racing, functional fitness, hyrox stations, sled push, wall balls, burpee broad jumps">
+    <link rel="canonical" href="https://runbikecalc.com/hyrox-training-plan-generator">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Hyrox Training Plan Generator | RunBikeCalc">
+    <meta property="og:description" content="Create your personalized Hyrox training plan with periodized phases, station drills, and race simulations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/hyrox-training-plan-generator">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hyrox Training Plan Generator",
+        "description": "Generate personalized Hyrox training plans for Open, Pro, and Doubles divisions",
+        "url": "https://runbikecalc.com/hyrox-training-plan-generator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "First-timer Hyrox preparation",
+            "Hyrox Open training plans",
+            "Hyrox Pro training plans",
+            "Hyrox Doubles training plans",
+            "8 station workout programming",
+            "Running and conditioning balance",
+            "Race simulation workouts",
+            "Calendar export"
+        ]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-blue-600">RunBikeCalc</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/running-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Running</a>
+                    <a href="/cycling-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Cycling</a>
+                    <a href="/triathlon-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Triathlon</a>
+                    <a href="/nutrition-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Nutrition</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/running-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Running</a>
+                <a href="/cycling-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Cycling</a>
+                <a href="/triathlon-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Triathlon</a>
+                <a href="/nutrition-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Nutrition</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="inline-block px-4 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-4">Fitness Racing</div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Hyrox Training Plan Generator</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Create a personalized training plan for Hyrox. Balance running, functional fitness stations, and strength work with periodized programming.
+            </p>
+        </div>
+
+        <!-- Hyrox Format Explainer -->
+        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">The Hyrox Race Format</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <p class="text-orange-100 mb-3">8 rounds of: 1km Run + 1 Functional Station</p>
+                    <p class="text-sm text-orange-200">Total: 8km running + 8 workout stations</p>
+                </div>
+                <div class="text-sm space-y-1">
+                    <div class="flex justify-between"><span>1. SkiErg</span><span>1000m</span></div>
+                    <div class="flex justify-between"><span>2. Sled Push</span><span>50m</span></div>
+                    <div class="flex justify-between"><span>3. Sled Pull</span><span>50m</span></div>
+                    <div class="flex justify-between"><span>4. Burpee Broad Jumps</span><span>80m</span></div>
+                    <div class="flex justify-between"><span>5. Rowing</span><span>1000m</span></div>
+                    <div class="flex justify-between"><span>6. Farmers Carry</span><span>200m</span></div>
+                    <div class="flex justify-between"><span>7. Sandbag Lunges</span><span>100m</span></div>
+                    <div class="flex justify-between"><span>8. Wall Balls</span><span>75-100 reps</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Form -->
+        <div class="calc-card mb-8">
+            <form id="training-plan-form" class="space-y-8">
+
+                <!-- Section 1: Race Goal -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-gray-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">1</span>
+                        Race Goal
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Division -->
+                        <div>
+                            <label for="distance" class="calc-label">Hyrox Division</label>
+                            <select id="distance" name="distance" class="calc-input-number w-full" required>
+                                <option value="first-timer">First Hyrox (Beginner)</option>
+                                <option value="open" selected>Hyrox Open</option>
+                                <option value="pro">Hyrox Pro</option>
+                                <option value="doubles">Hyrox Doubles</option>
+                            </select>
+                            <p id="division-info" class="text-xs text-gray-500 mt-1">Standard weights, great for most competitors</p>
+                        </div>
+
+                        <!-- Race Date or Weeks -->
+                        <div>
+                            <label class="calc-label">Plan Duration</label>
+                            <div class="flex gap-2">
+                                <div class="flex-1">
+                                    <input type="date" id="raceDate" name="raceDate" class="calc-input-number w-full" placeholder="Race Date">
+                                </div>
+                                <span class="self-center text-gray-500">or</span>
+                                <div class="w-24">
+                                    <input type="number" id="weeks" name="weeks" class="calc-input-number w-full" min="8" max="24" placeholder="Weeks">
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Enter race date or number of weeks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Current Fitness -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-blue-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">2</span>
+                        Current Fitness
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Fitness Level -->
+                        <div>
+                            <label for="fitnessLevel" class="calc-label">Experience Level</label>
+                            <select id="fitnessLevel" name="fitnessLevel" class="calc-input-number w-full" required>
+                                <option value="beginner">Beginner (New to functional fitness)</option>
+                                <option value="intermediate" selected>Intermediate (Gym regular, some running)</option>
+                                <option value="advanced">Advanced (CrossFit/F45 background, runner)</option>
+                            </select>
+                        </div>
+
+                        <!-- Current Weekly Volume -->
+                        <div>
+                            <label for="currentVolume" class="calc-label">Current Weekly Training (hours)</label>
+                            <input type="number" id="currentVolume" name="currentVolume" class="calc-input-number w-full"
+                                   min="2" max="20" step="0.5" value="6" required>
+                            <p class="text-xs text-gray-500 mt-1">Total gym + running hours per week</p>
+                        </div>
+                    </div>
+
+                    <!-- Running Assessment -->
+                    <div class="pl-10">
+                        <label for="runningAbility" class="calc-label">Running Ability</label>
+                        <select id="runningAbility" name="runningAbility" class="calc-input-number w-full md:w-1/2">
+                            <option value="weak">Weakness - Need significant running work</option>
+                            <option value="moderate" selected>Moderate - Can run 5K comfortably</option>
+                            <option value="strong">Strength - Regular runner (10K+ comfortable)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section 3: Schedule -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-green-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">3</span>
+                        Training Schedule
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Training Days -->
+                        <div>
+                            <label for="trainingDays" class="calc-label">Training Days Per Week</label>
+                            <select id="trainingDays" name="trainingDays" class="calc-input-number w-full" required>
+                                <option value="3">3 days (minimum)</option>
+                                <option value="4">4 days</option>
+                                <option value="5" selected>5 days (recommended)</option>
+                                <option value="6">6 days</option>
+                            </select>
+                        </div>
+
+                        <!-- Long Workout Day -->
+                        <div>
+                            <label for="longDay" class="calc-label">Simulation / Long Workout Day</label>
+                            <select id="longDay" name="longDay" class="calc-input-number w-full" required>
+                                <option value="saturday" selected>Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Equipment Access -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-purple-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">4</span>
+                        Equipment Access
+                        <span class="text-sm font-normal text-gray-500">(Helps customize workouts)</span>
+                    </h3>
+                    <div class="pl-10 space-y-3">
+                        <div class="flex flex-wrap gap-4">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasSkiErg" name="hasSkiErg" checked class="rounded">
+                                <span class="text-sm">SkiErg</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasRower" name="hasRower" checked class="rounded">
+                                <span class="text-sm">Rowing Machine</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasSled" name="hasSled" class="rounded">
+                                <span class="text-sm">Sled</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasWallBalls" name="hasWallBalls" checked class="rounded">
+                                <span class="text-sm">Wall Balls</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasSandbag" name="hasSandbag" class="rounded">
+                                <span class="text-sm">Sandbag</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" id="hasKettlebells" name="hasKettlebells" checked class="rounded">
+                                <span class="text-sm">Kettlebells/Dumbbells</span>
+                            </label>
+                        </div>
+                        <p class="text-xs text-gray-500">We'll provide alternatives for equipment you don't have</p>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" class="calc-button w-full text-lg py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
+                        Generate My Hyrox Plan
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div id="training-plan-result" class="hidden">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+
+        <!-- Station Weight Reference -->
+        <div class="calc-card bg-gray-50 mt-8">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Hyrox Station Weights Reference</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="px-3 py-2 text-left">Station</th>
+                            <th class="px-3 py-2 text-center" colspan="2">Open</th>
+                            <th class="px-3 py-2 text-center" colspan="2">Pro</th>
+                        </tr>
+                        <tr class="bg-gray-100 text-xs">
+                            <th class="px-3 py-1"></th>
+                            <th class="px-3 py-1">Women</th>
+                            <th class="px-3 py-1">Men</th>
+                            <th class="px-3 py-1">Women</th>
+                            <th class="px-3 py-1">Men</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 font-medium">Sled Push (50m)</td>
+                            <td class="px-3 py-2 text-center">102kg</td>
+                            <td class="px-3 py-2 text-center">152kg</td>
+                            <td class="px-3 py-2 text-center">152kg</td>
+                            <td class="px-3 py-2 text-center">202kg</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 font-medium">Sled Pull (50m)</td>
+                            <td class="px-3 py-2 text-center">78kg</td>
+                            <td class="px-3 py-2 text-center">103kg</td>
+                            <td class="px-3 py-2 text-center">103kg</td>
+                            <td class="px-3 py-2 text-center">153kg</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 font-medium">Farmers Carry (200m)</td>
+                            <td class="px-3 py-2 text-center">2x16kg</td>
+                            <td class="px-3 py-2 text-center">2x24kg</td>
+                            <td class="px-3 py-2 text-center">2x24kg</td>
+                            <td class="px-3 py-2 text-center">2x32kg</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-3 py-2 font-medium">Sandbag Lunges (100m)</td>
+                            <td class="px-3 py-2 text-center">10kg</td>
+                            <td class="px-3 py-2 text-center">20kg</td>
+                            <td class="px-3 py-2 text-center">20kg</td>
+                            <td class="px-3 py-2 text-center">30kg</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 font-medium">Wall Balls (to 9ft)</td>
+                            <td class="px-3 py-2 text-center">75 x 4kg</td>
+                            <td class="px-3 py-2 text-center">100 x 6kg</td>
+                            <td class="px-3 py-2 text-center">75 x 4kg</td>
+                            <td class="px-3 py-2 text-center">100 x 6kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">SkiErg (1000m), Rowing (1000m), and Burpee Broad Jumps (80m) are the same for all divisions.</p>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="mt-12 space-y-8">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">How This Hyrox Plan Works</h2>
+                <div class="prose max-w-none text-gray-600">
+                    <p class="mb-4">
+                        This generator creates a structured, periodized training plan specifically for Hyrox competition. Unlike traditional running or strength programs, Hyrox demands a unique combination of running capacity, functional fitness, grip endurance, and mental toughness.
+                    </p>
+                    <p>
+                        Your plan balances running workouts, station-specific drills, strength training, and full race simulations to prepare you for all 8 stations while maintaining the running fitness to connect them.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Training Phases Explained</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                        <h4 class="font-semibold text-orange-800 mb-2">Base Phase (45% Run / 25% Stations / 30% Strength)</h4>
+                        <p class="text-sm text-orange-700">Build running endurance and learn all 8 stations with proper technique. Establish strength foundation for grip and legs.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-semibold text-blue-800 mb-2">Build Phase (35% Run / 40% Stations / 25% Strength)</h4>
+                        <p class="text-sm text-blue-700">Increase station-specific work at race weights. Introduce tempo running and mixed conditioning workouts.</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-lg border-l-4 border-red-400">
+                        <h4 class="font-semibold text-red-800 mb-2">Peak Phase (30% Run / 45% Stations / 15% Strength)</h4>
+                        <p class="text-sm text-red-700">Race simulations (half and full Hyrox), 1km repeats, and heavy station work. Maximum specificity.</p>
+                    </div>
+                    <div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+                        <h4 class="font-semibold text-green-800 mb-2">Taper Phase (40% Run / 35% Stations / 15% Strength)</h4>
+                        <p class="text-sm text-green-700">Reduce volume, maintain intensity. Practice race pacing. Arrive fresh and confident on race day.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Key Training Focus Areas</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🏃</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Running Capacity</h4>
+                        <p class="text-sm text-gray-600">8km total running, broken into 1km segments. Need to maintain pace even when fatigued from stations.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">💪</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Grip Endurance</h4>
+                        <p class="text-sm text-gray-600">Sled pull, farmers carry, wall balls, and rowing all demand grip. Train it specifically and often.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🦵</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Leg Stamina</h4>
+                        <p class="text-sm text-gray-600">Sled work, lunges, wall balls, and running. Your legs need to work continuously for 60-90+ minutes.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🫁</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Lactate Tolerance</h4>
+                        <p class="text-sm text-gray-600">Stations spike heart rate, then you run. Train the ability to run while legs are burning.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🧠</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Mental Toughness</h4>
+                        <p class="text-sm text-gray-600">8 rounds of suffering. Practice staying composed and executing technique when fatigued.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Transitions</h4>
+                        <p class="text-sm text-gray-600">Time in the Roxzone matters. Practice efficient transitions between stations and runs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Station Training Tips</h3>
+                <div class="space-y-3">
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">1</span>
+                        <div>
+                            <span class="font-medium">SkiErg (1000m)</span>
+                            <p class="text-sm text-gray-600">Maintain rhythm, use legs to drive. Don't go out too fast - it's a long race.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">2</span>
+                        <div>
+                            <span class="font-medium">Sled Push (50m)</span>
+                            <p class="text-sm text-gray-600">Stay low, drive through legs with short choppy steps. Lock arms and use bodyweight.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">3</span>
+                        <div>
+                            <span class="font-medium">Sled Pull (50m)</span>
+                            <p class="text-sm text-gray-600">Hand-over-hand technique. Sit back and use bodyweight. Save your biceps.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">4</span>
+                        <div>
+                            <span class="font-medium">Burpee Broad Jumps (80m)</span>
+                            <p class="text-sm text-gray-600">Find sustainable pace. Jump forward not up. Minimize time on the ground.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">5</span>
+                        <div>
+                            <span class="font-medium">Rowing (1000m)</span>
+                            <p class="text-sm text-gray-600">Legs drive 60% of power. Maintain consistent split. Don't fly-and-die.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">6</span>
+                        <div>
+                            <span class="font-medium">Farmers Carry (200m)</span>
+                            <p class="text-sm text-gray-600">Grip is everything. Walk fast with short strides. Control your breathing.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">7</span>
+                        <div>
+                            <span class="font-medium">Sandbag Lunges (100m)</span>
+                            <p class="text-sm text-gray-600">Alternate legs. Keep torso upright. Find your rhythm and stick to it.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg flex gap-4">
+                        <span class="font-bold text-orange-600 w-8">8</span>
+                        <div>
+                            <span class="font-medium">Wall Balls (75-100 reps)</span>
+                            <p class="text-sm text-gray-600">Break into sets early (25s or 20s). Catch and throw in one motion. Breathe!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">RPE (Rate of Perceived Exertion) Guide</h3>
+                <p class="text-gray-600 mb-4">
+                    This plan uses RPE to guide workout intensity:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-2 text-sm">
+                    <div class="p-2 bg-green-100 rounded text-center">
+                        <div class="font-bold text-green-800">RPE 2-3</div>
+                        <div class="text-green-700">Recovery</div>
+                    </div>
+                    <div class="p-2 bg-green-200 rounded text-center">
+                        <div class="font-bold text-green-800">RPE 4-5</div>
+                        <div class="text-green-700">Easy/Technique</div>
+                    </div>
+                    <div class="p-2 bg-yellow-100 rounded text-center">
+                        <div class="font-bold text-yellow-800">RPE 6-7</div>
+                        <div class="text-yellow-700">Tempo/Threshold</div>
+                    </div>
+                    <div class="p-2 bg-orange-100 rounded text-center">
+                        <div class="font-bold text-orange-800">RPE 7-8</div>
+                        <div class="text-orange-700">Race Simulation</div>
+                    </div>
+                    <div class="p-2 bg-red-100 rounded text-center">
+                        <div class="font-bold text-red-800">RPE 8-9</div>
+                        <div class="text-red-700">Full Send</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Free calculators and tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Running</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white transition-colors">Pace Calculator</a></li>
+                        <li><a href="/vdot-calculator" class="hover:text-white transition-colors">VDOT Calculator</a></li>
+                        <li><a href="/running-training-plan-generator" class="hover:text-white transition-colors">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Cycling</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cycling-ftp-calculator" class="hover:text-white transition-colors">FTP Calculator</a></li>
+                        <li><a href="/cycling-power-zones" class="hover:text-white transition-colors">Power Zones</a></li>
+                        <li><a href="/cycling-training-plan-generator" class="hover:text-white transition-colors">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">More</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/triathlon-training-plan-generator" class="hover:text-white transition-colors">Triathlon Plans</a></li>
+                        <li><a href="/hyrox-training-plan-generator" class="hover:text-white transition-colors">Hyrox Plans</a></li>
+                        <li><a href="/nutrition-tools" class="hover:text-white transition-colors">Nutrition</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/calculator-base.js"></script>
+    <script src="/js/training-plan-base.js"></script>
+    <script src="/js/training-plan-hyrox.js"></script>
+    <script src="/js/training-plan-export.js"></script>
+    <script src="/js/url-params.js"></script>
+    <script src="/js/email-gate.js"></script>
+    <script>
+        // Initialize the Hyrox plan generator
+        document.addEventListener('DOMContentLoaded', function() {
+            const generator = new HyroxPlanGenerator('training-plan-form', 'training-plan-result');
+
+            // Mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Set minimum date to today
+            const raceDateInput = document.getElementById('raceDate');
+            if (raceDateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                raceDateInput.setAttribute('min', today);
+            }
+
+            // Update division info text
+            const distanceSelect = document.getElementById('distance');
+            const divisionInfo = document.getElementById('division-info');
+            const weeksInput = document.getElementById('weeks');
+
+            const divisionInfoMap = {
+                'first-timer': 'Perfect for beginners - learn all stations and build fitness foundation',
+                'open': 'Standard weights, great for most competitors',
+                'pro': 'Heavier weights for competitive athletes',
+                'doubles': 'Partner up! Split the work with a teammate'
+            };
+
+            if (distanceSelect && divisionInfo) {
+                const updateInfo = () => {
+                    divisionInfo.textContent = divisionInfoMap[distanceSelect.value] || '';
+                    const config = HyroxDistanceConfigs[distanceSelect.value];
+                    if (config && weeksInput) {
+                        weeksInput.placeholder = config.optimalWeeks;
+                        weeksInput.min = config.minWeeks;
+                        weeksInput.max = config.maxWeeks;
+                    }
+                };
+                distanceSelect.addEventListener('change', updateInfo);
+                updateInfo();
+            }
+
+            // Load from URL params if present
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('d') || urlParams.has('distance')) {
+                PlanURLParams.decode(urlParams, 'training-plan-form');
+                setTimeout(() => {
+                    document.getElementById('training-plan-form').dispatchEvent(new Event('submit'));
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>

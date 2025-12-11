@@ -64,6 +64,13 @@
       "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
     },
     {
+      "name": "Hyrox Training Plan",
+      "short_name": "Hyrox Plan",
+      "description": "Generate personalized Hyrox training plan",
+      "url": "/hyrox-training-plan-generator",
+      "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
+    },
+    {
       "name": "Running Pace",
       "short_name": "Pace",
       "description": "Calculate running pace",
