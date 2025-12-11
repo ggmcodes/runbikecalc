@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
     <title>Triathlon Training Plan Generator | Free Periodized Plans | RunBikeCalc</title>
     <meta name="description" content="Generate a personalized triathlon training plan for Sprint, Olympic, 70.3, or Ironman. Science-based periodization with swim, bike, run, and brick workouts. Export to calendar free.">
     <meta name="keywords" content="triathlon training plan, ironman training, 70.3 training plan, sprint triathlon, olympic triathlon, brick workout, swim bike run">
@@ -459,6 +473,17 @@
                 menuButton.addEventListener('click', function() {
                     mobileMenu.classList.toggle('hidden');
                 });
+    // Mobile Training Plans submenu toggle
+    const plansToggle = document.getElementById('mobile-plans-toggle');
+    const plansSubmenu = document.getElementById('mobile-plans-submenu');
+    const plansChevron = document.getElementById('mobile-plans-chevron');
+    if (plansToggle && plansSubmenu && plansChevron) {
+        plansToggle.addEventListener('click', function() {
+            plansSubmenu.classList.toggle('hidden');
+            plansChevron.classList.toggle('rotate-180');
+        });
+    }
+
             }
 
             // Set minimum date to today for race date input

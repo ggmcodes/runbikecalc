@@ -498,6 +498,17 @@
             "description": "Ironman 70.3 finisher and endurance training expert"
         }
     }
-    </script>
-</body>
+    <script>
+    // Mobile Training Plans submenu toggle
+    const plansToggle = document.getElementById('mobile-plans-toggle');
+    const plansSubmenu = document.getElementById('mobile-plans-submenu');
+    const plansChevron = document.getElementById('mobile-plans-chevron');
+    if (plansToggle && plansSubmenu && plansChevron) {
+        plansToggle.addEventListener('click', function() {
+            plansSubmenu.classList.toggle('hidden');
+            plansChevron.classList.toggle('rotate-180');
+        });
+    }
+</script>
+    </body>
 </html>

@@ -912,6 +912,17 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
-    </script>
-</body>
+    <script>
+    // Mobile Training Plans submenu toggle
+    const plansToggle = document.getElementById('mobile-plans-toggle');
+    const plansSubmenu = document.getElementById('mobile-plans-submenu');
+    const plansChevron = document.getElementById('mobile-plans-chevron');
+    if (plansToggle && plansSubmenu && plansChevron) {
+        plansToggle.addEventListener('click', function() {
+            plansSubmenu.classList.toggle('hidden');
+            plansChevron.classList.toggle('rotate-180');
+        });
+    }
+</script>
+    </body>
 </html>

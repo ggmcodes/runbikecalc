@@ -17,14 +17,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
     
-    <title>RunBikeCalc - Free Calculator Tools for Runners, Cyclists & Endurance Athletes</title>
+    <title>RunBikeCalc | Free Training Plans & Calculators for Runners, Cyclists & Triathletes</title>
     <link rel="canonical" href="https://runbikecalc.com/">
-    <meta name="description" content="Free calculator tools for runners, cyclists, and endurance athletes. Calculate heart rate zones, running pace, VO2 max, FTP, and more. Mobile-optimized and easy to use.">
+    <meta name="description" content="Build free personalized training plans for running, cycling, triathlon, and Hyrox. Plus 25+ performance calculators for pace, heart rate zones, VO2 max, FTP, and more.">
     
     <!-- Canonical URL -->
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="RunBikeCalc - Free Calculator Tools for Endurance Athletes">
-    <meta property="og:description" content="Free calculator tools for runners, cyclists, and endurance athletes. Calculate heart rate zones, running pace, VO2 max, and more.">
+    <meta property="og:title" content="RunBikeCalc | Free Training Plans & Calculators for Endurance Athletes">
+    <meta property="og:description" content="Build free personalized training plans for running, cycling, triathlon, and Hyrox. Plus 25+ performance calculators.">
     <meta property="og:image" content="https://runbikecalc.com/images/og-homepage.jpg">
     <meta property="og:url" content="https://runbikecalc.com/">
     <meta property="og:type" content="website">
@@ -62,7 +62,7 @@
         "@type": "WebSite",
         "name": "RunBikeCalc",
         "url": "https://runbikecalc.com",
-        "description": "Free calculator tools for runners, cyclists, and endurance athletes",
+        "description": "Free training plans and calculators for runners, cyclists, and triathletes",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://runbikecalc.com/search?q={search_term_string}",
@@ -75,7 +75,61 @@
         }
     }
     </script>
-    
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RunBikeCalc",
+        "url": "https://runbikecalc.com",
+        "description": "Free training plans and calculators for runners, cyclists, and triathletes",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are these training plans really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all training plans are completely free. The .ics calendar export is free with no signup required. PDF and spreadsheet exports require a free email signup."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What training methods are used?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our plans incorporate proven principles from coaches like Jack Daniels, Joe Friel, and the 80/20 Endurance methodology. Plans include periodized Base, Build, Peak, and Taper phases with appropriate recovery weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add the plan to my calendar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "After generating your plan, click the Calendar (.ics) button to download the file. Import it into Google Calendar, Apple Calendar, Outlook, or any calendar app that supports .ics files."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is RunBikeCalc for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RunBikeCalc is for all endurance athletes - from beginners training for their first 5K to experienced athletes preparing for Ironman or ultramarathons."
+                }
+            }
+        ]
+    }
+    </script>
+
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Skip to main content for accessibility -->
@@ -96,6 +150,22 @@
                 
                 <!-- Desktop navigation -->
                 <div class="flex space-x-6">
+                    <div class="relative group">
+                        <a href="/training-plans" class="nav-link flex items-center">
+                            Plans
+                            <span class="ml-1 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-48 z-50">
+                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Plans</a>
+                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Running</a>
+                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cycling</a>
+                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Triathlon</a>
+                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hyrox</a>
+                        </div>
+                    </div>
                     <a href="/" class="nav-link font-semibold text-primary">Home</a>
                     <a href="/heart-rate-tools" class="nav-link">HR</a>
                     <a href="/running-tools" class="nav-link">Run</a>
@@ -109,6 +179,24 @@
             
             <!-- Mobile navigation -->
             <div id="mobile-menu" class="hidden mt-4 border-t pt-4">
+                <div class="border-b border-gray-200 pb-3 mb-3">
+                    <button id="mobile-plans-toggle" class="mobile-menu-item flex items-center justify-between w-full text-left">
+                        <span class="flex items-center">
+                            Plans
+                            <span class="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                        </span>
+                        <svg class="w-4 h-4 transform transition-transform" id="mobile-plans-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-plans-submenu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="/training-plans" class="block py-1 text-gray-600 hover:text-primary">All Plans</a>
+                        <a href="/running-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Running</a>
+                        <a href="/cycling-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Cycling</a>
+                        <a href="/triathlon-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Triathlon</a>
+                        <a href="/hyrox-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Hyrox</a>
+                    </div>
+                </div>
                 <a href="/" class="mobile-menu-item font-semibold text-primary">Home</a>
                 <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
                 <a href="/running-tools" class="mobile-menu-item">Run</a>
@@ -126,24 +214,106 @@
         <!-- Hero section -->
         <section class="text-center mb-16">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-                Free Calculator Tools for <span class="text-primary">Endurance Athletes</span>
+                Train Smarter. <span class="text-primary">Race Faster.</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                Optimize your training with our comprehensive suite of calculators for runners, cyclists, and triathletes. 
-                Get instant results for heart rate zones, pace, power, and more.
+                Free personalized training plans and performance calculators for runners, cyclists, and triathletes.
             </p>
-            
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <a href="/training-plans" class="calc-button text-lg px-8 py-4">
+                    Build Your Free Training Plan
+                </a>
+                <a href="#calculators" class="text-primary hover:text-blue-700 font-medium text-lg flex items-center justify-center gap-2">
+                    Or explore our calculators
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+            </div>
+
             <!-- Hero Image -->
             <div class="mb-12 max-w-4xl mx-auto">
-                <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                     alt="Marathon runner in action using performance calculators for training optimization" 
+                <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                     alt="Marathon runner in action using performance calculators for training optimization"
                      class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg">
             </div>
-            
+        </section>
+
+        <!-- Training Plans Section -->
+        <section class="mb-16">
+            <div class="text-center mb-8">
+                <span class="inline-block px-4 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-4">NEW - Premium Feature</span>
+                <h2 class="text-3xl font-bold mb-2">Free Personalized Training Plans</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Science-backed periodized plans based on Jack Daniels, Joe Friel, and 80/20 training methods. Export directly to your calendar.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Running Plans -->
+                <a href="/running-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-blue-500">
+                    <div class="text-4xl mb-4">🏃</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Running Plans</h3>
+                    <p class="text-gray-600 text-sm mb-4">5K to 100 Mile ultramarathons</p>
+                    <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+                        Build Plan
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Cycling Plans -->
+                <a href="/cycling-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-green-500">
+                    <div class="text-4xl mb-4">🚴</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Cycling Plans</h3>
+                    <p class="text-gray-600 text-sm mb-4">Century & Gran Fondo events</p>
+                    <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+                        Build Plan
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Triathlon Plans -->
+                <a href="/triathlon-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-purple-500">
+                    <div class="text-4xl mb-4">🏊🚴🏃</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Triathlon Plans</h3>
+                    <p class="text-gray-600 text-sm mb-4">Sprint to Ironman</p>
+                    <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+                        Build Plan
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Hyrox Plans -->
+                <a href="/hyrox-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-orange-500">
+                    <div class="text-4xl mb-4">💪</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Hyrox Plans</h3>
+                    <p class="text-gray-600 text-sm mb-4">Open, Pro & Doubles</p>
+                    <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+                        Build Plan
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <a href="/training-plans" class="text-primary hover:text-blue-700 font-medium">
+                    View all training plans →
+                </a>
+            </div>
         </section>
         
         <!-- Calculator categories -->
-        <section class="mb-16">
+        <section id="calculators" class="mb-16">
             <!-- Heart Rate & Training Zones -->
             <div class="mb-12">
                 <div class="mb-8">
@@ -350,6 +520,73 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
+                        Are these training plans really free?
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600">
+                        Yes, all training plans are completely free. The .ics calendar export is free with no signup required. PDF and spreadsheet exports require a free email signup.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
+                        What training methods are used?
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600">
+                        Our plans incorporate proven principles from coaches like Jack Daniels, Joe Friel, and the 80/20 Endurance methodology. Plans include periodized Base, Build, Peak, and Taper phases with appropriate recovery weeks.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
+                        How do I add the plan to my calendar?
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600">
+                        After generating your plan, click the "Calendar (.ics)" button to download the file. Import it into Google Calendar, Apple Calendar, Outlook, or any calendar app that supports .ics files.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
+                        Who is RunBikeCalc for?
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600">
+                        RunBikeCalc is for all endurance athletes - from beginners training for their first 5K to experienced athletes preparing for Ironman or ultramarathons.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Email Signup Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 md:p-12 text-white text-center mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">Get Weekly Training Tips</h2>
+            <p class="text-white/80 mb-6">Join endurance athletes improving their performance</p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-white/60 text-sm mt-4">No spam. Unsubscribe anytime.</p>
+        </section>
     </main>
     
     <!-- Footer -->
@@ -401,11 +638,22 @@
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
+
             menu.classList.toggle('hidden');
             this.setAttribute('aria-expanded', !isExpanded);
         });
-        
+
+        // Mobile Training Plans submenu toggle
+        const plansToggle = document.getElementById('mobile-plans-toggle');
+        const plansSubmenu = document.getElementById('mobile-plans-submenu');
+        const plansChevron = document.getElementById('mobile-plans-chevron');
+        if (plansToggle && plansSubmenu && plansChevron) {
+            plansToggle.addEventListener('click', function() {
+                plansSubmenu.classList.toggle('hidden');
+                plansChevron.classList.toggle('rotate-180');
+            });
+        }
+
         // Add smooth scrolling for better mobile experience
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
