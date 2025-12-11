@@ -3,10 +3,58 @@
  * Generates periodized training plans for century rides, gran fondos, and multi-day events
  */
 
-// Cycling event configurations
+// Cycling distance configurations
 const CyclingDistanceConfigs = {
-    'century': {
-        name: 'Century (100 miles)',
+    '25mi': {
+        name: '25 Miles',
+        distance: 25,
+        minWeeks: 4,
+        optimalWeeks: 6,
+        maxWeeks: 10,
+        taperWeeks: 1,
+        longRidePeakHours: 1.5,
+        keyWorkouts: ['ENDURANCE_RIDE', 'SWEET_SPOT'],
+        weeklyVolumeTargets: { beginner: 4, intermediate: 6, advanced: 8 },
+        description: 'Build base fitness for shorter rides'
+    },
+    '50mi': {
+        name: '50 Miles (Half Century)',
+        distance: 50,
+        minWeeks: 6,
+        optimalWeeks: 8,
+        maxWeeks: 12,
+        taperWeeks: 1,
+        longRidePeakHours: 2.5,
+        keyWorkouts: ['ENDURANCE_RIDE', 'SWEET_SPOT', 'TEMPO_RIDE'],
+        weeklyVolumeTargets: { beginner: 5, intermediate: 8, advanced: 10 },
+        description: 'Prepare for a 50-mile ride'
+    },
+    '62mi': {
+        name: '62 Miles (Metric Century / 100km)',
+        distance: 62,
+        minWeeks: 8,
+        optimalWeeks: 10,
+        maxWeeks: 14,
+        taperWeeks: 1,
+        longRidePeakHours: 3,
+        keyWorkouts: ['ENDURANCE_RIDE', 'SWEET_SPOT', 'TEMPO_RIDE'],
+        weeklyVolumeTargets: { beginner: 6, intermediate: 9, advanced: 12 },
+        description: 'Train for a metric century (100km)'
+    },
+    '75mi': {
+        name: '75 Miles',
+        distance: 75,
+        minWeeks: 8,
+        optimalWeeks: 12,
+        maxWeeks: 16,
+        taperWeeks: 1,
+        longRidePeakHours: 4,
+        keyWorkouts: ['ENDURANCE_RIDE', 'SWEET_SPOT', 'TEMPO_RIDE'],
+        weeklyVolumeTargets: { beginner: 7, intermediate: 10, advanced: 14 },
+        description: 'Build endurance for 75-mile rides'
+    },
+    '100mi': {
+        name: '100 Miles (Century)',
         distance: 100,
         minWeeks: 10,
         optimalWeeks: 14,
@@ -14,11 +62,11 @@ const CyclingDistanceConfigs = {
         taperWeeks: 1,
         longRidePeakHours: 5,
         keyWorkouts: ['ENDURANCE_RIDE', 'SWEET_SPOT', 'TEMPO_RIDE'],
-        weeklyVolumeTargets: { beginner: 8, intermediate: 12, advanced: 16 }, // hours
-        description: 'Build endurance for a 100-mile ride'
+        weeklyVolumeTargets: { beginner: 8, intermediate: 12, advanced: 16 },
+        description: 'Train for a full century (100 miles)'
     },
     'granfondo': {
-        name: 'Gran Fondo',
+        name: 'Gran Fondo (Hilly 100+ miles)',
         distance: 100,
         minWeeks: 12,
         optimalWeeks: 16,
@@ -31,7 +79,7 @@ const CyclingDistanceConfigs = {
         description: 'Prepare for hilly gran fondo events with climbing emphasis'
     },
     'multiday': {
-        name: 'Multi-Day Event',
+        name: 'Multi-Day Event (Stage Race)',
         distance: 200,
         minWeeks: 14,
         optimalWeeks: 20,
