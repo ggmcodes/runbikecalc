@@ -308,8 +308,8 @@ const PWAManager = {
     
     localStorage.setItem('saved-calculations', JSON.stringify(calculations));
     
-    // Trigger background sync if available
-    if ('sync' in self.registration) {
+    // Trigger background sync if available (only works in Service Worker context)
+    if (typeof self !== 'undefined' && self.registration && 'sync' in self.registration) {
       self.registration.sync.register('sync-calculator-results');
     }
   },
