@@ -1,13 +1,20 @@
 // Service Worker for RunBikeCalc PWA
 // Enables offline functionality and faster loading
 
-const CACHE_NAME = 'runbikecalc-v1.0.0';
+const CACHE_NAME = 'runbikecalc-v1.1.0';
 const urlsToCache = [
   '/',
   '/index.html',
   '/css/style.css',
   '/js/calculator-base.js',
   '/js/charts.js',
+  '/js/training-plan-base.js',
+  '/js/training-plan-running.js',
+  '/js/training-plan-cycling.js',
+  '/js/training-plan-triathlon.js',
+  '/js/training-plan-export.js',
+  '/js/url-params.js',
+  '/js/email-gate.js',
   '/running-pace-calculator.html',
   '/heart-rate-zone-calculator.html',
   '/vo2-max-calculator.html',
@@ -20,6 +27,9 @@ const urlsToCache = [
   '/recovery-calculator.html',
   '/calories-burned-running-calculator.html',
   '/power-to-weight-ratio-calculator.html',
+  '/running-training-plan-generator.html',
+  '/cycling-training-plan-generator.html',
+  '/triathlon-training-plan-generator.html',
   '/favicon.ico',
   'https://cdn.tailwindcss.com',
   'https://cdn.jsdelivr.net/npm/chart.js'

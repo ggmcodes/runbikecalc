@@ -43,6 +43,27 @@
   ],
   "shortcuts": [
     {
+      "name": "Running Training Plan",
+      "short_name": "Run Plan",
+      "description": "Generate personalized running training plan",
+      "url": "/running-training-plan-generator",
+      "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Cycling Training Plan",
+      "short_name": "Bike Plan",
+      "description": "Generate personalized cycling training plan",
+      "url": "/cycling-training-plan-generator",
+      "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Triathlon Training Plan",
+      "short_name": "Tri Plan",
+      "description": "Generate personalized triathlon training plan",
+      "url": "/triathlon-training-plan-generator",
+      "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
+    },
+    {
       "name": "Running Pace",
       "short_name": "Pace",
       "description": "Calculate running pace",

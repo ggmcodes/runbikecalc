@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triathlon Training Plan Generator | Free Periodized Plans | RunBikeCalc</title>
+    <meta name="description" content="Generate a personalized triathlon training plan for Sprint, Olympic, 70.3, or Ironman. Science-based periodization with swim, bike, run, and brick workouts. Export to calendar free.">
+    <meta name="keywords" content="triathlon training plan, ironman training, 70.3 training plan, sprint triathlon, olympic triathlon, brick workout, swim bike run">
+    <link rel="canonical" href="https://runbikecalc.com/triathlon-training-plan-generator">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Triathlon Training Plan Generator | RunBikeCalc">
+    <meta property="og:description" content="Create your personalized triathlon training plan with periodized phases, brick workouts, and calendar export.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/triathlon-training-plan-generator">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Triathlon Training Plan Generator",
+        "description": "Generate personalized triathlon training plans for Sprint, Olympic, 70.3, and Ironman distances",
+        "url": "https://runbikecalc.com/triathlon-training-plan-generator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Sprint triathlon training plans",
+            "Olympic triathlon training plans",
+            "70.3 Half Ironman training plans",
+            "Full Ironman training plans",
+            "Periodized training phases",
+            "Brick workout integration",
+            "Calendar export"
+        ]
+    }
+    </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-78BHZZG6CN');
+</script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-blue-600">RunBikeCalc</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/running-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Running</a>
+                    <a href="/cycling-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Cycling</a>
+                    <a href="/triathlon-tools" class="text-blue-600 font-medium">Triathlon</a>
+                    <a href="/nutrition-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Nutrition</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/running-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Running</a>
+                <a href="/cycling-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Cycling</a>
+                <a href="/triathlon-tools" class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-600">Triathlon</a>
+                <a href="/nutrition-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Nutrition</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Triathlon Training Plan Generator</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Create a personalized, periodized training plan for your next triathlon. From sprint to Ironman, get structured swim, bike, run, and brick workouts.
+            </p>
+        </div>
+
+        <!-- Calculator Form -->
+        <div class="calc-card mb-8">
+            <form id="training-plan-form" class="space-y-8">
+
+                <!-- Section 1: Race Goal -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-gray-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-600">1</span>
+                        Race Goal
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Distance -->
+                        <div>
+                            <label for="distance" class="calc-label">Event Distance</label>
+                            <select id="distance" name="distance" class="calc-input-number w-full" required>
+                                <option value="sprint">Sprint (750m / 20km / 5km)</option>
+                                <option value="olympic">Olympic (1.5km / 40km / 10km)</option>
+                                <option value="70.3" selected>70.3 Half Ironman</option>
+                                <option value="ironman">Ironman (140.6)</option>
+                            </select>
+                        </div>
+
+                        <!-- Race Date or Weeks -->
+                        <div>
+                            <label class="calc-label">Plan Duration</label>
+                            <div class="flex gap-2">
+                                <div class="flex-1">
+                                    <input type="date" id="raceDate" name="raceDate" class="calc-input-number w-full" placeholder="Race Date">
+                                </div>
+                                <span class="self-center text-gray-500">or</span>
+                                <div class="w-24">
+                                    <input type="number" id="weeks" name="weeks" class="calc-input-number w-full" min="8" max="36" placeholder="Weeks">
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Enter race date or number of weeks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Current Fitness -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-blue-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">2</span>
+                        Current Fitness
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Fitness Level -->
+                        <div>
+                            <label for="fitnessLevel" class="calc-label">Experience Level</label>
+                            <select id="fitnessLevel" name="fitnessLevel" class="calc-input-number w-full" required>
+                                <option value="beginner">Beginner (New to triathlon)</option>
+                                <option value="intermediate" selected>Intermediate (1-3 races completed)</option>
+                                <option value="advanced">Advanced (4+ races, consistent training)</option>
+                            </select>
+                        </div>
+
+                        <!-- Current Weekly Volume -->
+                        <div>
+                            <label for="currentVolume" class="calc-label">Current Weekly Training (hours)</label>
+                            <input type="number" id="currentVolume" name="currentVolume" class="calc-input-number w-full"
+                                   min="3" max="30" step="0.5" value="8" required>
+                            <p class="text-xs text-gray-500 mt-1">Total hours across all three sports</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Schedule -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-green-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">3</span>
+                        Training Schedule
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Training Days -->
+                        <div>
+                            <label for="trainingDays" class="calc-label">Training Days Per Week</label>
+                            <select id="trainingDays" name="trainingDays" class="calc-input-number w-full" required>
+                                <option value="4">4 days</option>
+                                <option value="5" selected>5 days</option>
+                                <option value="6">6 days</option>
+                                <option value="7">7 days (doubles included)</option>
+                            </select>
+                        </div>
+
+                        <!-- Long Workout Day -->
+                        <div>
+                            <label for="longDay" class="calc-label">Preferred Long Workout Day</label>
+                            <select id="longDay" name="longDay" class="calc-input-number w-full" required>
+                                <option value="saturday" selected>Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Advanced Options -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-purple-700 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">4</span>
+                        Advanced Options
+                        <span class="text-sm font-normal text-gray-500">(Optional)</span>
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 pl-10">
+                        <!-- Swim Preference -->
+                        <div>
+                            <label for="swimPreference" class="calc-label">Swim Training Preference</label>
+                            <select id="swimPreference" name="swimPreference" class="calc-input-number w-full">
+                                <option value="pool" selected>Pool (technique focus)</option>
+                                <option value="openwater">Open Water (when available)</option>
+                            </select>
+                        </div>
+
+                        <!-- Limiters -->
+                        <div>
+                            <label for="limiter" class="calc-label">Primary Limiter (optional)</label>
+                            <select id="limiter" name="limiter" class="calc-input-number w-full">
+                                <option value="none" selected>None / Balanced</option>
+                                <option value="swim">Swim - needs more focus</option>
+                                <option value="bike">Bike - needs more focus</option>
+                                <option value="run">Run - needs more focus</option>
+                            </select>
+                            <p class="text-xs text-gray-500 mt-1">Sport that needs extra attention</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" class="calc-button w-full text-lg py-4">
+                        Generate My Training Plan
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div id="training-plan-result" class="hidden">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+
+        <!-- Calculators Callout -->
+        <div class="calc-card bg-gradient-to-r from-blue-50 to-green-50 mt-8">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Dial In Your Training Zones</h3>
+            <p class="text-gray-600 mb-4">
+                Know your exact training paces and power zones for more effective workouts:
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="/swimming-css-calculator" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-2xl mb-2">🏊</div>
+                    <div class="font-medium text-blue-600">CSS Calculator</div>
+                    <div class="text-sm text-gray-500">Find your swim pace zones</div>
+                </a>
+                <a href="/cycling-ftp-calculator" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-2xl mb-2">🚴</div>
+                    <div class="font-medium text-blue-600">FTP Calculator</div>
+                    <div class="text-sm text-gray-500">Determine bike power zones</div>
+                </a>
+                <a href="/vdot-calculator" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-2xl mb-2">🏃</div>
+                    <div class="font-medium text-blue-600">VDOT Calculator</div>
+                    <div class="text-sm text-gray-500">Calculate run training paces</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="mt-12 space-y-8">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">How This Triathlon Plan Works</h2>
+                <div class="prose max-w-none text-gray-600">
+                    <p class="mb-4">
+                        This generator creates a structured, periodized triathlon training plan based on proven coaching methodologies. Your plan balances swim, bike, and run training while including essential brick workouts to prepare you for race-day transitions.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Training Phases Explained</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Base Phase</h4>
+                        <p class="text-sm text-blue-700">Build aerobic foundation across all three sports. Focus on technique, especially in swimming. Establish consistent training habits.</p>
+                    </div>
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">Build Phase</h4>
+                        <p class="text-sm text-green-700">Increase training volume and introduce race-specific intensity. Sweet spot work on the bike, tempo runs, and longer swim sets.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 rounded-lg">
+                        <h4 class="font-semibold text-orange-800 mb-2">Peak Phase</h4>
+                        <p class="text-sm text-orange-700">Maximum training load with race simulation workouts. Longer brick sessions, open water swims, and goal-pace work in each sport.</p>
+                    </div>
+                    <div class="p-4 bg-purple-50 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">Taper Phase</h4>
+                        <p class="text-sm text-purple-700">Reduce volume while maintaining intensity. Allow your body to absorb training and arrive at race day fresh and ready.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Sport Distribution by Distance</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="px-4 py-2 text-left">Distance</th>
+                                <th class="px-4 py-2 text-center">Swim</th>
+                                <th class="px-4 py-2 text-center">Bike</th>
+                                <th class="px-4 py-2 text-center">Run</th>
+                                <th class="px-4 py-2 text-center">Brick</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-medium">Sprint</td>
+                                <td class="px-4 py-2 text-center">20%</td>
+                                <td class="px-4 py-2 text-center">40%</td>
+                                <td class="px-4 py-2 text-center">30%</td>
+                                <td class="px-4 py-2 text-center">10%</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-medium">Olympic</td>
+                                <td class="px-4 py-2 text-center">20%</td>
+                                <td class="px-4 py-2 text-center">40%</td>
+                                <td class="px-4 py-2 text-center">30%</td>
+                                <td class="px-4 py-2 text-center">10%</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-medium">70.3</td>
+                                <td class="px-4 py-2 text-center">15%</td>
+                                <td class="px-4 py-2 text-center">45%</td>
+                                <td class="px-4 py-2 text-center">30%</td>
+                                <td class="px-4 py-2 text-center">10%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 font-medium">Ironman</td>
+                                <td class="px-4 py-2 text-center">12%</td>
+                                <td class="px-4 py-2 text-center">50%</td>
+                                <td class="px-4 py-2 text-center">28%</td>
+                                <td class="px-4 py-2 text-center">10%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">
+                    Longer distances shift emphasis toward the bike, which comprises the largest portion of race time.
+                </p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Understanding Brick Workouts</h3>
+                <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                    <p class="text-amber-800 mb-3">
+                        <strong>Brick workouts</strong> combine two disciplines back-to-back, typically bike followed by run. They're essential for:
+                    </p>
+                    <ul class="list-disc list-inside text-amber-700 space-y-1 text-sm">
+                        <li>Practicing transitions (T2)</li>
+                        <li>Adapting to running on tired legs</li>
+                        <li>Building mental toughness for race day</li>
+                        <li>Dialing in nutrition strategy</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">RPE (Rate of Perceived Exertion) Guide</h3>
+                <p class="text-gray-600 mb-4">
+                    This plan uses RPE to guide workout intensity. It's a simple 1-10 scale based on how hard the effort feels:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-2 text-sm">
+                    <div class="p-2 bg-green-100 rounded text-center">
+                        <div class="font-bold text-green-800">RPE 2-3</div>
+                        <div class="text-green-700">Recovery</div>
+                    </div>
+                    <div class="p-2 bg-green-200 rounded text-center">
+                        <div class="font-bold text-green-800">RPE 4-5</div>
+                        <div class="text-green-700">Easy/Endurance</div>
+                    </div>
+                    <div class="p-2 bg-yellow-100 rounded text-center">
+                        <div class="font-bold text-yellow-800">RPE 6-7</div>
+                        <div class="text-yellow-700">Tempo/Threshold</div>
+                    </div>
+                    <div class="p-2 bg-orange-100 rounded text-center">
+                        <div class="font-bold text-orange-800">RPE 8</div>
+                        <div class="text-orange-700">Hard Intervals</div>
+                    </div>
+                    <div class="p-2 bg-red-100 rounded text-center">
+                        <div class="font-bold text-red-800">RPE 9-10</div>
+                        <div class="text-red-700">Max Effort</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Free calculators and tools for runners, cyclists, and triathletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Running</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white transition-colors">Pace Calculator</a></li>
+                        <li><a href="/vdot-calculator" class="hover:text-white transition-colors">VDOT Calculator</a></li>
+                        <li><a href="/running-training-plan-generator" class="hover:text-white transition-colors">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Cycling</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cycling-ftp-calculator" class="hover:text-white transition-colors">FTP Calculator</a></li>
+                        <li><a href="/cycling-power-zones" class="hover:text-white transition-colors">Power Zones</a></li>
+                        <li><a href="/cycling-training-plan-generator" class="hover:text-white transition-colors">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Triathlon</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/triathlon-training-plan-generator" class="hover:text-white transition-colors">Training Plans</a></li>
+                        <li><a href="/triathlon-transition-calculator" class="hover:text-white transition-colors">Transition Calculator</a></li>
+                        <li><a href="/brick-workout-calculator" class="hover:text-white transition-colors">Brick Workouts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/calculator-base.js"></script>
+    <script src="/js/training-plan-base.js"></script>
+    <script src="/js/training-plan-triathlon.js"></script>
+    <script src="/js/training-plan-export.js"></script>
+    <script src="/js/url-params.js"></script>
+    <script src="/js/email-gate.js"></script>
+    <script>
+        // Initialize the triathlon plan generator
+        document.addEventListener('DOMContentLoaded', function() {
+            const generator = new TriathlonPlanGenerator('training-plan-form', 'training-plan-result');
+
+            // Mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Set minimum date to today for race date input
+            const raceDateInput = document.getElementById('raceDate');
+            if (raceDateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                raceDateInput.setAttribute('min', today);
+            }
+
+            // Update weeks placeholder based on distance
+            const distanceSelect = document.getElementById('distance');
+            const weeksInput = document.getElementById('weeks');
+            if (distanceSelect && weeksInput) {
+                const updateWeeksHint = () => {
+                    const config = TriathlonDistanceConfigs[distanceSelect.value];
+                    if (config) {
+                        weeksInput.placeholder = config.optimalWeeks;
+                        weeksInput.min = config.minWeeks;
+                        weeksInput.max = config.maxWeeks;
+                    }
+                };
+                distanceSelect.addEventListener('change', updateWeeksHint);
+                updateWeeksHint();
+            }
+
+            // Load from URL params if present
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('d') || urlParams.has('distance')) {
+                PlanURLParams.decode(urlParams, 'training-plan-form');
+                // Auto-generate if params present
+                setTimeout(() => {
+                    document.getElementById('training-plan-form').dispatchEvent(new Event('submit'));
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
