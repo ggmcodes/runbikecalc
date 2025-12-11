@@ -456,10 +456,42 @@ class TrainingPlanGenerator extends Calculator {
     }
 
     /**
+     * Override displayError to handle errors properly
+     * (Base class displayError calls displayResult which expects a plan object)
+     */
+    displayError(message) {
+        if (!this.resultContainer) return;
+
+        // Clear previous results
+        while (this.resultContainer.firstChild) {
+            this.resultContainer.removeChild(this.resultContainer.firstChild);
+        }
+
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'bg-red-50 border-2 border-red-400 text-red-700 px-4 py-3 rounded-lg';
+
+        const strong = document.createElement('strong');
+        strong.textContent = 'Error: ';
+        errorDiv.appendChild(strong);
+
+        const messageText = document.createTextNode(message);
+        errorDiv.appendChild(messageText);
+
+        this.resultContainer.appendChild(errorDiv);
+        this.resultContainer.classList.remove('hidden');
+    }
+
+    /**
      * Display results - creates the plan output UI
      */
     displayResult(plan) {
         if (!this.resultContainer) return;
+
+        // Validate plan structure
+        if (!plan || !plan.summary || !plan.phases || !plan.weeks) {
+            this.displayError('Failed to generate training plan. Please check your inputs and try again.');
+            return;
+        }
 
         // Clear previous results
         while (this.resultContainer.firstChild) {
