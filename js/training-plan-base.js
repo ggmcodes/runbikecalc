@@ -10,11 +10,11 @@ const WorkoutTypes = {
     LONG_RUN: { name: 'Long Run', rpe: '3-4', purpose: 'Build endurance and mental toughness', category: 'easy' },
     RECOVERY_RUN: { name: 'Recovery Run', rpe: '2-3', purpose: 'Active recovery between hard efforts', category: 'easy' },
     MODERATE_RUN: { name: 'Moderate Run', rpe: '5', purpose: 'Aerobic development at comfortable effort', category: 'moderate' },
-    TEMPO: { name: 'Tempo Run', rpe: '6-7', purpose: 'Improve lactate threshold', category: 'hard' },
-    INTERVALS: { name: 'Intervals', rpe: '8-9', purpose: 'Build speed and VO2max', category: 'hard' },
+    TEMPO: { name: 'Tempo Run', rpe: '6-7', purpose: 'Comfortably hard pace you could hold for ~1 hour - builds endurance', category: 'hard' },
+    INTERVALS: { name: 'Intervals', rpe: '8-9', purpose: 'Short hard efforts (e.g. 400m-1mile) with recovery jogs between', category: 'hard' },
     RACE_PACE: { name: 'Race Pace Run', rpe: '5-6', purpose: 'Practice goal pace and pacing strategy', category: 'moderate' },
     HILLS: { name: 'Hill Repeats', rpe: '7-8', purpose: 'Build power and running economy', category: 'hard' },
-    FARTLEK: { name: 'Fartlek', rpe: '5-7', purpose: 'Speed play with varied intensities', category: 'moderate' },
+    FARTLEK: { name: 'Speed Play', rpe: '5-7', purpose: 'Alternate fast/slow segments by feel - a fun, unstructured speed workout', category: 'moderate' },
     PROGRESSION: { name: 'Progression Run', rpe: '4-7', purpose: 'Build negative split ability', category: 'moderate' },
 
     // Ultra-specific
@@ -751,6 +751,12 @@ class TrainingPlanGenerator extends Calculator {
         const content = document.createElement('div');
         content.className = 'hidden p-4 border-t border-gray-200';
 
+        // Effort legend
+        const legend = document.createElement('div');
+        legend.className = 'text-xs text-gray-500 mb-3';
+        legend.textContent = 'Effort Scale: 3-4 = Easy (can chat), 5-6 = Moderate, 7-8 = Hard (few words), 9-10 = All out';
+        content.appendChild(legend);
+
         // Days table
         const table = document.createElement('table');
         table.className = 'w-full text-sm';
@@ -759,10 +765,15 @@ class TrainingPlanGenerator extends Calculator {
         const headerRow = document.createElement('tr');
         headerRow.className = 'text-left text-gray-500';
 
-        ['Day', 'Workout', 'Duration', 'RPE', 'Purpose'].forEach(text => {
+        ['Day', 'Workout', 'Duration', 'Effort', 'Notes'].forEach(text => {
             const th = document.createElement('th');
             th.className = 'pb-2 pr-4';
-            th.textContent = text;
+            if (text === 'Effort') {
+                th.textContent = text;
+                th.title = 'Effort level on a 1-10 scale: 3-4 = Easy conversation pace, 5-6 = Moderate, 7-8 = Hard, 9-10 = All out';
+            } else {
+                th.textContent = text;
+            }
             headerRow.appendChild(th);
         });
         thead.appendChild(headerRow);

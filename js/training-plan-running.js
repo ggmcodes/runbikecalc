@@ -202,7 +202,11 @@ class RunningPlanGenerator extends TrainingPlanGenerator {
         }
 
         // Quality workout based on phase
-        if (!isRecovery) {
+        // Skip quality workouts in early Base phase (first 2 weeks) to build aerobic foundation
+        const isEarlyBase = phase.name === 'Base' && context.weekProgress < 0.4;
+        const skipQuality = isRecovery || (isEarlyBase && fitnessLevel === 'beginner');
+
+        if (!skipQuality) {
             const qualityWorkout = this.selectQualityWorkout(phase, distanceConfig, fitnessLevel);
             if (qualityWorkout) {
                 workouts.push({
