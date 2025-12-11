@@ -529,7 +529,19 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
-    
+    <url>
+        <loc>https://runbikecalc.com/blog/what-is-hyrox-complete-guide</loc>
+        <lastmod>2025-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/what-is-crossfit-games-complete-guide</loc>
+        <lastmod>2025-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
     <!-- Static Pages -->
     <url>
         <loc>https://runbikecalc.com/calculator-history</loc>
