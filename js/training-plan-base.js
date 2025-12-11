@@ -983,10 +983,28 @@ class TrainingPlanGenerator extends Calculator {
             });
         }
 
-        // Share button
+        // Share button - capture reference to this for closure
         const shareBtn = document.getElementById('share-plan-btn');
+        const self = this;
         if (shareBtn) {
-            shareBtn.addEventListener('click', () => this.urlParams.copyLink());
+            shareBtn.addEventListener('click', function() {
+                const url = window.location.href;
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(url).then(() => {
+                        // Show toast notification
+                        const toast = document.createElement('div');
+                        toast.className = 'fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                        toast.textContent = 'Link copied! Bookmark or share your plan.';
+                        document.body.appendChild(toast);
+                        setTimeout(() => toast.remove(), 3000);
+                    }).catch(() => {
+                        prompt('Copy this link to share your plan:', url);
+                    });
+                } else {
+                    prompt('Copy this link to share your plan:', url);
+                }
+            });
         }
     }
 
