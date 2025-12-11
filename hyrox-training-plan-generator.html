@@ -157,8 +157,8 @@
                     <div class="grid md:grid-cols-2 gap-4 pl-10">
                         <!-- Division -->
                         <div>
-                            <label for="distance" class="calc-label">Hyrox Division</label>
-                            <select id="distance" name="distance" class="calc-input-number w-full" required>
+                            <label for="goal-distance" class="calc-label">Hyrox Division</label>
+                            <select id="goal-distance" name="goal-distance" class="calc-input-number w-full" required>
                                 <option value="first-timer">First Hyrox (Beginner)</option>
                                 <option value="open" selected>Hyrox Open</option>
                                 <option value="pro">Hyrox Pro</option>
@@ -172,11 +172,11 @@
                             <label class="calc-label">Plan Duration</label>
                             <div class="flex gap-2">
                                 <div class="flex-1">
-                                    <input type="date" id="raceDate" name="raceDate" class="calc-input-number w-full" placeholder="Race Date">
+                                    <input type="date" id="race-date" name="race-date" class="calc-input-number w-full" placeholder="Race Date">
                                 </div>
                                 <span class="self-center text-gray-500">or</span>
                                 <div class="w-24">
-                                    <input type="number" id="weeks" name="weeks" class="calc-input-number w-full" min="8" max="24" placeholder="Weeks">
+                                    <input type="number" id="weeks-until-race" name="weeks-until-race" class="calc-input-number w-full" min="8" max="24" placeholder="Weeks">
                                 </div>
                             </div>
                             <p class="text-xs text-gray-500 mt-1">Enter race date or number of weeks</p>
@@ -600,16 +600,16 @@
             }
 
             // Set minimum date to today
-            const raceDateInput = document.getElementById('raceDate');
+            const raceDateInput = document.getElementById('race-date');
             if (raceDateInput) {
                 const today = new Date().toISOString().split('T')[0];
                 raceDateInput.setAttribute('min', today);
             }
 
             // Update division info text
-            const distanceSelect = document.getElementById('distance');
+            const distanceSelect = document.getElementById('goal-distance');
             const divisionInfo = document.getElementById('division-info');
-            const weeksInput = document.getElementById('weeks');
+            const weeksInput = document.getElementById('weeks-until-race');
 
             const divisionInfoMap = {
                 'first-timer': 'Perfect for beginners - learn all stations and build fitness foundation',

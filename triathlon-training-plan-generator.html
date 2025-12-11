@@ -134,8 +134,8 @@
                     <div class="grid md:grid-cols-2 gap-4 pl-10">
                         <!-- Distance -->
                         <div>
-                            <label for="distance" class="calc-label">Event Distance</label>
-                            <select id="distance" name="distance" class="calc-input-number w-full" required>
+                            <label for="goal-distance" class="calc-label">Event Distance</label>
+                            <select id="goal-distance" name="goal-distance" class="calc-input-number w-full" required>
                                 <option value="sprint">Sprint (750m / 20km / 5km)</option>
                                 <option value="olympic">Olympic (1.5km / 40km / 10km)</option>
                                 <option value="70.3" selected>70.3 Half Ironman</option>
@@ -148,11 +148,11 @@
                             <label class="calc-label">Plan Duration</label>
                             <div class="flex gap-2">
                                 <div class="flex-1">
-                                    <input type="date" id="raceDate" name="raceDate" class="calc-input-number w-full" placeholder="Race Date">
+                                    <input type="date" id="race-date" name="race-date" class="calc-input-number w-full" placeholder="Race Date">
                                 </div>
                                 <span class="self-center text-gray-500">or</span>
                                 <div class="w-24">
-                                    <input type="number" id="weeks" name="weeks" class="calc-input-number w-full" min="8" max="36" placeholder="Weeks">
+                                    <input type="number" id="weeks-until-race" name="weeks-until-race" class="calc-input-number w-full" min="8" max="36" placeholder="Weeks">
                                 </div>
                             </div>
                             <p class="text-xs text-gray-500 mt-1">Enter race date or number of weeks</p>
@@ -487,15 +487,15 @@
             }
 
             // Set minimum date to today for race date input
-            const raceDateInput = document.getElementById('raceDate');
+            const raceDateInput = document.getElementById('race-date');
             if (raceDateInput) {
                 const today = new Date().toISOString().split('T')[0];
                 raceDateInput.setAttribute('min', today);
             }
 
             // Update weeks placeholder based on distance
-            const distanceSelect = document.getElementById('distance');
-            const weeksInput = document.getElementById('weeks');
+            const distanceSelect = document.getElementById('goal-distance');
+            const weeksInput = document.getElementById('weeks-until-race');
             if (distanceSelect && weeksInput) {
                 const updateWeeksHint = () => {
                     const config = TriathlonDistanceConfigs[distanceSelect.value];
