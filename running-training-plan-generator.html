@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Running Training Plan Generator 2025 - 5K to 100 Mile Plans | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/running-training-plan-generator">
+    <meta name="description" content="Generate free personalized running training plans for 5K, 10K, half marathon, marathon, and ultramarathons up to 100 miles. Periodized plans with calendar export.">
+    <meta name="keywords" content="running training plan generator, marathon training plan, 5k training plan, half marathon plan, ultra marathon training, running calendar, periodization">
+    <meta name="author" content="RunBikeCalc">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Running Training Plan Generator 2025 - 5K to 100 Mile Plans">
+    <meta property="og:description" content="Generate personalized running training plans for any distance. Free periodized plans with calendar export.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/running-training-plan-generator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-running-training-plan.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running Training Plan Generator - Free Personalized Plans">
+    <meta name="twitter:description" content="Generate training plans for 5K to 100 miles with calendar export">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981',
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Running Training Plan Generator",
+        "description": "Generate personalized running training plans for 5K, 10K, half marathon, marathon, and ultramarathons up to 100 miles with periodization and calendar export.",
+        "url": "https://runbikecalc.com/running-training-plan-generator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link hover:text-primary">Home</a>
+                    <a href="/heart-rate-tools" class="nav-link hover:text-primary">HR</a>
+                    <a href="/running-tools" class="nav-link hover:text-primary text-primary font-semibold">Run</a>
+                    <a href="/cycling-tools" class="nav-link hover:text-primary">Bike</a>
+                    <a href="/vo2-tools" class="nav-link hover:text-primary">VO2</a>
+                    <a href="/utility-tools" class="nav-link hover:text-primary">Tools</a>
+                    <a href="/blog" class="nav-link hover:text-primary">Blog</a>
+                    <a href="/about" class="nav-link hover:text-primary">About</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                   <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden py-4 border-t md:hidden">
+                <div class="space-y-2">
+                    <a href="/" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                    <a href="/heart-rate-tools" class="block py-2 text-gray-600 hover:text-primary">HR</a>
+                    <a href="/running-tools" class="block py-2 text-primary font-semibold">Run</a>
+                    <a href="/cycling-tools" class="block py-2 text-gray-600 hover:text-primary">Bike</a>
+                    <a href="/vo2-tools" class="block py-2 text-gray-600 hover:text-primary">VO2</a>
+                    <a href="/utility-tools" class="block py-2 text-gray-600 hover:text-primary">Tools</a>
+                    <a href="/blog" class="block py-2 text-gray-600 hover:text-primary">Blog</a>
+                    <a href="/about" class="block py-2 text-gray-600 hover:text-primary">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav aria-label="Breadcrumb">
+                <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                    <li><a href="/" class="hover:text-primary">Home</a></li>
+                    <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                    <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Training Plan Generator</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                Running Training Plan Generator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Generate personalized, periodized training plans for any distance from 5K to 100 miles. Based on proven methodologies from Jack Daniels, Hal Higdon, and 80/20 training principles.
+            </p>
+        </div>
+
+        <!-- Feature Highlights -->
+        <div class="max-w-6xl mx-auto mb-12">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏃</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">8 Distances</h3>
+                    <p class="text-gray-600 text-sm">5K to 100 miles including ultras</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Periodization</h3>
+                    <p class="text-gray-600 text-sm">Base, Build, Peak, Taper phases</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📅</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Calendar Export</h3>
+                    <p class="text-gray-600 text-sm">Download to Google, Apple, Outlook</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔗</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Shareable Plans</h3>
+                    <p class="text-gray-600 text-sm">Bookmark or share via link</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <form id="training-plan-form" class="space-y-8">
+
+                    <!-- Section 1: Race Goal -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                            Race Goal
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="goal-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Goal Distance *
+                                </label>
+                                <select id="goal-distance" name="goal-distance" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" required>
+                                    <option value="">Select distance</option>
+                                    <option value="5k">5K (3.1 miles)</option>
+                                    <option value="10k">10K (6.2 miles)</option>
+                                    <option value="half">Half Marathon (13.1 miles)</option>
+                                    <option value="marathon">Marathon (26.2 miles)</option>
+                                    <option value="50k">50K Ultra (31 miles)</option>
+                                    <option value="50mi">50 Mile Ultra</option>
+                                    <option value="100k">100K Ultra (62 miles)</option>
+                                    <option value="100mi">100 Mile Ultra</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="race-date" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Date
+                                </label>
+                                <input type="date" id="race-date" name="race-date" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none">
+                                <p class="text-sm text-gray-500 mt-1">Or enter weeks below</p>
+                            </div>
+
+                            <div>
+                                <label for="weeks-until-race" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Weeks Until Race *
+                                </label>
+                                <input type="number" id="weeks-until-race" name="weeks-until-race" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" min="6" max="52" placeholder="e.g., 16">
+                                <p class="text-sm text-gray-500 mt-1">6-52 weeks (auto-calculates from date)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Current Fitness -->
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                            Current Fitness
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fitness-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Fitness Level *
+                                </label>
+                                <select id="fitness-level" name="fitness-level" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" required>
+                                    <option value="">Select level</option>
+                                    <option value="beginner">Beginner (less than 1 year running)</option>
+                                    <option value="intermediate">Intermediate (1-3 years, some races)</option>
+                                    <option value="advanced">Advanced (3+ years, multiple races)</option>
+                                </select>
+                                <p class="text-sm text-gray-500 mt-1">Your running experience</p>
+                            </div>
+
+                            <div>
+                                <label for="current-volume" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Weekly Mileage *
+                                </label>
+                                <input type="number" id="current-volume" name="current-volume" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" min="5" max="150" step="1" placeholder="e.g., 25" required>
+                                <p class="text-sm text-gray-500 mt-1">Average miles per week currently</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Training Schedule -->
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                            Training Schedule
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="training-days" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Training Days Per Week *
+                                </label>
+                                <select id="training-days" name="training-days" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" required>
+                                    <option value="3">3 days per week</option>
+                                    <option value="4">4 days per week</option>
+                                    <option value="5" selected>5 days per week</option>
+                                    <option value="6">6 days per week</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="long-day" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Preferred Long Run Day
+                                </label>
+                                <select id="long-day" name="long-day" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none">
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Advanced Options (Collapsible) -->
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <button type="button" id="toggle-advanced" class="w-full flex items-center justify-between text-xl font-semibold">
+                            <span class="flex items-center gap-2">
+                                <span class="w-8 h-8 bg-purple-200 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                                Advanced Options
+                            </span>
+                            <svg id="advanced-chevron" class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div id="advanced-options" class="hidden mt-4">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="cross-train-days" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Cross-Training Days
+                                    </label>
+                                    <select id="cross-train-days" name="cross-train-days" class="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none">
+                                        <option value="0">None</option>
+                                        <option value="1">1 day per week</option>
+                                        <option value="2">2 days per week</option>
+                                    </select>
+                                    <p class="text-sm text-gray-500 mt-1">Swimming, cycling, strength, etc.</p>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Required Rest Days
+                                    </label>
+                                    <div class="flex flex-wrap gap-2">
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="rest-days" value="monday" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm">Mon</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="rest-days" value="tuesday" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm">Tue</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="rest-days" value="wednesday" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm">Wed</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="rest-days" value="thursday" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm">Thu</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" name="rest-days" value="friday" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm">Fri</span>
+                                        </label>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mt-1">Days you can't train</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors text-lg">
+                            Generate Training Plan
+                        </button>
+                        <button type="reset" class="px-6 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Results Section (Hidden by default) -->
+                <div id="training-plan-result" class="mt-12 hidden">
+                    <!-- Results will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <article class="prose prose-lg max-w-none">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">How This Training Plan Generator Works</h2>
+
+                <p>Our running training plan generator creates personalized, periodized plans based on proven coaching methodologies. Here's what makes it effective:</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4">Periodization Principles</h3>
+                <p>Every plan follows a structured periodization model with four phases:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Base Phase:</strong> Build aerobic foundation with easy volume (80-85% easy effort)</li>
+                    <li><strong>Build Phase:</strong> Introduce quality workouts while maintaining volume</li>
+                    <li><strong>Peak Phase:</strong> Race-specific training at highest volume</li>
+                    <li><strong>Taper Phase:</strong> Reduce volume while maintaining intensity for race readiness</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4">80/20 Training Philosophy</h3>
+                <p>Following the 80/20 endurance training principle, approximately 80% of your training is at easy effort (RPE 3-4) and 20% at moderate to hard effort. This approach:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Maximizes aerobic development</li>
+                    <li>Reduces injury risk</li>
+                    <li>Allows for proper recovery between hard sessions</li>
+                    <li>Is backed by research on elite athletes</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4">Recovery Weeks</h3>
+                <p>The plan automatically includes recovery weeks every 3-4 weeks (depending on your fitness level) where volume is reduced by approximately 35%. This allows your body to adapt and grow stronger.</p>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4">Ultra-Specific Features</h3>
+                <p>For ultramarathon distances (50K and beyond), the generator includes:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Back-to-back long runs:</strong> Running long on consecutive days to simulate race fatigue</li>
+                    <li><strong>Extended time on feet:</strong> Focus on duration over pace</li>
+                    <li><strong>Appropriate taper length:</strong> Longer tapers for longer races</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4">RPE-Based Intensity</h3>
+                <p>Instead of prescribing specific paces (which vary by individual), this plan uses Rate of Perceived Exertion (RPE):</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>RPE 3-4 (Easy):</strong> Conversational pace, can speak in full sentences</li>
+                    <li><strong>RPE 5 (Moderate):</strong> Slightly harder, can speak in shorter phrases</li>
+                    <li><strong>RPE 6-7 (Tempo):</strong> Comfortably hard, limited conversation</li>
+                    <li><strong>RPE 8-9 (Hard):</strong> Hard effort, only a few words at a time</li>
+                </ul>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
+                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Want Specific Pace Targets?</h4>
+                    <p class="text-blue-800 mb-4">Use our other calculators to determine your training paces based on a recent race:</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/running-pace-calculator" class="text-blue-600 hover:text-blue-800 underline">Running Pace Calculator</a>
+                        <a href="/race-time-predictor" class="text-blue-600 hover:text-blue-800 underline">Race Time Predictor</a>
+                        <a href="/heart-rate-zone-calculator" class="text-blue-600 hover:text-blue-800 underline">Heart Rate Zones</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Predictor</a></li>
+                        <li><a href="/running-training-plan-generator" class="hover:text-white">Training Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Other Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script src="js/url-params.js"></script>
+    <script src="js/email-gate.js"></script>
+    <script src="js/training-plan-base.js"></script>
+    <script src="js/training-plan-running.js"></script>
+    <script src="js/training-plan-export.js"></script>
+    <script>
+        // Initialize the running plan generator
+        const planGenerator = new RunningPlanGenerator('training-plan-form', 'training-plan-result');
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Advanced options toggle
+        document.getElementById('toggle-advanced').addEventListener('click', function() {
+            const options = document.getElementById('advanced-options');
+            const chevron = document.getElementById('advanced-chevron');
+            options.classList.toggle('hidden');
+            chevron.classList.toggle('rotate-180');
+        });
+
+        // Auto-calculate weeks from race date
+        document.getElementById('race-date').addEventListener('change', function() {
+            const raceDate = new Date(this.value);
+            const today = new Date();
+            const diffTime = raceDate - today;
+            const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));
+
+            if (diffWeeks > 0) {
+                document.getElementById('weeks-until-race').value = Math.min(52, Math.max(6, diffWeeks));
+            }
+        });
+    </script>
+</body>
+</html>
