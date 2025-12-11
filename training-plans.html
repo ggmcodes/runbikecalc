@@ -17,38 +17,44 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
 
-    <title>Free Training Plans | Running, Cycling & Triathlon | RunBikeCalc</title>
+    <title>Free Training Plans | Running, Cycling, Triathlon & Hyrox | RunBikeCalc</title>
     <link rel="canonical" href="https://runbikecalc.com/training-plans">
     <meta name="description" content="Generate free personalized training plans for running, cycling, triathlon, and Hyrox. From 5K to ultramarathon, century rides to Ironman. Export directly to your calendar.">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Free Training Plans | Running, Cycling & Triathlon">
-    <meta property="og:description" content="Generate free personalized training plans for running, cycling, triathlon, and Hyrox. Science-backed periodization with calendar export.">
-    <meta property="og:image" content="https://runbikecalc.com/images/training-plans-og.jpg">
-    <meta property="og:url" content="https://runbikecalc.com/training-plans">
+    <meta property="og:title" content="Free Training Plans | Running, Cycling, Triathlon & Hyrox">
+    <meta property="og:description" content="Generate free personalized training plans. From 5K to ultramarathon, century rides to Ironman.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="RunBikeCalc">
+    <meta property="og:url" content="https://runbikecalc.com/training-plans">
 
-    <!-- CSS -->
-    <link href="/css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
 
-    <!-- Schema.org structured data -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "Free Training Plans",
+        "name": "Training Plan Generators",
+        "description": "Free personalized training plans for running, cycling, triathlon, and Hyrox",
         "url": "https://runbikecalc.com/training-plans",
-        "description": "Generate free personalized training plans for running, cycling, triathlon, and Hyrox",
-        "publisher": {
-            "@type": "Organization",
-            "name": "RunBikeCalc",
-            "url": "https://runbikecalc.com"
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "url": "https://runbikecalc.com/running-training-plan-generator"},
+                {"@type": "ListItem", "position": 2, "url": "https://runbikecalc.com/cycling-training-plan-generator"},
+                {"@type": "ListItem", "position": 3, "url": "https://runbikecalc.com/triathlon-training-plan-generator"},
+                {"@type": "ListItem", "position": 4, "url": "https://runbikecalc.com/hyrox-training-plan-generator"}
+            ]
         }
     }
     </script>
 
-    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -59,7 +65,7 @@
                 "name": "Are these training plans really free?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, all training plans are completely free. The .ics calendar export is free with no signup required. PDF and spreadsheet exports require a free email signup."
+                    "text": "Yes! Calendar (.ics) export is completely free. PDF and spreadsheet exports require a free email signup."
                 }
             },
             {
@@ -67,396 +73,623 @@
                 "name": "What training methods are used?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Our plans incorporate proven principles from coaches like Jack Daniels, Joe Friel, and the 80/20 Endurance methodology. Plans include periodized Base, Build, Peak, and Taper phases with appropriate recovery weeks."
+                    "text": "Our plans incorporate principles from Jack Daniels, Joe Friel, 80/20 Endurance, and proven ultramarathon coaching methodologies."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can I customize the training plan?",
+                "name": "Can I customize the training plans?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, you can customize your experience level, weekly training availability, and preferred long workout day. For full customization, export to spreadsheet format and modify as needed."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I add the plan to my calendar?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "After generating your plan, click the Calendar (.ics) button to download the file. Import it into Google Calendar, Apple Calendar, Outlook, or any calendar app that supports .ics files."
+                    "text": "You can set your experience level, weekly availability, and preferred long workout day. Export to spreadsheet for full customization."
                 }
             }
         ]
     }
     </script>
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --bg-card-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --text-muted: #737373;
+            --accent-blue: #3b82f6;
+            --accent-green: #22c55e;
+            --accent-orange: #f97316;
+            --accent-purple: #a855f7;
+            --accent-cyan: #06b6d4;
+            --border-subtle: #262626;
+            --gradient-hero: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active { color: var(--text-primary); }
+
+        .nav-badge {
+            background: var(--accent-orange);
+            color: white;
+            font-size: 0.65rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(59, 130, 246, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(139, 92, 246, 0.1), transparent);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title-gradient {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Section */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Plan Cards Grid */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .plan-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--card-accent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--card-accent);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .plan-card:hover::before { opacity: 1; }
+
+        .plan-card[data-sport="running"] { --card-accent: var(--accent-blue); }
+        .plan-card[data-sport="cycling"] { --card-accent: var(--accent-green); }
+        .plan-card[data-sport="triathlon"] { --card-accent: var(--accent-purple); }
+        .plan-card[data-sport="hyrox"] { --card-accent: var(--accent-orange); }
+
+        .plan-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .plan-distances {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .plan-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            background: var(--card-accent);
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+
+        .plan-card:hover .plan-cta {
+            transform: translateX(4px);
+        }
+
+        /* How It Works */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-hero);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin: 0 auto 1.25rem;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Methodology */
+        .methodology {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .methodology-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .methodology-text {
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .methodology-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-question:hover { background: var(--bg-card-hover); }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover { color: var(--text-primary); }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 7rem 1.5rem 4rem; }
+            .section { padding: 3rem 1.5rem; }
+            .methodology { padding: 2rem; }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-40">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="touch-target" aria-label="Menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-
-                <!-- Desktop navigation -->
-                <div class="flex space-x-6">
-                    <div class="relative group">
-                        <a href="/training-plans" class="nav-link flex items-center">
-                            Plans
-                            <span class="ml-1 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </a>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-48 z-50">
-                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Plans</a>
-                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Running</a>
-                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cycling</a>
-                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Triathlon</a>
-                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hyrox</a>
-                        </div>
-                    </div>
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/training-plans" class="nav-link font-semibold text-primary">Plans</a>
-                    <a href="/heart-rate-tools" class="nav-link">HR</a>
-                    <a href="/running-tools" class="nav-link">Run</a>
-                    <a href="/cycling-tools" class="nav-link">Bike</a>
-                    <a href="/vo2-tools" class="nav-link">VO2</a>
-                    <a href="/utility-tools" class="nav-link">Tools</a>
-                    <a href="/blog" class="nav-link">Blog</a>
-                    <a href="/about" class="nav-link">About</a>
-                </div>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo">Run<span>Bike</span>Calc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link active">Plans<span class="nav-badge">New</span></a>
+                <a href="/running-tools" class="nav-link">Run</a>
+                <a href="/cycling-tools" class="nav-link">Bike</a>
+                <a href="/heart-rate-tools" class="nav-link">HR Zones</a>
+                <a href="/vo2-tools" class="nav-link">VO2</a>
+                <a href="/blog" class="nav-link">Blog</a>
             </div>
+            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
-            <!-- Mobile navigation -->
-            <div id="mobile-menu" class="hidden mt-4 border-t pt-4">
-                <div class="border-b border-gray-200 pb-3 mb-3">
-                    <button id="mobile-plans-toggle" class="mobile-menu-item flex items-center justify-between w-full text-left">
-                        <span class="flex items-center">
-                            Plans
-                            <span class="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
-                        </span>
-                        <svg class="w-4 h-4 transform transition-transform" id="mobile-plans-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="mobile-plans-submenu" class="hidden pl-4 mt-2 space-y-2">
-                        <a href="/training-plans" class="block py-1 text-gray-600 hover:text-primary">All Plans</a>
-                        <a href="/running-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Running</a>
-                        <a href="/cycling-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Cycling</a>
-                        <a href="/triathlon-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Triathlon</a>
-                        <a href="/hyrox-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Hyrox</a>
-                    </div>
-                </div>
-                <a href="/" class="mobile-menu-item">Home</a>
-                <a href="/training-plans" class="mobile-menu-item font-semibold text-primary">Training Plans</a>
-                <a href="/heart-rate-tools" class="mobile-menu-item">HR</a>
-                <a href="/running-tools" class="mobile-menu-item">Run</a>
-                <a href="/cycling-tools" class="mobile-menu-item">Bike</a>
-                <a href="/vo2-tools" class="mobile-menu-item">VO2</a>
-                <a href="/utility-tools" class="mobile-menu-item">Tools</a>
-                <a href="/blog" class="mobile-menu-item">Blog</a>
-                <a href="/about" class="mobile-menu-item">About</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main content -->
-    <main class="container mx-auto px-4 py-8 md:py-12">
-        <!-- Breadcrumb navigation -->
-        <nav aria-label="Breadcrumb" class="mb-6">
-            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
-                <li><a href="/" class="hover:text-primary">Home</a></li>
-                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Training Plans</li>
-            </ol>
-        </nav>
-
-        <!-- Hero Section -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Free Personalized Training Plans</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Science-backed plans for runners, cyclists, and triathletes. Built on proven coaching methods from Jack Daniels, Joe Friel, and 80/20 Endurance.
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-gradient">Free Training Plans</span>
+            </h1>
+            <p class="hero-subtitle">
+                Science-backed periodized plans built on proven coaching methods from Jack Daniels, Joe Friel, and 80/20 Endurance. Export directly to your calendar.
             </p>
         </div>
+    </section>
 
-        <!-- Sport Cards Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <!-- Running Plans -->
-            <a href="/running-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-blue-500">
-                <div class="text-4xl mb-4">🏃</div>
-                <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Running Plans</h2>
-                <p class="text-gray-600 text-sm mb-4">5K, 10K, Half Marathon, Marathon, 50K, 50 Mile, 100K, 100 Mile</p>
-                <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+    <!-- Training Plans -->
+    <section class="section">
+        <div class="plans-grid">
+            <a href="/running-training-plan-generator" class="plan-card" data-sport="running">
+                <div class="plan-icon">🏃</div>
+                <h2 class="plan-title">Running Plans</h2>
+                <p class="plan-distances">5K, 10K, Half Marathon, Marathon, 50K, 50 Mile, 100K, 100 Mile Ultra</p>
+                <span class="plan-cta">
                     Build Running Plan
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
                     </svg>
                 </span>
             </a>
 
-            <!-- Cycling Plans -->
-            <a href="/cycling-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-green-500">
-                <div class="text-4xl mb-4">🚴</div>
-                <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Cycling Plans</h2>
-                <p class="text-gray-600 text-sm mb-4">Metric Century, Century (100 mi), Gran Fondo, Multi-Day Events</p>
-                <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+            <a href="/cycling-training-plan-generator" class="plan-card" data-sport="cycling">
+                <div class="plan-icon">🚴</div>
+                <h2 class="plan-title">Cycling Plans</h2>
+                <p class="plan-distances">Metric Century (100km), Century (100 miles), Gran Fondo</p>
+                <span class="plan-cta">
                     Build Cycling Plan
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
                     </svg>
                 </span>
             </a>
 
-            <!-- Triathlon Plans -->
-            <a href="/triathlon-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-purple-500">
-                <div class="text-4xl mb-4">🏊🚴🏃</div>
-                <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Triathlon Plans</h2>
-                <p class="text-gray-600 text-sm mb-4">Sprint, Olympic, Half Ironman 70.3, Full Ironman</p>
-                <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+            <a href="/triathlon-training-plan-generator" class="plan-card" data-sport="triathlon">
+                <div class="plan-icon">🏊</div>
+                <h2 class="plan-title">Triathlon Plans</h2>
+                <p class="plan-distances">Sprint, Olympic, Half Ironman 70.3, Full Ironman 140.6</p>
+                <span class="plan-cta">
                     Build Triathlon Plan
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
                     </svg>
                 </span>
             </a>
 
-            <!-- Hyrox Plans -->
-            <a href="/hyrox-training-plan-generator" class="calc-card hover:shadow-xl transition-all group border-l-4 border-orange-500">
-                <div class="text-4xl mb-4">💪</div>
-                <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary">Hyrox Plans</h2>
-                <p class="text-gray-600 text-sm mb-4">First-Timer, Open, Pro, Doubles</p>
-                <span class="inline-flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform">
+            <a href="/hyrox-training-plan-generator" class="plan-card" data-sport="hyrox">
+                <div class="plan-icon">💪</div>
+                <h2 class="plan-title">Hyrox Plans</h2>
+                <p class="plan-distances">First-Timer, Open Division, Pro Division, Doubles</p>
+                <span class="plan-cta">
                     Build Hyrox Plan
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8h10M9 4l4 4-4 4"/>
                     </svg>
                 </span>
             </a>
         </div>
+    </section>
 
-        <!-- How It Works Section -->
-        <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">📅</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">1. Choose Your Race</h3>
-                    <p class="text-gray-600">Select your race distance and target date. We'll calculate the optimal plan length.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">📝</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">2. Set Your Level</h3>
-                    <p class="text-gray-600">Tell us your experience level and weekly training availability.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-3xl">📲</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">3. Get Your Plan</h3>
-                    <p class="text-gray-600">Receive your personalized plan and export directly to your calendar.</p>
-                </div>
+    <!-- How It Works -->
+    <section class="section">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Choose Your Race</h3>
+                <p class="step-desc">Select your distance and enter your race date or weeks until race day.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Set Your Profile</h3>
+                <p class="step-desc">Tell us your experience level, current fitness, and weekly availability.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Export Your Plan</h3>
+                <p class="step-desc">Download to Google Calendar, Apple Calendar, PDF, or spreadsheet.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Methodology Section -->
-        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 md:p-12 mb-16">
-            <h2 class="text-3xl font-bold mb-6">Science-Based Training Methodology</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">Periodization Principles</h3>
-                    <p class="text-white/90 mb-4">
-                        Every plan follows proven periodization with distinct training phases: Base building, Build phase for intensity, Peak phase for race-specific fitness, and Taper for fresh legs on race day.
-                    </p>
-                    <ul class="space-y-2 text-white/80">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Progressive volume building (10% rule)
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Regular recovery weeks built in
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            80/20 intensity distribution
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">Coaching Methodologies</h3>
-                    <p class="text-white/90 mb-4">
-                        Plans incorporate principles from world-renowned coaches and training systems proven at every level from beginners to elites.
-                    </p>
-                    <ul class="space-y-2 text-white/80">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Jack Daniels running formulas
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Joe Friel endurance periodization
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            80/20 Endurance principles
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <div class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
-                        Are these training plans really free?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-600">
-                        Yes, all training plans are completely free. The .ics calendar export is free with no signup required. PDF and spreadsheet exports require a free email signup.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
-                        What training methods are used?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-600">
-                        Our plans incorporate proven principles from coaches like Jack Daniels, Joe Friel, and the 80/20 Endurance methodology. Plans include periodized Base, Build, Peak, and Taper phases with appropriate recovery weeks.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
-                        Can I customize the training plan?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-600">
-                        Yes, you can customize your experience level, weekly training availability, and preferred long workout day. For full customization, export to spreadsheet format and modify as needed.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-primary">
-                        How do I add the plan to my calendar?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-600">
-                        After generating your plan, click the "Calendar (.ics)" button to download the file. Import it into Google Calendar, Apple Calendar, Outlook, or any calendar app that supports .ics files.
-                    </div>
-                </details>
-            </div>
-        </div>
-
-        <!-- CTA Section -->
-        <div class="text-center bg-white rounded-xl shadow-lg p-8 md:p-12">
-            <h2 class="text-2xl font-bold mb-4">Ready to Start Training?</h2>
-            <p class="text-gray-600 mb-6 max-w-xl mx-auto">
-                Choose your sport and generate your personalized training plan in under 2 minutes.
+    <!-- Methodology -->
+    <section class="section">
+        <div class="methodology">
+            <h2 class="methodology-title">Training Science You Can Trust</h2>
+            <p class="methodology-text">
+                Every plan follows proven periodization principles with Base, Build, Peak, and Taper phases. We incorporate 80/20 training (80% easy, 20% hard), progressive overload, and built-in recovery weeks to maximize your fitness while minimizing injury risk.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="/running-training-plan-generator" class="calc-button">Running Plan</a>
-                <a href="/cycling-training-plan-generator" class="calc-button-secondary">Cycling Plan</a>
-                <a href="/triathlon-training-plan-generator" class="calc-button-secondary">Triathlon Plan</a>
-                <a href="/hyrox-training-plan-generator" class="calc-button-secondary">Hyrox Plan</a>
+            <div class="methodology-badges">
+                <span class="badge">Jack Daniels</span>
+                <span class="badge">Joe Friel</span>
+                <span class="badge">80/20 Endurance</span>
+                <span class="badge">Periodization</span>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Are these training plans really free?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes! Calendar (.ics) export is completely free with no signup required. PDF and spreadsheet exports require a free email signup to help us keep the service running.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What training methods are used?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Our plans incorporate principles from Jack Daniels, Joe Friel, 80/20 Endurance, and proven ultramarathon coaching methodologies. Each plan uses periodization with Base, Build, Peak, and Taper phases.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I customize the training plans?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    You can set your experience level, weekly availability, and preferred long workout day. Export to spreadsheet format for full customization of individual workouts.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I add the plan to my calendar?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Download the .ics file and import it into Google Calendar, Apple Calendar, or Outlook. Each workout will appear as a calendar event with full details including workout type, duration, and instructions.
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white mt-16">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
-                    <p class="text-gray-400">Free training plans and calculators for runners, cyclists, and endurance athletes.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Training Plans</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/running-training-plan-generator" class="hover:text-white">Running Plans</a></li>
-                        <li><a href="/cycling-training-plan-generator" class="hover:text-white">Cycling Plans</a></li>
-                        <li><a href="/triathlon-training-plan-generator" class="hover:text-white">Triathlon Plans</a></li>
-                        <li><a href="/hyrox-training-plan-generator" class="hover:text-white">Hyrox Plans</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Popular Calculators</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
-                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zone Calculator</a></li>
-                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max Calculator</a></li>
-                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Site</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/about" class="hover:text-white">About</a></li>
-                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
-                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="/terms" class="hover:text-white">Terms of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 RunBikeCalc. All rights reserved.</p>
-            </div>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/running-tools">Running</a>
+            <a href="/cycling-tools">Cycling</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/privacy">Privacy</a>
         </div>
+        <p class="footer-copy">&copy; 2025 RunBikeCalc. All rights reserved.</p>
     </footer>
 
-    <!-- Mobile menu script -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            menu.classList.toggle('hidden');
+        // FAQ accordions
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                item.classList.toggle('open');
+            });
         });
-    // Mobile Training Plans submenu toggle
-    const plansToggle = document.getElementById('mobile-plans-toggle');
-    const plansSubmenu = document.getElementById('mobile-plans-submenu');
-    const plansChevron = document.getElementById('mobile-plans-chevron');
-    if (plansToggle && plansSubmenu && plansChevron) {
-        plansToggle.addEventListener('click', function() {
-            plansSubmenu.classList.toggle('hidden');
-            plansChevron.classList.toggle('rotate-180');
-        });
-    }
-
     </script>
 </body>
 </html>
