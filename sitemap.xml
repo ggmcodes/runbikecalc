@@ -553,6 +553,54 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/indoor-cycling-zwift-training-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/strength-training-for-runners-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/nutrition-for-endurance-athletes-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/boston-marathon-qualifying-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/race-prediction-goal-setting-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/recovery-rest-day-strategies-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/winter-cycling-training-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/beginner-cyclist-complete-guide</loc>
+        <lastmod>2025-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 
     <!-- Static Pages -->
     <url>
