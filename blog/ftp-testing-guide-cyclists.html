@@ -81,6 +81,64 @@
         }
     }
     </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is FTP in cycling?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FTP (Functional Threshold Power) is the highest average power output a cyclist can sustain for approximately one hour. It represents the power output at your lactate threshold - the point where lactate accumulation in your blood begins to exceed your body's ability to clear it. FTP is crucial for establishing training zones, tracking fitness progress, and optimizing power-based training."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I test my FTP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The frequency of FTP testing depends on your experience level: Beginners should test every 6-8 weeks, intermediate cyclists every 8-12 weeks, and advanced cyclists every 12-16 weeks. During the racing season, monthly testing or testing before key events is recommended. Signs you need to retest include workouts feeling consistently easy, improved race results, or completion of a focused training block."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the 20-minute FTP test protocol?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 20-minute FTP test protocol consists of: 1) Warm-up for 20 minutes (10 minutes easy spinning, 3x1-minute efforts at 100-110% estimated FTP with 1 minute recovery, then 5 minutes easy spinning), 2) Perform a maximum sustainable 20-minute effort, 3) Cool down for 10-15 minutes with easy spinning, 4) Calculate FTP by multiplying your average power from the 20-minute effort by 0.95."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good FTP for my weight?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FTP is best evaluated using your power-to-weight ratio (watts per kilogram). For recreational cyclists, 2.5-3.0 W/kg is average, 3.0-3.5 W/kg is good, and 3.5-4.0 W/kg is very good. Competitive amateur cyclists typically range from 3.5-4.5 W/kg, while professional cyclists often exceed 5.0 W/kg. Your absolute FTP matters less than your power-to-weight ratio, especially for climbing performance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why did my FTP drop after training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FTP can temporarily drop due to several factors: accumulated fatigue from training, insufficient recovery before testing, overtraining or excessive training stress, illness or poor sleep, testing in different environmental conditions (heat, humidity), or testing at different times of day. A drop may also indicate you need a recovery week. Focus on trends over multiple tests rather than single results, and ensure proper recovery and testing conditions for accurate measurements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I test FTP without a power meter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "While a power meter is required for accurate FTP measurement, you can estimate training zones using heart rate or perceived exertion. However, power meters provide the most precise and reliable data for FTP testing and power-based training. Smart trainers can also measure power output. If you're serious about structured training, investing in a power meter (crank, pedal, or hub-based) is highly recommended."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -691,6 +749,108 @@
             </div>
         </div>
 
+        <!-- FAQ Section -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <section class="bg-gray-50 rounded-lg p-8 my-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What is FTP in cycling?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            FTP (Functional Threshold Power) is the highest average power output a cyclist can sustain for approximately one hour. It represents the power output at your lactate threshold - the point where lactate accumulation in your blood begins to exceed your body's ability to clear it. FTP is crucial for establishing training zones, tracking fitness progress, and optimizing power-based training.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">How often should I test my FTP?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            The frequency of FTP testing depends on your experience level: Beginners should test every 6-8 weeks, intermediate cyclists every 8-12 weeks, and advanced cyclists every 12-16 weeks. During the racing season, monthly testing or testing before key events is recommended. Signs you need to retest include workouts feeling consistently easy, improved race results, or completion of a focused training block.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What is the 20-minute FTP test protocol?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            The 20-minute FTP test protocol consists of:
+                            <ol class="list-decimal ml-6 mt-2 space-y-1">
+                                <li><strong>Warm-up (20 minutes):</strong> 10 minutes easy spinning, 3×1-minute efforts at 100-110% estimated FTP with 1 minute recovery, then 5 minutes easy spinning</li>
+                                <li><strong>Test (20 minutes):</strong> Perform a maximum sustainable effort for 20 minutes</li>
+                                <li><strong>Cool down (10-15 minutes):</strong> Easy spinning</li>
+                                <li><strong>Calculate FTP:</strong> Multiply your average power from the 20-minute effort by 0.95</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What is a good FTP for my weight?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            FTP is best evaluated using your power-to-weight ratio (watts per kilogram). For recreational cyclists:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li>2.5-3.0 W/kg is average</li>
+                                <li>3.0-3.5 W/kg is good</li>
+                                <li>3.5-4.0 W/kg is very good</li>
+                                <li>Competitive amateur cyclists typically range from 3.5-4.5 W/kg</li>
+                                <li>Professional cyclists often exceed 5.0 W/kg</li>
+                            </ul>
+                            <p class="mt-2">Your absolute FTP matters less than your power-to-weight ratio, especially for climbing performance.</p>
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Why did my FTP drop after training?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            FTP can temporarily drop due to several factors:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li>Accumulated fatigue from training</li>
+                                <li>Insufficient recovery before testing</li>
+                                <li>Overtraining or excessive training stress</li>
+                                <li>Illness or poor sleep quality</li>
+                                <li>Testing in different environmental conditions (heat, humidity)</li>
+                                <li>Testing at different times of day</li>
+                            </ul>
+                            <p class="mt-2">A drop may also indicate you need a recovery week. Focus on trends over multiple tests rather than single results, and ensure proper recovery and testing conditions for accurate measurements.</p>
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Can I test FTP without a power meter?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            While a power meter is required for accurate FTP measurement, you can estimate training zones using heart rate or perceived exertion. However, power meters provide the most precise and reliable data for FTP testing and power-based training. Smart trainers can also measure power output. If you're serious about structured training, investing in a power meter (crank, pedal, or hub-based) is highly recommended.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
 
     </main>
 

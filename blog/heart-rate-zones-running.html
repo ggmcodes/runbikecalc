@@ -81,6 +81,64 @@
         }
     }
     </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are the 5 heart rate zones for running?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 5 heart rate zones for running are: Zone 1 (50-60% max HR) for active recovery, Zone 2 (60-70% max HR) for aerobic base building, Zone 3 (70-80% max HR) for aerobic development, Zone 4 (80-90% max HR) for lactate threshold training, and Zone 5 (90-100% max HR) for VO2 max development. Each zone targets specific physiological adaptations to improve different aspects of your running performance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my heart rate zones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate your heart rate zones, first determine your maximum heart rate using either a field test or an age-based formula (like 220 minus your age). Then apply the percentage ranges for each zone. For example, if your max HR is 180 bpm, Zone 2 would be 108-126 bpm (60-70%). Use our heart rate zone calculator for accurate, personalized zones based on multiple methods including the Tanaka and Gellish formulas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which heart rate zone burns the most fat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Zone 2 (60-70% of max heart rate) is considered the optimal 'fat-burning zone' because it maximizes the percentage of calories burned from fat. At this intensity, your body primarily uses fat as fuel, and you can sustain the effort for extended periods. However, higher intensity zones burn more total calories per minute, so a combination of Zone 2 for fat adaptation and higher zones for overall calorie expenditure is most effective for fitness and weight management."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I train in Zone 2 or Zone 3?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most of your training volume (about 80%), you should train in Zone 2 rather than Zone 3. Zone 2 builds your aerobic base with minimal fatigue, allowing for better recovery and more consistent training. Zone 3 is often called the 'gray zone' because it's too hard to be easy but not hard enough to provide the specific adaptations of Zone 4 or 5. Most runners make the mistake of spending too much time in Zone 3, which can lead to overtraining and suboptimal results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good resting heart rate for runners?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good resting heart rate for runners typically ranges from 40-60 beats per minute, which is lower than the general population average of 60-100 bpm. Well-trained endurance athletes often have resting heart rates in the 40s or even 30s due to increased stroke volume and cardiac efficiency. However, resting heart rate varies by individual based on genetics, fitness level, age, and other factors. Track your resting heart rate trends over time rather than comparing to others - a sudden increase can indicate overtraining or illness."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long should I stay in each heart rate zone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The duration in each heart rate zone depends on your training goals and fitness level. Zone 1-2 sessions can last 30 minutes to several hours for long runs. Zone 3 steady-state efforts typically last 30-90 minutes. Zone 4 tempo runs are usually 20-40 minutes continuous or broken into intervals. Zone 5 intervals are typically 2-8 minutes repeated with recovery. Follow the 80/20 rule: spend 80% of your total training time in Zones 1-2 and 20% in Zones 4-5, with minimal time in Zone 3."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -771,6 +829,84 @@
             </div>
         </div>
 
+
+        <!-- FAQ Section -->
+        <section class="bg-gray-50 rounded-lg p-8 my-12 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">What are the 5 heart rate zones for running?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        The 5 heart rate zones for running are: Zone 1 (50-60% max HR) for active recovery, Zone 2 (60-70% max HR) for aerobic base building, Zone 3 (70-80% max HR) for aerobic development, Zone 4 (80-90% max HR) for lactate threshold training, and Zone 5 (90-100% max HR) for VO2 max development. Each zone targets specific physiological adaptations to improve different aspects of your running performance.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">How do I calculate my heart rate zones?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        To calculate your heart rate zones, first determine your maximum heart rate using either a field test or an age-based formula (like 220 minus your age). Then apply the percentage ranges for each zone. For example, if your max HR is 180 bpm, Zone 2 would be 108-126 bpm (60-70%). Use our heart rate zone calculator for accurate, personalized zones based on multiple methods including the Tanaka and Gellish formulas.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">Which heart rate zone burns the most fat?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        Zone 2 (60-70% of max heart rate) is considered the optimal "fat-burning zone" because it maximizes the percentage of calories burned from fat. At this intensity, your body primarily uses fat as fuel, and you can sustain the effort for extended periods. However, higher intensity zones burn more total calories per minute, so a combination of Zone 2 for fat adaptation and higher zones for overall calorie expenditure is most effective for fitness and weight management.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">Should I train in Zone 2 or Zone 3?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        For most of your training volume (about 80%), you should train in Zone 2 rather than Zone 3. Zone 2 builds your aerobic base with minimal fatigue, allowing for better recovery and more consistent training. Zone 3 is often called the "gray zone" because it's too hard to be easy but not hard enough to provide the specific adaptations of Zone 4 or 5. Most runners make the mistake of spending too much time in Zone 3, which can lead to overtraining and suboptimal results.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">What is a good resting heart rate for runners?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        A good resting heart rate for runners typically ranges from 40-60 beats per minute, which is lower than the general population average of 60-100 bpm. Well-trained endurance athletes often have resting heart rates in the 40s or even 30s due to increased stroke volume and cardiac efficiency. However, resting heart rate varies by individual based on genetics, fitness level, age, and other factors. Track your resting heart rate trends over time rather than comparing to others - a sudden increase can indicate overtraining or illness.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">How long should I stay in each heart rate zone?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        The duration in each heart rate zone depends on your training goals and fitness level. Zone 1-2 sessions can last 30 minutes to several hours for long runs. Zone 3 steady-state efforts typically last 30-90 minutes. Zone 4 tempo runs are usually 20-40 minutes continuous or broken into intervals. Zone 5 intervals are typically 2-8 minutes repeated with recovery. Follow the 80/20 rule: spend 80% of your total training time in Zones 1-2 and 20% in Zones 4-5, with minimal time in Zone 3.
+                    </div>
+                </details>
+            </div>
+        </section>
 
     </main>
 

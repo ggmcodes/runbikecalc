@@ -81,6 +81,64 @@
         }
     }
     </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a good power to weight ratio for cycling?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good power-to-weight ratio depends on your cycling level. Recreational cyclists typically have 2.5-3.5 W/kg, competitive amateur racers range from 4.0-5.0 W/kg, and professional cyclists achieve 5.5-7.0+ W/kg. For most enthusiasts, reaching 3.5-4.5 W/kg indicates strong performance capable of handling challenging group rides and local races."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my power to weight ratio?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate your power-to-weight ratio, divide your power output in watts by your body weight in kilograms. For example, if you produce 250 watts and weigh 70kg, your power-to-weight ratio is 250 ÷ 70 = 3.57 W/kg. Use your FTP (Functional Threshold Power) for the most meaningful comparison, which represents the power you can sustain for approximately one hour."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it better to lose weight or increase power for cycling?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best approach combines both power development and intelligent weight management. Focus on building power through structured training while optimizing body composition by reducing excess body fat while maintaining muscle mass. Aggressive weight loss can compromise power output and health. For most cyclists, prioritizing power development alongside gradual, sustainable fat loss (maintaining a moderate 300-500 calorie deficit) produces better long-term results than focusing solely on weight reduction."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What power to weight ratio do professional cyclists have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Professional cyclists typically have power-to-weight ratios between 5.5-6.5 W/kg, with elite climbers reaching 6.0-7.0+ W/kg. Tour de France winners historically achieve approximately 6.5-7.2 W/kg during peak climbing efforts. These values represent sustained FTP power relative to body weight, measured during maximal efforts lasting 20-60 minutes on challenging mountain climbs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I improve my watts per kg?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Improve your watts per kg through structured training and body composition optimization. For power development, perform FTP intervals (8-20 minutes at 95-105% FTP), VO2 max intervals (3-8 minutes at 110-120% FTP), and climbing-specific hill repeats. For weight optimization, maintain adequate protein intake (1.6-2.2g per kg body weight), create a moderate caloric deficit if needed, and focus on reducing body fat while preserving muscle mass. Consistent training with progressive overload combined with proper nutrition typically yields 0.2-0.5 W/kg improvement over 8-12 weeks for trained cyclists."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is power-to-weight ratio more important than absolute power?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Power-to-weight ratio is more important than absolute power when climbing or accelerating because you're working against gravity. On steep gradients above 6-8%, your W/kg becomes the primary determinant of climbing speed. A lighter rider with lower absolute power but higher W/kg will climb faster than a heavier rider with more watts but lower W/kg. However, absolute power remains important for flat terrain, time trials, and sprint finishes where aerodynamics and raw power output dominate performance."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -686,6 +744,85 @@
             </div>
         </div>
 
+        <!-- FAQ Section -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <section class="bg-gray-50 rounded-lg p-8 my-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What is a good power to weight ratio for cycling?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            A good power-to-weight ratio depends on your cycling level. Recreational cyclists typically have 2.5-3.5 W/kg, competitive amateur racers range from 4.0-5.0 W/kg, and professional cyclists achieve 5.5-7.0+ W/kg. For most enthusiasts, reaching 3.5-4.5 W/kg indicates strong performance capable of handling challenging group rides and local races.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">How do I calculate my power to weight ratio?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            To calculate your power-to-weight ratio, divide your power output in watts by your body weight in kilograms. For example, if you produce 250 watts and weigh 70kg, your power-to-weight ratio is 250 ÷ 70 = 3.57 W/kg. Use your FTP (Functional Threshold Power) for the most meaningful comparison, which represents the power you can sustain for approximately one hour.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Is it better to lose weight or increase power for cycling?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            The best approach combines both power development and intelligent weight management. Focus on building power through structured training while optimizing body composition by reducing excess body fat while maintaining muscle mass. Aggressive weight loss can compromise power output and health. For most cyclists, prioritizing power development alongside gradual, sustainable fat loss (maintaining a moderate 300-500 calorie deficit) produces better long-term results than focusing solely on weight reduction.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What power to weight ratio do professional cyclists have?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Professional cyclists typically have power-to-weight ratios between 5.5-6.5 W/kg, with elite climbers reaching 6.0-7.0+ W/kg. Tour de France winners historically achieve approximately 6.5-7.2 W/kg during peak climbing efforts. These values represent sustained FTP power relative to body weight, measured during maximal efforts lasting 20-60 minutes on challenging mountain climbs.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">How can I improve my watts per kg?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Improve your watts per kg through structured training and body composition optimization. For power development, perform FTP intervals (8-20 minutes at 95-105% FTP), VO2 max intervals (3-8 minutes at 110-120% FTP), and climbing-specific hill repeats. For weight optimization, maintain adequate protein intake (1.6-2.2g per kg body weight), create a moderate caloric deficit if needed, and focus on reducing body fat while preserving muscle mass. Consistent training with progressive overload combined with proper nutrition typically yields 0.2-0.5 W/kg improvement over 8-12 weeks for trained cyclists.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Why is power-to-weight ratio more important than absolute power?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Power-to-weight ratio is more important than absolute power when climbing or accelerating because you're working against gravity. On steep gradients above 6-8%, your W/kg becomes the primary determinant of climbing speed. A lighter rider with lower absolute power but higher W/kg will climb faster than a heavier rider with more watts but lower W/kg. However, absolute power remains important for flat terrain, time trials, and sprint finishes where aerodynamics and raw power output dominate performance.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
 
     </main>
 

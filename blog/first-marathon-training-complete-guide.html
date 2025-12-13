@@ -38,6 +38,64 @@
         "wordCount": 3500
     }
     </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long should I train for my first marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most experts recommend 16-20 weeks of training for a first marathon. This allows sufficient time to build an aerobic base (4 weeks), increase endurance (4 weeks), reach peak mileage (4 weeks), and taper properly (2-3 weeks). If you're currently running 15-20 miles per week, a 16-week plan is ideal. Less experienced runners may need 20 weeks to build safely without injury."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good first marathon time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good first marathon time is simply finishing! Average first marathon times range from 4:30 to 5:30 for most recreational runners. Men average around 4:30, while women average around 4:54. However, your goal should be based on your training paces from recent race performances. Use a race time predictor based on a recent 10K or half marathon to set a realistic goal. Remember, 90% of marathon success is pacing strategy, not raw speed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I walk during a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Many successful marathoners use run-walk strategies, especially first-timers. The Galloway Method recommends planned walk breaks (like 4 minutes running, 1 minute walking) throughout the race. This strategy can actually lead to faster overall times by preventing the late-race slowdown. Walking through aid stations is also smart for proper hydration and fueling. There's no rule that says you must run every step - crossing the finish line is what counts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should I eat before a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eat a familiar, carbohydrate-rich meal 3-4 hours before your marathon start. Aim for 300-500 calories from easily digestible sources like toast with honey, oatmeal with banana, or a bagel with peanut butter. Avoid high fiber, high fat, and new foods that could cause digestive issues. Drink 16-20 oz of water or sports drink with your meal. The key is eating foods you've successfully consumed before long training runs - never try anything new on race day."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I avoid hitting the wall in a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Avoiding 'the wall' (glycogen depletion around mile 18-20) requires three strategies: 1) Proper pacing - start conservatively and run at your trained pace, not faster. 2) Consistent fueling - consume 30-60g of carbohydrates per hour starting at mile 4-6, using gels, chews, or sports drinks. 3) Adequate training - complete long runs of 18-22 miles to teach your body to burn fat efficiently. Practice your fueling strategy during training runs. Research shows that 90% of first-timers who hit the wall started too fast in the first 10K."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to run 26 miles in training before the marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, you don't need to run the full 26.2 miles in training. Most proven marathon plans peak at 18-22 miles for the longest run. Running further increases injury risk without significant benefit. The taper period and race day adrenaline will carry you through the final miles. Focus on building to 20 miles comfortably, practicing your race pace during long runs, and trusting the training process. Your body will be prepared to cover the full distance on race day."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -506,6 +564,83 @@
             </div>
         </div>
 
+        <!-- FAQ Section -->
+        <section class="bg-gray-50 rounded-lg p-8 my-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">How long should I train for my first marathon?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        Most experts recommend 16-20 weeks of training for a first marathon. This allows sufficient time to build an aerobic base (4 weeks), increase endurance (4 weeks), reach peak mileage (4 weeks), and taper properly (2-3 weeks). If you're currently running 15-20 miles per week, a 16-week plan is ideal. Less experienced runners may need 20 weeks to build safely without injury.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">What is a good first marathon time?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        A good first marathon time is simply finishing! Average first marathon times range from 4:30 to 5:30 for most recreational runners. Men average around 4:30, while women average around 4:54. However, your goal should be based on your training paces from recent race performances. Use a <a href="/race-time-predictor.html" class="text-primary underline">race time predictor</a> based on a recent 10K or half marathon to set a realistic goal. Remember, 90% of marathon success is pacing strategy, not raw speed.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">Can I walk during a marathon?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        Absolutely! Many successful marathoners use run-walk strategies, especially first-timers. The Galloway Method recommends planned walk breaks (like 4 minutes running, 1 minute walking) throughout the race. This strategy can actually lead to faster overall times by preventing the late-race slowdown. Walking through aid stations is also smart for proper hydration and fueling. There's no rule that says you must run every step - crossing the finish line is what counts.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">What should I eat before a marathon?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        Eat a familiar, carbohydrate-rich meal 3-4 hours before your marathon start. Aim for 300-500 calories from easily digestible sources like toast with honey, oatmeal with banana, or a bagel with peanut butter. Avoid high fiber, high fat, and new foods that could cause digestive issues. Drink 16-20 oz of water or sports drink with your meal. The key is eating foods you've successfully consumed before long training runs - never try anything new on race day.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">How do I avoid hitting the wall in a marathon?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        Avoiding "the wall" (glycogen depletion around mile 18-20) requires three strategies: 1) <strong>Proper pacing</strong> - start conservatively and run at your trained pace, not faster. 2) <strong>Consistent fueling</strong> - consume 30-60g of carbohydrates per hour starting at mile 4-6, using gels, chews, or sports drinks. 3) <strong>Adequate training</strong> - complete long runs of 18-22 miles to teach your body to burn fat efficiently. Practice your fueling strategy during training runs. Research shows that 90% of first-timers who hit the wall started too fast in the first 10K.
+                    </div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                        <span class="text-lg">Do I need to run 26 miles in training before the marathon?</span>
+                        <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                        No, you don't need to run the full 26.2 miles in training. Most proven marathon plans peak at 18-22 miles for the longest run. Running further increases injury risk without significant benefit. The taper period and race day adrenaline will carry you through the final miles. Focus on building to 20 miles comfortably, practicing your race pace during long runs, and trusting the training process. Your body will be prepared to cover the full distance on race day.
+                    </div>
+                </details>
+            </div>
+        </section>
 
     </main>
 

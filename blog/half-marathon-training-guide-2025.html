@@ -893,49 +893,159 @@
                 </section>
 
                 <!-- FAQ Section -->
-                <section class="mb-12">
+                <section id="faq" class="mb-12">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">❓ Half Marathon Training FAQ</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">How long should I train for my first half marathon?</h3>
-                            <p class="text-gray-700">A 12-week training plan is ideal for most beginners with a base of running 3-4 times per week. If you're completely new to running, build a 4-6 week base phase first, running 20-30 minutes every other day. More experienced runners can use shorter 8-10 week plans focused on half marathon-specific fitness.</p>
-                        </div>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">What pace should I run during training?</h3>
-                            <p class="text-gray-700">Follow the 80/20 rule: 80% of your miles should be at an easy, conversational pace (you should be able to talk in full sentences). The remaining 20% consists of tempo runs at half marathon pace and intervals at 5K-10K pace. Use our <a href="../race-pace-calculator" class="text-blue-600 hover:underline">race pace calculator</a> to determine your specific training zones.</p>
-                        </div>
+                    <div class="space-y-4">
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">How long does it take to train for a half marathon?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                                <p class="mb-3">A 12-week training plan is ideal for most runners with a running base of 15-20 miles per week. Complete beginners should build a 4-6 week base phase first, running 3-4 times per week for 20-30 minutes.</p>
+                                <p>More experienced runners targeting a PR can use focused 8-10 week plans that emphasize half marathon-specific workouts. The key is consistency and gradual mileage progression—rushing the timeline increases injury risk significantly.</p>
+                            </div>
+                        </details>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Do I need to run longer than 13.1 miles in training?</h3>
-                            <p class="text-gray-700">Yes, running 14-16 miles in training builds the aerobic endurance and mental confidence needed for race day. Your longest runs should be done at an easy pace, 30-90 seconds per mile slower than your goal race pace. This teaches your body to run efficiently at distance without the stress of race pace.</p>
-                        </div>
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">What is a good half marathon time for beginners?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                                <p class="mb-3">A good half marathon time for beginners is 2:00-2:30 (9:09-11:27 per mile). Sub-2:00 is an excellent first-timer goal if you have a solid running base and can consistently run 8-10 mile long runs.</p>
+                                <p class="mb-3">Focus on finishing strong rather than chasing a specific time on your first attempt. Your primary goals should be completing the distance, practicing your pacing strategy, and learning race-day execution.</p>
+                                <p>With consistent training, most beginners can improve 10-20% in their second half marathon as they develop better pacing discipline and aerobic fitness.</p>
+                            </div>
+                        </details>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">How important is nutrition during a half marathon?</h3>
-                            <p class="text-gray-700">For most runners, the half marathon can be completed on stored glycogen without fueling. However, taking 15-20g of carbs between miles 6-8 can prevent late-race energy dips, especially if you're racing in warm weather or targeting an aggressive time. Practice your fueling strategy during long training runs.</p>
-                        </div>
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">How many miles a week should I run for half marathon training?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700">
+                                <p class="mb-4">Weekly mileage depends on your experience level and time goals:</p>
+                                <div class="space-y-3">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <strong class="text-blue-900">Beginner (2:00-2:30 finish):</strong>
+                                        <p class="text-blue-800 mt-1">25-35 miles per week, building from base of 20 miles to peak of 35 miles</p>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <strong class="text-green-900">Intermediate (1:45-2:00 finish):</strong>
+                                        <p class="text-green-800 mt-1">35-45 miles per week, with quality workouts and longer long runs</p>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <strong class="text-purple-900">Advanced (sub-1:30 finish):</strong>
+                                        <p class="text-purple-800 mt-1">45-55 miles per week, including multiple quality sessions</p>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Include one rest day and one cross-training day per week. Build gradually from 60-70% of peak mileage to avoid overtraining.</p>
+                            </div>
+                        </details>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">What's the best pacing strategy for race day?</h3>
-                            <p class="text-gray-700">Run slightly negative splits: start 10-15 seconds per mile slower than goal pace for the first 3 miles, settle into goal pace for miles 4-10, then push the pace in the final 5K if you're feeling strong. This conservative start preserves energy for a strong finish and prevents the devastating effects of starting too fast.</p>
-                        </div>
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">Can I run a half marathon without training?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                                <p class="mb-3"><strong class="text-red-600">Short answer: No, you shouldn't.</strong> While it's physically possible to complete a half marathon without training, it's strongly not recommended.</p>
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-3">
+                                    <strong class="text-red-900">Risks of running untrained:</strong>
+                                    <ul class="mt-2 space-y-1 text-red-800">
+                                        <li>• Significantly increased injury risk (stress fractures, IT band syndrome, knee pain)</li>
+                                        <li>• Extremely painful experience that can turn you off running</li>
+                                        <li>• Weeks of recovery needed, potentially with lasting damage</li>
+                                        <li>• High likelihood of not finishing or requiring medical attention</li>
+                                    </ul>
+                                </div>
+                                <p class="mb-3"><strong>Minimum training requirements:</strong> If you can currently run 5-6 miles comfortably, you need at least 6-8 weeks of structured training. Complete beginners should allow 12-16 weeks minimum.</p>
+                                <p>Respect the distance. A half marathon is 13.1 miles of sustained effort—train properly and you'll have a rewarding experience.</p>
+                            </div>
+                        </details>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">How many days should I rest before race day?</h3>
-                            <p class="text-gray-700">Begin tapering 2 weeks before race day. In the final week, reduce your mileage by 50-70% while maintaining some intensity with short intervals or strides. Take 2 complete rest days before the race, or do easy 20-30 minute jogs with a few 20-second strides to keep your legs feeling fresh.</p>
-                        </div>
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">What should I eat the night before a half marathon?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700">
+                                <p class="mb-4">Eat a moderate carb-focused dinner with familiar foods. Aim for 60-70% carbohydrates, keep fiber moderate, and avoid spicy, fatty, or unfamiliar foods.</p>
+                                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                        <strong class="text-green-900 block mb-2">Good Options:</strong>
+                                        <ul class="text-green-800 space-y-1 text-sm">
+                                            <li>• Pasta with marinara sauce (not cream-based)</li>
+                                            <li>• Rice with grilled chicken or fish</li>
+                                            <li>• Baked potato with lean protein</li>
+                                            <li>• Turkey sandwich on white bread</li>
+                                            <li>• Chicken and rice bowl</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                        <strong class="text-red-900 block mb-2">Avoid:</strong>
+                                        <ul class="text-red-800 space-y-1 text-sm">
+                                            <li>• High-fiber foods (beans, cruciferous vegetables)</li>
+                                            <li>• Spicy or heavily seasoned dishes</li>
+                                            <li>• Fatty, fried, or cream-based foods</li>
+                                            <li>• Excessive alcohol</li>
+                                            <li>• New or unfamiliar foods</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="mb-3"><strong>Important:</strong> Stay well-hydrated throughout the day. Don't overeat—you're topping off glycogen stores, not carb-loading like for a marathon.</p>
+                                <p>Eat dinner 3-4 hours before bedtime to allow proper digestion. Your pre-race meal should be larger than the night-before dinner.</p>
+                            </div>
+                        </details>
 
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">What should I do if I miss training runs due to illness or injury?</h3>
-                            <p class="text-gray-700">Missing 3-5 days won't significantly impact your fitness. Focus on returning gradually and don't try to make up missed mileage. If you miss more than 10-14 days of training, consider adjusting your goal time or postponing your race. It's better to arrive at the start line slightly undertrained than injured.</p>
-                        </div>
-
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I run a half marathon without doing speed work?</h3>
-                            <p class="text-gray-700">Yes, you can complete a half marathon on easy running alone, but targeted speed work will significantly improve your time and racing experience. Tempo runs build the specific fitness needed to sustain half marathon pace, while intervals develop the speed reserve that makes race pace feel more comfortable.</p>
-                        </div>
+                        <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                            <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                                <span class="text-lg">How do I pace myself for a half marathon?</span>
+                                <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700">
+                                <p class="mb-4">Use a negative split strategy for optimal performance. This means running the second half slightly faster than the first, which requires discipline early in the race.</p>
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                                    <strong class="text-blue-900 block mb-3">Optimal Pacing Strategy:</strong>
+                                    <div class="space-y-2 text-blue-800">
+                                        <div class="flex justify-between items-center border-b border-blue-200 pb-2">
+                                            <span class="font-medium">Miles 1-3:</span>
+                                            <span>Goal pace + 10-15 sec/mile (conservative start)</span>
+                                        </div>
+                                        <div class="flex justify-between items-center border-b border-blue-200 pb-2">
+                                            <span class="font-medium">Miles 4-10:</span>
+                                            <span>Settle into goal pace (find your rhythm)</span>
+                                        </div>
+                                        <div class="flex justify-between items-center border-b border-blue-200 pb-2">
+                                            <span class="font-medium">Mile 11:</span>
+                                            <span>Assess energy levels, prepare to push</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-medium">Miles 12-13.1:</span>
+                                            <span>Push pace if feeling strong, empty the tank</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                                    <strong class="text-yellow-900">Pro Tip:</strong>
+                                    <p class="text-yellow-800 mt-1">Most runners who "blow up" do so by running the first 5K too fast. Start conservatively to preserve glycogen and prevent early burnout. Use a GPS watch and check splits every mile to stay disciplined. Remember: every second you bank early costs you 2-3 seconds late.</p>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </section>
 
@@ -1153,38 +1263,56 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "How long should I train for my first half marathon?",
+                "name": "How long does it take to train for a half marathon?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "A 12-week training plan is ideal for most beginners with a base of running 3-4 times per week. If you're completely new to running, build a 4-6 week base phase first, running 20-30 minutes every other day."
+                    "text": "A 12-week training plan is ideal for most runners with a running base of 15-20 miles per week. Complete beginners should build a 4-6 week base phase first, running 3-4 times per week for 20-30 minutes. More experienced runners targeting a PR can use focused 8-10 week plans. The key is consistency and gradual mileage progression."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What pace should I run during training?",
+                "name": "What is a good half marathon time for beginners?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Follow the 80/20 rule: 80% of your miles should be at an easy, conversational pace. The remaining 20% consists of tempo runs at half marathon pace and intervals at 5K-10K pace."
+                    "text": "A good half marathon time for beginners is 2:00-2:30 (9:09-11:27 per mile). Sub-2:00 is an excellent first-timer goal if you have a solid running base. Focus on finishing strong rather than chasing a specific time on your first attempt. With consistent training, most beginners can improve 10-20% in their second half marathon."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Do I need to run longer than 13.1 miles in training?",
+                "name": "How many miles a week should I run for half marathon training?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, running 14-16 miles in training builds the aerobic endurance and mental confidence needed for race day. Your longest runs should be done at an easy pace, 30-90 seconds per mile slower than your goal race pace."
+                    "text": "Plan to run 25-35 miles per week for beginner plans, 35-45 miles for intermediate runners targeting sub-1:45, and 45-55 miles for advanced runners chasing sub-1:30. Peak weeks should hit the high end of these ranges, with a gradual build from 60-70% of peak mileage. Include one rest day and one cross-training day per week."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What's the best pacing strategy for race day?",
+                "name": "Can I run a half marathon without training?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Run slightly negative splits: start 10-15 seconds per mile slower than goal pace for the first 3 miles, settle into goal pace for miles 4-10, then push the pace in the final 5K if you're feeling strong."
+                    "text": "While it's physically possible to complete a half marathon without training, it's not recommended. Running 13.1 miles untrained significantly increases injury risk, guarantees a painful experience, and can lead to weeks of recovery. If you can currently run 5-6 miles comfortably, you need at least 6-8 weeks of structured training. Complete beginners should allow 12-16 weeks minimum."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should I eat the night before a half marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eat a moderate carb-focused dinner with familiar foods: pasta with marinara sauce, rice with chicken, or a simple turkey sandwich. Aim for 60-70% carbohydrates, keep fiber moderate, and avoid spicy, fatty, or unfamiliar foods. Stay well-hydrated throughout the day. Don't overeat—you're topping off glycogen stores, not carb-loading like a marathon. Good options include pasta, rice, potatoes, bread, and lean proteins."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I pace myself for a half marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use a negative split strategy: run miles 1-3 at goal pace plus 10-15 seconds per mile, settle into goal pace for miles 4-10, assess at mile 11, then push the final 2.1 miles if you have energy. Start conservatively to preserve glycogen and prevent early burnout. Most runners who blow up do so by running the first 5K too fast. Use a GPS watch and check splits every mile to stay disciplined."
                 }
             }
         ]
     }
+    </script>
+
     <script>
     // Mobile Training Plans submenu toggle
     const plansToggle = document.getElementById('mobile-plans-toggle');

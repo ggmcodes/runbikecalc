@@ -81,6 +81,64 @@
         }
     }
     </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a good VO2 max score?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good VO2 max score depends on age, gender, and fitness level. For men aged 20-40, scores above 50 ml/kg/min are considered good, while 60+ is excellent. For women, scores above 40 ml/kg/min are good, and 50+ is excellent. Recreational athletes typically range from 40-50 ml/kg/min, competitive athletes from 50-70 ml/kg/min, and elite endurance athletes often exceed 70 ml/kg/min. However, what's 'good' is relative to your goals and baseline fitness."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I improve my VO2 max?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To improve VO2 max, incorporate high-intensity interval training (HIIT) with work periods of 3-8 minutes at 90-100% of VO2 max intensity, followed by equal or slightly shorter recovery periods. Effective protocols include classic intervals (5x4 minutes at 5K pace), micro-intervals (30/15 protocol), tempo intervals at lactate threshold, and polarized training combining 80% low-intensity with 20% high-intensity work. Consistency is key - perform 1-2 VO2 max sessions per week for beginners, or 2-3 for advanced athletes, with proper recovery between sessions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I test VO2 max at home?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can estimate VO2 max at home using field tests, though they won't be as accurate as laboratory testing. The Cooper Test (12-minute run for maximum distance) is a popular option. Other methods include the 1.5-mile run test, step tests, or submaximal protocols using heart rate response. Many GPS watches and fitness trackers also provide VO2 max estimates based on your running or cycling data. While these home methods provide useful estimates for tracking progress, a laboratory VO2 max test with metabolic cart remains the gold standard for accurate measurement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to increase VO2 max?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most people see significant VO2 max improvements within 4-8 weeks of consistent, targeted training. Beginners can expect 15-30% improvement over several months, while trained athletes typically see 5-15% gains. The timeline varies based on training history, genetics, and program design. Initial improvements come quickly, but progress slows after 12-16 weeks as you approach your genetic potential. Continued training maintains VO2 max levels, but further gains require progressive overload and varied training stimuli."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does VO2 max decrease with age?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, VO2 max naturally decreases with age at a rate of approximately 10% per decade after age 30 for sedentary individuals. However, this decline can be significantly slowed through consistent endurance training. Active individuals may only experience a 5% decline per decade. Masters athletes who maintain high-intensity training can preserve much of their VO2 max well into their 60s and 70s. The key is continuing regular high-intensity interval training, as complete cessation of training leads to rapid declines regardless of age."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between VO2 max and lactate threshold?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VO2 max represents your maximum oxygen uptake capacity - the ceiling of your aerobic system - while lactate threshold is the intensity at which lactate begins to accumulate faster than it can be cleared. VO2 max determines your maximum aerobic power, but lactate threshold determines the percentage of that power you can sustain for extended periods. For endurance performance, both are important: VO2 max sets your potential, while lactate threshold determines how much of that potential you can use during races. Most endurance athletes benefit from training both systems."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -728,6 +786,86 @@
             </div>
         </div>
 
+
+        <!-- FAQ Section -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <section class="bg-gray-50 rounded-lg p-8 my-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What is a good VO2 max score?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            A good VO2 max score depends on age, gender, and fitness level. For men aged 20-40, scores above 50 ml/kg/min are considered good, while 60+ is excellent. For women, scores above 40 ml/kg/min are good, and 50+ is excellent. Recreational athletes typically range from 40-50 ml/kg/min, competitive athletes from 50-70 ml/kg/min, and elite endurance athletes often exceed 70 ml/kg/min. However, what's "good" is relative to your goals and baseline fitness.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">How do I improve my VO2 max?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            To improve VO2 max, incorporate high-intensity interval training (HIIT) with work periods of 3-8 minutes at 90-100% of VO2 max intensity, followed by equal or slightly shorter recovery periods. Effective protocols include classic intervals (5x4 minutes at 5K pace), micro-intervals (30/15 protocol), tempo intervals at lactate threshold, and polarized training combining 80% low-intensity with 20% high-intensity work. Consistency is key - perform 1-2 VO2 max sessions per week for beginners, or 2-3 for advanced athletes, with proper recovery between sessions.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Can I test VO2 max at home?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Yes, you can estimate VO2 max at home using field tests, though they won't be as accurate as laboratory testing. The Cooper Test (12-minute run for maximum distance) is a popular option. Other methods include the 1.5-mile run test, step tests, or submaximal protocols using heart rate response. Many GPS watches and fitness trackers also provide VO2 max estimates based on your running or cycling data. While these home methods provide useful estimates for tracking progress, a laboratory VO2 max test with metabolic cart remains the gold standard for accurate measurement.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">How long does it take to increase VO2 max?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Most people see significant VO2 max improvements within 4-8 weeks of consistent, targeted training. Beginners can expect 15-30% improvement over several months, while trained athletes typically see 5-15% gains. The timeline varies based on training history, genetics, and program design. Initial improvements come quickly, but progress slows after 12-16 weeks as you approach your genetic potential. Continued training maintains VO2 max levels, but further gains require progressive overload and varied training stimuli.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">Does VO2 max decrease with age?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            Yes, VO2 max naturally decreases with age at a rate of approximately 10% per decade after age 30 for sedentary individuals. However, this decline can be significantly slowed through consistent endurance training. Active individuals may only experience a 5% decline per decade. Masters athletes who maintain high-intensity training can preserve much of their VO2 max well into their 60s and 70s. The key is continuing regular high-intensity interval training, as complete cessation of training leads to rapid declines regardless of age.
+                        </div>
+                    </details>
+
+                    <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                        <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center">
+                            <span class="text-lg">What's the difference between VO2 max and lactate threshold?</span>
+                            <svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                            VO2 max represents your maximum oxygen uptake capacity - the ceiling of your aerobic system - while lactate threshold is the intensity at which lactate begins to accumulate faster than it can be cleared. VO2 max determines your maximum aerobic power, but lactate threshold determines the percentage of that power you can sustain for extended periods. For endurance performance, both are important: VO2 max sets your potential, while lactate threshold determines how much of that potential you can use during races. Most endurance athletes benefit from training both systems.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
 
     </main>
 

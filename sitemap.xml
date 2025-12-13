@@ -60,6 +60,14 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Calculators Landing Page -->
+    <url>
+        <loc>https://runbikecalc.com/calculators</loc>
+        <lastmod>2025-12-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
     <!-- Calculator Hub Pages -->
     <url>
         <loc>https://runbikecalc.com/running-calculators</loc>
