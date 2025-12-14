@@ -795,6 +795,30 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/sleep-optimization-athletes-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/hrv-training-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/mobility-stretching-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/meditation-for-athletes-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 
     <!-- Static Pages -->
     <url>
