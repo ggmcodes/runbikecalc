@@ -777,6 +777,24 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/cold-plunging-ice-bath-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/wim-hof-breathing-method-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/sauna-benefits-complete-guide</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 
     <!-- Static Pages -->
     <url>
