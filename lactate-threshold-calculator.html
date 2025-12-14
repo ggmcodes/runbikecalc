@@ -1408,15 +1408,17 @@
             }
         }
 
-        // Download PDF (placeholder)
+        // Download PDF - uses browser print dialog
         function downloadResults() {
-            alert('PDF download feature coming soon! Take a screenshot for now.');
+            window.print();
         }
 
-        // Mobile menu
+        // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            // Simple toggle for demo
-            alert('Mobile menu would open here');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
         });
 
     // Mobile Training Plans submenu toggle
