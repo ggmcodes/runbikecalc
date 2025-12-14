@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+
+    <title>Search | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/search">
+    <meta name="description" content="Search all RunBikeCalc calculators, training plans, and blog posts. Find the perfect tool for your running, cycling, or triathlon training.">
+
+    <meta property="og:title" content="Search | RunBikeCalc">
+    <meta property="og:description" content="Search calculators, training plans, and resources for runners, cyclists, and triathletes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/search">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .search-highlight {
+            background-color: #fef08a;
+            font-weight: 600;
+        }
+        .result-card {
+            transition: all 0.2s ease;
+        }
+        .result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="text-xl font-bold text-primary">RunBikeCalc</a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="/training-plans" class="text-gray-600 hover:text-primary">Plans</a>
+                    <a href="/calculators" class="text-gray-600 hover:text-primary">Calculators</a>
+                    <a href="/blog" class="text-gray-600 hover:text-primary">Blog</a>
+                    <a href="/search" class="text-primary font-medium">Search</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-6xl mx-auto px-4 py-4">
+        <nav class="text-sm text-gray-500">
+            <a href="/" class="hover:text-primary">Home</a>
+            <span class="mx-2">›</span>
+            <span class="text-gray-900">Search</span>
+        </nav>
+    </div>
+
+    <!-- Search Section -->
+    <section class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">Search RunBikeCalc</h1>
+            <p class="text-xl text-blue-100 mb-8 text-center max-w-2xl mx-auto">
+                Search through 30+ calculators, training plans, and 50+ blog articles
+            </p>
+
+            <!-- Search Input -->
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search for calculators, training plans, or topics..."
+                        class="w-full px-6 py-4 pr-12 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-400/50"
+                        autocomplete="off"
+                    >
+                    <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <div id="searchStats" class="text-center mt-4 text-blue-100"></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <!-- Results Container -->
+        <div id="resultsContainer">
+            <!-- Popular Searches (shown when no query) -->
+            <div id="popularSearches" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6">Popular Searches</h2>
+                <div class="flex flex-wrap gap-3">
+                    <button onclick="quickSearch('pace')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">Pace Calculator</button>
+                    <button onclick="quickSearch('heart rate')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">Heart Rate Zones</button>
+                    <button onclick="quickSearch('FTP')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">FTP</button>
+                    <button onclick="quickSearch('VO2')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">VO2 Max</button>
+                    <button onclick="quickSearch('marathon')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">Marathon Training</button>
+                    <button onclick="quickSearch('triathlon')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">Triathlon</button>
+                    <button onclick="quickSearch('calories')" class="px-4 py-2 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition">Calories Burned</button>
+                </div>
+            </div>
+
+            <!-- Search Results will be inserted here -->
+            <div id="searchResults"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400 text-sm">Free calculators and training plans for endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Plans</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/running-training-plan-generator" class="hover:text-white">Running</a></li>
+                        <li><a href="/cycling-training-plan-generator" class="hover:text-white">Cycling</a></li>
+                        <li><a href="/triathlon-training-plan-generator" class="hover:text-white">Triathlon</a></li>
+                        <li><a href="/hyrox-training-plan-generator" class="hover:text-white">Hyrox</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                © 2025 RunBikeCalc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search Index Data
+        const SEARCH_DATA = {
+            calculators: [
+                {t:"Running Pace Calculator",d:"Calculate pace, time, and distance for any running workout or race",u:"/running-pace-calculator",c:"Running",tags:["pace","running","distance","time"]},
+                {t:"Race Pace Calculator",d:"Get your ideal race pace and split times for any distance",u:"/race-pace-calculator",c:"Running",tags:["race","pace","splits","marathon","5k","10k"]},
+                {t:"Race Time Predictor",d:"Predict your finish time for 5K, 10K, half marathon, and marathon",u:"/race-time-predictor",c:"Running",tags:["race","prediction","marathon","5k","10k"]},
+                {t:"Pace Converter",d:"Convert between min/km, min/mile, km/h, and mph",u:"/pace-converter-calculator",c:"Running",tags:["pace","converter","speed","km","mile"]},
+                {t:"Treadmill Pace Calculator",d:"Convert treadmill speed to outdoor equivalent pace",u:"/treadmill-pace-calculator",c:"Running",tags:["treadmill","pace","indoor"]},
+                {t:"Run/Walk Calculator",d:"Plan run/walk intervals for training and racing",u:"/run-walk-calculator",c:"Running",tags:["run","walk","intervals","beginner"]},
+                {t:"Distance Converter",d:"Convert between miles, kilometers, and meters",u:"/running-distance-converter",c:"Running",tags:["distance","converter","km","miles"]},
+                {t:"KM to Miles Converter",d:"Quick conversion between kilometers and miles",u:"/km-to-miles-calculator",c:"Running",tags:["km","miles","converter"]},
+                {t:"Heart Rate Zone Calculator",d:"Calculate your 5 training zones based on max HR or LTHR",u:"/heart-rate-zone-calculator",c:"Heart Rate",tags:["heart rate","zones","training","HR"]},
+                {t:"Max Heart Rate Calculator",d:"Estimate your maximum heart rate using multiple formulas",u:"/max-heart-rate-calculator",c:"Heart Rate",tags:["max heart rate","HR"]},
+                {t:"Target Heart Rate Calculator",d:"Find your target HR for fat burning or cardio training",u:"/target-heart-rate-calculator",c:"Heart Rate",tags:["target","heart rate","cardio"]},
+                {t:"Karvonen Formula Calculator",d:"Calculate zones using heart rate reserve method",u:"/mhr-karvonen-calculator",c:"Heart Rate",tags:["karvonen","heart rate","zones"]},
+                {t:"LTHR Zone Calculator",d:"Training zones based on lactate threshold heart rate",u:"/lthr-zone-calculator",c:"Heart Rate",tags:["LTHR","lactate threshold","zones"]},
+                {t:"Lactate Threshold Calculator",d:"Estimate your lactate threshold pace and heart rate",u:"/lactate-threshold-pace-predictor",c:"Heart Rate",tags:["lactate","threshold","pace"]},
+                {t:"Zone 2 Calculator",d:"Calculate Zone 2 training heart rate for aerobic base building",u:"/zone-2-calculator",c:"Heart Rate",tags:["zone 2","aerobic","base"]},
+                {t:"FTP Calculator",d:"Calculate Functional Threshold Power and training zones",u:"/ftp-calculator",c:"Cycling",tags:["FTP","cycling","power","zones"]},
+                {t:"Bike Gearing Calculator",d:"Calculate gear ratios, speed, and cadence relationships",u:"/bike-gearing-calculator",c:"Cycling",tags:["gearing","cycling","cadence"]},
+                {t:"Cadence Speed Calculator",d:"Find your speed based on cadence and gear ratio",u:"/cadence-speed-calculator",c:"Cycling",tags:["cadence","speed","cycling"]},
+                {t:"Power to Weight Calculator",d:"Calculate your watts/kg ratio for climbing performance",u:"/power-to-weight-ratio-calculator",c:"Cycling",tags:["power","weight","watts","cycling"]},
+                {t:"Watts to Calories Calculator",d:"Convert cycling power output to calories burned",u:"/watts-to-calories-calculator",c:"Cycling",tags:["watts","calories","cycling"]},
+                {t:"FTP Improvement Calculator",d:"Track and project your FTP gains over time",u:"/ftp-improvement-calculator",c:"Cycling",tags:["FTP","improvement","progress"]},
+                {t:"VO2 Max Calculator",d:"Estimate your maximal oxygen uptake from race times",u:"/vo2-max-calculator",c:"Performance",tags:["VO2 max","fitness","performance"]},
+                {t:"Cooper Test Calculator",d:"Calculate VO2 max from 12-minute run distance",u:"/cooper-test-calculator",c:"Performance",tags:["cooper","VO2 max","test"]},
+                {t:"Calories Burned Calculator",d:"Calculate calories burned during running and walking",u:"/calories-burned-running-calculator",c:"Performance",tags:["calories","running","burned"]},
+                {t:"BMI Calculator",d:"Calculate Body Mass Index and healthy weight range",u:"/bmi-calculator",c:"Performance",tags:["BMI","weight","body mass"]},
+                {t:"Training Load Calculator",d:"Calculate TSS, ATL, CTL, and training stress balance",u:"/training-load-calculator",c:"Performance",tags:["training load","TSS","stress"]},
+                {t:"Recovery Calculator",d:"Estimate recovery time based on workout intensity",u:"/recovery-calculator",c:"Performance",tags:["recovery","rest","training"]},
+                {t:"Sweat Rate Calculator",d:"Calculate your sweat rate for hydration planning",u:"/sweat-test-calculator",c:"Performance",tags:["sweat","hydration","fluid"]},
+                {t:"Aerobic/Anaerobic Calculator",d:"Determine your aerobic and anaerobic thresholds",u:"/aerobic-anaerobic-calculator",c:"Performance",tags:["aerobic","anaerobic","threshold"]},
+                {t:"Body Composition Calculator",d:"Calculate body fat % and lean mass using Navy method",u:"/body-composition-calculator",c:"Performance",tags:["body fat","composition"]},
+                {t:"Age-Graded Calculator",d:"Compare race times across ages using WMA tables",u:"/age-graded-calculator",c:"Performance",tags:["age graded","WMA","race"]}
+            ],
+            plans: [
+                {t:"Running Training Plan Generator",d:"Generate personalized training plans for 5K, 10K, half marathon, marathon, and ultra distances",u:"/running-training-plan-generator",c:"Training Plans",tags:["running","training plan","marathon"]},
+                {t:"Cycling Training Plan Generator",d:"Create custom cycling training plans for Gran Fondo, century rides, and time trials",u:"/cycling-training-plan-generator",c:"Training Plans",tags:["cycling","training plan","century"]},
+                {t:"Triathlon Training Plan Generator",d:"Build triathlon plans for Sprint, Olympic, Half Ironman, and Ironman distances",u:"/triathlon-training-plan-generator",c:"Training Plans",tags:["triathlon","ironman","sprint"]},
+                {t:"Hyrox Training Plan Generator",d:"Generate Hyrox-specific training plans with strength and running components",u:"/hyrox-training-plan-generator",c:"Training Plans",tags:["hyrox","training plan","OCR"]},
+                {t:"Zone 2 Training Plan Generator",d:"Build aerobic base training plans focused on Zone 2 heart rate",u:"/zone-2-training-plan-generator",c:"Training Plans",tags:["zone 2","aerobic","base training"]}
+            ],
+            blog: [
+                {t:"Chicago Marathon Training Complete Guide",d:"Complete guide to training for the Chicago Marathon with training plans and tips",u:"/blog/chicago-marathon-training-complete-guide",c:"Blog",tags:["marathon","chicago","training"]},
+                {t:"NYC Marathon Training Complete Guide",d:"Everything you need to know about training for the New York City Marathon",u:"/blog/nyc-marathon-training-complete-guide",c:"Blog",tags:["marathon","NYC","training"]},
+                {t:"London Marathon Training Complete Guide",d:"Complete training guide for the London Marathon with plans and race strategy",u:"/blog/london-marathon-training-complete-guide",c:"Blog",tags:["marathon","london","training"]},
+                {t:"Berlin Marathon Training Complete Guide",d:"Train for the fast Berlin Marathon course with this complete guide",u:"/blog/berlin-marathon-training-complete-guide",c:"Blog",tags:["marathon","berlin","training"]},
+                {t:"Boston Marathon Qualifying Guide",d:"How to qualify for Boston Marathon including BQ times and training strategies",u:"/blog/boston-marathon-qualifying-guide",c:"Blog",tags:["marathon","boston","qualifying"]},
+                {t:"Post-Marathon Recovery Complete Guide",d:"Science-based recovery strategies after running a marathon",u:"/blog/post-marathon-recovery-complete-guide",c:"Blog",tags:["marathon","recovery","rest"]},
+                {t:"Couch to 5K Complete Guide 2025",d:"Complete beginner's guide to running your first 5K from couch to finish line",u:"/blog/couch-to-5k-complete-guide-2025",c:"Blog",tags:["5k","beginner","couch to 5k"]},
+                {t:"10K Training Plan 2025",d:"Science-based 10K training plans for beginner to advanced runners",u:"/blog/10k-training-plan-2025",c:"Blog",tags:["10k","training plan"]},
+                {t:"5K to 10K Progression Guide",d:"How to progress from 5K to 10K running with training plans",u:"/blog/5k-to-10k-progression-guide",c:"Blog",tags:["5k","10k","progression"]},
+                {t:"Running Pace Training Guide 2025",d:"Master pace training for better race performance and endurance",u:"/blog/running-pace-training-guide-2025",c:"Blog",tags:["pace","training","running"]},
+                {t:"Running Cadence & Form Complete Guide",d:"Improve running efficiency with proper cadence and form techniques",u:"/blog/running-cadence-form-complete-guide",c:"Blog",tags:["cadence","form","running"]},
+                {t:"Run/Walk Method for Beginners",d:"Complete guide to the run/walk method for beginner runners",u:"/blog/run-walk-method-beginners",c:"Blog",tags:["run walk","beginner"]},
+                {t:"Trail Running Training Complete Guide",d:"Everything you need to know about trail running training and racing",u:"/blog/trail-running-training-complete-guide",c:"Blog",tags:["trail running","training"]},
+                {t:"Training for First Ultramarathon Complete Guide",d:"Complete guide to training for your first ultramarathon",u:"/blog/training-for-first-ultramarathon-complete-guide",c:"Blog",tags:["ultramarathon","ultra"]},
+                {t:"Women's Running Training Complete Guide",d:"Training considerations and tips specifically for women runners",u:"/blog/womens-running-training-complete-guide",c:"Blog",tags:["women","running"]},
+                {t:"Beginner Cyclist Complete Guide",d:"Everything beginners need to know to start cycling and build fitness",u:"/blog/beginner-cyclist-complete-guide",c:"Blog",tags:["cycling","beginner"]},
+                {t:"Century Ride Training Complete Guide",d:"Train for your first 100-mile century ride with this complete guide",u:"/blog/century-ride-training-complete-guide",c:"Blog",tags:["century","cycling"]},
+                {t:"Gravel Cycling Training Complete Guide",d:"Complete guide to gravel cycling training and racing",u:"/blog/gravel-cycling-training-complete-guide",c:"Blog",tags:["gravel","cycling"]},
+                {t:"Winter Cycling Training Complete Guide",d:"How to maintain cycling fitness through winter months",u:"/blog/winter-cycling-training-complete-guide",c:"Blog",tags:["winter","cycling"]},
+                {t:"Indoor Cycling Zwift Training Complete Guide",d:"Complete guide to indoor cycling training with Zwift and smart trainers",u:"/blog/indoor-cycling-zwift-training-complete-guide",c:"Blog",tags:["zwift","indoor","cycling"]},
+                {t:"Sprint Triathlon Training Complete Guide",d:"Complete guide to training for your first sprint triathlon",u:"/blog/sprint-triathlon-training-complete-guide",c:"Blog",tags:["triathlon","sprint"]},
+                {t:"Olympic Triathlon Training Complete Guide",d:"Train for Olympic distance triathlon with this comprehensive guide",u:"/blog/olympic-triathlon-training-complete-guide",c:"Blog",tags:["triathlon","olympic"]},
+                {t:"Half Ironman 70.3 Training Complete Guide",d:"Complete guide to training for Half Ironman 70.3 distance",u:"/blog/half-ironman-70.3-training-complete-guide",c:"Blog",tags:["half ironman","70.3","triathlon"]},
+                {t:"Training for First Ironman Complete Guide",d:"Everything you need to know to train for your first Ironman",u:"/blog/training-for-first-ironman-complete-guide",c:"Blog",tags:["ironman","triathlon"]},
+                {t:"Open Water Swimming Complete Guide",d:"Master open water swimming for triathlon and ocean swimming",u:"/blog/open-water-swimming-complete-guide",c:"Blog",tags:["swimming","open water","triathlon"]},
+                {t:"What is FTP Beginner Guide",d:"Complete beginner's guide to understanding FTP (Functional Threshold Power)",u:"/blog/what-is-ftp-beginner-guide",c:"Blog",tags:["FTP","cycling","beginner"]},
+                {t:"FTP Calculator vs Zwift vs TrainerRoad",d:"Compare FTP testing methods across different platforms",u:"/blog/ftp-calculator-vs-zwift-vs-trainerroad",c:"Blog",tags:["FTP","zwift","trainerroad"]},
+                {t:"Why Your FTP Dropped",d:"Common reasons for FTP decline and how to fix it",u:"/blog/why-your-ftp-dropped",c:"Blog",tags:["FTP","cycling","performance"]},
+                {t:"VO2 Max Training Guide 2025",d:"Science-based guide to improving VO2 max for endurance performance",u:"/blog/vo2-max-training-guide-2025",c:"Blog",tags:["VO2 max","training"]},
+                {t:"What is Zone 2 Training Complete Guide",d:"Complete guide to Zone 2 training for building aerobic base",u:"/blog/what-is-zone-2-training-complete-guide",c:"Blog",tags:["zone 2","training","aerobic"]},
+                {t:"Lactate Threshold Training Guide 2025",d:"Complete guide to lactate threshold training for endurance athletes",u:"/blog/lactate-threshold-training-guide-2025",c:"Blog",tags:["lactate threshold","LTHR"]},
+                {t:"How to Increase Lactate Threshold",d:"Proven strategies to improve your lactate threshold",u:"/blog/how-to-increase-lactate-threshold",c:"Blog",tags:["lactate threshold","improve"]},
+                {t:"Aerobic vs Anaerobic Training",d:"Understanding aerobic and anaerobic energy systems for training",u:"/blog/aerobic-vs-anaerobic-training",c:"Blog",tags:["aerobic","anaerobic"]},
+                {t:"Nutrition for Endurance Athletes Complete Guide",d:"Complete nutrition guide for endurance training and racing",u:"/blog/nutrition-for-endurance-athletes-complete-guide",c:"Blog",tags:["nutrition","diet","endurance"]},
+                {t:"Recovery & Rest Day Strategies Complete Guide",d:"Science-based recovery strategies for endurance athletes",u:"/blog/recovery-rest-day-strategies-complete-guide",c:"Blog",tags:["recovery","rest"]},
+                {t:"Strength Training for Runners Complete Guide",d:"Complete guide to strength training for improved running performance",u:"/blog/strength-training-for-runners-complete-guide",c:"Blog",tags:["strength","running"]},
+                {t:"What is Hyrox Complete Guide",d:"Complete guide to Hyrox fitness racing and training",u:"/blog/what-is-hyrox-complete-guide",c:"Blog",tags:["hyrox","fitness","OCR"]},
+                {t:"Race Prediction & Goal Setting Guide",d:"How to predict race times and set realistic performance goals",u:"/blog/race-prediction-goal-setting-guide",c:"Blog",tags:["race","prediction","goals"]},
+                {t:"Taper Week Complete Guide",d:"How to taper properly before races for peak performance",u:"/blog/taper-week-complete-guide",c:"Blog",tags:["taper","race","peaking"]},
+                {t:"Masters Athletes Training Complete Guide",d:"Training considerations for masters and older athletes",u:"/blog/masters-athletes-training-complete-guide",c:"Blog",tags:["masters","older","athletes"]}
+            ]
+        };
+
+        const allItems=[...SEARCH_DATA.calculators,...SEARCH_DATA.plans,...SEARCH_DATA.blog].map(i=>({title:i.t,description:i.d,url:i.u,category:i.c,tags:i.tags}));
+
+        function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e;}
+
+        function search(q){
+            const ps=document.getElementById('popularSearches'),sr=document.getElementById('searchResults'),ss=document.getElementById('searchStats');
+            if(!q||!q.trim()){ps.style.display='block';sr.textContent='';ss.textContent='';return;}
+            ps.style.display='none';
+            const terms=q.toLowerCase().split(' ').filter(t=>t.length>0);
+            const results=allItems.map(item=>{
+                let sc=0;const tl=item.title.toLowerCase(),dl=item.description.toLowerCase(),tagl=item.tags.join(' ').toLowerCase();
+                terms.forEach(term=>{if(tl===term)sc+=100;if(tl.startsWith(term))sc+=50;if(tl.includes(term))sc+=30;if(dl.includes(term))sc+=15;if(tagl.includes(term))sc+=10;});
+                return{...item,score:sc};
+            }).filter(i=>i.score>0).sort((a,b)=>b.score-a.score);
+            showResults(results,q,sr,ss);
+        }
+
+        function showResults(results,q,sr,ss){
+            sr.textContent='';
+            if(!results.length){ss.textContent='No results found';const d=el('div','text-center py-12');const h=el('h3','mt-2 text-lg font-medium text-gray-900','No results found');const p=el('p','mt-1 text-gray-500','Try different keywords or browse our categories');d.appendChild(h);d.appendChild(p);sr.appendChild(d);return;}
+            ss.textContent=`Found ${results.length} result${results.length!==1?'s':''}`;
+            const grouped={'Calculators':results.filter(r=>r.category==='Running'||r.category==='Heart Rate'||r.category==='Cycling'||r.category==='Performance'),'Training Plans':results.filter(r=>r.category==='Training Plans'),'Blog Posts':results.filter(r=>r.category==='Blog')};
+            const icons={'Calculators':'🧮','Training Plans':'📅','Blog Posts':'📝'};
+            const colors={'Calculators':'blue','Training Plans':'green','Blog Posts':'purple'};
+            Object.entries(grouped).forEach(([name,items])=>{
+                if(!items.length)return;
+                const sec=el('section','mb-12');const hd=el('div','flex items-center gap-3 mb-6');
+                hd.appendChild(el('span','text-3xl',icons[name]));hd.appendChild(el('h2','text-2xl font-bold text-gray-900',name));
+                hd.appendChild(el('span','bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium',items.length.toString()));
+                const grid=el('div','grid md:grid-cols-2 lg:grid-cols-3 gap-6');
+                items.forEach(item=>{
+                    const card=el('a',`result-card bg-white rounded-xl p-6 shadow-sm border-2 border-transparent hover:border-${colors[name]}-500`);
+                    card.href=item.url;
+                    const td=el('div','flex items-start justify-between mb-2');
+                    const h3=el('h3','text-lg font-bold text-gray-900 flex-1');
+                    h3.appendChild(highlight(item.title,q));td.appendChild(h3);
+                    const desc=el('p','text-gray-600 mb-4 text-sm');desc.appendChild(highlight(item.description,q));
+                    const lt=name==='Calculators'?'Use Calculator':name==='Training Plans'?'Generate Plan':'Read Article';
+                    const ls=el('span',`text-${colors[name]}-600 font-medium text-sm`,`${lt} →`);
+                    card.appendChild(td);card.appendChild(desc);card.appendChild(ls);grid.appendChild(card);
+                });
+                sec.appendChild(hd);sec.appendChild(grid);sr.appendChild(sec);
+            });
+        }
+
+        function highlight(txt,q){
+            if(!q)return document.createTextNode(txt);
+            const terms=q.toLowerCase().split(' ').filter(t=>t.length>0),frag=document.createDocumentFragment();
+            let last=0,matches=[];
+            terms.forEach(term=>{const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');let m;while((m=rx.exec(txt))!==null)matches.push({s:m.index,e:m.index+m[0].length,t:m[0]});});
+            matches.sort((a,b)=>a.s-b.s);const um=[];matches.forEach(m=>{if(!um.length||m.s>=um[um.length-1].e)um.push(m);});
+            um.forEach(m=>{if(m.s>last)frag.appendChild(document.createTextNode(txt.substring(last,m.s)));frag.appendChild(el('span','search-highlight',m.t));last=m.e;});
+            if(last<txt.length)frag.appendChild(document.createTextNode(txt.substring(last)));
+            return frag;
+        }
+
+        function quickSearch(q){document.getElementById('searchInput').value=q;search(q);window.scrollTo({top:400,behavior:'smooth'});}
+
+        const inp=document.getElementById('searchInput');let timer;
+        inp.addEventListener('input',e=>{clearTimeout(timer);timer=setTimeout(()=>search(e.target.value),300);});
+        const params=new URLSearchParams(window.location.search),qp=params.get('q');
+        if(qp){inp.value=qp;search(qp);}
+        inp.focus();
+        inp.addEventListener('input',e=>{if(e.target.value.length>2)gtag('event','search',{search_term:e.target.value});});
+    </script>
+</body>
+</html>
