@@ -479,6 +479,9 @@ class TrainingPlanGenerator extends Calculator {
 
         this.resultContainer.appendChild(errorDiv);
         this.resultContainer.classList.remove('hidden');
+
+        // Scroll to error
+        this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     /**
@@ -523,10 +526,8 @@ class TrainingPlanGenerator extends Calculator {
         // Initialize export button handlers
         this.initExportHandlers();
 
-        // Scroll to results on mobile
-        if (window.innerWidth < 768) {
-            this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        // Scroll to results
+        this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         // Save to history
         this.saveToHistory();
