@@ -297,7 +297,45 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-    
+
+    <!-- Interactive Tools & Timers -->
+    <url>
+        <loc>https://runbikecalc.com/body-composition-calculator</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/age-graded-calculator</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/interval-timer</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/tabata-timer</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/pace-band-generator</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/progress-tracker</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Hub/Category Pages -->
     <url>
         <loc>https://runbikecalc.com/heart-rate-tools</loc>

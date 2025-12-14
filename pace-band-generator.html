@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Pace Band Generator - Printable Race Wristband | Free Tool</title>
+    <link rel="canonical" href="https://runbikecalc.com/pace-band-generator">
+    <meta name="description" content="Generate custom pace bands for your race. Create printable wristbands with split times for 5K, 10K, half marathon, and marathon. Even splits or negative splits. Free pace band maker.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pace Band Generator - Create Custom Race Wristbands">
+    <meta property="og:description" content="Free pace band generator for running races. Create printable wristbands with split times.">
+    <meta property="og:image" content="https://runbikecalc.com/images/pace-band-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/pace-band-generator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pace Band Generator">
+    <meta name="twitter:description" content="Create custom pace bands for your race with split times">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/pace-band-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#ea580c',
+                        dark: '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Print CSS -->
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #pace-band-print, #pace-band-print * {
+                visibility: visible;
+            }
+
+            #pace-band-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            @page {
+                size: portrait;
+                margin: 0.5cm;
+            }
+        }
+
+        .pace-band-wristband {
+            border: 2px dashed #ccc;
+            page-break-inside: avoid;
+        }
+
+        .split-row:nth-child(even) {
+            background-color: #f9fafb;
+        }
+    </style>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pace Band Generator",
+        "url": "https://runbikecalc.com/pace-band-generator",
+        "description": "Generate custom pace bands with split times for running races. Create printable wristbands for 5K, 10K, half marathon, and marathon.",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a pace band and how does it work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A pace band is a printable wristband that shows your target split times for each mile or kilometer of a race. You wear it on your wrist during the race to stay on pace and achieve your goal finish time. It helps you avoid starting too fast and ensures even pacing throughout your race."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use even splits or negative splits?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most runners, negative splits (running the second half slightly faster) lead to better results and a more comfortable race experience. Even splits work well for experienced runners who know their pace. Start with a negative split strategy if you're unsure - it helps prevent going out too fast and hitting the wall."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I print and use my pace band?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generate your pace band, click Print, and print on regular paper. Cut out the band along the dashed lines, and wrap it around your wrist or attach it to your race bib. Some runners also laminate it or use clear packing tape for water resistance. Check your splits throughout the race to stay on pace."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What race distances can I create pace bands for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our pace band generator supports 5K (3.1 miles), 10K (6.2 miles), half marathon (13.1 miles), and marathon (26.2 miles). You can generate pace bands in either miles or kilometers, with options for even splits or negative splits."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I save my pace band for future use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Your pace band settings are automatically saved to your browser's local storage. You can also save multiple pace bands with custom names for different races and training runs. Simply click 'Save Pace Band' and give it a name to access it later."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between mile and kilometer splits?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mile splits show your cumulative time at each mile marker (1, 2, 3, etc.), while kilometer splits show times at each kilometer (1K, 2K, 3K, etc.). Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40 no-print">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="/running-pace-calculator" class="text-gray-700 hover:text-primary">Pace Calculator</a>
+                    <a href="/race-time-predictor" class="text-gray-700 hover:text-primary">Race Predictor</a>
+                    <a href="/heart-rate-zone-calculator" class="text-gray-700 hover:text-primary">Heart Rate</a>
+                    <a href="/blog" class="text-gray-700 hover:text-primary">Blog</a>
+                </div>
+            </div>
+
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden mt-4 border-t pt-4 md:hidden">
+                <a href="/" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="/running-pace-calculator" class="block py-2 text-gray-700 hover:text-primary">Pace Calculator</a>
+                <a href="/race-time-predictor" class="block py-2 text-gray-700 hover:text-primary">Race Predictor</a>
+                <a href="/heart-rate-zone-calculator" class="block py-2 text-gray-700 hover:text-primary">Heart Rate</a>
+                <a href="/blog" class="block py-2 text-gray-700 hover:text-primary">Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6 no-print">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Pace Band Generator</li>
+            </ol>
+        </nav>
+
+        <!-- Page heading -->
+        <div class="mb-8 no-print">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Race Pace Band Generator</h1>
+            <p class="text-lg text-gray-600">Create custom printable pace bands for your race. Generate split times for even or negative splits, print, and wear on your wrist during the race to stay on pace.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Pace Band Generator -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
+                    <h2 class="text-2xl font-semibold mb-6">Create Your Pace Band</h2>
+
+                    <form id="pace-band-form" class="space-y-6">
+                        <!-- Target Finish Time -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Target Finish Time *
+                            </label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div>
+                                    <input type="number"
+                                           id="hours"
+                                           name="hours"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                           placeholder="0"
+                                           min="0"
+                                           max="10"
+                                           value="0">
+                                    <p class="text-xs text-gray-600 mt-1">Hours</p>
+                                </div>
+                                <div>
+                                    <input type="number"
+                                           id="minutes"
+                                           name="minutes"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                           placeholder="30"
+                                           required
+                                           min="0"
+                                           max="59"
+                                           value="30">
+                                    <p class="text-xs text-gray-600 mt-1">Minutes</p>
+                                </div>
+                                <div>
+                                    <input type="number"
+                                           id="seconds"
+                                           name="seconds"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                           placeholder="0"
+                                           min="0"
+                                           max="59"
+                                           value="0">
+                                    <p class="text-xs text-gray-600 mt-1">Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Race Distance -->
+                        <div>
+                            <label for="race-distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                Race Distance *
+                            </label>
+                            <select id="race-distance" name="distance" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="5k">5K (3.1 miles)</option>
+                                <option value="10k">10K (6.2 miles)</option>
+                                <option value="half">Half Marathon (13.1 miles / 21.1 km)</option>
+                                <option value="marathon" selected>Marathon (26.2 miles / 42.2 km)</option>
+                            </select>
+                        </div>
+
+                        <!-- Unit System -->
+                        <div>
+                            <label for="unit-system" class="block text-sm font-medium text-gray-700 mb-2">
+                                Split Unit *
+                            </label>
+                            <select id="unit-system" name="units" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="miles">Miles</option>
+                                <option value="km">Kilometers</option>
+                            </select>
+                        </div>
+
+                        <!-- Split Strategy -->
+                        <div>
+                            <label for="split-strategy" class="block text-sm font-medium text-gray-700 mb-2">
+                                Pacing Strategy *
+                            </label>
+                            <select id="split-strategy" name="strategy" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="even">Even Splits (Same pace throughout)</option>
+                                <option value="negative">Negative Splits (Faster second half)</option>
+                            </select>
+                            <p class="text-xs text-gray-600 mt-1">Negative splits: First half 2-3% slower, second half 2-3% faster</p>
+                        </div>
+
+                        <!-- Pace Band Name -->
+                        <div>
+                            <label for="band-name" class="block text-sm font-medium text-gray-700 mb-2">
+                                Pace Band Name (Optional)
+                            </label>
+                            <input type="text"
+                                   id="band-name"
+                                   name="bandName"
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="e.g., Boston Marathon 2025">
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
+                                Generate Pace Band
+                            </button>
+                            <button type="button" id="save-band" class="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors hidden">
+                                Save Pace Band
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Saved Pace Bands -->
+                <div id="saved-bands-section" class="bg-white rounded-lg shadow-md p-6 mb-8 no-print hidden">
+                    <h3 class="text-xl font-semibold mb-4">Saved Pace Bands</h3>
+                    <div id="saved-bands-list" class="space-y-2">
+                        <!-- Saved bands will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Generated Pace Band -->
+                <div id="pace-band-result" class="hidden">
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Your Pace Band</h3>
+                            <button onclick="window.print()" class="bg-secondary text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition-colors">
+                                Print Pace Band
+                            </button>
+                        </div>
+                        <p class="text-gray-600 mb-4">Cut along the dashed lines and wrap around your wrist or attach to your race bib.</p>
+                    </div>
+
+                    <!-- Printable Pace Band -->
+                    <div id="pace-band-print">
+                        <!-- Pace band content will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none no-print">
+                    <h2>How to Use a Pace Band</h2>
+                    <p>A pace band is an essential racing tool that helps you maintain your target pace throughout your race. By displaying cumulative split times at each mile or kilometer marker, it keeps you on track to achieve your goal finish time.</p>
+
+                    <h3>Creating Your Perfect Pace Band</h3>
+                    <ol>
+                        <li><strong>Set Your Goal:</strong> Enter your target finish time based on recent training runs or race performances</li>
+                        <li><strong>Choose Your Distance:</strong> Select from 5K, 10K, half marathon, or marathon</li>
+                        <li><strong>Pick Your Units:</strong> Match your race course markers (miles or kilometers)</li>
+                        <li><strong>Select Your Strategy:</strong> Even splits or negative splits</li>
+                    </ol>
+
+                    <h3>Pacing Strategies Explained</h3>
+
+                    <h4>Even Splits</h4>
+                    <p>Running even splits means maintaining the same pace throughout the entire race. This strategy works well for experienced runners who know their capabilities and can maintain consistent effort. Even splits minimize the risk of fatigue from starting too fast.</p>
+
+                    <h4>Negative Splits</h4>
+                    <p>Negative splits involve running the second half of the race faster than the first half. This conservative approach helps you:</p>
+                    <ul>
+                        <li>Avoid going out too fast and "hitting the wall"</li>
+                        <li>Finish strong and pass other runners</li>
+                        <li>Achieve a more comfortable race experience</li>
+                        <li>Reduce the risk of injury or cramping</li>
+                    </ul>
+
+                    <h3>Printing and Wearing Your Pace Band</h3>
+                    <ol>
+                        <li><strong>Print:</strong> Click the Print button and print on regular paper</li>
+                        <li><strong>Cut:</strong> Cut along the dashed lines carefully</li>
+                        <li><strong>Weather-Proof:</strong> Optional - laminate or cover with clear packing tape</li>
+                        <li><strong>Attach:</strong> Wrap around your wrist, pin to your race bib, or attach to your watch strap</li>
+                        <li><strong>Use During Race:</strong> Check your actual time at each marker against your pace band</li>
+                    </ol>
+
+                    <h3>Tips for Race Day Success</h3>
+                    <ul>
+                        <li><strong>Start Conservative:</strong> Begin slightly slower than target pace to conserve energy</li>
+                        <li><strong>Stay Flexible:</strong> Adjust for weather, terrain, and how you feel</li>
+                        <li><strong>Account for Crowding:</strong> First mile may be slower due to race congestion</li>
+                        <li><strong>Use as a Guide:</strong> Don't panic if you're a few seconds off at each split</li>
+                        <li><strong>Practice in Training:</strong> Use pace bands during long training runs</li>
+                    </ul>
+
+                    <h3>Common Pace Band Mistakes to Avoid</h3>
+                    <ul>
+                        <li>Setting an unrealistic goal time</li>
+                        <li>Ignoring current weather conditions</li>
+                        <li>Not accounting for course elevation changes</li>
+                        <li>Being too rigid with pace targets</li>
+                        <li>Forgetting to factor in slower first mile due to crowds</li>
+                    </ul>
+                </article>
+
+                <!-- FAQ Section -->
+                <div class="space-y-6 mt-8 no-print">
+                    <h3 class="text-2xl font-bold">Frequently Asked Questions</h3>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">What is a pace band and how does it work?</h4>
+                        <p class="text-gray-700">A pace band is a printable wristband that shows your target split times for each mile or kilometer of a race. You wear it on your wrist during the race to stay on pace and achieve your goal finish time. It helps you avoid starting too fast and ensures even pacing throughout your race.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">Should I use even splits or negative splits?</h4>
+                        <p class="text-gray-700">For most runners, negative splits (running the second half slightly faster) lead to better results and a more comfortable race experience. Even splits work well for experienced runners who know their pace. Start with a negative split strategy if you're unsure - it helps prevent going out too fast and hitting the wall.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">How do I print and use my pace band?</h4>
+                        <p class="text-gray-700">Generate your pace band, click Print, and print on regular paper. Cut out the band along the dashed lines, and wrap it around your wrist or attach it to your race bib. Some runners also laminate it or use clear packing tape for water resistance. Check your splits throughout the race to stay on pace.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">What race distances can I create pace bands for?</h4>
+                        <p class="text-gray-700">Our pace band generator supports 5K (3.1 miles), 10K (6.2 miles), half marathon (13.1 miles), and marathon (26.2 miles). You can generate pace bands in either miles or kilometers, with options for even splits or negative splits.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">Can I save my pace band for future use?</h4>
+                        <p class="text-gray-700">Yes! Your pace band settings are automatically saved to your browser's local storage. You can also save multiple pace bands with custom names for different races and training runs. Simply click 'Save Pace Band' and give it a name to access it later.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg mb-2">What's the difference between mile and kilometer splits?</h4>
+                        <p class="text-gray-700">Mile splits show your cumulative time at each mile marker (1, 2, 3, etc.), while kilometer splits show times at each kilometer (1K, 2K, 3K, etc.). Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1 no-print">
+                <!-- Quick Reference -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Popular Goal Times</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">Marathon</h4>
+                            <div class="space-y-1 text-gray-600">
+                                <div>3:00:00 - Elite</div>
+                                <div>3:30:00 - Advanced</div>
+                                <div>4:00:00 - Intermediate</div>
+                                <div>4:30:00 - Beginner+</div>
+                                <div>5:00:00 - Beginner</div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Half Marathon</h4>
+                            <div class="space-y-1 text-gray-600">
+                                <div>1:30:00 - Elite</div>
+                                <div>1:45:00 - Advanced</div>
+                                <div>2:00:00 - Intermediate</div>
+                                <div>2:15:00 - Beginner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">Related Tools</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/marathon-training-plan-generator" class="text-primary hover:underline">Marathon Training Plan</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16 no-print">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/pace-band-generator" class="hover:text-white">Pace Band Generator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/marathon-training-plan-generator" class="hover:text-white">Training Plans</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Race distance data
+        const raceDistances = {
+            '5k': { miles: 3.1, km: 5 },
+            '10k': { miles: 6.2, km: 10 },
+            'half': { miles: 13.1, km: 21.1 },
+            'marathon': { miles: 26.2, km: 42.2 }
+        };
+
+        // Load saved pace bands from localStorage
+        function loadSavedBands() {
+            const saved = localStorage.getItem('paceBands');
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        // Save pace bands to localStorage
+        function saveBands(bands) {
+            localStorage.setItem('paceBands', JSON.stringify(bands));
+        }
+
+        // Display saved pace bands
+        function displaySavedBands() {
+            const bands = loadSavedBands();
+            const section = document.getElementById('saved-bands-section');
+            const list = document.getElementById('saved-bands-list');
+
+            if (bands.length === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+
+            section.classList.remove('hidden');
+            list.innerHTML = bands.map((band, index) => `
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div>
+                        <div class="font-medium">${band.name}</div>
+                        <div class="text-sm text-gray-600">${band.distance} - ${band.time} - ${band.strategy}</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="loadBand(${index})" class="text-primary hover:underline text-sm">Load</button>
+                        <button onclick="deleteBand(${index})" class="text-red-600 hover:underline text-sm">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load a saved pace band
+        function loadBand(index) {
+            const bands = loadSavedBands();
+            const band = bands[index];
+
+            // Parse time
+            const timeParts = band.time.split(':');
+            document.getElementById('hours').value = timeParts[0] || 0;
+            document.getElementById('minutes').value = timeParts[1] || 0;
+            document.getElementById('seconds').value = timeParts[2] || 0;
+
+            // Set other fields
+            document.getElementById('race-distance').value = band.distanceKey;
+            document.getElementById('unit-system').value = band.units;
+            document.getElementById('split-strategy').value = band.strategyKey;
+            document.getElementById('band-name').value = band.name;
+
+            // Generate the pace band
+            document.getElementById('pace-band-form').dispatchEvent(new Event('submit'));
+        }
+
+        // Delete a saved pace band
+        function deleteBand(index) {
+            if (confirm('Delete this pace band?')) {
+                const bands = loadSavedBands();
+                bands.splice(index, 1);
+                saveBands(bands);
+                displaySavedBands();
+            }
+        }
+
+        // Format time as HH:MM:SS
+        function formatTime(totalSeconds) {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = Math.round(totalSeconds % 60);
+
+            if (hours > 0) {
+                return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            } else {
+                return `${minutes}:${String(seconds).padStart(2, '0')}`;
+            }
+        }
+
+        // Generate pace band
+        function generatePaceBand(formData) {
+            const hours = parseInt(formData.get('hours')) || 0;
+            const minutes = parseInt(formData.get('minutes')) || 0;
+            const seconds = parseInt(formData.get('seconds')) || 0;
+            const distanceKey = formData.get('distance');
+            const units = formData.get('units');
+            const strategy = formData.get('strategy');
+            const bandName = formData.get('bandName') || `${distanceKey.toUpperCase()} ${strategy} splits`;
+
+            // Calculate total time in seconds
+            const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+
+            if (totalSeconds <= 0) {
+                alert('Please enter a valid finish time.');
+                return;
+            }
+
+            // Get distance
+            const distance = raceDistances[distanceKey][units];
+
+            // Calculate pace per unit
+            let pacePerUnit = totalSeconds / distance;
+
+            // Generate splits
+            const splits = [];
+            const numSplits = Math.ceil(distance);
+
+            if (strategy === 'even') {
+                // Even splits - same pace throughout
+                for (let i = 1; i <= numSplits; i++) {
+                    const splitTime = pacePerUnit * i;
+                    splits.push({
+                        marker: i,
+                        time: formatTime(splitTime),
+                        pace: formatTime(pacePerUnit)
+                    });
+                }
+            } else {
+                // Negative splits - first half 2.5% slower, second half 2.5% faster
+                const halfDistance = distance / 2;
+                const firstHalfPace = pacePerUnit * 1.025;
+                const secondHalfPace = pacePerUnit * 0.975;
+
+                for (let i = 1; i <= numSplits; i++) {
+                    let cumulativeTime;
+                    let currentPace;
+
+                    if (i <= halfDistance) {
+                        cumulativeTime = firstHalfPace * i;
+                        currentPace = firstHalfPace;
+                    } else {
+                        const firstHalfTime = firstHalfPace * halfDistance;
+                        const secondHalfDistance = i - halfDistance;
+                        cumulativeTime = firstHalfTime + (secondHalfPace * secondHalfDistance);
+                        currentPace = secondHalfPace;
+                    }
+
+                    splits.push({
+                        marker: i,
+                        time: formatTime(cumulativeTime),
+                        pace: formatTime(currentPace)
+                    });
+                }
+            }
+
+            // Display the pace band
+            displayPaceBand(splits, {
+                name: bandName,
+                distance: `${distanceKey.toUpperCase()} (${distance} ${units})`,
+                targetTime: formatTime(totalSeconds),
+                strategy: strategy === 'even' ? 'Even Splits' : 'Negative Splits',
+                units: units,
+                distanceKey: distanceKey,
+                strategyKey: strategy,
+                time: `${hours}:${minutes}:${seconds}`
+            });
+        }
+
+        // Display pace band
+        function displayPaceBand(splits, config) {
+            const resultDiv = document.getElementById('pace-band-result');
+            const printDiv = document.getElementById('pace-band-print');
+
+            // Create wristband HTML
+            const wristbandHTML = `
+                <div class="pace-band-wristband bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto mb-8">
+                    <div class="text-center mb-4 border-b-2 border-gray-300 pb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">${config.name}</h3>
+                        <div class="text-lg text-gray-700 mt-2">${config.distance}</div>
+                        <div class="text-md text-gray-600">Target: ${config.targetTime}</div>
+                        <div class="text-sm text-gray-500">${config.strategy}</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        ${splits.map(split => `
+                            <div class="split-row flex justify-between items-center p-2 rounded">
+                                <span class="font-semibold text-gray-900">${split.marker} ${config.units === 'miles' ? 'mi' : 'km'}</span>
+                                <span class="text-gray-700 font-medium">${split.time}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="text-center mt-4 pt-4 border-t-2 border-gray-300 text-xs text-gray-500">
+                        Generated by RunBikeCalc.com
+                    </div>
+                </div>
+            `;
+
+            printDiv.innerHTML = wristbandHTML;
+            resultDiv.classList.remove('hidden');
+
+            // Show save button
+            document.getElementById('save-band').classList.remove('hidden');
+
+            // Store current config for saving
+            window.currentPaceBand = config;
+
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Form submission
+        document.getElementById('pace-band-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            generatePaceBand(formData);
+        });
+
+        // Save pace band
+        document.getElementById('save-band').addEventListener('click', function() {
+            if (!window.currentPaceBand) {
+                alert('Please generate a pace band first.');
+                return;
+            }
+
+            const bands = loadSavedBands();
+
+            // Check if already saved
+            const existingIndex = bands.findIndex(b => b.name === window.currentPaceBand.name);
+            if (existingIndex !== -1) {
+                if (!confirm('A pace band with this name already exists. Overwrite?')) {
+                    return;
+                }
+                bands[existingIndex] = window.currentPaceBand;
+            } else {
+                bands.push(window.currentPaceBand);
+            }
+
+            saveBands(bands);
+            displaySavedBands();
+            alert('Pace band saved!');
+        });
+
+        // Initialize
+        displaySavedBands();
+    </script>
+</body>
+</html>

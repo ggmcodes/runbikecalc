@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-78BHZZG6CN');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    <title>Interval Workout Timer - Running & Track Training Timer | 2025</title>
+    <link rel="canonical" href="https://runbikecalc.com/interval-timer">
+    <meta name="description" content="Free interval workout timer for runners. Configurable work/rest intervals with audio cues, visual countdown, and preset workouts for 400m, 800m, and track training. Perfect for HIIT and speed work.">
+    <meta name="keywords" content="interval timer, workout timer, running intervals, track workout timer, HIIT timer, 400m intervals, 800m intervals, speed work timer, running training">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {theme: {extend: {colors: {'primary': '#2563eb','secondary': '#10b981','accent': '#f59e0b','dark': '#1f2937'}}}}</script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script type="application/ld+json">{"@context": "https://schema.org","@type": "WebApplication","name": "Interval Workout Timer","description": "Configurable interval training timer with audio cues, visual countdown, and preset workouts for runners and athletes.","applicationCategory": "HealthApplication","offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "What is interval training?","acceptedAnswer": {"@type": "Answer","text": "Interval training alternates between periods of high-intensity work and lower-intensity rest or recovery. This method improves speed, VO2 max, and running economy more effectively than steady-state training alone. Common examples include 400m repeats, 800m intervals, and fartlek workouts."}},{"@type": "Question","name": "How long should work intervals be for running?","acceptedAnswer": {"@type": "Answer","text": "Work intervals typically range from 30 seconds to 5 minutes depending on your goal. Short intervals (30-90 seconds) build anaerobic capacity and speed. Medium intervals (2-4 minutes) improve VO2 max. Longer intervals (4-8 minutes) develop lactate threshold. Match interval length to your training goal and fitness level."}},{"@type": "Question","name": "What is the ideal work-to-rest ratio for intervals?","acceptedAnswer": {"@type": "Answer","text": "Common work-to-rest ratios include 1:1 for hard efforts (e.g., 2 min work, 2 min rest), 2:1 for moderate intervals (e.g., 4 min work, 2 min rest), and 3:1 for tempo intervals. Beginners should start with longer rest periods (1:2 ratio) and progress to shorter rest as fitness improves."}},{"@type": "Question","name": "How many interval sets should I do per workout?","acceptedAnswer": {"@type": "Answer","text": "This depends on interval length and intensity. For short sprints (200-400m), 6-12 repeats is common. For 800m intervals, 4-8 repeats works well. For longer intervals (1000m+), 3-6 repeats is typical. Total hard running should be 3-5km for most interval sessions. Quality matters more than quantity."}},{"@type": "Question","name": "Should I do interval training on a track or road?","acceptedAnswer": {"@type": "Answer","text": "Both work well. Tracks provide accurate distances, flat terrain, and soft surfaces that reduce impact. Road intervals offer real-world conditions and hill options. For precise pacing (400m, 800m repeats), use a track. For fartlek or time-based intervals, roads work great. Mix both for variety."}},{"@type": "Question","name": "How often should I do interval training?","acceptedAnswer": {"@type": "Answer","text": "Most runners benefit from 1-2 interval sessions per week. More than twice weekly increases injury risk without additional benefit for recreational runners. Allow 48-72 hours between hard interval sessions for recovery. Combine with easy runs, long runs, and rest days for a balanced training plan."}}]}</script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-gray-600 hover:text-primary">Home</a>
+                    <a href="/training-plans" class="text-gray-600 hover:text-primary">Training Plans</a>
+                    <a href="/running-tools" class="text-primary font-medium">Run</a>
+                    <a href="/cycling-tools" class="text-gray-600 hover:text-primary">Bike</a>
+                    <a href="/blog" class="text-gray-600 hover:text-primary">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm text-gray-600"><a href="/" class="hover:text-primary">Home</a><span class="mx-2">/</span><a href="/running-tools" class="hover:text-primary">Running Tools</a><span class="mx-2">/</span><span class="text-gray-900">Interval Timer</span></nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="mb-8 max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Speed Work</span>
+                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Track Training</span>
+                <span class="text-gray-500 text-sm">Free Tool</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interval Workout Timer</h1>
+            <p class="text-xl text-gray-600">Customizable interval timer for track workouts, speed training, and HIIT sessions. Configure work/rest intervals, set multiple rounds and sets, and use preset workouts for 400m, 800m, and pyramid intervals.</p>
+        </header>
+
+        <div class="bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl p-6 mb-8 max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-bold mb-1">Plan Your Training</h3>
+                    <p class="text-green-100">Get a personalized training plan with structured intervals</p>
+                </div>
+                <a href="/running-training-plan-generator" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition text-center">Training Plan Generator</a>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE INTERVAL TIMER -->
+        <div id="interval-timer" class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-2xl p-6 md:p-8 mb-8">
+
+            <!-- Configuration Screen -->
+            <div id="config-screen">
+                <div class="text-center mb-6">
+                    <h2 class="text-3xl font-bold text-white mb-2">Configure Your Workout</h2>
+                    <p class="text-gray-400">Choose a preset or customize your intervals</p>
+                </div>
+
+                <!-- Preset Buttons -->
+                <div class="mb-6">
+                    <h3 class="text-white font-semibold mb-3">Quick Presets</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <button onclick="loadPreset('4x400m')" class="bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            4x400m
+                        </button>
+                        <button onclick="loadPreset('8x200m')" class="bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            8x200m
+                        </button>
+                        <button onclick="loadPreset('5x800m')" class="bg-gradient-to-br from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            5x800m
+                        </button>
+                        <button onclick="loadPreset('pyramid')" class="bg-gradient-to-br from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            Pyramid
+                        </button>
+                        <button onclick="loadPreset('tabata')" class="bg-gradient-to-br from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            Tabata
+                        </button>
+                        <button onclick="loadPreset('10x1min')" class="bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            10x1min
+                        </button>
+                        <button onclick="loadPreset('6x3min')" class="bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            6x3min
+                        </button>
+                        <button onclick="loadPreset('fartlek')" class="bg-gradient-to-br from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white py-3 px-4 rounded-lg font-semibold transition-all">
+                            Fartlek
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Configuration -->
+                <div class="bg-slate-800 rounded-xl p-6 mb-6">
+                    <h3 class="text-white font-semibold mb-4">Custom Configuration</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Warm-up (minutes)</label>
+                            <input type="number" id="warmup-time" value="5" min="0" max="30" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Cool-down (minutes)</label>
+                            <input type="number" id="cooldown-time" value="5" min="0" max="30" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Work Duration (seconds)</label>
+                            <input type="number" id="work-duration" value="90" min="5" max="600" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Rest Duration (seconds)</label>
+                            <input type="number" id="rest-duration" value="90" min="5" max="600" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Rounds per Set</label>
+                            <input type="number" id="rounds" value="4" min="1" max="50" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm mb-2">Number of Sets</label>
+                            <input type="number" id="sets" value="1" min="1" max="10" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-300 text-sm mb-2">Rest Between Sets (seconds)</label>
+                            <input type="number" id="set-rest" value="180" min="0" max="600" class="w-full bg-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Options -->
+                <div class="bg-slate-800 rounded-xl p-6 mb-6">
+                    <div class="flex gap-6 flex-wrap">
+                        <label class="flex items-center gap-2 text-white cursor-pointer">
+                            <input type="checkbox" id="sound-enabled" checked class="w-5 h-5 rounded">
+                            <span>Sound Enabled</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-white cursor-pointer">
+                            <input type="checkbox" id="voice-announcements" class="w-5 h-5 rounded">
+                            <span>Voice Announcements</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Workout Summary -->
+                <div class="bg-blue-900 bg-opacity-50 rounded-xl p-4 mb-6">
+                    <div class="grid md:grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="text-blue-300 text-sm mb-1">Total Intervals</div>
+                            <div class="text-white text-2xl font-bold" id="total-intervals">4</div>
+                        </div>
+                        <div>
+                            <div class="text-blue-300 text-sm mb-1">Work Time</div>
+                            <div class="text-white text-2xl font-bold" id="total-work-time">6:00</div>
+                        </div>
+                        <div>
+                            <div class="text-blue-300 text-sm mb-1">Total Time</div>
+                            <div class="text-white text-2xl font-bold" id="total-time">22:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Button -->
+                <div class="text-center">
+                    <button onclick="startWorkout()" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-12 rounded-xl text-xl transition-all transform hover:scale-105 shadow-lg">
+                        Start Workout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timer Screen -->
+            <div id="timer-screen" class="hidden">
+                <!-- Header Info -->
+                <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
+                    <div class="bg-slate-800 rounded-lg px-4 py-2">
+                        <span class="text-gray-400 text-sm" id="current-set-label">Set 1 of 1</span>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg px-4 py-2">
+                        <span class="text-gray-400 text-sm" id="current-round-label">Round 1 of 4</span>
+                    </div>
+                </div>
+
+                <!-- Phase Display -->
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-2" id="phase-display">WARM UP</h2>
+                    <p class="text-xl text-gray-400" id="phase-subtitle">Get ready to work</p>
+                </div>
+
+                <!-- Large Timer Circle -->
+                <div class="flex justify-center mb-8">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <svg class="absolute inset-0 w-full h-full transform -rotate-90">
+                            <circle cx="50%" cy="50%" r="45%" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"></circle>
+                            <circle id="progress-circle" cx="50%" cy="50%" r="45%" fill="none" stroke="url(#gradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="0" class="transition-all duration-1000"></circle>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" id="gradient-start" />
+                                    <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" id="gradient-end" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <div class="text-6xl md:text-8xl font-bold text-white mb-2" id="timer-display">5:00</div>
+                            <div class="text-gray-400 text-lg" id="timer-label">Remaining</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-center gap-4 mb-6">
+                    <button onclick="pauseWorkout()" id="pause-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                        Pause
+                    </button>
+                    <button onclick="resumeWorkout()" id="resume-btn" class="hidden bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-all">
+                        Resume
+                    </button>
+                    <button onclick="skipPhase()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                        Skip
+                    </button>
+                    <button onclick="resetWorkout()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                        Reset
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mb-4">
+                    <div class="bg-slate-700 rounded-full h-3 overflow-hidden">
+                        <div id="overall-progress" class="bg-gradient-to-r from-green-500 to-emerald-500 h-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                    <div class="text-center text-gray-400 text-sm mt-2" id="overall-progress-text">0% Complete</div>
+                </div>
+            </div>
+
+            <!-- Summary Screen -->
+            <div id="summary-screen" class="hidden text-center">
+                <div class="mb-6">
+                    <div class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 rounded-full p-4 mb-4">
+                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">Workout Complete!</h3>
+                    <p class="text-green-200 text-lg">Great job finishing your interval session</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-xl p-6 mb-6">
+                    <h4 class="text-white font-bold mb-4 text-xl">Workout Summary</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-700 rounded-lg p-4">
+                            <div class="text-gray-400 text-sm mb-1">Total Time</div>
+                            <div class="text-white text-2xl font-bold" id="summary-total-time">--</div>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-4">
+                            <div class="text-gray-400 text-sm mb-1">Work Time</div>
+                            <div class="text-green-400 text-2xl font-bold" id="summary-work-time">--</div>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-4">
+                            <div class="text-gray-400 text-sm mb-1">Intervals</div>
+                            <div class="text-blue-400 text-2xl font-bold" id="summary-intervals">--</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-900 bg-opacity-50 rounded-xl p-4 mb-6">
+                    <p class="text-blue-200 text-sm">Track your workouts over time to monitor improvements in pace, recovery time, and overall fitness. Consistent interval training is key to building speed and endurance.</p>
+                </div>
+
+                <div class="flex gap-4 justify-center">
+                    <button onclick="resetToConfig()" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                        New Workout
+                    </button>
+                    <button onclick="repeatWorkout()" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-3 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                        Repeat Workout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes pulse-glow {
+                0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+                50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
+            }
+            .phase-work {
+                animation: pulse-glow 2s ease-in-out infinite;
+            }
+        </style>
+
+        <script>
+            // Audio Context
+            let audioContext = null;
+            let speechSynthesis = window.speechSynthesis;
+
+            // Configuration
+            let config = {
+                warmup: 300,
+                cooldown: 300,
+                workDuration: 90,
+                restDuration: 90,
+                rounds: 4,
+                sets: 1,
+                setRest: 180,
+                soundEnabled: true,
+                voiceEnabled: false
+            };
+
+            // Workout state
+            let workoutState = {
+                phase: 'warmup', // warmup, work, rest, setrest, cooldown
+                currentSet: 1,
+                currentRound: 1,
+                timeRemaining: 0,
+                totalElapsed: 0,
+                totalDuration: 0,
+                isPaused: false,
+                intervalTimer: null
+            };
+
+            // Initialize audio
+            function initAudio() {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+            }
+
+            // Play beep
+            function playBeep(frequency = 880, duration = 150, volume = 0.3) {
+                if (!config.soundEnabled || !audioContext) return;
+
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+
+                oscillator.frequency.value = frequency;
+                oscillator.type = 'sine';
+
+                gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + duration / 1000);
+            }
+
+            // Play countdown beeps
+            function playCountdown(seconds) {
+                if (seconds <= 3 && seconds > 0) {
+                    playBeep(800, 100);
+                } else if (seconds === 0) {
+                    playBeep(1200, 200);
+                }
+            }
+
+            // Speak announcement
+            function speak(text) {
+                if (!config.voiceEnabled || !speechSynthesis) return;
+
+                speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 1.0;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+                speechSynthesis.speak(utterance);
+            }
+
+            // Format time
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            // Calculate totals
+            function calculateTotals() {
+                const warmup = parseInt(document.getElementById('warmup-time').value) * 60;
+                const cooldown = parseInt(document.getElementById('cooldown-time').value) * 60;
+                const work = parseInt(document.getElementById('work-duration').value);
+                const rest = parseInt(document.getElementById('rest-duration').value);
+                const rounds = parseInt(document.getElementById('rounds').value);
+                const sets = parseInt(document.getElementById('sets').value);
+                const setRest = parseInt(document.getElementById('set-rest').value);
+
+                const totalIntervals = rounds * sets;
+                const workTime = work * totalIntervals;
+                const restTime = rest * (totalIntervals - sets);
+                const setRestTime = setRest * (sets - 1);
+                const totalTime = warmup + workTime + restTime + setRestTime + cooldown;
+
+                document.getElementById('total-intervals').textContent = totalIntervals;
+                document.getElementById('total-work-time').textContent = formatTime(workTime);
+                document.getElementById('total-time').textContent = formatTime(totalTime);
+
+                return { totalIntervals, workTime, totalTime };
+            }
+
+            // Update calculations on input change
+            document.querySelectorAll('#config-screen input[type="number"]').forEach(input => {
+                input.addEventListener('input', calculateTotals);
+            });
+
+            // Update checkboxes
+            document.getElementById('sound-enabled').addEventListener('change', (e) => {
+                config.soundEnabled = e.target.checked;
+            });
+            document.getElementById('voice-announcements').addEventListener('change', (e) => {
+                config.voiceEnabled = e.target.checked;
+            });
+
+            // Load preset
+            function loadPreset(preset) {
+                const presets = {
+                    '4x400m': { warmup: 10, work: 90, rest: 90, rounds: 4, sets: 1, setRest: 0, cooldown: 5 },
+                    '8x200m': { warmup: 10, work: 45, rest: 60, rounds: 8, sets: 1, setRest: 0, cooldown: 5 },
+                    '5x800m': { warmup: 15, work: 180, rest: 120, rounds: 5, sets: 1, setRest: 0, cooldown: 10 },
+                    'pyramid': { warmup: 10, work: 60, rest: 60, rounds: 5, sets: 2, setRest: 180, cooldown: 5 },
+                    'tabata': { warmup: 3, work: 20, rest: 10, rounds: 8, sets: 1, setRest: 0, cooldown: 2 },
+                    '10x1min': { warmup: 5, work: 60, rest: 60, rounds: 10, sets: 1, setRest: 0, cooldown: 5 },
+                    '6x3min': { warmup: 10, work: 180, rest: 90, rounds: 6, sets: 1, setRest: 0, cooldown: 5 },
+                    'fartlek': { warmup: 10, work: 90, rest: 120, rounds: 6, sets: 2, setRest: 300, cooldown: 10 }
+                };
+
+                const p = presets[preset];
+                if (p) {
+                    document.getElementById('warmup-time').value = p.warmup;
+                    document.getElementById('cooldown-time').value = p.cooldown;
+                    document.getElementById('work-duration').value = p.work;
+                    document.getElementById('rest-duration').value = p.rest;
+                    document.getElementById('rounds').value = p.rounds;
+                    document.getElementById('sets').value = p.sets;
+                    document.getElementById('set-rest').value = p.setRest;
+                    calculateTotals();
+                }
+            }
+
+            // Start workout
+            function startWorkout() {
+                initAudio();
+
+                // Load configuration
+                config.warmup = parseInt(document.getElementById('warmup-time').value) * 60;
+                config.cooldown = parseInt(document.getElementById('cooldown-time').value) * 60;
+                config.workDuration = parseInt(document.getElementById('work-duration').value);
+                config.restDuration = parseInt(document.getElementById('rest-duration').value);
+                config.rounds = parseInt(document.getElementById('rounds').value);
+                config.sets = parseInt(document.getElementById('sets').value);
+                config.setRest = parseInt(document.getElementById('set-rest').value);
+
+                // Calculate total duration
+                const totals = calculateTotals();
+                workoutState.totalDuration = totals.totalTime;
+
+                // Reset state
+                workoutState.phase = config.warmup > 0 ? 'warmup' : 'work';
+                workoutState.currentSet = 1;
+                workoutState.currentRound = 1;
+                workoutState.timeRemaining = config.warmup;
+                workoutState.totalElapsed = 0;
+                workoutState.isPaused = false;
+
+                // Show timer screen
+                document.getElementById('config-screen').classList.add('hidden');
+                document.getElementById('timer-screen').classList.remove('hidden');
+
+                // Start timer
+                startPhase();
+                workoutState.intervalTimer = setInterval(updateTimer, 1000);
+            }
+
+            // Start phase
+            function startPhase() {
+                const phases = {
+                    warmup: { title: 'WARM UP', subtitle: 'Get ready to work', color: ['#eab308', '#ca8a04'] },
+                    work: { title: 'WORK', subtitle: 'Push hard!', color: ['#22c55e', '#16a34a'] },
+                    rest: { title: 'REST', subtitle: 'Recover', color: ['#ef4444', '#dc2626'] },
+                    setrest: { title: 'SET REST', subtitle: 'Recovery between sets', color: ['#f97316', '#ea580c'] },
+                    cooldown: { title: 'COOL DOWN', subtitle: 'Nice work!', color: ['#06b6d4', '#0891b2'] }
+                };
+
+                const phase = phases[workoutState.phase];
+                document.getElementById('phase-display').textContent = phase.title;
+                document.getElementById('phase-subtitle').textContent = phase.subtitle;
+
+                // Update gradient
+                document.getElementById('gradient-start').style.stopColor = phase.color[0];
+                document.getElementById('gradient-end').style.stopColor = phase.color[1];
+
+                // Update labels
+                document.getElementById('current-set-label').textContent = `Set ${workoutState.currentSet} of ${config.sets}`;
+                document.getElementById('current-round-label').textContent = `Round ${workoutState.currentRound} of ${config.rounds}`;
+
+                // Set time
+                if (workoutState.phase === 'warmup') {
+                    workoutState.timeRemaining = config.warmup;
+                } else if (workoutState.phase === 'work') {
+                    workoutState.timeRemaining = config.workDuration;
+                    speak(`Round ${workoutState.currentRound}. Go!`);
+                } else if (workoutState.phase === 'rest') {
+                    workoutState.timeRemaining = config.restDuration;
+                } else if (workoutState.phase === 'setrest') {
+                    workoutState.timeRemaining = config.setRest;
+                    speak('Set complete. Rest.');
+                } else if (workoutState.phase === 'cooldown') {
+                    workoutState.timeRemaining = config.cooldown;
+                    speak('Workout complete. Cool down.');
+                }
+
+                updateDisplay();
+                playBeep(1000, 200);
+            }
+
+            // Update timer
+            function updateTimer() {
+                if (workoutState.isPaused) return;
+
+                workoutState.timeRemaining--;
+                workoutState.totalElapsed++;
+
+                updateDisplay();
+                playCountdown(workoutState.timeRemaining);
+
+                if (workoutState.timeRemaining <= 0) {
+                    nextPhase();
+                }
+            }
+
+            // Update display
+            function updateDisplay() {
+                document.getElementById('timer-display').textContent = formatTime(workoutState.timeRemaining);
+
+                // Update progress circle
+                let totalPhaseTime = config.warmup;
+                if (workoutState.phase === 'work') totalPhaseTime = config.workDuration;
+                else if (workoutState.phase === 'rest') totalPhaseTime = config.restDuration;
+                else if (workoutState.phase === 'setrest') totalPhaseTime = config.setRest;
+                else if (workoutState.phase === 'cooldown') totalPhaseTime = config.cooldown;
+
+                const progress = ((totalPhaseTime - workoutState.timeRemaining) / totalPhaseTime) * 1000;
+                document.getElementById('progress-circle').style.strokeDashoffset = 1000 - progress;
+
+                // Update overall progress
+                const overallProgress = (workoutState.totalElapsed / workoutState.totalDuration) * 100;
+                document.getElementById('overall-progress').style.width = overallProgress + '%';
+                document.getElementById('overall-progress-text').textContent = Math.round(overallProgress) + '% Complete';
+            }
+
+            // Next phase
+            function nextPhase() {
+                if (workoutState.phase === 'warmup') {
+                    workoutState.phase = 'work';
+                    startPhase();
+                } else if (workoutState.phase === 'work') {
+                    if (workoutState.currentRound < config.rounds) {
+                        workoutState.phase = 'rest';
+                        startPhase();
+                    } else if (workoutState.currentSet < config.sets) {
+                        workoutState.phase = 'setrest';
+                        startPhase();
+                    } else if (config.cooldown > 0) {
+                        workoutState.phase = 'cooldown';
+                        startPhase();
+                    } else {
+                        completeWorkout();
+                    }
+                } else if (workoutState.phase === 'rest') {
+                    workoutState.currentRound++;
+                    workoutState.phase = 'work';
+                    startPhase();
+                } else if (workoutState.phase === 'setrest') {
+                    workoutState.currentSet++;
+                    workoutState.currentRound = 1;
+                    workoutState.phase = 'work';
+                    startPhase();
+                } else if (workoutState.phase === 'cooldown') {
+                    completeWorkout();
+                }
+            }
+
+            // Pause/Resume
+            function pauseWorkout() {
+                workoutState.isPaused = true;
+                document.getElementById('pause-btn').classList.add('hidden');
+                document.getElementById('resume-btn').classList.remove('hidden');
+                speak('Paused');
+            }
+
+            function resumeWorkout() {
+                workoutState.isPaused = false;
+                document.getElementById('pause-btn').classList.remove('hidden');
+                document.getElementById('resume-btn').classList.add('hidden');
+                speak('Resumed');
+            }
+
+            // Skip phase
+            function skipPhase() {
+                workoutState.totalElapsed += workoutState.timeRemaining;
+                workoutState.timeRemaining = 0;
+                nextPhase();
+            }
+
+            // Reset workout
+            function resetWorkout() {
+                if (confirm('Are you sure you want to reset the workout?')) {
+                    clearInterval(workoutState.intervalTimer);
+                    resetToConfig();
+                }
+            }
+
+            // Complete workout
+            function completeWorkout() {
+                clearInterval(workoutState.intervalTimer);
+
+                document.getElementById('timer-screen').classList.add('hidden');
+                document.getElementById('summary-screen').classList.remove('hidden');
+
+                const totals = calculateTotals();
+                document.getElementById('summary-total-time').textContent = formatTime(workoutState.totalElapsed);
+                document.getElementById('summary-work-time').textContent = formatTime(totals.workTime);
+                document.getElementById('summary-intervals').textContent = totals.totalIntervals;
+
+                playBeep(1200, 300);
+                speak('Workout complete! Great job!');
+            }
+
+            // Reset to config
+            function resetToConfig() {
+                document.getElementById('timer-screen').classList.add('hidden');
+                document.getElementById('summary-screen').classList.add('hidden');
+                document.getElementById('config-screen').classList.remove('hidden');
+                clearInterval(workoutState.intervalTimer);
+            }
+
+            // Repeat workout
+            function repeatWorkout() {
+                document.getElementById('summary-screen').classList.add('hidden');
+                startWorkout();
+            }
+
+            // Initialize
+            calculateTotals();
+        </script>
+
+        <!-- Content Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="prose prose-lg max-w-none">
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">How to Use the Interval Timer</h2>
+                    <p class="text-gray-700 mb-4">This interval workout timer is designed for runners, cyclists, and athletes doing structured interval training. Whether you're on the track, road, or treadmill, this timer helps you nail your work and rest periods with precision.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quick Start Guide</h3>
+                    <ol class="list-decimal pl-6 mb-4 text-gray-700 space-y-2">
+                        <li><strong>Choose a preset</strong> for common workouts like 4x400m, 8x200m, or Tabata intervals</li>
+                        <li><strong>Or customize</strong> your work duration, rest duration, rounds, and sets</li>
+                        <li><strong>Add warm-up and cool-down</strong> time to your session</li>
+                        <li><strong>Enable sound cues</strong> for beeps at transitions and countdown alerts</li>
+                        <li><strong>Start your workout</strong> and follow the visual and audio prompts</li>
+                    </ol>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                        <p class="text-blue-800"><strong>Pro Tip:</strong> Use voice announcements during outdoor runs when you can't easily see the screen. The timer will announce each phase change and countdown warnings.</p>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Understanding Interval Training</h2>
+                    <p class="text-gray-700 mb-4">Interval training alternates high-intensity work periods with lower-intensity recovery periods. This training method is one of the most effective ways to improve running speed, VO2 max, lactate threshold, and overall cardiovascular fitness.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Benefits of Interval Training</h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                            <h4 class="font-bold text-green-900 mb-2">Improved Speed</h4>
+                            <p class="text-green-800 text-sm">High-intensity intervals train your body to run faster by improving running economy, neuromuscular coordination, and anaerobic capacity.</p>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                            <h4 class="font-bold text-blue-900 mb-2">Increased VO2 Max</h4>
+                            <p class="text-blue-800 text-sm">Intervals push your aerobic system to its limits, increasing your maximum oxygen uptake and cardiovascular efficiency.</p>
+                        </div>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
+                            <h4 class="font-bold text-purple-900 mb-2">Time Efficient</h4>
+                            <p class="text-purple-800 text-sm">Get more training stimulus in less time. A 30-minute interval session can provide similar or better benefits than 60+ minutes of steady running.</p>
+                        </div>
+                        <div class="bg-orange-50 border-l-4 border-orange-500 p-4">
+                            <h4 class="font-bold text-orange-900 mb-2">Mental Toughness</h4>
+                            <p class="text-orange-800 text-sm">Pushing through hard intervals builds the mental resilience needed for racing and handling discomfort during competition.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Common Interval Workouts Explained</h2>
+
+                    <div class="space-y-6">
+                        <div class="bg-white border rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">4x400m Intervals</h3>
+                            <p class="text-gray-700 mb-3">Classic track workout for building speed and lactate threshold. Run 400 meters (one lap) at 5K race pace or slightly faster, with equal rest between repeats.</p>
+                            <div class="bg-gray-50 rounded p-3">
+                                <p class="text-sm text-gray-600"><strong>Target Pace:</strong> 5K pace to 3K pace</p>
+                                <p class="text-sm text-gray-600"><strong>Rest:</strong> 90-120 seconds or equal time</p>
+                                <p class="text-sm text-gray-600"><strong>Total Volume:</strong> 1600m of hard running</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">8x200m Repeats</h3>
+                            <p class="text-gray-700 mb-3">Shorter, faster intervals that develop pure speed and running mechanics. Great for newer runners or early-season speed work.</p>
+                            <div class="bg-gray-50 rounded p-3">
+                                <p class="text-sm text-gray-600"><strong>Target Pace:</strong> 3K-Mile race pace</p>
+                                <p class="text-sm text-gray-600"><strong>Rest:</strong> 60-90 seconds</p>
+                                <p class="text-sm text-gray-600"><strong>Total Volume:</strong> 1600m of hard running</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">5x800m Intervals</h3>
+                            <p class="text-gray-700 mb-3">Longer intervals that build VO2 max and race-specific fitness for 5K-10K runners. Challenging both physically and mentally.</p>
+                            <div class="bg-gray-50 rounded p-3">
+                                <p class="text-sm text-gray-600"><strong>Target Pace:</strong> 10K race pace to 5K pace</p>
+                                <p class="text-sm text-gray-600"><strong>Rest:</strong> 2-3 minutes</p>
+                                <p class="text-sm text-gray-600"><strong>Total Volume:</strong> 4000m of hard running</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Tabata Intervals</h3>
+                            <p class="text-gray-700 mb-3">Ultra-high intensity protocol: 20 seconds all-out effort, 10 seconds rest, repeated 8 times. Originally designed for cyclists but effective for runners too.</p>
+                            <div class="bg-gray-50 rounded p-3">
+                                <p class="text-sm text-gray-600"><strong>Effort:</strong> Maximum sustainable pace for 20 seconds</p>
+                                <p class="text-sm text-gray-600"><strong>Rest:</strong> 10 seconds (1:2 work-to-rest ratio)</p>
+                                <p class="text-sm text-gray-600"><strong>Total Time:</strong> 4 minutes of intense work</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">Pyramid Workout</h3>
+                            <p class="text-gray-700 mb-3">Vary interval length throughout the session (e.g., 200-400-600-400-200m). Challenges different energy systems and keeps workouts interesting.</p>
+                            <div class="bg-gray-50 rounded p-3">
+                                <p class="text-sm text-gray-600"><strong>Pattern:</strong> Increase then decrease distance</p>
+                                <p class="text-sm text-gray-600"><strong>Pace:</strong> Faster for shorter intervals</p>
+                                <p class="text-sm text-gray-600"><strong>Benefit:</strong> Recruits different muscle fibers and energy systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Work-to-Rest Ratios Guide</h2>
+                    <p class="text-gray-700 mb-4">The ratio of work time to rest time determines the training stimulus and what physiological adaptations you'll develop.</p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-sm">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3 text-left font-semibold text-gray-900">Ratio</th>
+                                    <th class="px-4 py-3 text-left font-semibold text-gray-900">Example</th>
+                                    <th class="px-4 py-3 text-left font-semibold text-gray-900">Training Effect</th>
+                                    <th class="px-4 py-3 text-left font-semibold text-gray-900">Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">1:3</td>
+                                    <td class="px-4 py-3 text-sm">1 min work, 3 min rest</td>
+                                    <td class="px-4 py-3 text-sm">Speed, power, full recovery</td>
+                                    <td class="px-4 py-3 text-sm">Sprint repeats, beginners</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">1:2</td>
+                                    <td class="px-4 py-3 text-sm">1 min work, 2 min rest</td>
+                                    <td class="px-4 py-3 text-sm">Speed endurance, neuromuscular</td>
+                                    <td class="px-4 py-3 text-sm">200-400m repeats</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">1:1</td>
+                                    <td class="px-4 py-3 text-sm">2 min work, 2 min rest</td>
+                                    <td class="px-4 py-3 text-sm">VO2 max, lactate threshold</td>
+                                    <td class="px-4 py-3 text-sm">400-800m intervals</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">2:1</td>
+                                    <td class="px-4 py-3 text-sm">4 min work, 2 min rest</td>
+                                    <td class="px-4 py-3 text-sm">Aerobic power, tempo</td>
+                                    <td class="px-4 py-3 text-sm">1000m+ intervals</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">3:1</td>
+                                    <td class="px-4 py-3 text-sm">3 min work, 1 min rest</td>
+                                    <td class="px-4 py-3 text-sm">Lactate tolerance, mental toughness</td>
+                                    <td class="px-4 py-3 text-sm">Advanced tempo intervals</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Programming Interval Training</h2>
+                    <p class="text-gray-700 mb-4">Strategic programming ensures you get maximum benefit from interval training while minimizing injury risk and overtraining.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Weekly Frequency</h3>
+                    <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                        <li><strong>Beginners:</strong> 1 interval session per week, focusing on form and gradual progression</li>
+                        <li><strong>Intermediate:</strong> 1-2 sessions per week with at least 48 hours between hard efforts</li>
+                        <li><strong>Advanced:</strong> 2-3 sessions per week, varying intensity and interval length</li>
+                        <li><strong>Important:</strong> More is not better. Recovery between sessions is when adaptation occurs</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Progression Strategies</h3>
+                    <div class="bg-white border rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-gray-900 mb-2">Option 1: Increase Volume</h4>
+                        <p class="text-gray-600 text-sm mb-2">Keep pace and rest constant, add more intervals</p>
+                        <p class="text-gray-600 text-sm">Example: 4x400m → 6x400m → 8x400m</p>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-gray-900 mb-2">Option 2: Increase Intensity</h4>
+                        <p class="text-gray-600 text-sm mb-2">Keep volume constant, run faster</p>
+                        <p class="text-gray-600 text-sm">Example: 6x400m at 10K pace → 6x400m at 5K pace</p>
+                    </div>
+
+                    <div class="bg-white border rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-gray-900 mb-2">Option 3: Reduce Rest</h4>
+                        <p class="text-gray-600 text-sm mb-2">Keep volume and pace constant, shorten recovery</p>
+                        <p class="text-gray-600 text-sm">Example: 5x800m (3 min rest) → 5x800m (2 min rest)</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-4">
+                        <p class="text-yellow-800"><strong>Progression Warning:</strong> Change only one variable at a time. Increasing volume AND intensity simultaneously increases injury risk dramatically. Progress gradually - 10% increases per week is a safe guideline.</p>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Pacing Your Intervals</h2>
+                    <p class="text-gray-700 mb-4">Proper pacing is critical for effective interval training. Too fast and you'll blow up early; too slow and you won't get the intended stimulus.</p>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">How to Find Your Interval Pace</h3>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Method 1: Based on Race Pace</h4>
+                        <ul class="text-blue-800 text-sm space-y-1">
+                            <li>• <strong>400m-800m intervals:</strong> 5K race pace or slightly faster</li>
+                            <li>• <strong>1000m-1200m intervals:</strong> 10K race pace</li>
+                            <li>• <strong>Mile+ intervals:</strong> Half marathon pace to 10K pace</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-4">
+                        <h4 class="font-semibold text-green-900 mb-2">Method 2: Based on Heart Rate</h4>
+                        <ul class="text-green-800 text-sm space-y-1">
+                            <li>• <strong>VO2 max intervals:</strong> 95-100% max heart rate</li>
+                            <li>• <strong>Threshold intervals:</strong> 85-90% max heart rate</li>
+                            <li>• <strong>Tempo intervals:</strong> 80-85% max heart rate</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-4">
+                        <h4 class="font-semibold text-purple-900 mb-2">Method 3: Perceived Effort</h4>
+                        <ul class="text-purple-800 text-sm space-y-1">
+                            <li>• <strong>Hard intervals:</strong> "Comfortably hard" - can speak 2-3 words</li>
+                            <li>• <strong>Very hard intervals:</strong> Can barely speak, high breathing rate</li>
+                            <li>• <strong>Sprint intervals:</strong> All-out effort, unsustainable beyond 30-60 seconds</li>
+                        </ul>
+                    </div>
+
+                    <p class="text-gray-700 mb-4">Use our <a href="/heart-rate-zone-calculator" class="text-primary hover:underline font-semibold">Heart Rate Zone Calculator</a> to find your exact training zones for interval work.</p>
+                </section>
+
+                <section id="faq" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">What is interval training?</summary>
+                            <p class="px-4 pb-4 text-gray-600">Interval training alternates between periods of high-intensity work and lower-intensity rest or recovery. This method improves speed, VO2 max, and running economy more effectively than steady-state training alone. Common examples include 400m repeats, 800m intervals, and fartlek workouts.</p>
+                        </details>
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">How long should work intervals be for running?</summary>
+                            <p class="px-4 pb-4 text-gray-600">Work intervals typically range from 30 seconds to 5 minutes depending on your goal. Short intervals (30-90 seconds) build anaerobic capacity and speed. Medium intervals (2-4 minutes) improve VO2 max. Longer intervals (4-8 minutes) develop lactate threshold. Match interval length to your training goal and fitness level.</p>
+                        </details>
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">What is the ideal work-to-rest ratio for intervals?</summary>
+                            <p class="px-4 pb-4 text-gray-600">Common work-to-rest ratios include 1:1 for hard efforts (e.g., 2 min work, 2 min rest), 2:1 for moderate intervals (e.g., 4 min work, 2 min rest), and 3:1 for tempo intervals. Beginners should start with longer rest periods (1:2 ratio) and progress to shorter rest as fitness improves.</p>
+                        </details>
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">How many interval sets should I do per workout?</summary>
+                            <p class="px-4 pb-4 text-gray-600">This depends on interval length and intensity. For short sprints (200-400m), 6-12 repeats is common. For 800m intervals, 4-8 repeats works well. For longer intervals (1000m+), 3-6 repeats is typical. Total hard running should be 3-5km for most interval sessions. Quality matters more than quantity.</p>
+                        </details>
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">Should I do interval training on a track or road?</summary>
+                            <p class="px-4 pb-4 text-gray-600">Both work well. Tracks provide accurate distances, flat terrain, and soft surfaces that reduce impact. Road intervals offer real-world conditions and hill options. For precise pacing (400m, 800m repeats), use a track. For fartlek or time-based intervals, roads work great. Mix both for variety.</p>
+                        </details>
+                        <details class="bg-white border rounded-lg">
+                            <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50">How often should I do interval training?</summary>
+                            <p class="px-4 pb-4 text-gray-600">Most runners benefit from 1-2 interval sessions per week. More than twice weekly increases injury risk without additional benefit for recreational runners. Allow 48-72 hours between hard interval sessions for recovery. Combine with easy runs, long runs, and rest days for a balanced training plan.</p>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Related Tools & Resources</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="/running-training-plan-generator" class="block bg-white border rounded-lg p-4 hover:shadow-md transition">
+                            <h4 class="font-bold text-gray-900 mb-1">Training Plan Generator</h4>
+                            <p class="text-gray-600 text-sm">Get a complete training plan with structured interval workouts</p>
+                        </a>
+                        <a href="/heart-rate-zone-calculator" class="block bg-white border rounded-lg p-4 hover:shadow-md transition">
+                            <h4 class="font-bold text-gray-900 mb-1">Heart Rate Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm">Find your optimal interval training heart rate zones</p>
+                        </a>
+                        <a href="/running-pace-calculator" class="block bg-white border rounded-lg p-4 hover:shadow-md transition">
+                            <h4 class="font-bold text-gray-900 mb-1">Pace Calculator</h4>
+                            <p class="text-gray-600 text-sm">Calculate target paces for your interval workouts</p>
+                        </a>
+                        <a href="/blog/wim-hof-breathing-method-complete-guide" class="block bg-white border rounded-lg p-4 hover:shadow-md transition">
+                            <h4 class="font-bold text-gray-900 mb-1">Breathing Method Guide</h4>
+                            <p class="text-gray-600 text-sm">Improve recovery with breathing techniques</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400 text-sm">Free training plans and calculators for endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Training Plans</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/running-training-plan-generator" class="hover:text-white">Running</a></li>
+                        <li><a href="/cycling-training-plan-generator" class="hover:text-white">Cycling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/interval-timer" class="hover:text-white">Interval Timer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">&copy; 2025 RunBikeCalc. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

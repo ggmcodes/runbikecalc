@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Age Graded Running Calculator - WMA Age Grading Tables | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/age-graded-calculator">
+    <meta name="description" content="Calculate your age-graded race performance using official WMA/USATF tables. Compare performances across ages and see your equivalent open age time.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Age Graded Running Calculator - WMA Tables">
+    <meta property="og:description" content="Calculate age-graded performance and compare times across different ages">
+    <meta property="og:image" content="https://runbikecalc.com/images/age-graded-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/age-graded-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Age Graded Running Calculator">
+    <meta name="twitter:description" content="Calculate age-graded performance using WMA tables">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/age-graded-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Age Graded Running Calculator",
+        "url": "https://runbikecalc.com/age-graded-calculator",
+        "description": "Calculate age-graded race performance using official WMA/USATF tables",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is age grading in running?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Age grading is a system that allows runners of different ages to compare their performances fairly. It uses official World Masters Athletics (WMA) tables to convert your actual race time to an equivalent performance at the peak age (typically 20-35). An age-graded percentage of 90%+ is world class, 80%+ is national class, 70%+ is regional class, and 60%+ is local class."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is age graded percentage calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Age graded percentage is calculated using the formula: (Open Age Standard Time / Your Actual Time) × Age Factor × 100. The age factor comes from official WMA tables that account for the natural decline in performance with age. For example, a 50-year-old male running a 20:00 5K would have a higher age-graded percentage than a 25-year-old running the same time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good age graded performance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Age graded performance levels are: World Class (90%+), National Class (80-89%), Regional Class (70-79%), Local Class (60-69%), and Recreational (below 60%). Most competitive masters runners aim for 70%+ which indicates strong performance for their age. Elite masters athletes often achieve 85%+ which puts them among the best in their age group."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my age graded time faster than my actual time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your age graded time is faster than your actual time when you're older than the peak performance age (around 25-35). The age grading system adjusts your time to show what you would have run at peak age with the same fitness level. For example, a 55-year-old running a 25:00 5K might have an age-graded time of 21:30, showing their equivalent performance at peak age."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What distances does age grading work for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Age grading works for all standard running distances from 1500m to marathon and beyond. The WMA tables include factors for 5K, 10K, half marathon, marathon, and many other distances. Each distance has its own age factors because the effects of aging vary by race distance - shorter races decline more slowly with age than longer events."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is age grading for comparing performances?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Age grading is very accurate for comparing performances across ages when using official WMA tables, which are based on extensive data from thousands of athletes. However, individual variations exist - some athletes age better than others. The system works best for comparing your own performances over time and for getting a general sense of how you stack up against runners of different ages."
+                }
+            }
+        ]
+    }
+    </script>
+
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="touch-target md:hidden" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <div class="relative group">
+                        <a href="/training-plans" class="nav-link flex items-center">
+                            Plans
+                            <span class="ml-1 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-48 z-50">
+                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Plans</a>
+                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Running</a>
+                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cycling</a>
+                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Triathlon</a>
+                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hyrox</a>
+                        </div>
+                    </div>
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden mt-4 border-t pt-4">
+                <div class="border-b border-gray-200 pb-3 mb-3">
+                    <button id="mobile-plans-toggle" class="mobile-menu-item flex items-center justify-between w-full text-left">
+                        <span class="flex items-center">
+                            Plans
+                            <span class="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                        </span>
+                        <svg class="w-4 h-4 transform transition-transform" id="mobile-plans-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-plans-submenu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="/training-plans" class="block py-1 text-gray-600 hover:text-primary">All Plans</a>
+                        <a href="/running-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Running</a>
+                        <a href="/cycling-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Cycling</a>
+                        <a href="/triathlon-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Triathlon</a>
+                        <a href="/hyrox-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Hyrox</a>
+                    </div>
+                </div>
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2">Running Tools</li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Age Graded Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Page heading -->
+        <div class="flex flex-col md:flex-row items-center mb-8">
+            <div class="md:w-2/3 md:pr-8">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Age Graded Running Calculator</h1>
+                <p class="text-lg text-gray-600 mb-6">Calculate your age-graded race performance using official WMA/USATF tables. Compare your time to runners of all ages and determine your performance level.</p>
+            </div>
+            <div class="md:w-1/3">
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                     alt="Masters runners competing in race with age grading calculations"
+                     class="w-full h-48 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Age Graded Performance</h2>
+
+                    <form id="age-graded-form" class="space-y-6">
+                        <div>
+                            <label for="distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                Race Distance *
+                            </label>
+                            <select id="distance" name="distance" class="calc-input-number text-left" required>
+                                <option value="">Select distance</option>
+                                <option value="5">5K (3.1 miles)</option>
+                                <option value="10">10K (6.2 miles)</option>
+                                <option value="15">15K (9.3 miles)</option>
+                                <option value="21.1">Half Marathon (21.1K)</option>
+                                <option value="42.2">Marathon (42.2K)</option>
+                                <option value="custom">Custom Distance</option>
+                            </select>
+                            <p class="text-sm text-gray-600 mt-1">Select your race distance</p>
+                        </div>
+
+                        <div id="custom-distance-container" class="hidden">
+                            <label for="customDistance" class="block text-sm font-medium text-gray-700 mb-2">
+                                Custom Distance (km)
+                            </label>
+                            <input type="number"
+                                   id="customDistance"
+                                   name="customDistance"
+                                   class="calc-input-number"
+                                   placeholder="21.1"
+                                   min="1"
+                                   max="100"
+                                   step="0.1">
+                            <p class="text-sm text-gray-600 mt-1">Enter distance in kilometers</p>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Finish Time *
+                            </label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <input type="number"
+                                       id="hours"
+                                       name="hours"
+                                       class="calc-input-number"
+                                       placeholder="0"
+                                       min="0"
+                                       max="10">
+                                <input type="number"
+                                       id="minutes"
+                                       name="minutes"
+                                       class="calc-input-number"
+                                       placeholder="25"
+                                       required
+                                       min="0"
+                                       max="59">
+                                <input type="number"
+                                       id="seconds"
+                                       name="seconds"
+                                       class="calc-input-number"
+                                       placeholder="30"
+                                       min="0"
+                                       max="59">
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Age *
+                                </label>
+                                <input type="number"
+                                       id="age"
+                                       name="age"
+                                       class="calc-input-number"
+                                       placeholder="35"
+                                       required
+                                       min="5"
+                                       max="100"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your age on race day</p>
+                            </div>
+
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender *
+                                </label>
+                                <select id="gender" name="gender" class="calc-input-number text-left" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Required for accurate calculation</p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Calculate Age Graded Performance
+                        </button>
+                    </form>
+
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Educational content -->
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Age Grading in Running</h2>
+                    <p>Age grading is a system that allows runners of all ages to compare their performances on a level playing field. Using official World Masters Athletics (WMA) tables, it adjusts race times based on age and gender to show equivalent performances.</p>
+
+                    <h3>What is Age Grading?</h3>
+                    <p>Age grading converts your actual race time to a percentage that represents your performance relative to the world record for your age and gender. This percentage allows meaningful comparisons between runners of different ages and abilities.</p>
+
+                    <h4>How Age Grading Works</h4>
+                    <ul>
+                        <li><strong>Age Factors:</strong> Based on statistical analysis of thousands of race performances across all age groups</li>
+                        <li><strong>World Standards:</strong> Uses WMA tables updated regularly with current world records</li>
+                        <li><strong>Distance Specific:</strong> Each race distance has its own age adjustment factors</li>
+                        <li><strong>Gender Specific:</strong> Separate tables for male and female athletes</li>
+                    </ul>
+
+                    <h3>Performance Categories</h3>
+
+                    <h4>World Class (90%+)</h4>
+                    <p>Performances at 90% or higher are considered world class for your age group. Athletes at this level are among the very best masters runners globally and often compete at international championships.</p>
+
+                    <h4>National Class (80-89%)</h4>
+                    <p>National class performances indicate you're competitive at a high level within your country. Many national championship qualifiers fall into this range.</p>
+
+                    <h4>Regional Class (70-79%)</h4>
+                    <p>Regional class represents strong competitive running for your age. You're likely competitive in local and regional races with age group awards possible.</p>
+
+                    <h4>Local Class (60-69%)</h4>
+                    <p>Local class indicates solid performance for your age. You're a competitive runner in your community and likely placing in age group awards at smaller events.</p>
+
+                    <h4>Recreational (Below 60%)</h4>
+                    <p>Below 60% typically represents recreational running. These performances are still valuable and show commitment to fitness and racing.</p>
+
+                    <h3>Calculating Age Graded Percentage</h3>
+                    <p>The age graded percentage is calculated using the formula:</p>
+                    <p><strong>Age Grade % = (Standard Time / Your Time) × Age Factor × 100</strong></p>
+
+                    <h4>Age Factor Components</h4>
+                    <ul>
+                        <li><strong>Open Standard:</strong> The world record for the open (peak age) category</li>
+                        <li><strong>Age Standard:</strong> The world record for your specific age group</li>
+                        <li><strong>Adjustment Factor:</strong> Mathematical relationship between these standards</li>
+                    </ul>
+
+                    <h3>Age Graded Time</h3>
+                    <p>Your age graded time shows what you would have run at peak age (typically 25-35) with the same fitness level. This "equivalent performance" helps track your fitness over time regardless of aging.</p>
+
+                    <h4>Using Age Graded Time</h4>
+                    <ul>
+                        <li><strong>Track Improvement:</strong> See if your fitness is improving even as you age</li>
+                        <li><strong>Compare Performances:</strong> Compare races from different ages fairly</li>
+                        <li><strong>Set Goals:</strong> Set realistic goals based on age-adjusted standards</li>
+                        <li><strong>Motivation:</strong> Stay motivated seeing your "real" performance level</li>
+                    </ul>
+
+                    <h3>Factors Affecting Age Graded Performance</h3>
+
+                    <h4>Physiological Changes with Age</h4>
+                    <ul>
+                        <li><strong>VO2 Max:</strong> Declines approximately 10% per decade after age 30</li>
+                        <li><strong>Muscle Mass:</strong> Natural decline in lean muscle mass (sarcopenia)</li>
+                        <li><strong>Recovery:</strong> Longer recovery times needed between hard efforts</li>
+                        <li><strong>Flexibility:</strong> Reduced range of motion affecting running economy</li>
+                    </ul>
+
+                    <h4>Distance-Specific Aging</h4>
+                    <ul>
+                        <li><strong>Sprint Events:</strong> Age slower - speed is more resilient</li>
+                        <li><strong>Middle Distance:</strong> Moderate age-related decline</li>
+                        <li><strong>Marathon:</strong> Greater decline with age due to endurance demands</li>
+                        <li><strong>Ultra Distance:</strong> Experience can offset some physiological decline</li>
+                    </ul>
+
+                    <h3>Improving Your Age Graded Performance</h3>
+
+                    <h4>Training Strategies</h4>
+                    <ul>
+                        <li><strong>Consistency:</strong> Regular training is more important as you age</li>
+                        <li><strong>Recovery:</strong> Build in more recovery time between hard sessions</li>
+                        <li><strong>Strength Training:</strong> Maintain muscle mass and running economy</li>
+                        <li><strong>Flexibility Work:</strong> Yoga, stretching to maintain range of motion</li>
+                    </ul>
+
+                    <h4>Race Strategy</h4>
+                    <ul>
+                        <li><strong>Pacing:</strong> Even pacing becomes more critical with age</li>
+                        <li><strong>Warmup:</strong> Longer warmup needed to reach optimal performance</li>
+                        <li><strong>Recovery:</strong> Allow more time between races</li>
+                        <li><strong>Course Selection:</strong> Consider course difficulty and conditions</li>
+                    </ul>
+
+                    <h3>Comparing Performances Across Ages</h3>
+                    <p>Age grading enables fair comparison of performances from different ages. A 55-year-old running 20:00 for 5K might have a better age graded performance than a 25-year-old running 18:30.</p>
+
+                    <h4>Example Comparisons</h4>
+                    <ul>
+                        <li><strong>5K:</strong> 50-year-old male at 19:00 = ~82% = 25-year-old at ~17:30</li>
+                        <li><strong>10K:</strong> 60-year-old female at 48:00 = ~75% = 30-year-old at ~42:00</li>
+                        <li><strong>Marathon:</strong> 45-year-old male at 3:15 = ~70% = 30-year-old at ~3:00</li>
+                    </ul>
+
+                    <h3>Limitations of Age Grading</h3>
+
+                    <h4>Individual Variation</h4>
+                    <ul>
+                        <li><strong>Genetics:</strong> Some people age better athletically than others</li>
+                        <li><strong>Training History:</strong> Lifelong runners may age differently than late starters</li>
+                        <li><strong>Health:</strong> Individual health factors affect performance</li>
+                        <li><strong>Specialization:</strong> Training for specific distances affects results</li>
+                    </ul>
+
+                    <h4>Environmental Factors</h4>
+                    <ul>
+                        <li><strong>Weather:</strong> Heat, humidity, wind affect actual times</li>
+                        <li><strong>Course:</strong> Hills, surface, turns impact performance</li>
+                        <li><strong>Altitude:</strong> Elevation affects times differently by age</li>
+                        <li><strong>Competition:</strong> Race dynamics influence final times</li>
+                    </ul>
+
+                    <h3>Using Age Grading Effectively</h3>
+
+                    <h4>Personal Goal Setting</h4>
+                    <ul>
+                        <li>Set age-appropriate goals based on your current percentage</li>
+                        <li>Aim to maintain or improve your percentage over time</li>
+                        <li>Understand that maintaining the same percentage as you age means you're improving relative to aging</li>
+                        <li>Use percentage goals rather than absolute time goals</li>
+                    </ul>
+
+                    <h4>Training Planning</h4>
+                    <ul>
+                        <li>Compare workout performances across different time periods</li>
+                        <li>Adjust training paces based on current age graded fitness</li>
+                        <li>Monitor trends in age graded performance to assess training effectiveness</li>
+                        <li>Set training zones based on age graded race equivalents</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+
+                <!-- Performance levels -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Performance Levels</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded">
+                            <div class="font-semibold text-yellow-800">World Class</div>
+                            <div class="text-sm text-yellow-700">90%+ - Elite masters athletes</div>
+                        </div>
+                        <div class="p-3 bg-green-50 border-l-4 border-green-400 rounded">
+                            <div class="font-semibold text-green-800">National Class</div>
+                            <div class="text-sm text-green-700">80-89% - Highly competitive</div>
+                        </div>
+                        <div class="p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+                            <div class="font-semibold text-blue-800">Regional Class</div>
+                            <div class="text-sm text-blue-700">70-79% - Strong performance</div>
+                        </div>
+                        <div class="p-3 bg-orange-100 border-l-4 border-orange-400 rounded">
+                            <div class="font-semibold text-orange-600">Local Class</div>
+                            <div class="text-sm text-orange-600">60-69% - Solid runner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/race-time-predictor.html" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zones</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Calculators Section -->
+        <section class="mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/race-time-predictor.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Race Time Predictor</h3>
+                    <p class="text-gray-600 text-sm">Predict times for other distances</p>
+                </a>
+                <a href="/running-pace-calculator.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Running Pace Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate pace for training runs</p>
+                </a>
+                <a href="/vo2-max-calculator.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">VO2 Max Calculator</h3>
+                    <p class="text-gray-600 text-sm">Estimate your aerobic capacity</p>
+                </a>
+                <a href="/lactate-threshold-calculator.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Lactate Threshold</h3>
+                    <p class="text-gray-600 text-sm">Find your threshold pace</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor.html" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/age-graded-calculator.html" class="hover:text-white">Age Graded Calculator</a></li>
+                        <li><a href="/run-walk-calculator.html" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator.html" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Mobile Training Plans submenu toggle
+        const plansToggle = document.getElementById('mobile-plans-toggle');
+        const plansSubmenu = document.getElementById('mobile-plans-submenu');
+        const plansChevron = document.getElementById('mobile-plans-chevron');
+        if (plansToggle && plansSubmenu && plansChevron) {
+            plansToggle.addEventListener('click', function() {
+                plansSubmenu.classList.toggle('hidden');
+                plansChevron.classList.toggle('rotate-180');
+            });
+        }
+
+        // Show/hide custom distance input
+        document.getElementById('distance').addEventListener('change', function() {
+            const customContainer = document.getElementById('custom-distance-container');
+            if (this.value === 'custom') {
+                customContainer.classList.remove('hidden');
+                document.getElementById('customDistance').required = true;
+            } else {
+                customContainer.classList.add('hidden');
+                document.getElementById('customDistance').required = false;
+            }
+        });
+
+        // Age Grading Calculator
+        class AgeGradedCalculator extends Calculator {
+            constructor() {
+                super('age-graded-form', 'results');
+            }
+
+            calculate() {
+                let distance = this.form.querySelector('[name="distance"]').value;
+                const customDistance = this.getInputValue('customDistance', 0);
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                const age = this.getInputValue('age');
+                const gender = this.form.querySelector('[name="gender"]').value;
+
+                // Handle custom distance
+                if (distance === 'custom' && customDistance > 0) {
+                    distance = customDistance;
+                } else if (distance === 'custom') {
+                    this.displayError('Please enter a custom distance.');
+                    return;
+                }
+
+                if (!distance || !minutes || !age || !gender) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+
+                distance = parseFloat(distance);
+
+                // Convert time to total seconds
+                const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+
+                // Calculate age graded performance
+                const ageFactor = this.getAgeFactor(age, gender, distance);
+                const openStandard = this.getOpenStandard(gender, distance);
+                const ageGradedPercent = (openStandard / totalSeconds) * ageFactor * 100;
+                const ageGradedTime = totalSeconds / ageFactor;
+
+                // Get performance level
+                const performanceLevel = this.getPerformanceLevel(ageGradedPercent);
+
+                // Calculate comparison table across ages
+                const comparisonTable = this.generateAgeComparison(totalSeconds, gender, distance, age);
+
+                // Format times
+                const actualTimeFormatted = this.formatTime(totalSeconds);
+                const ageGradedTimeFormatted = this.formatTime(ageGradedTime);
+                const distanceName = this.getDistanceName(distance);
+
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Age Graded Results</h3>
+
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">${distanceName} - ${actualTimeFormatted}</div>
+                            <div class="text-3xl font-bold mb-2">${ageGradedPercent.toFixed(2)}%</div>
+                            <div class="text-lg opacity-90">Age ${age} ${gender}</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-sm text-gray-600 mb-1">Actual Time</div>
+                                <div class="text-2xl font-bold text-gray-900">${actualTimeFormatted}</div>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-sm text-gray-600 mb-1">Age Graded Time</div>
+                                <div class="text-2xl font-bold text-primary">${ageGradedTimeFormatted}</div>
+                                <div class="text-xs text-gray-600 mt-1">Equivalent at peak age</div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 ${performanceLevel.bgClass} border-l-4 ${performanceLevel.borderClass} rounded-lg mb-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="font-semibold ${performanceLevel.textClass} text-lg">${performanceLevel.name}</div>
+                                    <div class="text-sm ${performanceLevel.textClass} opacity-90">${performanceLevel.description}</div>
+                                </div>
+                                <div class="text-3xl font-bold ${performanceLevel.textClass}">${ageGradedPercent.toFixed(1)}%</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-3">Performance Across Ages</h4>
+                            <div class="text-sm text-blue-700 mb-3">
+                                Your ${actualTimeFormatted} at age ${age} is equivalent to these times at other ages:
+                            </div>
+                            <div class="space-y-2">
+                                ${comparisonTable.map(row => `
+                                    <div class="flex justify-between items-center p-2 ${row.isCurrent ? 'bg-blue-200 font-semibold' : 'bg-white'} rounded">
+                                        <div class="text-blue-900">Age ${row.age}</div>
+                                        <div class="text-blue-900">${row.time} ${row.isCurrent ? '(Your Age)' : ''}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">What This Means</h4>
+                            <ul class="text-sm text-green-700 space-y-2">
+                                <li><strong>Age Graded %:</strong> Your performance is ${ageGradedPercent.toFixed(1)}% of the world record for your age and gender</li>
+                                <li><strong>Age Graded Time:</strong> At peak age (25-35), you would run approximately ${ageGradedTimeFormatted}</li>
+                                <li><strong>Level:</strong> Your performance is ${performanceLevel.name} (${performanceLevel.range})</li>
+                                <li><strong>Pace:</strong> ${this.calculatePace(totalSeconds, distance)}</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My age graded performance: ${ageGradedPercent.toFixed(1)}% for ${distanceName} at age ${age}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+
+                this.saveValues();
+            }
+
+            // Age grading factors based on WMA tables (simplified approximation)
+            getAgeFactor(age, gender, distance) {
+                // Base factors for different age ranges
+                // These are simplified approximations - real WMA tables are more complex
+                const isMale = gender === 'male';
+
+                // Peak age range (no adjustment needed)
+                if (age >= 20 && age <= 34) {
+                    return 1.0;
+                }
+
+                // Youth adjustments (under 20)
+                if (age < 20) {
+                    const youthFactors = isMale ?
+                        { 5: 0.94, 10: 0.92, 15: 0.90, 21.1: 0.88, 42.2: 0.85 } :
+                        { 5: 0.92, 10: 0.90, 15: 0.88, 21.1: 0.86, 42.2: 0.83 };
+                    return this.interpolateDistanceFactor(youthFactors, distance);
+                }
+
+                // Masters adjustments (35+)
+                // Factors increase (performance declines) with age
+                const ageAbove35 = age - 35;
+                const declinePerYear = isMale ? 0.006 : 0.0055; // Men decline slightly faster
+                const distanceMultiplier = this.getDistanceAgingMultiplier(distance);
+
+                const ageFactor = 1.0 + (ageAbove35 * declinePerYear * distanceMultiplier);
+
+                return ageFactor;
+            }
+
+            // Longer distances show greater age-related decline
+            getDistanceAgingMultiplier(distance) {
+                if (distance <= 5) return 0.8;
+                if (distance <= 10) return 0.9;
+                if (distance <= 15) return 1.0;
+                if (distance <= 21.1) return 1.15;
+                if (distance <= 42.2) return 1.3;
+                return 1.4;
+            }
+
+            // Interpolate factor for custom distances
+            interpolateDistanceFactor(factors, distance) {
+                const distances = Object.keys(factors).map(Number).sort((a, b) => a - b);
+
+                // Find surrounding distances
+                let lowerDist = distances[0];
+                let upperDist = distances[distances.length - 1];
+
+                for (let i = 0; i < distances.length - 1; i++) {
+                    if (distance >= distances[i] && distance <= distances[i + 1]) {
+                        lowerDist = distances[i];
+                        upperDist = distances[i + 1];
+                        break;
+                    }
+                }
+
+                // Linear interpolation
+                const ratio = (distance - lowerDist) / (upperDist - lowerDist);
+                return factors[lowerDist] + ratio * (factors[upperDist] - factors[lowerDist]);
+            }
+
+            // Open age standards (approximate world record times in seconds)
+            getOpenStandard(gender, distance) {
+                const isMale = gender === 'male';
+
+                // Approximate world record times (in seconds) for open age
+                const maleStandards = {
+                    5: 12.6 * 60,      // 12:37 (Kenenisa Bekele)
+                    10: 26.17 * 60,    // 26:11 (Joshua Cheptegei)
+                    15: 41 * 60,       // ~41:00 (approximate)
+                    21.1: 57.5 * 60,   // 57:30 (approximate)
+                    42.2: 120.67 * 60  // 2:00:35 (Kelvin Kiptum)
+                };
+
+                const femaleStandards = {
+                    5: 14.18 * 60,     // 14:11 (Gudaf Tsegay)
+                    10: 29.01 * 60,    // 29:01 (Beatrice Chebet)
+                    15: 46 * 60,       // ~46:00 (approximate)
+                    21.1: 64.5 * 60,   // 64:31 (approximate)
+                    42.2: 134.07 * 60  // 2:14:04 (Tigst Assefa)
+                };
+
+                const standards = isMale ? maleStandards : femaleStandards;
+
+                // If exact distance exists, return it
+                if (standards[distance]) {
+                    return standards[distance];
+                }
+
+                // Otherwise, interpolate
+                const distances = Object.keys(standards).map(Number).sort((a, b) => a - b);
+                let lowerDist = distances[0];
+                let upperDist = distances[distances.length - 1];
+
+                for (let i = 0; i < distances.length - 1; i++) {
+                    if (distance >= distances[i] && distance <= distances[i + 1]) {
+                        lowerDist = distances[i];
+                        upperDist = distances[i + 1];
+                        break;
+                    }
+                }
+
+                // Use Riegel formula for better distance scaling
+                const lowerTime = standards[lowerDist];
+                const ratio = Math.pow(distance / lowerDist, 1.06);
+                return lowerTime * ratio;
+            }
+
+            getPerformanceLevel(percent) {
+                if (percent >= 90) {
+                    return {
+                        name: 'World Class',
+                        description: 'Elite masters athlete - among the best globally',
+                        range: '90%+',
+                        bgClass: 'bg-yellow-50',
+                        borderClass: 'border-yellow-400',
+                        textClass: 'text-yellow-800'
+                    };
+                } else if (percent >= 80) {
+                    return {
+                        name: 'National Class',
+                        description: 'Highly competitive - national championship level',
+                        range: '80-89%',
+                        bgClass: 'bg-green-50',
+                        borderClass: 'border-green-500',
+                        textClass: 'text-green-800'
+                    };
+                } else if (percent >= 70) {
+                    return {
+                        name: 'Regional Class',
+                        description: 'Strong performance - competitive in local races',
+                        range: '70-79%',
+                        bgClass: 'bg-blue-50',
+                        borderClass: 'border-blue-400',
+                        textClass: 'text-blue-800'
+                    };
+                } else if (percent >= 60) {
+                    return {
+                        name: 'Local Class',
+                        description: 'Solid runner - age group competitive',
+                        range: '60-69%',
+                        bgClass: 'bg-orange-100',
+                        borderClass: 'border-orange-400',
+                        textClass: 'text-orange-600'
+                    };
+                } else {
+                    return {
+                        name: 'Recreational',
+                        description: 'Recreational runner - keep up the great work!',
+                        range: 'Below 60%',
+                        bgClass: 'bg-gray-100',
+                        borderClass: 'border-gray-400',
+                        textClass: 'text-gray-700'
+                    };
+                }
+            }
+
+            generateAgeComparison(baseTime, gender, distance, currentAge) {
+                const ages = [20, 30, 40, 50, 60, 70];
+                const comparison = [];
+
+                // Calculate the base performance (age graded time)
+                const currentFactor = this.getAgeFactor(currentAge, gender, distance);
+                const basePerformance = baseTime / currentFactor;
+
+                for (const age of ages) {
+                    const ageFactor = this.getAgeFactor(age, gender, distance);
+                    const equivalentTime = basePerformance * ageFactor;
+
+                    comparison.push({
+                        age: age,
+                        time: this.formatTime(equivalentTime),
+                        isCurrent: age === Math.round(currentAge / 10) * 10
+                    });
+                }
+
+                // Add current age if not in standard list
+                if (!ages.includes(currentAge)) {
+                    comparison.push({
+                        age: currentAge,
+                        time: this.formatTime(baseTime),
+                        isCurrent: true
+                    });
+                    comparison.sort((a, b) => a.age - b.age);
+                }
+
+                return comparison;
+            }
+
+            formatTime(totalSeconds) {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = Math.round(totalSeconds % 60);
+
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+
+            calculatePace(totalSeconds, distanceKm) {
+                const pacePerKm = totalSeconds / distanceKm;
+                const pacePerMile = pacePerKm * 1.60934;
+
+                const kmMins = Math.floor(pacePerKm / 60);
+                const kmSecs = Math.round(pacePerKm % 60);
+                const miMins = Math.floor(pacePerMile / 60);
+                const miSecs = Math.round(pacePerMile % 60);
+
+                return `${kmMins}:${kmSecs.toString().padStart(2, '0')}/km (${miMins}:${miSecs.toString().padStart(2, '0')}/mi)`;
+            }
+
+            getDistanceName(distance) {
+                const distances = {
+                    5: '5K',
+                    10: '10K',
+                    15: '15K',
+                    21.1: 'Half Marathon',
+                    42.2: 'Marathon'
+                };
+                return distances[distance] || `${distance}K`;
+            }
+        }
+
+        // Initialize calculator
+        const calculator = new AgeGradedCalculator();
+    </script>
+</body>
+</html>

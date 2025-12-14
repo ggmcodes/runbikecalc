@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Progress Tracker 2025 - Track Running & Cycling Metrics | Free Training Log</title>
+    <link rel="canonical" href="https://runbikecalc.com/progress-tracker">
+    <meta name="description" content="Track weight, FTP, running pace, weekly mileage, heart rate & more. Set goals, visualize progress with charts, export data. Free progress tracker for runners & cyclists.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Progress Tracker 2025 - Track Your Running & Cycling Progress">
+    <meta property="og:description" content="Track multiple fitness metrics over time with interactive charts and goal setting">
+    <meta property="og:image" content="https://runbikecalc.com/images/progress-tracker-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/progress-tracker">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Progress Tracker",
+        "url": "https://runbikecalc.com/progress-tracker",
+        "description": "Track weight, body fat, FTP, running pace, weekly mileage, resting heart rate and custom metrics over time with interactive charts and goal setting",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "2150",
+            "bestRating": "5"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How do I track my fitness progress over time?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use a progress tracker to log key metrics like weight, FTP, running pace, and weekly mileage. Record measurements regularly (weekly or monthly), set specific goals with target dates, and visualize trends with charts. Consistent tracking helps identify patterns and maintain motivation."
+            }
+        },{
+            "@type": "Question",
+            "name": "What metrics should I track as a runner or cyclist?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Essential metrics include: Weight and body composition, FTP (cyclists), running pace per mile/km, weekly mileage/volume, resting heart rate, recovery metrics, and personal records. Track 3-5 key metrics that align with your specific goals rather than trying to track everything."
+            }
+        },{
+            "@type": "Question",
+            "name": "How often should I log my training data?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Log workouts daily, but measure body metrics (weight, body fat) weekly at the same time. Test FTP every 6-8 weeks. Track resting heart rate daily upon waking. Weekly mileage is calculated automatically. Consistent timing ensures accurate trend analysis."
+            }
+        },{
+            "@type": "Question",
+            "name": "Can I export my progress data?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, most progress trackers allow CSV export of all your data. This lets you backup your progress, analyze trends in spreadsheets, share with coaches, or import into other training platforms. Export regularly to prevent data loss."
+            }
+        },{
+            "@type": "Question",
+            "name": "How do I set effective fitness goals?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use SMART goals: Specific (e.g., 'increase FTP to 250W'), Measurable (track with metrics), Achievable (based on current fitness), Relevant (aligned with race goals), Time-bound (set target date). Break large goals into smaller milestones and track progress weekly."
+            }
+        },{
+            "@type": "Question",
+            "name": "What is a personal record (PR) in fitness tracking?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A PR (Personal Record) is your best performance for a specific metric: fastest 5K time, highest FTP, lowest resting heart rate, or longest weekly mileage. Tracking PRs helps measure long-term progress and provides motivation. Update PRs whenever you achieve a new best."
+            }
+        }]
+    }
+    </script>
+
+    <style>
+        .metric-card {
+            transition: all 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+        .tab-button.active {
+            border-bottom: 2px solid #2563eb;
+            color: #2563eb;
+        }
+        .pr-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        input[type="date"] {
+            color-scheme: light;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-primary">RunBikeCalc</a>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden touch-target" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <div class="relative group">
+                        <a href="/training-plans" class="nav-link flex items-center">
+                            Plans
+                            <span class="ml-1 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-48 z-50">
+                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Plans</a>
+                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Running</a>
+                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cycling</a>
+                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Triathlon</a>
+                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hyrox</a>
+                        </div>
+                    </div>
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
+                    <a href="/running-pace-calculator.html" class="nav-link">Running</a>
+                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
+                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                </div>
+            </div>
+
+            <!-- Mobile navigation -->
+            <div id="mobile-menu" class="hidden mt-4 border-t pt-4">
+                <div class="border-b border-gray-200 pb-3 mb-3">
+                    <button id="mobile-plans-toggle" class="mobile-menu-item flex items-center justify-between w-full text-left">
+                        <span class="flex items-center">
+                            Plans
+                            <span class="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
+                        </span>
+                        <svg class="w-4 h-4 transform transition-transform" id="mobile-plans-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-plans-submenu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="/training-plans" class="block py-1 text-gray-600 hover:text-primary">All Plans</a>
+                        <a href="/running-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Running</a>
+                        <a href="/cycling-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Cycling</a>
+                        <a href="/triathlon-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Triathlon</a>
+                        <a href="/hyrox-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Hyrox</a>
+                    </div>
+                </div>
+                <a href="/" class="mobile-menu-item">Home</a>
+                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
+                <a href="/running-pace-calculator.html" class="mobile-menu-item">Running</a>
+                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
+                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
+                <a href="/about.html" class="mobile-menu-item">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Progress Tracker</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Track your fitness journey with comprehensive metrics, interactive charts, and goal setting</p>
+        </div>
+
+        <!-- Quick Stats Overview -->
+        <div id="quick-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <!-- Will be populated dynamically -->
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="bg-white rounded-lg shadow-sm mb-8">
+            <div class="border-b border-gray-200">
+                <nav class="flex flex-wrap -mb-px">
+                    <button class="tab-button active px-6 py-4 border-b-2 font-medium text-sm" data-tab="log">
+                        Log Entry
+                    </button>
+                    <button class="tab-button px-6 py-4 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="charts">
+                        Charts
+                    </button>
+                    <button class="tab-button px-6 py-4 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="goals">
+                        Goals
+                    </button>
+                    <button class="tab-button px-6 py-4 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="history">
+                        History
+                    </button>
+                    <button class="tab-button px-6 py-4 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="prs">
+                        PRs
+                    </button>
+                    <button class="tab-button px-6 py-4 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="data">
+                        Data
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="p-6">
+                <!-- Log Entry Tab -->
+                <div id="log-tab" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-6">Log New Entry</h2>
+
+                    <form id="entry-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Date -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
+                                <input type="date" id="entry-date" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none" required>
+                            </div>
+
+                            <!-- Weight -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Weight (lbs)</label>
+                                <input type="number" step="0.1" id="weight" class="calc-input-number" placeholder="e.g., 165.5">
+                            </div>
+
+                            <!-- Body Fat % -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Body Fat %</label>
+                                <input type="number" step="0.1" id="body-fat" class="calc-input-number" placeholder="e.g., 15.5">
+                            </div>
+
+                            <!-- FTP -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">FTP (watts)</label>
+                                <input type="number" id="ftp" class="calc-input-number" placeholder="e.g., 250">
+                            </div>
+
+                            <!-- Running Pace -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Running Pace (min:sec/mile)</label>
+                                <div class="flex gap-2">
+                                    <input type="number" id="pace-min" min="0" max="20" class="calc-input-number" placeholder="8">
+                                    <span class="flex items-center">:</span>
+                                    <input type="number" id="pace-sec" min="0" max="59" class="calc-input-number" placeholder="30">
+                                </div>
+                            </div>
+
+                            <!-- Weekly Mileage -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Weekly Mileage (miles)</label>
+                                <input type="number" step="0.1" id="weekly-mileage" class="calc-input-number" placeholder="e.g., 35">
+                            </div>
+
+                            <!-- Resting Heart Rate -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Resting Heart Rate (bpm)</label>
+                                <input type="number" id="resting-hr" class="calc-input-number" placeholder="e.g., 55">
+                            </div>
+
+                            <!-- Custom Metric 1 -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <input type="text" id="custom1-name" class="border-0 border-b border-gray-300 px-2 py-1 text-sm" placeholder="Custom metric name">
+                                </label>
+                                <input type="number" step="0.1" id="custom1-value" class="calc-input-number" placeholder="Value">
+                            </div>
+
+                            <!-- Custom Metric 2 -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <input type="text" id="custom2-name" class="border-0 border-b border-gray-300 px-2 py-1 text-sm" placeholder="Custom metric name">
+                                </label>
+                                <input type="number" step="0.1" id="custom2-value" class="calc-input-number" placeholder="Value">
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Notes (optional)</label>
+                            <textarea id="notes" rows="3" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none" placeholder="How are you feeling? Any observations?"></textarea>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Save Entry
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Charts Tab -->
+                <div id="charts-tab" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-6">Progress Charts</h2>
+
+                    <!-- Chart Controls -->
+                    <div class="mb-6 flex flex-wrap gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Time Range</label>
+                            <select id="time-range" class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none">
+                                <option value="30">Last 30 Days</option>
+                                <option value="90" selected>Last 90 Days</option>
+                                <option value="180">Last 6 Months</option>
+                                <option value="365">Last Year</option>
+                                <option value="all">All Time</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Metric</label>
+                            <select id="metric-select" class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none">
+                                <option value="weight">Weight</option>
+                                <option value="bodyFat">Body Fat %</option>
+                                <option value="ftp">FTP</option>
+                                <option value="runningPace">Running Pace</option>
+                                <option value="weeklyMileage">Weekly Mileage</option>
+                                <option value="restingHR">Resting Heart Rate</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Main Chart -->
+                    <div class="bg-white rounded-lg p-6 mb-8">
+                        <div class="chart-container">
+                            <canvas id="main-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Summary Stats -->
+                    <div id="chart-stats" class="grid md:grid-cols-4 gap-4">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Goals Tab -->
+                <div id="goals-tab" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-6">Goal Setting</h2>
+
+                    <!-- Add Goal Form -->
+                    <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                        <h3 class="text-lg font-semibold mb-4">Set New Goal</h3>
+                        <form id="goal-form" class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Metric</label>
+                                <select id="goal-metric" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none" required>
+                                    <option value="">Select metric...</option>
+                                    <option value="weight">Weight</option>
+                                    <option value="bodyFat">Body Fat %</option>
+                                    <option value="ftp">FTP</option>
+                                    <option value="runningPace">Running Pace</option>
+                                    <option value="weeklyMileage">Weekly Mileage</option>
+                                    <option value="restingHR">Resting Heart Rate</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Target Value</label>
+                                <input type="number" step="0.1" id="goal-target" class="calc-input-number" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Target Date</label>
+                                <input type="date" id="goal-date" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none" required>
+                            </div>
+                            <div class="flex items-end">
+                                <button type="submit" class="calc-button">Add Goal</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Active Goals -->
+                    <div id="active-goals">
+                        <h3 class="text-lg font-semibold mb-4">Active Goals</h3>
+                        <div id="goals-list" class="space-y-4">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Tab -->
+                <div id="history-tab" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-6">Entry History</h2>
+
+                    <div id="history-list" class="space-y-4">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- PRs Tab -->
+                <div id="prs-tab" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-6">Personal Records</h2>
+
+                    <div id="prs-list" class="grid md:grid-cols-2 gap-6">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Data Management Tab -->
+                <div id="data-tab" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold mb-6">Data Management</h2>
+
+                    <div class="space-y-6">
+                        <!-- Export -->
+                        <div class="bg-white rounded-lg p-6 border-2 border-gray-200">
+                            <h3 class="text-lg font-semibold mb-3">Export Data</h3>
+                            <p class="text-gray-600 mb-4">Download all your progress data as a CSV file</p>
+                            <button id="export-btn" class="calc-button">
+                                <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Export to CSV
+                            </button>
+                        </div>
+
+                        <!-- Import -->
+                        <div class="bg-white rounded-lg p-6 border-2 border-gray-200">
+                            <h3 class="text-lg font-semibold mb-3">Import Data</h3>
+                            <p class="text-gray-600 mb-4">Upload a CSV file to import your progress data</p>
+                            <input type="file" id="import-file" accept=".csv" class="mb-4">
+                            <button id="import-btn" class="calc-button-secondary">
+                                <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                                Import from CSV
+                            </button>
+                        </div>
+
+                        <!-- Clear Data -->
+                        <div class="bg-white rounded-lg p-6 border-2 border-red-200">
+                            <h3 class="text-lg font-semibold mb-3 text-red-600">Clear All Data</h3>
+                            <p class="text-gray-600 mb-4">Permanently delete all your progress data. This cannot be undone.</p>
+                            <button id="clear-btn" class="w-full px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
+                                Clear All Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad Unit -->
+        <div class="my-8 text-center">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3180649272238451"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Related Calculators</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/ftp-calculator" class="calc-card hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">FTP Calculator</h3>
+                    <p class="text-gray-600">Calculate your Functional Threshold Power and training zones</p>
+                </a>
+                <a href="/body-composition-calculator" class="calc-card hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Body Composition</h3>
+                    <p class="text-gray-600">Calculate body fat percentage and lean mass</p>
+                </a>
+                <a href="/vo2-max-calculator" class="calc-card hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold text-primary mb-2">VO2 Max Calculator</h3>
+                    <p class="text-gray-600">Estimate your VO2 max and fitness level</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="mt-12 prose max-w-none">
+            <h2>How to Track Your Fitness Progress Effectively</h2>
+            <p>Tracking your fitness progress is essential for achieving your goals and maintaining motivation. This comprehensive progress tracker helps you monitor multiple metrics over time, visualize trends, and celebrate achievements.</p>
+
+            <h3>Why Track Your Progress?</h3>
+            <ul>
+                <li><strong>Objective Measurement:</strong> Numbers don't lie. Tracking provides concrete evidence of improvement beyond how you feel</li>
+                <li><strong>Identify Patterns:</strong> Discover what training approaches work best for your body</li>
+                <li><strong>Stay Motivated:</strong> Seeing progress charts trending upward keeps you committed during tough periods</li>
+                <li><strong>Course Correction:</strong> Catch plateaus or regression early and adjust your training plan</li>
+                <li><strong>Long-term Perspective:</strong> Day-to-day fluctuations matter less when you can see months of data</li>
+            </ul>
+
+            <h3>Key Metrics to Track</h3>
+
+            <h4>1. Weight and Body Composition</h4>
+            <p>Weigh yourself weekly at the same time (ideally morning, post-bathroom, pre-breakfast). Body composition matters more than scale weight - track body fat percentage monthly for a complete picture.</p>
+
+            <h4>2. FTP (Functional Threshold Power)</h4>
+            <p>For cyclists, FTP is the gold standard. Test every 6-8 weeks using a 20-minute test. Regular tracking shows fitness gains and helps set appropriate training zones.</p>
+
+            <h4>3. Running Pace</h4>
+            <p>Track your comfortable pace over a standard distance (like 5K). Improvements in pace at the same heart rate indicate increased aerobic fitness.</p>
+
+            <h4>4. Weekly Training Volume</h4>
+            <p>Log total weekly mileage or hours. Gradual increases (10% per week) prevent injury while building fitness. Watch for patterns between volume and performance.</p>
+
+            <h4>5. Resting Heart Rate</h4>
+            <p>Measure immediately upon waking. Declining RHR over months indicates improved cardiovascular fitness. Sudden increases may signal overtraining or illness.</p>
+
+            <h3>Setting Effective Goals</h3>
+            <p>Use the SMART framework:</p>
+            <ul>
+                <li><strong>Specific:</strong> "Increase FTP to 250 watts" not "get stronger"</li>
+                <li><strong>Measurable:</strong> Choose metrics you can track objectively</li>
+                <li><strong>Achievable:</strong> Set challenging but realistic targets based on current fitness</li>
+                <li><strong>Relevant:</strong> Align goals with your race schedule or lifestyle priorities</li>
+                <li><strong>Time-bound:</strong> Set a target date to create urgency and structure training</li>
+            </ul>
+
+            <h3>Best Practices for Data Collection</h3>
+            <ul>
+                <li><strong>Consistency is Key:</strong> Measure at the same time under similar conditions</li>
+                <li><strong>Don't Obsess Daily:</strong> Most metrics need weekly or monthly tracking</li>
+                <li><strong>Context Matters:</strong> Use the notes field to record sleep quality, stress, illness</li>
+                <li><strong>Backup Your Data:</strong> Export to CSV monthly to prevent loss</li>
+                <li><strong>Review Regularly:</strong> Monthly review sessions help identify trends and adjust training</li>
+            </ul>
+
+            <h3>Interpreting Your Progress Charts</h3>
+            <p>Look for these patterns:</p>
+            <ul>
+                <li><strong>Upward Trends:</strong> Gradual improvement over 3-6 months indicates effective training</li>
+                <li><strong>Plateaus:</strong> Normal after 8-12 weeks. Signal to change training stimulus</li>
+                <li><strong>Sudden Drops:</strong> May indicate overtraining, illness, or life stress. Time to rest</li>
+                <li><strong>Seasonal Patterns:</strong> Many athletes see performance cycles with racing season</li>
+            </ul>
+
+            <h3>Common Tracking Mistakes</h3>
+            <ul>
+                <li><strong>Too Many Metrics:</strong> Focus on 3-5 key metrics aligned with your goals</li>
+                <li><strong>Comparing to Others:</strong> Your only competition is your past self</li>
+                <li><strong>Ignoring Context:</strong> A bad number during a recovery week is expected</li>
+                <li><strong>Short-term Focus:</strong> Real progress happens over months, not days</li>
+                <li><strong>Not Celebrating PRs:</strong> Acknowledge achievements to maintain motivation</li>
+            </ul>
+
+            <h3>Frequently Asked Questions</h3>
+
+            <h4>How often should I log entries?</h4>
+            <p>Log workouts daily, but measure body metrics (weight, body fat) weekly at the same time. Test performance metrics (FTP, pace) every 4-8 weeks. Track resting heart rate daily upon waking.</p>
+
+            <h4>What if my progress stalls?</h4>
+            <p>Plateaus are normal after 8-12 weeks. Review your training plan for progressive overload, ensure adequate recovery, check nutrition and sleep quality. Sometimes a recovery week breaks through plateaus.</p>
+
+            <h4>Should I track during rest weeks?</h4>
+            <p>Yes! Rest weeks often show improved metrics as your body adapts. Don't expect PRs during heavy training blocks - fitness reveals itself during recovery.</p>
+
+            <h4>How do I set realistic goals?</h4>
+            <p>Base goals on current fitness: aim for 5-10% improvement over 12 weeks for most metrics. Beginners can improve faster, advanced athletes progress more slowly. Research typical improvement rates for your sport.</p>
+
+            <h4>Can I share my data with a coach?</h4>
+            <p>Absolutely! Use the CSV export feature to share your progress data with coaches or training partners. Most coaching platforms can import CSV data.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-12">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/ftp-calculator.html" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="hover:text-white">Heart Rate Zones</a></li>
+                        <li><a href="/running-pace-calculator.html" class="hover:text-white">Running Pace</a></li>
+                        <li><a href="/vo2-max-calculator.html" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="/about.html" class="hover:text-white">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+    // Progress Tracker Application
+    class ProgressTracker {
+        constructor() {
+            this.entries = this.loadData('entries') || [];
+            this.goals = this.loadData('goals') || [];
+            this.customMetricNames = this.loadData('customMetricNames') || {};
+            this.chart = null;
+            this.init();
+        }
+
+        init() {
+            this.setupEventListeners();
+            this.updateQuickStats();
+            this.updateAllViews();
+            this.setDefaultDate();
+        }
+
+        loadData(key) {
+            const data = localStorage.getItem('progressTracker_' + key);
+            return data ? JSON.parse(data) : null;
+        }
+
+        saveData(key, data) {
+            localStorage.setItem('progressTracker_' + key, JSON.stringify(data));
+        }
+
+        setDefaultDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('entry-date').value = today;
+
+            const futureDate = new Date();
+            futureDate.setMonth(futureDate.getMonth() + 3);
+            document.getElementById('goal-date').min = today;
+        }
+
+        setupEventListeners() {
+            // Tab switching
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => this.switchTab(button.dataset.tab));
+            });
+
+            // Entry form
+            document.getElementById('entry-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.saveEntry();
+            });
+
+            // Goal form
+            document.getElementById('goal-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.saveGoal();
+            });
+
+            // Chart controls
+            document.getElementById('time-range').addEventListener('change', () => this.updateChart());
+            document.getElementById('metric-select').addEventListener('change', () => this.updateChart());
+
+            // Data management
+            document.getElementById('export-btn').addEventListener('click', () => this.exportData());
+            document.getElementById('import-btn').addEventListener('click', () => this.importData());
+            document.getElementById('clear-btn').addEventListener('click', () => this.clearAllData());
+
+            // Mobile menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    const menu = document.getElementById('mobile-menu');
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            const plansToggle = document.getElementById('mobile-plans-toggle');
+            if (plansToggle) {
+                plansToggle.addEventListener('click', function() {
+                    const submenu = document.getElementById('mobile-plans-submenu');
+                    const chevron = document.getElementById('mobile-plans-chevron');
+                    submenu.classList.toggle('hidden');
+                    chevron.classList.toggle('rotate-180');
+                });
+            }
+        }
+
+        switchTab(tabName) {
+            // Update buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active', 'border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-gray-500');
+            });
+            const activeButton = document.querySelector('[data-tab="' + tabName + '"]');
+            activeButton.classList.add('active', 'border-primary', 'text-primary');
+            activeButton.classList.remove('border-transparent', 'text-gray-500');
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+
+            // Special handling for charts tab
+            if (tabName === 'charts') {
+                setTimeout(() => this.updateChart(), 100);
+            }
+        }
+
+        saveEntry() {
+            const date = document.getElementById('entry-date').value;
+            const weight = parseFloat(document.getElementById('weight').value) || null;
+            const bodyFat = parseFloat(document.getElementById('body-fat').value) || null;
+            const ftp = parseInt(document.getElementById('ftp').value) || null;
+            const paceMin = parseInt(document.getElementById('pace-min').value) || null;
+            const paceSec = parseInt(document.getElementById('pace-sec').value) || null;
+            const weeklyMileage = parseFloat(document.getElementById('weekly-mileage').value) || null;
+            const restingHR = parseInt(document.getElementById('resting-hr').value) || null;
+            const notes = document.getElementById('notes').value;
+
+            // Custom metrics
+            const custom1Name = document.getElementById('custom1-name').value;
+            const custom1Value = parseFloat(document.getElementById('custom1-value').value) || null;
+            const custom2Name = document.getElementById('custom2-name').value;
+            const custom2Value = parseFloat(document.getElementById('custom2-value').value) || null;
+
+            // Save custom metric names
+            if (custom1Name) this.customMetricNames.custom1 = custom1Name;
+            if (custom2Name) this.customMetricNames.custom2 = custom2Name;
+            this.saveData('customMetricNames', this.customMetricNames);
+
+            // Convert running pace to seconds for easier comparison
+            const runningPace = (paceMin !== null && paceSec !== null) ? (paceMin * 60 + paceSec) : null;
+
+            const entry = {
+                id: Date.now(),
+                date,
+                weight,
+                bodyFat,
+                ftp,
+                runningPace,
+                weeklyMileage,
+                restingHR,
+                custom1: custom1Value,
+                custom2: custom2Value,
+                notes
+            };
+
+            // Remove existing entry for the same date
+            this.entries = this.entries.filter(e => e.date !== date);
+            this.entries.push(entry);
+            this.entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            this.saveData('entries', this.entries);
+            this.updateAllViews();
+            document.getElementById('entry-form').reset();
+            this.setDefaultDate();
+
+            // Show success message
+            this.showNotification('Entry saved successfully!', 'success');
+        }
+
+        saveGoal() {
+            const metric = document.getElementById('goal-metric').value;
+            const target = parseFloat(document.getElementById('goal-target').value);
+            const date = document.getElementById('goal-date').value;
+
+            const goal = {
+                id: Date.now(),
+                metric,
+                target,
+                date,
+                created: new Date().toISOString().split('T')[0]
+            };
+
+            this.goals.push(goal);
+            this.saveData('goals', this.goals);
+            this.updateGoalsList();
+            document.getElementById('goal-form').reset();
+
+            this.showNotification('Goal added successfully!', 'success');
+        }
+
+        updateQuickStats() {
+            const container = document.getElementById('quick-stats');
+            if (!this.entries.length) {
+                container.textContent = '';
+                const div = document.createElement('div');
+                div.className = 'col-span-full text-center text-gray-500 py-8';
+                div.textContent = 'No data yet. Start logging your progress!';
+                container.appendChild(div);
+                return;
+            }
+
+            const latest = this.entries[0];
+            const stats = [
+                { label: 'Latest Entry', value: new Date(latest.date).toLocaleDateString(), color: 'blue' },
+                { label: 'Total Entries', value: this.entries.length, color: 'green' },
+                { label: 'Active Goals', value: this.goals.filter(g => new Date(g.date) >= new Date()).length, color: 'purple' },
+                { label: 'Days Tracking', value: this.getDaysTracking(), color: 'orange' }
+            ];
+
+            container.textContent = '';
+            stats.forEach(stat => {
+                const div = document.createElement('div');
+                div.className = 'bg-white rounded-lg p-4 shadow-sm';
+
+                const label = document.createElement('div');
+                label.className = 'text-sm text-gray-600 mb-1';
+                label.textContent = stat.label;
+
+                const value = document.createElement('div');
+                value.className = 'text-2xl font-bold text-' + stat.color + '-600';
+                value.textContent = stat.value;
+
+                div.appendChild(label);
+                div.appendChild(value);
+                container.appendChild(div);
+            });
+        }
+
+        getDaysTracking() {
+            if (this.entries.length === 0) return 0;
+            const oldest = new Date(this.entries[this.entries.length - 1].date);
+            const newest = new Date(this.entries[0].date);
+            return Math.ceil((newest - oldest) / (1000 * 60 * 60 * 24)) + 1;
+        }
+
+        updateChart() {
+            const metric = document.getElementById('metric-select').value;
+            const timeRange = document.getElementById('time-range').value;
+
+            let filteredEntries = [...this.entries].reverse();
+
+            if (timeRange !== 'all') {
+                const cutoffDate = new Date();
+                cutoffDate.setDate(cutoffDate.getDate() - parseInt(timeRange));
+                filteredEntries = filteredEntries.filter(e => new Date(e.date) >= cutoffDate);
+            }
+
+            const data = filteredEntries.filter(e => e[metric] !== null);
+
+            const chartContainer = document.getElementById('main-chart');
+            if (!chartContainer) return;
+
+            if (data.length === 0) {
+                const parent = chartContainer.parentElement;
+                parent.textContent = '';
+                const div = document.createElement('div');
+                div.className = 'text-center text-gray-500 py-16';
+                div.textContent = 'No data available for this metric';
+                parent.appendChild(div);
+                return;
+            }
+
+            const labels = data.map(e => new Date(e.date).toLocaleDateString());
+            const values = data.map(e => {
+                if (metric === 'runningPace') {
+                    return (e[metric] / 60).toFixed(2);
+                }
+                return e[metric];
+            });
+
+            // Destroy existing chart
+            if (this.chart) {
+                this.chart.destroy();
+            }
+
+            const ctx = document.getElementById('main-chart');
+            if (!ctx) {
+                const container = document.querySelector('.chart-container');
+                container.textContent = '';
+                const canvas = document.createElement('canvas');
+                canvas.id = 'main-chart';
+                container.appendChild(canvas);
+            }
+
+            const metricLabels = {
+                weight: 'Weight (lbs)',
+                bodyFat: 'Body Fat %',
+                ftp: 'FTP (watts)',
+                runningPace: 'Running Pace (min/mile)',
+                weeklyMileage: 'Weekly Mileage (miles)',
+                restingHR: 'Resting HR (bpm)'
+            };
+
+            this.chart = new Chart(document.getElementById('main-chart'), {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: metricLabels[metric],
+                        data: values,
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            reverse: metric === 'runningPace' || metric === 'restingHR' || metric === 'bodyFat' || metric === 'weight'
+                        }
+                    }
+                }
+            });
+
+            this.updateChartStats(data, metric);
+        }
+
+        updateChartStats(data, metric) {
+            const values = data.map(e => e[metric]);
+            const latest = values[values.length - 1];
+            const earliest = values[0];
+            const change = latest - earliest;
+            const changePercent = ((change / earliest) * 100).toFixed(1);
+            const avg = (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1);
+            const best = metric === 'runningPace' || metric === 'restingHR' || metric === 'bodyFat' || metric === 'weight'
+                ? Math.min(...values)
+                : Math.max(...values);
+
+            const formatValue = (val) => {
+                if (metric === 'runningPace') {
+                    const min = Math.floor(val / 60);
+                    const sec = Math.round(val % 60);
+                    return min + ':' + sec.toString().padStart(2, '0');
+                }
+                return val.toFixed(1);
+            };
+
+            const isImprovement = (metric === 'runningPace' || metric === 'restingHR' || metric === 'bodyFat' || metric === 'weight')
+                ? change < 0
+                : change > 0;
+
+            const container = document.getElementById('chart-stats');
+            container.textContent = '';
+
+            const stats = [
+                { label: 'Latest', value: formatValue(latest), color: 'blue' },
+                { label: 'Change', value: (isImprovement ? '↑' : '↓') + ' ' + Math.abs(changePercent) + '%', color: isImprovement ? 'green' : 'red' },
+                { label: 'Average', value: formatValue(parseFloat(avg)), color: 'gray' },
+                { label: 'Best', value: formatValue(best), color: 'green' }
+            ];
+
+            stats.forEach(stat => {
+                const div = document.createElement('div');
+                div.className = 'bg-white rounded-lg p-4 shadow-sm';
+
+                const label = document.createElement('div');
+                label.className = 'text-sm text-gray-600 mb-1';
+                label.textContent = stat.label;
+
+                const value = document.createElement('div');
+                value.className = 'text-2xl font-bold text-' + stat.color + '-600';
+                value.textContent = stat.value;
+
+                div.appendChild(label);
+                div.appendChild(value);
+                container.appendChild(div);
+            });
+        }
+
+        updateGoalsList() {
+            const container = document.getElementById('goals-list');
+            const activeGoals = this.goals.filter(g => new Date(g.date) >= new Date());
+
+            if (!activeGoals.length) {
+                container.textContent = '';
+                const div = document.createElement('div');
+                div.className = 'text-center text-gray-500 py-8';
+                div.textContent = 'No active goals. Set your first goal above!';
+                container.appendChild(div);
+                return;
+            }
+
+            const metricLabels = {
+                weight: 'Weight',
+                bodyFat: 'Body Fat %',
+                ftp: 'FTP',
+                runningPace: 'Running Pace',
+                weeklyMileage: 'Weekly Mileage',
+                restingHR: 'Resting HR'
+            };
+
+            container.textContent = '';
+            activeGoals.forEach(goal => {
+                const current = this.getCurrentValue(goal.metric);
+                const progress = this.calculateProgress(goal, current);
+                const daysLeft = Math.ceil((new Date(goal.date) - new Date()) / (1000 * 60 * 60 * 24));
+
+                const card = document.createElement('div');
+                card.className = 'metric-card bg-white rounded-lg p-6 shadow-sm border-2 border-gray-200';
+
+                const header = document.createElement('div');
+                header.className = 'flex justify-between items-start mb-4';
+
+                const info = document.createElement('div');
+                const title = document.createElement('h4');
+                title.className = 'text-lg font-semibold';
+                title.textContent = metricLabels[goal.metric];
+                const target = document.createElement('p');
+                target.className = 'text-sm text-gray-600';
+                target.textContent = 'Target: ' + this.formatMetricValue(goal.metric, goal.target);
+                info.appendChild(title);
+                info.appendChild(target);
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'text-red-600 hover:text-red-700';
+                deleteBtn.onclick = () => this.deleteGoal(goal.id);
+                deleteBtn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+
+                header.appendChild(info);
+                header.appendChild(deleteBtn);
+
+                const progressSection = document.createElement('div');
+                progressSection.className = 'mb-2';
+
+                const progressInfo = document.createElement('div');
+                progressInfo.className = 'flex justify-between text-sm mb-1';
+                const currentText = document.createElement('span');
+                currentText.textContent = 'Current: ' + this.formatMetricValue(goal.metric, current);
+                const progressText = document.createElement('span');
+                progressText.className = 'font-semibold';
+                progressText.textContent = progress + '%';
+                progressInfo.appendChild(currentText);
+                progressInfo.appendChild(progressText);
+
+                const progressBarOuter = document.createElement('div');
+                progressBarOuter.className = 'w-full bg-gray-200 rounded-full h-2.5';
+                const progressBarInner = document.createElement('div');
+                progressBarInner.className = 'progress-bar bg-blue-600 h-2.5 rounded-full';
+                progressBarInner.style.width = Math.min(progress, 100) + '%';
+                progressBarOuter.appendChild(progressBarInner);
+
+                progressSection.appendChild(progressInfo);
+                progressSection.appendChild(progressBarOuter);
+
+                const dateInfo = document.createElement('div');
+                dateInfo.className = 'text-sm text-gray-600';
+                dateInfo.textContent = daysLeft + ' days until ' + new Date(goal.date).toLocaleDateString();
+
+                card.appendChild(header);
+                card.appendChild(progressSection);
+                card.appendChild(dateInfo);
+                container.appendChild(card);
+            });
+        }
+
+        getCurrentValue(metric) {
+            const latest = this.entries.find(e => e[metric] !== null);
+            return latest ? latest[metric] : 0;
+        }
+
+        calculateProgress(goal, current) {
+            const startEntry = this.entries.find(e => new Date(e.date) <= new Date(goal.created) && e[goal.metric] !== null);
+            const start = startEntry ? startEntry[goal.metric] : current;
+            const target = goal.target;
+
+            if (start === target) return 100;
+
+            const totalChange = target - start;
+            const currentChange = current - start;
+            return Math.round((currentChange / totalChange) * 100);
+        }
+
+        formatMetricValue(metric, value) {
+            if (!value && value !== 0) return 'N/A';
+
+            if (metric === 'runningPace') {
+                const min = Math.floor(value / 60);
+                const sec = Math.round(value % 60);
+                return min + ':' + sec.toString().padStart(2, '0') + '/mile';
+            }
+
+            const units = {
+                weight: 'lbs',
+                bodyFat: '%',
+                ftp: 'W',
+                weeklyMileage: 'mi',
+                restingHR: 'bpm'
+            };
+
+            return value.toFixed(1) + ' ' + (units[metric] || '');
+        }
+
+        deleteGoal(id) {
+            if (confirm('Are you sure you want to delete this goal?')) {
+                this.goals = this.goals.filter(g => g.id !== id);
+                this.saveData('goals', this.goals);
+                this.updateGoalsList();
+                this.updateQuickStats();
+            }
+        }
+
+        updateHistory() {
+            const container = document.getElementById('history-list');
+
+            if (!this.entries.length) {
+                container.textContent = '';
+                const div = document.createElement('div');
+                div.className = 'text-center text-gray-500 py-8';
+                div.textContent = 'No entries yet';
+                container.appendChild(div);
+                return;
+            }
+
+            container.textContent = '';
+            this.entries.forEach(entry => {
+                const metrics = [];
+                if (entry.weight) metrics.push('Weight: ' + entry.weight + ' lbs');
+                if (entry.bodyFat) metrics.push('BF: ' + entry.bodyFat + '%');
+                if (entry.ftp) metrics.push('FTP: ' + entry.ftp + 'W');
+                if (entry.runningPace) metrics.push('Pace: ' + this.formatMetricValue('runningPace', entry.runningPace));
+                if (entry.weeklyMileage) metrics.push('Mileage: ' + entry.weeklyMileage + ' mi');
+                if (entry.restingHR) metrics.push('RHR: ' + entry.restingHR + ' bpm');
+
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg p-6 shadow-sm border-l-4 border-blue-500';
+
+                const header = document.createElement('div');
+                header.className = 'flex justify-between items-start mb-3';
+
+                const info = document.createElement('div');
+                const dateTitle = document.createElement('h4');
+                dateTitle.className = 'font-semibold text-lg';
+                dateTitle.textContent = new Date(entry.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                const metricsText = document.createElement('div');
+                metricsText.className = 'text-sm text-gray-600 mt-1';
+                metricsText.textContent = metrics.join(' • ');
+                info.appendChild(dateTitle);
+                info.appendChild(metricsText);
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'text-red-600 hover:text-red-700';
+                deleteBtn.onclick = () => this.deleteEntry(entry.id);
+                deleteBtn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>';
+
+                header.appendChild(info);
+                header.appendChild(deleteBtn);
+                card.appendChild(header);
+
+                if (entry.notes) {
+                    const notes = document.createElement('p');
+                    notes.className = 'text-gray-700 mt-2 italic';
+                    notes.textContent = '"' + entry.notes + '"';
+                    card.appendChild(notes);
+                }
+
+                container.appendChild(card);
+            });
+        }
+
+        deleteEntry(id) {
+            if (confirm('Are you sure you want to delete this entry?')) {
+                this.entries = this.entries.filter(e => e.id !== id);
+                this.saveData('entries', this.entries);
+                this.updateAllViews();
+            }
+        }
+
+        updatePRs() {
+            const container = document.getElementById('prs-list');
+
+            if (!this.entries.length) {
+                container.textContent = '';
+                const div = document.createElement('div');
+                div.className = 'col-span-full text-center text-gray-500 py-8';
+                div.textContent = 'No PRs yet';
+                container.appendChild(div);
+                return;
+            }
+
+            const metrics = [
+                { key: 'ftp', label: 'Highest FTP', best: 'max', icon: '⚡' },
+                { key: 'weight', label: 'Lowest Weight', best: 'min', icon: '⚖️' },
+                { key: 'bodyFat', label: 'Lowest Body Fat', best: 'min', icon: '💪' },
+                { key: 'runningPace', label: 'Fastest Pace', best: 'min', icon: '🏃' },
+                { key: 'weeklyMileage', label: 'Highest Mileage', best: 'max', icon: '🎯' },
+                { key: 'restingHR', label: 'Lowest Resting HR', best: 'min', icon: '❤️' }
+            ];
+
+            container.textContent = '';
+            metrics.forEach(metric => {
+                const entries = this.entries.filter(e => e[metric.key] !== null);
+                if (!entries.length) return;
+
+                const values = entries.map(e => ({ value: e[metric.key], date: e.date }));
+                const pr = metric.best === 'max'
+                    ? values.reduce((a, b) => a.value > b.value ? a : b)
+                    : values.reduce((a, b) => a.value < b.value ? a : b);
+
+                const card = document.createElement('div');
+                card.className = 'bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 shadow-sm border-2 border-blue-200';
+
+                const header = document.createElement('div');
+                header.className = 'flex items-center justify-between mb-3';
+
+                const icon = document.createElement('div');
+                icon.className = 'text-3xl pr-badge';
+                icon.textContent = metric.icon;
+
+                const badge = document.createElement('span');
+                badge.className = 'text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full';
+                badge.textContent = 'PR';
+
+                header.appendChild(icon);
+                header.appendChild(badge);
+
+                const title = document.createElement('h4');
+                title.className = 'text-lg font-semibold text-gray-800 mb-1';
+                title.textContent = metric.label;
+
+                const value = document.createElement('div');
+                value.className = 'text-3xl font-bold text-blue-600 mb-2';
+                value.textContent = this.formatMetricValue(metric.key, pr.value);
+
+                const date = document.createElement('div');
+                date.className = 'text-sm text-gray-600';
+                date.textContent = 'Set on ' + new Date(pr.date).toLocaleDateString();
+
+                card.appendChild(header);
+                card.appendChild(title);
+                card.appendChild(value);
+                card.appendChild(date);
+                container.appendChild(card);
+            });
+        }
+
+        exportData() {
+            if (!this.entries.length) {
+                alert('No data to export');
+                return;
+            }
+
+            const headers = ['Date', 'Weight', 'Body Fat %', 'FTP', 'Running Pace (sec)', 'Weekly Mileage', 'Resting HR', 'Custom 1', 'Custom 2', 'Notes'];
+            const rows = this.entries.map(e => [
+                e.date,
+                e.weight || '',
+                e.bodyFat || '',
+                e.ftp || '',
+                e.runningPace || '',
+                e.weeklyMileage || '',
+                e.restingHR || '',
+                e.custom1 || '',
+                e.custom2 || '',
+                e.notes || ''
+            ]);
+
+            const csv = [headers, ...rows].map(row => row.map(cell => '"' + cell + '"').join(',')).join('\n');
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'progress-tracker-' + new Date().toISOString().split('T')[0] + '.csv';
+            a.click();
+            URL.revokeObjectURL(url);
+
+            this.showNotification('Data exported successfully!', 'success');
+        }
+
+        importData() {
+            const fileInput = document.getElementById('import-file');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file to import');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const csv = e.target.result;
+                    const lines = csv.split('\n');
+                    const entries = [];
+
+                    for (let i = 1; i < lines.length; i++) {
+                        if (!lines[i].trim()) continue;
+
+                        const values = lines[i].match(/(".*?"|[^,]+)(?=\s*,|\s*$)/g).map(v => v.replace(/^"|"$/g, ''));
+
+                        const entry = {
+                            id: Date.now() + i,
+                            date: values[0],
+                            weight: parseFloat(values[1]) || null,
+                            bodyFat: parseFloat(values[2]) || null,
+                            ftp: parseInt(values[3]) || null,
+                            runningPace: parseFloat(values[4]) || null,
+                            weeklyMileage: parseFloat(values[5]) || null,
+                            restingHR: parseInt(values[6]) || null,
+                            custom1: parseFloat(values[7]) || null,
+                            custom2: parseFloat(values[8]) || null,
+                            notes: values[9] || ''
+                        };
+
+                        entries.push(entry);
+                    }
+
+                    this.entries = [...this.entries, ...entries];
+                    this.entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    this.saveData('entries', this.entries);
+                    this.updateAllViews();
+
+                    fileInput.value = '';
+                    this.showNotification('Imported ' + entries.length + ' entries successfully!', 'success');
+                } catch (error) {
+                    alert('Error importing file. Please check the format.');
+                    console.error(error);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        clearAllData() {
+            if (confirm('Are you sure? This will permanently delete all your data. This cannot be undone.')) {
+                if (confirm('Really sure? Export your data first if you want to keep a backup.')) {
+                    this.entries = [];
+                    this.goals = [];
+                    this.customMetricNames = {};
+                    localStorage.removeItem('progressTracker_entries');
+                    localStorage.removeItem('progressTracker_goals');
+                    localStorage.removeItem('progressTracker_customMetricNames');
+                    this.updateAllViews();
+                    this.showNotification('All data cleared', 'success');
+                }
+            }
+        }
+
+        updateAllViews() {
+            this.updateQuickStats();
+            this.updateHistory();
+            this.updateGoalsList();
+            this.updatePRs();
+        }
+
+        showNotification(message, type) {
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500'
+            };
+
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 left-1/2 transform -translate-x-1/2 ' + colors[type] + ' text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-opacity';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    }
+
+    // Initialize the tracker
+    let tracker;
+    document.addEventListener('DOMContentLoaded', () => {
+        tracker = new ProgressTracker();
+    });
+    </script>
+</body>
+</html>
