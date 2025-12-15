@@ -312,6 +312,9 @@
                         <button class="tab-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-tab="race">
                             Race Data
                         </button>
+                        <button class="tab-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-tab="known">
+                            I Know My LTHR
+                        </button>
                     </div>
 
                     <!-- 30-Minute Test Tab -->
@@ -519,6 +522,49 @@
 
                             <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
                                 Calculate LTHR →
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Known LTHR Tab -->
+                    <div id="known-tab" class="tab-content hidden">
+                        <form id="lthr-known-form" class="space-y-6">
+                            <div class="bg-green-50 p-4 rounded-lg mb-4">
+                                <p class="text-sm text-green-800">
+                                    <strong>Already tested?</strong> Enter your known LTHR to calculate training zones instantly.
+                                </p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Your LTHR (bpm)
+                                </label>
+                                <input type="number" id="known-lthr" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary text-lg"
+                                       placeholder="165" min="100" max="220" required>
+                                <p class="text-xs text-gray-500 mt-1">Enter your lactate threshold heart rate</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Max Heart Rate (optional)
+                                </label>
+                                <input type="number" id="known-max-hr" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary"
+                                       placeholder="185" min="140" max="220">
+                                <p class="text-xs text-gray-500 mt-1">For Zone 5+ calculations</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Zone System
+                                </label>
+                                <select id="zone-system" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary">
+                                    <option value="5">5-Zone System (Standard)</option>
+                                    <option value="7">7-Zone System (Advanced)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                Calculate Training Zones →
                             </button>
                         </form>
                     </div>
@@ -1390,6 +1436,37 @@
             const results = calculateLTHR('race', data);
             displayResults(results);
         });
+
+        document.getElementById('lthr-known-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const lthr = parseFloat(document.getElementById('known-lthr').value);
+            const maxHR = parseFloat(document.getElementById('known-max-hr').value) || Math.round(lthr / 0.88);
+            const zoneSystem = document.getElementById('zone-system').value;
+
+            const lthrPercent = Math.round((lthr / maxHR) * 100);
+            const zones = zoneSystem === '7' ? calculate7Zones(lthr, maxHR) : calculateZones(lthr);
+
+            const results = {
+                lthr: lthr,
+                maxHR: maxHR,
+                lthrPercent: lthrPercent,
+                thresholdPace: 'N/A',
+                zones: zones
+            };
+            displayResults(results);
+        });
+
+        function calculate7Zones(lthr, maxHR) {
+            return [
+                { zone: 1, name: 'Active Recovery', min: 0, max: Math.round(lthr * 0.70), color: 'zone-1' },
+                { zone: 2, name: 'Aerobic', min: Math.round(lthr * 0.70), max: Math.round(lthr * 0.80), color: 'zone-1' },
+                { zone: 3, name: 'Moderate', min: Math.round(lthr * 0.80), max: Math.round(lthr * 0.87), color: 'zone-2' },
+                { zone: 4, name: 'Tempo', min: Math.round(lthr * 0.87), max: Math.round(lthr * 0.95), color: 'zone-3' },
+                { zone: 5, name: 'Threshold', min: Math.round(lthr * 0.95), max: Math.round(lthr * 1.02), color: 'zone-4' },
+                { zone: 6, name: 'VO2max', min: Math.round(lthr * 1.02), max: Math.round(lthr * 1.10), color: 'zone-5' },
+                { zone: 7, name: 'Neuromuscular', min: Math.round(lthr * 1.10), max: maxHR, color: 'zone-5' }
+            ];
+        }
 
         // Share functionality
         function shareResults() {
