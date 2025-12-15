@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+
+    <title>Track Conversion Calculator - 3K to 2 Mile, 1500m to Mile | Free Tool</title>
+    <link rel="canonical" href="https://runbikecalc.com/track-conversion-calculator">
+    <meta name="description" content="Free track conversion calculator. Convert 3000m to 2 mile times, 1500m to mile, 5000m to 5K. Calculate equivalent race times between track and road distances.">
+    <meta name="keywords" content="track conversion calculator, 3k to 2 mile conversion, track and field conversion, 1500m to mile converter, track time calculator, running conversion calculator">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Track Conversion Calculator - Convert Track & Road Times">
+    <meta property="og:description" content="Convert between track distances and times. 3000m to 2 mile, 1500m to mile, and more.">
+    <meta property="og:image" content="https://runbikecalc.com/images/track-conversion-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/track-conversion-calculator">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Track Conversion Calculator">
+    <meta name="twitter:description" content="Convert track and road running distances and times">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Track Conversion Calculator",
+        "url": "https://runbikecalc.com/track-conversion-calculator",
+        "description": "Convert between track distances and equivalent race times. 3000m to 2 mile, 1500m to mile, 5000m to 5K conversions.",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I convert 3000m to 2 mile time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To convert a 3000m time to an equivalent 2 mile time, multiply by 1.0729 (since 2 miles is 3218.69m). For example, a 9:00 3000m converts to approximately 9:39 for 2 miles. Our calculator uses the Riegel formula for more accurate predictions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between 3000m and 2 miles?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "3000 meters equals 1.864 miles, while 2 miles equals 3218.69 meters. The 2 mile is 218.69 meters (about 7.3%) longer than 3000m. In track and field, 3000m is a standard metric distance while 2 miles is common in American high school and college meets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I convert 1500m to mile time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A 1500m time can be converted to a mile equivalent by multiplying by 1.0729 (mile is 1609.34m vs 1500m). A 4:00 1500m roughly equals a 4:17 mile. The mile is 109.34 meters longer than 1500m."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is 5000m the same as 5K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, 5000 meters and 5 kilometers are exactly the same distance (5K = 5 kilometers = 5000 meters = 3.107 miles). Track 5000m times are typically faster than road 5K times due to the flat, controlled surface."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-blue-600">Home</a>
+                    <a href="/running-pace-calculator" class="hover:text-blue-600">Pace Calculator</a>
+                    <a href="/vo2-max-calculator" class="hover:text-blue-600">VO2 Max</a>
+                    <a href="/blog" class="hover:text-blue-600">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Breadcrumb -->
+        <nav class="mb-6 text-sm">
+            <a href="/" class="text-blue-600 hover:underline">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/running-tools" class="text-blue-600 hover:underline">Running Tools</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-600">Track Conversion Calculator</span>
+        </nav>
+
+        <h1 class="text-4xl font-bold mb-4">Track Conversion Calculator</h1>
+        <p class="text-xl text-gray-600 mb-8">Convert between track distances and calculate equivalent race times. Perfect for comparing 3000m to 2 mile, 1500m to mile, and more.</p>
+
+        <!-- Calculator -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Time Conversion Calculator</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Input Section -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Select Your Distance</label>
+                        <select id="fromDistance" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="calculate()">
+                            <option value="800">800m</option>
+                            <option value="1500" selected>1500m</option>
+                            <option value="1609.34">Mile (1609m)</option>
+                            <option value="3000">3000m</option>
+                            <option value="3218.69">2 Mile (3219m)</option>
+                            <option value="5000">5000m / 5K</option>
+                            <option value="10000">10000m / 10K</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Your Time</label>
+                        <div class="flex space-x-2">
+                            <input type="number" id="minutes" placeholder="Min" min="0" max="999" class="w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="calculate()">
+                            <input type="number" id="seconds" placeholder="Sec" min="0" max="59" step="0.01" class="w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="calculate()">
+                        </div>
+                    </div>
+
+                    <button onclick="calculate()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Calculate Conversions
+                    </button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-bold mb-4">Equivalent Times</h3>
+                    <div id="results" class="space-y-3">
+                        <p class="text-gray-500">Enter a time to see conversions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Distance Reference -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Track Distance Reference</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-3 text-left">Track Distance</th>
+                            <th class="p-3 text-left">Meters</th>
+                            <th class="p-3 text-left">Miles</th>
+                            <th class="p-3 text-left">Laps (400m)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="p-3 font-medium">400m</td><td class="p-3">400</td><td class="p-3">0.249 mi</td><td class="p-3">1</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium">800m</td><td class="p-3">800</td><td class="p-3">0.497 mi</td><td class="p-3">2</td></tr>
+                        <tr class="border-b"><td class="p-3 font-medium">1500m</td><td class="p-3">1,500</td><td class="p-3">0.932 mi</td><td class="p-3">3.75</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium">Mile</td><td class="p-3">1,609.34</td><td class="p-3">1.000 mi</td><td class="p-3">4.02</td></tr>
+                        <tr class="border-b"><td class="p-3 font-medium">3000m</td><td class="p-3">3,000</td><td class="p-3">1.864 mi</td><td class="p-3">7.5</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium">2 Mile</td><td class="p-3">3,218.69</td><td class="p-3">2.000 mi</td><td class="p-3">8.05</td></tr>
+                        <tr class="border-b"><td class="p-3 font-medium">5000m / 5K</td><td class="p-3">5,000</td><td class="p-3">3.107 mi</td><td class="p-3">12.5</td></tr>
+                        <tr class="bg-gray-50"><td class="p-3 font-medium">10000m / 10K</td><td class="p-3">10,000</td><td class="p-3">6.214 mi</td><td class="p-3">25</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3K to 2 Mile Section (Target keyword) -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">3000m to 2 Mile Conversion</h2>
+            <p class="mb-4">The 3000m and 2 mile are close in distance but not identical. Understanding the conversion helps athletes compare performances across different meet formats.</p>
+
+            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                <h3 class="font-bold text-blue-800 mb-2">Key Facts:</h3>
+                <ul class="list-disc list-inside space-y-1 text-blue-900">
+                    <li><strong>3000m</strong> = 1.864 miles (7.5 laps of a 400m track)</li>
+                    <li><strong>2 miles</strong> = 3218.69m (8.05 laps of a 400m track)</li>
+                    <li>2 mile is <strong>218.69 meters longer</strong> (about 7.3% farther)</li>
+                </ul>
+            </div>
+
+            <h3 class="font-bold mb-3">3K to 2 Mile Conversion Chart</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-green-600 text-white">
+                        <tr><th class="p-2">3000m Time</th><th class="p-2">Approx 2 Mile Time</th><th class="p-2">Pace/Mile</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="p-2">8:00</td><td class="p-2">8:35</td><td class="p-2">4:17</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">8:30</td><td class="p-2">9:07</td><td class="p-2">4:34</td></tr>
+                        <tr class="border-b"><td class="p-2">9:00</td><td class="p-2">9:39</td><td class="p-2">4:50</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">9:30</td><td class="p-2">10:12</td><td class="p-2">5:06</td></tr>
+                        <tr class="border-b"><td class="p-2">10:00</td><td class="p-2">10:44</td><td class="p-2">5:22</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">10:30</td><td class="p-2">11:16</td><td class="p-2">5:38</td></tr>
+                        <tr class="border-b"><td class="p-2">11:00</td><td class="p-2">11:48</td><td class="p-2">5:54</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">12:00</td><td class="p-2">12:53</td><td class="p-2">6:26</td></tr>
+                        <tr><td class="p-2">13:00</td><td class="p-2">13:57</td><td class="p-2">6:58</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 1500m to Mile Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">1500m to Mile Conversion</h2>
+            <p class="mb-4">The 1500m is the standard Olympic middle distance, while the mile remains popular in American competitions. Here's how they compare:</p>
+
+            <div class="bg-orange-50 rounded-lg p-4 mb-4">
+                <h3 class="font-bold text-orange-800 mb-2">Key Facts:</h3>
+                <ul class="list-disc list-inside space-y-1 text-orange-900">
+                    <li><strong>1500m</strong> = 0.932 miles (3.75 laps)</li>
+                    <li><strong>Mile</strong> = 1609.34m (4.02 laps)</li>
+                    <li>Mile is <strong>109.34 meters longer</strong> (about 7.3% farther)</li>
+                </ul>
+            </div>
+
+            <h3 class="font-bold mb-3">1500m to Mile Conversion Chart</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-orange-600 text-white">
+                        <tr><th class="p-2">1500m Time</th><th class="p-2">Approx Mile Time</th><th class="p-2">Level</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="p-2">3:30</td><td class="p-2">3:45</td><td class="p-2">Elite</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">3:45</td><td class="p-2">4:01</td><td class="p-2">Sub-Elite</td></tr>
+                        <tr class="border-b"><td class="p-2">4:00</td><td class="p-2">4:17</td><td class="p-2">Competitive</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">4:15</td><td class="p-2">4:34</td><td class="p-2">Advanced</td></tr>
+                        <tr class="border-b"><td class="p-2">4:30</td><td class="p-2">4:50</td><td class="p-2">Good</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-2">5:00</td><td class="p-2">5:22</td><td class="p-2">Intermediate</td></tr>
+                        <tr class="border-b"><td class="p-2">5:30</td><td class="p-2">5:54</td><td class="p-2">Recreational</td></tr>
+                        <tr><td class="p-2">6:00</td><td class="p-2">6:26</td><td class="p-2">Beginner</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- How Conversion Works -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">How Track Time Conversion Works</h2>
+
+            <p class="mb-4">Our calculator uses the <strong>Riegel formula</strong>, a scientifically-validated method for predicting race times across different distances:</p>
+
+            <div class="bg-gray-100 rounded-lg p-4 mb-4 font-mono text-center">
+                T2 = T1 x (D2/D1)^1.06
+            </div>
+
+            <p class="mb-4">Where:</p>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+                <li><strong>T1</strong> = Your known time</li>
+                <li><strong>T2</strong> = Predicted time for new distance</li>
+                <li><strong>D1</strong> = Known distance</li>
+                <li><strong>D2</strong> = Target distance</li>
+                <li><strong>1.06</strong> = Fatigue factor (accounts for slowing over longer distances)</li>
+            </ul>
+
+            <p class="text-gray-600">This formula accounts for the physiological reality that you can't maintain the same pace as distances increase due to fatigue and energy system limitations.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">How do I convert 3000m to 2 mile time?</h3>
+                    <p class="text-gray-700">To convert a 3000m time to an equivalent 2 mile time, multiply by approximately 1.073 (accounting for the extra 218.69m). For example, a 9:00 3000m converts to approximately 9:39 for 2 miles. Our calculator uses the more accurate Riegel formula.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">What is the difference between 3000m and 2 miles?</h3>
+                    <p class="text-gray-700">3000 meters equals 1.864 miles, while 2 miles equals 3218.69 meters. The 2 mile is 218.69 meters (7.3%) longer. In track, 3000m is the standard metric distance, while 2 miles is common in American high school and college meets.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Is 5000m the same as 5K?</h3>
+                    <p class="text-gray-700">Yes, 5000 meters and 5 kilometers are exactly the same distance. However, track 5000m times are typically 10-30 seconds faster than road 5K times due to the flat, controlled track surface.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Why are track times faster than road times?</h3>
+                    <p class="text-gray-700">Track surfaces are optimized for running with consistent, flat terrain and measured distances. Road races have variable surfaces, elevation changes, turns, and weather exposure that typically slow times by 1-3%.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="bg-blue-50 rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-4">Related Running Tools</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="/running-pace-calculator" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">Running Pace Calculator</h3>
+                    <p class="text-sm text-gray-600">Calculate pace, time, and distance</p>
+                </a>
+                <a href="/vo2-max-calculator" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">VO2 Max Calculator</h3>
+                    <p class="text-sm text-gray-600">Estimate fitness from race times</p>
+                </a>
+                <a href="/race-time-predictor" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">Race Time Predictor</h3>
+                    <p class="text-sm text-gray-600">Predict times for any distance</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>2025 RunBikeCalc. Free running and cycling calculators.</p>
+            <div class="mt-4 space-x-4">
+                <a href="/about" class="hover:text-blue-400">About</a>
+                <a href="/privacy" class="hover:text-blue-400">Privacy</a>
+                <a href="/contact" class="hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    var distances = {
+        800: '800m',
+        1500: '1500m',
+        1609.34: 'Mile',
+        3000: '3000m',
+        3218.69: '2 Mile',
+        5000: '5K',
+        10000: '10K'
+    };
+
+    function formatTime(secs) {
+        var mins = Math.floor(secs / 60);
+        var s = (secs % 60).toFixed(1);
+        if (parseFloat(s) < 10) s = '0' + s;
+        return mins + ':' + s;
+    }
+
+    function calculate() {
+        var fromDist = parseFloat(document.getElementById('fromDistance').value);
+        var minutes = parseInt(document.getElementById('minutes').value) || 0;
+        var seconds = parseFloat(document.getElementById('seconds').value) || 0;
+        var resultsDiv = document.getElementById('results');
+
+        // Clear previous results
+        while (resultsDiv.firstChild) {
+            resultsDiv.removeChild(resultsDiv.firstChild);
+        }
+
+        if (minutes === 0 && seconds === 0) {
+            var placeholder = document.createElement('p');
+            placeholder.className = 'text-gray-500';
+            placeholder.textContent = 'Enter a time to see conversions';
+            resultsDiv.appendChild(placeholder);
+            return;
+        }
+
+        var totalSeconds = minutes * 60 + seconds;
+
+        for (var dist in distances) {
+            var d = parseFloat(dist);
+            if (d === fromDist) continue;
+
+            var predictedSeconds = totalSeconds * Math.pow(d / fromDist, 1.06);
+
+            var row = document.createElement('div');
+            row.className = 'flex justify-between items-center p-2 bg-white rounded';
+            if (d === 3218.69 || d === 1609.34) {
+                row.className += ' border-2 border-blue-500';
+            }
+
+            var nameSpan = document.createElement('span');
+            nameSpan.className = 'font-medium';
+            nameSpan.textContent = distances[dist];
+
+            var timeSpan = document.createElement('span');
+            timeSpan.className = 'text-blue-600 font-bold';
+            timeSpan.textContent = formatTime(predictedSeconds);
+
+            row.appendChild(nameSpan);
+            row.appendChild(timeSpan);
+            resultsDiv.appendChild(row);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('minutes').value = 4;
+        document.getElementById('seconds').value = 0;
+        calculate();
+    });
+    </script>
+</body>
+</html>
