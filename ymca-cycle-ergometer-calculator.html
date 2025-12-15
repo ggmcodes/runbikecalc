@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+
+    <title>YMCA Cycle Ergometer Test Calculator: VO2 Max from Bike Test (Free)</title>
+    <link rel="canonical" href="https://runbikecalc.com/ymca-cycle-ergometer-calculator">
+    <meta name="description" content="Free YMCA Cycle Ergometer Test Calculator. Estimate VO2 max from submaximal bike test. Enter heart rate and workload to get fitness level. Used by fitness professionals.">
+    <meta name="keywords" content="ymca cycle ergometer test calculator, ymca bike test, submaximal vo2 max test, cycle ergometer vo2 max, ymca fitness test, bike fitness test calculator">
+
+    <meta property="og:title" content="YMCA Cycle Ergometer Test Calculator - VO2 Max Estimation">
+    <meta property="og:description" content="Calculate VO2 max from YMCA submaximal cycle ergometer test. Free calculator for fitness professionals.">
+    <meta property="og:url" content="https://runbikecalc.com/ymca-cycle-ergometer-calculator">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "YMCA Cycle Ergometer Test Calculator",
+        "url": "https://runbikecalc.com/ymca-cycle-ergometer-calculator",
+        "description": "Calculate VO2 max from YMCA submaximal cycle ergometer test protocol",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the YMCA Cycle Ergometer Test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The YMCA Cycle Ergometer Test is a submaximal fitness test that estimates VO2 max without requiring maximal effort. It uses progressively increasing workloads on a stationary bike while monitoring heart rate to predict aerobic capacity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is the YMCA bike test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The YMCA cycle ergometer test has a standard error of estimate of approximately 10-15% compared to direct VO2 max testing. It's accurate enough for fitness assessment and tracking progress over time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I perform the YMCA cycle test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start at 150 kgm/min (0.5 kp at 50 RPM) for 3 minutes. If heart rate is below 80 bpm, increase to 750 kgm/min. If 80-89 bpm, increase to 600 kgm/min. If 90-100 bpm, increase to 450 kgm/min. Continue increasing until reaching 85% of max HR."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What equipment do I need for the YMCA test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You need a mechanically-braked cycle ergometer (like Monark), heart rate monitor, stopwatch, and RPE scale. Many spin bikes can also be used if they display power output in watts or kgm/min."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-blue-600">RunBikeCalc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-blue-600">Home</a>
+                    <a href="/vo2-max-calculator" class="hover:text-blue-600">VO2 Max</a>
+                    <a href="/cooper-test-calculator" class="hover:text-blue-600">Cooper Test</a>
+                    <a href="/blog" class="hover:text-blue-600">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <nav class="mb-6 text-sm">
+            <a href="/" class="text-blue-600 hover:underline">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/cycling-calculators" class="text-blue-600 hover:underline">Cycling</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-600">YMCA Cycle Ergometer Calculator</span>
+        </nav>
+
+        <h1 class="text-4xl font-bold mb-4">YMCA Cycle Ergometer Test Calculator</h1>
+        <p class="text-xl text-gray-600 mb-8">Estimate VO2 max from the YMCA submaximal bike test protocol. Used by fitness professionals worldwide.</p>
+
+        <!-- Calculator -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Calculate Your VO2 Max</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Age (years)</label>
+                        <input type="number" id="age" placeholder="35" min="18" max="80" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Sex</label>
+                        <select id="sex" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Body Weight</label>
+                        <div class="flex space-x-2">
+                            <input type="number" id="weight" placeholder="70" min="40" max="200" class="flex-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <select id="weightUnit" class="p-3 border rounded-lg">
+                                <option value="kg">kg</option>
+                                <option value="lb">lb</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">Test Results</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Stage 2 Workload (kgm/min or watts)</label>
+                                <div class="flex space-x-2">
+                                    <input type="number" id="workload2" placeholder="450" class="flex-1 p-2 border rounded-lg">
+                                    <select id="workUnit" class="p-2 border rounded-lg">
+                                        <option value="kgm">kgm/min</option>
+                                        <option value="watts">watts</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Stage 2 Heart Rate (bpm)</label>
+                                <input type="number" id="hr2" placeholder="120" min="60" max="200" class="w-full p-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Stage 3 Workload (kgm/min or watts)</label>
+                                <input type="number" id="workload3" placeholder="600" class="w-full p-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Stage 3 Heart Rate (bpm)</label>
+                                <input type="number" id="hr3" placeholder="145" min="60" max="200" class="w-full p-2 border rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="calculate()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Calculate VO2 Max
+                    </button>
+                </div>
+
+                <div>
+                    <div id="results" class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4">Your Results</h3>
+                        <p class="text-gray-500">Enter your test data to see results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Protocol Guide -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">YMCA Test Protocol</h2>
+
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-3 text-left">Stage</th>
+                            <th class="p-3">Duration</th>
+                            <th class="p-3">Workload</th>
+                            <th class="p-3">Watts</th>
+                            <th class="p-3">RPM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="p-3 font-medium">1 (Warm-up)</td><td class="p-3">3 min</td><td class="p-3">150 kgm/min</td><td class="p-3">25W</td><td class="p-3">50</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium">2</td><td class="p-3">3 min</td><td class="p-3">300-750 kgm/min*</td><td class="p-3">50-125W</td><td class="p-3">50</td></tr>
+                        <tr class="border-b"><td class="p-3 font-medium">3</td><td class="p-3">3 min</td><td class="p-3">+150 kgm/min</td><td class="p-3">+25W</td><td class="p-3">50</td></tr>
+                        <tr class="bg-gray-50"><td class="p-3 font-medium">4+</td><td class="p-3">3 min each</td><td class="p-3">+150 kgm/min</td><td class="p-3">+25W</td><td class="p-3">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-4">
+                <p class="text-yellow-800"><strong>Stage 2 Selection:</strong> Based on Stage 1 ending HR:</p>
+                <ul class="text-yellow-700 text-sm mt-2 space-y-1">
+                    <li>HR &lt; 80 bpm: Use 750 kgm/min (125W)</li>
+                    <li>HR 80-89 bpm: Use 600 kgm/min (100W)</li>
+                    <li>HR 90-100 bpm: Use 450 kgm/min (75W)</li>
+                    <li>HR &gt; 100 bpm: Use 300 kgm/min (50W)</li>
+                </ul>
+            </div>
+
+            <p class="text-gray-700">Continue until heart rate reaches 85% of age-predicted max HR (220 - age) for two consecutive stages, or until two steady-state heart rates are obtained between 110-150 bpm.</p>
+        </div>
+
+        <!-- What is YMCA Test -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">What is the YMCA Cycle Ergometer Test?</h2>
+
+            <p class="mb-4">The YMCA Cycle Ergometer Test is a <strong>submaximal fitness test</strong> developed by the YMCA to estimate VO2 max without requiring maximal effort. It's one of the most widely used fitness assessments in gyms, hospitals, and research settings.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-green-800 mb-2">Advantages</h3>
+                    <ul class="text-sm text-green-700 space-y-1">
+                        <li>+ No maximal effort required</li>
+                        <li>+ Safe for most populations</li>
+                        <li>+ Requires minimal equipment</li>
+                        <li>+ Takes only 9-15 minutes</li>
+                        <li>+ Easy to standardize</li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-red-800 mb-2">Limitations</h3>
+                    <ul class="text-sm text-red-700 space-y-1">
+                        <li>- 10-15% estimation error</li>
+                        <li>- Assumes linear HR-workload</li>
+                        <li>- Less accurate for athletes</li>
+                        <li>- Requires steady-state HR</li>
+                        <li>- Affected by medications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-lg mb-3">How the Calculation Works</h3>
+            <p class="text-gray-700 mb-4">The test uses the linear relationship between heart rate and oxygen consumption. By measuring heart rate at two submaximal workloads, we can extrapolate to estimate the workload at max HR, then convert to VO2 max using the ACSM metabolic equation.</p>
+
+            <div class="bg-gray-100 rounded-lg p-4 font-mono text-sm">
+                VO2 (ml/kg/min) = (1.8 x work rate) / body mass + 7
+            </div>
+        </div>
+
+        <!-- Fitness Categories -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">VO2 Max Fitness Categories</h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-3 text-left">Category</th>
+                            <th class="p-3">Men 20-29</th>
+                            <th class="p-3">Men 30-39</th>
+                            <th class="p-3">Men 40-49</th>
+                            <th class="p-3">Women 20-29</th>
+                            <th class="p-3">Women 30-39</th>
+                            <th class="p-3">Women 40-49</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="p-3 font-medium text-green-600">Excellent</td><td class="p-3">&gt;55</td><td class="p-3">&gt;54</td><td class="p-3">&gt;52</td><td class="p-3">&gt;49</td><td class="p-3">&gt;45</td><td class="p-3">&gt;42</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium text-blue-600">Good</td><td class="p-3">47-55</td><td class="p-3">45-54</td><td class="p-3">42-52</td><td class="p-3">41-49</td><td class="p-3">37-45</td><td class="p-3">34-42</td></tr>
+                        <tr class="border-b"><td class="p-3 font-medium text-yellow-600">Average</td><td class="p-3">39-46</td><td class="p-3">36-44</td><td class="p-3">33-41</td><td class="p-3">33-40</td><td class="p-3">30-36</td><td class="p-3">27-33</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="p-3 font-medium text-orange-600">Below Avg</td><td class="p-3">31-38</td><td class="p-3">29-35</td><td class="p-3">26-32</td><td class="p-3">26-32</td><td class="p-3">23-29</td><td class="p-3">21-26</td></tr>
+                        <tr><td class="p-3 font-medium text-red-600">Poor</td><td class="p-3">&lt;31</td><td class="p-3">&lt;29</td><td class="p-3">&lt;26</td><td class="p-3">&lt;26</td><td class="p-3">&lt;23</td><td class="p-3">&lt;21</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Values in ml/kg/min. Source: ACSM Guidelines for Exercise Testing and Prescription</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">What is the YMCA Cycle Ergometer Test?</h3>
+                    <p class="text-gray-700">The YMCA Cycle Ergometer Test is a submaximal fitness test that estimates VO2 max without requiring maximal effort. It uses progressively increasing workloads on a stationary bike while monitoring heart rate to predict aerobic capacity.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">How accurate is the YMCA bike test?</h3>
+                    <p class="text-gray-700">The YMCA test has a standard error of estimate of approximately 10-15% compared to direct VO2 max testing. It's accurate enough for fitness assessment and tracking progress, but athletes may prefer maximal testing.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">What equipment do I need?</h3>
+                    <p class="text-gray-700">You need a mechanically-braked cycle ergometer (like Monark), heart rate monitor, and stopwatch. Many spin bikes with power output can also work. The key is consistent, measurable resistance.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Who should not take this test?</h3>
+                    <p class="text-gray-700">Avoid this test if you have uncontrolled cardiovascular conditions, are on beta-blockers (affects HR response), have orthopedic limitations for cycling, or haven't been cleared for exercise by a physician.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related -->
+        <div class="bg-blue-50 rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-4">Related Fitness Tests</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="/cooper-test-calculator" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">Cooper Test Calculator</h3>
+                    <p class="text-sm text-gray-600">12-minute run test for VO2 max</p>
+                </a>
+                <a href="/vo2-max-calculator" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">VO2 Max Calculator</h3>
+                    <p class="text-sm text-gray-600">Multiple estimation methods</p>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="bg-white p-4 rounded-lg hover:shadow-md transition">
+                    <h3 class="font-bold text-blue-600">HR Zone Calculator</h3>
+                    <p class="text-sm text-gray-600">Training zones from max HR</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>2025 RunBikeCalc. Free running and cycling calculators.</p>
+        </div>
+    </footer>
+
+    <script>
+    function calculate() {
+        var age = parseInt(document.getElementById('age').value);
+        var sex = document.getElementById('sex').value;
+        var weight = parseFloat(document.getElementById('weight').value);
+        var weightUnit = document.getElementById('weightUnit').value;
+        var workload2 = parseFloat(document.getElementById('workload2').value);
+        var hr2 = parseInt(document.getElementById('hr2').value);
+        var workload3 = parseFloat(document.getElementById('workload3').value);
+        var hr3 = parseInt(document.getElementById('hr3').value);
+        var workUnit = document.getElementById('workUnit').value;
+
+        var resultsDiv = document.getElementById('results');
+
+        if (!age || !weight || !workload2 || !hr2 || !workload3 || !hr3) {
+            resultsDiv.textContent = 'Please fill in all fields';
+            return;
+        }
+
+        // Convert weight to kg
+        var weightKg = weightUnit === 'lb' ? weight * 0.453592 : weight;
+
+        // Convert watts to kgm/min if needed (1 watt = 6.12 kgm/min)
+        if (workUnit === 'watts') {
+            workload2 = workload2 * 6.12;
+            workload3 = workload3 * 6.12;
+        }
+
+        // Calculate max HR
+        var maxHR = 220 - age;
+
+        // Linear extrapolation to find workload at max HR
+        var slope = (workload3 - workload2) / (hr3 - hr2);
+        var workloadAtMax = workload3 + slope * (maxHR - hr3);
+
+        // ACSM leg ergometry equation: VO2 = (1.8 x work rate / body mass) + 7
+        // Work rate in kgm/min, body mass in kg
+        var vo2max = (1.8 * workloadAtMax / weightKg) + 7;
+
+        // Determine fitness category
+        var category = '';
+        var categoryColor = '';
+
+        if (sex === 'male') {
+            if (age < 30) {
+                if (vo2max > 55) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 47) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 39) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 31) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            } else if (age < 40) {
+                if (vo2max > 54) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 45) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 36) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 29) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            } else {
+                if (vo2max > 52) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 42) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 33) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 26) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            }
+        } else {
+            if (age < 30) {
+                if (vo2max > 49) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 41) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 33) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 26) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            } else if (age < 40) {
+                if (vo2max > 45) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 37) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 30) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 23) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            } else {
+                if (vo2max > 42) { category = 'Excellent'; categoryColor = 'text-green-600'; }
+                else if (vo2max >= 34) { category = 'Good'; categoryColor = 'text-blue-600'; }
+                else if (vo2max >= 27) { category = 'Average'; categoryColor = 'text-yellow-600'; }
+                else if (vo2max >= 21) { category = 'Below Average'; categoryColor = 'text-orange-600'; }
+                else { category = 'Poor'; categoryColor = 'text-red-600'; }
+            }
+        }
+
+        // Clear and build results
+        while (resultsDiv.firstChild) {
+            resultsDiv.removeChild(resultsDiv.firstChild);
+        }
+
+        var title = document.createElement('h3');
+        title.className = 'font-bold text-lg mb-4';
+        title.textContent = 'Your Results';
+        resultsDiv.appendChild(title);
+
+        var vo2Div = document.createElement('div');
+        vo2Div.className = 'text-center mb-6 p-4 bg-blue-100 rounded-lg';
+        var vo2Label = document.createElement('div');
+        vo2Label.className = 'text-sm text-gray-600';
+        vo2Label.textContent = 'Estimated VO2 Max';
+        var vo2Value = document.createElement('div');
+        vo2Value.className = 'text-4xl font-bold text-blue-600';
+        vo2Value.textContent = vo2max.toFixed(1) + ' ml/kg/min';
+        vo2Div.appendChild(vo2Label);
+        vo2Div.appendChild(vo2Value);
+        resultsDiv.appendChild(vo2Div);
+
+        var catDiv = document.createElement('div');
+        catDiv.className = 'text-center mb-4';
+        var catLabel = document.createElement('div');
+        catLabel.className = 'text-sm text-gray-600';
+        catLabel.textContent = 'Fitness Category';
+        var catValue = document.createElement('div');
+        catValue.className = 'text-2xl font-bold ' + categoryColor;
+        catValue.textContent = category;
+        catDiv.appendChild(catLabel);
+        catDiv.appendChild(catValue);
+        resultsDiv.appendChild(catDiv);
+
+        var detailsDiv = document.createElement('div');
+        detailsDiv.className = 'text-sm text-gray-600 space-y-1';
+        var detail1 = document.createElement('p');
+        detail1.textContent = 'Max HR Used: ' + maxHR + ' bpm';
+        var detail2 = document.createElement('p');
+        detail2.textContent = 'Predicted Workload at Max: ' + Math.round(workloadAtMax) + ' kgm/min';
+        detailsDiv.appendChild(detail1);
+        detailsDiv.appendChild(detail2);
+        resultsDiv.appendChild(detailsDiv);
+    }
+    </script>
+</body>
+</html>
