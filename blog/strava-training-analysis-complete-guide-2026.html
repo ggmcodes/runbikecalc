@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strava Training Analysis: Complete Guide 2026 | RunBikeCalc</title>
+    <meta name="description" content="Master Strava training analysis with our complete guide. Learn to interpret fitness trends, relative effort, power curves, and optimize your training using Strava data.">
+    <meta name="keywords" content="Strava training analysis, Strava fitness, relative effort, Strava power curve, training data analysis, Strava segments">
+    <meta name="author" content="RunBikeCalc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://runbikecalc.com/blog/strava-training-analysis-complete-guide-2026.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Strava Training Analysis: Complete Guide 2026">
+    <meta property="og:description" content="Master Strava training analysis to optimize your running and cycling performance.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461896836934-3aeb87417d10?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://runbikecalc.com/blog/strava-training-analysis-complete-guide-2026.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Strava Training Analysis: Complete Guide 2026">
+    <meta name="twitter:description" content="Master Strava training analysis for better performance.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1461896836934-3aeb87417d10?w=1200&h=630&fit=crop">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Strava Training Analysis: Complete Guide 2026",
+        "description": "Master Strava training analysis with our complete guide. Learn to interpret fitness trends, relative effort, and optimize your training.",
+        "image": "https://images.unsplash.com/photo-1461896836934-3aeb87417d10?w=1200&h=630&fit=crop",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/logo.png"
+            }
+        },
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/strava-training-analysis-complete-guide-2026.html"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Strava Relative Effort?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Relative Effort is Strava's measure of how hard your workout was, calculated using heart rate data. It accounts for time spent in different heart rate zones, weighting higher zones more heavily. A higher score indicates a more taxing workout, making it useful for comparing efforts across different activities and durations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Strava calculate fitness and freshness?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Strava's Fitness score represents your recent training load, calculated as a rolling average of your Relative Effort over the past 6 weeks. Freshness (Form) is the difference between your long-term fitness and short-term fatigue. Positive form means you're fresh; negative form indicates accumulated fatigue."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good Strava Fitness score?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fitness scores are relative to your personal training history. Recreational athletes might maintain 30-50, regular trainers 50-80, competitive athletes 80-120+. The key is tracking your trends over time rather than comparing to others. Aim for gradual increases of 5-10 points per month during build phases."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I use Strava segments for training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Segments are marked sections of road or trail where you can compare times. Use them to track progress on key climbs or flat sections, identify where you're gaining or losing time, set specific training goals, and race virtually against your PRs. Avoid constantly racing segments during training runs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What Strava metrics should runners focus on?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Key running metrics include: Relative Effort for training load, GAP (Grade Adjusted Pace) for hilly runs, cadence for form analysis, heart rate zones for intensity distribution, and weekly/monthly volume trends. Power data is increasingly useful if you have a running power meter."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .toc-link:hover { color: #3b82f6; }
+        .content-section h2 { scroll-margin-top: 100px; }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-extrabold tracking-tight text-slate-800">
+                        Run<span class="text-blue-500">Bike</span>Calc
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/#calculators" class="text-slate-600 hover:text-blue-500 font-medium">Calculators</a>
+                    <a href="/blog.html" class="text-slate-600 hover:text-blue-500 font-medium">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6">
+                DATA ANALYSIS
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Strava Training Analysis
+                <span class="block text-blue-400">Complete Guide 2026</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+                Master Strava's training tools to analyze fitness trends, interpret relative effort, track progress, and optimize your running and cycling performance with data-driven insights.
+            </p>
+            <div class="flex items-center justify-center space-x-6 text-sm text-slate-400">
+                <span>December 27, 2025</span>
+                <span>•</span>
+                <span>20 min read</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Table of Contents -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12">
+            <h2 class="text-lg font-bold text-slate-800 mb-4">Table of Contents</h2>
+            <nav class="space-y-2">
+                <a href="#understanding-strava" class="toc-link block text-slate-600 hover:text-blue-500">1. Understanding Strava Metrics</a>
+                <a href="#relative-effort" class="toc-link block text-slate-600 hover:text-blue-500">2. Relative Effort Explained</a>
+                <a href="#fitness-freshness" class="toc-link block text-slate-600 hover:text-blue-500">3. Fitness & Freshness Curves</a>
+                <a href="#power-curves" class="toc-link block text-slate-600 hover:text-blue-500">4. Power Curves & Performance</a>
+                <a href="#segments-training" class="toc-link block text-slate-600 hover:text-blue-500">5. Using Segments for Training</a>
+                <a href="#running-metrics" class="toc-link block text-slate-600 hover:text-blue-500">6. Running-Specific Analysis</a>
+                <a href="#cycling-metrics" class="toc-link block text-slate-600 hover:text-blue-500">7. Cycling-Specific Analysis</a>
+                <a href="#training-load" class="toc-link block text-slate-600 hover:text-blue-500">8. Managing Training Load</a>
+                <a href="#faq" class="toc-link block text-slate-600 hover:text-blue-500">9. FAQ</a>
+            </nav>
+        </div>
+
+        <!-- Content Sections -->
+        <article class="content-section prose prose-lg max-w-none">
+
+            <section id="understanding-strava" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">1. Understanding Strava Metrics</h2>
+
+                <p class="text-slate-600 mb-6">Strava has evolved from a simple activity logging platform to a comprehensive training analysis tool. Understanding its metrics helps you train smarter, avoid overtraining, and peak for your key events. Here's what the numbers actually mean.</p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Core Strava Metrics</h3>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Relative Effort:</strong> Heart rate-based training load score</li>
+                        <li><strong>Fitness (CTL):</strong> Long-term training load average</li>
+                        <li><strong>Fatigue (ATL):</strong> Short-term training load average</li>
+                        <li><strong>Form (TSB):</strong> Difference between fitness and fatigue</li>
+                        <li><strong>Suffer Score:</strong> Legacy term for Relative Effort</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Data Requirements</h3>
+                <p class="text-slate-600 mb-4">For accurate analysis, Strava needs quality data from your activities:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-3">Essential Data</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Heart rate (for Relative Effort)</li>
+                            <li>GPS for distance/pace</li>
+                            <li>Accurate max heart rate setting</li>
+                            <li>Consistent device usage</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-blue-600 mb-3">Enhanced Data</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Power meter (cycling)</li>
+                            <li>Running power (Stryd/watch)</li>
+                            <li>Cadence sensor</li>
+                            <li>Elevation from barometer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Setting Up Accurate Data</h3>
+                <p class="text-slate-600 mb-4">Your analysis is only as good as your data inputs:</p>
+
+                <div class="bg-slate-100 rounded-xl p-6 mb-6">
+                    <h4 class="font-bold text-slate-800 mb-3">Critical Settings to Verify</h4>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
+                        <li><strong>Max Heart Rate:</strong> Update from recent hard effort, not age formula</li>
+                        <li><strong>FTP (Cycling):</strong> Update after each FTP test for accurate zones</li>
+                        <li><strong>Weight:</strong> Keep current for power-to-weight calculations</li>
+                        <li><strong>Heart Rate Zones:</strong> Customize if using specific training system</li>
+                        <li><strong>Pace Zones:</strong> Set based on recent race times</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="relative-effort" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">2. Relative Effort Explained</h2>
+
+                <p class="text-slate-600 mb-6">Relative Effort (formerly Suffer Score) quantifies workout stress using heart rate data. It's Strava's implementation of Training Impulse (TRIMP), making different workouts comparable regardless of type or duration.</p>
+
+                <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">How Relative Effort Is Calculated</h3>
+                    <p class="text-slate-700 mb-4">Time in each heart rate zone is weighted exponentially:</p>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Zone 1 (50-60% max):</strong> Minimal weight (recovery)</li>
+                        <li><strong>Zone 2 (60-70% max):</strong> Low weight (aerobic base)</li>
+                        <li><strong>Zone 3 (70-80% max):</strong> Moderate weight (tempo)</li>
+                        <li><strong>Zone 4 (80-90% max):</strong> High weight (threshold)</li>
+                        <li><strong>Zone 5 (90-100% max):</strong> Very high weight (VO2max)</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Interpreting Relative Effort Scores</h3>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Score Range</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Effort Level</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Example Workout</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">0-50</td>
+                                <td class="px-6 py-4 text-emerald-600 font-medium">Easy/Recovery</td>
+                                <td class="px-6 py-4 text-slate-600">Easy 30-min jog</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">50-100</td>
+                                <td class="px-6 py-4 text-blue-600 font-medium">Moderate</td>
+                                <td class="px-6 py-4 text-slate-600">60-min endurance run</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">100-150</td>
+                                <td class="px-6 py-4 text-amber-600 font-medium">Hard</td>
+                                <td class="px-6 py-4 text-slate-600">Tempo run or long ride</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">150-250</td>
+                                <td class="px-6 py-4 text-orange-600 font-medium">Very Hard</td>
+                                <td class="px-6 py-4 text-slate-600">Hard intervals, long run</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">250+</td>
+                                <td class="px-6 py-4 text-red-600 font-medium">Extreme</td>
+                                <td class="px-6 py-4 text-slate-600">Race, epic ride</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Weekly Relative Effort Targets</h3>
+                <p class="text-slate-600 mb-4">Use these guidelines to plan weekly training load:</p>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-emerald-50 rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-emerald-600">300-500</div>
+                        <div class="text-slate-600 text-sm">Recreational</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-blue-600">500-800</div>
+                        <div class="text-slate-600 text-sm">Regular Trainer</div>
+                    </div>
+                    <div class="bg-orange-50 rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-orange-600">800-1200+</div>
+                        <div class="text-slate-600 text-sm">Competitive</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fitness-freshness" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">3. Fitness & Freshness Curves</h2>
+
+                <p class="text-slate-600 mb-6">Strava's Fitness & Freshness chart visualizes your training balance over time. Understanding these curves helps you build fitness while managing fatigue and peaking for events.</p>
+
+                <div class="bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">The Three Curves Explained</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-4 h-4 bg-blue-500 rounded-full mt-1 mr-3"></div>
+                            <div>
+                                <strong class="text-slate-800">Fitness (Blue):</strong>
+                                <p class="text-slate-600">42-day rolling average of Relative Effort. Represents your accumulated training adaptation. Rises slowly, falls slowly.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-4 h-4 bg-pink-500 rounded-full mt-1 mr-3"></div>
+                            <div>
+                                <strong class="text-slate-800">Fatigue (Pink/Red):</strong>
+                                <p class="text-slate-600">7-day rolling average of Relative Effort. Represents recent training stress. Rises quickly, falls quickly.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-4 h-4 bg-emerald-500 rounded-full mt-1 mr-3"></div>
+                            <div>
+                                <strong class="text-slate-800">Form (Green):</strong>
+                                <p class="text-slate-600">Fitness minus Fatigue. Positive = fresh, Negative = fatigued. Target for race day: +5 to +25.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Reading Your Form Score</h3>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Form Range</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Status</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">+25 or higher</td>
+                                <td class="px-6 py-4 text-amber-600 font-medium">Transition/Detraining</td>
+                                <td class="px-6 py-4 text-slate-600">Resume training soon</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">+5 to +25</td>
+                                <td class="px-6 py-4 text-emerald-600 font-medium">Fresh/Peak</td>
+                                <td class="px-6 py-4 text-slate-600">Ideal for racing</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">-10 to +5</td>
+                                <td class="px-6 py-4 text-blue-600 font-medium">Neutral</td>
+                                <td class="px-6 py-4 text-slate-600">Good training zone</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">-30 to -10</td>
+                                <td class="px-6 py-4 text-orange-600 font-medium">Fatigued</td>
+                                <td class="px-6 py-4 text-slate-600">Building fitness</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600">Below -30</td>
+                                <td class="px-6 py-4 text-red-600 font-medium">High Risk</td>
+                                <td class="px-6 py-4 text-slate-600">Consider rest/recovery</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Planning a Peak</h3>
+                <p class="text-slate-600 mb-4">To peak for a goal race, manipulate the curves strategically:</p>
+
+                <div class="bg-slate-100 rounded-xl p-6 mb-6">
+                    <h4 class="font-bold text-slate-800 mb-3">Peaking Timeline</h4>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
+                        <li><strong>8-12 weeks out:</strong> Build phase - increase training load, fitness rises</li>
+                        <li><strong>4-6 weeks out:</strong> Peak training - maintain high load, form drops to -20 to -30</li>
+                        <li><strong>2-3 weeks out:</strong> Begin taper - reduce volume 20-30%</li>
+                        <li><strong>Race week:</strong> Sharpen - light workouts, form rises to +5 to +15</li>
+                        <li><strong>Race day:</strong> Target form of +10 to +25 for optimal performance</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="power-curves" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">4. Power Curves & Performance</h2>
+
+                <p class="text-slate-600 mb-6">For cyclists with power meters, Strava's power curve reveals your strengths, weaknesses, and fitness changes across different durations. It's one of the most valuable training tools available.</p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Understanding the Power Curve</h3>
+                    <p class="text-slate-700 mb-4">The curve shows your best average power for every duration, revealing your physiological profile:</p>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>5-15 seconds:</strong> Neuromuscular power (sprint)</li>
+                        <li><strong>30 sec - 2 min:</strong> Anaerobic capacity</li>
+                        <li><strong>3-8 minutes:</strong> VO2max power</li>
+                        <li><strong>20-60 minutes:</strong> Threshold power (FTP)</li>
+                        <li><strong>60+ minutes:</strong> Endurance/fatigue resistance</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Analyzing Your Rider Profile</h3>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-red-600 mb-3">Sprinter Profile</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Curve peaks at short durations</li>
+                            <li>High 5-15 second power</li>
+                            <li>Steep drop-off after 1 minute</li>
+                            <li>Focus: Maintain sprint, build endurance</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-blue-600 mb-3">Time Trialist Profile</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Relatively flat curve</li>
+                            <li>Strong 20-60 minute power</li>
+                            <li>High FTP relative to short power</li>
+                            <li>Focus: Build short power, maintain threshold</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-3">Climber Profile</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Excellent power-to-weight</li>
+                            <li>Strong 5-20 minute power</li>
+                            <li>May lack absolute power</li>
+                            <li>Focus: Maintain climbing, add mass/power</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-orange-600 mb-3">Rouleur Profile</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Balanced across durations</li>
+                            <li>Good all-around power</li>
+                            <li>No major weaknesses</li>
+                            <li>Focus: Develop specific race demands</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Tracking Power Progress</h3>
+                <p class="text-slate-600 mb-4">Compare power curves over different time periods to see improvement:</p>
+
+                <div class="bg-slate-100 rounded-xl p-6 mb-6">
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>This week vs last week:</strong> Short-term fatigue or freshness</li>
+                        <li><strong>Last 6 weeks:</strong> Current form and recent training effects</li>
+                        <li><strong>This year:</strong> Season-long progress</li>
+                        <li><strong>All time:</strong> Career bests and peak fitness</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="segments-training" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">5. Using Segments for Training</h2>
+
+                <p class="text-slate-600 mb-6">Strava segments transform any road or trail into a virtual racecourse. Used strategically, they're powerful training and progress-tracking tools.</p>
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Strategic Segment Use</h3>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Benchmark segments:</strong> Select 3-5 key segments to track monthly</li>
+                        <li><strong>Terrain variety:</strong> Include flat, climb, and technical segments</li>
+                        <li><strong>Effort timing:</strong> Attempt PRs when fresh, not during training blocks</li>
+                        <li><strong>Weather adjustment:</strong> Note conditions for fair comparisons</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Segment-Based Workouts</h3>
+
+                <div class="space-y-4 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-blue-600 mb-2">Hill Repeat Segments</h4>
+                        <p class="text-slate-600">Find 2-5 minute climb segments. Perform 4-6 repeats, tracking power and time each effort. Compare splits to gauge pacing and fatigue.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-2">Threshold Segments</h4>
+                        <p class="text-slate-600">Use 10-20 minute flat segments for threshold work. Aim for consistent power rather than PRs during training. Compare heart rate at same power over time.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-orange-600 mb-2">Sprint Segments</h4>
+                        <p class="text-slate-600">Short 10-30 second segments for sprint practice. Note starting speed, peak power, and fatigue in final seconds.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Segment Hunting Etiquette</h3>
+                <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
+                    <p class="text-slate-700"><strong>Warning:</strong> Don't let segment hunting compromise safety or training quality. Avoid racing segments during recovery days, in traffic, or poor conditions. The leaderboard isn't worth a crash or overtraining.</p>
+                </div>
+            </section>
+
+            <section id="running-metrics" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">6. Running-Specific Analysis</h2>
+
+                <p class="text-slate-600 mb-6">Runners have unique metrics in Strava beyond basic pace and distance. Understanding these helps optimize training and racing performance.</p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Key Running Metrics</h3>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>GAP (Grade Adjusted Pace):</strong> Normalizes pace for elevation changes</li>
+                        <li><strong>Cadence:</strong> Steps per minute - target 170-180 for efficiency</li>
+                        <li><strong>Heart Rate Zones:</strong> Time in each zone distribution</li>
+                        <li><strong>Pace Zones:</strong> Time at different effort levels</li>
+                        <li><strong>Running Power:</strong> If using Stryd or watch-based power</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Grade Adjusted Pace (GAP)</h3>
+                <p class="text-slate-600 mb-4">GAP shows what your effort would equal on flat ground:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-3">When GAP Helps</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Hilly training runs</li>
+                            <li>Trail running</li>
+                            <li>Comparing routes fairly</li>
+                            <li>Understanding true effort</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-blue-600 mb-3">GAP Limitations</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Estimates vary by grade</li>
+                            <li>Doesn't account for terrain</li>
+                            <li>Individual variation exists</li>
+                            <li>Less accurate on steep grades</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Analyzing Cadence Trends</h3>
+                <p class="text-slate-600 mb-4">Track cadence changes over time and across paces:</p>
+
+                <div class="bg-slate-100 rounded-xl p-6 mb-6">
+                    <ul class="space-y-2 text-slate-700">
+                        <li><strong>Easy runs:</strong> Cadence may drop 5-10 spm vs faster running</li>
+                        <li><strong>Tempo/threshold:</strong> Should match or exceed easy run cadence</li>
+                        <li><strong>Speed work:</strong> Highest cadence, usually 180+</li>
+                        <li><strong>Fatigue indicator:</strong> Dropping cadence late in runs signals fatigue</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="cycling-metrics" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">7. Cycling-Specific Analysis</h2>
+
+                <p class="text-slate-600 mb-6">Cyclists with power meters have access to Strava's most detailed analytics. Even without power, you can extract valuable insights from ride data.</p>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Power-Based Metrics</h3>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Metric</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">What It Shows</th>
+                                <th class="px-6 py-4 text-left text-slate-700 font-bold">Target</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600 font-medium">Normalized Power (NP)</td>
+                                <td class="px-6 py-4 text-slate-600">Physiological cost of variable power</td>
+                                <td class="px-6 py-4 text-slate-600">Compare to average for variability</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600 font-medium">Intensity Factor (IF)</td>
+                                <td class="px-6 py-4 text-slate-600">NP as percentage of FTP</td>
+                                <td class="px-6 py-4 text-slate-600">0.7-0.85 for endurance, 0.9+ for hard</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600 font-medium">Variability Index (VI)</td>
+                                <td class="px-6 py-4 text-slate-600">NP divided by average power</td>
+                                <td class="px-6 py-4 text-slate-600">1.0-1.05 for steady, 1.1+ for variable</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-slate-600 font-medium">Training Stress Score (TSS)</td>
+                                <td class="px-6 py-4 text-slate-600">Total workout stress</td>
+                                <td class="px-6 py-4 text-slate-600">150-300 for hard workout</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Non-Power Analysis</h3>
+                <p class="text-slate-600 mb-4">Even without power, analyze these metrics:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-blue-600 mb-3">Heart Rate Analysis</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Time in each HR zone</li>
+                            <li>HR:Pace ratio (cardiac drift)</li>
+                            <li>Recovery heart rate post-effort</li>
+                            <li>Max HR achieved</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-3">Efficiency Metrics</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Speed at given HR (aerobic efficiency)</li>
+                            <li>Climbing performance (VAM)</li>
+                            <li>Segment times at similar HR</li>
+                            <li>Cadence distribution</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="training-load" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">8. Managing Training Load</h2>
+
+                <p class="text-slate-600 mb-6">The ultimate goal of Strava analysis is optimizing your training load - training hard enough to improve but not so hard that you overtrain or get injured.</p>
+
+                <div class="bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Weekly Load Guidelines</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-700">Increase limit:</span>
+                            <span class="font-bold text-emerald-600">Max 10% per week</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-700">Recovery week:</span>
+                            <span class="font-bold text-blue-600">Every 3-4 weeks (50-60% load)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-700">Hard:Easy ratio:</span>
+                            <span class="font-bold text-orange-600">2-3 hard days per week max</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Signs of Overload</h3>
+                <p class="text-slate-600 mb-4">Watch for these warning signs in your Strava data:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+                        <h4 class="text-lg font-bold text-red-600 mb-3">Red Flags</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Form below -30 for over a week</li>
+                            <li>Elevated resting heart rate</li>
+                            <li>Power/pace declining at same HR</li>
+                            <li>Segments slowing despite effort</li>
+                            <li>Weekly RE jumps over 20%</li>
+                        </ul>
+                    </div>
+                    <div class="bg-emerald-50 rounded-xl p-6 border border-emerald-200">
+                        <h4 class="text-lg font-bold text-emerald-600 mb-3">Healthy Signs</h4>
+                        <ul class="text-slate-600 space-y-1">
+                            <li>Form oscillates -20 to +10</li>
+                            <li>Gradual fitness increase</li>
+                            <li>Speed at same HR improving</li>
+                            <li>Consistent weekly patterns</li>
+                            <li>Good performances when fresh</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Periodization with Strava</h3>
+                <p class="text-slate-600 mb-4">Use Strava data to structure training blocks:</p>
+
+                <div class="bg-slate-100 rounded-xl p-6 mb-6">
+                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
+                        <li><strong>Base Phase:</strong> Low Relative Effort scores, high volume, form near 0</li>
+                        <li><strong>Build Phase:</strong> Increasing RE, form drops to -10 to -20</li>
+                        <li><strong>Peak Phase:</strong> Highest weekly RE, form at -20 to -30</li>
+                        <li><strong>Taper Phase:</strong> Decreasing RE, form rises to +10 to +20</li>
+                        <li><strong>Race:</strong> Minimal training, form peaks at +15 to +25</li>
+                        <li><strong>Recovery:</strong> Very low RE, form may spike to +30+</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="faq" class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">9. Frequently Asked Questions</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Do I need Strava Premium for training analysis?</h3>
+                        <p class="text-slate-600">Many advanced features like Fitness & Freshness, power curves, and detailed segment analysis require Strava Premium (Summit). The free version provides basic activity logging and limited insights. For serious training analysis, the subscription is worthwhile.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Why is my Relative Effort different from my friend's for similar workouts?</h3>
+                        <p class="text-slate-600">Relative Effort is personalized to your max heart rate and zones. Two people running the same pace will have different scores based on their fitness. Additionally, data quality (heart rate monitor accuracy, lag) affects calculations. Compare your own trends, not others' numbers.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">How accurate is Strava's FTP estimate?</h3>
+                        <p class="text-slate-600">Strava estimates FTP from your power curve, but it's less accurate than a proper FTP test. It may overestimate if you frequently do hard short efforts or underestimate if you rarely push threshold efforts. Use it as a ballpark, but perform periodic 20-minute or ramp tests for accuracy.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Should I sync all my activities to Strava?</h3>
+                        <p class="text-slate-600">Yes, sync everything for accurate Fitness & Freshness tracking. Unsynced activities create gaps in your training load calculation, making the data less reliable. This includes cross-training, strength sessions, and even walks if you want complete load tracking.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Can Strava replace a coach or structured training plan?</h3>
+                        <p class="text-slate-600">Strava provides excellent post-hoc analysis but doesn't prescribe workouts or adapt to your responses. It's best used alongside a training plan or coach to validate that prescribed training is producing expected results. The data can inform coach conversations and plan adjustments.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Related Articles -->
+        <section class="mt-16 pt-12 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-800 mb-8">Related Articles</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/blog/heart-rate-drift-complete-guide-2026.html" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-red-600 font-semibold">TRAINING METRICS</span>
+                        <h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-500 mt-2">Heart Rate Drift Guide</h3>
+                        <p class="text-slate-600 text-sm mt-2">Understand cardiac drift and aerobic efficiency testing.</p>
+                    </div>
+                </a>
+                <a href="/blog/power-meter-training-complete-guide-2026.html" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-semibold">CYCLING POWER</span>
+                        <h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-500 mt-2">Power Meter Training Guide</h3>
+                        <p class="text-slate-600 text-sm mt-2">Master power-based training for cycling performance.</p>
+                    </div>
+                </a>
+                <a href="/blog/hrv-training-complete-guide-2026.html" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-emerald-600 font-semibold">RECOVERY</span>
+                        <h3 class="text-lg font-bold text-slate-800 group-hover:text-blue-500 mt-2">HRV Training Guide</h3>
+                        <p class="text-slate-600 text-sm mt-2">Use heart rate variability to optimize training.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <a href="/" class="text-2xl font-extrabold text-white">
+                    Run<span class="text-blue-500">Bike</span>Calc
+                </a>
+                <p class="mt-4 text-sm">Free calculators and training tools for runners, cyclists, and triathletes.</p>
+                <div class="mt-6 space-x-6">
+                    <a href="/blog.html" class="hover:text-white">Blog</a>
+                    <a href="/about.html" class="hover:text-white">About</a>
+                    <a href="/contact.html" class="hover:text-white">Contact</a>
+                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                </div>
+                <p class="mt-8 text-xs">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
