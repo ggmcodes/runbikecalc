@@ -1272,4 +1272,40 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/fartlek-training-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/indoor-cycling-setup-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/running-streaks-consistency-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/group-ride-etiquette-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/heart-rate-drift-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/carb-loading-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 </urlset>
