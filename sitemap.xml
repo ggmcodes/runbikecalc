@@ -1344,4 +1344,40 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/recovery-runs-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/cycling-nutrition-on-bike-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/running-form-technique-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/bike-fit-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/trail-running-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/cycling-climbing-complete-guide-2026</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 </urlset>
