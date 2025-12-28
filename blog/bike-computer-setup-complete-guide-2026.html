@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Computer Setup Guide 2026: Complete Configuration for Garmin, Wahoo & More</title>
+    <meta name="description" content="Master bike computer setup for optimal training. Complete guide to configuring Garmin, Wahoo, and other cycling computers. Data screens, sensors, navigation, and power meter integration.">
+    <meta name="keywords" content="bike computer setup, Garmin Edge setup, Wahoo ELEMNT, cycling GPS, data fields, power meter pairing, bike computer screens, cycling navigation, ANT+, Bluetooth sensors">
+    <meta name="author" content="RunBikeCalc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://runbikecalc.com/blog/bike-computer-setup-complete-guide-2026.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://runbikecalc.com/blog/bike-computer-setup-complete-guide-2026.html">
+    <meta property="og:title" content="Bike Computer Setup Guide 2026: Complete Configuration">
+    <meta property="og:description" content="Master bike computer setup for optimal training. Complete guide to configuring Garmin, Wahoo, and other cycling computers.">
+    <meta property="og:image" content="https://runbikecalc.com/images/bike-computer-setup-guide.jpg">
+    <meta property="og:site_name" content="RunBikeCalc">
+    <meta property="article:published_time" content="2026-01-15T08:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-15T08:00:00+00:00">
+    <meta property="article:section" content="Cycling">
+    <meta property="article:tag" content="Bike Computer">
+    <meta property="article:tag" content="Cycling Technology">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://runbikecalc.com/blog/bike-computer-setup-complete-guide-2026.html">
+    <meta property="twitter:title" content="Bike Computer Setup Guide 2026: Complete Configuration">
+    <meta property="twitter:description" content="Master bike computer setup for Garmin, Wahoo, and more. Sensors, screens, and navigation.">
+    <meta property="twitter:image" content="https://runbikecalc.com/images/bike-computer-setup-guide.jpg">
+
+    <!-- Schema.org Article Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Bike Computer Setup Guide 2026: Complete Configuration for Garmin, Wahoo & More",
+        "description": "Master bike computer setup for optimal training. Complete guide to configuring Garmin, Wahoo, and other cycling computers.",
+        "image": "https://runbikecalc.com/images/bike-computer-setup-guide.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/images/logo.png"
+            }
+        },
+        "datePublished": "2026-01-15T08:00:00+00:00",
+        "dateModified": "2026-01-15T08:00:00+00:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/bike-computer-setup-complete-guide-2026.html"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What data fields should I display on my bike computer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most training rides, display: current power (or heart rate), cadence, speed, distance, time, and average power. For racing or intervals, add lap power, lap time, and 3-second average power. Keep your main screen to 6-8 fields maximum for quick glances while riding."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use ANT+ or Bluetooth for sensors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ANT+ is generally preferred for cycling because it allows multiple devices to connect to the same sensor (your bike computer and indoor trainer app). Bluetooth is limited to one connection but uses slightly less battery. Most modern sensors broadcast both protocols simultaneously, so connect via ANT+ to your bike computer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I pair a power meter with my bike computer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wake up your power meter by spinning the cranks, then go to your bike computer's sensor settings and search for power meters. Select your device from the list. Perform a zero-offset calibration after pairing, and repeat the calibration at the start of each ride for accurate readings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my bike computer GPS inaccurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GPS accuracy issues usually stem from: not waiting for full satellite lock before starting, riding under heavy tree cover or tall buildings, outdated firmware, or starting too soon after turning on the device. Always wait until GPS shows full satellite acquisition (usually 30-60 seconds) before starting your ride."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I update my bike computer firmware?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Check for firmware updates monthly. Updates often include bug fixes, new features, improved GPS accuracy, and enhanced battery life. On Garmin, updates sync automatically via Garmin Connect. On Wahoo, check the ELEMNT companion app for available updates."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .toc-link { transition: all 0.2s ease; }
+        .toc-link:hover { color: #3b82f6; padding-left: 8px; }
+        .data-screen { display: grid; gap: 2px; background: #1f2937; padding: 8px; border-radius: 8px; }
+        .data-field { background: #374151; padding: 8px; text-align: center; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold gradient-text">RunBikeCalc</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#calculators" class="text-gray-600 hover:text-blue-600 transition">Calculators</a>
+                    <a href="../blog.html" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html#calculators" class="block py-2 text-gray-600 hover:text-blue-600">Calculators</a>
+                <a href="../blog.html" class="block py-2 text-gray-600 hover:text-blue-600">Blog</a>
+                <a href="../about.html" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">Cycling Technology</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Bike Computer Setup Guide 2026</h1>
+                <p class="text-xl text-blue-100 mb-6 max-w-2xl mx-auto">Complete configuration guide for Garmin, Wahoo, and other cycling computers. Optimize your data screens, pair sensors correctly, and unlock your device's full potential.</p>
+                <div class="flex items-center justify-center space-x-4 text-sm text-blue-200">
+                    <span>January 15, 2026</span>
+                    <span>|</span>
+                    <span>20 min read</span>
+                    <span>|</span>
+                    <span>Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Table of Contents Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-bold text-gray-900 mb-4">Table of Contents</h3>
+                    <nav class="space-y-2 text-sm">
+                        <a href="#introduction" class="block toc-link text-gray-600">Introduction</a>
+                        <a href="#initial-setup" class="block toc-link text-gray-600">Initial Setup</a>
+                        <a href="#data-screens" class="block toc-link text-gray-600">Data Screen Config</a>
+                        <a href="#sensor-pairing" class="block toc-link text-gray-600">Sensor Pairing</a>
+                        <a href="#power-meters" class="block toc-link text-gray-600">Power Meter Setup</a>
+                        <a href="#navigation" class="block toc-link text-gray-600">Navigation & Routes</a>
+                        <a href="#training-features" class="block toc-link text-gray-600">Training Features</a>
+                        <a href="#troubleshooting" class="block toc-link text-gray-600">Troubleshooting</a>
+                        <a href="#brand-specific" class="block toc-link text-gray-600">Brand-Specific Tips</a>
+                        <a href="#faq" class="block toc-link text-gray-600">FAQ</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Article Content -->
+            <article class="lg:col-span-3">
+                <div class="bg-white rounded-xl shadow-sm p-8 md:p-10">
+
+                    <!-- Introduction -->
+                    <section id="introduction" class="mb-12">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">Your bike computer is the command center for every ride. Whether you're training with power, navigating new routes, or tracking your progress over time, proper setup determines whether your device helps or frustrates you. Most cyclists never customize their computers beyond the default screens, missing powerful features that could transform their training.</p>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">This guide covers everything from initial configuration to advanced training features. You'll learn how to set up optimal data screens for different ride types, properly pair all your sensors, configure power meter calibration, and use navigation features effectively. Whether you're using a Garmin Edge, Wahoo ELEMNT, Hammerhead Karoo, or other cycling GPS, these principles apply across platforms.</p>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+                            <h4 class="font-bold text-gray-900 mb-2">Before You Start</h4>
+                            <p class="text-gray-700">Ensure your bike computer has the latest firmware. Connect to WiFi (if supported) or sync with the companion app to download any available updates. Firmware updates often fix bugs, improve GPS accuracy, and add new features.</p>
+                        </div>
+                    </section>
+
+                    <!-- Initial Setup -->
+                    <section id="initial-setup" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Initial Setup & Configuration</h2>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">User Profile Settings</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">Your user profile directly affects calorie calculations, training load metrics, and recovery recommendations. Enter accurate data:</p>
+
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Weight:</strong> Update monthly for accurate power-to-weight metrics and calorie burn</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>FTP (Functional Threshold Power):</strong> Essential for power zones and Training Stress Score</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Heart Rate Zones:</strong> Set based on LTHR test, not age-based formula</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Max Heart Rate:</strong> Use your true tested max, not 220-age</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Wheel circumference:</strong> Critical for accurate speed without GPS (indoor/tunnels)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">GPS Settings</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Recording Mode:</strong> Use "Every Second" for training analysis, "Smart" for longer battery life</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>GPS Mode:</strong> GPS + GLONASS or GPS + Galileo provides best accuracy. Multi-band (L1/L5) is superior if your device supports it</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Auto Pause:</strong> Enable if you stop at traffic lights; disable for racing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Auto Lap:</strong> Set to your preferred distance (1 mile/1 km) or use manual laps only</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Display Settings</h3>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Backlight:</strong> Auto-brightness saves battery; set timeout to 8-15 seconds</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Color theme:</strong> High contrast themes are easier to read in bright sunlight</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">&#8226;</span>
+                                    <span class="text-gray-700"><strong>Alerts:</strong> Configure audio/vibration for lap, heart rate zone, power zone, navigation turns</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Data Screens -->
+                    <section id="data-screens" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Optimal Data Screen Configuration</h2>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">Most cyclists benefit from 3-4 different screens optimized for specific purposes. Limit each screen to 6-8 fields - you need to read them at a glance while riding.</p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Screen 1: Primary Training Screen</h3>
+                        <p class="text-gray-600 mb-4">Your most-used screen with essential metrics:</p>
+
+                        <div class="data-screen mb-6" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">3s Power</div>
+                                <div class="text-lg font-bold text-white">245w</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Heart Rate</div>
+                                <div class="text-lg font-bold text-white">152</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Cadence</div>
+                                <div class="text-lg font-bold text-white">88</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Speed</div>
+                                <div class="text-lg font-bold text-white">28.5</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Avg Power</div>
+                                <div class="text-lg font-bold text-white">218w</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Distance</div>
+                                <div class="text-lg font-bold text-white">42.3</div>
+                            </div>
+                            <div class="data-field col-span-2">
+                                <div class="text-xs text-gray-400">Elapsed Time</div>
+                                <div class="text-lg font-bold text-white">1:32:45</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Time of Day</div>
+                                <div class="text-lg font-bold text-white">14:25</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Screen 2: Interval Training Screen</h3>
+                        <p class="text-gray-600 mb-4">Optimized for structured workouts:</p>
+
+                        <div class="data-screen mb-6" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);">
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Lap Power</div>
+                                <div class="text-lg font-bold text-green-400">312w</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Lap Time</div>
+                                <div class="text-lg font-bold text-white">2:45</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">3s Power</div>
+                                <div class="text-lg font-bold text-white">298w</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Heart Rate</div>
+                                <div class="text-lg font-bold text-red-400">172</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Lap Cadence</div>
+                                <div class="text-lg font-bold text-white">95</div>
+                            </div>
+                            <div class="data-field">
+                                <div class="text-xs text-gray-400">Power Zone</div>
+                                <div class="text-lg font-bold text-orange-400">Z5</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Screen 3: Climbing Screen</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-2">
+                                <li class="text-gray-700">&#8226; Grade % (current gradient)</li>
+                                <li class="text-gray-700">&#8226; VAM (vertical ascent meters per hour)</li>
+                                <li class="text-gray-700">&#8226; Power (3-second or 10-second average)</li>
+                                <li class="text-gray-700">&#8226; Cadence</li>
+                                <li class="text-gray-700">&#8226; Heart Rate</li>
+                                <li class="text-gray-700">&#8226; Altitude</li>
+                                <li class="text-gray-700">&#8226; Total Ascent</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Screen 4: Navigation Screen</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-2">
+                                <li class="text-gray-700">&#8226; Map (large, center of screen)</li>
+                                <li class="text-gray-700">&#8226; Distance to turn</li>
+                                <li class="text-gray-700">&#8226; Distance remaining</li>
+                                <li class="text-gray-700">&#8226; ETA</li>
+                                <li class="text-gray-700">&#8226; Current speed</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">Pro Tip: Use 3-Second Power</h4>
+                            <p class="text-gray-700">Instant power fluctuates wildly and is distracting. 3-second average power smooths the data enough to be useful while still being responsive. Save 10-second or 30-second averages for endurance rides where you want to pace more conservatively.</p>
+                        </div>
+                    </section>
+
+                    <!-- Sensor Pairing -->
+                    <section id="sensor-pairing" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Sensor Pairing & Configuration</h2>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">ANT+ vs Bluetooth: Which to Use?</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="border border-gray-300 px-4 py-3 text-left">Feature</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left">ANT+</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left">Bluetooth</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3">Multiple connections</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-green-600">Yes - unlimited devices</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-red-600">No - one device only</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3">Battery usage</td>
+                                        <td class="border border-gray-300 px-4 py-3">Slightly higher</td>
+                                        <td class="border border-gray-300 px-4 py-3">Lower</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3">Connection reliability</td>
+                                        <td class="border border-gray-300 px-4 py-3">Excellent</td>
+                                        <td class="border border-gray-300 px-4 py-3">Good</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3">Indoor trainer + head unit</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-green-600">Both can connect</td>
+                                        <td class="border border-gray-300 px-4 py-3 text-red-600">Pick one</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-gray-600 leading-relaxed mb-6"><strong>Recommendation:</strong> Use ANT+ for all bike computer connections. This allows you to also connect sensors to your phone app or indoor trainer simultaneously. Save Bluetooth for phone connections only.</p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Common Sensors & Setup</h3>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Heart Rate Monitor</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Moisten electrode pads before wearing</li>
+                                    <li>&#8226; Position chest strap just below pecs</li>
+                                    <li>&#8226; Pair via ANT+ for multi-device support</li>
+                                    <li>&#8226; Replace battery annually or when readings fade</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-indigo-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Speed Sensor</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Mount on front or rear hub</li>
+                                    <li>&#8226; Set correct wheel circumference</li>
+                                    <li>&#8226; Useful for indoor training or GPS dropouts</li>
+                                    <li>&#8226; Spin wheel to wake sensor before pairing</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Cadence Sensor</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Mount on crank arm (non-drive side)</li>
+                                    <li>&#8226; Pedal to wake sensor before pairing</li>
+                                    <li>&#8226; Essential for cadence-focused training</li>
+                                    <li>&#8226; Standalone preferred over combo units</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Radar (Garmin Varia)</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Mount on seatpost, facing rearward</li>
+                                    <li>&#8226; Pairs automatically with compatible devices</li>
+                                    <li>&#8226; Configure alert intensity (visual, audio, both)</li>
+                                    <li>&#8226; Rear light mode syncs with head unit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Power Meters -->
+                    <section id="power-meters" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Power Meter Setup & Calibration</h2>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">Power meters require more careful setup than other sensors. Proper configuration and regular calibration ensure accurate data for training.</p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Initial Power Meter Setup</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ol class="space-y-3 list-decimal list-inside">
+                                <li class="text-gray-700">Install power meter according to manufacturer instructions</li>
+                                <li class="text-gray-700">Wake the power meter (spin cranks or pedals)</li>
+                                <li class="text-gray-700">On bike computer: Settings > Sensors > Add Power Meter</li>
+                                <li class="text-gray-700">Select your power meter from the list (identified by ID number)</li>
+                                <li class="text-gray-700">Set crank length in power meter settings (usually 170mm, 172.5mm, or 175mm)</li>
+                                <li class="text-gray-700">Perform initial calibration/zero-offset</li>
+                            </ol>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Calibration Best Practices</h3>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+                            <h4 class="font-bold text-gray-900 mb-2">When to Calibrate</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>&#8226; At the start of every ride (after 5-10 min warm-up)</li>
+                                <li>&#8226; When temperature changes significantly (>10°C/20°F)</li>
+                                <li>&#8226; After transporting your bike</li>
+                                <li>&#8226; If power readings seem off</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="font-bold text-gray-900 mb-3">Calibration Steps</h4>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ol class="space-y-3 list-decimal list-inside">
+                                <li class="text-gray-700">Unclip and stop pedaling completely</li>
+                                <li class="text-gray-700">Position cranks vertically (one at 12 o'clock, one at 6 o'clock)</li>
+                                <li class="text-gray-700">Don't touch the cranks or stand on the bike</li>
+                                <li class="text-gray-700">Navigate to Sensors > Power Meter > Calibrate</li>
+                                <li class="text-gray-700">Wait for "Calibration Successful" message</li>
+                                <li class="text-gray-700">Note the offset value - if it changes dramatically between rides, investigate</li>
+                            </ol>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Power Meter Data Fields</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="border border-gray-300 px-4 py-3 text-left">Data Field</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left">Best Use</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">3s Power</td>
+                                        <td class="border border-gray-300 px-4 py-3">General training, intervals</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">10s Power</td>
+                                        <td class="border border-gray-300 px-4 py-3">Endurance pacing, time trials</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Lap Power</td>
+                                        <td class="border border-gray-300 px-4 py-3">Interval training (hit lap at interval start)</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Normalized Power (NP)</td>
+                                        <td class="border border-gray-300 px-4 py-3">Understanding training stress of variable rides</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">IF (Intensity Factor)</td>
+                                        <td class="border border-gray-300 px-4 py-3">Real-time intensity vs FTP (racing, pacing)</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">Power Zone</td>
+                                        <td class="border border-gray-300 px-4 py-3">Ensuring you're training in the right zone</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-3 font-medium">L/R Balance</td>
+                                        <td class="border border-gray-300 px-4 py-3">Pedaling technique, injury rehabilitation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Navigation -->
+                    <section id="navigation" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Navigation & Route Setup</h2>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Loading Routes</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">Modern bike computers accept routes from multiple sources:</p>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Route Sources</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; Strava Routes</li>
+                                    <li>&#8226; Komoot</li>
+                                    <li>&#8226; RideWithGPS</li>
+                                    <li>&#8226; Garmin Connect</li>
+                                    <li>&#8226; Wahoo ELEMNT app</li>
+                                    <li>&#8226; GPX file import</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Sync Methods</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; WiFi sync (fastest)</li>
+                                    <li>&#8226; Bluetooth via companion app</li>
+                                    <li>&#8226; USB cable (for GPX files)</li>
+                                    <li>&#8226; Live sync while riding (Wahoo)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Navigation Settings</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-3">
+                                <li class="text-gray-700"><strong>Turn Alerts:</strong> Enable audio/vibration for upcoming turns</li>
+                                <li class="text-gray-700"><strong>Off-Course Alerts:</strong> Notification when you deviate from route</li>
+                                <li class="text-gray-700"><strong>Re-routing:</strong> Some units auto-reroute; others require manual recalculation</li>
+                                <li class="text-gray-700"><strong>Map Orientation:</strong> "Track Up" shows your direction at top; "North Up" keeps north at top</li>
+                                <li class="text-gray-700"><strong>Climb Pro/Climb Details:</strong> Upcoming climbs with gradient, distance, elevation remaining</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">Download Maps Ahead of Time</h4>
+                            <p class="text-gray-700">If riding in areas with poor cell coverage, download offline maps before your ride. On Garmin, sync routes via WiFi to download map data. On Wahoo, use the ELEMNT app to cache map regions.</p>
+                        </div>
+                    </section>
+
+                    <!-- Training Features -->
+                    <section id="training-features" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Training Features & Workouts</h2>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Structured Workouts</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">Most bike computers support structured workouts with on-screen targets and guidance:</p>
+
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <ul class="space-y-3">
+                                <li class="text-gray-700"><strong>TrainingPeaks:</strong> Syncs scheduled workouts directly to Garmin/Wahoo</li>
+                                <li class="text-gray-700"><strong>TrainerRoad:</strong> Push outdoor workouts to your head unit</li>
+                                <li class="text-gray-700"><strong>Garmin Connect:</strong> Create or download workouts from library</li>
+                                <li class="text-gray-700"><strong>Wahoo SYSTM:</strong> Push structured workouts to ELEMNT</li>
+                                <li class="text-gray-700"><strong>Zwift:</strong> Export outdoor versions of Zwift workouts</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Performance Metrics</h3>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Real-Time Metrics</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Training Stress Score (TSS)</li>
+                                    <li>&#8226; Intensity Factor (IF)</li>
+                                    <li>&#8226; Kilojoules expended</li>
+                                    <li>&#8226; Power zones time-in-zone</li>
+                                    <li>&#8226; FTP estimate (Garmin)</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-indigo-50 rounded-lg p-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Recovery Metrics</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li>&#8226; Recovery time (hours)</li>
+                                    <li>&#8226; Training load (7-day)</li>
+                                    <li>&#8226; Training status (productive, maintaining, etc.)</li>
+                                    <li>&#8226; VO2 max estimate</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Segments & Virtual Partner</h3>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <ul class="space-y-3">
+                                <li class="text-gray-700"><strong>Strava Live Segments:</strong> Star segments in Strava app, sync to device, get real-time performance vs PR/KOM</li>
+                                <li class="text-gray-700"><strong>Virtual Partner:</strong> Race against a target pace or previous effort</li>
+                                <li class="text-gray-700"><strong>Course Records:</strong> Automatic segment creation from your rides</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Troubleshooting -->
+                    <section id="troubleshooting" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Troubleshooting Common Issues</h2>
+
+                        <div class="space-y-6">
+                            <div class="bg-red-50 rounded-lg p-6">
+                                <h4 class="font-bold text-red-800 mb-2">GPS Won't Lock / Inaccurate</h4>
+                                <p class="text-gray-700 mb-2"><strong>Solutions:</strong></p>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>&#8226; Wait 60-90 seconds before starting ride</li>
+                                    <li>&#8226; Ensure clear sky view (not inside garage)</li>
+                                    <li>&#8226; Update firmware for latest GPS improvements</li>
+                                    <li>&#8226; Enable GPS + GLONASS/Galileo multi-constellation</li>
+                                    <li>&#8226; Reset device if persistent issues</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 rounded-lg p-6">
+                                <h4 class="font-bold text-red-800 mb-2">Sensor Dropouts</h4>
+                                <p class="text-gray-700 mb-2"><strong>Solutions:</strong></p>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>&#8226; Replace sensor battery</li>
+                                    <li>&#8226; Check for interference (some e-bikes cause issues)</li>
+                                    <li>&#8226; Remove and re-pair the sensor</li>
+                                    <li>&#8226; Clean sensor contacts</li>
+                                    <li>&#8226; Try ANT+ instead of Bluetooth (or vice versa)</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 rounded-lg p-6">
+                                <h4 class="font-bold text-red-800 mb-2">Power Meter Reading Incorrectly</h4>
+                                <p class="text-gray-700 mb-2"><strong>Solutions:</strong></p>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>&#8226; Perform zero-offset calibration</li>
+                                    <li>&#8226; Check battery level in power meter</li>
+                                    <li>&#8226; Verify crank length setting</li>
+                                    <li>&#8226; Check torque on pedals/cranks</li>
+                                    <li>&#8226; Update power meter firmware</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 rounded-lg p-6">
+                                <h4 class="font-bold text-red-800 mb-2">Battery Draining Too Fast</h4>
+                                <p class="text-gray-700 mb-2"><strong>Solutions:</strong></p>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>&#8226; Reduce backlight brightness and timeout</li>
+                                    <li>&#8226; Use "Smart" GPS recording mode</li>
+                                    <li>&#8226; Disable unused connectivity (WiFi, phone notifications)</li>
+                                    <li>&#8226; Turn off Live Tracking if not needed</li>
+                                    <li>&#8226; Battery may need replacement (after 3-5 years)</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 rounded-lg p-6">
+                                <h4 class="font-bold text-red-800 mb-2">Routes Not Syncing</h4>
+                                <p class="text-gray-700 mb-2"><strong>Solutions:</strong></p>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>&#8226; Check WiFi connection on device</li>
+                                    <li>&#8226; Verify account is linked in companion app</li>
+                                    <li>&#8226; Force sync from companion app</li>
+                                    <li>&#8226; Check available storage on device</li>
+                                    <li>&#8226; Manually import GPX file via USB if needed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Brand-Specific Tips -->
+                    <section id="brand-specific" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Brand-Specific Setup Tips</h2>
+
+                        <div class="space-y-6">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h4 class="font-bold text-blue-800 mb-3">Garmin Edge Series</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; Use Garmin Connect Mobile app for easy setup and sync</li>
+                                    <li>&#8226; Enable ClimbPro for detailed climb information</li>
+                                    <li>&#8226; Set up Incident Detection and emergency contacts</li>
+                                    <li>&#8226; Use Garmin IQ for third-party data fields and apps</li>
+                                    <li>&#8226; Sync with Strava for Live Segments</li>
+                                    <li>&#8226; Configure GroupRide for riding with others</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-orange-50 rounded-lg p-6">
+                                <h4 class="font-bold text-orange-800 mb-3">Wahoo ELEMNT/BOLT/ROAM</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; All configuration done through ELEMNT companion app</li>
+                                    <li>&#8226; Use "Take Me Anywhere" for on-device route creation</li>
+                                    <li>&#8226; Configure LED alerts for easy zone indication</li>
+                                    <li>&#8226; Set up auto-uploads to Strava, TrainingPeaks</li>
+                                    <li>&#8226; Use Live Track to share location with family</li>
+                                    <li>&#8226; Enable smart trainer control for ERG workouts</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-50 rounded-lg p-6">
+                                <h4 class="font-bold text-green-800 mb-3">Hammerhead Karoo</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; Touchscreen-based setup, very intuitive</li>
+                                    <li>&#8226; Color-coded maps show gradient changes</li>
+                                    <li>&#8226; Excellent integration with Strava, TrainingPeaks, Komoot</li>
+                                    <li>&#8226; Automatic software updates via WiFi</li>
+                                    <li>&#8226; Use Climber feature for detailed climb profiles</li>
+                                    <li>&#8226; Configure custom dashboards easily on device</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <h4 class="font-bold text-purple-800 mb-3">Bryton/Lezyne/Sigma</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>&#8226; Use respective companion apps for configuration</li>
+                                    <li>&#8226; Import GPX routes via USB or app</li>
+                                    <li>&#8226; Focus on essential data fields (often more limited options)</li>
+                                    <li>&#8226; Check compatibility with third-party sensors before buying</li>
+                                    <li>&#8226; Great value options with core functionality</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FAQ Section -->
+                    <section id="faq" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">What data fields should I display on my bike computer?</h3>
+                                <p class="text-gray-600">For most training rides, display: current power (or heart rate), cadence, speed, distance, time, and average power. For racing or intervals, add lap power, lap time, and 3-second average power. Keep your main screen to 6-8 fields maximum for quick glances while riding.</p>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Should I use ANT+ or Bluetooth for sensors?</h3>
+                                <p class="text-gray-600">ANT+ is generally preferred for cycling because it allows multiple devices to connect to the same sensor (your bike computer and indoor trainer app). Bluetooth is limited to one connection but uses slightly less battery. Most modern sensors broadcast both protocols simultaneously, so connect via ANT+ to your bike computer.</p>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">How do I pair a power meter with my bike computer?</h3>
+                                <p class="text-gray-600">Wake up your power meter by spinning the cranks, then go to your bike computer's sensor settings and search for power meters. Select your device from the list. Perform a zero-offset calibration after pairing, and repeat the calibration at the start of each ride for accurate readings.</p>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Why is my bike computer GPS inaccurate?</h3>
+                                <p class="text-gray-600">GPS accuracy issues usually stem from: not waiting for full satellite lock before starting, riding under heavy tree cover or tall buildings, outdated firmware, or starting too soon after turning on the device. Always wait until GPS shows full satellite acquisition (usually 30-60 seconds) before starting your ride.</p>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">How often should I update my bike computer firmware?</h3>
+                                <p class="text-gray-600">Check for firmware updates monthly. Updates often include bug fixes, new features, improved GPS accuracy, and enhanced battery life. On Garmin, updates sync automatically via Garmin Connect. On Wahoo, check the ELEMNT companion app for available updates.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Related Articles -->
+                    <section class="border-t border-gray-200 pt-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <a href="cycling-ftp-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-lg card-hover">
+                                <h4 class="font-bold text-gray-900 mb-2">FTP Training Guide</h4>
+                                <p class="text-gray-600 text-sm">Master power-based training with complete FTP testing and zone configuration.</p>
+                            </a>
+                            <a href="heart-rate-monitor-running-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-lg card-hover">
+                                <h4 class="font-bold text-gray-900 mb-2">Heart Rate Monitor Guide</h4>
+                                <p class="text-gray-600 text-sm">Complete guide to heart rate training and zone configuration.</p>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">RunBikeCalc</h3>
+                    <p class="text-gray-400">Free calculators and expert guides for runners and cyclists.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html#calculators" class="hover:text-white transition">Calculators</a></li>
+                        <li><a href="../blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="../about.html" class="hover:text-white transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Popular Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="marathon-training-complete-guide-2026.html" class="hover:text-white transition">Marathon Training</a></li>
+                        <li><a href="cycling-ftp-complete-guide-2026.html" class="hover:text-white transition">FTP Training</a></li>
+                        <li><a href="running-cadence-complete-guide-2026.html" class="hover:text-white transition">Running Cadence</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
