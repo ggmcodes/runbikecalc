@@ -8,26 +8,43 @@ export async function onRequest(context) {
     return Response.redirect(new URL(cleanPath + url.search, url.origin), 301);
   }
 
-  // 2. Skip if root, has extension, or is a known directory
-  if (pathname === '/' ||
-      pathname.includes('.') ||
-      pathname.endsWith('/')) {
+  // 2. Skip if root, has file extension, or ends with slash
+  if (pathname === '/') {
     return context.next();
   }
 
-  // 3. Try to fetch pathname.html
+  // Check for file extensions (but not paths like /blog/post-name)
+  const lastSegment = pathname.split('/').pop();
+  if (lastSegment.includes('.')) {
+    return context.next();
+  }
+
+  if (pathname.endsWith('/')) {
+    return context.next();
+  }
+
+  // 3. Try to serve pathname.html
   try {
     const htmlUrl = new URL(pathname + '.html', url.origin);
-    const response = await context.env.ASSETS.fetch(htmlUrl);
+    const modifiedRequest = new Request(htmlUrl.toString(), {
+      method: context.request.method,
+      headers: context.request.headers,
+    });
+
+    const response = await context.env.ASSETS.fetch(modifiedRequest);
 
     if (response.ok) {
+      // Clone the response with correct headers
       return new Response(response.body, {
-        headers: response.headers,
-        status: 200
+        status: 200,
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          ...Object.fromEntries(response.headers.entries())
+        }
       });
     }
   } catch (e) {
-    // Fall through to next()
+    console.error('Asset fetch error:', e);
   }
 
   // 4. Fallback to original request
