@@ -156,7 +156,7 @@ class RunningPlanGenerator extends TrainingPlanGenerator {
         });
 
         // Calculate workouts for the week
-        const workouts = this.planWeekWorkouts(phase, isRecovery, inputs, distanceConfig, weekVolume);
+        const workouts = this.planWeekWorkouts(phase, isRecovery, inputs, distanceConfig, weekVolume, weekProgress);
 
         // Assign workouts to days
         this.assignWorkoutsToDays(days, workouts, longDayIndex, trainingDays);
@@ -175,7 +175,7 @@ class RunningPlanGenerator extends TrainingPlanGenerator {
     /**
      * Plan workouts for a week based on phase and recovery status
      */
-    planWeekWorkouts(phase, isRecovery, inputs, distanceConfig, weekVolume) {
+    planWeekWorkouts(phase, isRecovery, inputs, distanceConfig, weekVolume, weekProgress) {
         const workouts = [];
         const fitnessLevel = inputs.fitnessLevel;
         const isUltra = distanceConfig.backToBack;
@@ -203,7 +203,7 @@ class RunningPlanGenerator extends TrainingPlanGenerator {
 
         // Quality workout based on phase
         // Skip quality workouts in early Base phase (first 2 weeks) to build aerobic foundation
-        const isEarlyBase = phase.name === 'Base' && context.weekProgress < 0.4;
+        const isEarlyBase = phase.name === 'Base' && weekProgress < 0.4;
         const skipQuality = isRecovery || (isEarlyBase && fitnessLevel === 'beginner');
 
         if (!skipQuality) {

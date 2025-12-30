@@ -74,21 +74,21 @@
       "name": "Running Pace",
       "short_name": "Pace",
       "description": "Calculate running pace",
-      "url": "/running-pace-calculator.html",
+      "url": "/running-pace-calculator",
       "icons": [{"src": "/images/pace-icon.png", "sizes": "96x96"}]
     },
     {
       "name": "Heart Rate Zones",
       "short_name": "HR Zones",
       "description": "Calculate training zones",
-      "url": "/heart-rate-zone-calculator.html",
+      "url": "/heart-rate-zone-calculator",
       "icons": [{"src": "/images/hr-icon.png", "sizes": "96x96"}]
     },
     {
       "name": "VO2 Max",
       "short_name": "VO2",
       "description": "Calculate VO2 Max",
-      "url": "/vo2-max-calculator.html",
+      "url": "/vo2-max-calculator",
       "icons": [{"src": "/images/vo2-icon.png", "sizes": "96x96"}]
     }
   ]
