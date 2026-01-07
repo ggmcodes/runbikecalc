@@ -83,34 +83,32 @@
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 <body class="font-sans bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <a href="/" class="flex items-center space-x-2">
-                    <span class="site-logo">RunBikeCalc</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="/running-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Running</a>
-                    <a href="/cycling-tools" class="text-gray-600 hover:text-blue-600 transition-colors">Cycling</a>
-                    <a href="/training-plans" class="text-blue-600 font-medium">Triathlon</a>
-                    <a href="/blog/nutrition-for-endurance-athletes-complete-guide.html" class="text-gray-600 hover:text-blue-600 transition-colors">Nutrition</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-2 space-y-1">
-                <a href="/running-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Running</a>
-                <a href="/cycling-tools" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Cycling</a>
-                <a href="/training-plans" class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-600">Triathlon</a>
-                <a href="/blog/nutrition-for-endurance-athletes-complete-guide.html" class="block px-3 py-2 rounded-lg hover:bg-gray-100">Nutrition</a>
-            </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
         </div>
     </nav>
 

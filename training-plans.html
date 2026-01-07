@@ -131,54 +131,32 @@
     <link rel="stylesheet" href="/css/fonts.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="site-logo">RunBikeCalc</a>
-
-                <div class="hidden md:flex items-center gap-6">
-                    <div class="relative group">
-                        <a href="/training-plans" class="flex items-center gap-1 text-primary font-medium">
-                            Plans
-                            <span class="bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded font-semibold">NEW</span>
-                        </a>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-t-lg">All Plans</a>
-                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Running</a>
-                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Cycling</a>
-                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Triathlon</a>
-                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-b-lg">Hyrox</a>
-                        </div>
-                    </div>
-                    <a href="/running-tools" class="text-gray-600 hover:text-primary">Run</a>
-                    <a href="/cycling-tools" class="text-gray-600 hover:text-primary">Bike</a>
-                    <a href="/heart-rate-tools" class="text-gray-600 hover:text-primary">HR</a>
-                    <a href="/vo2-tools" class="text-gray-600 hover:text-primary">VO2</a>
-                    <a href="/blog" class="text-gray-600 hover:text-primary">Blog</a>
-                </div>
-
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
-            <div class="px-4 py-3 space-y-2">
-                <a href="/training-plans" class="block py-2 text-primary font-medium">Training Plans</a>
-                <a href="/running-training-plan-generator" class="block py-2 text-gray-600 pl-4">Running Plans</a>
-                <a href="/cycling-training-plan-generator" class="block py-2 text-gray-600 pl-4">Cycling Plans</a>
-                <a href="/triathlon-training-plan-generator" class="block py-2 text-gray-600 pl-4">Triathlon Plans</a>
-                <a href="/hyrox-training-plan-generator" class="block py-2 text-gray-600 pl-4">Hyrox Plans</a>
-                <a href="/running-tools" class="block py-2 text-gray-600">Running Tools</a>
-                <a href="/cycling-tools" class="block py-2 text-gray-600">Cycling Tools</a>
-                <a href="/heart-rate-tools" class="block py-2 text-gray-600">HR Zones</a>
-                <a href="/blog" class="block py-2 text-gray-600">Blog</a>
-            </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
         </div>
     </nav>
 

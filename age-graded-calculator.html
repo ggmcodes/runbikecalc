@@ -136,75 +136,34 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
 
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-40">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="site-logo">RunBikeCalc</a>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="touch-target md:hidden" aria-label="Menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
-
-                <!-- Desktop navigation -->
-                <div class="hidden md:flex space-x-6">
-                    <div class="relative group">
-                        <a href="/training-plans" class="nav-link flex items-center">
-                            Plans
-                            <span class="ml-1 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </a>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-48 z-50">
-                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Plans</a>
-                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Running</a>
-                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cycling</a>
-                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Triathlon</a>
-                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hyrox</a>
-                        </div>
-                    </div>
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/heart-rate-zone-calculator.html" class="nav-link">Heart Rate</a>
-                    <a href="/running-pace-calculator.html" class="nav-link font-semibold text-primary">Running</a>
-                    <a href="/bike-gearing-calculator.html" class="nav-link">Cycling</a>
-                    <a href="/vo2-max-calculator.html" class="nav-link">VO2 Max</a>
-                    <a href="/about.html" class="nav-link">About</a>
-                </div>
             </div>
-
-            <!-- Mobile navigation -->
-            <div id="mobile-menu" class="hidden mt-4 border-t pt-4">
-                <div class="border-b border-gray-200 pb-3 mb-3">
-                    <button id="mobile-plans-toggle" class="mobile-menu-item flex items-center justify-between w-full text-left">
-                        <span class="flex items-center">
-                            Plans
-                            <span class="ml-2 text-xs bg-orange-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>
-                        </span>
-                        <svg class="w-4 h-4 transform transition-transform" id="mobile-plans-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="mobile-plans-submenu" class="hidden pl-4 mt-2 space-y-2">
-                        <a href="/training-plans" class="block py-1 text-gray-600 hover:text-primary">All Plans</a>
-                        <a href="/running-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Running</a>
-                        <a href="/cycling-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Cycling</a>
-                        <a href="/triathlon-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Triathlon</a>
-                        <a href="/hyrox-training-plan-generator" class="block py-1 text-gray-600 hover:text-primary">Hyrox</a>
-                    </div>
-                </div>
-                <a href="/" class="mobile-menu-item">Home</a>
-                <a href="/heart-rate-zone-calculator.html" class="mobile-menu-item">Heart Rate</a>
-                <a href="/running-pace-calculator.html" class="mobile-menu-item font-semibold text-primary">Running</a>
-                <a href="/bike-gearing-calculator.html" class="mobile-menu-item">Cycling</a>
-                <a href="/vo2-max-calculator.html" class="mobile-menu-item">VO2 Max</a>
-                <a href="/about.html" class="mobile-menu-item">About</a>
-            </div>
-        </nav>
-    </header>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
 
     <!-- Main content -->
     <main id="main" class="container mx-auto px-4 py-8 md:py-12">
