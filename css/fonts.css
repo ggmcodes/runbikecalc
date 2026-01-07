@@ -1,0 +1,79 @@
+/* RunBikeCalc Typography
+   Playfair Display (headings) + Source Sans 3 (body)
+*/
+
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* Lists - scoped to content areas only */
+.content-box ul, .content-box ol,
+.prose ul, .prose ol,
+article ul, article ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-box ul, .prose ul, article ul {
+    list-style-type: disc;
+}
+
+.content-box ol, .prose ol, article ol {
+    list-style-type: decimal;
+}
+
+.content-box li, .prose li, article li {
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs - scoped to content areas only */
+.content-box p, .prose p, article p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Ensure calculator inputs stay readable */
+input, select, textarea, button {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Site logo - Playfair Display, black */
+.site-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+/* Content box - matches calculator card styling */
+.content-box {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}

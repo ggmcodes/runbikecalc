@@ -28,18 +28,32 @@
 
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#C67B4E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#2563eb',
-                        'primary-dark': '#1d4ed8',
+                        'cream': '#FAF8F5',
+                        'cream-dark': '#F0EDE8',
+                        'charcoal': '#1A1A1A',
+                        'copper': '#C67B4E',
+                        'copper-light': '#D4916A',
+                        'copper-dark': '#A66840',
+                        'sage': '#7A9E7E',
+                        'warm-gray': '#6B6B6B',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Source Sans 3', 'sans-serif'],
                     }
                 }
             }
@@ -47,422 +61,567 @@
     </script>
 
     <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #FAF8F5;
         }
-        .card-hover {
-            transition: all 0.2s ease;
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
         }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+
+        /* Subtle grain texture */
+        .grain-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
         }
-        /* Dark mode transition */
-        html {
-            transition: background-color 0.3s ease, color 0.3s ease;
+
+        /* Hero image overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(250, 248, 245, 0.92) 0%, rgba(250, 248, 245, 0.75) 50%, rgba(250, 248, 245, 0.6) 100%);
+        }
+
+        /* Card hover effects */
+        .card-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Link underline animation */
+        .link-underline {
+            position: relative;
+        }
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #C67B4E;
+            transition: width 0.3s ease;
+        }
+        .link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Stagger animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Section divider */
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: #C67B4E;
+        }
+
+        /* Calculator card border accent */
+        .calc-card {
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .calc-card:hover {
+            border-left-color: #C67B4E;
+            background: white;
         }
     </style>
 
-    <!-- Dark Mode Script - Load immediately to prevent flash -->
-    <script src="/js/dark-mode.js"></script>
-
-    <!-- Enhanced Schema Markup for SEO -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "RunBikeCalc",
         "url": "https://runbikecalc.com",
-        "description": "Free training plans and calculators for runners, cyclists, and triathletes",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://runbikecalc.com/blog?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "RunBikeCalc",
-        "url": "https://runbikecalc.com",
-        "logo": "https://runbikecalc.com/images/runbikecalc-logo.png",
-        "description": "The leading resource for endurance athletes. Free training plans, calculators, and science-backed guides for running, cycling, and triathlon.",
-        "foundingDate": "2024",
-        "sameAs": [],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "url": "https://runbikecalc.com/contact"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Popular Calculators",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Running Pace Calculator",
-                "url": "https://runbikecalc.com/running-pace-calculator"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "FTP Calculator",
-                "url": "https://runbikecalc.com/ftp-calculator"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Heart Rate Zone Calculator",
-                "url": "https://runbikecalc.com/heart-rate-zone-calculator"
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "VO2 Max Calculator",
-                "url": "https://runbikecalc.com/vo2-max-calculator"
-            },
-            {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Race Time Predictor",
-                "url": "https://runbikecalc.com/race-time-predictor"
-            }
-        ]
+        "description": "Free training plans and calculators for runners, cyclists, and triathletes"
     }
     </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body class="bg-cream text-charcoal">
     <!-- Navigation -->
-    <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="text-xl font-bold text-primary dark:text-blue-400">RunBikeCalc</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-charcoal/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="/" class="font-display text-2xl font-semibold tracking-tight text-charcoal">
+                    RunBikeCalc
+                </a>
 
-                <div class="hidden md:flex items-center gap-6">
-                    <div class="relative group">
-                        <a href="/training-plans" class="flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 font-medium">
-                            Plans
-                            <span class="bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded font-semibold">NEW</span>
-                        </a>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <a href="/training-plans" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-lg">All Plans</a>
-                            <a href="/running-training-plan-generator" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Running</a>
-                            <a href="/cycling-training-plan-generator" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Cycling</a>
-                            <a href="/triathlon-training-plan-generator" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Triathlon</a>
-                            <a href="/hyrox-training-plan-generator" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-b-lg">Hyrox</a>
-                        </div>
-                    </div>
-                    <a href="/running-tools" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400">Run</a>
-                    <a href="/cycling-tools" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400">Bike</a>
-                    <a href="/heart-rate-tools" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400">HR</a>
-                    <a href="/vo2-tools" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400">VO2</a>
-                    <a href="/blog" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400">Blog</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="/training-plans" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal flex items-center gap-2">
+                        Plans
+                        <span class="bg-copper text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">NEW</span>
+                    </a>
+                    <a href="/running-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Running</a>
+                    <a href="/cycling-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Cycling</a>
+                    <a href="/heart-rate-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Heart Rate</a>
+                    <a href="/blog" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Journal</a>
                 </div>
 
-                <div class="flex items-center gap-2">
-                    <!-- Search Link -->
-                    <a href="/search" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Search">
-                        <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
+                <!-- CTA + Mobile -->
+                <div class="flex items-center gap-4">
+                    <a href="/training-plans" class="hidden md:inline-flex bg-charcoal text-cream px-6 py-3 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-colors">
+                        Start Training
                     </a>
-                    <!-- Dark Mode Toggle -->
-                    <button id="dark-mode-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
-                        <!-- Sun icon (shown in dark mode) -->
-                        <svg id="sun-icon" class="w-5 h-5 text-gray-600 dark:text-gray-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                        <!-- Moon icon (shown in light mode) -->
-                        <svg id="moon-icon" class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                    </button>
-
-                    <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <button id="mobile-menu-btn" class="lg:hidden p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
-            <div class="px-4 py-3 space-y-2">
-                <a href="/training-plans" class="block py-2 text-primary dark:text-blue-400 font-medium">Training Plans</a>
-                <a href="/running-training-plan-generator" class="block py-2 text-gray-600 dark:text-gray-300 pl-4">Running Plans</a>
-                <a href="/cycling-training-plan-generator" class="block py-2 text-gray-600 dark:text-gray-300 pl-4">Cycling Plans</a>
-                <a href="/triathlon-training-plan-generator" class="block py-2 text-gray-600 dark:text-gray-300 pl-4">Triathlon Plans</a>
-                <a href="/hyrox-training-plan-generator" class="block py-2 text-gray-600 dark:text-gray-300 pl-4">Hyrox Plans</a>
-                <a href="/running-tools" class="block py-2 text-gray-600 dark:text-gray-300">Running Tools</a>
-                <a href="/cycling-tools" class="block py-2 text-gray-600 dark:text-gray-300">Cycling Tools</a>
-                <a href="/heart-rate-tools" class="block py-2 text-gray-600 dark:text-gray-300">HR Zones</a>
-                <a href="/blog" class="block py-2 text-gray-600 dark:text-gray-300">Blog</a>
-                <a href="/search" class="block py-2 text-gray-600 dark:text-gray-300">Search</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cream border-t border-charcoal/5">
+            <div class="px-6 py-6 space-y-4">
+                <a href="/training-plans" class="block text-lg font-medium text-copper">Training Plans</a>
+                <a href="/running-tools" class="block text-lg text-charcoal/70">Running Tools</a>
+                <a href="/cycling-tools" class="block text-lg text-charcoal/70">Cycling Tools</a>
+                <a href="/heart-rate-tools" class="block text-lg text-charcoal/70">Heart Rate</a>
+                <a href="/blog" class="block text-lg text-charcoal/70">Journal</a>
+                <a href="/training-plans" class="inline-block mt-4 bg-charcoal text-cream px-6 py-3 text-sm font-medium">Start Training</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-600 to-purple-700 text-white">
-        <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Train Smarter. Race Faster.
-            </h1>
-            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Free personalized training plans and 25+ performance calculators for runners, cyclists, and triathletes.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/training-plans" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition">
-                    Build Your Training Plan
-                </a>
-                <a href="#calculators" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition">
-                    Explore Calculators
-                </a>
+    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden grain-overlay">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img
+                src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&q=80"
+                alt="Runner at sunrise"
+                class="w-full h-full object-cover"
+            >
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
+            <div class="max-w-2xl">
+                <p class="text-copper font-medium tracking-widest uppercase text-sm mb-6 animate-fade-up opacity-0" style="animation-delay: 0.1s">
+                    For the dedicated athlete
+                </p>
+                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-medium leading-[0.9] mb-8 animate-fade-up opacity-0" style="animation-delay: 0.2s">
+                    Train with<br>
+                    <span class="italic text-copper">purpose</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-charcoal/70 leading-relaxed mb-10 max-w-lg animate-fade-up opacity-0 font-light" style="animation-delay: 0.3s">
+                    Free personalized training plans and performance calculators built for runners, cyclists, and triathletes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style="animation-delay: 0.4s">
+                    <a href="/training-plans" class="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-all group">
+                        Build Your Plan
+                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="#calculators" class="inline-flex items-center justify-center border-2 border-charcoal text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal hover:text-cream transition-all">
+                        Explore Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            <div class="w-6 h-10 border-2 border-charcoal/30 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-2 bg-charcoal/30 rounded-full animate-bounce"></div>
             </div>
         </div>
     </section>
 
     <!-- Training Plans Section -->
-    <section class="py-16 bg-white dark:bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm font-semibold mb-4">NEW FEATURE</span>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Personalized Training Plans</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-                    Science-backed periodized plans based on Jack Daniels, Joe Friel, and 80/20 training. Export to your calendar.
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="max-w-xl mb-16">
+                <div class="section-divider mb-6"></div>
+                <h2 class="font-display text-4xl md:text-5xl font-medium mb-6">Training Plans</h2>
+                <p class="text-lg text-charcoal/60 leading-relaxed">
+                    Science-backed periodized programs based on Jack Daniels, Joe Friel, and 80/20 methodology. Export directly to your calendar.
                 </p>
             </div>
 
+            <!-- Plans Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="/running-training-plan-generator" class="card-hover bg-white dark:bg-gray-700 border-2 border-gray-100 dark:border-gray-600 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-400">
-                    <div class="text-4xl mb-4">🏃</div>
-                    <h3 class="text-xl font-bold mb-2">Running Plans</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">5K to 100 Mile Ultra</p>
-                    <span class="text-blue-600 dark:text-blue-400 font-semibold">Build Plan →</span>
+                <a href="/running-training-plan-generator" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="text-5xl mb-6 block">🏃</span>
+                        <h3 class="font-display text-2xl font-medium mb-2">Running</h3>
+                        <p class="text-charcoal/60 text-sm mb-6">5K to 100-Mile Ultra</p>
+                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                            Build Plan
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
                 </a>
 
-                <a href="/cycling-training-plan-generator" class="card-hover bg-white dark:bg-gray-700 border-2 border-gray-100 dark:border-gray-600 rounded-xl p-6 hover:border-green-500 dark:hover:border-green-400">
-                    <div class="text-4xl mb-4">🚴</div>
-                    <h3 class="text-xl font-bold mb-2">Cycling Plans</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Century & Gran Fondo</p>
-                    <span class="text-green-600 dark:text-green-400 font-semibold">Build Plan →</span>
+                <a href="/cycling-training-plan-generator" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="text-5xl mb-6 block">🚴</span>
+                        <h3 class="font-display text-2xl font-medium mb-2">Cycling</h3>
+                        <p class="text-charcoal/60 text-sm mb-6">Century & Gran Fondo</p>
+                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                            Build Plan
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
                 </a>
 
-                <a href="/triathlon-training-plan-generator" class="card-hover bg-white dark:bg-gray-700 border-2 border-gray-100 dark:border-gray-600 rounded-xl p-6 hover:border-purple-500 dark:hover:border-purple-400">
-                    <div class="text-4xl mb-4">🏊</div>
-                    <h3 class="text-xl font-bold mb-2">Triathlon Plans</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Sprint to Ironman</p>
-                    <span class="text-purple-600 dark:text-purple-400 font-semibold">Build Plan →</span>
+                <a href="/triathlon-training-plan-generator" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="text-5xl mb-6 block">🏊</span>
+                        <h3 class="font-display text-2xl font-medium mb-2">Triathlon</h3>
+                        <p class="text-charcoal/60 text-sm mb-6">Sprint to Ironman</p>
+                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                            Build Plan
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
                 </a>
 
-                <a href="/hyrox-training-plan-generator" class="card-hover bg-white dark:bg-gray-700 border-2 border-gray-100 dark:border-gray-600 rounded-xl p-6 hover:border-orange-500 dark:hover:border-orange-400">
-                    <div class="text-4xl mb-4">💪</div>
-                    <h3 class="text-xl font-bold mb-2">Hyrox Plans</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Open, Pro & Doubles</p>
-                    <span class="text-orange-600 dark:text-orange-400 font-semibold">Build Plan →</span>
+                <a href="/hyrox-training-plan-generator" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="text-5xl mb-6 block">💪</span>
+                        <h3 class="font-display text-2xl font-medium mb-2">Hyrox</h3>
+                        <p class="text-charcoal/60 text-sm mb-6">Open, Pro & Doubles</p>
+                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
+                            Build Plan
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Calculators Section -->
-    <section id="calculators" class="py-16 bg-gray-50 dark:bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Performance Calculators</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg">Free tools to optimize your training</p>
+    <section id="calculators" class="py-24 lg:py-32 bg-cream">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <div class="section-divider mx-auto mb-6"></div>
+                <h2 class="font-display text-4xl md:text-5xl font-medium mb-6">Performance Calculators</h2>
+                <p class="text-lg text-charcoal/60">
+                    25+ free tools to optimize every aspect of your training
+                </p>
             </div>
 
             <!-- Heart Rate -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">❤️ Heart Rate & Zones</h3>
+            <div class="mb-16">
+                <h3 class="font-display text-2xl font-medium mb-8 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-lg">❤️</span>
+                    Heart Rate & Zones
+                </h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a href="/heart-rate-zone-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Heart Rate Zones</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Calculate your 5 training zones</div>
+                    <a href="/heart-rate-zone-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Heart Rate Zones</div>
+                        <div class="text-sm text-charcoal/50">Calculate your 5 training zones</div>
                     </a>
-                    <a href="/zone-2-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Zone 2 Calculator</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Find your aerobic zone</div>
+                    <a href="/zone-2-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Zone 2 Calculator</div>
+                        <div class="text-sm text-charcoal/50">Find your aerobic base zone</div>
                     </a>
-                    <a href="/max-heart-rate-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Max Heart Rate</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Estimate your max HR</div>
+                    <a href="/max-heart-rate-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Max Heart Rate</div>
+                        <div class="text-sm text-charcoal/50">Estimate your maximum HR</div>
                     </a>
-                    <a href="/lactate-threshold-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Lactate Threshold</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Find your LT heart rate</div>
+                    <a href="/lactate-threshold-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Lactate Threshold</div>
+                        <div class="text-sm text-charcoal/50">Find your LTHR</div>
                     </a>
                 </div>
             </div>
 
             <!-- Running -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">🏃 Running</h3>
+            <div class="mb-16">
+                <h3 class="font-display text-2xl font-medium mb-8 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-lg">🏃</span>
+                    Running
+                </h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a href="/running-pace-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Pace Calculator</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Calculate pace, time, distance</div>
+                    <a href="/running-pace-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Pace Calculator</div>
+                        <div class="text-sm text-charcoal/50">Calculate pace, time, distance</div>
                     </a>
-                    <a href="/race-time-predictor" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Race Predictor</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Predict finish times</div>
+                    <a href="/race-time-predictor" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Race Predictor</div>
+                        <div class="text-sm text-charcoal/50">Predict your finish times</div>
                     </a>
-                    <a href="/treadmill-pace-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Treadmill Pace</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Convert speed to pace</div>
+                    <a href="/treadmill-pace-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Treadmill Pace</div>
+                        <div class="text-sm text-charcoal/50">Convert speed to pace</div>
                     </a>
-                    <a href="/calories-burned-running-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Calories Burned</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Calculate calories</div>
+                    <a href="/calories-burned-running-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Calories Burned</div>
+                        <div class="text-sm text-charcoal/50">Track energy expenditure</div>
                     </a>
                 </div>
             </div>
 
             <!-- Cycling -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">🚴 Cycling</h3>
+            <div class="mb-16">
+                <h3 class="font-display text-2xl font-medium mb-8 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center text-lg">🚴</span>
+                    Cycling
+                </h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a href="/ftp-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">FTP Calculator</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Functional Threshold Power</div>
+                    <a href="/ftp-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">FTP Calculator</div>
+                        <div class="text-sm text-charcoal/50">Functional Threshold Power</div>
                     </a>
-                    <a href="/bike-gearing-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Bike Gearing</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Optimize gear ratios</div>
+                    <a href="/bike-gearing-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Bike Gearing</div>
+                        <div class="text-sm text-charcoal/50">Optimize gear ratios</div>
                     </a>
-                    <a href="/power-to-weight-ratio-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Power to Weight</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Calculate W/kg</div>
+                    <a href="/power-to-weight-ratio-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Power to Weight</div>
+                        <div class="text-sm text-charcoal/50">Calculate your W/kg</div>
                     </a>
-                    <a href="/watts-to-calories-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Watts to Calories</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Convert power to energy</div>
+                    <a href="/watts-to-calories-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Watts to Calories</div>
+                        <div class="text-sm text-charcoal/50">Convert power to energy</div>
                     </a>
                 </div>
             </div>
 
-            <!-- VO2 -->
+            <!-- VO2 Max -->
             <div>
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">🎽 VO2 Max & Fitness</h3>
+                <h3 class="font-display text-2xl font-medium mb-8 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-purple-50 rounded-full flex items-center justify-center text-lg">🎽</span>
+                    VO2 Max & Fitness
+                </h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a href="/vo2-max-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">VO2 Max Calculator</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Estimate aerobic capacity</div>
+                    <a href="/vo2-max-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">VO2 Max Calculator</div>
+                        <div class="text-sm text-charcoal/50">Estimate aerobic capacity</div>
                     </a>
-                    <a href="/cooper-test-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Cooper Test</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">12-minute run test</div>
+                    <a href="/cooper-test-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Cooper Test</div>
+                        <div class="text-sm text-charcoal/50">12-minute run test</div>
                     </a>
-                    <a href="/training-load-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Training Load</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Track training stress</div>
+                    <a href="/training-load-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Training Load</div>
+                        <div class="text-sm text-charcoal/50">Track training stress</div>
                     </a>
-                    <a href="/recovery-calculator" class="card-hover bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                        <div class="font-semibold">Recovery Calculator</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Optimize recovery</div>
+                    <a href="/recovery-calculator" class="calc-card bg-cream-dark p-6 hover:shadow-lg transition-all">
+                        <div class="font-medium text-charcoal mb-1">Recovery Calculator</div>
+                        <div class="text-sm text-charcoal/50">Optimize recovery time</div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="py-16 bg-white dark:bg-gray-800">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+    <!-- Feature Banner -->
+    <section class="relative py-32 overflow-hidden">
+        <div class="absolute inset-0">
+            <img
+                src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=1920&q=80"
+                alt="Cyclist on mountain road"
+                class="w-full h-full object-cover"
+            >
+            <div class="absolute inset-0 bg-charcoal/70"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
+            <p class="text-copper font-medium tracking-widest uppercase text-sm mb-6">Why athletes choose us</p>
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium mb-8">
+                Science meets<br>simplicity
+            </h2>
+            <p class="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+                Every calculator is built on peer-reviewed research and validated methodologies. No accounts required, no hidden fees—just accurate tools for serious athletes.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="section-divider mx-auto mb-6"></div>
+                <h2 class="font-display text-4xl font-medium">Common Questions</h2>
+            </div>
 
             <div class="space-y-4">
-                <details class="border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700">Are these training plans really free?</summary>
-                    <p class="px-4 pb-4 text-gray-600 dark:text-gray-400">Yes! Calendar (.ics) export is completely free. PDF and spreadsheet exports require a free email signup.</p>
+                <details class="group border-b border-charcoal/10 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer py-4 font-medium text-lg">
+                        Are these training plans really free?
+                        <svg class="w-5 h-5 text-copper group-open:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </summary>
+                    <p class="text-charcoal/60 pb-2">Yes! Calendar (.ics) export is completely free with no signup. PDF and spreadsheet exports are available with a free email signup.</p>
                 </details>
-                <details class="border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700">What training methods are used?</summary>
-                    <p class="px-4 pb-4 text-gray-600 dark:text-gray-400">Our plans incorporate principles from Jack Daniels, Joe Friel, 80/20 Endurance, and proven ultramarathon coaching methodologies.</p>
+
+                <details class="group border-b border-charcoal/10 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer py-4 font-medium text-lg">
+                        What training methods are used?
+                        <svg class="w-5 h-5 text-copper group-open:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </summary>
+                    <p class="text-charcoal/60 pb-2">Our plans incorporate principles from Jack Daniels, Joe Friel, 80/20 Endurance, and proven ultramarathon coaching methodologies.</p>
                 </details>
-                <details class="border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700">Can I customize the training plans?</summary>
-                    <p class="px-4 pb-4 text-gray-600 dark:text-gray-400">You can set your experience level, weekly availability, and preferred long workout day. Export to spreadsheet for full customization.</p>
+
+                <details class="group border-b border-charcoal/10 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer py-4 font-medium text-lg">
+                        Can I customize the training plans?
+                        <svg class="w-5 h-5 text-copper group-open:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </summary>
+                    <p class="text-charcoal/60 pb-2">You can set your experience level, weekly availability, race date, and preferred long workout day. Export to spreadsheet for full customization.</p>
                 </details>
-                <details class="border border-gray-200 dark:border-gray-700 rounded-lg">
-                    <summary class="p-4 font-semibold cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700">How do I add the plan to my calendar?</summary>
-                    <p class="px-4 pb-4 text-gray-600 dark:text-gray-400">Download the .ics file and import it into Google Calendar, Apple Calendar, or Outlook.</p>
+
+                <details class="group border-b border-charcoal/10 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer py-4 font-medium text-lg">
+                        How accurate are the calculators?
+                        <svg class="w-5 h-5 text-copper group-open:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                    </summary>
+                    <p class="text-charcoal/60 pb-2">All calculators use peer-reviewed formulas and established sports science. We cite sources and explain methodology for full transparency.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Signup -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Get Training Tips & Updates</h2>
-            <p class="text-blue-100 mb-6">Join 10,000+ athletes getting weekly training insights, calculator updates, and exclusive content.</p>
-            <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" action="#" method="POST">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white" required>
-                <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition">Subscribe</button>
+    <!-- Newsletter -->
+    <section class="py-20 bg-charcoal text-white">
+        <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-medium mb-4">Stay in the loop</h2>
+            <p class="text-white/60 mb-8">Training tips, new calculator releases, and exclusive content for serious athletes.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                    type="email"
+                    placeholder="Your email"
+                    class="flex-1 px-5 py-4 bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-copper"
+                    required
+                >
+                <button type="submit" class="bg-copper text-white px-8 py-4 font-medium hover:bg-copper-light transition-colors">
+                    Subscribe
+                </button>
             </form>
-            <p class="text-blue-200 text-sm mt-4">No spam. Unsubscribe anytime.</p>
+            <p class="text-white/40 text-sm mt-4">No spam. Unsubscribe anytime.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+    <footer class="bg-cream-dark py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <h4 class="font-bold text-lg mb-4">RunBikeCalc</h4>
-                    <p class="text-gray-400 text-sm">Free training plans and calculators for endurance athletes.</p>
+                    <div class="font-display text-2xl font-semibold mb-4">RunBikeCalc</div>
+                    <p class="text-charcoal/60 text-sm leading-relaxed">
+                        Free training plans and performance calculators for endurance athletes worldwide.
+                    </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Training Plans</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="/running-training-plan-generator" class="hover:text-white">Running</a></li>
-                        <li><a href="/cycling-training-plan-generator" class="hover:text-white">Cycling</a></li>
-                        <li><a href="/triathlon-training-plan-generator" class="hover:text-white">Triathlon</a></li>
-                        <li><a href="/hyrox-training-plan-generator" class="hover:text-white">Hyrox</a></li>
+                    <h4 class="font-medium tracking-wide uppercase text-sm text-copper mb-6">Training Plans</h4>
+                    <ul class="space-y-3 text-charcoal/60">
+                        <li><a href="/running-training-plan-generator" class="hover:text-charcoal transition-colors">Running</a></li>
+                        <li><a href="/cycling-training-plan-generator" class="hover:text-charcoal transition-colors">Cycling</a></li>
+                        <li><a href="/triathlon-training-plan-generator" class="hover:text-charcoal transition-colors">Triathlon</a></li>
+                        <li><a href="/hyrox-training-plan-generator" class="hover:text-charcoal transition-colors">Hyrox</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Calculators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
-                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
-                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
-                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    <h4 class="font-medium tracking-wide uppercase text-sm text-copper mb-6">Calculators</h4>
+                    <ul class="space-y-3 text-charcoal/60">
+                        <li><a href="/running-pace-calculator" class="hover:text-charcoal transition-colors">Pace Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-charcoal transition-colors">HR Zones</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-charcoal transition-colors">FTP Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-charcoal transition-colors">VO2 Max</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="/about" class="hover:text-white">About</a></li>
-                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
-                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
-                        <li><a href="/privacy" class="hover:text-white">Privacy</a></li>
+                    <h4 class="font-medium tracking-wide uppercase text-sm text-copper mb-6">Company</h4>
+                    <ul class="space-y-3 text-charcoal/60">
+                        <li><a href="/about" class="hover:text-charcoal transition-colors">About</a></li>
+                        <li><a href="/blog" class="hover:text-charcoal transition-colors">Journal</a></li>
+                        <li><a href="/contact" class="hover:text-charcoal transition-colors">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-charcoal transition-colors">Privacy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <div class="border-t border-charcoal/10 pt-8 text-center text-charcoal/40 text-sm">
                 &copy; 2025 RunBikeCalc. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-up').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
