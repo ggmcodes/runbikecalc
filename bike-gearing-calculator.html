@@ -410,6 +410,9 @@
                         <h3 class="text-xl font-bold mb-4">Speed vs Cadence Chart</h3>
                         <canvas id="speed-chart" width="400" height="200"></canvas>
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
             </div>
 
@@ -830,6 +833,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Wheel circumferences in mm
         const wheelSizes = {
@@ -993,6 +997,12 @@
             
             // Draw speed chart (simplified canvas drawing)
             drawSpeedChart(speeds, chainrings, cassette);
+
+            // Show product recommendations
+            if (typeof renderProductRecommendations === 'function') {
+                document.getElementById('recommendations').classList.remove('hidden');
+                renderProductRecommendations('recommendations', 'bike-gearing');
+            }
         }
 
         function drawSpeedChart(speeds, chainrings, cassette) {

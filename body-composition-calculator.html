@@ -414,6 +414,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="product-recommendations" class="product-recommendations mt-6 hidden"></div>
             </div>
         </div>
 
@@ -634,6 +637,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Gender toggle functionality
         const genderInputs = document.querySelectorAll('input[name="gender"]');
@@ -866,6 +870,12 @@
 
                 document.getElementById('body-comp-analysis').textContent = result.analysis;
                 document.getElementById('recommendations').textContent = result.recommendations;
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('product-recommendations').classList.remove('hidden');
+                    renderProductRecommendations('product-recommendations', 'body-composition');
+                }
 
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

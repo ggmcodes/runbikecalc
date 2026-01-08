@@ -220,7 +220,7 @@
                                 <div class="text-gray-600">BMI Category</div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
                             <div class="bg-blue-50 p-4 rounded">
                                 <div class="font-semibold text-blue-800" id="healthy-weight-range">60-80 kg</div>
@@ -247,6 +247,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
             </div>
         </div>
 
@@ -434,6 +437,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         class BMICalculator extends Calculator {
             constructor() {
@@ -548,7 +552,13 @@
                 document.getElementById('body-fat-estimate').textContent = result.bodyFatEstimate;
                 document.getElementById('bmi-analysis').textContent = result.analysis;
                 document.getElementById('health-recommendations').textContent = result.recommendations;
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'bmi');
+                }
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }

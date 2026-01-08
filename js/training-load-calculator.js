@@ -387,6 +387,12 @@ class TrainingLoadCalculator extends Calculator {
                 <p class="text-gray-600 text-sm">${rec.description}</p>
             </div>
         `).join('');
+
+        // Show product recommendations
+        if (typeof renderProductRecommendations === 'function') {
+            document.getElementById('product-recommendations').classList.remove('hidden');
+            renderProductRecommendations('product-recommendations', 'training-load');
+        }
     }
 
     generateRecommendations(metrics) {

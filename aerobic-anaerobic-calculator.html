@@ -292,6 +292,9 @@
                                 <h4 class="font-semibold text-gray-800 mb-2">Energy System Analysis</h4>
                                 <p class="text-gray-600" id="energy-analysis">Analysis will appear here...</p>
                             </div>
+
+                            <!-- Product Recommendations (shown after calculation) -->
+                            <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                         </div>
                     </div>
                 </div>
@@ -890,6 +893,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Tab switching functionality
         document.querySelectorAll('.tab-button').forEach(button => {
@@ -1046,7 +1050,13 @@
                 document.getElementById('oxidative').textContent = result.oxidative;
                 document.getElementById('energy-demand').textContent = result.energyDemand;
                 document.getElementById('energy-analysis').textContent = result.analysis;
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'aerobic-anaerobic');
+                }
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }

@@ -246,6 +246,9 @@
                     
                     <!-- Results -->
                     <div id="recovery-result" class="hidden mt-8"></div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
                 
                 <!-- Educational Content -->
@@ -551,6 +554,7 @@
     
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Mobile menu
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -702,6 +706,12 @@
                         </div>
                     </div>
                 `);
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'recovery');
+                }
             }
             
             getNextWorkoutTime(hours) {

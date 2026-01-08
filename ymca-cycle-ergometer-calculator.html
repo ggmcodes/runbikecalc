@@ -215,6 +215,9 @@
                         <h3 class="font-bold text-lg mb-4">Your Results</h3>
                         <p class="text-gray-500">Enter your test data to see results</p>
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
             </div>
         </div>
@@ -427,6 +430,7 @@
         </div>
     </footer>
 
+    <script src="/js/product-recommendations.js"></script>
     <script>
     function calculate() {
         var age = parseInt(document.getElementById('age').value);
@@ -555,6 +559,12 @@
         detailsDiv.appendChild(detail1);
         detailsDiv.appendChild(detail2);
         resultsDiv.appendChild(detailsDiv);
+
+        // Show product recommendations
+        if (typeof renderProductRecommendations === 'function') {
+            document.getElementById('recommendations').classList.remove('hidden');
+            renderProductRecommendations('recommendations', 'ymca-cycle');
+        }
     }
     </script>
 </body>

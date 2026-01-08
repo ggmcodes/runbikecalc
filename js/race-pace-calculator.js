@@ -453,7 +453,13 @@ class RacePaceCalculator extends Calculator {
         
         resultsContainer.classList.remove('hidden');
         defaultMessage.classList.add('hidden');
-        
+
+        // Show product recommendations
+        if (typeof renderProductRecommendations === 'function') {
+            document.getElementById('recommendations').classList.remove('hidden');
+            renderProductRecommendations('recommendations', 'race-pace');
+        }
+
         // Save to localStorage
         this.saveValues();
     }

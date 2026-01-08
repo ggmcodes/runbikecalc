@@ -190,6 +190,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Product Recommendations (shown after calculation) -->
+            <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
         </div>
 
         <!-- Quick Distance Reference -->
@@ -368,6 +371,7 @@
         </div>
     </footer>
 
+    <script src="/js/product-recommendations.js"></script>
     <script>
     var distances = {
         800: '800m',
@@ -430,6 +434,12 @@
             row.appendChild(nameSpan);
             row.appendChild(timeSpan);
             resultsDiv.appendChild(row);
+        }
+
+        // Show product recommendations
+        if (typeof renderProductRecommendations === 'function') {
+            document.getElementById('recommendations').classList.remove('hidden');
+            renderProductRecommendations('recommendations', 'pace-converter');
         }
     }
 

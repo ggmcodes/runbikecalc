@@ -504,6 +504,9 @@
                                 <p class="text-gray-500">Interactive zone chart would appear here</p>
                             </div>
                         </div>
+
+                        <!-- Product Recommendations (shown after calculation) -->
+                        <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -697,6 +700,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Advanced Heart Rate Zones Calculator
         class AdvancedHRZonesCalculator extends Calculator {
@@ -1078,6 +1082,12 @@
 
                 // Create zone detail cards
                 this.createZoneDetailCards(result.recommendation.zones);
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'advanced-hr-zones');
+                }
 
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

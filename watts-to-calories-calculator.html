@@ -399,7 +399,7 @@
                                     <div class="text-gray-600">Efficiency Rating</div>
                                 </div>
                             </div>
-                            
+
                             <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
                                 <div class="bg-blue-50 p-4 rounded">
                                     <div class="font-semibold text-blue-800" id="mechanical-work">0 kJ</div>
@@ -422,6 +422,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
             </div>
         </div>
 
@@ -647,6 +650,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Tab switching functionality
         document.querySelectorAll('.tab-button').forEach(button => {
@@ -705,9 +709,15 @@
                 document.getElementById('kilojoules').textContent = `${result.kilojoules} kJ`;
                 document.getElementById('metabolic-calories').textContent = result.metabolicCalories;
                 document.getElementById('power-per-kg').textContent = `${result.powerToWeight} W/kg`;
-                
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'watts-to-calories');
+                }
             }
 
             getShareText() {
@@ -772,9 +782,15 @@
                 document.getElementById('workout-tss').textContent = result.tss;
                 document.getElementById('cal-per-tss').textContent = result.calPerTSS;
                 document.getElementById('energy-density').textContent = result.energyDensity;
-                
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'watts-to-calories');
+                }
             }
 
             getShareText() {
@@ -858,9 +874,15 @@
                 document.getElementById('metabolic-cost').textContent = `${result.metabolicCost} kcal`;
                 document.getElementById('economy-rating').textContent = result.economyScore;
                 document.getElementById('efficiency-analysis').textContent = result.analysis;
-                
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'watts-to-calories');
+                }
             }
 
             getShareText() {

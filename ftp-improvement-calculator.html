@@ -230,7 +230,7 @@
                     <!-- Results Section -->
                     <div>
                         <h2 class="text-2xl font-bold mb-6">Improvement Analysis</h2>
-                        
+
                         <div id="improvement-results" class="space-y-4">
                             <div class="text-center text-gray-500 py-8">
                                 <div class="text-6xl mb-4">⚡</div>
@@ -245,6 +245,9 @@
                                 <span class="text-gray-500">Visual progress chart will appear here</span>
                             </div>
                         </div>
+
+                        <!-- Product Recommendations (shown after calculation) -->
+                        <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -560,6 +563,7 @@
         </div>
     </footer>
 
+    <script src="/js/product-recommendations.js"></script>
     <script>
         function calculateImprovement() {
             const currentFtp = parseInt(document.getElementById('current-ftp').value);
@@ -666,9 +670,15 @@
             `;
             
             resultsDiv.innerHTML = resultsHTML;
-            
+
             // Show progress chart
             document.getElementById('progress-chart').classList.remove('hidden');
+
+            // Show product recommendations
+            if (typeof renderProductRecommendations === 'function') {
+                document.getElementById('recommendations').classList.remove('hidden');
+                renderProductRecommendations('recommendations', 'ftp-improvement');
+            }
         }
         
         function calculateGoal() {

@@ -385,6 +385,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
             </div>
         </div>
 
@@ -1007,6 +1009,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Tab switching functionality
         document.querySelectorAll('.tab-button').forEach(button => {
@@ -1155,16 +1158,22 @@
                 document.getElementById('average-speed').textContent = `${result.averageSpeed} km/h`;
                 document.getElementById('fitness-percentile').textContent = result.percentile;
                 document.getElementById('fitness-assessment').textContent = result.assessment;
-                
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'cooper-test');
+                }
             }
 
             getShareText() {
                 const vo2Max = document.getElementById('vo2-max').textContent;
                 const fitnessLevel = document.getElementById('fitness-level').textContent;
                 const distance = document.getElementById('distance').value;
-                
+
                 return `My Cooper Test: ${distance}m in 12 minutes! VO2 Max: ${vo2Max} ml/kg/min (${fitnessLevel}). Test yours: ${window.location.href}`;
             }
         }
@@ -1338,17 +1347,28 @@
                 Object.entries(result.paces).forEach(([key, seconds]) => {
                     const div = document.createElement('div');
                     div.className = 'flex justify-between';
-                    div.innerHTML = `<span>${paceLabels[key]}:</span> <span>${result.formatPace(seconds)}/km</span>`;
+                    const spanLabel = document.createElement('span');
+                    spanLabel.textContent = paceLabels[key] + ':';
+                    const spanValue = document.createElement('span');
+                    spanValue.textContent = result.formatPace(seconds) + '/km';
+                    div.appendChild(spanLabel);
+                    div.appendChild(spanValue);
                     pacesContainer.appendChild(div);
                 });
-                
+
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'cooper-test');
+                }
             }
 
             getShareText() {
                 const vo2Max = document.getElementById('training-vo2').textContent;
-                
+
                 return `My Cooper Test training zones calculated! VO2 Max: ${vo2Max}. Get your personalized training zones: ${window.location.href}`;
             }
         }

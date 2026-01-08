@@ -182,7 +182,7 @@
                                 <div class="text-gray-600">Minutes per Kilometer</div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-6 grid md:grid-cols-2 gap-6 text-center">
                             <div class="bg-blue-50 p-4 rounded">
                                 <div class="font-semibold text-blue-800" id="mph">0.0</div>
@@ -202,6 +202,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
             </div>
         </div>
 
@@ -372,6 +374,7 @@
 
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         class PaceConverterCalculator extends Calculator {
             constructor() {
@@ -458,6 +461,12 @@
                 
                 this.resultContainer.classList.remove('hidden');
                 this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'pace-converter');
+                }
             }
 
             getShareText() {

@@ -241,6 +241,9 @@
                     <div id="results" class="hidden mt-8">
                         <!-- Results will be inserted here -->
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
                 
                 <!-- Cadence zones reference -->
@@ -668,6 +671,7 @@
     
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -803,10 +807,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'cadence-speed');
+                }
+
                 this.saveValues();
             }
-            
+
             analyzeCadence(cadence) {
                 if (cadence < 60) {
                     return {
