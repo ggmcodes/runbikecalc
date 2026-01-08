@@ -199,3 +199,130 @@ input, select, textarea, button {
 body:not(.homepage) {
     padding-top: 5rem;
 }
+
+/* ===== INLINE PRODUCT RECOMMENDATIONS (for guides/articles) ===== */
+.product-rec {
+    background: linear-gradient(135deg, rgba(198, 123, 78, 0.08) 0%, rgba(198, 123, 78, 0.03) 100%);
+    border-left: 4px solid #C67B4E;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.product-rec h4 {
+    color: #C67B4E;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem 0;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.product-rec p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.product-rec a.product-link {
+    display: inline-block;
+    background: #C67B4E;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.product-rec a.product-link:hover {
+    background: #a5623d;
+}
+
+/* ===== CALCULATOR PRODUCT RECOMMENDATIONS ===== */
+.product-recommendations {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.recommendations-title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.recommendations-title::before {
+    content: '🛒';
+}
+
+.affiliate-disclosure {
+    font-size: 0.8rem;
+    color: #64748b;
+    padding: 0.5rem;
+    background: #f8fafc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.product-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.product-card {
+    background: #f8fafc;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+    color: #C67B4E;
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.product-card p {
+    margin: 0 0 1rem 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.product-card .btn-amazon {
+    display: inline-block;
+    background: #C67B4E;
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background 0.2s ease;
+}
+
+.product-card .btn-amazon:hover {
+    background: #a5623d;
+}
+
+/* Calculator result context styling */
+.result-context {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    font-style: italic;
+}

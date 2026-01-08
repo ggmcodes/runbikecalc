@@ -579,6 +579,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6"></div>
                 </div>
 
                 <!-- Comprehensive FTP Guide Section -->
@@ -1755,6 +1758,7 @@
     
     <!-- JavaScript -->
     <script src="/js/calculators.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
     // Tab functionality
     document.querySelectorAll('.tab-button').forEach(button => {
@@ -1893,7 +1897,12 @@
         
         // Show results
         document.getElementById('results').classList.remove('hidden');
-        
+
+        // Show product recommendations
+        if (typeof renderProductRecommendations === 'function') {
+            renderProductRecommendations('recommendations', 'ftp');
+        }
+
         // Scroll to results
         document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
     }

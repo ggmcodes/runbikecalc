@@ -492,8 +492,11 @@
                     <div id="results" class="hidden mt-8">
                         <!-- Results will be inserted here -->
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
-                
+
                 <!-- Educational content -->
                 <div class="content-box">
                 <article class="prose prose-lg max-w-none">
@@ -1188,6 +1191,7 @@
     
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -1321,10 +1325,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'running-pace');
+                }
+
                 this.saveValues();
             }
-            
+
             formatTotalTime(hours, minutes, seconds) {
                 if (hours > 0) {
                     return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
@@ -1415,10 +1425,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'running-pace');
+                }
+
                 this.saveValues();
             }
-            
+
             generateSplitTimes(distance, paceInSeconds, units) {
                 const splits = [];
                 const commonSplits = units === 'miles' ? [1, 5, 10, 13.1, 26.2] : [1, 5, 10, 21.1, 42.2];
@@ -1525,11 +1541,17 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'running-pace');
+                }
+
                 this.saveValues();
             }
         }
-        
+
         // Initialize calculators
         const calculator = new PaceCalculator();
     </script>

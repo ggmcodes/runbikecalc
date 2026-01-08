@@ -26,4 +26,4 @@ build/
 .env.production
 
 # Tailwind CSS build
-output.css
+output.cssscripts/config.py

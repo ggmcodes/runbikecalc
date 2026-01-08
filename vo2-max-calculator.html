@@ -503,8 +503,11 @@
                     <div id="results" class="hidden mt-8">
                         <!-- Results will be inserted here -->
                     </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
                 </div>
-                
+
                 <!-- Educational content -->
                 <div class="content-box">
                 <article class="prose prose-lg max-w-none">
@@ -975,6 +978,7 @@
     
     <!-- JavaScript -->
     <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -1109,10 +1113,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'vo2-max');
+                }
+
                 this.saveValues();
             }
-            
+
             calculatePace(totalSeconds, distance) {
                 const paceInSeconds = totalSeconds / distance;
                 const minutes = Math.floor(paceInSeconds / 60);
@@ -1279,10 +1289,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'vo2-max');
+                }
+
                 this.saveValues();
             }
-            
+
             categorizeVO2Max(vo2Max, age, gender) {
                 // Same categorization as running calculator
                 const isMale = gender === 'male';
@@ -1402,10 +1418,16 @@
                         </div>
                     </div>
                 `);
-                
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'vo2-max');
+                }
+
                 this.saveValues();
             }
-            
+
             categorizeVO2Max(vo2Max, age, gender) {
                 // Same categorization as other calculators
                 const isMale = gender === 'male';
