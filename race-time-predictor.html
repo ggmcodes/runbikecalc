@@ -68,7 +68,47 @@
         }
     }
     </script>
-    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How accurate are race time predictors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Race time predictors are typically accurate within 2-5% for well-trained runners when predicting similar distances. Accuracy decreases when predicting significantly longer distances (like 5K to marathon). Individual variation in endurance capacity affects results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I predict my marathon time from a 5K?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, but with caveats. Use your 5K time with a multiplier around 4.6-4.7 for a marathon estimate. However, marathon performance depends heavily on training volume, pacing, and nutrition - factors that 5K fitness doesn't capture. A half marathon is a more reliable predictor."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Riegel formula for race prediction?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Riegel formula is: T2 = T1 × (D2/D1)^1.06, where T1 is known time, D1 is known distance, D2 is target distance. The 1.06 exponent accounts for fatigue at longer distances. More recent models use 1.07-1.08 for recreational runners."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are my race predictions slower than my actual times?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Predictions are conservative because they assume equal training for both distances. If you've specifically trained for the longer distance, you may beat predictions. Also, race day conditions, pacing strategy, and course profile significantly impact actual performance."
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
