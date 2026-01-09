@@ -487,5 +487,45 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is TSS (Training Stress Score)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TSS (Training Stress Score) quantifies the training stress of a single workout based on its intensity and duration. It's calculated as (duration in seconds × Normalized Power × Intensity Factor) / (FTP × 3600) × 100. A typical easy workout scores 30-50 TSS, a moderate workout 50-100 TSS, and hard sessions 100-150+ TSS."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between CTL and ATL?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CTL (Chronic Training Load) represents your long-term fitness, calculated as a 42-day exponentially weighted average of daily TSS. ATL (Acute Training Load) represents your recent fatigue, calculated as a 7-day average. The difference between CTL and ATL is your TSB (Training Stress Balance), which indicates your form or readiness to perform."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What TSB should I have for a race?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For optimal race performance, aim for a TSB between +10 and +25. This indicates you've recovered from training fatigue while maintaining fitness. A TSB of 0 to -10 means you're training-ready but may lack peak freshness. Below -30 indicates high fatigue and increased overtraining risk. Taper for 7-14 days before key events to raise TSB."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How fast should I increase CTL?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A safe rate of CTL increase is 3-8 TSS points per week. Beginners should stay on the lower end (3-5 points/week), while experienced athletes can handle 5-8 points/week. Increasing CTL too rapidly (more than 10 points/week) risks overtraining, illness, and injury. During base phases, prioritize gradual, sustainable CTL growth."
+                }
+            }
+        ]
+    }
+    </script>
     </body>
 </html>
