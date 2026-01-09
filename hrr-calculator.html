@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>HRR Calculator 2026: Heart Rate Reserve Zones | Free</title>
+    <link rel="canonical" href="https://runbikecalc.com/hrr-calculator">
+    <meta name="description" content="Free HRR Calculator - Calculate your Heart Rate Reserve and 5 training zones. More accurate than 220-age formula. Used by coaches and athletes worldwide.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HRR Calculator - Heart Rate Reserve Training Zones">
+    <meta property="og:description" content="Calculate precise heart rate training zones using Heart Rate Reserve (HRR) for personalized endurance training.">
+    <meta property="og:image" content="https://runbikecalc.com/images/hrr-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/hrr-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HRR Calculator - Heart Rate Reserve Zones">
+    <meta name="twitter:description" content="Calculate precise heart rate training zones using Heart Rate Reserve methodology.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/hrr-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Heart Rate Reserve (HRR) Calculator",
+        "url": "https://runbikecalc.com/hrr-calculator",
+        "description": "Calculate your Heart Rate Reserve and precise training zones for optimal endurance performance",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "@id": "https://runbikecalc.com/hrr-calculator#offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Heart Rate Reserve (HRR)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Heart Rate Reserve (HRR) is the difference between your maximum heart rate and resting heart rate. It represents the range your heart rate can increase during exercise and is used to calculate personalized training zones."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is HRR different from the Karvonen Formula?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HRR and the Karvonen Formula are essentially the same method. Both calculate training zones using heart rate reserve (max HR minus resting HR). The Karvonen Formula is simply the mathematical application of HRR principles."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I measure my resting heart rate accurately?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Measure your resting heart rate first thing in the morning before getting out of bed. Use a heart rate monitor or take your pulse for 60 seconds. Track it for 3-5 days and use the average for most accurate results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use age-estimated or tested max heart rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A tested maximum heart rate is more accurate than age-based estimates. If you've done a max HR test or seen your highest heart rate during intense training, use that actual value instead of the 220-age formula."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the HRR training zones used for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Zone 1 (50-60% HRR) for active recovery, Zone 2 (60-70%) for aerobic base building, Zone 3 (70-80%) for aerobic endurance, Zone 4 (80-90%) for lactate threshold training, and Zone 5 (90-100%) for VO2 max intervals."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/heart-rate-tools" class="hover:text-primary">Heart Rate Training</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">HRR Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Heart Rate Reserve (HRR) Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate your Heart Rate Reserve and personalized training zones for more effective endurance training.
+                More accurate than basic age-formula methods used by coaches and athletes worldwide.
+            </p>
+        </section>
+
+        <!-- Calculator section -->
+        <section class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Input form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6">Enter Your Details</h2>
+                    <form id="hrrForm" class="space-y-6">
+                        <!-- Max HR Toggle -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" id="useActualMaxHR" class="mr-3 h-4 w-4">
+                                <span class="text-sm font-medium text-gray-700">I know my actual max heart rate</span>
+                            </label>
+                        </div>
+
+                        <!-- Age Input (shown by default) -->
+                        <div id="ageInput">
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-2">Age (years)</label>
+                            <input type="number" id="age" class="calc-input-number" placeholder="e.g., 30" min="10" max="100" required>
+                            <p class="text-xs text-gray-500 mt-1">We'll estimate your max HR using 220 - age</p>
+                        </div>
+
+                        <!-- Max HR Input (hidden by default) -->
+                        <div id="maxHRInput" class="hidden">
+                            <label for="maxHR" class="block text-sm font-medium text-gray-700 mb-2">Maximum Heart Rate (bpm)</label>
+                            <input type="number" id="maxHR" class="calc-input-number" placeholder="e.g., 185" min="100" max="240">
+                            <p class="text-xs text-gray-500 mt-1">Use your tested or observed max HR</p>
+                        </div>
+
+                        <div>
+                            <label for="restingHR" class="block text-sm font-medium text-gray-700 mb-2">Resting Heart Rate (bpm)</label>
+                            <input type="number" id="restingHR" class="calc-input-number" placeholder="e.g., 60" min="30" max="120" required>
+                            <p class="text-xs text-gray-500 mt-1">Measure first thing in the morning before getting up</p>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Calculate HRR and Training Zones
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results -->
+                <div id="results" class="bg-white rounded-xl shadow-lg p-8 hidden">
+                    <h2 class="text-2xl font-bold mb-6">Your HRR Training Zones</h2>
+                    <div id="resultContent" class="space-y-4">
+                        <!-- Results will be populated here -->
+                    </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is HRR Section -->
+        <section class="max-w-4xl mx-auto mt-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">What is Heart Rate Reserve?</h2>
+            <div class="prose max-w-none">
+                <p class="text-gray-600 mb-4">
+                    Heart Rate Reserve (HRR) is the difference between your maximum heart rate and your resting heart rate.
+                    This value represents your heart's working capacity - the range through which your heart rate can increase during exercise.
+                </p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3">The HRR Formula</h3>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <p class="font-mono text-center text-lg">
+                        <strong>HRR = Maximum Heart Rate - Resting Heart Rate</strong>
+                    </p>
+                    <p class="font-mono text-center text-sm text-gray-600 mt-2">
+                        Target HR = Resting HR + (HRR × intensity percentage)
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3">Why Use HRR?</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li><strong>Personalized accuracy:</strong> Accounts for individual fitness levels through resting heart rate</li>
+                    <li><strong>Better zone precision:</strong> More accurate than simple percentage of max HR</li>
+                    <li><strong>Fitness tracking:</strong> As fitness improves, resting HR decreases and HRR increases</li>
+                    <li><strong>Professional standard:</strong> Used by coaches, athletes, and sports scientists worldwide</li>
+                    <li><strong>Individual differences:</strong> Two people of the same age can have very different HRR values</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3">Understanding Your Training Zones</h3>
+                <div class="space-y-3">
+                    <div class="border-l-4 border-green-500 pl-4 py-2">
+                        <strong>Zone 1 (50-60% HRR) - Active Recovery</strong>
+                        <p class="text-sm text-gray-600">Very easy pace, conversational, promotes blood flow and recovery</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4 py-2">
+                        <strong>Zone 2 (60-70% HRR) - Aerobic Base</strong>
+                        <p class="text-sm text-gray-600">Easy pace, build endurance, fat burning, foundation training</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-4 py-2">
+                        <strong>Zone 3 (70-80% HRR) - Aerobic Endurance</strong>
+                        <p class="text-sm text-gray-600">Moderate pace, tempo runs, improving aerobic capacity</p>
+                    </div>
+                    <div class="border-l-4 border-orange-500 pl-4 py-2">
+                        <strong>Zone 4 (80-90% HRR) - Lactate Threshold</strong>
+                        <p class="text-sm text-gray-600">Hard pace, comfortably hard, race pace training</p>
+                    </div>
+                    <div class="border-l-4 border-red-500 pl-4 py-2">
+                        <strong>Zone 5 (90-100% HRR) - VO2 Max</strong>
+                        <p class="text-sm text-gray-600">Very hard intervals, maximum aerobic capacity, short efforts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-4xl mx-auto mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">What is Heart Rate Reserve (HRR)?</h3>
+                    <p class="text-gray-600">Heart Rate Reserve (HRR) is the difference between your maximum heart rate and resting heart rate. It represents the range your heart rate can increase during exercise and is used to calculate personalized training zones that account for your individual fitness level.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">How is HRR different from the Karvonen Formula?</h3>
+                    <p class="text-gray-600">HRR and the Karvonen Formula are essentially the same method. Both calculate training zones using heart rate reserve (max HR minus resting HR). The Karvonen Formula is simply the mathematical application of HRR principles, developed by Finnish exercise physiologist Martti Karvonen.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">How do I measure my resting heart rate accurately?</h3>
+                    <p class="text-gray-600">Measure your resting heart rate first thing in the morning before getting out of bed. Use a heart rate monitor or take your pulse for 60 seconds. Track it for 3-5 consecutive days and use the average for most accurate results. Make sure you're well-rested and not sick.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Should I use age-estimated or tested max heart rate?</h3>
+                    <p class="text-gray-600">A tested maximum heart rate is always more accurate than age-based estimates like 220-age. If you've done a proper max HR test or observed your highest heart rate during intense training or racing, use that actual value instead. The 220-age formula can be off by 10-20 bpm for many individuals.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">What are the HRR training zones used for?</h3>
+                    <p class="text-gray-600">Zone 1 (50-60% HRR) for active recovery between hard sessions, Zone 2 (60-70%) for aerobic base building (most training volume), Zone 3 (70-80%) for aerobic endurance and tempo work, Zone 4 (80-90%) for lactate threshold and race pace training, and Zone 5 (90-100%) for VO2 max intervals and maximum effort.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">How often should I recalculate my HRR zones?</h3>
+                    <p class="text-gray-600">Recalculate your HRR zones every 8-12 weeks or whenever you notice significant fitness changes. As your fitness improves, your resting heart rate typically decreases, which increases your HRR and adjusts your training zones. Also recalculate if you've done a new max HR test.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Is HRR more accurate than percentage of max HR?</h3>
+                    <p class="text-gray-600">Yes, HRR-based zones are generally more accurate than simple percentage of max HR because they account for resting heart rate, which reflects individual fitness level. A person with a lower resting heart rate (better fitness) will have different training zones than someone with a higher resting rate, even if they have the same max HR.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Can I use HRR zones for both running and cycling?</h3>
+                    <p class="text-gray-600">While you can use HRR zones across different sports, your maximum and resting heart rates may differ between cycling and running. For most accuracy, measure sport-specific values if possible. Cycling max HR is typically 5-10 bpm lower than running max HR for the same individual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="max-w-4xl mx-auto mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Related Heart Rate Calculators</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/mhr-karvonen-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Karvonen Calculator</h3>
+                    <p class="text-gray-600">Calculate zones using the Karvonen Formula (same as HRR method)</p>
+                </a>
+                <a href="/zone-2-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Zone 2 Calculator</h3>
+                    <p class="text-gray-600">Find your optimal aerobic base training zone</p>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Heart Rate Zone Calculator</h3>
+                    <p class="text-gray-600">Basic 5-zone heart rate calculator</p>
+                </a>
+                <a href="/max-heart-rate-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">Max Heart Rate Calculator</h3>
+                    <p class="text-gray-600">Estimate your maximum heart rate</p>
+                </a>
+                <a href="/lthr-zone-calculator" class="calc-card hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-semibold text-primary mb-2">LTHR Zone Calculator</h3>
+                    <p class="text-gray-600">Calculate zones based on lactate threshold</p>
+                </a>
+                <a href="/heart-rate-tools" class="calc-card hover:shadow-xl transition-shadow border-2 border-primary">
+                    <h3 class="text-lg font-semibold text-primary mb-2">All Heart Rate Tools</h3>
+                    <p class="text-gray-600">View all heart rate calculators and guides</p>
+                </a>
+            </div>
+        </section>
+
+    <!-- Learn More Section -->
+    <section class="mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Advanced Heart Rate Training Resources</h2>
+        <p class="text-gray-600 mb-6">Master HRR-based training with comprehensive guides and scientific insights</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <a href="/blog/heart-rate-zones-running.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-red-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Heart</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-red-600 font-semibold mb-1">COMPLETE GUIDE</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zones for Running</h3>
+                        <p class="text-gray-600 text-sm mb-3">Complete guide to all 5 heart rate zones using HRR and Karvonen methods.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/what-is-zone-2-training-complete-guide.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Target</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-green-600 font-semibold mb-1">ZONE 2</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Zone 2 Training Guide</h3>
+                        <p class="text-gray-600 text-sm mb-3">Build aerobic base with accurate HRR-based Zone 2 training.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>15 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/vo2-max-training-guide-2025.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Lightning</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-purple-600 font-semibold mb-1">HIGH INTENSITY</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">VO2 Max Training Guide</h3>
+                        <p class="text-gray-600 text-sm mb-3">Train at maximum intensity with precise HRR-based guidance.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>10 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/lactate-threshold-training-complete-guide-2026.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Fire</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-orange-600 font-semibold mb-1">THRESHOLD</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Lactate Threshold Training</h3>
+                        <p class="text-gray-600 text-sm mb-3">Perfect your threshold training with accurate HRR zones.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>12 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/heart-rate-monitor-running-complete-guide-2026.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Watch</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-blue-600 font-semibold mb-1">EQUIPMENT</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Monitor Guide</h3>
+                        <p class="text-gray-600 text-sm mb-3">Choose the right monitor for accurate HRR training.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>11 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/blog/heart-rate-drift-complete-guide-2026.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-pink-500">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">Chart</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-pink-600 font-semibold mb-1">ADVANCED</div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Drift Explained</h3>
+                        <p class="text-gray-600 text-sm mb-3">Understand cardiovascular drift and adjust HRR zones accordingly.</p>
+                        <div class="flex items-center text-xs text-gray-500">
+                            <span>9 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Training Hub CTA -->
+        <div class="mt-6 bg-white rounded-lg p-6 border-2 border-blue-300">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Explore the Heart Rate Training Hub</h3>
+                    <p class="text-gray-600 text-sm">Access all related calculators, guides, and training plans in one place.</p>
+                </div>
+                <a href="/heart-rate-training-hub.html" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg whitespace-nowrap">
+                    Visit Heart Rate Training Hub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 mt-16 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-sm">2026 RunBikeCalc. All rights reserved.</p>
+                <p class="text-xs mt-2 text-gray-500">Professional training calculators for runners and cyclists</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
+    <script>
+        // Toggle between age and max HR inputs
+        document.getElementById('useActualMaxHR').addEventListener('change', function() {
+            const ageInput = document.getElementById('ageInput');
+            const maxHRInput = document.getElementById('maxHRInput');
+            const ageField = document.getElementById('age');
+            const maxHRField = document.getElementById('maxHR');
+
+            if (this.checked) {
+                ageInput.classList.add('hidden');
+                maxHRInput.classList.remove('hidden');
+                ageField.removeAttribute('required');
+                maxHRField.setAttribute('required', 'required');
+            } else {
+                ageInput.classList.remove('hidden');
+                maxHRInput.classList.add('hidden');
+                ageField.setAttribute('required', 'required');
+                maxHRField.removeAttribute('required');
+            }
+        });
+
+        class HRRCalculator extends Calculator {
+            constructor() {
+                super('hrrForm', 'results');
+            }
+
+            calculate() {
+                const useActualMaxHR = document.getElementById('useActualMaxHR').checked;
+                const restingHR = this.getInputValue('restingHR');
+
+                let maxHR;
+                if (useActualMaxHR) {
+                    maxHR = this.getInputValue('maxHR');
+                    if (!maxHR) return;
+                } else {
+                    const age = this.getInputValue('age');
+                    if (!age) return;
+                    maxHR = 220 - age;
+                }
+
+                if (!restingHR) return;
+
+                // Calculate HRR
+                const heartRateReserve = maxHR - restingHR;
+
+                // Calculate 5 training zones using HRR percentages
+                const zones = [
+                    {
+                        name: 'Zone 1 (Active Recovery)',
+                        min: Math.round(restingHR + (heartRateReserve * 0.50)),
+                        max: Math.round(restingHR + (heartRateReserve * 0.60)),
+                        description: 'Very easy pace, conversational',
+                        color: 'green'
+                    },
+                    {
+                        name: 'Zone 2 (Aerobic Base)',
+                        min: Math.round(restingHR + (heartRateReserve * 0.60)),
+                        max: Math.round(restingHR + (heartRateReserve * 0.70)),
+                        description: 'Easy pace, build endurance',
+                        color: 'blue'
+                    },
+                    {
+                        name: 'Zone 3 (Aerobic)',
+                        min: Math.round(restingHR + (heartRateReserve * 0.70)),
+                        max: Math.round(restingHR + (heartRateReserve * 0.80)),
+                        description: 'Moderate pace, tempo runs',
+                        color: 'yellow'
+                    },
+                    {
+                        name: 'Zone 4 (Lactate Threshold)',
+                        min: Math.round(restingHR + (heartRateReserve * 0.80)),
+                        max: Math.round(restingHR + (heartRateReserve * 0.90)),
+                        description: 'Hard pace, race pace',
+                        color: 'orange'
+                    },
+                    {
+                        name: 'Zone 5 (VO2 Max)',
+                        min: Math.round(restingHR + (heartRateReserve * 0.90)),
+                        max: Math.round(restingHR + (heartRateReserve * 1.00)),
+                        description: 'Very hard, short intervals',
+                        color: 'red'
+                    }
+                ];
+
+                let resultHTML = `
+                    <div class="text-center mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border-2 border-blue-200">
+                        <div class="text-sm text-gray-600 mb-1">Your Heart Rate Reserve</div>
+                        <div class="text-4xl font-bold text-primary mb-2">${heartRateReserve} bpm</div>
+                        <div class="text-xs text-gray-500">Max HR: ${maxHR} bpm | Resting HR: ${restingHR} bpm</div>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-700 mb-3">Training Zones (% of HRR)</h3>
+                    </div>
+                    <div class="space-y-3">
+                `;
+
+                zones.forEach((zone, index) => {
+                    const percentage = `${50 + (index * 10)}-${60 + (index * 10)}%`;
+                    resultHTML += `
+                        <div class="border-l-4 border-${zone.color}-500 bg-${zone.color}-50 p-3 rounded-r-lg">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="font-semibold text-gray-900">${zone.name}</span>
+                                <span class="text-primary font-bold text-lg">${zone.min}-${zone.max}</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-600">${zone.description}</span>
+                                <span class="text-gray-500 font-medium">${percentage}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                resultHTML += '</div>';
+
+                this.displayResult(resultHTML);
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'hrr');
+                }
+            }
+        }
+
+        new HRRCalculator();
+    </script>
+    </body>
+</html>
