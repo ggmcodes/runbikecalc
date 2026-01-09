@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Windchill Calculator for Running - Cold Weather Training Safety | Free Tool</title>
+    <link rel="canonical" href="https://runbikecalc.com/windchill-calculator">
+    <meta name="description" content="Calculate windchill for running and cycling. Get frostbite risk assessment, safety recommendations, and gear suggestions for cold weather training. Free windchill calculator with NWS formula.">
+    <meta name="keywords" content="windchill calculator running, cold weather training safety, frostbite risk calculator, winter running safety, windchill factor, cold weather gear">
+    <meta name="author" content="RunBikeCalc">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Windchill Calculator - Cold Weather Training Safety for Athletes">
+    <meta property="og:description" content="Calculate windchill and frostbite risk for running and cycling. Get personalized gear recommendations for safe cold weather training.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/windchill-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-windchill-calculator.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Structured Data - WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Windchill Calculator for Running",
+        "description": "Calculate windchill temperature and frostbite risk for cold weather running and cycling training. Includes safety recommendations and gear suggestions.",
+        "url": "https://runbikecalc.com/windchill-calculator",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is windchill and how does it affect runners?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Windchill is the perceived temperature your body feels when wind is factored in with actual temperature. For runners, windchill affects how quickly exposed skin loses heat, impacting frostbite risk and overall comfort during cold weather training."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "At what windchill should you stop running outside?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most experts recommend stopping outdoor running when windchill drops below -20F (-29C). At these temperatures, frostbite can occur in under 10 minutes on exposed skin. Consider indoor alternatives like treadmill running."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you calculate windchill?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Windchill is calculated using the NWS formula: WC = 35.74 + 0.6215T - 35.75(V^0.16) + 0.4275T(V^0.16), where T is temperature in Fahrenheit and V is wind speed in mph."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/utility-tools.html" class="hover:text-primary">Training Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Windchill Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Windchill Calculator for Cold Weather Training</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate windchill temperature, frostbite risk, and get personalized gear recommendations for safe winter running and cycling. Uses the official NWS windchill formula.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main Calculator -->
+            <div class="md:col-span-2">
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Windchill</h2>
+
+                    <form id="windchill-form" class="space-y-6">
+                        <!-- Temperature Input -->
+                        <div class="border-b pb-6">
+                            <h3 class="text-lg font-semibold mb-4">Weather Conditions</h3>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="temperature" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Temperature
+                                    </label>
+                                    <div class="flex gap-2">
+                                        <input type="number"
+                                               id="temperature"
+                                               name="temperature"
+                                               class="calc-input-number flex-1"
+                                               placeholder="35"
+                                               min="-50"
+                                               max="50"
+                                               step="1"
+                                               required>
+                                        <select id="temp-unit" name="temp-unit" class="calc-input-number w-20">
+                                            <option value="f">F</option>
+                                            <option value="c">C</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="wind-speed" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Wind Speed
+                                    </label>
+                                    <div class="flex gap-2">
+                                        <input type="number"
+                                               id="wind-speed"
+                                               name="wind-speed"
+                                               class="calc-input-number flex-1"
+                                               placeholder="15"
+                                               min="0"
+                                               max="100"
+                                               step="1"
+                                               required>
+                                        <select id="wind-unit" name="wind-unit" class="calc-input-number w-24">
+                                            <option value="mph">mph</option>
+                                            <option value="kph">kph</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <label for="activity-type" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Activity Type
+                                </label>
+                                <select id="activity-type" name="activity-type" class="calc-input-number text-left">
+                                    <option value="running">Running</option>
+                                    <option value="cycling">Cycling</option>
+                                    <option value="walking">Walking</option>
+                                </select>
+                                <p class="text-xs text-gray-500 mt-1">Cycling creates additional wind effect from movement speed</p>
+                            </div>
+                        </div>
+
+                        <!-- Optional: Activity Speed for Cyclists -->
+                        <div id="cycling-speed-section" class="hidden border-b pb-6">
+                            <h3 class="text-lg font-semibold mb-4">Cycling Speed (adds to wind effect)</h3>
+                            <div class="flex gap-2">
+                                <input type="number"
+                                       id="cycling-speed"
+                                       name="cycling-speed"
+                                       class="calc-input-number flex-1"
+                                       placeholder="15"
+                                       min="0"
+                                       max="50"
+                                       step="1">
+                                <span class="flex items-center text-gray-600" id="cycling-speed-unit">mph</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Your riding speed creates additional wind effect</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="calc-button">Calculate Windchill</button>
+                            <button type="button" id="share-result" class="calc-button-secondary">Share Result</button>
+                            <button type="reset" class="calc-button-secondary">Reset</button>
+                        </div>
+                    </form>
+
+                    <!-- Results Section -->
+                    <div id="windchill-result" class="mt-8 hidden">
+                        <div class="calc-result">
+                            <!-- Primary Result -->
+                            <div class="text-center mb-6">
+                                <div class="text-5xl font-bold mb-2" id="windchill-value">0F</div>
+                                <div class="text-gray-600 text-lg">Windchill Temperature</div>
+                            </div>
+
+                            <!-- Safety Status Banner -->
+                            <div id="safety-banner" class="rounded-lg p-4 mb-6 text-center">
+                                <div class="text-2xl font-bold mb-1" id="safety-status">Safe</div>
+                                <div class="text-sm" id="safety-message">Conditions are suitable for outdoor training</div>
+                            </div>
+
+                            <!-- Key Metrics Grid -->
+                            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                    <div class="font-semibold text-blue-800" id="frostbite-time">N/A</div>
+                                    <div class="text-sm text-blue-600">Frostbite Risk Time</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <div class="font-semibold text-purple-800" id="feels-like-drop">0F</div>
+                                    <div class="text-sm text-purple-600">Feels Colder By</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                    <div class="font-semibold text-orange-800" id="risk-level">Low</div>
+                                    <div class="text-sm text-orange-600">Overall Risk Level</div>
+                                </div>
+                            </div>
+
+                            <!-- Frostbite Warning (conditional) -->
+                            <div id="frostbite-warning" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                                <h4 class="font-semibold text-red-800 mb-2">Frostbite Warning</h4>
+                                <p class="text-red-700 text-sm" id="frostbite-details"></p>
+                            </div>
+
+                            <!-- Gear Recommendations -->
+                            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                                <h4 class="font-semibold text-gray-800 mb-3">Recommended Gear</h4>
+                                <div id="gear-recommendations" class="space-y-2"></div>
+                            </div>
+
+                            <!-- Training Tips -->
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-800 mb-2">Training Tips for These Conditions</h4>
+                                <ul id="training-tips" class="text-blue-700 text-sm space-y-1"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Recommendations -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
+                </div>
+
+                <!-- Windchill Chart Reference -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Windchill Chart Reference</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="p-2 text-left">Temp / Wind</th>
+                                    <th class="p-2 text-center">5 mph</th>
+                                    <th class="p-2 text-center">10 mph</th>
+                                    <th class="p-2 text-center">15 mph</th>
+                                    <th class="p-2 text-center">20 mph</th>
+                                    <th class="p-2 text-center">25 mph</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-2 font-medium">40F</td>
+                                    <td class="p-2 text-center">36F</td>
+                                    <td class="p-2 text-center">34F</td>
+                                    <td class="p-2 text-center">32F</td>
+                                    <td class="p-2 text-center">30F</td>
+                                    <td class="p-2 text-center">29F</td>
+                                </tr>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-2 font-medium">30F</td>
+                                    <td class="p-2 text-center">25F</td>
+                                    <td class="p-2 text-center">21F</td>
+                                    <td class="p-2 text-center">19F</td>
+                                    <td class="p-2 text-center">17F</td>
+                                    <td class="p-2 text-center">16F</td>
+                                </tr>
+                                <tr class="border-b bg-yellow-50">
+                                    <td class="p-2 font-medium">20F</td>
+                                    <td class="p-2 text-center">13F</td>
+                                    <td class="p-2 text-center">9F</td>
+                                    <td class="p-2 text-center">6F</td>
+                                    <td class="p-2 text-center">4F</td>
+                                    <td class="p-2 text-center">3F</td>
+                                </tr>
+                                <tr class="border-b bg-yellow-50">
+                                    <td class="p-2 font-medium">10F</td>
+                                    <td class="p-2 text-center">1F</td>
+                                    <td class="p-2 text-center">-4F</td>
+                                    <td class="p-2 text-center">-7F</td>
+                                    <td class="p-2 text-center">-9F</td>
+                                    <td class="p-2 text-center">-11F</td>
+                                </tr>
+                                <tr class="border-b bg-orange-50">
+                                    <td class="p-2 font-medium">0F</td>
+                                    <td class="p-2 text-center">-11F</td>
+                                    <td class="p-2 text-center">-16F</td>
+                                    <td class="p-2 text-center">-19F</td>
+                                    <td class="p-2 text-center">-22F</td>
+                                    <td class="p-2 text-center">-24F</td>
+                                </tr>
+                                <tr class="border-b bg-red-50">
+                                    <td class="p-2 font-medium">-10F</td>
+                                    <td class="p-2 text-center">-22F</td>
+                                    <td class="p-2 text-center">-28F</td>
+                                    <td class="p-2 text-center">-32F</td>
+                                    <td class="p-2 text-center">-35F</td>
+                                    <td class="p-2 text-center">-37F</td>
+                                </tr>
+                                <tr class="bg-red-100">
+                                    <td class="p-2 font-medium">-20F</td>
+                                    <td class="p-2 text-center">-34F</td>
+                                    <td class="p-2 text-center">-41F</td>
+                                    <td class="p-2 text-center">-45F</td>
+                                    <td class="p-2 text-center">-48F</td>
+                                    <td class="p-2 text-center">-51F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3">Chart shows windchill temperatures calculated using the NWS formula. Colors indicate safety levels: green (safe), yellow (caution), orange (dangerous), red (extreme danger).</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="md:col-span-1">
+                <!-- Quick Safety Guide -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Quick Safety Guide</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0 mt-1"></div>
+                            <div>
+                                <div class="font-medium text-green-800">Safe (Above 20F)</div>
+                                <div class="text-sm text-gray-600">Normal training, standard cold weather gear</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-4 h-4 rounded-full bg-yellow-500 flex-shrink-0 mt-1"></div>
+                            <div>
+                                <div class="font-medium text-yellow-800">Caution (0F to 20F)</div>
+                                <div class="text-sm text-gray-600">Frostbite risk in 30+ min, cover exposed skin</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-4 h-4 rounded-full bg-orange-500 flex-shrink-0 mt-1"></div>
+                            <div>
+                                <div class="font-medium text-orange-800">Dangerous (-20F to 0F)</div>
+                                <div class="text-sm text-gray-600">Frostbite in 10-30 min, limit exposure</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-4 h-4 rounded-full bg-red-500 flex-shrink-0 mt-1"></div>
+                            <div>
+                                <div class="font-medium text-red-800">Stop (Below -20F)</div>
+                                <div class="text-sm text-gray-600">Frostbite in under 10 min, train indoors</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cold Weather Gear Recommendations -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Essential Cold Weather Gear</h3>
+                    <div class="space-y-4">
+                        <a href="https://www.amazon.com/s?k=running+thermal+base+layer&tag=runbikecalc-20" target="_blank" rel="noopener" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <div class="font-medium text-gray-900">Thermal Base Layers</div>
+                            <div class="text-sm text-gray-600">Moisture-wicking first layer</div>
+                        </a>
+                        <a href="https://www.amazon.com/s?k=running+balaclava+face+mask&tag=runbikecalc-20" target="_blank" rel="noopener" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <div class="font-medium text-gray-900">Balaclava / Face Mask</div>
+                            <div class="text-sm text-gray-600">Protect face from frostbite</div>
+                        </a>
+                        <a href="https://www.amazon.com/s?k=insulated+running+gloves&tag=runbikecalc-20" target="_blank" rel="noopener" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <div class="font-medium text-gray-900">Insulated Gloves</div>
+                            <div class="text-sm text-gray-600">Keep hands warm and functional</div>
+                        </a>
+                        <a href="https://www.amazon.com/s?k=windproof+running+jacket&tag=runbikecalc-20" target="_blank" rel="noopener" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <div class="font-medium text-gray-900">Windproof Jacket</div>
+                            <div class="text-sm text-gray-600">Block wind penetration</div>
+                        </a>
+                        <a href="https://www.amazon.com/s?k=merino+wool+running+socks&tag=runbikecalc-20" target="_blank" rel="noopener" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                            <div class="font-medium text-gray-900">Merino Wool Socks</div>
+                            <div class="text-sm text-gray-600">Warm and moisture-wicking</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Calculators -->
+                <div class="calc-card">
+                    <h3 class="text-lg font-semibold mb-4">Related Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/recovery-calculator.html" class="text-primary hover:underline">Recovery Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/running-pace-calculator.html" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator.html" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Windchill for Cold Weather Training</h2>
+
+                <p>Windchill is one of the most critical factors to consider when planning outdoor training during winter months. For runners, cyclists, and endurance athletes, understanding how windchill affects your body can mean the difference between a productive workout and a dangerous situation. This comprehensive guide covers everything you need to know about windchill, frostbite risk, and how to train safely in cold weather conditions.</p>
+
+                <h3>What is Windchill and How Does It Work?</h3>
+
+                <p>Windchill, also known as the wind chill factor or wind chill index, represents the perceived decrease in air temperature felt by the body due to the flow of air. When wind blows across exposed skin, it accelerates heat loss from your body, making the air feel colder than the actual thermometer reading.</p>
+
+                <p>The National Weather Service (NWS) developed the current windchill formula in 2001 based on research conducted at the Defense Civil Institute of Environmental Medicine in Canada. The formula calculates how quickly heat is lost from exposed skin based on both temperature and wind speed:</p>
+
+                <p><strong>Windchill Formula (Fahrenheit):</strong> WC = 35.74 + 0.6215T - 35.75(V^0.16) + 0.4275T(V^0.16)</p>
+
+                <p>Where T is the air temperature in Fahrenheit and V is the wind speed in miles per hour. This formula is valid for temperatures at or below 50F and wind speeds above 3 mph.</p>
+
+                <h3>Why Windchill Matters More for Athletes</h3>
+
+                <p>Windchill is particularly important for runners and cyclists because physical activity compounds the wind effect in several ways:</p>
+
+                <ul>
+                    <li><strong>Self-Generated Wind:</strong> When you run at 8 mph into a 10 mph headwind, you experience an effective wind speed of 18 mph. Cyclists moving at 15-20 mph create even more significant wind effects.</li>
+                    <li><strong>Sweat and Moisture:</strong> As you exercise, you produce sweat that can dramatically accelerate heat loss when exposed to wind. Wet skin loses heat up to 25 times faster than dry skin.</li>
+                    <li><strong>Exposed Skin Surface:</strong> Athletic clothing often leaves faces, hands, and sometimes legs exposed to the elements, creating vulnerable areas for frostbite.</li>
+                    <li><strong>Extended Exposure Time:</strong> Long runs or rides mean prolonged exposure to cold conditions, increasing cumulative frostbite risk.</li>
+                </ul>
+
+                <h3>Understanding Frostbite Risk for Runners</h3>
+
+                <p>Frostbite occurs when body tissue freezes due to prolonged exposure to cold temperatures. For athletes training outdoors, understanding frostbite risk is essential for safe winter training.</p>
+
+                <h4>Stages of Frostbite</h4>
+
+                <ul>
+                    <li><strong>Frostnip (Stage 1):</strong> The mildest form, characterized by cold, numb skin that turns red. This is reversible with gentle rewarming and causes no permanent damage.</li>
+                    <li><strong>Superficial Frostbite (Stage 2):</strong> Skin appears white or pale and may feel waxy. Blisters may form within 24-48 hours. Can cause long-term sensitivity to cold.</li>
+                    <li><strong>Deep Frostbite (Stage 3):</strong> Affects all layers of skin and underlying tissues. Skin turns hard and waxy, with potential for permanent damage including tissue death.</li>
+                </ul>
+
+                <h4>Frostbite Risk by Windchill Temperature</h4>
+
+                <p>The National Weather Service provides the following frostbite risk guidelines based on windchill temperatures:</p>
+
+                <ul>
+                    <li><strong>Above 0F:</strong> Frostbite unlikely with proper gear and limited exposure (over 30 minutes for exposed skin)</li>
+                    <li><strong>0F to -10F:</strong> Frostbite possible in 30 minutes on exposed skin</li>
+                    <li><strong>-10F to -20F:</strong> Frostbite possible in 10-30 minutes on exposed skin</li>
+                    <li><strong>-20F to -30F:</strong> Frostbite possible in 5-10 minutes on exposed skin</li>
+                    <li><strong>Below -30F:</strong> Frostbite possible in less than 5 minutes on exposed skin</li>
+                </ul>
+
+                <h3>Cold Weather Training Safety Guidelines</h3>
+
+                <p>Following established safety guidelines helps ensure productive winter training without risking cold-related injuries. Here are evidence-based recommendations for training in various windchill conditions:</p>
+
+                <h4>Safe Conditions (Windchill Above 20F / -7C)</h4>
+
+                <p>These conditions are generally safe for most outdoor training with standard cold weather precautions:</p>
+
+                <ul>
+                    <li>Dress in layers that can be adjusted as you warm up</li>
+                    <li>Wear moisture-wicking base layers to prevent sweat accumulation</li>
+                    <li>Cover hands and ears with appropriate gear</li>
+                    <li>Warm up indoors before heading out</li>
+                    <li>Stay hydrated - cold air increases respiratory water loss</li>
+                </ul>
+
+                <h4>Caution Conditions (Windchill 0F to 20F / -18C to -7C)</h4>
+
+                <p>These conditions require additional precautions and awareness:</p>
+
+                <ul>
+                    <li>Cover all exposed skin, including face and neck</li>
+                    <li>Consider wearing a balaclava or face mask</li>
+                    <li>Use insulated, windproof outer layers</li>
+                    <li>Plan shorter routes with options to cut the workout short</li>
+                    <li>Tell someone your route and expected return time</li>
+                    <li>Watch for early signs of frostbite: numbness, tingling, or pale skin</li>
+                </ul>
+
+                <h4>Dangerous Conditions (Windchill -20F to 0F / -29C to -18C)</h4>
+
+                <p>Training in these conditions carries significant risk and should only be attempted by experienced athletes with proper gear:</p>
+
+                <ul>
+                    <li>Limit outdoor exposure to 30 minutes or less</li>
+                    <li>Ensure complete skin coverage with no exposed areas</li>
+                    <li>Use multiple insulating layers with windproof shell</li>
+                    <li>Consider indoor alternatives for high-intensity workouts</li>
+                    <li>Never train alone in these conditions</li>
+                    <li>Have a warm destination readily available throughout your route</li>
+                </ul>
+
+                <h4>Extreme Danger (Windchill Below -20F / -29C)</h4>
+
+                <p>Outdoor training is not recommended in these conditions. The risk of frostbite and hypothermia is too high to justify outdoor exercise:</p>
+
+                <ul>
+                    <li>Move workouts indoors - treadmill, indoor track, or gym</li>
+                    <li>Use this as an opportunity for cross-training or strength work</li>
+                    <li>If you must go outside, limit exposure to absolute minimum</li>
+                    <li>Dress for survival, not for running efficiency</li>
+                </ul>
+
+                <h3>Essential Gear for Cold Weather Training</h3>
+
+                <p>Proper gear selection is your primary defense against cold-related injuries. Understanding the layering system and selecting appropriate materials can make winter training both safe and comfortable.</p>
+
+                <h4>The Three-Layer System</h4>
+
+                <p><strong>Base Layer:</strong> This moisture-wicking layer sits directly against your skin. Choose synthetic materials (polyester, polypropylene) or merino wool that pull sweat away from your body. Avoid cotton, which retains moisture and accelerates heat loss.</p>
+
+                <p><strong>Mid Layer:</strong> The insulating layer traps warm air close to your body. Fleece, down, or synthetic insulation works well. The thickness depends on temperature and intensity of activity.</p>
+
+                <p><strong>Outer Layer:</strong> The shell layer protects against wind and precipitation. Look for windproof and water-resistant materials with some breathability to allow moisture vapor to escape.</p>
+
+                <h4>Critical Gear Pieces for Extreme Cold</h4>
+
+                <ul>
+                    <li><strong>Balaclava or Face Mask:</strong> Protects the face and neck, which are highly vulnerable to frostbite. Look for moisture-wicking materials with nose coverage.</li>
+                    <li><strong>Insulated Gloves or Mittens:</strong> Mittens provide more warmth than gloves but less dexterity. Consider liner gloves inside insulated shells for adjustable warmth.</li>
+                    <li><strong>Thermal Headwear:</strong> You lose significant heat through your head. Wear a thermal hat or headband that covers your ears.</li>
+                    <li><strong>Neck Gaiter:</strong> Versatile piece that can cover neck, face, and head as needed.</li>
+                    <li><strong>Insulated Running Tights:</strong> Thermal tights with windproof panels protect legs from cold and wind.</li>
+                    <li><strong>Merino Wool Socks:</strong> Keep feet warm and dry. Consider carrying dry socks for longer workouts.</li>
+                </ul>
+
+                <h3>Special Considerations for Cyclists</h3>
+
+                <p>Cyclists face unique challenges in cold weather because of the higher speeds involved. At 20 mph, a cyclist creates an additional 20 mph of wind effect, dramatically lowering the effective windchill temperature.</p>
+
+                <h4>Cycling-Specific Cold Weather Tips</h4>
+
+                <ul>
+                    <li><strong>Account for Speed-Generated Wind:</strong> Add your average cycling speed to the wind speed when calculating effective windchill.</li>
+                    <li><strong>Protect Extremities:</strong> Hands and feet are particularly vulnerable due to limited movement while cycling. Use insulated cycling gloves and shoe covers or winter cycling boots.</li>
+                    <li><strong>Eye Protection:</strong> Cold wind can cause excessive tearing and discomfort. Use clear or yellow-tinted cycling glasses for protection.</li>
+                    <li><strong>Plan Routes Strategically:</strong> Start into the wind when you are fresh and warm, return with a tailwind when you are tired and potentially sweaty.</li>
+                    <li><strong>Consider Indoor Training:</strong> Smart trainers and cycling apps make indoor training highly effective during extreme cold periods.</li>
+                </ul>
+
+                <h3>Recognizing and Responding to Cold Injuries</h3>
+
+                <p>Knowing the warning signs of cold-related injuries and how to respond can prevent minor issues from becoming serious problems.</p>
+
+                <h4>Early Warning Signs</h4>
+
+                <ul>
+                    <li>Persistent shivering that you cannot control</li>
+                    <li>Numbness or tingling in extremities</li>
+                    <li>Skin that appears pale, waxy, or feels hard</li>
+                    <li>Difficulty moving fingers or toes</li>
+                    <li>Confusion or difficulty concentrating</li>
+                </ul>
+
+                <h4>What to Do If You Suspect Frostbite</h4>
+
+                <ol>
+                    <li>Get out of the cold immediately - seek warm shelter</li>
+                    <li>Do not rub or massage the affected area</li>
+                    <li>Gradually rewarm the area with body heat or warm (not hot) water</li>
+                    <li>Do not use direct heat sources like heating pads or fires</li>
+                    <li>Seek medical attention for anything beyond mild frostnip</li>
+                </ol>
+
+                <h3>Adapting Training in Winter Conditions</h3>
+
+                <p>Smart winter training often means adjusting your expectations and workout structure to account for challenging conditions.</p>
+
+                <h4>Workout Modifications for Cold Weather</h4>
+
+                <ul>
+                    <li><strong>Extended Warm-Up:</strong> Spend extra time warming up indoors before heading outside. Cold muscles are more prone to injury.</li>
+                    <li><strong>Shorter, More Frequent Sessions:</strong> Instead of one long run in extreme cold, consider two shorter sessions.</li>
+                    <li><strong>Adjust Pace Expectations:</strong> Cold air is denser, and bulky clothing adds resistance. Accept that paces will be slower.</li>
+                    <li><strong>Focus on Effort, Not Pace:</strong> Use heart rate or perceived effort rather than pace targets.</li>
+                    <li><strong>Plan Loops Near Home:</strong> Run multiple short loops so you are never far from warmth if conditions deteriorate.</li>
+                </ul>
+
+                <h3>The Science of Cold Weather Performance</h3>
+
+                <p>Understanding how cold affects your body can help you train more effectively and safely during winter months.</p>
+
+                <p><strong>Cardiovascular Effects:</strong> Cold causes blood vessels to constrict, increasing blood pressure and making the heart work harder. This is why warming up thoroughly is especially important in cold weather.</p>
+
+                <p><strong>Respiratory System:</strong> Cold, dry air can irritate airways and trigger exercise-induced bronchoconstriction in susceptible individuals. Wearing a buff or balaclava over your mouth helps warm and humidify air before it reaches your lungs.</p>
+
+                <p><strong>Energy Expenditure:</strong> Your body burns more calories in cold weather to maintain core temperature. Factor this into your nutrition planning for longer winter workouts.</p>
+
+                <p><strong>Hydration Needs:</strong> Despite not feeling as thirsty, dehydration is common in cold weather due to increased respiratory water loss and reduced thirst sensation. Maintain regular fluid intake.</p>
+
+                <h3>Building Winter Training Resilience</h3>
+
+                <p>Consistent winter training offers unique benefits that can pay dividends when spring arrives:</p>
+
+                <ul>
+                    <li><strong>Mental Toughness:</strong> Training through challenging conditions builds psychological resilience that transfers to race day performance.</li>
+                    <li><strong>Aerobic Base Building:</strong> Winter is ideal for accumulating steady-state aerobic miles at conversational pace.</li>
+                    <li><strong>Cold Adaptation:</strong> Regular cold exposure improves your body thermoregulatory responses over time.</li>
+                    <li><strong>Reduced Competition:</strong> Many athletes retreat indoors during winter, giving dedicated outdoor trainers a competitive advantage.</li>
+                </ul>
+
+                <h3>When to Train Indoors Instead</h3>
+
+                <p>Sometimes the smart choice is to move your workout indoors. Consider indoor alternatives when:</p>
+
+                <ul>
+                    <li>Windchill drops below -20F (-29C)</li>
+                    <li>Road or trail conditions are icy and unsafe</li>
+                    <li>You have a high-intensity workout planned that requires precise pacing</li>
+                    <li>You are recovering from illness and your immune system is compromised</li>
+                    <li>Daylight is insufficient for safe outdoor training</li>
+                </ul>
+
+                <p>Indoor options like treadmills, indoor tracks, and cycling trainers allow you to maintain fitness without the risks associated with extreme cold. Many athletes find that strategic use of indoor training during the harshest winter periods leads to better overall training consistency.</p>
+
+                <h3>Conclusion: Training Smart in Cold Weather</h3>
+
+                <p>Cold weather training can be safe, productive, and even enjoyable with proper preparation and awareness. The key is respecting the conditions, dressing appropriately, and knowing when to modify or move your workout indoors. Use this windchill calculator as a tool to make informed decisions about your training, and never hesitate to prioritize safety over any single workout. Your long-term athletic development depends on staying healthy and injury-free throughout the winter months.</p>
+            </div>
+        </div>
+
+        <!-- Learn More Section -->
+        <section class="mt-12 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Winter Training Resources</h2>
+            <p class="text-gray-600 mb-6">Prepare for safe and effective cold weather training</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/recovery-calculator.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">+</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">RECOVERY</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Recovery Calculator</h3>
+                            <p class="text-gray-600 text-sm mb-3">Calculate optimal rest between cold weather workouts.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/calories-burned-running-calculator.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-orange-600 font-semibold mb-1">NUTRITION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Calories Burned Running</h3>
+                            <p class="text-gray-600 text-sm mb-3">Cold weather increases calorie burn - plan your nutrition.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/heart-rate-zone-calculator.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">~</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-red-600 font-semibold mb-1">HEART RATE</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zones</h3>
+                            <p class="text-gray-600 text-sm mb-3">Train by heart rate when cold affects your pace.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/running-pace-calculator.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">=</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">PACE</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Pace Calculator</h3>
+                            <p class="text-gray-600 text-sm mb-3">Plan your training paces for winter workouts.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Calculators</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/windchill-calculator" class="hover:text-white">Windchill Calculator</a></li>
+                        <li><a href="/pace-converter-calculator" class="hover:text-white">Pace Converter</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>2024 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        class WindchillCalculator extends Calculator {
+            constructor() {
+                super('windchill-form', 'windchill-result');
+                this.setupCustomEventListeners();
+            }
+
+            setupCustomEventListeners() {
+                // Toggle cycling speed section based on activity type
+                const activityType = document.getElementById('activity-type');
+                const cyclingSection = document.getElementById('cycling-speed-section');
+
+                activityType.addEventListener('change', function() {
+                    if (activityType.value === 'cycling') {
+                        cyclingSection.classList.remove('hidden');
+                    } else {
+                        cyclingSection.classList.add('hidden');
+                    }
+                });
+
+                // Sync wind unit with cycling speed unit
+                const windUnit = document.getElementById('wind-unit');
+                const cyclingSpeedUnit = document.getElementById('cycling-speed-unit');
+
+                windUnit.addEventListener('change', function() {
+                    cyclingSpeedUnit.textContent = windUnit.value;
+                });
+            }
+
+            calculate() {
+                const formData = new FormData(this.form);
+                const result = this.computeWindchill(formData);
+                if (result) {
+                    this.displayResult(result);
+                    this.saveValues();
+                }
+            }
+
+            computeWindchill(formData) {
+                let temperature = parseFloat(formData.get('temperature'));
+                let windSpeed = parseFloat(formData.get('wind-speed'));
+                const tempUnit = formData.get('temp-unit');
+                const windUnit = formData.get('wind-unit');
+                const activityType = formData.get('activity-type');
+                const cyclingSpeed = parseFloat(formData.get('cycling-speed')) || 0;
+
+                if (isNaN(temperature) || isNaN(windSpeed)) {
+                    return null;
+                }
+
+                // Convert to Fahrenheit if needed
+                let tempF = temperature;
+                if (tempUnit === 'c') {
+                    tempF = (temperature * 9/5) + 32;
+                }
+
+                // Convert wind speed to mph if needed
+                let windMph = windSpeed;
+                if (windUnit === 'kph') {
+                    windMph = windSpeed * 0.621371;
+                }
+
+                // For cycling, add cycling speed to effective wind
+                let effectiveWind = windMph;
+                if (activityType === 'cycling' && cyclingSpeed > 0) {
+                    let cyclingMph = cyclingSpeed;
+                    if (windUnit === 'kph') {
+                        cyclingMph = cyclingSpeed * 0.621371;
+                    }
+                    effectiveWind = windMph + cyclingMph;
+                }
+
+                // Apply NWS windchill formula
+                // WC = 35.74 + 0.6215T - 35.75(V^0.16) + 0.4275T(V^0.16)
+                // Formula is valid for temps <= 50F and wind speeds > 3 mph
+                let windchillF;
+                if (tempF > 50 || effectiveWind <= 3) {
+                    // Windchill not applicable, use actual temperature
+                    windchillF = tempF;
+                } else {
+                    const vPow = Math.pow(effectiveWind, 0.16);
+                    windchillF = 35.74 + (0.6215 * tempF) - (35.75 * vPow) + (0.4275 * tempF * vPow);
+                }
+
+                // Convert result back to Celsius if needed
+                let windchillDisplay;
+                let feelsLikeDrop;
+                if (tempUnit === 'c') {
+                    const windchillC = (windchillF - 32) * 5/9;
+                    windchillDisplay = Math.round(windchillC) + 'C';
+                    feelsLikeDrop = Math.round(temperature - windchillC) + 'C';
+                } else {
+                    windchillDisplay = Math.round(windchillF) + 'F';
+                    feelsLikeDrop = Math.round(tempF - windchillF) + 'F';
+                }
+
+                // Determine safety status and frostbite risk
+                const safetyInfo = this.getSafetyInfo(windchillF);
+                const frostbiteInfo = this.getFrostbiteInfo(windchillF);
+                const gearRecommendations = this.getGearRecommendations(windchillF, activityType);
+                const trainingTips = this.getTrainingTips(windchillF, activityType);
+
+                return {
+                    windchill: windchillDisplay,
+                    windchillF: windchillF,
+                    feelsLikeDrop: feelsLikeDrop,
+                    safety: safetyInfo,
+                    frostbite: frostbiteInfo,
+                    gear: gearRecommendations,
+                    tips: trainingTips,
+                    effectiveWind: Math.round(effectiveWind),
+                    tempUnit: tempUnit
+                };
+            }
+
+            getSafetyInfo(windchillF) {
+                if (windchillF >= 20) {
+                    return {
+                        status: 'Safe',
+                        level: 'safe',
+                        color: 'bg-green-100 text-green-800 border-green-300',
+                        message: 'Conditions are suitable for outdoor training with standard cold weather gear.',
+                        riskLevel: 'Low'
+                    };
+                } else if (windchillF >= 0) {
+                    return {
+                        status: 'Caution',
+                        level: 'caution',
+                        color: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+                        message: 'Cover all exposed skin. Watch for early signs of frostbite.',
+                        riskLevel: 'Moderate'
+                    };
+                } else if (windchillF >= -20) {
+                    return {
+                        status: 'Dangerous',
+                        level: 'dangerous',
+                        color: 'bg-orange-100 text-orange-800 border-orange-300',
+                        message: 'High frostbite risk. Limit outdoor exposure time. Consider indoor alternatives.',
+                        riskLevel: 'High'
+                    };
+                } else {
+                    return {
+                        status: 'Stop - Train Indoors',
+                        level: 'stop',
+                        color: 'bg-red-100 text-red-800 border-red-300',
+                        message: 'Outdoor training not recommended. Frostbite can occur within minutes.',
+                        riskLevel: 'Extreme'
+                    };
+                }
+            }
+
+            getFrostbiteInfo(windchillF) {
+                let time, warning, showWarning;
+
+                if (windchillF >= 20) {
+                    time = 'Low Risk';
+                    warning = '';
+                    showWarning = false;
+                } else if (windchillF >= 0) {
+                    time = '30+ minutes';
+                    warning = 'Frostbite can occur on exposed skin after prolonged exposure (30+ minutes). Cover your face, ears, and hands.';
+                    showWarning = true;
+                } else if (windchillF >= -10) {
+                    time = '10-30 minutes';
+                    warning = 'Frostbite can develop in 10-30 minutes on exposed skin. Complete skin coverage is essential. Consider shortening your workout.';
+                    showWarning = true;
+                } else if (windchillF >= -20) {
+                    time = '5-10 minutes';
+                    warning = 'Serious frostbite risk within 5-10 minutes. Only go outside if absolutely necessary, with full protective gear.';
+                    showWarning = true;
+                } else if (windchillF >= -30) {
+                    time = 'Under 5 minutes';
+                    warning = 'Extreme danger! Frostbite can occur in under 5 minutes. Stay indoors and use alternative training methods.';
+                    showWarning = true;
+                } else {
+                    time = 'Under 2 minutes';
+                    warning = 'Life-threatening conditions! Frostbite can occur within minutes. Do not go outside for any reason unless emergency.';
+                    showWarning = true;
+                }
+
+                return { time: time, warning: warning, showWarning: showWarning };
+            }
+
+            getGearRecommendations(windchillF, activityType) {
+                const gear = [];
+                const baseAffiliate = 'tag=runbikecalc-20';
+
+                if (windchillF < 50) {
+                    gear.push({
+                        item: 'Moisture-wicking base layer',
+                        link: 'https://www.amazon.com/s?k=running+thermal+base+layer&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                }
+
+                if (windchillF < 40) {
+                    gear.push({
+                        item: 'Light gloves',
+                        link: 'https://www.amazon.com/s?k=lightweight+running+gloves&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Headband or light hat',
+                        link: 'https://www.amazon.com/s?k=running+ear+warmer+headband&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                }
+
+                if (windchillF < 30) {
+                    gear.push({
+                        item: 'Windproof jacket',
+                        link: 'https://www.amazon.com/s?k=windproof+running+jacket&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Thermal running tights',
+                        link: 'https://www.amazon.com/s?k=thermal+running+tights&' + baseAffiliate,
+                        priority: 'recommended'
+                    });
+                }
+
+                if (windchillF < 20) {
+                    gear.push({
+                        item: 'Insulated gloves or mittens',
+                        link: 'https://www.amazon.com/s?k=insulated+running+gloves&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Neck gaiter',
+                        link: 'https://www.amazon.com/s?k=running+neck+gaiter&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Merino wool socks',
+                        link: 'https://www.amazon.com/s?k=merino+wool+running+socks&' + baseAffiliate,
+                        priority: 'recommended'
+                    });
+                }
+
+                if (windchillF < 10) {
+                    gear.push({
+                        item: 'Balaclava or face mask',
+                        link: 'https://www.amazon.com/s?k=running+balaclava+face+mask&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Insulated mid-layer',
+                        link: 'https://www.amazon.com/s?k=running+fleece+mid+layer&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                }
+
+                if (windchillF < 0) {
+                    gear.push({
+                        item: 'Windproof pants',
+                        link: 'https://www.amazon.com/s?k=windproof+running+pants&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Hand warmers',
+                        link: 'https://www.amazon.com/s?k=hand+warmers+running&' + baseAffiliate,
+                        priority: 'recommended'
+                    });
+                }
+
+                if (activityType === 'cycling') {
+                    gear.push({
+                        item: 'Cycling shoe covers',
+                        link: 'https://www.amazon.com/s?k=cycling+shoe+covers+winter&' + baseAffiliate,
+                        priority: 'essential'
+                    });
+                    gear.push({
+                        item: 'Clear cycling glasses',
+                        link: 'https://www.amazon.com/s?k=clear+cycling+glasses&' + baseAffiliate,
+                        priority: 'recommended'
+                    });
+                }
+
+                return gear;
+            }
+
+            getTrainingTips(windchillF, activityType) {
+                const tips = [];
+
+                // General tips based on temperature
+                tips.push('Extend your warm-up - spend extra time warming up indoors before heading out');
+                tips.push('Stay hydrated - you still lose fluids in cold weather through breathing and sweating');
+
+                if (windchillF < 40) {
+                    tips.push('Dress in layers that you can adjust as you warm up');
+                }
+
+                if (windchillF < 30) {
+                    tips.push('Plan routes with options to cut the workout short if needed');
+                    tips.push('Tell someone your route and expected return time');
+                }
+
+                if (windchillF < 20) {
+                    tips.push('Watch for early signs of frostbite: numbness, tingling, or pale skin');
+                    tips.push('Start your run/ride into the wind, return with it at your back');
+                }
+
+                if (windchillF < 10) {
+                    tips.push('Consider shorter, more frequent sessions instead of one long workout');
+                    tips.push('Have a warm destination available throughout your route');
+                }
+
+                if (windchillF < 0) {
+                    tips.push('Limit outdoor exposure to 30 minutes or less');
+                    tips.push('Never train alone in these conditions');
+                }
+
+                if (windchillF < -10) {
+                    tips.push('Strongly consider indoor training alternatives');
+                    tips.push('If you must go outside, dress for survival, not performance');
+                }
+
+                if (activityType === 'cycling') {
+                    tips.push('Account for your cycling speed adding to the wind effect');
+                    tips.push('Protect hands and feet extra carefully - limited movement reduces blood flow');
+                }
+
+                return tips.slice(0, 6); // Return top 6 most relevant tips
+            }
+
+            displayResult(result) {
+                // Display windchill value
+                document.getElementById('windchill-value').textContent = result.windchill;
+                document.getElementById('feels-like-drop').textContent = result.feelsLikeDrop;
+
+                // Display safety status
+                const safetyBanner = document.getElementById('safety-banner');
+                safetyBanner.className = 'rounded-lg p-4 mb-6 text-center border ' + result.safety.color;
+                document.getElementById('safety-status').textContent = result.safety.status;
+                document.getElementById('safety-message').textContent = result.safety.message;
+                document.getElementById('risk-level').textContent = result.safety.riskLevel;
+
+                // Display frostbite info
+                document.getElementById('frostbite-time').textContent = result.frostbite.time;
+
+                const frostbiteWarning = document.getElementById('frostbite-warning');
+                if (result.frostbite.showWarning) {
+                    frostbiteWarning.classList.remove('hidden');
+                    document.getElementById('frostbite-details').textContent = result.frostbite.warning;
+                } else {
+                    frostbiteWarning.classList.add('hidden');
+                }
+
+                // Display gear recommendations using DOM methods
+                const gearContainer = document.getElementById('gear-recommendations');
+                gearContainer.textContent = ''; // Clear existing content
+
+                result.gear.forEach(function(item) {
+                    const row = document.createElement('div');
+                    row.className = 'flex items-center justify-between';
+
+                    const labelSpan = document.createElement('span');
+                    labelSpan.className = 'text-gray-700';
+
+                    const itemText = document.createElement('span');
+                    itemText.className = item.priority === 'essential' ? 'font-medium' : '';
+                    itemText.textContent = item.item;
+                    labelSpan.appendChild(itemText);
+
+                    if (item.priority === 'essential') {
+                        const essentialLabel = document.createElement('span');
+                        essentialLabel.className = 'text-xs text-red-600 ml-1';
+                        essentialLabel.textContent = '(Essential)';
+                        labelSpan.appendChild(essentialLabel);
+                    }
+
+                    const shopLink = document.createElement('a');
+                    shopLink.href = item.link;
+                    shopLink.target = '_blank';
+                    shopLink.rel = 'noopener';
+                    shopLink.className = 'text-primary text-sm hover:underline';
+                    shopLink.textContent = 'Shop';
+
+                    row.appendChild(labelSpan);
+                    row.appendChild(shopLink);
+                    gearContainer.appendChild(row);
+                });
+
+                // Display training tips using DOM methods
+                const tipsContainer = document.getElementById('training-tips');
+                tipsContainer.textContent = ''; // Clear existing content
+
+                result.tips.forEach(function(tip) {
+                    const li = document.createElement('li');
+                    li.textContent = tip;
+                    tipsContainer.appendChild(li);
+                });
+
+                // Show result container
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            getShareText() {
+                const windchill = document.getElementById('windchill-value').textContent;
+                const status = document.getElementById('safety-status').textContent;
+
+                return 'Windchill: ' + windchill + ' (' + status + '). Check conditions before your winter workout: ' + window.location.href;
+            }
+        }
+
+        // Initialize calculator
+        const windchillCalculator = new WindchillCalculator();
+
+        // Share button handler
+        document.getElementById('share-result').addEventListener('click', function() {
+            windchillCalculator.shareResult(windchillCalculator.getShareText());
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>RMR Calculator: Resting Metabolic Rate for Athletes (2025) | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/rmr-calculator">
+    <meta name="description" content="Free RMR Calculator - Calculate your resting metabolic rate and daily calorie needs. Uses Harris-Benedict and Mifflin-St Jeor formulas with activity level adjustments for athletes.">
+    <meta name="keywords" content="resting metabolic rate calculator, RMR calculator, basal metabolic rate, calories burned at rest, metabolism calculator for athletes, BMR calculator, TDEE calculator">
+    <meta name="author" content="RunBikeCalc">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RMR Calculator - Resting Metabolic Rate for Athletes">
+    <meta property="og:description" content="Calculate your resting metabolic rate and daily calorie needs with athlete-specific adjustments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://runbikecalc.com/rmr-calculator">
+    <meta property="og:image" content="https://runbikecalc.com/images/og-rmr-calculator.jpg">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RMR Calculator - Resting Metabolic Rate">
+    <meta name="twitter:description" content="Calculate your resting metabolic rate and daily calorie needs">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/rmr-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981',
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RMR Calculator",
+        "url": "https://runbikecalc.com/rmr-calculator",
+        "description": "Calculate your resting metabolic rate (RMR) and daily calorie needs using proven scientific formulas.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate Your Resting Metabolic Rate",
+        "description": "Step-by-step guide to calculating your RMR and daily calorie needs",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Enter personal details",
+                "text": "Input your age, gender, weight, and height"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Choose formula",
+                "text": "Select between Harris-Benedict or Mifflin-St Jeor formula"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Select activity level",
+                "text": "Choose your typical weekly activity level"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Calculate RMR",
+                "text": "Click calculate to get your resting metabolic rate"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Review results",
+                "text": "See your RMR and daily calorie needs by activity level"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is RMR (Resting Metabolic Rate)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RMR is the number of calories your body burns at rest to maintain basic physiological functions like breathing, circulation, and cell production. It typically accounts for 60-75% of total daily energy expenditure and is slightly higher than BMR (Basal Metabolic Rate) because it includes the energy cost of digesting food."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a normal RMR for adults?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For adult men, RMR typically ranges from 1,600-1,800 calories per day. For adult women, RMR typically ranges from 1,400-1,600 calories per day. Athletes and highly active individuals may have RMRs 10-15% higher due to increased muscle mass."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which RMR formula is most accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Mifflin-St Jeor equation is generally considered most accurate for modern populations. It was developed in 1990 using more recent data and has been validated in multiple studies. The Harris-Benedict equation from 1919 tends to overestimate RMR by about 5-10%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I increase my resting metabolic rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Build muscle through strength training (muscle burns more calories than fat), stay physically active, eat adequate protein (10-15% thermic effect), get quality sleep (7-9 hours), stay hydrated, and avoid crash dieting which lowers metabolism."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many calories should an athlete eat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Athletes need RMR multiplied by an activity factor of 1.6-2.4 depending on training volume. Endurance athletes may need 3,000-5,000+ calories daily during heavy training. It's important to fuel adequately to support performance and recovery."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <nav aria-label="Breadcrumb" class="mb-6">
+                <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                    <li><a href="/" class="hover:text-primary">Home</a></li>
+                    <li class="before:content-['/'] before:mx-2"><a href="/utility-tools" class="hover:text-primary">Utility Tools</a></li>
+                    <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">RMR Calculator</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                RMR Calculator
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Calculate your Resting Metabolic Rate (RMR) and daily calorie needs. Get personalized estimates using the Harris-Benedict or Mifflin-St Jeor formulas with activity level adjustments for athletes.
+            </p>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="calc-card">
+                <form id="rmr-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-2">
+                                Age (years) *
+                            </label>
+                            <input type="number" id="age" name="age" class="calc-input-number" placeholder="30" min="15" max="100" step="1" required>
+                        </div>
+
+                        <div>
+                            <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">
+                                Gender *
+                            </label>
+                            <select id="gender" name="gender" class="calc-input-number" required>
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                Weight *
+                            </label>
+                            <div class="flex gap-2">
+                                <input type="number" id="weight" name="weight" class="calc-input-number flex-1" placeholder="70" min="30" max="300" step="0.1" required>
+                                <select id="weight-unit" name="weight-unit" class="calc-input-number w-24">
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="height" class="block text-sm font-medium text-gray-700 mb-2">
+                                Height *
+                            </label>
+                            <div id="height-metric" class="flex gap-2">
+                                <input type="number" id="height-cm" name="height-cm" class="calc-input-number flex-1" placeholder="175" min="100" max="250" step="0.1">
+                                <select id="height-unit" name="height-unit" class="calc-input-number w-24">
+                                    <option value="cm">cm</option>
+                                    <option value="ft-in">ft/in</option>
+                                </select>
+                            </div>
+                            <div id="height-imperial" class="flex gap-2 hidden">
+                                <input type="number" id="height-ft" name="height-ft" class="calc-input-number flex-1" placeholder="5" min="3" max="8" step="1">
+                                <span class="flex items-center text-gray-500">ft</span>
+                                <input type="number" id="height-in" name="height-in" class="calc-input-number flex-1" placeholder="10" min="0" max="11" step="1">
+                                <span class="flex items-center text-gray-500">in</span>
+                                <select id="height-unit-imperial" name="height-unit-imperial" class="calc-input-number w-24">
+                                    <option value="cm">cm</option>
+                                    <option value="ft-in" selected>ft/in</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="formula" class="block text-sm font-medium text-gray-700 mb-2">
+                                Formula
+                            </label>
+                            <select id="formula" name="formula" class="calc-input-number">
+                                <option value="mifflin">Mifflin-St Jeor (Recommended)</option>
+                                <option value="harris-benedict">Harris-Benedict (Original)</option>
+                            </select>
+                            <p class="text-sm text-gray-500 mt-1">Mifflin-St Jeor is most accurate for modern populations</p>
+                        </div>
+
+                        <div>
+                            <label for="activity-level" class="block text-sm font-medium text-gray-700 mb-2">
+                                Activity Level
+                            </label>
+                            <select id="activity-level" name="activity-level" class="calc-input-number">
+                                <option value="sedentary">Sedentary (little to no exercise)</option>
+                                <option value="light">Lightly Active (1-3 days/week)</option>
+                                <option value="moderate">Moderately Active (3-5 days/week)</option>
+                                <option value="active">Very Active (6-7 days/week)</option>
+                                <option value="very-active">Extremely Active (athlete, physical job)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button type="submit" class="calc-button">Calculate RMR</button>
+                        <button type="button" id="share-result" class="calc-button-secondary">Share Result</button>
+                        <button type="reset" class="calc-button-secondary">Reset</button>
+                    </div>
+                </form>
+
+                <div id="rmr-result" class="mt-8 hidden">
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Resting Metabolic Rate</h3>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="text-center bg-primary text-white p-6 rounded-lg">
+                                <div class="text-lg font-semibold mb-2">RMR</div>
+                                <div class="text-4xl font-bold" id="rmr-value">0</div>
+                                <div class="text-lg opacity-90 mt-2">calories/day</div>
+                            </div>
+                            <div class="text-center bg-secondary text-white p-6 rounded-lg">
+                                <div class="text-lg font-semibold mb-2">TDEE</div>
+                                <div class="text-4xl font-bold" id="tdee-value">0</div>
+                                <div class="text-lg opacity-90 mt-2">calories/day</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-4">Daily Calorie Needs by Activity Level</h4>
+                            <div class="grid md:grid-cols-5 gap-3 text-center">
+                                <div class="bg-gray-100 p-4 rounded">
+                                    <div class="font-semibold text-gray-800" id="cal-sedentary">0</div>
+                                    <div class="text-xs text-gray-600">Sedentary</div>
+                                </div>
+                                <div class="bg-blue-100 p-4 rounded">
+                                    <div class="font-semibold text-blue-800" id="cal-light">0</div>
+                                    <div class="text-xs text-blue-600">Light</div>
+                                </div>
+                                <div class="bg-green-100 p-4 rounded">
+                                    <div class="font-semibold text-green-800" id="cal-moderate">0</div>
+                                    <div class="text-xs text-green-600">Moderate</div>
+                                </div>
+                                <div class="bg-orange-100 p-4 rounded">
+                                    <div class="font-semibold text-orange-800" id="cal-active">0</div>
+                                    <div class="text-xs text-orange-600">Active</div>
+                                </div>
+                                <div class="bg-red-100 p-4 rounded">
+                                    <div class="font-semibold text-red-800" id="cal-very-active">0</div>
+                                    <div class="text-xs text-red-600">Very Active</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="font-semibold text-purple-800" id="weight-loss-cal">0</div>
+                                <div class="text-sm text-purple-600">For Weight Loss</div>
+                                <div class="text-xs text-purple-500">500 cal deficit</div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                <div class="font-semibold text-gray-800" id="maintenance-cal">0</div>
+                                <div class="text-sm text-gray-600">Maintenance</div>
+                                <div class="text-xs text-gray-500">Your TDEE</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="font-semibold text-green-800" id="weight-gain-cal">0</div>
+                                <div class="text-sm text-green-600">For Muscle Gain</div>
+                                <div class="text-xs text-green-500">300 cal surplus</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Formula Used</h4>
+                            <p class="text-gray-600" id="formula-explanation">Explanation will appear here...</p>
+                        </div>
+
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Athlete Considerations</h4>
+                            <p class="text-blue-700" id="athlete-recommendations">Recommendations will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Recommendations (shown after calculation) -->
+                <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="max-w-4xl mx-auto mt-16">
+            <div class="prose prose-lg mx-auto">
+                <h2>Understanding Resting Metabolic Rate (RMR) for Athletes</h2>
+
+                <p>Resting Metabolic Rate (RMR) is one of the most fundamental concepts in sports nutrition and performance optimization. For runners, cyclists, triathletes, and endurance athletes of all kinds, understanding your RMR is the foundation for making informed decisions about fueling, recovery, and achieving your performance goals.</p>
+
+                <p>Your RMR represents the number of calories your body burns at complete rest to maintain essential physiological functions. These include breathing, blood circulation, brain function, cell production and repair, temperature regulation, and organ function. For most people, RMR accounts for approximately 60-75% of total daily energy expenditure, making it the largest component of your caloric needs.</p>
+
+                <h3>RMR vs. BMR: Understanding the Difference</h3>
+
+                <p>While often used interchangeably, Resting Metabolic Rate (RMR) and Basal Metabolic Rate (BMR) have subtle but important differences. BMR measures the absolute minimum energy required for survival, measured under very strict conditions: complete rest, 12+ hours of fasting, in a temperature-neutral environment, and upon waking. RMR is measured under more practical conditions and includes the small energy cost of digesting food (the thermic effect of food), making it slightly higher than BMR, typically by 10-20%.</p>
+
+                <p>For athletes and everyday use, RMR is more practical and relevant because it better reflects real-world resting energy expenditure. The formulas used in this calculator estimate RMR, which you can then multiply by activity factors to determine your Total Daily Energy Expenditure (TDEE).</p>
+
+                <h3>The Harris-Benedict vs. Mifflin-St Jeor Equation</h3>
+
+                <p>This calculator offers two scientifically validated formulas for estimating RMR, each with its own history and application:</p>
+
+                <h4>Harris-Benedict Equation (1919)</h4>
+                <p>Developed by James Arthur Harris and Francis Gano Benedict, this was the first widely-used formula for estimating metabolic rate. The equations are:</p>
+                <ul>
+                    <li><strong>Men:</strong> RMR = 66.5 + (13.75 x weight in kg) + (5.003 x height in cm) - (6.75 x age)</li>
+                    <li><strong>Women:</strong> RMR = 655.1 + (9.563 x weight in kg) + (1.850 x height in cm) - (4.676 x age)</li>
+                </ul>
+                <p>While historically important, this formula was developed using data from healthy, predominantly white subjects from over 100 years ago. Research suggests it may overestimate RMR by 5-15% in modern populations.</p>
+
+                <h4>Mifflin-St Jeor Equation (1990)</h4>
+                <p>Developed by MD Mifflin and ST St Jeor using more recent population data, this formula is generally considered more accurate for contemporary individuals:</p>
+                <ul>
+                    <li><strong>Men:</strong> RMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age) + 5</li>
+                    <li><strong>Women:</strong> RMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age) - 161</li>
+                </ul>
+                <p>The American Dietetic Association recommends the Mifflin-St Jeor equation as the most accurate for estimating RMR in healthy adults, particularly for athletes and active individuals.</p>
+
+                <h3>Why RMR Matters for Athletes</h3>
+
+                <p>For endurance athletes, understanding your RMR is crucial for several reasons:</p>
+
+                <h4>1. Preventing Relative Energy Deficiency in Sport (RED-S)</h4>
+                <p>RED-S occurs when athletes consistently consume fewer calories than their bodies need, leading to hormonal disruption, decreased performance, increased injury risk, and compromised bone health. Knowing your RMR helps establish the minimum caloric floor that should never be crossed, even during weight loss phases. Athletes should rarely consume fewer calories than their RMR, as this signals the body to conserve energy through metabolic adaptation.</p>
+
+                <h4>2. Optimizing Training Adaptation</h4>
+                <p>Adequate fueling supports the physiological adaptations that make you faster and stronger. Your muscles need energy and protein to repair and grow after hard sessions. Your cardiovascular system needs fuel to expand blood volume and improve oxygen delivery. Chronically underfueling compromises these adaptations, meaning you work hard in training but don't reap the full benefits.</p>
+
+                <h4>3. Strategic Weight Management</h4>
+                <p>For sports where power-to-weight ratio matters (cycling climbing, running), some athletes seek to optimize body composition. Understanding your RMR allows for sustainable, gradual approaches rather than extreme dieting. A modest 300-500 calorie daily deficit from your TDEE promotes fat loss while preserving muscle and training capacity. Aggressive deficits exceeding 1,000 calories often backfire, triggering metabolic adaptation and muscle loss.</p>
+
+                <h4>4. Periodizing Nutrition</h4>
+                <p>Elite athletes periodize their nutrition just as they periodize training. During base training phases with higher volume, caloric needs may be 30-50% above RMR. During taper periods or off-season, needs decrease. During intense training blocks or stage races, some athletes may need 4,000-6,000+ calories daily. Knowing your RMR provides the starting point for these calculations.</p>
+
+                <h3>Activity Multipliers for Athletes</h3>
+
+                <p>To estimate Total Daily Energy Expenditure (TDEE), your RMR is multiplied by an activity factor. For athletes, these multipliers may be higher than standard recommendations:</p>
+
+                <ul>
+                    <li><strong>Sedentary (1.2):</strong> Desk job, minimal exercise. Rest days for athletes.</li>
+                    <li><strong>Lightly Active (1.375):</strong> Light exercise 1-3 days/week. Easy recovery weeks.</li>
+                    <li><strong>Moderately Active (1.55):</strong> Moderate exercise 3-5 days/week. Typical recreational athlete training.</li>
+                    <li><strong>Very Active (1.725):</strong> Hard exercise 6-7 days/week. Serious amateur athletes, 8-12 hours training weekly.</li>
+                    <li><strong>Extremely Active (1.9-2.4):</strong> Professional athletes, 15-25+ hours training weekly, or physical job plus training.</li>
+                </ul>
+
+                <p>During heavy training blocks, ultra-endurance events, or stage races, multipliers can exceed 2.5. Tour de France cyclists may burn 6,000-9,000 calories daily. Ironman triathletes during race week may need 5,000+ calories. Marathon and ultramarathon runners often struggle to consume enough during heavy training phases.</p>
+
+                <h3>Factors That Affect Your RMR</h3>
+
+                <p>While formulas provide estimates, actual RMR varies based on numerous factors:</p>
+
+                <h4>Muscle Mass</h4>
+                <p>Muscle tissue is metabolically active, burning roughly 6 calories per pound per day at rest (compared to 2 calories for fat tissue). Athletes with higher muscle mass often have RMRs 10-15% above formula predictions. This is one reason strength training benefits endurance athletes beyond just injury prevention.</p>
+
+                <h4>Age</h4>
+                <p>RMR decreases approximately 1-2% per decade after age 20, primarily due to decreasing muscle mass. However, maintaining muscle through strength training and staying active can largely offset this decline. Many master athletes maintain metabolic rates similar to their younger counterparts.</p>
+
+                <h4>Genetics</h4>
+                <p>Individual variation in RMR can be substantial, with some people naturally running "hot" (higher RMR) or "cool" (lower RMR). Differences of 200-400 calories between people of similar size and age are common.</p>
+
+                <h4>Hormones</h4>
+                <p>Thyroid hormones directly regulate metabolic rate. Testosterone and growth hormone influence muscle mass. The menstrual cycle affects women's RMR by 5-10% (higher in the luteal phase). Chronic stress elevates cortisol, which can affect metabolism and body composition.</p>
+
+                <h4>Environmental Factors</h4>
+                <p>Cold exposure increases RMR as the body works to maintain temperature. Altitude initially increases RMR due to increased respiratory effort. Heat acclimatization may slightly reduce RMR as the body becomes more efficient.</p>
+
+                <h4>Metabolic Adaptation</h4>
+                <p>Perhaps most important for athletes is understanding metabolic adaptation. When calories are restricted, the body gradually reduces RMR to conserve energy. This is why extreme diets often fail long-term and why maintaining adequate fueling is crucial. Studies show that severe caloric restriction can reduce RMR by 10-20% beyond what would be expected from weight loss alone. This adaptation can persist for months or years.</p>
+
+                <h3>Practical Applications for Training</h3>
+
+                <h4>Pre-Workout Fueling</h4>
+                <p>Knowing your hourly caloric burn rate (RMR / 24 = approximately 60-80 calories/hour at rest) helps plan pre-workout nutrition. For morning workouts after an overnight fast, your body has used 400-600 calories from your last meal just for basic functions, before you even start exercising.</p>
+
+                <h4>During-Workout Nutrition</h4>
+                <p>For sessions over 60-90 minutes, consuming 30-60g of carbohydrates per hour helps maintain blood glucose and spare glycogen. Your RMR continues even during exercise, on top of the exercise calories burned.</p>
+
+                <h4>Recovery Nutrition</h4>
+                <p>Post-workout, your RMR may be temporarily elevated (excess post-exercise oxygen consumption, or EPOC). This is when your body is primed for nutrient absorption and muscle repair. Adequate protein (20-40g) and carbohydrates within 30-60 minutes optimizes recovery.</p>
+
+                <h4>Daily Meal Planning</h4>
+                <p>Distribute calories throughout the day to match energy needs. Front-load calories on hard training days. Ensure protein intake of 1.4-2.0g per kg bodyweight, spread across 4-6 eating occasions.</p>
+
+                <h3>Common Mistakes Athletes Make</h3>
+
+                <ul>
+                    <li><strong>Eating below RMR regularly:</strong> This signals starvation to your body, reducing metabolic rate and compromising performance.</li>
+                    <li><strong>Not adjusting for training load:</strong> A 3-hour long run may burn 2,000+ extra calories that need to be replaced.</li>
+                    <li><strong>Ignoring the thermic effect of food:</strong> Digesting food burns calories (about 10% of intake), so eating more actually increases total burn slightly.</li>
+                    <li><strong>Using generic activity multipliers:</strong> Standard charts are designed for average populations, not dedicated athletes with structured training.</li>
+                    <li><strong>Focusing only on scale weight:</strong> Athletes should consider body composition, performance metrics, energy levels, and recovery quality.</li>
+                </ul>
+
+                <h3>When to Seek Professional Help</h3>
+
+                <p>While calculators provide useful estimates, consider working with a sports dietitian if you:</p>
+                <ul>
+                    <li>Have specific performance goals requiring precise nutrition planning</li>
+                    <li>Are experiencing symptoms of underfueling (fatigue, poor recovery, hormonal disruption, stress fractures)</li>
+                    <li>Have a history of disordered eating or complicated relationship with food</li>
+                    <li>Are preparing for an ultra-endurance event or multi-day competition</li>
+                    <li>Have medical conditions affecting metabolism (thyroid disorders, diabetes, etc.)</li>
+                </ul>
+
+                <p>Professional metabolic testing using indirect calorimetry can measure your actual RMR with high accuracy, providing a precise baseline for nutrition planning.</p>
+
+                <h3>Conclusion</h3>
+
+                <p>Your Resting Metabolic Rate is the foundation upon which all nutrition planning is built. For athletes, understanding RMR helps ensure adequate fueling for performance, prevents the negative consequences of undereating, enables strategic and sustainable body composition changes, and supports long-term health and athletic longevity.</p>
+
+                <p>Use this calculator as a starting point, then adjust based on your actual results: energy levels, recovery quality, performance trends, and body composition changes. Remember that numbers are guides, not absolutes. Listen to your body, fuel your training, and you'll optimize both performance and health.</p>
+            </div>
+        </div>
+
+        <!-- Comprehensive FAQ Section -->
+        <section class="max-w-4xl mx-auto mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-6">Frequently Asked Questions About RMR</h2>
+            <div class="space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">What is a normal RMR for adults?</h3>
+                    <div class="prose text-gray-600">
+                        <p class="mb-4">RMR varies significantly based on body size, composition, age, and gender:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-medium text-blue-800 mb-2">Adult Men</h4>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>Average: 1,600-1,800 cal/day</li>
+                                    <li>Athletes: 1,800-2,200 cal/day</li>
+                                    <li>Large/muscular: 2,000-2,500 cal/day</li>
+                                </ul>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-lg">
+                                <h4 class="font-medium text-pink-800 mb-2">Adult Women</h4>
+                                <ul class="text-sm text-pink-700 space-y-1">
+                                    <li>Average: 1,400-1,600 cal/day</li>
+                                    <li>Athletes: 1,500-1,800 cal/day</li>
+                                    <li>Very active: 1,700-2,000 cal/day</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">How can I increase my resting metabolic rate?</h3>
+                    <div class="prose text-gray-600">
+                        <p class="mb-3">Several strategies can boost your RMR:</p>
+                        <ul class="space-y-2">
+                            <li><strong>Build muscle:</strong> Strength train 2-3x/week. Each pound of muscle burns 6+ calories/day at rest.</li>
+                            <li><strong>Stay active:</strong> Regular exercise elevates RMR even on rest days through EPOC.</li>
+                            <li><strong>Eat adequate protein:</strong> Protein has a thermic effect of 20-35%, boosting metabolism.</li>
+                            <li><strong>Get quality sleep:</strong> 7-9 hours supports hormonal balance and metabolic health.</li>
+                            <li><strong>Avoid crash diets:</strong> Severe restriction triggers metabolic adaptation, lowering RMR.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Should I eat below my RMR to lose weight?</h3>
+                    <div class="prose text-gray-600">
+                        <p class="mb-3"><strong>Generally, no.</strong> Eating below your RMR can trigger metabolic adaptation and health problems:</p>
+                        <ul class="space-y-2 mb-4">
+                            <li>Metabolic slowdown as your body conserves energy</li>
+                            <li>Muscle loss, reducing long-term calorie burn</li>
+                            <li>Hormonal disruption affecting performance and health</li>
+                            <li>Increased injury risk and impaired recovery</li>
+                        </ul>
+                        <p class="text-sm text-gray-600">Instead, create a moderate deficit (300-500 cal) from your TDEE while keeping intake above RMR.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">How accurate are RMR calculators?</h3>
+                    <div class="prose text-gray-600">
+                        <p class="mb-4">Calculator estimates typically fall within 10-15% of actual values:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-medium text-green-800 mb-2">Mifflin-St Jeor</h4>
+                                <p class="text-sm text-green-700">Most accurate for healthy adults, typically within 10% of measured RMR.</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <h4 class="font-medium text-yellow-800 mb-2">Harris-Benedict</h4>
+                                <p class="text-sm text-yellow-700">May overestimate by 5-15%, especially for modern populations.</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">For precise measurement, consider indirect calorimetry testing with a sports dietitian.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Calculators Section -->
+        <section class="max-w-4xl mx-auto mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/bmi-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">BMI Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate your Body Mass Index</p>
+                </a>
+                <a href="/calories-burned-running-calculator.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Calories Burned Running</h3>
+                    <p class="text-gray-600 text-sm">Calculate calories from running</p>
+                </a>
+                <a href="/vo2-max-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">VO2 Max Calculator</h3>
+                    <p class="text-gray-600 text-sm">Estimate your aerobic fitness</p>
+                </a>
+                <a href="/running-pace-calculator.html" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Running Pace Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate pace, time, and distance</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="max-w-4xl mx-auto mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Optimize Your Nutrition and Performance</h2>
+            <p class="text-gray-600 mb-6">Learn how to fuel properly for training and racing</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/blog/nutrition-for-endurance-athletes-complete-guide.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">NUTRITION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Endurance Nutrition Guide</h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to fueling for endurance sports.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/running-for-weight-loss-complete-guide-2026.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-orange-600 font-semibold mb-1">WEIGHT LOSS</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Running for Weight Loss</h3>
+                            <p class="text-gray-600 text-sm mb-3">How to lose weight while improving running performance.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/pre-workout-nutrition-complete-guide-2026.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">PRE-WORKOUT</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Pre-Workout Nutrition</h3>
+                            <p class="text-gray-600 text-sm mb-3">What and when to eat before training.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>10 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/hydration-athletes-complete-guide.html" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">HYDRATION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Hydration for Athletes</h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to hydration and electrolytes.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>11 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">RunBikeCalc</h3>
+                    <p class="text-gray-400">Professional calculators for runners, cyclists, and triathletes.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Nutrition Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/rmr-calculator" class="hover:text-white">RMR Calculator</a></li>
+                        <li><a href="/bmi-calculator" class="hover:text-white">BMI Calculator</a></li>
+                        <li><a href="/calories-burned-running-calculator.html" class="hover:text-white">Calories Burned</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RunBikeCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
+    <script>
+        class RMRCalculator extends Calculator {
+            constructor() {
+                super('rmr-form', 'rmr-result');
+                this.setupHeightToggle();
+                this.setupEventListeners();
+            }
+
+            setupHeightToggle() {
+                const heightUnit = document.getElementById('height-unit');
+                const heightUnitImperial = document.getElementById('height-unit-imperial');
+                const heightMetric = document.getElementById('height-metric');
+                const heightImperial = document.getElementById('height-imperial');
+
+                const toggleHeight = (value) => {
+                    if (value === 'ft-in') {
+                        heightMetric.classList.add('hidden');
+                        heightImperial.classList.remove('hidden');
+                    } else {
+                        heightMetric.classList.remove('hidden');
+                        heightImperial.classList.add('hidden');
+                    }
+                };
+
+                heightUnit.addEventListener('change', (e) => toggleHeight(e.target.value));
+                heightUnitImperial.addEventListener('change', (e) => toggleHeight(e.target.value));
+            }
+
+            setupEventListeners() {
+                this.form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(this.form);
+                    const result = this.calculate(formData);
+                    if (result) {
+                        this.displayResult(result);
+                    }
+                });
+            }
+
+            calculate(formData) {
+                const age = parseInt(formData.get('age'));
+                const gender = formData.get('gender');
+                let weight = parseFloat(formData.get('weight'));
+                const weightUnit = formData.get('weight-unit');
+                const heightUnit = formData.get('height-unit') || formData.get('height-unit-imperial');
+                const formula = formData.get('formula');
+                const activityLevel = formData.get('activity-level');
+
+                // Validate inputs
+                if (!age || !gender || !weight) {
+                    this.displayError('Please fill in all required fields.');
+                    return null;
+                }
+
+                // Get height
+                let heightCm;
+                if (heightUnit === 'ft-in') {
+                    const feet = parseFloat(formData.get('height-ft')) || 0;
+                    const inches = parseFloat(formData.get('height-in')) || 0;
+                    heightCm = (feet * 30.48) + (inches * 2.54);
+                } else {
+                    heightCm = parseFloat(formData.get('height-cm'));
+                }
+
+                if (!heightCm || heightCm < 100) {
+                    this.displayError('Please enter a valid height.');
+                    return null;
+                }
+
+                // Convert weight to kg if needed
+                if (weightUnit === 'lbs') {
+                    weight = weight * 0.453592;
+                }
+
+                // Calculate RMR based on selected formula
+                let rmr;
+                let formulaName;
+                let formulaExplanation;
+
+                if (formula === 'harris-benedict') {
+                    formulaName = 'Harris-Benedict';
+                    if (gender === 'male') {
+                        rmr = 66.5 + (13.75 * weight) + (5.003 * heightCm) - (6.75 * age);
+                        formulaExplanation = `Using Harris-Benedict (1919): RMR = 66.5 + (13.75 x ${weight.toFixed(1)}kg) + (5.003 x ${heightCm.toFixed(0)}cm) - (6.75 x ${age}) = ${Math.round(rmr)} calories/day`;
+                    } else {
+                        rmr = 655.1 + (9.563 * weight) + (1.850 * heightCm) - (4.676 * age);
+                        formulaExplanation = `Using Harris-Benedict (1919): RMR = 655.1 + (9.563 x ${weight.toFixed(1)}kg) + (1.850 x ${heightCm.toFixed(0)}cm) - (4.676 x ${age}) = ${Math.round(rmr)} calories/day`;
+                    }
+                } else {
+                    formulaName = 'Mifflin-St Jeor';
+                    if (gender === 'male') {
+                        rmr = (10 * weight) + (6.25 * heightCm) - (5 * age) + 5;
+                        formulaExplanation = `Using Mifflin-St Jeor (1990): RMR = (10 x ${weight.toFixed(1)}kg) + (6.25 x ${heightCm.toFixed(0)}cm) - (5 x ${age}) + 5 = ${Math.round(rmr)} calories/day`;
+                    } else {
+                        rmr = (10 * weight) + (6.25 * heightCm) - (5 * age) - 161;
+                        formulaExplanation = `Using Mifflin-St Jeor (1990): RMR = (10 x ${weight.toFixed(1)}kg) + (6.25 x ${heightCm.toFixed(0)}cm) - (5 x ${age}) - 161 = ${Math.round(rmr)} calories/day`;
+                    }
+                }
+
+                // Activity multipliers
+                const activityMultipliers = {
+                    'sedentary': 1.2,
+                    'light': 1.375,
+                    'moderate': 1.55,
+                    'active': 1.725,
+                    'very-active': 1.9
+                };
+
+                const multiplier = activityMultipliers[activityLevel];
+                const tdee = rmr * multiplier;
+
+                // Calculate all activity level calories
+                const caloriesByActivity = {
+                    sedentary: Math.round(rmr * 1.2),
+                    light: Math.round(rmr * 1.375),
+                    moderate: Math.round(rmr * 1.55),
+                    active: Math.round(rmr * 1.725),
+                    veryActive: Math.round(rmr * 1.9)
+                };
+
+                // Generate athlete recommendations
+                let athleteRecommendations;
+                if (activityLevel === 'active' || activityLevel === 'very-active') {
+                    athleteRecommendations = `As an active athlete, your daily needs of ${Math.round(tdee)} calories should be considered a minimum during training. On high-volume days, you may need 15-30% more. Focus on adequate protein (1.6-2.2g/kg bodyweight), strategic carbohydrate timing around workouts, and never go below your RMR of ${Math.round(rmr)} calories, even on rest days. Consider tracking energy levels and recovery quality to fine-tune intake.`;
+                } else if (activityLevel === 'moderate') {
+                    athleteRecommendations = `At moderate activity levels, your TDEE of ${Math.round(tdee)} calories provides a good baseline. If training for specific events, increase intake on hard training days. Aim for protein intake of 1.4-1.8g/kg bodyweight. As training volume increases, adjust your activity multiplier accordingly.`;
+                } else {
+                    athleteRecommendations = `Your current activity level indicates a TDEE of ${Math.round(tdee)} calories. If you're looking to increase training, do so gradually while increasing caloric intake to match. Sudden increases in activity without adequate fueling can lead to fatigue and poor adaptation.`;
+                }
+
+                return {
+                    rmr: Math.round(rmr),
+                    tdee: Math.round(tdee),
+                    caloriesByActivity,
+                    weightLoss: Math.round(tdee - 500),
+                    maintenance: Math.round(tdee),
+                    weightGain: Math.round(tdee + 300),
+                    formulaExplanation,
+                    athleteRecommendations,
+                    formula: formulaName
+                };
+            }
+
+            displayResult(result) {
+                document.getElementById('rmr-value').textContent = result.rmr.toLocaleString();
+                document.getElementById('tdee-value').textContent = result.tdee.toLocaleString();
+
+                document.getElementById('cal-sedentary').textContent = result.caloriesByActivity.sedentary.toLocaleString();
+                document.getElementById('cal-light').textContent = result.caloriesByActivity.light.toLocaleString();
+                document.getElementById('cal-moderate').textContent = result.caloriesByActivity.moderate.toLocaleString();
+                document.getElementById('cal-active').textContent = result.caloriesByActivity.active.toLocaleString();
+                document.getElementById('cal-very-active').textContent = result.caloriesByActivity.veryActive.toLocaleString();
+
+                document.getElementById('weight-loss-cal').textContent = result.weightLoss.toLocaleString();
+                document.getElementById('maintenance-cal').textContent = result.maintenance.toLocaleString();
+                document.getElementById('weight-gain-cal').textContent = result.weightGain.toLocaleString();
+
+                document.getElementById('formula-explanation').textContent = result.formulaExplanation;
+                document.getElementById('athlete-recommendations').textContent = result.athleteRecommendations;
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'rmr');
+                }
+
+                this.resultContainer.classList.remove('hidden');
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                this.saveValues();
+            }
+
+            getShareText() {
+                const rmr = document.getElementById('rmr-value').textContent;
+                const tdee = document.getElementById('tdee-value').textContent;
+
+                return `My RMR: ${rmr} cal/day, TDEE: ${tdee} cal/day. Calculate yours: ${window.location.href}`;
+            }
+        }
+
+        const rmrCalculator = new RMRCalculator();
+
+        document.getElementById('share-result').addEventListener('click', () => {
+            rmrCalculator.shareResult(rmrCalculator.getShareText());
+        });
+    </script>
+</body>
+</html>

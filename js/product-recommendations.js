@@ -163,6 +163,25 @@ const productDatabase = {
             search: 'GU+Energy+Gel+variety+pack',
             description: 'Race-day fuel. Easy-to-digest carbs for runs over 60 minutes.'
         }
+    },
+
+    // Nutrition Tracking
+    nutritionTracking: {
+        scale: {
+            name: 'Greater Goods Digital Food Scale',
+            search: 'Greater+Goods+Digital+Food+Scale+nutrition',
+            description: 'Precision food scale for accurate calorie and macro tracking. Essential for athletes.'
+        },
+        premiumScale: {
+            name: 'Etekcity Smart Nutrition Scale',
+            search: 'Etekcity+Smart+Nutrition+Scale',
+            description: 'Smart scale with app integration and nutritional database for easy tracking.'
+        },
+        mealPrep: {
+            name: 'Rubbermaid Brilliance Meal Prep Containers',
+            search: 'Rubbermaid+Brilliance+Meal+Prep+Containers',
+            description: 'Portion control containers for meal prepping. Perfect for tracking calories.'
+        }
     }
 };
 
@@ -204,7 +223,10 @@ const calculatorProductMap = {
     'body-composition': ['fitnessTrackers'],
     'recovery': ['recoveryTools', 'fitnessTrackers'],
     'training-load': ['runningWatches', 'heartRateMonitors'],
-    'sweat-test': ['accessories']
+    'sweat-test': ['accessories'],
+
+    // Nutrition Calculators
+    'rmr': ['nutritionTracking', 'fitnessTrackers']
 };
 
 /**
