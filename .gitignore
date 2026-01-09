@@ -27,3 +27,4 @@ build/
 
 # Tailwind CSS build
 output.cssscripts/config.py
+scripts/config.py
