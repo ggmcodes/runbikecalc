@@ -447,10 +447,6 @@
     <script src="js/training-load-calculator.js"></script>
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('mobile-menu-open');
-        });
     </script>
 
     <script type="application/ld+json">
@@ -472,17 +468,6 @@
             "name": "RunBikeCalc"
         }
     }
-    <script>
-    // Mobile Training Plans submenu toggle
-    const plansToggle = document.getElementById('mobile-plans-toggle');
-    const plansSubmenu = document.getElementById('mobile-plans-submenu');
-    const plansChevron = document.getElementById('mobile-plans-chevron');
-    if (plansToggle && plansSubmenu && plansChevron) {
-        plansToggle.addEventListener('click', function() {
-            plansSubmenu.classList.toggle('hidden');
-            plansChevron.classList.toggle('rotate-180');
-        });
-    }
-</script>
+    </script>
     </body>
 </html>

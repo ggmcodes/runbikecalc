@@ -547,12 +547,7 @@
     <!-- JavaScript -->
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            menu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+        
 
         // Race distance data
         const raceDistances = {
