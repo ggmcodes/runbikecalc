@@ -9,4 +9,4 @@ Sitemap: https://runbikecalc.com/sitemap.xml
 Crawl-delay: 1
 
 # Disallow admin/internal paths (if any)
-Disallow: /offline.html
+Disallow: /offline
