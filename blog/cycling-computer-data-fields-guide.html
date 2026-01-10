@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Computer Setup: Essential Data Fields for Power and Zone Training | RunBikeCalc</title>
+    <meta name="description" content="Configure your cycling computer for power zone training. Learn which data fields matter for FTP-based workouts, interval training, and race day performance.">
+    <meta name="keywords" content="cycling computer setup, Garmin data fields, Wahoo ELEMNT, power data fields, cycling training zones, bike computer configuration">
+    <meta name="author" content="RunBikeCalc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://runbikecalc.com/blog/cycling-computer-data-fields-guide.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cycling Computer Setup: Essential Data Fields for Power and Zone Training">
+    <meta property="og:description" content="Configure cycling computer data fields for power zone training and structured workouts.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://runbikecalc.com/blog/cycling-computer-data-fields-guide.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cycling Computer Data Fields Guide 2026">
+    <meta name="twitter:description" content="Essential data fields for power and zone training.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=1200&h=630&fit=crop">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cycling Computer Setup: Essential Data Fields for Power and Zone Training",
+        "description": "Configure your cycling computer for power zone training with optimal data field layouts for workouts and racing.",
+        "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=1200&h=630&fit=crop",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/logo.png"
+            }
+        },
+        "datePublished": "2026-01-09",
+        "dateModified": "2026-01-09",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/cycling-computer-data-fields-guide.html"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What data fields should I display for power zone training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For power zone training, display 3-second power, current power zone, heart rate, and elapsed time on your main screen. Secondary screens can show lap power, normalized power, TSS, and IF for post-workout analysis. Keep the main screen simple with 4-6 fields maximum."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between instant power and 3-second power?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Instant power shows real-time wattage which fluctuates constantly. 3-second power averages the last 3 seconds for a smoother, more actionable display. Most coaches recommend 3-second power for training as it reduces visual noise while remaining responsive to effort changes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I set up power zone alerts on my cycling computer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "First calculate your FTP and power zones using an FTP calculator. Enter these zone boundaries in your cycling computer's settings. Then enable power zone alerts to receive audio or vibration notifications when you drift outside your target zone during workouts."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-78BHZZG6CN');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3268619626498498" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 bg-gradient-to-br from-purple-600 to-indigo-700 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">CYCLING TECHNOLOGY</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Cycling Computer Setup: Essential Data Fields for Power and Zone Training</h1>
+                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Configure your Garmin, Wahoo, or Hammerhead with the right data fields for power zone workouts and race day performance.</p>
+                <div class="flex items-center justify-center space-x-6 text-purple-200">
+                    <span>Jan 9, 2026</span>
+                    <span>•</span>
+                    <span>10 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="text-sm text-gray-600">
+            <a href="/" class="hover:text-primary">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/blog" class="hover:text-primary">Blog</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900">Cycling Computer Data Fields Guide</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+
+            <!-- Table of Contents -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-10">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
+                <nav class="space-y-2">
+                    <a href="#power-fields" class="block text-primary hover:text-secondary">Essential Power Data Fields</a>
+                    <a href="#workout-profiles" class="block text-primary hover:text-secondary">Workout-Specific Profiles</a>
+                    <a href="#zone-displays" class="block text-primary hover:text-secondary">Zone Display Configuration</a>
+                    <a href="#advanced-metrics" class="block text-primary hover:text-secondary">Advanced Power Metrics</a>
+                    <a href="#screen-layouts" class="block text-primary hover:text-secondary">Recommended Screen Layouts</a>
+                    <a href="#alerts-setup" class="block text-primary hover:text-secondary">Setting Up Training Alerts</a>
+                </nav>
+            </div>
+
+            <!-- Content Sections -->
+            <section id="power-fields" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Essential Power Data Fields</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Power-based training requires real-time feedback on your effort. Understanding what each power data field shows helps you configure displays that actually improve your training.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Core Power Fields</h3>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Field</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">What It Shows</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Best Use</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">Power (3s)</td>
+                                <td class="px-6 py-4 text-gray-700">3-second rolling average</td>
+                                <td class="px-6 py-4 text-gray-700">Primary training field</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">Power Zone</td>
+                                <td class="px-6 py-4 text-gray-700">Current zone (1-7)</td>
+                                <td class="px-6 py-4 text-gray-700">Zone-based workouts</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">Lap Power</td>
+                                <td class="px-6 py-4 text-gray-700">Average for current lap/interval</td>
+                                <td class="px-6 py-4 text-gray-700">Interval pacing</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">Normalized Power</td>
+                                <td class="px-6 py-4 text-gray-700">Weighted average power</td>
+                                <td class="px-6 py-4 text-gray-700">Variable terrain rides</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">Average Power</td>
+                                <td class="px-6 py-4 text-gray-700">Simple average for ride</td>
+                                <td class="px-6 py-4 text-gray-700">Steady-state efforts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">3-Second Power vs Instant Power</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Instant power fluctuates wildly with each pedal stroke. A 3-second average smooths these fluctuations while remaining responsive enough to guide interval training. Some cyclists prefer 5-second or 10-second averages for even smoother displays, especially on climbs.</p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
+                    <p class="text-blue-800 font-medium">Before configuring power zones on your computer, calculate accurate zone boundaries using our <a href="/ftp-calculator" class="underline">FTP Calculator</a>. Enter your most recent FTP test result to generate personalized zones.</p>
+                </div>
+            </section>
+
+            <section id="workout-profiles" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Workout-Specific Profiles</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Different workouts require different information. Create multiple activity profiles with data fields optimized for each training type.</p>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Endurance Ride Profile</h4>
+                    <p class="text-gray-700 mb-2">Focus on staying in Zone 2 and monitoring accumulated work.</p>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Main screen:</strong> Power Zone, HR, Duration, Distance</li>
+                        <li><strong>Secondary:</strong> Avg Power, Normalized Power, TSS, Cadence</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Interval Training Profile</h4>
+                    <p class="text-gray-700 mb-2">Quick glance at interval performance and recovery.</p>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Main screen:</strong> Power (3s), Lap Power, Lap Time, HR</li>
+                        <li><strong>Secondary:</strong> Power Zone, Cadence, Interval Count</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Race Day Profile</h4>
+                    <p class="text-gray-700 mb-2">Minimal distraction with key pacing information.</p>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Main screen:</strong> Power (3s), Elapsed Time, Distance to Go</li>
+                        <li><strong>Secondary:</strong> Avg Power, IF, Speed, Cadence</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Climbing Profile</h4>
+                    <p class="text-gray-700 mb-2">Power sustainability on long climbs.</p>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Main screen:</strong> Power (10s), Gradient, Elevation Gain</li>
+                        <li><strong>Secondary:</strong> VAM, Cadence, HR Zone, Time</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="zone-displays" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Zone Display Configuration</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Most cycling computers can display your current power zone numerically, graphically, or both. Configuring this correctly makes zone-based training intuitive.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Entering Custom Zones</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">After calculating your zones with an <a href="/ftp-calculator" class="text-primary hover:text-secondary">FTP calculator</a>, enter these boundaries into your cycling computer through its companion app.</p>
+
+                <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Open your cycling computer's companion app (Garmin Connect, Wahoo, etc.)</li>
+                    <li>Navigate to user settings or training zones</li>
+                    <li>Select power zones configuration</li>
+                    <li>Enter your FTP value and zone percentages or enter custom zone boundaries directly</li>
+                    <li>Sync changes to your device</li>
+                </ol>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Visual Zone Indicators</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Many computers offer color-coded power zone displays or gauge-style indicators. These provide instant visual feedback without requiring you to read numbers during hard efforts. Configure colors that make sense to you:</p>
+
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Blue:</strong> Recovery and endurance (Zones 1-2)</li>
+                    <li><strong>Green:</strong> Tempo (Zone 3)</li>
+                    <li><strong>Yellow:</strong> Threshold (Zone 4)</li>
+                    <li><strong>Orange:</strong> VO2max (Zone 5)</li>
+                    <li><strong>Red:</strong> Anaerobic and neuromuscular (Zones 6-7)</li>
+                </ul>
+            </section>
+
+            <section id="advanced-metrics" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Advanced Power Metrics</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Beyond basic power display, these advanced metrics help you understand training load and pacing during longer rides.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Training Load Metrics</h3>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Metric</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Formula</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Use</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">TSS</td>
+                                <td class="px-6 py-4 text-gray-700">IF^2 x hours x 100</td>
+                                <td class="px-6 py-4 text-gray-700">Total training stress</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">IF</td>
+                                <td class="px-6 py-4 text-gray-700">NP / FTP</td>
+                                <td class="px-6 py-4 text-gray-700">Relative intensity</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">NP</td>
+                                <td class="px-6 py-4 text-gray-700">Weighted power average</td>
+                                <td class="px-6 py-4 text-gray-700">True effort on variable terrain</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">VI</td>
+                                <td class="px-6 py-4 text-gray-700">NP / Avg Power</td>
+                                <td class="px-6 py-4 text-gray-700">Power variability (pacing quality)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Intensity Factor Guidelines</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>IF &lt; 0.75:</strong> Recovery or easy endurance</li>
+                    <li><strong>IF 0.75-0.85:</strong> Tempo or steady aerobic</li>
+                    <li><strong>IF 0.85-0.95:</strong> Threshold work</li>
+                    <li><strong>IF 0.95-1.05:</strong> Hard race effort</li>
+                    <li><strong>IF > 1.05:</strong> Time trial or short race</li>
+                </ul>
+            </section>
+
+            <section id="screen-layouts" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Recommended Screen Layouts</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Balance comprehensive data with readability. Too many fields create visual clutter during hard efforts.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">4-Field Layout (Recommended)</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Ideal for most training. Large, readable fields with the most important metrics always visible.</p>
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-white p-4 rounded border">Power (3s)</div>
+                        <div class="bg-white p-4 rounded border">Heart Rate</div>
+                        <div class="bg-white p-4 rounded border">Duration</div>
+                        <div class="bg-white p-4 rounded border">Cadence</div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">6-Field Layout</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">More information with slightly smaller text. Good for longer steady rides.</p>
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                        <div class="bg-white p-3 rounded border">Power (3s)</div>
+                        <div class="bg-white p-3 rounded border">Power Zone</div>
+                        <div class="bg-white p-3 rounded border">Heart Rate</div>
+                        <div class="bg-white p-3 rounded border">Duration</div>
+                        <div class="bg-white p-3 rounded border">Cadence</div>
+                        <div class="bg-white p-3 rounded border">Distance</div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">8-Field Layout</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Maximum data density. Best for post-workout analysis screens or flat steady rides.</p>
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                        <div class="bg-white p-2 rounded border">Power (3s)</div>
+                        <div class="bg-white p-2 rounded border">Lap Power</div>
+                        <div class="bg-white p-2 rounded border">Avg Power</div>
+                        <div class="bg-white p-2 rounded border">NP</div>
+                        <div class="bg-white p-2 rounded border">HR</div>
+                        <div class="bg-white p-2 rounded border">Cadence</div>
+                        <div class="bg-white p-2 rounded border">Time</div>
+                        <div class="bg-white p-2 rounded border">TSS</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="alerts-setup" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Setting Up Training Alerts</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Training alerts notify you when metrics drift outside target ranges. This keeps you honest during zone-specific workouts without constantly watching the screen.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Power Zone Alerts</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Configure alerts for your target zone during structured workouts. Most computers allow setting upper and lower power boundaries with audio, visual, or vibration alerts when you exit the range.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Heart Rate Ceiling Alert</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">For endurance rides, set a heart rate ceiling alert at your Zone 2 upper limit. This prevents unconsciously drifting into higher intensities on long aerobic rides.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Cadence Range Alerts</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Maintain optimal pedaling efficiency with cadence alerts. Common ranges are 85-95 RPM for most riding, with lower targets (70-80) for climbing drills.</p>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-6">
+                    <p class="text-yellow-800 font-medium">Alert Tip: Start with fewer alerts and add more as needed. Too many notifications become distracting and get ignored. Focus on the one or two metrics most critical to your current training focus.</p>
+                </div>
+            </section>
+
+            <!-- Related Calculators -->
+            <section class="border-t border-gray-200 pt-10 mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/ftp-calculator" class="block p-6 bg-purple-50 rounded-xl hover:bg-purple-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">FTP Calculator</h3>
+                        <p class="text-gray-600 text-sm">Calculate power zones for your cycling computer.</p>
+                    </a>
+                    <a href="/power-to-weight-ratio-calculator" class="block p-6 bg-purple-50 rounded-xl hover:bg-purple-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Power-to-Weight Calculator</h3>
+                        <p class="text-gray-600 text-sm">Calculate W/kg for climbing analysis.</p>
+                    </a>
+                    <a href="/cadence-speed-calculator" class="block p-6 bg-purple-50 rounded-xl hover:bg-purple-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Cadence Speed Calculator</h3>
+                        <p class="text-gray-600 text-sm">Optimize cadence for your gearing setup.</p>
+                    </a>
+                    <a href="/cycling-tools" class="block p-6 bg-purple-50 rounded-xl hover:bg-purple-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">All Cycling Tools</h3>
+                        <p class="text-gray-600 text-sm">Complete collection of cycling calculators.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Related Articles -->
+            <section class="border-t border-gray-200 pt-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/blog/cycling-power-zones-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Cycling Power Zones Complete Guide</h3>
+                        <p class="text-gray-600 text-sm">Understanding and training with FTP-based power zones.</p>
+                    </a>
+                    <a href="/blog/power-meter-training-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Power Meter Training Guide</h3>
+                        <p class="text-gray-600 text-sm">Complete guide to power-based cycling training.</p>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-4">© 2026 RunBikeCalc. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="/running-tools" class="hover:text-white transition">Running Tools</a>
+                <a href="/cycling-tools" class="hover:text-white transition">Cycling Tools</a>
+                <a href="/blog" class="hover:text-white transition">Blog</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

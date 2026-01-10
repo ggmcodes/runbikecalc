@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Karvonen Method vs Percentage of Max HR: Which Zone Calculator to Use</title>
+    <link rel="canonical" href="https://runbikecalc.com/blog/karvonen-vs-percentage-zones.html">
+    <meta name="description" content="Compare Karvonen heart rate reserve method versus percentage of max HR for calculating training zones. Understand which zone calculator method is best for your fitness level.">
+    <meta name="keywords" content="Karvonen method, heart rate reserve, percentage max HR, zone calculator comparison, HRR method, training zone calculation">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Karvonen Method vs Percentage of Max HR: Which Zone Calculator to Use">
+    <meta property="og:description" content="Scientific comparison of Karvonen heart rate reserve method versus simple percentage of max HR for training zone calculations.">
+    <meta property="og:image" content="https://runbikecalc.com/images/karvonen-comparison.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/blog/karvonen-vs-percentage-zones.html">
+    <meta property="og:type" content="article">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Karvonen Method vs Percentage of Max HR: Which Zone Calculator to Use",
+        "description": "Scientific comparison of heart rate zone calculation methods for endurance training",
+        "datePublished": "2026-01-09",
+        "dateModified": "2026-01-09",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Karvonen method for calculating heart rate zones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Karvonen method calculates training zones using heart rate reserve (HRR), which is the difference between your max HR and resting HR. The formula is: Target HR = (HRR x intensity%) + Resting HR. This accounts for individual fitness levels by incorporating resting heart rate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Karvonen method more accurate than percentage of max HR?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Karvonen method is generally more individualized because it accounts for resting heart rate, which reflects fitness level. However, for well-trained athletes with similar resting HRs, both methods produce similar zones. The Karvonen method is especially beneficial for beginners or those with unusually high or low resting heart rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does resting heart rate affect training zones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A lower resting heart rate gives you a larger heart rate reserve, meaning your zones will be spread across a wider range of beats. For example, someone with a resting HR of 50 vs 70 bpm will have zones that differ by approximately 10-15 beats per zone when using the Karvonen method."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which method should beginners use for heart rate training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Beginners often benefit more from the Karvonen method because their higher resting heart rates would make simple percentage zones feel too easy. The Karvonen method adjusts for fitness level automatically, producing more appropriate training intensities for those new to exercise."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="/blog" class="hover:text-blue-600">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Karvonen vs Percentage Zones</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Karvonen Method vs Percentage of Max HR
+                </h1>
+                <p class="text-xl opacity-95">
+                    Which Zone Calculator Method Should You Use?
+                </p>
+                <div class="mt-6 flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">9 min read</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Updated Jan 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <article class="max-w-4xl mx-auto">
+            <!-- Quick Comparison Box -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Method Comparison at a Glance</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-4 border rounded-lg bg-blue-50">
+                        <h3 class="font-semibold text-blue-600 text-lg mb-2">Karvonen (HRR) Method</h3>
+                        <p class="text-sm text-gray-600 mb-2"><strong>Formula:</strong> Target HR = (HRR x %) + RHR</p>
+                        <ul class="text-sm space-y-1">
+                            <li>+ Accounts for fitness level</li>
+                            <li>+ More individualized zones</li>
+                            <li>+ Better for beginners</li>
+                            <li>- Requires accurate RHR</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border rounded-lg bg-green-50">
+                        <h3 class="font-semibold text-green-600 text-lg mb-2">Percentage of Max HR</h3>
+                        <p class="text-sm text-gray-600 mb-2"><strong>Formula:</strong> Target HR = Max HR x %</p>
+                        <ul class="text-sm space-y-1">
+                            <li>+ Simple calculation</li>
+                            <li>+ Only needs max HR</li>
+                            <li>+ Standard across athletes</li>
+                            <li>- Ignores fitness level</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                 alt="Athlete analyzing heart rate data for training zones"
+                 class="w-full h-64 md:h-96 object-cover rounded-xl mb-8">
+
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl leading-relaxed mb-6">
+                    When setting up heart rate training zones, you'll encounter two primary calculation methods: the Karvonen method (heart rate reserve) and simple percentage of max heart rate. Both produce valid training zones, but they differ significantly in how they account for individual physiology. Understanding these differences helps you choose the right approach for your fitness level and training goals.
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 my-8">
+                    <h3 class="font-semibold text-lg mb-2">Calculate Both Methods Side by Side</h3>
+                    <p class="mb-3">Our <a href="/mhr-karvonen-calculator" class="text-blue-600 hover:underline font-semibold">Karvonen Zone Calculator</a> shows you zones calculated using heart rate reserve, while our <a href="/heart-rate-zone-calculator" class="text-blue-600 hover:underline font-semibold">Heart Rate Zone Calculator</a> uses percentage of max HR.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Understanding Heart Rate Reserve (HRR)</h2>
+
+                <div class="bg-gray-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">The Karvonen Formula Explained</h3>
+
+                    <p class="mb-4">Developed by Finnish physician Martti Karvonen in the 1950s, this method uses your heart rate reserve - the difference between your maximum and resting heart rate.</p>
+
+                    <div class="bg-white rounded p-4 mb-4">
+                        <p class="font-mono text-center mb-2"><strong>Heart Rate Reserve (HRR) = Max HR - Resting HR</strong></p>
+                        <p class="font-mono text-center"><strong>Target HR = (HRR x Intensity%) + Resting HR</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold mb-2">Example Calculation:</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong>Max HR:</strong> 185 bpm</li>
+                        <li><strong>Resting HR:</strong> 55 bpm</li>
+                        <li><strong>HRR:</strong> 185 - 55 = 130 bpm</li>
+                        <li><strong>Zone 2 (60-70%):</strong> (130 x 0.60) + 55 = 133 bpm to (130 x 0.70) + 55 = 146 bpm</li>
+                    </ul>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The Simple Percentage Method</h2>
+
+                <div class="bg-gray-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Percentage of Max HR Explained</h3>
+
+                    <p class="mb-4">This straightforward approach calculates zones as direct percentages of your maximum heart rate, without considering resting heart rate.</p>
+
+                    <div class="bg-white rounded p-4 mb-4">
+                        <p class="font-mono text-center"><strong>Target HR = Max HR x Intensity%</strong></p>
+                    </div>
+
+                    <h4 class="font-semibold mb-2">Example Calculation:</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong>Max HR:</strong> 185 bpm</li>
+                        <li><strong>Zone 2 (60-70%):</strong> 185 x 0.60 = 111 bpm to 185 x 0.70 = 130 bpm</li>
+                    </ul>
+
+                    <div class="bg-yellow-100 rounded p-4 mt-4">
+                        <p class="text-sm"><strong>Notice the difference:</strong> Same person, same Zone 2 intensity target, but the Karvonen method produces 133-146 bpm while percentage method produces 111-130 bpm - a significant difference!</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Side-by-Side Zone Comparison</h2>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 my-6">
+                    <p class="mb-4 text-sm text-gray-600">Example: Athlete with Max HR 185 bpm, Resting HR 55 bpm</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Zone</th>
+                                    <th class="text-center py-2">Intensity</th>
+                                    <th class="text-center py-2">% Max HR</th>
+                                    <th class="text-center py-2">Karvonen</th>
+                                    <th class="text-center py-2">Difference</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold text-blue-600">Zone 1</td>
+                                    <td class="text-center">50-60%</td>
+                                    <td class="text-center">93-111</td>
+                                    <td class="text-center">120-133</td>
+                                    <td class="text-center text-red-600">+27-22</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold text-green-600">Zone 2</td>
+                                    <td class="text-center">60-70%</td>
+                                    <td class="text-center">111-130</td>
+                                    <td class="text-center">133-146</td>
+                                    <td class="text-center text-red-600">+22-16</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold text-yellow-600">Zone 3</td>
+                                    <td class="text-center">70-80%</td>
+                                    <td class="text-center">130-148</td>
+                                    <td class="text-center">146-159</td>
+                                    <td class="text-center text-red-600">+16-11</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold text-orange-600">Zone 4</td>
+                                    <td class="text-center">80-90%</td>
+                                    <td class="text-center">148-167</td>
+                                    <td class="text-center">159-172</td>
+                                    <td class="text-center text-red-600">+11-5</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-semibold text-red-600">Zone 5</td>
+                                    <td class="text-center">90-100%</td>
+                                    <td class="text-center">167-185</td>
+                                    <td class="text-center">172-185</td>
+                                    <td class="text-center text-red-600">+5-0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-600">The differences are largest in lower zones and converge at maximum intensity.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Why the Difference Matters</h2>
+
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-blue-700">For Beginners (Higher Resting HR)</h3>
+                        <p class="text-gray-700 mb-3">A beginner with a resting HR of 75 bpm has a smaller heart rate reserve. Using simple percentages would set Zone 2 too low, making workouts feel trivially easy.</p>
+                        <p class="text-sm bg-blue-100 rounded p-2"><strong>Recommendation:</strong> Use Karvonen method for more appropriate training stimulus.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-green-700">For Athletes (Lower Resting HR)</h3>
+                        <p class="text-gray-700 mb-3">A well-trained athlete with resting HR of 45 bpm has a large heart rate reserve. Both methods produce similar zones because their physiology better matches the percentage assumptions.</p>
+                        <p class="text-sm bg-green-100 rounded p-2"><strong>Recommendation:</strong> Either method works; consistency matters more than choice.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The Resting Heart Rate Factor</h2>
+
+                <div class="bg-gray-50 rounded-lg p-6 my-6">
+                    <p class="mb-4">Your resting heart rate is the key variable that determines how much these methods differ. Consider two athletes with identical max HR of 180 bpm:</p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded p-4">
+                            <h4 class="font-semibold mb-2">Beginner: Resting HR 72 bpm</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>HRR = 108 bpm</li>
+                                <li>Zone 2 (Karvonen): 137-148 bpm</li>
+                                <li>Zone 2 (% Max): 108-126 bpm</li>
+                                <li><strong>Difference: 22-29 bpm</strong></li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded p-4">
+                            <h4 class="font-semibold mb-2">Athlete: Resting HR 48 bpm</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>HRR = 132 bpm</li>
+                                <li>Zone 2 (Karvonen): 127-140 bpm</li>
+                                <li>Zone 2 (% Max): 108-126 bpm</li>
+                                <li><strong>Difference: 14-19 bpm</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="mt-4 text-sm">The higher your resting heart rate, the more the Karvonen method shifts your zones upward compared to simple percentages.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">When to Use Each Method</h2>
+
+                <div class="space-y-6 my-8">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-blue-600">Use Karvonen Method When:</h3>
+                        <ul class="space-y-2">
+                            <li>You're new to exercise or returning after a long break</li>
+                            <li>Your resting heart rate is above 65 bpm</li>
+                            <li>Simple percentage zones feel too easy during aerobic work</li>
+                            <li>You want zones that automatically adjust as fitness improves</li>
+                            <li>You have accurate resting heart rate data (morning measurement)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-green-600">Use Percentage of Max HR When:</h3>
+                        <ul class="space-y-2">
+                            <li>You're already well-trained with resting HR under 55 bpm</li>
+                            <li>You want simplicity and quick calculations</li>
+                            <li>You're following a program designed around percentage zones</li>
+                            <li>You don't have reliable resting heart rate measurements</li>
+                            <li>You're comparing zones with other athletes or programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">How to Measure Resting Heart Rate</h2>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+                    <h3 class="font-semibold text-lg mb-2">For Accurate Karvonen Calculations</h3>
+                    <ol class="space-y-2">
+                        <li><strong>1. Measure first thing in the morning:</strong> Before getting out of bed, after a full night's sleep</li>
+                        <li><strong>2. Use a chest strap or validated device:</strong> Wrist monitors can be inaccurate at rest</li>
+                        <li><strong>3. Average multiple days:</strong> Take measurements for 5-7 consecutive days</li>
+                        <li><strong>4. Exclude outliers:</strong> Discard readings after poor sleep, illness, or alcohol</li>
+                        <li><strong>5. Retest periodically:</strong> Resting HR changes with fitness; update quarterly</li>
+                    </ol>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The LTHR Alternative</h2>
+
+                <div class="bg-purple-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Lactate Threshold Heart Rate Method</h3>
+
+                    <p class="mb-4">A third option bypasses both methods by establishing zones from your lactate threshold heart rate (LTHR) rather than max HR. This approach directly measures the most important training intensity marker.</p>
+
+                    <div class="bg-purple-100 rounded p-4">
+                        <p class="text-sm"><strong>Why LTHR zones work well:</strong> Your lactate threshold represents the point where training stress becomes unsustainable. Building zones around this anchor point produces highly individualized results regardless of resting heart rate.</p>
+                    </div>
+
+                    <p class="mt-4 text-sm">Use our <a href="/lactate-threshold-calculator" class="text-purple-700 hover:underline font-semibold">Lactate Threshold Calculator</a> to establish LTHR-based training zones.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">Can I switch between methods during a training cycle?</h3>
+                        <p>It's best to stick with one method throughout a training cycle for consistency. If you switch, your zone targets will shift, making progress tracking difficult. Choose one method at the start and maintain it.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">My fitness app uses percentage - should I change it?</h3>
+                        <p>Most apps default to percentage of max HR because it requires less input. If your resting HR is under 60 bpm, the difference may not be significant. If it's above 65 bpm, consider manually setting zones using Karvonen calculations from our <a href="/mhr-karvonen-calculator" class="text-blue-600 hover:underline">Karvonen Calculator</a>.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">Which method do professional coaches prefer?</h3>
+                        <p>Many coaches prefer LTHR-based zones over either method. For max HR-based approaches, coaches working with beginners tend to prefer Karvonen, while those working with elite athletes often use simple percentages or power-based training altogether.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 mt-12 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Calculate Your Zones Using Both Methods</h3>
+                    <p class="mb-6">Compare Karvonen and percentage zones side by side to see which produces more appropriate training targets for your fitness level.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/mhr-karvonen-calculator" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                            Karvonen Calculator
+                        </a>
+                        <a href="/heart-rate-zone-calculator" class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700">
+                            % Max HR Calculator
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Calculators -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/mhr-karvonen-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-blue-600 font-bold text-lg">K</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">HRR METHOD</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Karvonen Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Calculate zones using heart rate reserve method.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-green-600 font-bold text-lg">%</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">PERCENTAGE</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Calculate zones using percentage of max HR.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/lactate-threshold-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-purple-600 font-bold text-lg">LT</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">THRESHOLD</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">LTHR Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Calculate zones from lactate threshold heart rate.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/hrr-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="text-orange-600 font-bold text-lg">R</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-orange-600 font-semibold mb-1">RESERVE</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Reserve Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Calculate your heart rate reserve value.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

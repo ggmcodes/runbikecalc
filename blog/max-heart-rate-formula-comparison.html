@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Max Heart Rate Formulas Compared: Which Calculator Method Is Most Accurate</title>
+    <link rel="canonical" href="https://runbikecalc.com/blog/max-heart-rate-formula-comparison.html">
+    <meta name="description" content="Compare max heart rate formulas: 220-age, Tanaka, Gulati, and field tests. Discover which MHR calculator method delivers the most accurate results for your training zones.">
+    <meta name="keywords" content="max heart rate formula, 220-age formula, Tanaka formula, MHR calculator, heart rate formula comparison, field test heart rate">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Max Heart Rate Formulas Compared: Which Calculator Method Is Most Accurate">
+    <meta property="og:description" content="Scientific comparison of max heart rate formulas. Find the most accurate method for calculating your MHR and training zones.">
+    <meta property="og:image" content="https://runbikecalc.com/images/max-heart-rate-comparison.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/blog/max-heart-rate-formula-comparison.html">
+    <meta property="og:type" content="article">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Max Heart Rate Formulas Compared: Which Calculator Method Is Most Accurate",
+        "description": "Scientific comparison of max heart rate calculation formulas including 220-age, Tanaka, and field test methods",
+        "datePublished": "2026-01-09",
+        "dateModified": "2026-01-09",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the 220-age formula accurate for calculating max heart rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 220-age formula has a standard deviation of 10-12 bpm, meaning it can be off by 20+ beats for many individuals. While convenient, it's the least accurate formula. The Tanaka formula (208 - 0.7 x age) is more accurate with a standard deviation of 7-8 bpm."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which max heart rate formula is most accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A field test provides the most accurate max heart rate measurement (95-100% accuracy). Among formulas, the Tanaka formula (208 - 0.7 x age) is most accurate for the general population, while Gulati's formula (206 - 0.88 x age) is specifically validated for women."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I perform a field test for max heart rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "After a thorough warm-up, perform 3-4 intervals of 2-3 minutes at maximum sustainable effort with short recovery. On the final interval, push to absolute maximum in the last 30 seconds. The highest heart rate recorded is your true max HR."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does max heart rate decrease with age?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, max heart rate naturally declines with age by approximately 0.7-1 beat per year. However, this decline varies significantly between individuals. Highly trained athletes may maintain higher max heart rates than sedentary individuals of the same age."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="/blog" class="hover:text-blue-600">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Max Heart Rate Formula Comparison</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-red-600 to-orange-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Max Heart Rate Formulas Compared
+                </h1>
+                <p class="text-xl opacity-95">
+                    Which Calculator Method Is Most Accurate for Your Training Zones?
+                </p>
+                <div class="mt-6 flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">10 min read</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Updated Jan 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <article class="max-w-4xl mx-auto">
+            <!-- Quick Summary Box -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Formula Accuracy at a Glance</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 border rounded-lg bg-red-50">
+                        <h3 class="font-semibold text-red-600">220 - Age</h3>
+                        <p class="text-sm text-gray-600">Standard Deviation: 10-12 bpm</p>
+                        <p class="text-xs mt-1">Least accurate</p>
+                    </div>
+                    <div class="p-4 border rounded-lg bg-green-50">
+                        <h3 class="font-semibold text-green-600">Tanaka Formula</h3>
+                        <p class="text-sm text-gray-600">Standard Deviation: 7-8 bpm</p>
+                        <p class="text-xs mt-1">Best for general use</p>
+                    </div>
+                    <div class="p-4 border rounded-lg bg-purple-50">
+                        <h3 class="font-semibold text-purple-600">Gulati (Women)</h3>
+                        <p class="text-sm text-gray-600">Standard Deviation: 6-7 bpm</p>
+                        <p class="text-xs mt-1">Female-specific</p>
+                    </div>
+                    <div class="p-4 border rounded-lg bg-blue-50">
+                        <h3 class="font-semibold text-blue-600">Field Test</h3>
+                        <p class="text-sm text-gray-600">Accuracy: 95-100%</p>
+                        <p class="text-xs mt-1">Gold standard</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                 alt="Athlete checking heart rate during training"
+                 class="w-full h-64 md:h-96 object-cover rounded-xl mb-8">
+
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl leading-relaxed mb-6">
+                    Your maximum heart rate determines every training zone you use. Get it wrong by 10 beats, and your entire training program shifts into the wrong intensity. The traditional 220-age formula has been around since the 1970s, but research shows it can miss your true max by over 20 beats. Let's examine which formula actually delivers accurate results.
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 my-8">
+                    <h3 class="font-semibold text-lg mb-2">Calculate Your Max Heart Rate Now</h3>
+                    <p class="mb-3">Our <a href="/max-heart-rate-calculator" class="text-blue-600 hover:underline font-semibold">Max Heart Rate Calculator</a> uses multiple formulas including Tanaka, Gulati, and traditional methods to give you a range of estimates for comparison.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The 220-Age Formula: Why It Falls Short</h2>
+
+                <div class="bg-gray-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Formula: MHR = 220 - Age</h3>
+
+                    <p class="mb-4">This formula emerged from Dr. William Haskell's observations in the 1970s but was never intended as a scientific standard. It was literally sketched on a napkin based on loose observations, not rigorous clinical trials.</p>
+
+                    <h4 class="font-semibold mb-2">The Problem with 220-Age:</h4>
+                    <ul class="space-y-2">
+                        <li><strong>Standard deviation of 10-12 bpm:</strong> This means 68% of people fall within 10-12 beats of the predicted value, but 32% are even further off</li>
+                        <li><strong>Overestimates MHR for older adults:</strong> People over 40 often have lower predicted values than their actual max</li>
+                        <li><strong>Underestimates MHR for younger athletes:</strong> Fit individuals under 30 frequently exceed predictions by 15+ bpm</li>
+                        <li><strong>No gender differentiation:</strong> Research shows women and men have different age-related MHR decline patterns</li>
+                    </ul>
+
+                    <div class="bg-red-100 rounded p-4 mt-4">
+                        <p class="text-sm"><strong>Example:</strong> A 40-year-old predicted at 180 bpm could actually have a max anywhere from 168 to 192 bpm - a range that completely changes training zones.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The Tanaka Formula: Better Population Accuracy</h2>
+
+                <div class="bg-green-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Formula: MHR = 208 - (0.7 x Age)</h3>
+
+                    <p class="mb-4">Published in 2001, the Tanaka formula analyzed 351 studies involving over 18,000 subjects. It provides significantly better population-level accuracy than the 220-age formula.</p>
+
+                    <h4 class="font-semibold mb-2">Why Tanaka Is Better:</h4>
+                    <ul class="space-y-2">
+                        <li><strong>Lower standard deviation (7-8 bpm):</strong> More people fall closer to the predicted value</li>
+                        <li><strong>Better for older athletes:</strong> The 0.7 multiplier accounts for slower age-related decline</li>
+                        <li><strong>Based on meta-analysis:</strong> Synthesized decades of research rather than casual observation</li>
+                        <li><strong>Validated across fitness levels:</strong> Works for both sedentary individuals and trained athletes</li>
+                    </ul>
+
+                    <div class="bg-green-100 rounded p-4 mt-4">
+                        <p class="text-sm"><strong>Comparison for a 50-year-old:</strong><br>
+                        220-Age: 170 bpm<br>
+                        Tanaka: 173 bpm<br>
+                        The 3-beat difference matters for zone calculations, especially threshold training.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">The Gulati Formula: Designed for Women</h2>
+
+                <div class="bg-purple-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Formula: MHR = 206 - (0.88 x Age)</h3>
+
+                    <p class="mb-4">Dr. Martha Gulati's 2010 research specifically studied 5,437 women and found distinct age-related MHR patterns. Women experience a steeper decline in max heart rate compared to men.</p>
+
+                    <h4 class="font-semibold mb-2">Key Findings:</h4>
+                    <ul class="space-y-2">
+                        <li><strong>Women-specific validation:</strong> Traditional formulas were developed primarily on male subjects</li>
+                        <li><strong>Steeper age decline (0.88 vs 0.7):</strong> Women's max HR drops faster per year than men's</li>
+                        <li><strong>Higher base (206 vs 208):</strong> Young women typically have slightly lower starting max HR</li>
+                        <li><strong>Better predictive accuracy for female athletes:</strong> Standard deviation of 6-7 bpm when applied to women</li>
+                    </ul>
+
+                    <div class="bg-purple-100 rounded p-4 mt-4">
+                        <p class="text-sm"><strong>Example for a 35-year-old woman:</strong><br>
+                        220-Age: 185 bpm<br>
+                        Tanaka: 184 bpm<br>
+                        Gulati: 175 bpm<br>
+                        The Gulati formula often provides a more realistic target for female athletes.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Field Testing: The Gold Standard</h2>
+
+                <div class="bg-blue-50 rounded-lg p-6 my-6">
+                    <h3 class="text-xl font-semibold mb-3">Accuracy: 95-100%</h3>
+
+                    <p class="mb-4">No formula can match actually measuring your max heart rate during a properly executed field test. While more demanding, it provides data specific to your physiology.</p>
+
+                    <h4 class="font-semibold mb-2">Field Test Protocol:</h4>
+                    <ol class="space-y-2">
+                        <li><strong>Warm-up (15-20 minutes):</strong> Progressive intensity build including 3-4 short accelerations</li>
+                        <li><strong>Interval Set:</strong> Perform 3-4 intervals of 2-3 minutes at maximum sustainable effort</li>
+                        <li><strong>Recovery:</strong> 2 minutes easy between intervals</li>
+                        <li><strong>Final Push:</strong> On the last interval, push to absolute maximum in the final 30-60 seconds</li>
+                        <li><strong>Record:</strong> The highest heart rate observed is your true max HR</li>
+                    </ol>
+
+                    <div class="bg-yellow-100 rounded p-4 mt-4">
+                        <p class="text-sm"><strong>Safety Note:</strong> Field tests should only be performed by healthy individuals cleared for intense exercise. Consider having a training partner present and don't attempt if you have any cardiac risk factors.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Formula Comparison Table</h2>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 my-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="text-left py-2">Age</th>
+                                    <th class="text-center py-2">220-Age</th>
+                                    <th class="text-center py-2">Tanaka</th>
+                                    <th class="text-center py-2">Gulati (Women)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold">25</td>
+                                    <td class="text-center">195</td>
+                                    <td class="text-center">190</td>
+                                    <td class="text-center">184</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold">35</td>
+                                    <td class="text-center">185</td>
+                                    <td class="text-center">184</td>
+                                    <td class="text-center">175</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold">45</td>
+                                    <td class="text-center">175</td>
+                                    <td class="text-center">177</td>
+                                    <td class="text-center">166</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 font-semibold">55</td>
+                                    <td class="text-center">165</td>
+                                    <td class="text-center">170</td>
+                                    <td class="text-center">158</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-semibold">65</td>
+                                    <td class="text-center">155</td>
+                                    <td class="text-center">163</td>
+                                    <td class="text-center">149</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Which Formula Should You Use?</h2>
+
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-blue-600">For Quick Estimates</h3>
+                        <p class="text-gray-700">Use the Tanaka formula (208 - 0.7 x age) as your baseline. It provides better accuracy than 220-age without requiring a physical test.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-purple-600">For Women</h3>
+                        <p class="text-gray-700">Consider the Gulati formula (206 - 0.88 x age) for a more accurate female-specific prediction, then validate with a field test if training seriously.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-green-600">For Serious Athletes</h3>
+                        <p class="text-gray-700">Perform a field test annually. Formula predictions are starting points; your actual max is what matters for precise zone training.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-3 text-orange-600">For Zone Training</h3>
+                        <p class="text-gray-700">Use the <a href="/heart-rate-zone-calculator" class="text-orange-600 hover:underline">Heart Rate Zone Calculator</a> with your tested or estimated max to generate accurate training zones.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">Can my max heart rate change over time?</h3>
+                        <p>Max heart rate primarily declines with age (roughly 0.7-1 bpm per year). Training doesn't significantly increase MHR, but detraining or illness can temporarily reduce it. Retest annually to track changes.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">Why do I exceed my calculated max during races?</h3>
+                        <p>If you consistently hit heart rates above your predicted max, your actual MHR is higher than the formula predicts. This is common in fit, younger athletes. Consider this race data as evidence of your true max.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="font-semibold text-lg mb-2">Is resting heart rate related to max heart rate?</h3>
+                        <p>No, they're independent. A low resting heart rate (indicating good fitness) doesn't predict a higher or lower max heart rate. However, both matter for calculating heart rate reserve and <a href="/mhr-karvonen-calculator" class="text-blue-600 hover:underline">Karvonen-based training zones</a>.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 mt-12 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Calculate Your Training Zones</h3>
+                    <p class="mb-6">Use our free max heart rate calculator to compare all formulas and generate your personalized training zones.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/max-heart-rate-calculator" class="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700">
+                            Calculate Max HR Now
+                        </a>
+                        <a href="/heart-rate-zone-calculator" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                            Get Training Zones
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Calculators -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/max-heart-rate-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-red-100 rounded-lg flex items-center justify-center">
+                                <span class="text-red-600 font-bold text-lg">HR</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-red-600 font-semibold mb-1">CALCULATOR</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Max Heart Rate Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Compare multiple MHR formulas side by side.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-blue-600 font-bold text-lg">Z</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">ZONES</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Generate training zones from your max heart rate.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/mhr-karvonen-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-green-600 font-bold text-lg">K</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">ADVANCED</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Karvonen Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Heart rate reserve method for precise zones.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/vo2-max-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-purple-600 font-bold text-lg">V</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">FITNESS</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">VO2 Max Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Estimate your cardiovascular fitness level.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 RunBikeCalc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

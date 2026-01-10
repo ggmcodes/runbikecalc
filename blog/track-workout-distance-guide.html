@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Workout Distances: Lane Calculations and Common Training Distances | RunBikeCalc</title>
+    <meta name="description" content="Complete guide to track workout distances and lane calculations. Understand 400-meter track geometry, lane adjustments, and common interval distances for training.">
+    <meta name="keywords" content="track workout distances, 400 meter track, lane calculations, track intervals, running track lanes, stagger calculations, track training">
+    <meta name="author" content="RunBikeCalc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://runbikecalc.com/blog/track-workout-distance-guide.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Track Workout Distances: Lane Calculations and Common Training Distances">
+    <meta property="og:description" content="Understanding track geometry, lane distances, and interval workout planning.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://runbikecalc.com/blog/track-workout-distance-guide.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Track Workout Distances Guide 2026">
+    <meta name="twitter:description" content="Lane calculations and common training distances for the track.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=630&fit=crop">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Track Workout Distances: Lane Calculations and Common Training Distances",
+        "description": "Complete guide to track workout distances, lane calculations, and interval training on a 400-meter track.",
+        "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=630&fit=crop",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://runbikecalc.com/logo.png"
+            }
+        },
+        "datePublished": "2026-01-09",
+        "dateModified": "2026-01-09",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://runbikecalc.com/blog/track-workout-distance-guide.html"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long is one lap around a standard track?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "On a standard 400-meter track, one lap in lane 1 (measured 20cm from the inner edge) is exactly 400 meters. However, each outer lane is progressively longer. Lane 8 is approximately 453 meters per lap. For accurate distance, always run in lane 1 or use lane-specific stagger marks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much longer is each lane on a track?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each lane adds approximately 7.67 meters per lap due to the increased circumference of the curves. Lane 2 is about 408m, lane 3 is 415m, and so on up to lane 8 at approximately 453m. This is why races use staggered starts for 200m and longer events."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where should I run on the track for training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For interval training, run in lane 1 for accurate distances. During recovery jogs between intervals, move to an outer lane (lane 3-6) to leave lane 1 clear for faster runners. If the track is crowded, use lanes 1-2 for hard efforts and outer lanes for recovery."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate pace for track intervals?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Divide your target time per 400m by your mile pace. For example, if your goal 5K pace is 7:00/mile, that equals approximately 1:45 per 400m (7:00 / 4 laps = 1:45). Use 200m splits at half that time (52.5 seconds) to check mid-interval pacing."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-78BHZZG6CN');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3268619626498498" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 bg-gradient-to-br from-red-600 to-pink-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">RUNNING REFERENCE</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Track Workout Distances: Lane Calculations and Common Training Distances</h1>
+                <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">Master track geometry with lane distance calculations, interval workout distances, and pacing strategies for effective speed training.</p>
+                <div class="flex items-center justify-center space-x-6 text-red-200">
+                    <span>Jan 9, 2026</span>
+                    <span>•</span>
+                    <span>11 min read</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="text-sm text-gray-600">
+            <a href="/" class="hover:text-primary">Home</a>
+            <span class="mx-2">/</span>
+            <a href="/blog" class="hover:text-primary">Blog</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900">Track Workout Distance Guide</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article class="bg-white rounded-2xl shadow-sm p-8 md:p-12">
+
+            <!-- Table of Contents -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-10">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
+                <nav class="space-y-2">
+                    <a href="#track-geometry" class="block text-primary hover:text-secondary">Standard Track Geometry</a>
+                    <a href="#lane-distances" class="block text-primary hover:text-secondary">Lane Distance Calculations</a>
+                    <a href="#common-intervals" class="block text-primary hover:text-secondary">Common Interval Distances</a>
+                    <a href="#pace-calculations" class="block text-primary hover:text-secondary">Track Pace Calculations</a>
+                    <a href="#workout-examples" class="block text-primary hover:text-secondary">Sample Track Workouts</a>
+                    <a href="#track-etiquette" class="block text-primary hover:text-secondary">Track Etiquette and Lane Usage</a>
+                </nav>
+            </div>
+
+            <!-- Content Sections -->
+            <section id="track-geometry" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Standard Track Geometry</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Understanding track geometry is essential for accurate training. A standard outdoor track follows World Athletics specifications, providing precise distances for interval training and racing.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Track Specifications</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Lane 1 distance:</strong> Exactly 400 meters per lap</li>
+                    <li><strong>Lane width:</strong> 1.22 meters (4 feet) standard</li>
+                    <li><strong>Number of lanes:</strong> Typically 6-8 lanes</li>
+                    <li><strong>Measurement line:</strong> 20 cm from inner edge of lane 1</li>
+                    <li><strong>Straightaway length:</strong> Approximately 84.39 meters</li>
+                    <li><strong>Curve radius (lane 1):</strong> 36.5 meters</li>
+                </ul>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Why 400 Meters?</h4>
+                    <p class="text-gray-700">The 400-meter track became the international standard because it provides practical lap distances for common race events. One lap equals 400m, four laps equals 1600m (approximately one mile), and 10 laps equals 4000m. This makes pace calculation straightforward for coaches and athletes.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Indoor vs Outdoor Tracks</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Indoor tracks are typically 200 meters per lap with tighter curves. This affects pacing due to more frequent direction changes and increased centrifugal force. Some indoor facilities have non-standard lengths (160m, 300m), so always verify before training.</p>
+            </section>
+
+            <section id="lane-distances" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Lane Distance Calculations</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Each lane progressively increases in circumference because the curves become larger arcs. This is why races use staggered starts for events of 200 meters and longer.</p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Lane</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Distance per Lap</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Extra per Lap vs Lane 1</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Stagger (200m)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">1</td>
+                                <td class="px-6 py-4 text-gray-700">400.00 m</td>
+                                <td class="px-6 py-4 text-gray-700">0 m</td>
+                                <td class="px-6 py-4 text-gray-700">0 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">2</td>
+                                <td class="px-6 py-4 text-gray-700">407.67 m</td>
+                                <td class="px-6 py-4 text-gray-700">+7.67 m</td>
+                                <td class="px-6 py-4 text-gray-700">3.83 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">3</td>
+                                <td class="px-6 py-4 text-gray-700">415.33 m</td>
+                                <td class="px-6 py-4 text-gray-700">+15.33 m</td>
+                                <td class="px-6 py-4 text-gray-700">7.67 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">4</td>
+                                <td class="px-6 py-4 text-gray-700">423.00 m</td>
+                                <td class="px-6 py-4 text-gray-700">+23.00 m</td>
+                                <td class="px-6 py-4 text-gray-700">11.50 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">5</td>
+                                <td class="px-6 py-4 text-gray-700">430.66 m</td>
+                                <td class="px-6 py-4 text-gray-700">+30.66 m</td>
+                                <td class="px-6 py-4 text-gray-700">15.33 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">6</td>
+                                <td class="px-6 py-4 text-gray-700">438.33 m</td>
+                                <td class="px-6 py-4 text-gray-700">+38.33 m</td>
+                                <td class="px-6 py-4 text-gray-700">19.17 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">7</td>
+                                <td class="px-6 py-4 text-gray-700">446.00 m</td>
+                                <td class="px-6 py-4 text-gray-700">+46.00 m</td>
+                                <td class="px-6 py-4 text-gray-700">23.00 m</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">8</td>
+                                <td class="px-6 py-4 text-gray-700">453.66 m</td>
+                                <td class="px-6 py-4 text-gray-700">+53.66 m</td>
+                                <td class="px-6 py-4 text-gray-700">26.83 m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
+                    <p class="text-blue-800 font-medium">Training Tip: For accurate interval distances, always run in lane 1. If you must use an outer lane, add approximately 7.67 meters per lane per lap to calculate true distance covered.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">The Stagger Formula</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">The stagger for each lane is calculated based on the additional curve distance: Stagger = 2 x pi x (lane - 1) x lane width. For a standard 1.22m lane width, this equals approximately 7.67 meters per lane per full lap, or 3.84 meters per lane for a 200m (one curve) race.</p>
+            </section>
+
+            <section id="common-intervals" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Common Interval Distances</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Track intervals use distances based on the 400-meter lap. Understanding where to start and finish for each distance ensures accurate training.</p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Distance</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Laps</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Start/Finish</th>
+                                <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Common Use</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">100m</td>
+                                <td class="px-6 py-4 text-gray-700">1/4 lap</td>
+                                <td class="px-6 py-4 text-gray-700">Straightaway</td>
+                                <td class="px-6 py-4 text-gray-700">Sprint drills, strides</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">200m</td>
+                                <td class="px-6 py-4 text-gray-700">1/2 lap</td>
+                                <td class="px-6 py-4 text-gray-700">Start at curve, finish at main straight</td>
+                                <td class="px-6 py-4 text-gray-700">Fast repeats, 400m/800m prep</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">300m</td>
+                                <td class="px-6 py-4 text-gray-700">3/4 lap</td>
+                                <td class="px-6 py-4 text-gray-700">Start 100m before common finish</td>
+                                <td class="px-6 py-4 text-gray-700">400m race simulation</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">400m</td>
+                                <td class="px-6 py-4 text-gray-700">1 lap</td>
+                                <td class="px-6 py-4 text-gray-700">Full lap, any start point</td>
+                                <td class="px-6 py-4 text-gray-700">Most common interval distance</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">600m</td>
+                                <td class="px-6 py-4 text-gray-700">1.5 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Start at back straight</td>
+                                <td class="px-6 py-4 text-gray-700">800m/1500m preparation</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">800m</td>
+                                <td class="px-6 py-4 text-gray-700">2 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Full 2 laps</td>
+                                <td class="px-6 py-4 text-gray-700">VO2max intervals, race distance</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">1000m</td>
+                                <td class="px-6 py-4 text-gray-700">2.5 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Start at back straight</td>
+                                <td class="px-6 py-4 text-gray-700">Threshold/tempo intervals</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">1200m</td>
+                                <td class="px-6 py-4 text-gray-700">3 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Full 3 laps</td>
+                                <td class="px-6 py-4 text-gray-700">5K/10K specific training</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">1600m</td>
+                                <td class="px-6 py-4 text-gray-700">4 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Full 4 laps (~1 mile)</td>
+                                <td class="px-6 py-4 text-gray-700">Mile repeats, threshold work</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-gray-700 font-medium">2000m</td>
+                                <td class="px-6 py-4 text-gray-700">5 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Full 5 laps</td>
+                                <td class="px-6 py-4 text-gray-700">Tempo intervals, cruise intervals</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">1600m vs Mile</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">A mile is 1609.34 meters, not exactly 1600m. Track mile races are typically run on 4 laps (1600m) and called "metric miles." For training purposes, the 9-meter difference is negligible. True mile times are approximately 0.3-0.5 seconds slower than 1600m times at competitive speeds.</p>
+            </section>
+
+            <section id="pace-calculations" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Track Pace Calculations</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Converting goal race paces to track interval splits helps you train at the right intensity. Use these conversions to dial in your track workout pacing.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Mile Pace to 400m Splits</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Divide your mile pace by 4 to get your 400m split. For example:</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>6:00 mile pace:</strong> 90 seconds per 400m (1:30)</li>
+                    <li><strong>7:00 mile pace:</strong> 105 seconds per 400m (1:45)</li>
+                    <li><strong>8:00 mile pace:</strong> 120 seconds per 400m (2:00)</li>
+                    <li><strong>9:00 mile pace:</strong> 135 seconds per 400m (2:15)</li>
+                    <li><strong>10:00 mile pace:</strong> 150 seconds per 400m (2:30)</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Common Race Pace Conversions</h3>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">5K Time</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Mile Pace</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">400m Split</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">200m Split</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-4 text-gray-700 font-medium">20:00</td>
+                                <td class="px-4 py-4 text-gray-700">6:26</td>
+                                <td class="px-4 py-4 text-gray-700">1:37</td>
+                                <td class="px-4 py-4 text-gray-700">0:48</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-gray-700 font-medium">22:00</td>
+                                <td class="px-4 py-4 text-gray-700">7:05</td>
+                                <td class="px-4 py-4 text-gray-700">1:46</td>
+                                <td class="px-4 py-4 text-gray-700">0:53</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-gray-700 font-medium">25:00</td>
+                                <td class="px-4 py-4 text-gray-700">8:03</td>
+                                <td class="px-4 py-4 text-gray-700">2:01</td>
+                                <td class="px-4 py-4 text-gray-700">1:00</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-gray-700 font-medium">28:00</td>
+                                <td class="px-4 py-4 text-gray-700">9:01</td>
+                                <td class="px-4 py-4 text-gray-700">2:15</td>
+                                <td class="px-4 py-4 text-gray-700">1:08</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 text-gray-700 font-medium">30:00</td>
+                                <td class="px-4 py-4 text-gray-700">9:40</td>
+                                <td class="px-4 py-4 text-gray-700">2:25</td>
+                                <td class="px-4 py-4 text-gray-700">1:12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-6">
+                    <p class="text-yellow-800 font-medium">Calculate your exact track interval paces based on goal race times using our <a href="/running-pace-calculator" class="underline">Running Pace Calculator</a>.</p>
+                </div>
+            </section>
+
+            <section id="workout-examples" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Sample Track Workouts</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">These classic track workouts target different physiological systems. Adjust paces based on your current fitness and goal race.</p>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">VO2max Development (5K-10K Focus)</h4>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Workout:</strong> 5 x 1000m @ 5K pace with 400m recovery jog</li>
+                        <li><strong>Alternative:</strong> 6 x 800m @ faster than 5K pace with 2:00 recovery</li>
+                        <li><strong>Total hard distance:</strong> 4800-5000m</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Speed Development</h4>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Workout:</strong> 12 x 400m @ mile race pace with 200m recovery jog</li>
+                        <li><strong>Alternative:</strong> 8 x 200m @ 800m race pace with 200m recovery</li>
+                        <li><strong>Focus:</strong> Consistent splits, maintain form when tired</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Threshold/Lactate Clearance</h4>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Workout:</strong> 4 x 1600m @ 10K pace with 400m recovery jog</li>
+                        <li><strong>Alternative:</strong> 3 x 2000m @ tempo effort with 600m recovery</li>
+                        <li><strong>Focus:</strong> Sustained hard effort, controlled breathing</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-gray-900 mb-2">Race Simulation (5K Specific)</h4>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Workout:</strong> 1600m + 1200m + 800m + 400m @ descending pace</li>
+                        <li><strong>Pacing:</strong> Start at goal 5K pace, finish faster</li>
+                        <li><strong>Recovery:</strong> 400m jog between each</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="track-etiquette" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Track Etiquette and Lane Usage</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">Following track etiquette ensures safe, productive workouts for everyone sharing the facility.</p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Lane Usage Guidelines</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Lane 1:</strong> Reserved for fastest runners during intervals</li>
+                    <li><strong>Lane 2:</strong> Passing lane or second-fastest group</li>
+                    <li><strong>Lanes 3-4:</strong> Recovery jogs, slower intervals</li>
+                    <li><strong>Lanes 5-8:</strong> Walking, standing, stretching</li>
+                    <li><strong>Direction:</strong> Counter-clockwise unless track rules state otherwise</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Safety Rules</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Look both ways before crossing lanes</li>
+                    <li>Move to outer lanes for recovery between intervals</li>
+                    <li>Call out "Track!" or "Lane!" when passing slower runners</li>
+                    <li>Never stand or stretch in lanes 1-2</li>
+                    <li>Be aware of organized team practices and yield appropriately</li>
+                </ul>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
+                    <p class="text-blue-800 font-medium">Pro Tip: If you are unsure about track rules at a specific facility, observe for a few minutes before starting your workout or ask other runners about local conventions.</p>
+                </div>
+            </section>
+
+            <!-- Related Calculators -->
+            <section class="border-t border-gray-200 pt-10 mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/running-pace-calculator" class="block p-6 bg-red-50 rounded-xl hover:bg-red-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Running Pace Calculator</h3>
+                        <p class="text-gray-600 text-sm">Calculate track interval paces from goal race times.</p>
+                    </a>
+                    <a href="/race-time-predictor" class="block p-6 bg-red-50 rounded-xl hover:bg-red-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Race Time Predictor</h3>
+                        <p class="text-gray-600 text-sm">Predict race times to set appropriate interval targets.</p>
+                    </a>
+                    <a href="/running-distance-converter" class="block p-6 bg-red-50 rounded-xl hover:bg-red-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Distance Converter</h3>
+                        <p class="text-gray-600 text-sm">Convert between meters, miles, and kilometers.</p>
+                    </a>
+                    <a href="/running-tools" class="block p-6 bg-red-50 rounded-xl hover:bg-red-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">All Running Tools</h3>
+                        <p class="text-gray-600 text-sm">Complete collection of running training calculators.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Related Articles -->
+            <section class="border-t border-gray-200 pt-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/blog/interval-training-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Interval Training Complete Guide</h3>
+                        <p class="text-gray-600 text-sm">Master interval training for speed and endurance.</p>
+                    </a>
+                    <a href="/blog/tempo-running-threshold-workouts-complete-guide-2026.html" class="block p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                        <h3 class="font-semibold text-gray-900 mb-2">Tempo Running and Threshold Workouts</h3>
+                        <p class="text-gray-600 text-sm">Build lactate threshold with structured tempo training.</p>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-4">© 2026 RunBikeCalc. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="/running-tools" class="hover:text-white transition">Running Tools</a>
+                <a href="/cycling-tools" class="hover:text-white transition">Cycling Tools</a>
+                <a href="/blog" class="hover:text-white transition">Blog</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
