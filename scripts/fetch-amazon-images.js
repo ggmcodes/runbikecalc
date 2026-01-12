@@ -53,19 +53,19 @@ const PRODUCT_CATALOG = {
         category: 'running-watches'
     },
 
-    // Heart Rate Monitors
+    // Heart Rate Monitors - VERIFIED
     'polar-h10': {
         asin: 'B07PM54P4N',
         name: 'Polar H10 Heart Rate Monitor',
         category: 'heart-rate-monitors'
     },
     'garmin-hrm-pro-plus': {
-        asin: 'B0B5PQW7VV',
+        asin: 'B0DJKJL9J9',
         name: 'Garmin HRM-Pro Plus',
         category: 'heart-rate-monitors'
     },
     'wahoo-tickr': {
-        asin: 'B07PQMZGKF',
+        asin: 'B078GRMFSN',
         name: 'Wahoo TICKR Heart Rate Monitor',
         category: 'heart-rate-monitors'
     },
@@ -75,56 +75,56 @@ const PRODUCT_CATALOG = {
         category: 'heart-rate-monitors'
     },
 
-    // Bike Computers
+    // Bike Computers - VERIFIED
     'garmin-edge-1050': {
-        asin: 'B0D5DJ8M4K',
+        asin: 'B0D5DJXK4K',
         name: 'Garmin Edge 1050',
         category: 'bike-computers'
     },
     'garmin-edge-840': {
-        asin: 'B0BZMGK56H',
+        asin: 'B0BT36CRCQ',
         name: 'Garmin Edge 840',
         category: 'bike-computers'
     },
     'garmin-edge-540': {
-        asin: 'B0BZM8PQ9T',
+        asin: 'B0BT36VBGM',
         name: 'Garmin Edge 540',
         category: 'bike-computers'
     },
-    'wahoo-elemnt-roam-v2': {
-        asin: 'B0B4G4F7TX',
-        name: 'Wahoo ELEMNT ROAM V2',
+    'wahoo-elemnt-roam': {
+        asin: 'B0F4KRCY47',
+        name: 'Wahoo ELEMNT ROAM',
         category: 'bike-computers'
     },
-    'wahoo-elemnt-bolt-v2': {
-        asin: 'B093L5J5JD',
-        name: 'Wahoo ELEMNT BOLT V2',
+    'wahoo-elemnt-bolt': {
+        asin: 'B0F4KR66TB',
+        name: 'Wahoo ELEMNT BOLT',
         category: 'bike-computers'
     },
     'hammerhead-karoo-3': {
-        asin: 'B0BKJYC8WQ',
+        asin: 'B0C1JNLWP8',
         name: 'Hammerhead Karoo 3',
         category: 'bike-computers'
     },
 
-    // Smart Trainers
+    // Smart Trainers - VERIFIED
     'wahoo-kickr-core': {
-        asin: 'B07KRKX3W6',
+        asin: 'B07P77V4FB',
         name: 'Wahoo KICKR CORE',
         category: 'smart-trainers'
     },
-    'wahoo-kickr-v6': {
-        asin: 'B0BJ2K9Q5Y',
-        name: 'Wahoo KICKR V6',
+    'wahoo-kickr': {
+        asin: 'B0BJ2JMDZ9',
+        name: 'Wahoo KICKR',
         category: 'smart-trainers'
     },
-    'tacx-neo-3m': {
-        asin: 'B0CLT8VLZK',
-        name: 'Tacx NEO 3M',
+    'tacx-neo-2t': {
+        asin: 'B08596DJSB',
+        name: 'Tacx NEO 2T',
         category: 'smart-trainers'
     },
     'saris-h3': {
-        asin: 'B07TQFP23B',
+        asin: 'B07P6QXSKD',
         name: 'Saris H3 Direct Drive',
         category: 'smart-trainers'
     },

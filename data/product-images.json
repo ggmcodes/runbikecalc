@@ -1,5 +1,5 @@
 {
-  "generated": "2026-01-12T16:15:05.170Z",
+  "generated": "2026-01-12T16:26:39.967Z",
   "totalProducts": 47,
   "products": {
     "garmin-forerunner-265": {
@@ -21,7 +21,7 @@
       "title": "Garmin Forerunner® 965 Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black and Powder Gray, 010-02809-00",
       "image": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL160_.jpg",
-      "price": "$570.12",
+      "price": "$570.69",
       "url": "https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20"
     },
     "coros-pace-3": {
@@ -81,25 +81,25 @@
     },
     "garmin-hrm-pro-plus": {
       "slug": "garmin-hrm-pro-plus",
-      "asin": "B0B5PQW7VV",
+      "asin": "B0DJKJL9J9",
       "name": "Garmin HRM-Pro Plus",
       "category": "heart-rate-monitors",
-      "title": "Garmin HRM-Pro Plus",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0B5PQW7VV?tag=runbikecalc-20"
+      "title": "HRM-PRO, Heart Rate Strap with Real-Time Heart Rate Data and Running Dynamics, Compatible with Garmin",
+      "image": "https://m.media-amazon.com/images/I/31Qw8oisSmL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31Qw8oisSmL._SL160_.jpg",
+      "price": "$249.99",
+      "url": "https://www.amazon.com/dp/B0DJKJL9J9?tag=runbikecalc-20"
     },
     "wahoo-tickr": {
       "slug": "wahoo-tickr",
-      "asin": "B07PQMZGKF",
+      "asin": "B078GRMFSN",
       "name": "Wahoo TICKR Heart Rate Monitor",
       "category": "heart-rate-monitors",
-      "title": "Wahoo TICKR Heart Rate Monitor",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B07PQMZGKF?tag=runbikecalc-20"
+      "title": "Wahoo TICKR FIT Heart Rate Armband, Bluetooth, ANT+",
+      "image": "https://m.media-amazon.com/images/I/31TIPXSqA+L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31TIPXSqA+L._SL160_.jpg",
+      "price": "$89.99",
+      "url": "https://www.amazon.com/dp/B078GRMFSN?tag=runbikecalc-20"
     },
     "polar-verity-sense": {
       "slug": "polar-verity-sense",
@@ -114,113 +114,113 @@
     },
     "garmin-edge-1050": {
       "slug": "garmin-edge-1050",
-      "asin": "B0D5DJ8M4K",
+      "asin": "B0D5DJXK4K",
       "name": "Garmin Edge 1050",
       "category": "bike-computers",
       "title": "Garmin Edge 1050",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B0D5DJ8M4K?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B0D5DJXK4K?tag=runbikecalc-20"
     },
     "garmin-edge-840": {
       "slug": "garmin-edge-840",
-      "asin": "B0BZMGK56H",
+      "asin": "B0BT36CRCQ",
       "name": "Garmin Edge 840",
       "category": "bike-computers",
-      "title": "Garmin Edge 840",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0BZMGK56H?tag=runbikecalc-20"
+      "title": "Garmin Edge 840, Compact GPS Cycling Computer with Touchscreen and Buttons, Targeted Adaptive Coaching, Advanced Navigation and More",
+      "image": "https://m.media-amazon.com/images/I/41v40bf1qAL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41v40bf1qAL._SL160_.jpg",
+      "price": "$349.99",
+      "url": "https://www.amazon.com/dp/B0BT36CRCQ?tag=runbikecalc-20"
     },
     "garmin-edge-540": {
       "slug": "garmin-edge-540",
-      "asin": "B0BZM8PQ9T",
+      "asin": "B0BT36VBGM",
       "name": "Garmin Edge 540",
       "category": "bike-computers",
-      "title": "Garmin Edge 540",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0BZM8PQ9T?tag=runbikecalc-20"
+      "title": "Garmin Edge 540, Compact GPS Cycling Computer with Button Controls, Targeted Adaptive Coaching, Advanced Navigation and More",
+      "image": "https://m.media-amazon.com/images/I/41NtDVjOE3L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41NtDVjOE3L._SL160_.jpg",
+      "price": "$294.00",
+      "url": "https://www.amazon.com/dp/B0BT36VBGM?tag=runbikecalc-20"
     },
-    "wahoo-elemnt-roam-v2": {
-      "slug": "wahoo-elemnt-roam-v2",
-      "asin": "B0B4G4F7TX",
-      "name": "Wahoo ELEMNT ROAM V2",
+    "wahoo-elemnt-roam": {
+      "slug": "wahoo-elemnt-roam",
+      "asin": "B0F4KRCY47",
+      "name": "Wahoo ELEMNT ROAM",
       "category": "bike-computers",
-      "title": "Wahoo ELEMNT ROAM V2",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0B4G4F7TX?tag=runbikecalc-20"
+      "title": "Wahoo ELEMNT ROAM V3 GPS Cycling/Bike Computer,Black",
+      "image": "https://m.media-amazon.com/images/I/510hrfFzVZL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/510hrfFzVZL._SL160_.jpg",
+      "price": "$405.52",
+      "url": "https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20"
     },
-    "wahoo-elemnt-bolt-v2": {
-      "slug": "wahoo-elemnt-bolt-v2",
-      "asin": "B093L5J5JD",
-      "name": "Wahoo ELEMNT BOLT V2",
+    "wahoo-elemnt-bolt": {
+      "slug": "wahoo-elemnt-bolt",
+      "asin": "B0F4KR66TB",
+      "name": "Wahoo ELEMNT BOLT",
       "category": "bike-computers",
-      "title": "Wahoo ELEMNT BOLT V2",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B093L5J5JD?tag=runbikecalc-20"
+      "title": "Wahoo ELEMNT Bolt V3 GPS Cycling/Bike Computer,Black",
+      "image": "https://m.media-amazon.com/images/I/51iFXMyNrEL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/51iFXMyNrEL._SL160_.jpg",
+      "price": "$320.41",
+      "url": "https://www.amazon.com/dp/B0F4KR66TB?tag=runbikecalc-20"
     },
     "hammerhead-karoo-3": {
       "slug": "hammerhead-karoo-3",
-      "asin": "B0BKJYC8WQ",
+      "asin": "B0C1JNLWP8",
       "name": "Hammerhead Karoo 3",
       "category": "bike-computers",
       "title": "Hammerhead Karoo 3",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B0BKJYC8WQ?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B0C1JNLWP8?tag=runbikecalc-20"
     },
     "wahoo-kickr-core": {
       "slug": "wahoo-kickr-core",
-      "asin": "B07KRKX3W6",
+      "asin": "B07P77V4FB",
       "name": "Wahoo KICKR CORE",
       "category": "smart-trainers",
       "title": "Wahoo KICKR CORE",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B07KRKX3W6?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B07P77V4FB?tag=runbikecalc-20"
     },
-    "wahoo-kickr-v6": {
-      "slug": "wahoo-kickr-v6",
-      "asin": "B0BJ2K9Q5Y",
-      "name": "Wahoo KICKR V6",
+    "wahoo-kickr": {
+      "slug": "wahoo-kickr",
+      "asin": "B0BJ2JMDZ9",
+      "name": "Wahoo KICKR",
       "category": "smart-trainers",
-      "title": "Wahoo KICKR V6",
+      "title": "Wahoo KICKR",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B0BJ2K9Q5Y?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B0BJ2JMDZ9?tag=runbikecalc-20"
     },
-    "tacx-neo-3m": {
-      "slug": "tacx-neo-3m",
-      "asin": "B0CLT8VLZK",
-      "name": "Tacx NEO 3M",
+    "tacx-neo-2t": {
+      "slug": "tacx-neo-2t",
+      "asin": "B08596DJSB",
+      "name": "Tacx NEO 2T",
       "category": "smart-trainers",
-      "title": "Tacx NEO 3M",
+      "title": "Tacx NEO 2T",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B0CLT8VLZK?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B08596DJSB?tag=runbikecalc-20"
     },
     "saris-h3": {
       "slug": "saris-h3",
-      "asin": "B07TQFP23B",
+      "asin": "B07P6QXSKD",
       "name": "Saris H3 Direct Drive",
       "category": "smart-trainers",
       "title": "Saris H3 Direct Drive",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B07TQFP23B?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B07P6QXSKD?tag=runbikecalc-20"
     },
     "shimano-rc903": {
       "slug": "shimano-rc903",
