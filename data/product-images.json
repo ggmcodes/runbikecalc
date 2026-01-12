@@ -1,72 +1,82 @@
 {
-  "generated": "2026-01-12T00:00:00.000Z",
-  "note": "Run 'node scripts/fetch-amazon-images.js' to populate with real Amazon CDN image URLs",
-  "totalProducts": 50,
+  "generated": "2026-01-12T16:15:05.170Z",
+  "totalProducts": 47,
   "products": {
     "garmin-forerunner-265": {
       "slug": "garmin-forerunner-265",
-      "asin": "B0BV56DL78",
+      "asin": "B0BS1T9J4Y",
       "name": "Garmin Forerunner 265",
       "category": "running-watches",
-      "title": "Garmin Forerunner 265",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0BV56DL78?tag=runbikecalc-20"
+      "title": "Garmin Forerunner 265 Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black and Powder Gray",
+      "image": "https://m.media-amazon.com/images/I/41TuRP7qhhL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41TuRP7qhhL._SL160_.jpg",
+      "price": "$354.99",
+      "url": "https://www.amazon.com/dp/B0BS1T9J4Y?tag=runbikecalc-20"
     },
     "garmin-forerunner-965": {
       "slug": "garmin-forerunner-965",
-      "asin": "B0BV4FBJMW",
+      "asin": "B0BS1XZY7T",
       "name": "Garmin Forerunner 965",
       "category": "running-watches",
-      "title": "Garmin Forerunner 965",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0BV4FBJMW?tag=runbikecalc-20"
+      "title": "Garmin Forerunner® 965 Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black and Powder Gray, 010-02809-00",
+      "image": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL160_.jpg",
+      "price": "$570.12",
+      "url": "https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20"
     },
     "coros-pace-3": {
       "slug": "coros-pace-3",
-      "asin": "B0CF7RTBVN",
+      "asin": "B0CFQQ9FDL",
       "name": "COROS PACE 3",
       "category": "running-watches",
-      "title": "COROS PACE 3",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0CF7RTBVN?tag=runbikecalc-20"
+      "title": "COROS PACE 3 GPS Sport Watch - Lightweight, Comfortable Running Watch, 17-Day Battery Life, Accurate GPS, Heart Rate Monitor, Navigation, Sleep Tracking, Training Plan, Run, Bike - Black Silicone",
+      "image": "https://m.media-amazon.com/images/I/41k6eLvveVL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41k6eLvveVL._SL160_.jpg",
+      "price": "$199.00",
+      "url": "https://www.amazon.com/dp/B0CFQQ9FDL?tag=runbikecalc-20"
     },
     "polar-vantage-v3": {
       "slug": "polar-vantage-v3",
-      "asin": "B0CKHYJ7QD",
+      "asin": "B0CZPRDRQG",
       "name": "Polar Vantage V3",
       "category": "running-watches",
-      "title": "Polar Vantage V3",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
-      "url": "https://www.amazon.com/dp/B0CKHYJ7QD?tag=runbikecalc-20"
+      "title": "POLAR Vantage V3, Sport Watch with GPS, Heart Rate Monitor, and Extended Battery Life, for Men and Women, Offline Maps, Running, Triathlon, Black",
+      "image": "https://m.media-amazon.com/images/I/41U0c1Ub1aL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41U0c1Ub1aL._SL160_.jpg",
+      "price": "$699.99",
+      "url": "https://www.amazon.com/dp/B0CZPRDRQG?tag=runbikecalc-20"
     },
     "apple-watch-ultra-2": {
       "slug": "apple-watch-ultra-2",
       "asin": "B0CHX9N594",
       "name": "Apple Watch Ultra 2",
       "category": "running-watches",
-      "title": "Apple Watch Ultra 2",
-      "image": null,
-      "imageMedium": null,
+      "title": "Apple Watch Ultra 2 [GPS + Cellular 49mm] Smartwatch with Rugged Titanium Case & Blue Alpine Loop Medium. Fitness Tracker, Precision GPS, Action Button, Extra-Long Battery Life, Carbon Neutral",
+      "image": "https://m.media-amazon.com/images/I/51kn5FCS8NL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/51kn5FCS8NL._SL160_.jpg",
       "price": null,
       "url": "https://www.amazon.com/dp/B0CHX9N594?tag=runbikecalc-20"
+    },
+    "garmin-forerunner-55": {
+      "slug": "garmin-forerunner-55",
+      "asin": "B09FKCBLHH",
+      "name": "Garmin Forerunner 55",
+      "category": "running-watches",
+      "title": "Sleeping Horse Lover Official Napping T-Shirt",
+      "image": "https://m.media-amazon.com/images/I/31QBTt1vHKL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31QBTt1vHKL._SL160_.jpg",
+      "price": "$13.90",
+      "url": "https://www.amazon.com/dp/B09FKCBLHH?tag=runbikecalc-20"
     },
     "polar-h10": {
       "slug": "polar-h10",
       "asin": "B07PM54P4N",
       "name": "Polar H10 Heart Rate Monitor",
       "category": "heart-rate-monitors",
-      "title": "Polar H10 Heart Rate Monitor",
-      "image": null,
-      "imageMedium": null,
-      "price": null,
+      "title": "Polar H10 Heart Rate Monitor Chest Strap - ANT + Bluetooth, Waterproof HR Sensor for Men and Women, Black, M-XXL",
+      "image": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL160_.jpg",
+      "price": "$92.36",
       "url": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20"
     },
     "garmin-hrm-pro-plus": {
@@ -90,6 +100,17 @@
       "imageMedium": null,
       "price": null,
       "url": "https://www.amazon.com/dp/B07PQMZGKF?tag=runbikecalc-20"
+    },
+    "polar-verity-sense": {
+      "slug": "polar-verity-sense",
+      "asin": "B08NF8GSWX",
+      "name": "Polar Verity Sense",
+      "category": "heart-rate-monitors",
+      "title": "Polar Verity Sense",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B08NF8GSWX?tag=runbikecalc-20"
     },
     "garmin-edge-1050": {
       "slug": "garmin-edge-1050",
@@ -168,12 +189,177 @@
       "price": null,
       "url": "https://www.amazon.com/dp/B07KRKX3W6?tag=runbikecalc-20"
     },
+    "wahoo-kickr-v6": {
+      "slug": "wahoo-kickr-v6",
+      "asin": "B0BJ2K9Q5Y",
+      "name": "Wahoo KICKR V6",
+      "category": "smart-trainers",
+      "title": "Wahoo KICKR V6",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BJ2K9Q5Y?tag=runbikecalc-20"
+    },
+    "tacx-neo-3m": {
+      "slug": "tacx-neo-3m",
+      "asin": "B0CLT8VLZK",
+      "name": "Tacx NEO 3M",
+      "category": "smart-trainers",
+      "title": "Tacx NEO 3M",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CLT8VLZK?tag=runbikecalc-20"
+    },
+    "saris-h3": {
+      "slug": "saris-h3",
+      "asin": "B07TQFP23B",
+      "name": "Saris H3 Direct Drive",
+      "category": "smart-trainers",
+      "title": "Saris H3 Direct Drive",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B07TQFP23B?tag=runbikecalc-20"
+    },
+    "shimano-rc903": {
+      "slug": "shimano-rc903",
+      "asin": "B08GKQDNFL",
+      "name": "Shimano S-Phyre RC903",
+      "category": "cycling-shoes",
+      "title": "Shimano S-Phyre RC903",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B08GKQDNFL?tag=runbikecalc-20"
+    },
+    "sidi-shot-2": {
+      "slug": "sidi-shot-2",
+      "asin": "B085TLKQWY",
+      "name": "Sidi Shot 2",
+      "category": "cycling-shoes",
+      "title": "Sidi Shot 2",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B085TLKQWY?tag=runbikecalc-20"
+    },
+    "shimano-rc7": {
+      "slug": "shimano-rc7",
+      "asin": "B09LQJWC9Q",
+      "name": "Shimano RC7",
+      "category": "cycling-shoes",
+      "title": "Shimano RC7",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B09LQJWC9Q?tag=runbikecalc-20"
+    },
+    "shimano-rc3": {
+      "slug": "shimano-rc3",
+      "asin": "B085TQ9QDN",
+      "name": "Shimano RC3",
+      "category": "cycling-shoes",
+      "title": "Shimano RC3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B085TQ9QDN?tag=runbikecalc-20"
+    },
+    "nike-vaporfly-3": {
+      "slug": "nike-vaporfly-3",
+      "asin": "B0BWLKJH3P",
+      "name": "Nike Vaporfly 3",
+      "category": "running-shoes",
+      "title": "Nike Vaporfly 3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BWLKJH3P?tag=runbikecalc-20"
+    },
+    "nike-pegasus-41": {
+      "slug": "nike-pegasus-41",
+      "asin": "B0D1L8Q9TH",
+      "name": "Nike Pegasus 41",
+      "category": "running-shoes",
+      "title": "Nike Pegasus 41",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0D1L8Q9TH?tag=runbikecalc-20"
+    },
+    "asics-nimbus-26": {
+      "slug": "asics-nimbus-26",
+      "asin": "B0CP3N3V5Q",
+      "name": "ASICS Gel-Nimbus 26",
+      "category": "running-shoes",
+      "title": "ASICS Gel-Nimbus 26",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CP3N3V5Q?tag=runbikecalc-20"
+    },
+    "saucony-kinvara-15": {
+      "slug": "saucony-kinvara-15",
+      "asin": "B0CPYJKQLT",
+      "name": "Saucony Kinvara 15",
+      "category": "running-shoes",
+      "title": "Saucony Kinvara 15",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CPYJKQLT?tag=runbikecalc-20"
+    },
+    "garmin-vivosmart-5": {
+      "slug": "garmin-vivosmart-5",
+      "asin": "B09QHBHYVX",
+      "name": "Garmin Vivosmart 5",
+      "category": "fitness-trackers",
+      "title": "Garmin Vivosmart 5",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B09QHBHYVX?tag=runbikecalc-20"
+    },
+    "whoop-4": {
+      "slug": "whoop-4",
+      "asin": "B0B93VLTNF",
+      "name": "WHOOP 4.0",
+      "category": "fitness-trackers",
+      "title": "WHOOP 4.0",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B93VLTNF?tag=runbikecalc-20"
+    },
+    "oura-ring-gen3": {
+      "slug": "oura-ring-gen3",
+      "asin": "B0B6XGXM8W",
+      "name": "Oura Ring Gen 3",
+      "category": "fitness-trackers",
+      "title": "Oura Ring Gen 3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B6XGXM8W?tag=runbikecalc-20"
+    },
+    "fitbit-charge-6": {
+      "slug": "fitbit-charge-6",
+      "asin": "B0CCK6TJD1",
+      "name": "Fitbit Charge 6",
+      "category": "fitness-trackers",
+      "title": "Fitbit Charge 6",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CCK6TJD1?tag=runbikecalc-20"
+    },
     "theragun-elite": {
       "slug": "theragun-elite",
       "asin": "B0BFKS3GZH",
       "name": "Theragun Elite",
       "category": "recovery",
-      "title": "Therabody Theragun Elite",
+      "title": "Theragun Elite",
       "image": null,
       "imageMedium": null,
       "price": null,
@@ -190,6 +376,50 @@
       "price": null,
       "url": "https://www.amazon.com/dp/B07CWPB2RK?tag=runbikecalc-20"
     },
+    "normatec-3": {
+      "slug": "normatec-3",
+      "asin": "B0BGZV5TJK",
+      "name": "Normatec 3",
+      "category": "recovery",
+      "title": "Normatec 3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BGZV5TJK?tag=runbikecalc-20"
+    },
+    "hyperice-hypervolt-2": {
+      "slug": "hyperice-hypervolt-2",
+      "asin": "B0B5DQN9ZH",
+      "name": "Hyperice Hypervolt 2",
+      "category": "recovery",
+      "title": "Hyperice Hypervolt 2",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B5DQN9ZH?tag=runbikecalc-20"
+    },
+    "ice-barrel-400": {
+      "slug": "ice-barrel-400",
+      "asin": "B09SL2M1GV",
+      "name": "Ice Barrel 400",
+      "category": "recovery",
+      "title": "Ice Barrel 400",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B09SL2M1GV?tag=runbikecalc-20"
+    },
+    "cold-pod": {
+      "slug": "cold-pod",
+      "asin": "B0BTHV1TMK",
+      "name": "The Cold Pod Ice Bath",
+      "category": "recovery",
+      "title": "The Cold Pod Ice Bath",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BTHV1TMK?tag=runbikecalc-20"
+    },
     "shokz-openrun-pro": {
       "slug": "shokz-openrun-pro",
       "asin": "B09BVLVFQS",
@@ -201,27 +431,60 @@
       "price": null,
       "url": "https://www.amazon.com/dp/B09BVLVFQS?tag=runbikecalc-20"
     },
-    "garmin-vivosmart-5": {
-      "slug": "garmin-vivosmart-5",
-      "asin": "B09QHBHYVX",
-      "name": "Garmin Vivosmart 5",
-      "category": "fitness-trackers",
-      "title": "Garmin Vivosmart 5",
+    "jabra-elite-8": {
+      "slug": "jabra-elite-8",
+      "asin": "B0CGBXYH3L",
+      "name": "Jabra Elite 8 Active",
+      "category": "running-headphones",
+      "title": "Jabra Elite 8 Active",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B09QHBHYVX?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B0CGBXYH3L?tag=runbikecalc-20"
     },
-    "fitbit-charge-6": {
-      "slug": "fitbit-charge-6",
-      "asin": "B0CCK6TJD1",
-      "name": "Fitbit Charge 6",
-      "category": "fitness-trackers",
-      "title": "Fitbit Charge 6",
+    "beats-fit-pro": {
+      "slug": "beats-fit-pro",
+      "asin": "B09JL5PC2L",
+      "name": "Beats Fit Pro",
+      "category": "running-headphones",
+      "title": "Beats Fit Pro",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B0CCK6TJD1?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B09JL5PC2L?tag=runbikecalc-20"
+    },
+    "gu-energy-gels": {
+      "slug": "gu-energy-gels",
+      "asin": "B01MY5CW7S",
+      "name": "GU Energy Gel Variety Pack",
+      "category": "nutrition",
+      "title": "Nutricost Caffeine Pills 100mg Per Serving, 250 Capsules",
+      "image": "https://m.media-amazon.com/images/I/41jHWYRVkFL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41jHWYRVkFL._SL160_.jpg",
+      "price": "$11.95 ($0.05 / count)",
+      "url": "https://www.amazon.com/dp/B01MY5CW7S?tag=runbikecalc-20"
+    },
+    "maurten-gel-100": {
+      "slug": "maurten-gel-100",
+      "asin": "B0B1MHPWHF",
+      "name": "Maurten Gel 100",
+      "category": "nutrition",
+      "title": "Maurten Gel 100",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B1MHPWHF?tag=runbikecalc-20"
+    },
+    "tailwind-nutrition": {
+      "slug": "tailwind-nutrition",
+      "asin": "B00EIOXAXM",
+      "name": "Tailwind Nutrition Endurance Fuel",
+      "category": "nutrition",
+      "title": "Tailwind Nutrition Endurance Fuel",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B00EIOXAXM?tag=runbikecalc-20"
     },
     "manduka-pro-mat": {
       "slug": "manduka-pro-mat",
@@ -234,16 +497,27 @@
       "price": null,
       "url": "https://www.amazon.com/dp/B0002TSTSO?tag=runbikecalc-20"
     },
-    "gu-energy-gels": {
-      "slug": "gu-energy-gels",
-      "asin": "B01MY5CW7S",
-      "name": "GU Energy Gel Variety Pack",
-      "category": "nutrition",
-      "title": "GU Energy Gel Variety Pack",
+    "liforme-yoga-mat": {
+      "slug": "liforme-yoga-mat",
+      "asin": "B01N30OFG9",
+      "name": "Liforme Yoga Mat",
+      "category": "yoga",
+      "title": "Liforme Yoga Mat",
       "image": null,
       "imageMedium": null,
       "price": null,
-      "url": "https://www.amazon.com/dp/B01MY5CW7S?tag=runbikecalc-20"
+      "url": "https://www.amazon.com/dp/B01N30OFG9?tag=runbikecalc-20"
+    },
+    "gaiam-dry-grip": {
+      "slug": "gaiam-dry-grip",
+      "asin": "B074DYSL6G",
+      "name": "Gaiam Dry-Grip Yoga Mat",
+      "category": "yoga",
+      "title": "MISC. W Alphabet Light Shadow Box",
+      "image": "https://m.media-amazon.com/images/I/513U5YId5mL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/513U5YId5mL._SL160_.jpg",
+      "price": null,
+      "url": "https://www.amazon.com/dp/B074DYSL6G?tag=runbikecalc-20"
     }
   }
 }

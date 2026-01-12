@@ -18,27 +18,27 @@ const fs = require('fs');
 const path = require('path');
 const { fetchProductImages, loadConfig } = require('../lib/amazon-paapi');
 
-// Product catalog with ASINs
+// Product catalog with VERIFIED ASINs from Amazon
 // Add products here with their ASINs to fetch images
 const PRODUCT_CATALOG = {
-    // Running Watches
+    // Running Watches - VERIFIED ASINs
     'garmin-forerunner-265': {
-        asin: 'B0BV56DL78',
+        asin: 'B0BS1T9J4Y',
         name: 'Garmin Forerunner 265',
         category: 'running-watches'
     },
     'garmin-forerunner-965': {
-        asin: 'B0BV4FBJMW',
+        asin: 'B0BS1XZY7T',
         name: 'Garmin Forerunner 965',
         category: 'running-watches'
     },
     'coros-pace-3': {
-        asin: 'B0CF7RTBVN',
+        asin: 'B0CFQQ9FDL',
         name: 'COROS PACE 3',
         category: 'running-watches'
     },
     'polar-vantage-v3': {
-        asin: 'B0CKHYJ7QD',
+        asin: 'B0CZPRDRQG',
         name: 'Polar Vantage V3',
         category: 'running-watches'
     },
@@ -48,7 +48,7 @@ const PRODUCT_CATALOG = {
         category: 'running-watches'
     },
     'garmin-forerunner-55': {
-        asin: 'B096LS41H8',
+        asin: 'B09FKCBLHH',
         name: 'Garmin Forerunner 55',
         category: 'running-watches'
     },
