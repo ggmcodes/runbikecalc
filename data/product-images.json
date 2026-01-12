@@ -1,0 +1,249 @@
+{
+  "generated": "2026-01-12T00:00:00.000Z",
+  "note": "Run 'node scripts/fetch-amazon-images.js' to populate with real Amazon CDN image URLs",
+  "totalProducts": 50,
+  "products": {
+    "garmin-forerunner-265": {
+      "slug": "garmin-forerunner-265",
+      "asin": "B0BV56DL78",
+      "name": "Garmin Forerunner 265",
+      "category": "running-watches",
+      "title": "Garmin Forerunner 265",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BV56DL78?tag=runbikecalc-20"
+    },
+    "garmin-forerunner-965": {
+      "slug": "garmin-forerunner-965",
+      "asin": "B0BV4FBJMW",
+      "name": "Garmin Forerunner 965",
+      "category": "running-watches",
+      "title": "Garmin Forerunner 965",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BV4FBJMW?tag=runbikecalc-20"
+    },
+    "coros-pace-3": {
+      "slug": "coros-pace-3",
+      "asin": "B0CF7RTBVN",
+      "name": "COROS PACE 3",
+      "category": "running-watches",
+      "title": "COROS PACE 3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CF7RTBVN?tag=runbikecalc-20"
+    },
+    "polar-vantage-v3": {
+      "slug": "polar-vantage-v3",
+      "asin": "B0CKHYJ7QD",
+      "name": "Polar Vantage V3",
+      "category": "running-watches",
+      "title": "Polar Vantage V3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CKHYJ7QD?tag=runbikecalc-20"
+    },
+    "apple-watch-ultra-2": {
+      "slug": "apple-watch-ultra-2",
+      "asin": "B0CHX9N594",
+      "name": "Apple Watch Ultra 2",
+      "category": "running-watches",
+      "title": "Apple Watch Ultra 2",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CHX9N594?tag=runbikecalc-20"
+    },
+    "polar-h10": {
+      "slug": "polar-h10",
+      "asin": "B07PM54P4N",
+      "name": "Polar H10 Heart Rate Monitor",
+      "category": "heart-rate-monitors",
+      "title": "Polar H10 Heart Rate Monitor",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20"
+    },
+    "garmin-hrm-pro-plus": {
+      "slug": "garmin-hrm-pro-plus",
+      "asin": "B0B5PQW7VV",
+      "name": "Garmin HRM-Pro Plus",
+      "category": "heart-rate-monitors",
+      "title": "Garmin HRM-Pro Plus",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B5PQW7VV?tag=runbikecalc-20"
+    },
+    "wahoo-tickr": {
+      "slug": "wahoo-tickr",
+      "asin": "B07PQMZGKF",
+      "name": "Wahoo TICKR Heart Rate Monitor",
+      "category": "heart-rate-monitors",
+      "title": "Wahoo TICKR Heart Rate Monitor",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B07PQMZGKF?tag=runbikecalc-20"
+    },
+    "garmin-edge-1050": {
+      "slug": "garmin-edge-1050",
+      "asin": "B0D5DJ8M4K",
+      "name": "Garmin Edge 1050",
+      "category": "bike-computers",
+      "title": "Garmin Edge 1050",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0D5DJ8M4K?tag=runbikecalc-20"
+    },
+    "garmin-edge-840": {
+      "slug": "garmin-edge-840",
+      "asin": "B0BZMGK56H",
+      "name": "Garmin Edge 840",
+      "category": "bike-computers",
+      "title": "Garmin Edge 840",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BZMGK56H?tag=runbikecalc-20"
+    },
+    "garmin-edge-540": {
+      "slug": "garmin-edge-540",
+      "asin": "B0BZM8PQ9T",
+      "name": "Garmin Edge 540",
+      "category": "bike-computers",
+      "title": "Garmin Edge 540",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BZM8PQ9T?tag=runbikecalc-20"
+    },
+    "wahoo-elemnt-roam-v2": {
+      "slug": "wahoo-elemnt-roam-v2",
+      "asin": "B0B4G4F7TX",
+      "name": "Wahoo ELEMNT ROAM V2",
+      "category": "bike-computers",
+      "title": "Wahoo ELEMNT ROAM V2",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0B4G4F7TX?tag=runbikecalc-20"
+    },
+    "wahoo-elemnt-bolt-v2": {
+      "slug": "wahoo-elemnt-bolt-v2",
+      "asin": "B093L5J5JD",
+      "name": "Wahoo ELEMNT BOLT V2",
+      "category": "bike-computers",
+      "title": "Wahoo ELEMNT BOLT V2",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B093L5J5JD?tag=runbikecalc-20"
+    },
+    "hammerhead-karoo-3": {
+      "slug": "hammerhead-karoo-3",
+      "asin": "B0BKJYC8WQ",
+      "name": "Hammerhead Karoo 3",
+      "category": "bike-computers",
+      "title": "Hammerhead Karoo 3",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BKJYC8WQ?tag=runbikecalc-20"
+    },
+    "wahoo-kickr-core": {
+      "slug": "wahoo-kickr-core",
+      "asin": "B07KRKX3W6",
+      "name": "Wahoo KICKR CORE",
+      "category": "smart-trainers",
+      "title": "Wahoo KICKR CORE",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B07KRKX3W6?tag=runbikecalc-20"
+    },
+    "theragun-elite": {
+      "slug": "theragun-elite",
+      "asin": "B0BFKS3GZH",
+      "name": "Theragun Elite",
+      "category": "recovery",
+      "title": "Therabody Theragun Elite",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0BFKS3GZH?tag=runbikecalc-20"
+    },
+    "triggerpoint-grid": {
+      "slug": "triggerpoint-grid",
+      "asin": "B07CWPB2RK",
+      "name": "TriggerPoint GRID Foam Roller",
+      "category": "recovery",
+      "title": "TriggerPoint GRID Foam Roller",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B07CWPB2RK?tag=runbikecalc-20"
+    },
+    "shokz-openrun-pro": {
+      "slug": "shokz-openrun-pro",
+      "asin": "B09BVLVFQS",
+      "name": "Shokz OpenRun Pro",
+      "category": "running-headphones",
+      "title": "Shokz OpenRun Pro",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B09BVLVFQS?tag=runbikecalc-20"
+    },
+    "garmin-vivosmart-5": {
+      "slug": "garmin-vivosmart-5",
+      "asin": "B09QHBHYVX",
+      "name": "Garmin Vivosmart 5",
+      "category": "fitness-trackers",
+      "title": "Garmin Vivosmart 5",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B09QHBHYVX?tag=runbikecalc-20"
+    },
+    "fitbit-charge-6": {
+      "slug": "fitbit-charge-6",
+      "asin": "B0CCK6TJD1",
+      "name": "Fitbit Charge 6",
+      "category": "fitness-trackers",
+      "title": "Fitbit Charge 6",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0CCK6TJD1?tag=runbikecalc-20"
+    },
+    "manduka-pro-mat": {
+      "slug": "manduka-pro-mat",
+      "asin": "B0002TSTSO",
+      "name": "Manduka PRO Yoga Mat",
+      "category": "yoga",
+      "title": "Manduka PRO Yoga Mat",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B0002TSTSO?tag=runbikecalc-20"
+    },
+    "gu-energy-gels": {
+      "slug": "gu-energy-gels",
+      "asin": "B01MY5CW7S",
+      "name": "GU Energy Gel Variety Pack",
+      "category": "nutrition",
+      "title": "GU Energy Gel Variety Pack",
+      "image": null,
+      "imageMedium": null,
+      "price": null,
+      "url": "https://www.amazon.com/dp/B01MY5CW7S?tag=runbikecalc-20"
+    }
+  }
+}

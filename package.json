@@ -4,7 +4,10 @@
   "description": "Calculator tools for endurance athletes - runners, cyclists, and triathletes",
   "scripts": {
     "build-css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "fetch-images": "node scripts/fetch-amazon-images.js",
+    "update-products": "python3 scripts/add-product-images.py",
+    "update-products:dry": "python3 scripts/add-product-images.py --dry-run"
   },
   "keywords": [
     "running calculator",
@@ -17,5 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
