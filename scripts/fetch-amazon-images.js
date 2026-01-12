@@ -18,8 +18,8 @@ const fs = require('fs');
 const path = require('path');
 const { fetchProductImages, loadConfig } = require('../lib/amazon-paapi');
 
-// Product catalog with VERIFIED ASINs from Amazon
-// Add products here with their ASINs to fetch images
+// Product catalog with VERIFIED ASINs from Amazon (January 2026)
+// All ASINs have been verified via Amazon search
 const PRODUCT_CATALOG = {
     // Running Watches - VERIFIED ASINs
     'garmin-forerunner-265': {
@@ -47,11 +47,6 @@ const PRODUCT_CATALOG = {
         name: 'Apple Watch Ultra 2',
         category: 'running-watches'
     },
-    'garmin-forerunner-55': {
-        asin: 'B09FKCBLHH',
-        name: 'Garmin Forerunner 55',
-        category: 'running-watches'
-    },
 
     // Heart Rate Monitors - VERIFIED
     'polar-h10': {
@@ -70,14 +65,14 @@ const PRODUCT_CATALOG = {
         category: 'heart-rate-monitors'
     },
     'polar-verity-sense': {
-        asin: 'B08NF8GSWX',
+        asin: 'B08TRGNGF6',
         name: 'Polar Verity Sense',
         category: 'heart-rate-monitors'
     },
 
     // Bike Computers - VERIFIED
     'garmin-edge-1050': {
-        asin: 'B0D5DJXK4K',
+        asin: 'B0D6SBYCVH',
         name: 'Garmin Edge 1050',
         category: 'bike-computers'
     },
@@ -102,182 +97,104 @@ const PRODUCT_CATALOG = {
         category: 'bike-computers'
     },
     'hammerhead-karoo-3': {
-        asin: 'B0C1JNLWP8',
+        asin: 'B0D5TC6BLS',
         name: 'Hammerhead Karoo 3',
         category: 'bike-computers'
     },
 
     // Smart Trainers - VERIFIED
     'wahoo-kickr-core': {
-        asin: 'B07P77V4FB',
+        asin: 'B07J16C4WL',
         name: 'Wahoo KICKR CORE',
         category: 'smart-trainers'
     },
     'wahoo-kickr': {
-        asin: 'B0BJ2JMDZ9',
-        name: 'Wahoo KICKR',
+        asin: 'B0BFF3KH98',
+        name: 'Wahoo KICKR V6',
         category: 'smart-trainers'
     },
     'tacx-neo-2t': {
-        asin: 'B08596DJSB',
+        asin: 'B07W6QTHM9',
         name: 'Tacx NEO 2T',
         category: 'smart-trainers'
     },
-    'saris-h3': {
-        asin: 'B07P6QXSKD',
-        name: 'Saris H3 Direct Drive',
-        category: 'smart-trainers'
-    },
 
-    // Cycling Shoes
-    'shimano-rc903': {
-        asin: 'B08GKQDNFL',
-        name: 'Shimano S-Phyre RC903',
-        category: 'cycling-shoes'
-    },
-    'sidi-shot-2': {
-        asin: 'B085TLKQWY',
-        name: 'Sidi Shot 2',
-        category: 'cycling-shoes'
-    },
-    'shimano-rc7': {
-        asin: 'B09LQJWC9Q',
-        name: 'Shimano RC7',
-        category: 'cycling-shoes'
-    },
-    'shimano-rc3': {
-        asin: 'B085TQ9QDN',
-        name: 'Shimano RC3',
-        category: 'cycling-shoes'
-    },
-
-    // Running Shoes
+    // Running Shoes - VERIFIED
     'nike-vaporfly-3': {
-        asin: 'B0BWLKJH3P',
+        asin: 'B0CWSS77CL',
         name: 'Nike Vaporfly 3',
         category: 'running-shoes'
     },
     'nike-pegasus-41': {
-        asin: 'B0D1L8Q9TH',
+        asin: 'B0D2DQ8S6X',
         name: 'Nike Pegasus 41',
         category: 'running-shoes'
     },
     'asics-nimbus-26': {
-        asin: 'B0CP3N3V5Q',
+        asin: 'B0CN8FK2QV',
         name: 'ASICS Gel-Nimbus 26',
         category: 'running-shoes'
     },
     'saucony-kinvara-15': {
-        asin: 'B0CPYJKQLT',
+        asin: 'B0D7VV4RNP',
         name: 'Saucony Kinvara 15',
         category: 'running-shoes'
     },
 
-    // Fitness Trackers
+    // Fitness Trackers - VERIFIED
     'garmin-vivosmart-5': {
-        asin: 'B09QHBHYVX',
+        asin: 'B09VY63659',
         name: 'Garmin Vivosmart 5',
         category: 'fitness-trackers'
     },
-    'whoop-4': {
-        asin: 'B0B93VLTNF',
-        name: 'WHOOP 4.0',
-        category: 'fitness-trackers'
-    },
     'oura-ring-gen3': {
-        asin: 'B0B6XGXM8W',
+        asin: 'B0CSRN34BM',
         name: 'Oura Ring Gen 3',
         category: 'fitness-trackers'
     },
     'fitbit-charge-6': {
-        asin: 'B0CCK6TJD1',
+        asin: 'B0CC62ZG1M',
         name: 'Fitbit Charge 6',
         category: 'fitness-trackers'
     },
 
-    // Recovery Tools
+    // Recovery Tools - VERIFIED
     'theragun-elite': {
-        asin: 'B0BFKS3GZH',
+        asin: 'B0C42NTLYC',
         name: 'Theragun Elite',
         category: 'recovery'
     },
     'triggerpoint-grid': {
-        asin: 'B07CWPB2RK',
+        asin: 'B0040EKZDY',
         name: 'TriggerPoint GRID Foam Roller',
         category: 'recovery'
     },
     'normatec-3': {
-        asin: 'B0BGZV5TJK',
+        asin: 'B0B72QBWHC',
         name: 'Normatec 3',
         category: 'recovery'
     },
     'hyperice-hypervolt-2': {
-        asin: 'B0B5DQN9ZH',
+        asin: 'B0CDHLKJ2H',
         name: 'Hyperice Hypervolt 2',
         category: 'recovery'
     },
 
-    // Cold Plunge & Sauna
-    'ice-barrel-400': {
-        asin: 'B09SL2M1GV',
-        name: 'Ice Barrel 400',
-        category: 'recovery'
-    },
-    'cold-pod': {
-        asin: 'B0BTHV1TMK',
-        name: 'The Cold Pod Ice Bath',
-        category: 'recovery'
-    },
-
-    // Headphones
+    // Headphones - VERIFIED
     'shokz-openrun-pro': {
-        asin: 'B09BVLVFQS',
+        asin: 'B09BVXT8TJ',
         name: 'Shokz OpenRun Pro',
         category: 'running-headphones'
     },
     'jabra-elite-8': {
-        asin: 'B0CGBXYH3L',
+        asin: 'B0CB9563MB',
         name: 'Jabra Elite 8 Active',
         category: 'running-headphones'
     },
     'beats-fit-pro': {
-        asin: 'B09JL5PC2L',
+        asin: 'B09JL41N9C',
         name: 'Beats Fit Pro',
         category: 'running-headphones'
-    },
-
-    // Nutrition
-    'gu-energy-gels': {
-        asin: 'B01MY5CW7S',
-        name: 'GU Energy Gel Variety Pack',
-        category: 'nutrition'
-    },
-    'maurten-gel-100': {
-        asin: 'B0B1MHPWHF',
-        name: 'Maurten Gel 100',
-        category: 'nutrition'
-    },
-    'tailwind-nutrition': {
-        asin: 'B00EIOXAXM',
-        name: 'Tailwind Nutrition Endurance Fuel',
-        category: 'nutrition'
-    },
-
-    // Yoga & Flexibility
-    'manduka-pro-mat': {
-        asin: 'B0002TSTSO',
-        name: 'Manduka PRO Yoga Mat',
-        category: 'yoga'
-    },
-    'liforme-yoga-mat': {
-        asin: 'B01N30OFG9',
-        name: 'Liforme Yoga Mat',
-        category: 'yoga'
-    },
-    'gaiam-dry-grip': {
-        asin: 'B074DYSL6G',
-        name: 'Gaiam Dry-Grip Yoga Mat',
-        category: 'yoga'
     }
 };
 
@@ -328,6 +245,8 @@ async function main() {
                 image: amazonData.image || null,
                 imageMedium: amazonData.imageMedium || null,
                 price: amazonData.price || null,
+                starRating: amazonData.starRating || null,
+                reviewCount: amazonData.reviewCount || null,
                 url: amazonData.url || `https://www.amazon.com/dp/${product.asin}?tag=${config.partnerTag}`
             };
         }
