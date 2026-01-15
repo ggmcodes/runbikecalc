@@ -1,6 +1,6 @@
 {
-  "generated": "2026-01-12T17:04:19.293Z",
-  "totalProducts": 32,
+  "generated": "2026-01-14T14:46:20.254Z",
+  "totalProducts": 44,
   "products": {
     "garmin-forerunner-265": {
       "slug": "garmin-forerunner-265",
@@ -10,7 +10,7 @@
       "title": "Garmin Forerunner 265 Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black and Powder Gray",
       "image": "https://m.media-amazon.com/images/I/41TuRP7qhhL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41TuRP7qhhL._SL160_.jpg",
-      "price": "$354.99",
+      "price": "$372.00",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0BS1T9J4Y?tag=runbikecalc-20"
@@ -23,7 +23,7 @@
       "title": "Garmin Forerunner® 965 Running Smartwatch, Colorful AMOLED Display, Training Metrics and Recovery Insights, Black and Powder Gray, 010-02809-00",
       "image": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41LITOXyC6L._SL160_.jpg",
-      "price": "$571.83",
+      "price": "$568.50",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20"
@@ -153,7 +153,7 @@
       "title": "Garmin Edge 540, Compact GPS Cycling Computer with Button Controls, Targeted Adaptive Coaching, Advanced Navigation and More",
       "image": "https://m.media-amazon.com/images/I/41NtDVjOE3L._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41NtDVjOE3L._SL160_.jpg",
-      "price": "$294.00",
+      "price": "$306.49",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0BT36VBGM?tag=runbikecalc-20"
@@ -166,7 +166,7 @@
       "title": "Wahoo ELEMNT ROAM V3 GPS Cycling/Bike Computer,Black",
       "image": "https://m.media-amazon.com/images/I/510hrfFzVZL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/510hrfFzVZL._SL160_.jpg",
-      "price": "$405.52",
+      "price": "$401.30",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20"
@@ -179,7 +179,7 @@
       "title": "Wahoo ELEMNT Bolt V3 GPS Cycling/Bike Computer,Black",
       "image": "https://m.media-amazon.com/images/I/51iFXMyNrEL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/51iFXMyNrEL._SL160_.jpg",
-      "price": "$320.41",
+      "price": "$325.00",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0F4KR66TB?tag=runbikecalc-20"
@@ -192,7 +192,7 @@
       "title": "SRAM Hammerhead Karoo GPS Bike Computer",
       "image": "https://m.media-amazon.com/images/I/41YtyH7jcZL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41YtyH7jcZL._SL160_.jpg",
-      "price": "$409.00",
+      "price": "$404.95",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0D5TC6BLS?tag=runbikecalc-20"
@@ -218,7 +218,7 @@
       "title": "Wahoo KICKR V6 Smart Indoor Trainer",
       "image": "https://m.media-amazon.com/images/I/41ZhwPYL1KL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41ZhwPYL1KL._SL160_.jpg",
-      "price": "$1,049.99",
+      "price": "$999.95",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20"
@@ -322,7 +322,7 @@
       "title": "Fitbit Charge 6 Fitness Tracker with Google apps, Heart Rate on Exercise Equipment, 6-Months Premium Membership Included, GPS, Health Tools and More, Obsidian/Black, One Size (S & L Bands Included)",
       "image": "https://m.media-amazon.com/images/I/41RLn0a8gxL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41RLn0a8gxL._SL160_.jpg",
-      "price": "$99.95",
+      "price": "$126.00",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0CC62ZG1M?tag=runbikecalc-20"
@@ -361,7 +361,7 @@
       "title": "Hyperice Normatec 3 - Recovery System with Patented Dynamic Compression Massage Technology (Normatec 3 Standard Size Legs) FSA-HSA",
       "image": "https://m.media-amazon.com/images/I/31twvW0rxML._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/31twvW0rxML._SL160_.jpg",
-      "price": "$799.00",
+      "price": "$899.00",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0B72QBWHC?tag=runbikecalc-20"
@@ -400,7 +400,7 @@
       "title": "Jabra Elite 8 Active - Best Most Advanced HearThrough Sports Wireless Bluetooth Earbuds - Comfortable Secure Fit, Military Grade Durability, Active Noise Cancellation, Dolby Surround Sound - Dark Grey",
       "image": "https://m.media-amazon.com/images/I/313sIX9QIBL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/313sIX9QIBL._SL160_.jpg",
-      "price": "$299.00",
+      "price": null,
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B0CB9563MB?tag=runbikecalc-20"
@@ -413,10 +413,166 @@
       "title": "Beats Fit Pro (1st Gen) - True Wireless Noise Cancelling Earbuds - Active Noise Cancelling - Sweat Resistant Earphones, Compatible with Apple & Android, Class 1 Bluetooth®- Beats Black",
       "image": "https://m.media-amazon.com/images/I/31eauYL9vXL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/31eauYL9vXL._SL160_.jpg",
-      "price": "$236.41",
+      "price": "$169.99",
       "starRating": null,
       "reviewCount": null,
       "url": "https://www.amazon.com/dp/B09JL41N9C?tag=runbikecalc-20"
+    },
+    "cold-plunge-tub-110gal": {
+      "slug": "cold-plunge-tub-110gal",
+      "asin": "B0CPFMMTL2",
+      "name": "Cold Plunge Tub 110 Gallon",
+      "category": "cold-plunge",
+      "title": "Cold Plunge Tub for Ice Baths at Home - 110 Gal Outdoor & Indoor Cold Water Plunge Tub with Lid - Water Chiller Compatible - XL Recovery Cold Plunge for Athletes - Portable Ice Bath & Accessories",
+      "image": "https://m.media-amazon.com/images/I/41m0vjyqecL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41m0vjyqecL._SL160_.jpg",
+      "price": "$47.02",
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B0CPFMMTL2?tag=runbikecalc-20"
+    },
+    "plunge-lab-xl": {
+      "slug": "plunge-lab-xl",
+      "asin": "B0CFK88KTC",
+      "name": "Plunge Lab Cold Plunge Tub XL",
+      "category": "cold-plunge",
+      "title": "Plunge Lab Cold Plunge Tub XL, Portable Ice Bath Tub for Athletes, Indoor Outdoor Recovery, 90 Gallon Capacity, Cold Tub for Ice Baths at Home - USA Owned, Easy Install",
+      "image": "https://m.media-amazon.com/images/I/31sJLLWsmLL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31sJLLWsmLL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B0CFK88KTC?tag=runbikecalc-20"
+    },
+    "ice-barrel-99gal": {
+      "slug": "ice-barrel-99gal",
+      "asin": "B0CNKNS31C",
+      "name": "Ice Barrel Premium XL 99 Gallon",
+      "category": "cold-plunge",
+      "title": "PREMIUM XL Ice Bath Tub for Athletes - 99 Gal - Portable Cold Plunge Tub with Cover for Recovery & Cold Water Therapy - Inflatable Ice Barrel for Indoor & Outdoor - Ice Barrel - [2024]",
+      "image": "https://m.media-amazon.com/images/I/41HGmcMHGkL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41HGmcMHGkL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B0CNKNS31C?tag=runbikecalc-20"
+    },
+    "shimano-rc903": {
+      "slug": "shimano-rc903",
+      "asin": "B0CP65YRTP",
+      "name": "Shimano S-PHYRE RC9 (RC903)",
+      "category": "cycling-shoes",
+      "title": "Shimano S-PHYRE RC9 (RC903) Shoe",
+      "image": "https://m.media-amazon.com/images/I/01RmK+J4pJL._SL500_.gif",
+      "imageMedium": "https://m.media-amazon.com/images/I/01RmK+J4pJL._SL160_.gif",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B0CP65YRTP?tag=runbikecalc-20"
+    },
+    "sidi-shot-2s": {
+      "slug": "sidi-shot-2s",
+      "asin": "B0CJY3SXBS",
+      "name": "Sidi Shot 2S",
+      "category": "cycling-shoes",
+      "title": "Sidi Shot 2S Road Bike Shoes",
+      "image": "https://m.media-amazon.com/images/I/31Tz3dHfrQL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31Tz3dHfrQL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B0CJY3SXBS?tag=runbikecalc-20"
+    },
+    "lake-cx332": {
+      "slug": "lake-cx332",
+      "asin": "B06XHR42CQ",
+      "name": "Lake CX332",
+      "category": "cycling-shoes",
+      "title": "Lake Cx332 Cycling Shoe - Men's",
+      "image": "https://m.media-amazon.com/images/I/41N43ru3RXL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41N43ru3RXL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B06XHR42CQ?tag=runbikecalc-20"
+    },
+    "higherdose-sauna-blanket": {
+      "slug": "higherdose-sauna-blanket",
+      "asin": "B09M8YQ4KB",
+      "name": "HigherDOSE Infrared Sauna Blanket",
+      "category": "sauna",
+      "title": "HigherDOSE Infrared Sauna Blanket - Personal Sauna to Relax & Detox Your Body and Mind - Portable Sauna Blanket for Home Sauna Therapy - Plush Thermal Blanket with Far Infrared Heat",
+      "image": "https://m.media-amazon.com/images/I/31oQsIZALPL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31oQsIZALPL._SL160_.jpg",
+      "price": "$699.00",
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B09M8YQ4KB?tag=runbikecalc-20"
+    },
+    "serenelife-infrared-sauna": {
+      "slug": "serenelife-infrared-sauna",
+      "asin": "B07WC64NPQ",
+      "name": "SereneLife Portable Infrared Sauna",
+      "category": "sauna",
+      "title": "SereneLife Portable Sauna Box for Home, Infrared Sauna Tent with Heated Foot Pad and Folding Chair, Remote Control In-Home Spa, 35\" x 71\" - inch (Black)",
+      "image": "https://m.media-amazon.com/images/I/41ospjS0RhL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41ospjS0RhL._SL160_.jpg",
+      "price": "$311.06",
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B07WC64NPQ?tag=runbikecalc-20"
+    },
+    "serenelife-steam-sauna": {
+      "slug": "serenelife-steam-sauna",
+      "asin": "B084GY5CHB",
+      "name": "SereneLife Portable Steam Sauna",
+      "category": "sauna",
+      "title": "SereneLife Portable Sauna Box for Home, Steam Sauna Tent with Extra Large 4L Steamer - Includes Folding Sauna Chair, Remote Control w/ 9 Heat Levels for in-Home Spa - 2.9' x 2.9' x 5.9'",
+      "image": "https://m.media-amazon.com/images/I/419GJkUOoqL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/419GJkUOoqL._SL160_.jpg",
+      "price": "$155.99",
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B084GY5CHB?tag=runbikecalc-20"
+    },
+    "manduka-pro": {
+      "slug": "manduka-pro",
+      "asin": "B07Y6FFL66",
+      "name": "Manduka PRO Yoga Mat",
+      "category": "yoga-mats",
+      "title": "Manduka PRO Yoga Mat 71\" - 6mm | Lifetime Durability | Hygenic Construction | Premium Studio Quality | Teacher Approved | 71 x 26 inches | Black",
+      "image": "https://m.media-amazon.com/images/I/41DtYro7wXL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41DtYro7wXL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B07Y6FFL66?tag=runbikecalc-20"
+    },
+    "jade-harmony": {
+      "slug": "jade-harmony",
+      "asin": "B000ECD6N2",
+      "name": "JadeYoga Harmony Mat",
+      "category": "yoga-mats",
+      "title": "JadeYoga Harmony Yoga Mat - Durable & Thick Gym Fitness Mat, Non-Slip Natural Rubber Yoga Mat - Home Exercise & Stretching Mat, Workout Mat - Yoga, Pilates & Meditation for Women & Men",
+      "image": "https://m.media-amazon.com/images/I/31mZzpZSjkL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31mZzpZSjkL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B000ECD6N2?tag=runbikecalc-20"
+    },
+    "gaiam-essentials": {
+      "slug": "gaiam-essentials",
+      "asin": "B07JVWGQX3",
+      "name": "Gaiam Essentials Premium Yoga Mat",
+      "category": "yoga-mats",
+      "title": "Gaiam Essentials Premium Yoga Mat with Yoga Mat Carrier Sling (72\"L x 24\"W x 1/4 Inch Thick)",
+      "image": "https://m.media-amazon.com/images/I/41IPT2wATYL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41IPT2wATYL._SL160_.jpg",
+      "price": null,
+      "starRating": null,
+      "reviewCount": null,
+      "url": "https://www.amazon.com/dp/B07JVWGQX3?tag=runbikecalc-20"
     }
   }
 }

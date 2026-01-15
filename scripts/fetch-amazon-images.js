@@ -195,6 +195,74 @@ const PRODUCT_CATALOG = {
         asin: 'B09JL41N9C',
         name: 'Beats Fit Pro',
         category: 'running-headphones'
+    },
+
+    // Cold Plunge / Ice Bath - VERIFIED
+    'cold-plunge-tub-110gal': {
+        asin: 'B0CPFMMTL2',
+        name: 'Cold Plunge Tub 110 Gallon',
+        category: 'cold-plunge'
+    },
+    'plunge-lab-xl': {
+        asin: 'B0CFK88KTC',
+        name: 'Plunge Lab Cold Plunge Tub XL',
+        category: 'cold-plunge'
+    },
+    'ice-barrel-99gal': {
+        asin: 'B0CNKNS31C',
+        name: 'Ice Barrel Premium XL 99 Gallon',
+        category: 'cold-plunge'
+    },
+
+    // Cycling Shoes - VERIFIED
+    'shimano-rc903': {
+        asin: 'B0CP65YRTP',
+        name: 'Shimano S-PHYRE RC9 (RC903)',
+        category: 'cycling-shoes'
+    },
+    'sidi-shot-2s': {
+        asin: 'B0CJY3SXBS',
+        name: 'Sidi Shot 2S',
+        category: 'cycling-shoes'
+    },
+    'lake-cx332': {
+        asin: 'B06XHR42CQ',
+        name: 'Lake CX332',
+        category: 'cycling-shoes'
+    },
+
+    // Sauna - VERIFIED
+    'higherdose-sauna-blanket': {
+        asin: 'B09M8YQ4KB',
+        name: 'HigherDOSE Infrared Sauna Blanket',
+        category: 'sauna'
+    },
+    'serenelife-infrared-sauna': {
+        asin: 'B07WC64NPQ',
+        name: 'SereneLife Portable Infrared Sauna',
+        category: 'sauna'
+    },
+    'serenelife-steam-sauna': {
+        asin: 'B084GY5CHB',
+        name: 'SereneLife Portable Steam Sauna',
+        category: 'sauna'
+    },
+
+    // Yoga Mats - VERIFIED
+    'manduka-pro': {
+        asin: 'B07Y6FFL66',
+        name: 'Manduka PRO Yoga Mat',
+        category: 'yoga-mats'
+    },
+    'jade-harmony': {
+        asin: 'B000ECD6N2',
+        name: 'JadeYoga Harmony Mat',
+        category: 'yoga-mats'
+    },
+    'gaiam-essentials': {
+        asin: 'B07JVWGQX3',
+        name: 'Gaiam Essentials Premium Yoga Mat',
+        category: 'yoga-mats'
     }
 };
 
