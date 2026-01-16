@@ -260,63 +260,67 @@
                     <h2 class="text-xl font-bold mb-4 text-center">Where Does It Hurt?</h2>
                     <p class="text-gray-600 text-sm mb-4 text-center">Click on the body part that's painful</p>
 
-                    <!-- SVG Cyclist Diagram -->
-                    <svg viewBox="0 0 300 350" class="w-full max-w-xs mx-auto">
-                        <!-- Bike Frame (background) -->
-                        <path d="M50 280 L120 200 L200 200 L250 280" fill="none" stroke="#d1d5db" stroke-width="3"/>
-                        <circle cx="50" cy="280" r="30" fill="none" stroke="#d1d5db" stroke-width="2"/>
-                        <circle cx="250" cy="280" r="30" fill="none" stroke="#d1d5db" stroke-width="2"/>
-                        <line x1="120" y1="200" x2="120" y2="140" stroke="#d1d5db" stroke-width="3"/>
-                        <line x1="200" y1="200" x2="180" y2="170" stroke="#d1d5db" stroke-width="3"/>
+                    <!-- Body Diagram (Front View) -->
+                    <svg viewBox="0 0 200 400" class="w-full max-w-[200px] mx-auto">
+                        <!-- Body outline background -->
+                        <path d="M100 35 C130 35 145 50 145 70 L145 80 C165 85 175 95 175 110 L175 130 C175 145 165 155 155 160 L155 190 C155 200 150 210 145 215 L145 280 C145 295 140 310 130 320 L130 370 C130 380 125 385 115 385 L85 385 C75 385 70 380 70 370 L70 320 C60 310 55 295 55 280 L55 215 C50 210 45 200 45 190 L45 160 C35 155 25 145 25 130 L25 110 C25 95 35 85 55 80 L55 70 C55 50 70 35 100 35" fill="#f5f0e6" stroke="#d4c4a8" stroke-width="2"/>
 
-                        <!-- Handlebars -->
-                        <path d="M110 140 L130 140 L140 150" fill="none" stroke="#9ca3af" stroke-width="4"/>
+                        <!-- Head (decorative, not clickable) -->
+                        <circle cx="100" cy="25" r="20" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
 
-                        <!-- Head/Neck -->
-                        <ellipse cx="155" cy="85" rx="18" ry="22" class="pain-zone" data-zone="neck" onclick="showCondition('neck')"/>
-                        <text x="155" y="90" text-anchor="middle" fill="#6b7280" font-size="9">NECK</text>
+                        <!-- Neck -->
+                        <rect x="75" y="50" width="50" height="30" rx="5" class="pain-zone" data-zone="neck" onclick="showCondition('neck')"/>
+                        <text x="100" y="70" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">NECK</text>
 
                         <!-- Shoulders -->
-                        <ellipse cx="145" cy="115" rx="25" ry="12" class="pain-zone" data-zone="shoulders" onclick="showCondition('shoulders')"/>
-                        <text x="145" y="118" text-anchor="middle" fill="#6b7280" font-size="8">SHOULDERS</text>
+                        <rect x="30" y="85" width="140" height="30" rx="5" class="pain-zone" data-zone="shoulders" onclick="showCondition('shoulders')"/>
+                        <text x="100" y="105" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">SHOULDERS</text>
+
+                        <!-- Hands (left) -->
+                        <rect x="15" y="140" width="35" height="35" rx="5" class="pain-zone" data-zone="hands" onclick="showCondition('hands')"/>
+                        <text x="32" y="162" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="500">HANDS</text>
+
+                        <!-- Hands (right) -->
+                        <rect x="150" y="140" width="35" height="35" rx="5" class="pain-zone" data-zone="hands" onclick="showCondition('hands')"/>
+                        <text x="167" y="162" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="500">HANDS</text>
 
                         <!-- Lower Back -->
-                        <ellipse cx="165" cy="145" rx="20" ry="18" class="pain-zone" data-zone="lowerback" onclick="showCondition('lowerback')"/>
-                        <text x="165" y="143" text-anchor="middle" fill="#6b7280" font-size="8">LOWER</text>
-                        <text x="165" y="152" text-anchor="middle" fill="#6b7280" font-size="8">BACK</text>
-
-                        <!-- Hands/Wrists -->
-                        <ellipse cx="115" cy="155" rx="15" ry="12" class="pain-zone" data-zone="hands" onclick="showCondition('hands')"/>
-                        <text x="115" y="158" text-anchor="middle" fill="#6b7280" font-size="8">HANDS</text>
+                        <rect x="60" y="120" width="80" height="40" rx="5" class="pain-zone" data-zone="lowerback" onclick="showCondition('lowerback')"/>
+                        <text x="100" y="138" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="500">LOWER</text>
+                        <text x="100" y="150" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="500">BACK</text>
 
                         <!-- Hip -->
-                        <ellipse cx="185" cy="175" rx="15" ry="12" class="pain-zone" data-zone="hip" onclick="showCondition('hip')"/>
-                        <text x="185" y="178" text-anchor="middle" fill="#6b7280" font-size="8">HIP</text>
+                        <rect x="55" y="165" width="90" height="30" rx="5" class="pain-zone" data-zone="hip" onclick="showCondition('hip')"/>
+                        <text x="100" y="185" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">HIP</text>
 
                         <!-- Saddle Area -->
-                        <ellipse cx="180" cy="195" rx="18" ry="10" class="pain-zone" data-zone="saddle" onclick="showCondition('saddle')"/>
-                        <text x="180" y="198" text-anchor="middle" fill="#6b7280" font-size="7">SADDLE</text>
+                        <rect x="65" y="200" width="70" height="30" rx="5" class="pain-zone" data-zone="saddle" onclick="showCondition('saddle')"/>
+                        <text x="100" y="220" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">SADDLE</text>
+
+                        <!-- Knee Section Label -->
+                        <text x="100" y="250" text-anchor="middle" fill="#9ca3af" font-size="9">— KNEES —</text>
 
                         <!-- Front Knee -->
-                        <ellipse cx="140" cy="230" rx="14" ry="16" class="pain-zone" data-zone="frontknee" onclick="showCondition('frontknee')"/>
-                        <text x="140" y="228" text-anchor="middle" fill="#6b7280" font-size="7">FRONT</text>
-                        <text x="140" y="236" text-anchor="middle" fill="#6b7280" font-size="7">KNEE</text>
+                        <rect x="30" y="260" width="50" height="35" rx="5" class="pain-zone" data-zone="frontknee" onclick="showCondition('frontknee')"/>
+                        <text x="55" y="275" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">FRONT</text>
+                        <text x="55" y="286" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">KNEE</text>
 
                         <!-- Back Knee -->
-                        <ellipse cx="200" cy="225" rx="12" ry="14" class="pain-zone" data-zone="backknee" onclick="showCondition('backknee')"/>
-                        <text x="200" y="223" text-anchor="middle" fill="#6b7280" font-size="7">BACK</text>
-                        <text x="200" y="231" text-anchor="middle" fill="#6b7280" font-size="7">KNEE</text>
+                        <rect x="85" y="260" width="50" height="35" rx="5" class="pain-zone" data-zone="backknee" onclick="showCondition('backknee')"/>
+                        <text x="110" y="275" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">BACK</text>
+                        <text x="110" y="286" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">KNEE</text>
 
                         <!-- Outer Knee -->
-                        <ellipse cx="165" cy="245" rx="12" ry="10" class="pain-zone" data-zone="outerknee" onclick="showCondition('outerknee')"/>
-                        <text x="165" y="248" text-anchor="middle" fill="#6b7280" font-size="7">OUTER</text>
+                        <rect x="140" y="260" width="45" height="35" rx="5" class="pain-zone" data-zone="outerknee" onclick="showCondition('outerknee')"/>
+                        <text x="162" y="275" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">OUTER</text>
+                        <text x="162" y="286" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="500">KNEE</text>
 
                         <!-- Feet -->
-                        <ellipse cx="130" cy="280" rx="18" ry="12" class="pain-zone" data-zone="feet" onclick="showCondition('feet')"/>
-                        <text x="130" y="283" text-anchor="middle" fill="#6b7280" font-size="8">FEET</text>
+                        <rect x="55" y="320" width="90" height="35" rx="5" class="pain-zone" data-zone="feet" onclick="showCondition('feet')"/>
+                        <text x="100" y="342" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">FEET</text>
 
                         <!-- Instructions -->
-                        <text x="150" y="330" text-anchor="middle" fill="#9ca3af" font-size="11">Click a zone above</text>
+                        <text x="100" y="380" text-anchor="middle" fill="#9ca3af" font-size="10">Click a zone above</text>
                     </svg>
 
                     <!-- Quick Selection Buttons -->

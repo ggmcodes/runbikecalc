@@ -190,8 +190,7 @@
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Runner's Knee Pain Diagnosis</h1>
             <p class="text-xl text-red-100 mb-6">Click where it hurts. Get targeted treatment recommendations, stretches, and exercises.</p>
             <div class="flex flex-wrap gap-4 text-sm">
-                <span class="bg-white/20 px-3 py-1 rounded-full">Used by 25,000+ runners</span>
-                <span class="bg-white/20 px-3 py-1 rounded-full">6 common conditions</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full">5 common conditions</span>
                 <span class="bg-white/20 px-3 py-1 rounded-full">Evidence-based recommendations</span>
             </div>
         </div>
@@ -205,38 +204,41 @@
                     <p class="text-gray-600 text-sm mb-4 text-center">Click on the area of your knee that's painful</p>
 
                     <!-- SVG Knee Diagram -->
-                    <svg viewBox="0 0 300 400" class="w-full max-w-xs mx-auto">
+                    <svg viewBox="0 0 300 420" class="w-full max-w-xs mx-auto">
                         <!-- Thigh -->
-                        <rect x="75" y="0" width="150" height="80" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" rx="10"/>
-                        <text x="150" y="45" text-anchor="middle" fill="#6b7280" font-size="14">THIGH</text>
+                        <rect x="75" y="0" width="150" height="70" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" rx="10"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#6b7280" font-size="14" font-weight="500">THIGH</text>
 
-                        <!-- Outer Knee (IT Band) - Zone 4 -->
-                        <path d="M225 80 L260 120 L260 220 L225 260 L225 80" class="pain-zone" data-zone="itband" onclick="showCondition('itband')"/>
-                        <text x="242" y="170" text-anchor="middle" fill="#6b7280" font-size="10" transform="rotate(90 242 170)">OUTER</text>
+                        <!-- Knee Area Background (tan box) -->
+                        <rect x="30" y="75" width="240" height="210" fill="#f5f0e6" stroke="#d4c4a8" stroke-width="2" rx="12"/>
 
-                        <!-- Inner Knee (Medial) - Zone 5 -->
-                        <path d="M75 80 L40 120 L40 220 L75 260 L75 80" class="pain-zone" data-zone="medial" onclick="showCondition('medial')"/>
-                        <text x="58" y="170" text-anchor="middle" fill="#6b7280" font-size="10" transform="rotate(-90 58 170)">INNER</text>
+                        <!-- Outer Knee (IT Band) -->
+                        <path d="M230 85 L265 130 L265 220 L230 270 L230 85" class="pain-zone" data-zone="itband" onclick="showCondition('itband')"/>
+                        <text x="248" y="180" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500" transform="rotate(90 248 180)">OUTER</text>
 
-                        <!-- Back of Knee - Zone 6 -->
-                        <rect x="100" y="180" width="100" height="50" class="pain-zone" data-zone="posterior" onclick="showCondition('posterior')" rx="5"/>
-                        <text x="150" y="210" text-anchor="middle" fill="#6b7280" font-size="11">BACK</text>
+                        <!-- Inner Knee (Medial) -->
+                        <path d="M70 85 L35 130 L35 220 L70 270 L70 85" class="pain-zone" data-zone="medial" onclick="showCondition('medial')"/>
+                        <text x="52" y="180" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500" transform="rotate(-90 52 180)">INNER</text>
 
-                        <!-- Kneecap (PFPS) - Zone 1 -->
-                        <ellipse cx="150" cy="140" rx="45" ry="50" class="pain-zone" data-zone="pfps" onclick="showCondition('pfps')"/>
-                        <text x="150" y="135" text-anchor="middle" fill="#6b7280" font-size="11">KNEECAP</text>
-                        <text x="150" y="150" text-anchor="middle" fill="#6b7280" font-size="10">(Front)</text>
+                        <!-- Kneecap (PFPS) - Main front zone -->
+                        <ellipse cx="150" cy="145" rx="50" ry="55" class="pain-zone" data-zone="pfps" onclick="showCondition('pfps')"/>
+                        <text x="150" y="140" text-anchor="middle" fill="#6b7280" font-size="12" font-weight="500">KNEECAP</text>
+                        <text x="150" y="156" text-anchor="middle" fill="#6b7280" font-size="10">(Front)</text>
 
-                        <!-- Below Kneecap (Patellar Tendon) - Zone 2 -->
-                        <rect x="115" y="195" width="70" height="40" class="pain-zone" data-zone="patellar" onclick="showCondition('patellar')" rx="5"/>
-                        <text x="150" y="220" text-anchor="middle" fill="#6b7280" font-size="10">BELOW</text>
+                        <!-- Below Kneecap (Patellar Tendon) -->
+                        <rect x="110" y="210" width="80" height="45" class="pain-zone" data-zone="patellar" onclick="showCondition('patellar')" rx="8"/>
+                        <text x="150" y="238" text-anchor="middle" fill="#6b7280" font-size="12" font-weight="500">BELOW</text>
+
+                        <!-- Back of Knee -->
+                        <rect x="85" y="260" width="130" height="35" class="pain-zone" data-zone="posterior" onclick="showCondition('posterior')" rx="6"/>
+                        <text x="150" y="283" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">BACK OF KNEE</text>
 
                         <!-- Shin -->
-                        <rect x="75" y="270" width="150" height="80" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" rx="10"/>
-                        <text x="150" y="315" text-anchor="middle" fill="#6b7280" font-size="14">SHIN</text>
+                        <rect x="75" y="300" width="150" height="70" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" rx="10"/>
+                        <text x="150" y="342" text-anchor="middle" fill="#6b7280" font-size="14" font-weight="500">SHIN</text>
 
                         <!-- Labels -->
-                        <text x="150" y="380" text-anchor="middle" fill="#9ca3af" font-size="12">Click a zone above</text>
+                        <text x="150" y="400" text-anchor="middle" fill="#9ca3af" font-size="12">Click a zone above</text>
                     </svg>
 
                     <!-- Quick Selection Buttons -->
