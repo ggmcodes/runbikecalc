@@ -1590,6 +1590,25 @@
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
+    <!-- Pain Diagnosis Tools - January 2026 -->
+    <url>
+        <loc>https://runbikecalc.com/running-knee-pain-diagnosis</loc>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/bike-fit-pain-guide</loc>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/gear-guides</loc>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- New SEO Content Pages - January 2026 -->
     <url>
         <loc>https://runbikecalc.com/blog/what-your-running-pace-means</loc>
