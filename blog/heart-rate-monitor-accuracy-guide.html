@@ -25,6 +25,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/fonts.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://runbikecalc.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://runbikecalc.com/blog"},
+            {"@type": "ListItem", "position": 3, "name": "Heart Rate Monitor Accuracy"}
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <nav class="site-nav"><div class="nav-container"><a href="/" class="site-logo">RunBikeCalc</a><div class="nav-links"><a href="/training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a><a href="/running-tools" class="nav-link">Running</a><a href="/cycling-tools" class="nav-link">Cycling</a><a href="/heart-rate-tools" class="nav-link">Heart Rate</a><a href="/blog" class="nav-link">Journal</a></div><div style="display: flex; align-items: center; gap: 1rem;"><a href="/training-plans" class="nav-cta">Start Training</a><button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div><div id="mobile-nav" class="mobile-menu"><a href="/training-plans">Training Plans</a><a href="/running-tools">Running Tools</a><a href="/cycling-tools">Cycling Tools</a><a href="/heart-rate-tools">Heart Rate</a><a href="/blog">Journal</a></div></nav>
