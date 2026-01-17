@@ -26,7 +26,34 @@ class Calculator {
 
       // Load saved values from localStorage
       this.loadSavedValues();
+
+      // Add keyboard hint for desktop users
+      this.addKeyboardHint();
     }
+  }
+
+  addKeyboardHint() {
+    // Only show on desktop (screens >= 768px)
+    if (window.innerWidth < 768) return;
+
+    const submitBtn = this.form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+
+    // Check if hint already exists
+    if (submitBtn.parentElement.querySelector('.keyboard-hint')) return;
+
+    // Create hint using safe DOM methods
+    const hint = document.createElement('p');
+    hint.className = 'keyboard-hint text-sm text-gray-500 mt-2 hidden md:block';
+
+    const kbd = document.createElement('kbd');
+    kbd.className = 'px-2 py-1 bg-gray-100 border border-gray-300 rounded text-xs font-mono';
+    kbd.textContent = 'Enter';
+
+    hint.appendChild(kbd);
+    hint.appendChild(document.createTextNode(' to calculate'));
+
+    submitBtn.insertAdjacentElement('afterend', hint);
   }
 
   getInputValue(name, defaultValue = 0) {

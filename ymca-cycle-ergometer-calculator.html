@@ -161,7 +161,7 @@
             <h2 class="text-2xl font-bold mb-6">Calculate Your VO2 Max</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-4">
+                <form id="ymca-form" class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium mb-2">Age (years)</label>
                         <input type="number" id="age" placeholder="35" min="18" max="80" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
@@ -214,10 +214,11 @@
                         </div>
                     </div>
 
-                    <button onclick="calculate()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
                         Calculate VO2 Max
                     </button>
-                </div>
+                    <p class="keyboard-hint text-sm text-gray-500 mt-2 hidden md:block"><kbd class="px-2 py-1 bg-gray-100 border border-gray-300 rounded text-xs font-mono">Enter</kbd> to calculate</p>
+                </form>
 
                 <div>
                     <div id="results" class="bg-gray-50 rounded-lg p-6">
@@ -441,6 +442,12 @@
 
     <script src="/js/product-recommendations.js"></script>
     <script>
+    // Form submission handler for Enter key support
+    document.getElementById('ymca-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        calculate();
+    });
+
     function calculate() {
         var age = parseInt(document.getElementById('age').value);
         var sex = document.getElementById('sex').value;
