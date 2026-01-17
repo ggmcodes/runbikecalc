@@ -1,0 +1,312 @@
+================================================================================
+RUNBIKECALC KEYWORD STRATEGY 2026 - FILE QUICK REFERENCE
+================================================================================
+
+COMPLETE KEYWORD STRATEGY DELIVERED: January 17, 2026
+Project: Organic Search Optimization for Fitness Calculators
+Timeline: 8-Week Implementation Sprint (Jan 17 - Mar 11, 2026)
+
+================================================================================
+DOCUMENT INVENTORY
+================================================================================
+
+1. README-KEYWORD-STRATEGY.md (START HERE)
+   └─ Quick navigation guide to all strategy documents
+   └─ File structure, quick reference, key metrics
+   └─ Getting started checklist
+   └─ READ TIME: 20-30 minutes
+
+2. KEYWORD-STRATEGY-SUMMARY.md (EXECUTIVE OVERVIEW)
+   └─ Strategic foundation and market opportunity
+   └─ 3-pillar core strategy approach
+   └─ Implementation roadmap (3 phases)
+   └─ Success metrics and targets
+   └─ Risk assessment and mitigation
+   └─ READ TIME: 30-40 minutes
+
+3. RUNBIKECALC-KEYWORD-STRATEGY-2026.md (COMPREHENSIVE STRATEGY)
+   └─ Detailed page-by-page keyword strategy
+   └─ 8 calculator pages fully documented:
+      ├─ Heart Rate Zone Calculator (Position 16.2)
+      ├─ Zone 2 Calculator (Position 18.67)
+      ├─ Cooper Test Calculator (Position 14.08)
+      ├─ FTP Calculator (Position 27) **CRITICAL**
+      ├─ Karvonen Calculator (Position 13)
+      ├─ Lactate Threshold Calculator (Position 18)
+      ├─ Watts to Calories Calculator (Position 18)
+      └─ VO2 Max Calculator (Position 35) **CRITICAL**
+   └─ Each page includes:
+      ├─ Primary/secondary/LSI keywords
+      ├─ H2/H3 heading structure recommendations
+      ├─ Internal linking strategy
+      ├─ Content optimization checklist
+      ├─ Word count targets
+      └─ Implementation priority
+   └─ Site-wide strategy (semantic clusters, hub pages)
+   └─ Monitoring & measurement plan
+   └─ Competitive analysis
+   └─ READ TIME: 2-3 hours
+
+4. KEYWORD-STRATEGY-QUICK-REFERENCE.md (IMPLEMENTATION GUIDE)
+   └─ Page-by-page quick lookup format
+   └─ Priority matrix table (all 8 calculators)
+   └─ For each page:
+      ├─ Primary keyword + density %
+      ├─ Secondary & LSI keywords (quick list)
+      ├─ H2/H3 optimization tasks
+      ├─ Internal linking opportunities
+      ├─ Content addition checklist
+      └─ Keyword density analysis
+   └─ LSI integration formula
+   └─ Weekly content production timeline
+   └─ Best for: Content writers, quick implementation reference
+   └─ READ TIME: 1.5-2 hours
+
+5. RUNBIKECALC-LSI-KEYWORDS-REFERENCE.md (KEYWORD BIBLE)
+   └─ 25-30 LSI keywords per calculator page
+   └─ Keywords organized by semantic groups:
+      ├─ Core concepts
+      ├─ Technical/physiological terms
+      ├─ Equipment/device specific
+      ├─ Training application
+      ├─ Sport-specific variations
+      └─ Comparative terms
+   └─ Integration points and examples
+   └─ Natural language flow guidelines
+   └─ Words NOT to use
+   └─ Tools for LSI discovery
+   └─ Best for: Content writers, copyeditors, SEO specialists
+   └─ READ TIME: 1-1.5 hours
+
+6. KEYWORD-STRATEGY-IMPLEMENTATION-CHECKLIST.md (TASK LIST)
+   └─ Week-by-week implementation tasks for 8-week sprint
+   └─ Week 1-2: Foundation & Quick Wins (30-40 hours)
+      ├─ FTP Calculator content audit & expansion
+      ├─ VO2 Max Calculator content audit & expansion
+      ├─ FAQ schema expansion (all pages)
+      ├─ Internal link strengthening
+      └─ LSI keyword audit
+   └─ Week 3-4: Content Expansion (50-60 hours)
+      ├─ Zone 2 enhancement
+      ├─ Lactate Threshold enhancement
+      ├─ Watts to Calories enhancement
+      └─ Cooper Test enhancement
+   └─ Week 5-6: Asset Creation (40-50 hours)
+      ├─ 4 instructional videos (2+ hours each)
+      ├─ 6 downloadable PDFs
+      └─ 5 comparison tables
+   └─ Week 7-8: Authority Building (40-50 hours)
+      ├─ 4 hub pages
+      ├─ 100+ strategic internal links
+      └─ Schema optimization & final launch
+   └─ Best for: Project managers, task tracking, team coordination
+   └─ READ TIME: 45 minutes to 1 hour
+
+================================================================================
+STRATEGY AT A GLANCE
+================================================================================
+
+CURRENT PERFORMANCE:
+  • 8 keywords ranking (positions 13-35)
+  • 2,200-2,400 monthly clicks from these keywords
+  • Best performer: Karvonen Calculator (Position 13)
+  • Worst performer: VO2 Max Calculator (Position 35)
+
+OPPORTUNITY:
+  • +1,200-1,500 additional monthly clicks (60% increase)
+  • 5-6 keywords could reach top 10 within 120 days
+  • 100-150% organic traffic increase achievable
+
+3-PILLAR STRATEGY:
+  1. Keyword Density & Semantic Optimization (30-40 hours)
+  2. Content Expansion & Authority Building (50-60 hours)
+  3. Topical Authority & Hub Strategy (40-50 hours)
+
+TOTAL INVESTMENT: 90-115 hours over 8 weeks (~11-14 hours/week)
+
+KEY DELIVERABLES:
+  ✓ 2 major calculator rewrites (FTP, VO2 Max)
+  ✓ 6 calculator enhancements (Zone 2, HR Zone, Lactate, Watts, Cooper, Karvonen)
+  ✓ 4 instructional videos
+  ✓ 6 downloadable PDF resources
+  ✓ 4 hub pages
+  ✓ 100+ strategic internal links
+  ✓ Comprehensive FAQ schema expansion
+
+120-DAY TARGETS:
+  Zone 2: Position 3-5 (from 18.67)          +13-15 positions
+  HR Zone: Position 5-8 (from 16.2)          +8-11 positions
+  FTP: Position 10-12 (from 27)              +15-17 positions
+  VO2 Max: Position 15-18 (from 35)          +17-20 positions
+  + 3-5 new keywords ranking (positions 15-25)
+
+================================================================================
+HOW TO USE THIS STRATEGY
+================================================================================
+
+FOR DECISION MAKERS (30 min):
+  1. Read KEYWORD-STRATEGY-SUMMARY.md (Situation Analysis)
+  2. Review Priority Matrix
+  3. Check success metrics and timeline
+
+FOR STRATEGISTS (2-3 hours):
+  1. Read KEYWORD-STRATEGY-SUMMARY.md (complete)
+  2. Skim RUNBIKECALC-KEYWORD-STRATEGY-2026.md
+  3. Review implementation roadmap
+
+FOR IMPLEMENTATION TEAMS (ongoing):
+  1. Use IMPLEMENTATION-CHECKLIST.md as task list
+  2. Reference QUICK-REFERENCE.md for page-specific tasks
+  3. Pull LSI keywords from LSI-KEYWORDS-REFERENCE.md
+  4. Check STRATEGY-2026.md for detailed H2/H3 structure
+
+FOR CONTENT WRITERS (per page):
+  1. Review page in QUICK-REFERENCE.md
+  2. Pull LSI keywords from LSI-KEYWORDS-REFERENCE.md
+  3. Follow H2/H3 recommendations from STRATEGY-2026.md
+  4. Add internal links per QUICK-REFERENCE.md
+
+FOR MONITORING (weekly/monthly):
+  1. Track keyword positions (GSC)
+  2. Monitor progress against IMPLEMENTATION-CHECKLIST.md
+  3. Update metrics against SUMMARY.md targets
+  4. Adjust strategy based on performance data
+
+================================================================================
+PAGE PRIORITIES
+================================================================================
+
+CRITICAL IMMEDIATE PRIORITY:
+  🔴 FTP Calculator (/ftp-calculator.html)
+     Current: Position 27 | Target: Position 8-12 | Work: 15-18 hours
+     Major rewrite needed (+1,500 words), 7-zone training system, programs
+
+  🔴 VO2 Max Calculator (/vo2-max-calculator.html)
+     Current: Position 35 | Target: Position 10-15 | Work: 15-18 hours
+     Major rewrite needed (+1,500 words), standards tables, programs
+
+HIGH PRIORITY (Weeks 1-4):
+  🟠 Zone 2 Calculator (Position 18.67 → Target 3-5)
+  🟠 Heart Rate Zone Calculator (Position 16.2 → Target 5-8)
+
+MEDIUM PRIORITY (Weeks 3-5):
+  🟡 Lactate Threshold Calculator (Position 18 → Target 5-8)
+  🟡 Watts to Calories Calculator (Position 18 → Target 5-8)
+
+MAINTAIN/ENHANCE (Weeks 2-6):
+  🟢 Cooper Test Calculator (Position 14.08, strong base)
+  🟢 Karvonen Calculator (Position 13, best performer)
+
+================================================================================
+RESOURCE REQUIREMENTS
+================================================================================
+
+TIME INVESTMENT:
+  Week 1-2: 12-16 hours (quick wins, audits)
+  Week 3-4: 16-18 hours (major rewrites)
+  Week 5-6: 18-20 hours (content expansion, assets)
+  Week 7-8: 18-22 hours (hub pages, testing, launch)
+  TOTAL: 90-115 hours
+
+TEAM SKILLS NEEDED:
+  Content Writer: 40-50 hours
+  SEO Specialist: 15-20 hours
+  Web Developer: 10-15 hours
+  Video Producer: 8-10 hours
+  Graphic Designer: 8-10 hours
+  QA Tester: 10 hours
+
+BUDGET (if outsourced):
+  Content: $2,000-3,750
+  SEO: $1,500-2,000
+  Video: $750-1,000
+  Design: $400-600
+  TOTAL: $5,000-7,500
+
+================================================================================
+QUICK LINKS TO EACH DOCUMENT
+================================================================================
+
+📄 README-KEYWORD-STRATEGY.md
+   Navigation guide and quick reference → START HERE
+
+📊 KEYWORD-STRATEGY-SUMMARY.md
+   Executive overview and strategic foundation
+
+📋 RUNBIKECALC-KEYWORD-STRATEGY-2026.md
+   Comprehensive page-by-page strategy (45-50 pages)
+
+⚡ KEYWORD-STRATEGY-QUICK-REFERENCE.md
+   Implementation tasks and quick lookup
+
+🔑 RUNBIKECALC-LSI-KEYWORDS-REFERENCE.md
+   Complete LSI keyword reference by page
+
+✅ KEYWORD-STRATEGY-IMPLEMENTATION-CHECKLIST.md
+   Week-by-week task checklist for 8-week sprint
+
+================================================================================
+SUCCESS TIMELINE
+================================================================================
+
+30 DAYS (February 17):
+  ✓ FTP: Position 20-22 (from 27)
+  ✓ VO2 Max: Position 30-32 (from 35)
+  ✓ Organic traffic: +10-15%
+  ✓ Session duration: +15-20%
+
+60 DAYS (March 17):
+  ✓ Zone 2: Position 14-16
+  ✓ FTP: Position 16-20
+  ✓ VO2 Max: Position 25-28
+  ✓ Organic traffic: +30-40%
+  ✓ Session duration: +25-30%
+
+120 DAYS (May 17):
+  ✓ Zone 2: Position 3-5 (from 18.67)
+  ✓ HR Zone: Position 5-8 (from 16.2)
+  ✓ FTP: Position 10-12 (from 27)
+  ✓ VO2 Max: Position 15-18 (from 35)
+  ✓ Organic traffic: +100-150%
+  ✓ 5+ keywords in top 10
+
+================================================================================
+GETTING STARTED THIS WEEK
+================================================================================
+
+Monday-Tuesday:
+  ☐ Read KEYWORD-STRATEGY-SUMMARY.md (30 min)
+  ☐ Review IMPLEMENTATION-CHECKLIST.md Week 1 (20 min)
+  ☐ Schedule team kickoff meeting (15 min)
+
+Wednesday-Thursday:
+  ☐ Assign roles and responsibilities
+  ☐ Create tracking dashboard/spreadsheet
+  ☐ Begin FTP Calculator audit
+  ☐ Begin VO2 Max Calculator audit
+
+Friday:
+  ☐ Start FAQ schema expansion (first 3 pages)
+  ☐ Begin internal anchor text review
+  ☐ Finalize Week 1 tasks
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ Content quality first - natural language flow > keyword density
+✓ Write for humans, optimize for search engines
+✓ Gradual implementation - don't rush or overoptimize
+✓ Monitor continuously - track results weekly
+✓ SEO is ongoing - plan for quarterly reviews
+✓ Maintain existing strengths - don't break what works
+
+All documents are ready for implementation.
+Begin with README-KEYWORD-STRATEGY.md for navigation.
+
+================================================================================
+Strategy Created: January 17, 2026
+Ready for Implementation: January 17, 2026
+First Review: February 14, 2026 (30-day check-in)
+Full Review: March 31, 2026 (120-day cycle complete)
+================================================================================
