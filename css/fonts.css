@@ -126,6 +126,15 @@ input, select, textarea, button {
     color: #1a1a1a;
 }
 
+.site-nav .nav-link-red {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.site-nav .nav-link-red:hover {
+    color: #b91c1c;
+}
+
 .site-nav .nav-cta {
     display: none;
     background: #1a1a1a;
