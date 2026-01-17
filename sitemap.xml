@@ -126,12 +126,7 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    <url>
-        <loc>https://runbikecalc.com/lthr-zone-calculator</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
+    <!-- lthr-zone-calculator removed - redirect page -->
     <url>
         <loc>https://runbikecalc.com/max-heart-rate-calculator</loc>
         <lastmod>2025-12-29</lastmod>
@@ -1897,5 +1892,126 @@
         <lastmod>2026-01-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <!-- Previously missing pages added 2026-01-17 -->
+    <url>
+        <loc>https://runbikecalc.com/2026-top-picks</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/hrr-calculator</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/rmr-calculator</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/windchill-calculator</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/are-carbon-bikes-worth-it-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-cold-plunge-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-recovery-tools-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-sauna-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-yoga-mat-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/chafing-prevention-solutions-complete-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/hyrox-wod-generator-training-workouts</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/muscle-cramp-prevention-complete-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/running-for-beginners-guide-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/should-i-start-yoga-2026-athletes-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/should-you-do-hyrox-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/so-you-want-to-do-an-ironman-complete-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/track-workouts-for-runners-complete-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/tri-bike-vs-road-bike-aero-bars-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/what-is-lthr-lactate-threshold-heart-rate-guide</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/year-of-gravel-bike-2026</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
