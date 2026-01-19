@@ -241,38 +241,19 @@
         <changefreq>weekly</changefreq>
         <priority>0.88</priority>
     </url>
-    <url>
-        <loc>https://runbikecalc.com/cycling-training-plan-generator</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
         <loc>https://runbikecalc.com/heart-rate-training-hub</loc>
         <lastmod>2025-12-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.88</priority>
     </url>
     <url>
-        <loc>https://runbikecalc.com/hyrox-training-plan-generator</loc>
-        <lastmod>2025-12-29</lastmod>
+        <loc>https://runbikecalc.com/premium-training-plans</loc>
+        <lastmod>2026-01-19</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
+        <priority>0.92</priority>
     </url>
     <url>
         <loc>https://runbikecalc.com/marathon-training-hub</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://runbikecalc.com/running-training-plan-generator</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.88</priority>
-    </url>
-    <url>
-        <loc>https://runbikecalc.com/triathlon-training-plan-generator</loc>
         <lastmod>2025-12-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.88</priority>

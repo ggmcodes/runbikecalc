@@ -1,7 +1,7 @@
 // Service Worker for RunBikeCalc PWA
 // Enables offline functionality and faster loading
 
-const CACHE_NAME = 'runbikecalc-v1.4.0';
+const CACHE_NAME = 'runbikecalc-v1.5.0';
 const urlsToCache = [
   '/',
   '/css/style.css',
@@ -28,10 +28,6 @@ const urlsToCache = [
   '/recovery-calculator',
   '/calories-burned-running-calculator',
   '/power-to-weight-ratio-calculator',
-  '/running-training-plan-generator',
-  '/cycling-training-plan-generator',
-  '/triathlon-training-plan-generator',
-  '/hyrox-training-plan-generator',
   '/premium-training-plans',
   '/success',
   '/favicon.ico',
