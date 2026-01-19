@@ -283,10 +283,10 @@
 
         // Create plan summary header
         const header = document.createElement('div');
-        header.className = 'mb-6 p-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl border border-primary/30';
+        header.className = 'mb-6 p-5 bg-white rounded-sm border-l-4 border-copper shadow-sm';
 
         const title = document.createElement('h3');
-        title.className = 'text-xl font-bold text-white mb-2';
+        title.className = 'font-display text-xl font-semibold text-charcoal mb-3';
         title.textContent = (plan.distanceConfig?.name || plan.inputs.goalDistance || 'Training') + ' Plan';
         header.appendChild(title);
 
@@ -303,10 +303,10 @@
         summaryItems.forEach(item => {
             const div = document.createElement('div');
             const labelSpan = document.createElement('span');
-            labelSpan.className = 'text-slate-400 block';
+            labelSpan.className = 'text-warm-gray block text-xs uppercase tracking-wide';
             labelSpan.textContent = item.label;
             const valueSpan = document.createElement('span');
-            valueSpan.className = 'text-white font-semibold';
+            valueSpan.className = 'text-charcoal font-semibold';
             valueSpan.textContent = item.value;
             div.appendChild(labelSpan);
             div.appendChild(valueSpan);
@@ -322,7 +322,7 @@
             phasesSection.className = 'mb-6';
 
             const phasesTitle = document.createElement('h4');
-            phasesTitle.className = 'text-lg font-semibold text-white mb-3';
+            phasesTitle.className = 'font-display text-lg font-medium text-charcoal mb-3';
             phasesTitle.textContent = 'Training Phases';
             phasesSection.appendChild(phasesTitle);
 
@@ -331,16 +331,16 @@
 
             plan.phases.forEach(phase => {
                 const badge = document.createElement('span');
-                badge.className = 'px-3 py-1 rounded-full text-sm font-medium';
+                badge.className = 'px-3 py-1.5 rounded-sm text-sm font-medium';
 
-                // Color based on phase type
+                // Color based on phase type - cream theme friendly
                 const phaseColors = {
-                    'base': 'bg-blue-500/20 text-blue-400',
-                    'build': 'bg-amber-500/20 text-amber-400',
-                    'peak': 'bg-red-500/20 text-red-400',
-                    'taper': 'bg-green-500/20 text-green-400'
+                    'base': 'bg-blue-100 text-blue-700',
+                    'build': 'bg-amber-100 text-amber-700',
+                    'peak': 'bg-red-100 text-red-700',
+                    'taper': 'bg-green-100 text-green-700'
                 };
-                badge.className += ' ' + (phaseColors[phase.name?.toLowerCase()] || 'bg-slate-500/20 text-slate-400');
+                badge.className += ' ' + (phaseColors[phase.name?.toLowerCase()] || 'bg-gray-100 text-gray-600');
                 badge.textContent = (phase.label || phase.name) + ' (' + phase.duration + 'w)';
                 phasesGrid.appendChild(badge);
             });
@@ -354,7 +354,7 @@
             const weeksSection = document.createElement('div');
 
             const weeksTitle = document.createElement('h4');
-            weeksTitle.className = 'text-lg font-semibold text-white mb-3';
+            weeksTitle.className = 'font-display text-lg font-medium text-charcoal mb-3';
             weeksTitle.textContent = 'Week-by-Week Plan';
             weeksSection.appendChild(weeksTitle);
 
@@ -363,26 +363,26 @@
 
             plan.weeks.forEach((week, index) => {
                 const weekCard = document.createElement('div');
-                weekCard.className = 'bg-slate-800/50 rounded-xl p-4 border border-slate-700/50';
+                weekCard.className = 'bg-white rounded-sm p-4 border border-charcoal/10 shadow-sm';
 
                 if (week.isRecovery) {
-                    weekCard.classList.add('border-l-4', 'border-l-green-500');
+                    weekCard.classList.add('border-l-4', 'border-l-sage');
                 }
 
                 const weekHeader = document.createElement('div');
                 weekHeader.className = 'flex items-center justify-between mb-3';
 
                 const weekTitleEl = document.createElement('span');
-                weekTitleEl.className = 'font-semibold text-white';
+                weekTitleEl.className = 'font-semibold text-charcoal';
                 weekTitleEl.textContent = 'Week ' + week.weekNumber;
 
                 const weekBadge = document.createElement('span');
-                weekBadge.className = 'text-xs px-2 py-1 rounded-full';
+                weekBadge.className = 'text-xs px-2 py-1 rounded-sm';
                 if (week.isRecovery) {
-                    weekBadge.className += ' bg-green-500/20 text-green-400';
+                    weekBadge.className += ' bg-sage/20 text-sage';
                     weekBadge.textContent = 'Recovery';
                 } else {
-                    weekBadge.className += ' bg-slate-600/50 text-slate-300';
+                    weekBadge.className += ' bg-charcoal/10 text-charcoal/70';
                     weekBadge.textContent = week.phaseLabel || week.phase || '';
                 }
 
@@ -397,19 +397,19 @@
 
                     week.days.forEach(day => {
                         const dayEl = document.createElement('div');
-                        dayEl.className = 'text-center p-2 rounded-lg text-xs';
+                        dayEl.className = 'text-center p-2 rounded-sm text-xs';
 
                         const isRest = !day.workout || day.workout.name === 'Rest Day' || day.workout.type === 'REST';
 
                         if (isRest) {
-                            dayEl.className += ' bg-slate-700/30 text-slate-500';
+                            dayEl.className += ' bg-charcoal/5 text-charcoal/40';
                         } else {
                             const categoryColors = {
-                                'easy': 'bg-blue-500/20 text-blue-400',
-                                'moderate': 'bg-amber-500/20 text-amber-400',
-                                'hard': 'bg-red-500/20 text-red-400'
+                                'easy': 'bg-blue-100 text-blue-700',
+                                'moderate': 'bg-amber-100 text-amber-700',
+                                'hard': 'bg-red-100 text-red-700'
                             };
-                            dayEl.className += ' ' + (categoryColors[day.workout?.category] || 'bg-slate-600/50 text-slate-300');
+                            dayEl.className += ' ' + (categoryColors[day.workout?.category] || 'bg-copper/10 text-copper');
                         }
 
                         const dayName = document.createElement('div');
@@ -431,7 +431,7 @@
 
                 // Volume info
                 const volumeEl = document.createElement('div');
-                volumeEl.className = 'mt-2 text-xs text-slate-400';
+                volumeEl.className = 'mt-2 text-xs text-warm-gray';
                 volumeEl.textContent = 'Volume: ' + (week.targetVolume || week.totalMiles || '-') + ' mi';
                 weekCard.appendChild(volumeEl);
 
