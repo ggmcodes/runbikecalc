@@ -830,183 +830,116 @@ class TrainingPlanGenerator extends Calculator {
     }
 
     /**
-     * Create export section
+     * Create export section - Shows upgrade CTA for premium exports
      */
     createExportSection() {
         const section = document.createElement('div');
-        section.className = 'bg-gray-50 rounded-lg p-6';
+        section.className = 'bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100';
 
+        // Premium upgrade card
+        const card = document.createElement('div');
+        card.className = 'text-center';
+
+        // Lock icon
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg';
+
+        const lockSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        lockSvg.setAttribute('class', 'w-8 h-8 text-white');
+        lockSvg.setAttribute('fill', 'none');
+        lockSvg.setAttribute('stroke', 'currentColor');
+        lockSvg.setAttribute('viewBox', '0 0 24 24');
+        const lockPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        lockPath.setAttribute('stroke-linecap', 'round');
+        lockPath.setAttribute('stroke-linejoin', 'round');
+        lockPath.setAttribute('stroke-width', '2');
+        lockPath.setAttribute('d', 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z');
+        lockSvg.appendChild(lockPath);
+        iconContainer.appendChild(lockSvg);
+        card.appendChild(iconContainer);
+
+        // Title
         const title = document.createElement('h3');
-        title.className = 'text-xl font-semibold mb-4';
-        title.textContent = 'Export Your Plan';
-        section.appendChild(title);
+        title.className = 'text-xl font-bold text-gray-900 mb-2';
+        title.textContent = 'Export Your Training Plan';
+        card.appendChild(title);
 
-        // Time selector
-        const timeContainer = document.createElement('div');
-        timeContainer.className = 'mb-4';
+        // Description
+        const desc = document.createElement('p');
+        desc.className = 'text-gray-600 mb-4';
+        desc.textContent = 'Get your plan as a calendar file, PDF, or Excel spreadsheet.';
+        card.appendChild(desc);
 
-        const timeLabel = document.createElement('label');
-        timeLabel.className = 'block text-sm font-medium text-gray-700 mb-2';
-        timeLabel.textContent = 'Preferred Workout Time (for calendar)';
-        timeLabel.setAttribute('for', 'workout-time');
+        // Features list
+        const features = document.createElement('div');
+        features.className = 'flex flex-wrap justify-center gap-2 mb-6';
 
-        const timeInput = document.createElement('input');
-        timeInput.type = 'time';
-        timeInput.id = 'workout-time';
-        timeInput.value = '06:00';
-        timeInput.className = 'border-2 border-gray-200 rounded-lg px-3 py-2 w-32';
+        const featureItems = ['Calendar (ICS)', 'PDF Download', 'Excel/CSV', 'Save Plans', 'Share Links'];
+        featureItems.forEach(item => {
+            const badge = document.createElement('span');
+            badge.className = 'px-3 py-1 bg-white rounded-full text-sm text-gray-700 border border-gray-200';
+            badge.textContent = item;
+            features.appendChild(badge);
+        });
+        card.appendChild(features);
 
-        timeContainer.appendChild(timeLabel);
-        timeContainer.appendChild(timeInput);
-        section.appendChild(timeContainer);
+        // Price
+        const priceContainer = document.createElement('div');
+        priceContainer.className = 'mb-4';
 
-        // Export buttons grid
-        const buttonsGrid = document.createElement('div');
-        buttonsGrid.className = 'grid md:grid-cols-3 gap-4';
+        const price = document.createElement('span');
+        price.className = 'text-3xl font-bold text-gray-900';
+        price.textContent = '$5';
 
-        // ICS button (free)
-        const icsBtn = this.createExportButton('export-ics', 'Calendar (.ics)', true);
-        buttonsGrid.appendChild(icsBtn);
+        const priceNote = document.createElement('span');
+        priceNote.className = 'text-gray-500 ml-2';
+        priceNote.textContent = 'one-time';
 
-        // PDF button (gated)
-        const pdfBtn = this.createExportButton('export-pdf', 'PDF Export', false);
-        buttonsGrid.appendChild(pdfBtn);
+        priceContainer.appendChild(price);
+        priceContainer.appendChild(priceNote);
+        card.appendChild(priceContainer);
 
-        // CSV button (gated)
-        const csvBtn = this.createExportButton('export-csv', 'Excel/CSV Export', false);
-        buttonsGrid.appendChild(csvBtn);
+        // CTA Button
+        const ctaLink = document.createElement('a');
+        ctaLink.href = '/premium-training-plans';
+        ctaLink.className = 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl';
 
-        section.appendChild(buttonsGrid);
+        const ctaText = document.createElement('span');
+        ctaText.textContent = 'Unlock Premium Exports';
+        ctaLink.appendChild(ctaText);
 
-        // Share button
-        const shareContainer = document.createElement('div');
-        shareContainer.className = 'mt-4 pt-4 border-t border-gray-200';
+        const arrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        arrowSvg.setAttribute('class', 'w-5 h-5');
+        arrowSvg.setAttribute('fill', 'none');
+        arrowSvg.setAttribute('stroke', 'currentColor');
+        arrowSvg.setAttribute('viewBox', '0 0 24 24');
+        const arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        arrowPath.setAttribute('stroke-linecap', 'round');
+        arrowPath.setAttribute('stroke-linejoin', 'round');
+        arrowPath.setAttribute('stroke-width', '2');
+        arrowPath.setAttribute('d', 'M13 7l5 5m0 0l-5 5m5-5H6');
+        arrowSvg.appendChild(arrowPath);
+        ctaLink.appendChild(arrowSvg);
 
-        const shareBtn = document.createElement('button');
-        shareBtn.type = 'button';
-        shareBtn.id = 'share-plan-btn';
-        shareBtn.className = 'flex items-center gap-2 text-blue-600 hover:text-blue-800';
+        card.appendChild(ctaLink);
 
-        const shareSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        shareSvg.setAttribute('class', 'w-5 h-5');
-        shareSvg.setAttribute('fill', 'none');
-        shareSvg.setAttribute('stroke', 'currentColor');
-        shareSvg.setAttribute('viewBox', '0 0 24 24');
-        const sharePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        sharePath.setAttribute('stroke-linecap', 'round');
-        sharePath.setAttribute('stroke-linejoin', 'round');
-        sharePath.setAttribute('stroke-width', '2');
-        sharePath.setAttribute('d', 'M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z');
-        shareSvg.appendChild(sharePath);
+        // Trust note
+        const trustNote = document.createElement('p');
+        trustNote.className = 'text-xs text-gray-500 mt-4';
+        trustNote.textContent = 'Works with all 4 sports: Running, Cycling, Triathlon, Hyrox';
+        card.appendChild(trustNote);
 
-        const shareText = document.createElement('span');
-        shareText.textContent = 'Copy Link to Share Plan';
-
-        shareBtn.appendChild(shareSvg);
-        shareBtn.appendChild(shareText);
-        shareContainer.appendChild(shareBtn);
-        section.appendChild(shareContainer);
+        section.appendChild(card);
 
         return section;
     }
 
     /**
-     * Create export button
-     */
-    createExportButton(id, text, isFree) {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.id = id;
-        btn.className = 'flex items-center justify-center gap-2 px-4 py-3 border-2 border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition-colors';
-
-        if (!isFree) {
-            btn.classList.add('email-gated-btn');
-
-            const lockIcon = document.createElement('span');
-            lockIcon.className = 'lock-icon';
-
-            // Create lock SVG
-            const lockSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            lockSvg.setAttribute('class', 'w-5 h-5 text-gray-400');
-            lockSvg.setAttribute('fill', 'none');
-            lockSvg.setAttribute('stroke', 'currentColor');
-            lockSvg.setAttribute('viewBox', '0 0 24 24');
-            const lockPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            lockPath.setAttribute('stroke-linecap', 'round');
-            lockPath.setAttribute('stroke-linejoin', 'round');
-            lockPath.setAttribute('stroke-width', '2');
-            lockPath.setAttribute('d', 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z');
-            lockSvg.appendChild(lockPath);
-            lockIcon.appendChild(lockSvg);
-            btn.appendChild(lockIcon);
-        }
-
-        const btnText = document.createElement('span');
-        btnText.textContent = text;
-        btn.appendChild(btnText);
-
-        if (isFree) {
-            const freeTag = document.createElement('span');
-            freeTag.className = 'text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded';
-            freeTag.textContent = 'FREE';
-            btn.appendChild(freeTag);
-        }
-
-        return btn;
-    }
-
-    /**
-     * Initialize export button handlers
+     * Initialize export button handlers - No-op since exports moved to premium page
      */
     initExportHandlers() {
-        // Update gated button states
-        this.emailGate.updateButtonStates();
-
-        // ICS export (free)
-        const icsBtn = document.getElementById('export-ics');
-        if (icsBtn) {
-            icsBtn.addEventListener('click', () => this.exportICS());
-        }
-
-        // PDF export (gated)
-        const pdfBtn = document.getElementById('export-pdf');
-        if (pdfBtn) {
-            pdfBtn.addEventListener('click', () => {
-                this.emailGate.gateFunction(() => this.exportPDF());
-            });
-        }
-
-        // CSV export (gated)
-        const csvBtn = document.getElementById('export-csv');
-        if (csvBtn) {
-            csvBtn.addEventListener('click', () => {
-                this.emailGate.gateFunction(() => this.exportCSV());
-            });
-        }
-
-        // Share button - capture reference to this for closure
-        const shareBtn = document.getElementById('share-plan-btn');
-        const self = this;
-        if (shareBtn) {
-            shareBtn.addEventListener('click', function() {
-                const url = window.location.href;
-
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(url).then(() => {
-                        // Show toast notification
-                        const toast = document.createElement('div');
-                        toast.className = 'fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-                        toast.textContent = 'Link copied! Bookmark or share your plan.';
-                        document.body.appendChild(toast);
-                        setTimeout(() => toast.remove(), 3000);
-                    }).catch(() => {
-                        prompt('Copy this link to share your plan:', url);
-                    });
-                } else {
-                    prompt('Copy this link to share your plan:', url);
-                }
-            });
-        }
+        // Export functionality has been moved to the premium page
+        // This method is kept for backwards compatibility
     }
 
     /**

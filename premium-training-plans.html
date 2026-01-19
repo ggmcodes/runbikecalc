@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Premium Training Plans - All Sports | RunBikeCalc</title>
+    <meta name="description" content="Premium training plan generator for Running, Cycling, Triathlon, and Hyrox. Export to Calendar, PDF, Excel. Save and share your plans.">
+    <link rel="canonical" href="https://runbikecalc.com/premium-training-plans">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#10b981',
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937'
+                    },
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'Impact', 'sans-serif'],
+                        'body': ['DM Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+        }
+
+        /* Background Pattern */
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-light {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Sport Tab Animations */
+        .sport-tab {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sport-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb, #10b981);
+            border-radius: 2px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+
+        .sport-tab:hover::after,
+        .sport-tab.active::after {
+            width: 100%;
+        }
+
+        .sport-tab.active {
+            color: white;
+        }
+
+        .sport-tab:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Form Panel Transitions */
+        .sport-panel {
+            display: none;
+            animation: fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sport-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Input Styling */
+        .premium-input {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .premium-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+            outline: none;
+        }
+
+        .premium-input:hover:not(:focus) {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Locked State Styling */
+        .premium-locked .locked-feature {
+            position: relative;
+            opacity: 0.5;
+            pointer-events: none;
+            filter: grayscale(30%);
+        }
+
+        .premium-locked .locked-feature::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(2px);
+            border-radius: inherit;
+            z-index: 10;
+        }
+
+        .premium-unlocked .locked-feature {
+            opacity: 1;
+            pointer-events: auto;
+            filter: none;
+        }
+
+        .premium-unlocked .locked-feature::before {
+            display: none;
+        }
+
+        .premium-unlocked .lock-icon {
+            display: none;
+        }
+
+        .premium-unlocked .unlock-banner {
+            display: none;
+        }
+
+        .premium-unlocked .premium-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .premium-unlocked .premium-badge::before {
+            content: 'UNLOCKED';
+        }
+
+        .premium-locked .premium-badge::before {
+            content: 'LOCKED';
+        }
+
+        /* Button Hover Effects */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+
+        /* Floating Unlock Banner */
+        .unlock-banner {
+            animation: floatBanner 3s ease-in-out infinite;
+        }
+
+        @keyframes floatBanner {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        /* Export Button Grid */
+        .export-btn {
+            transition: all 0.2s ease;
+        }
+
+        .premium-unlocked .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Glow Effects */
+        .glow-blue {
+            box-shadow: 0 0 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .glow-emerald {
+            box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+        }
+
+        /* Saved Plans Item */
+        .saved-plan-item {
+            transition: all 0.2s ease;
+        }
+
+        .saved-plan-item:hover {
+            background: rgba(37, 99, 235, 0.1);
+            transform: translateX(4px);
+        }
+
+        /* Checkbox Custom Style */
+        .premium-checkbox {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            background: rgba(15, 23, 42, 0.6);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .premium-checkbox:checked {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border-color: #2563eb;
+        }
+
+        .premium-checkbox:checked::after {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Animated Gradient Border */
+        .gradient-border {
+            position: relative;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #2563eb, #10b981, #f59e0b, #2563eb);
+            background-size: 300% 300%;
+            border-radius: inherit;
+            z-index: -1;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Results Section */
+        #plan-results:empty::before {
+            content: 'Generate a plan to see results here';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 1.125rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .sport-tabs-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .sport-tabs-container::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen bg-grid-pattern premium-locked">
+
+    <!-- Ambient Background Gradients -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-radial from-secondary/8 via-transparent to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo & Title -->
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display text-xl sm:text-2xl tracking-wide text-white">PREMIUM</span>
+                        <span class="hidden sm:inline text-slate-400 text-sm ml-2">Training Plans</span>
+                    </div>
+                </a>
+
+                <!-- Status Badge & CTA -->
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <div class="premium-badge px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 text-white"></div>
+
+                    <a href="https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06"
+                       class="unlock-cta hidden sm:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-premium">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                        <span>Unlock $5</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+        <!-- Hero Section -->
+        <div class="text-center mb-10 sm:mb-14">
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-4">
+                <span class="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">TRAIN SMARTER.</span>
+                <br class="sm:hidden">
+                <span class="bg-gradient-to-r from-primary via-blue-400 to-secondary bg-clip-text text-transparent">RACE FASTER.</span>
+            </h1>
+            <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto">
+                Professional training plans for Running, Cycling, Triathlon & Hyrox. Export to any calendar. Track your progress.
+            </p>
+        </div>
+
+        <!-- Sport Selector Tabs -->
+        <div class="sport-tabs-container mb-8">
+            <div class="flex justify-center">
+                <div class="inline-flex glass rounded-2xl p-1.5 gap-1">
+                    <button class="sport-tab active px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold text-slate-400 flex items-center gap-2" data-sport="running">
+                        <span class="text-lg">🏃</span>
+                        <span>Running</span>
+                    </button>
+                    <button class="sport-tab px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold text-slate-400 flex items-center gap-2" data-sport="cycling">
+                        <span class="text-lg">🚴</span>
+                        <span>Cycling</span>
+                    </button>
+                    <button class="sport-tab px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold text-slate-400 flex items-center gap-2" data-sport="triathlon">
+                        <span class="text-lg">🏊</span>
+                        <span>Triathlon</span>
+                    </button>
+                    <button class="sport-tab px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base font-semibold text-slate-400 flex items-center gap-2" data-sport="hyrox">
+                        <span class="text-lg">💪</span>
+                        <span>Hyrox</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
+
+            <!-- Left Column: Form -->
+            <div class="lg:col-span-2">
+                <div class="glass rounded-3xl p-6 sm:p-8 glow-blue">
+
+                    <!-- Running Form -->
+                    <div id="running-panel" class="sport-panel active">
+                        <form id="running-form" class="space-y-6">
+                            <!-- Section 1: Goal -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm font-bold">1</span>
+                                    Race Goal
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Goal Distance</label>
+                                        <select name="distance" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                            <option value="5k">5K</option>
+                                            <option value="10k">10K</option>
+                                            <option value="half" selected>Half Marathon</option>
+                                            <option value="marathon">Marathon</option>
+                                            <option value="50k">50K Ultra</option>
+                                            <option value="50mi">50 Mile Ultra</option>
+                                            <option value="100k">100K Ultra</option>
+                                            <option value="100mi">100 Mile Ultra</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Race Date</label>
+                                        <input type="date" name="raceDate" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-300 mb-2">Weeks Until Race</label>
+                                    <input type="number" name="weeks" min="6" max="52" value="16" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                </div>
+                            </div>
+
+                            <!-- Section 2: Fitness -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-sm font-bold">2</span>
+                                    Current Fitness
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Fitness Level</label>
+                                        <select name="fitnessLevel" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="beginner">Beginner</option>
+                                            <option value="intermediate" selected>Intermediate</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Weekly Mileage</label>
+                                        <input type="number" name="weeklyMileage" min="5" max="150" value="25" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Schedule -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-accent/20 text-accent flex items-center justify-center text-sm font-bold">3</span>
+                                    Training Schedule
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Training Days/Week</label>
+                                        <select name="trainingDays" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="3">3 days</option>
+                                            <option value="4">4 days</option>
+                                            <option value="5" selected>5 days</option>
+                                            <option value="6">6 days</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Long Run Day</label>
+                                        <select name="longRunDay" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="saturday">Saturday</option>
+                                            <option value="sunday" selected>Sunday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-premium text-lg">
+                                Generate Training Plan
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Cycling Form -->
+                    <div id="cycling-panel" class="sport-panel">
+                        <form id="cycling-form" class="space-y-6">
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm font-bold">1</span>
+                                    Event Goal
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Target Distance</label>
+                                        <select name="distance" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                            <option value="25mi">25 Miles</option>
+                                            <option value="50mi">50 Miles</option>
+                                            <option value="metric" selected>Metric Century (62mi)</option>
+                                            <option value="75mi">75 Miles</option>
+                                            <option value="century">Century (100mi)</option>
+                                            <option value="granfondo">Gran Fondo</option>
+                                            <option value="multiday">Multi-Day Event</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Event Date</label>
+                                        <input type="date" name="eventDate" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-300 mb-2">Weeks Until Event</label>
+                                    <input type="number" name="weeks" min="4" max="52" value="12" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-sm font-bold">2</span>
+                                    Current Fitness
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Fitness Level</label>
+                                        <select name="fitnessLevel" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="beginner">Beginner</option>
+                                            <option value="intermediate" selected>Intermediate</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Weekly Hours</label>
+                                        <input type="number" name="weeklyHours" min="3" max="30" value="8" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-accent/20 text-accent flex items-center justify-center text-sm font-bold">3</span>
+                                    Training Schedule
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Training Days/Week</label>
+                                        <select name="trainingDays" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="3">3 days</option>
+                                            <option value="4" selected>4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="6">6 days</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Long Ride Day</label>
+                                        <select name="longRideDay" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="saturday" selected>Saturday</option>
+                                            <option value="sunday">Sunday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-premium text-lg">
+                                Generate Training Plan
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Triathlon Form -->
+                    <div id="triathlon-panel" class="sport-panel">
+                        <form id="triathlon-form" class="space-y-6">
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm font-bold">1</span>
+                                    Race Goal
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Event Distance</label>
+                                        <select name="distance" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                            <option value="sprint">Sprint</option>
+                                            <option value="olympic" selected>Olympic</option>
+                                            <option value="70.3">70.3 Half Ironman</option>
+                                            <option value="ironman">Ironman</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Race Date</label>
+                                        <input type="date" name="raceDate" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-300 mb-2">Weeks Until Race</label>
+                                    <input type="number" name="weeks" min="8" max="36" value="16" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-sm font-bold">2</span>
+                                    Current Fitness
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Experience Level</label>
+                                        <select name="experienceLevel" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="beginner">Beginner</option>
+                                            <option value="intermediate" selected>Intermediate</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Weekly Training Hours</label>
+                                        <input type="number" name="weeklyHours" min="3" max="30" value="10" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-accent/20 text-accent flex items-center justify-center text-sm font-bold">3</span>
+                                    Training Schedule
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Training Days/Week</label>
+                                        <select name="trainingDays" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="4">4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="6" selected>6 days</option>
+                                            <option value="7">7 days</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Swim Preference</label>
+                                        <select name="swimPreference" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="pool" selected>Pool</option>
+                                            <option value="openwater">Open Water</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-premium text-lg">
+                                Generate Training Plan
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Hyrox Form -->
+                    <div id="hyrox-panel" class="sport-panel">
+                        <form id="hyrox-form" class="space-y-6">
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm font-bold">1</span>
+                                    Race Goal
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Hyrox Division</label>
+                                        <select name="division" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                            <option value="first">First Hyrox</option>
+                                            <option value="open" selected>Hyrox Open</option>
+                                            <option value="pro">Hyrox Pro</option>
+                                            <option value="doubles">Hyrox Doubles</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Race Date</label>
+                                        <input type="date" name="raceDate" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-300 mb-2">Weeks Until Race</label>
+                                    <input type="number" name="weeks" min="8" max="24" value="12" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-sm font-bold">2</span>
+                                    Current Fitness
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Experience Level</label>
+                                        <select name="experienceLevel" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="beginner">Beginner</option>
+                                            <option value="intermediate" selected>Intermediate</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Weekly Training Hours</label>
+                                        <input type="number" name="weeklyHours" min="2" max="20" value="8" class="premium-input w-full px-4 py-3 rounded-xl text-white" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-accent/20 text-accent flex items-center justify-center text-sm font-bold">3</span>
+                                    Training Schedule
+                                </h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Training Days/Week</label>
+                                        <select name="trainingDays" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="3">3 days</option>
+                                            <option value="4" selected>4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="6">6 days</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-300 mb-2">Long Workout Day</label>
+                                        <select name="longWorkoutDay" class="premium-input w-full px-4 py-3 rounded-xl text-white">
+                                            <option value="saturday" selected>Saturday</option>
+                                            <option value="sunday">Sunday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm font-bold">4</span>
+                                    Equipment Access
+                                </h3>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="skierg" class="premium-checkbox" checked>
+                                        <span class="text-slate-300 text-sm">SkiErg</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="rower" class="premium-checkbox" checked>
+                                        <span class="text-slate-300 text-sm">Rower</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="sled" class="premium-checkbox">
+                                        <span class="text-slate-300 text-sm">Sled</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="wallballs" class="premium-checkbox" checked>
+                                        <span class="text-slate-300 text-sm">Wall Balls</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="sandbag" class="premium-checkbox">
+                                        <span class="text-slate-300 text-sm">Sandbag</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="checkbox" name="equipment" value="kettlebells" class="premium-checkbox" checked>
+                                        <span class="text-slate-300 text-sm">Kettlebells</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-premium text-lg">
+                                Generate Training Plan
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Results Section -->
+                <div class="mt-8 glass rounded-3xl p-6 sm:p-8">
+                    <h2 class="font-display text-2xl tracking-wide text-white mb-6">YOUR TRAINING PLAN</h2>
+
+                    <!-- Plan Results Container -->
+                    <div id="plan-results" class="min-h-[200px] rounded-2xl bg-slate-900/50 border border-slate-700/50 p-6 mb-6">
+                        <!-- Plan will be rendered here by JS -->
+                    </div>
+
+                    <!-- Export Actions (LOCKED) -->
+                    <div class="locked-feature rounded-2xl">
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button id="export-calendar" class="export-btn flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-semibold rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span>Calendar</span>
+                                <span class="lock-icon">🔒</span>
+                            </button>
+                            <button id="export-pdf" class="export-btn flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-semibold rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                                <span>PDF</span>
+                                <span class="lock-icon">🔒</span>
+                            </button>
+                            <button id="export-excel" class="export-btn flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                <span>Excel</span>
+                                <span class="lock-icon">🔒</span>
+                            </button>
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+                            <button id="save-plan" class="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+                                </svg>
+                                <span>Save Plan</span>
+                                <span class="lock-icon">🔒</span>
+                            </button>
+                            <button id="share-plan" class="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                                <span>Share Link</span>
+                                <span class="lock-icon">🔒</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Premium Info & Saved Plans -->
+            <div class="space-y-6">
+
+                <!-- Premium Unlock Banner -->
+                <div class="unlock-banner gradient-border glass rounded-3xl p-6 glow-emerald">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-2xl text-white mb-2">UNLOCK PREMIUM</h3>
+                        <p class="text-slate-400 text-sm mb-4">One-time payment. Lifetime access.</p>
+
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-white">$5</span>
+                        </div>
+
+                        <ul class="text-left space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Calendar Export (ICS)</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>PDF Download</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Excel/CSV Export</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Save Up to 5 Plans</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Shareable Plan Links</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-300">
+                                <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>All 4 Sports Included</span>
+                            </li>
+                        </ul>
+
+                        <a href="https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06"
+                           class="block w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 btn-premium text-lg">
+                            Unlock Now
+                        </a>
+
+                        <p class="text-xs text-slate-500 mt-4">Secure payment via Stripe</p>
+                    </div>
+                </div>
+
+                <!-- Saved Plans Section (Premium Only) -->
+                <div class="locked-feature glass rounded-3xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-white flex items-center gap-2">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                            Saved Plans
+                            <span class="lock-icon">🔒</span>
+                        </h3>
+                        <span class="text-sm text-slate-400" id="saved-count">0/5</span>
+                    </div>
+
+                    <div id="saved-plans-list" class="space-y-2">
+                        <p class="text-slate-500 text-sm text-center py-8">No saved plans yet</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="glass-light rounded-2xl p-4">
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-3">Free Plan Generators</p>
+                    <div class="space-y-2">
+                        <a href="/running-training-plan-generator" class="block text-slate-400 hover:text-white text-sm transition-colors">→ Running Plans</a>
+                        <a href="/cycling-training-plan-generator" class="block text-slate-400 hover:text-white text-sm transition-colors">→ Cycling Plans</a>
+                        <a href="/triathlon-training-plan-generator" class="block text-slate-400 hover:text-white text-sm transition-colors">→ Triathlon Plans</a>
+                        <a href="/hyrox-training-plan-generator" class="block text-slate-400 hover:text-white text-sm transition-colors">→ Hyrox Plans</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-sm">&copy; 2024 RunBikeCalc. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="/privacy" class="text-slate-500 hover:text-white text-sm transition-colors">Privacy</a>
+                    <a href="/terms" class="text-slate-500 hover:text-white text-sm transition-colors">Terms</a>
+                    <a href="/contact" class="text-slate-500 hover:text-white text-sm transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Training Plan Generator Scripts -->
+    <script src="js/calculator-base.js"></script>
+    <script src="js/training-plan-base.js"></script>
+    <script src="js/training-plan-running.js"></script>
+    <script src="js/training-plan-cycling.js"></script>
+    <script src="js/training-plan-triathlon.js"></script>
+    <script src="js/training-plan-hyrox.js"></script>
+    <script src="js/training-plan-export.js"></script>
+
+    <!-- Premium Plans Logic -->
+    <script src="js/premium-plans.js"></script>
+</body>
+</html>
