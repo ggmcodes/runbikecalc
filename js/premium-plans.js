@@ -331,16 +331,17 @@
 
             plan.phases.forEach(phase => {
                 const badge = document.createElement('span');
-                badge.className = 'px-3 py-1.5 rounded-sm text-sm font-medium';
+                badge.className = 'px-4 py-2 rounded-sm text-sm font-medium border';
 
-                // Color based on phase type - cream theme friendly
+                // Phase colors - distinct from workout intensity colors
+                // Using border style to differentiate from workout day colors
                 const phaseColors = {
-                    'base': 'bg-blue-100 text-blue-700',
-                    'build': 'bg-amber-100 text-amber-700',
-                    'peak': 'bg-red-100 text-red-700',
-                    'taper': 'bg-green-100 text-green-700'
+                    'base': 'bg-white border-charcoal/30 text-charcoal',
+                    'build': 'bg-copper/10 border-copper text-copper-dark',
+                    'peak': 'bg-charcoal text-white border-charcoal',
+                    'taper': 'bg-sage/10 border-sage text-sage'
                 };
-                badge.className += ' ' + (phaseColors[phase.name?.toLowerCase()] || 'bg-gray-100 text-gray-600');
+                badge.className += ' ' + (phaseColors[phase.name?.toLowerCase()] || 'bg-gray-100 border-gray-300 text-gray-600');
                 badge.textContent = (phase.label || phase.name) + ' (' + phase.duration + 'w)';
                 phasesGrid.appendChild(badge);
             });
