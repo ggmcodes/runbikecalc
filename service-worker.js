@@ -1,7 +1,7 @@
 // Service Worker for RunBikeCalc PWA
 // Enables offline functionality and faster loading
 
-const CACHE_NAME = 'runbikecalc-v1.3.0';
+const CACHE_NAME = 'runbikecalc-v1.4.0';
 const urlsToCache = [
   '/',
   '/css/style.css',
@@ -14,7 +14,8 @@ const urlsToCache = [
   '/js/training-plan-hyrox.js',
   '/js/training-plan-export.js',
   '/js/url-params.js',
-  '/js/email-gate.js',
+  '/js/premium-plans.js',
+  '/js/success.js',
   '/running-pace-calculator',
   '/heart-rate-zone-calculator',
   '/vo2-max-calculator',
@@ -31,6 +32,8 @@ const urlsToCache = [
   '/cycling-training-plan-generator',
   '/triathlon-training-plan-generator',
   '/hyrox-training-plan-generator',
+  '/premium-training-plans',
+  '/success',
   '/favicon.ico',
   'https://cdn.tailwindcss.com',
   'https://cdn.jsdelivr.net/npm/chart.js'

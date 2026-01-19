@@ -56,10 +56,6 @@ class TrainingPlanGenerator extends Calculator {
         this.sport = sport;
         this.plan = null;
         this.urlParams = new URLParamsHandler();
-        this.emailGate = new EmailGateHandler();
-
-        // Initialize button states on load
-        this.emailGate.updateButtonStates();
 
         // Load from URL if parameters present
         this.loadFromURL();
