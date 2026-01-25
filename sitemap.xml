@@ -2021,4 +2021,47 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <!-- High-Value Product & Equipment Guides added 2026-01-24 -->
+    <url>
+        <loc>https://runbikecalc.com/blog/carbon-vs-aluminum-wheels-handlebars-complete-guide</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/fastest-rolling-tires-2026-guide</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/is-peloton-worth-it-2026</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-electrolytes-2026</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-supplements-runners-cyclists-2026</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-carbs-endurance-athletes-2026</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-weight-sets-home-gym-2026</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 </urlset>
