@@ -1,0 +1,263 @@
+{
+  "products": [
+    {
+      "id": "sunny-sf-rw5515",
+      "name": "Sunny Health SF-RW5515 Magnetic Rower",
+      "brand": "Sunny Health",
+      "tier": "budget",
+      "price": 230,
+      "priceDisplay": "$230",
+      "asin": "B017HSNIEW",
+      "amazonUrl": "https://www.amazon.com/dp/B017HSNIEW?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 7, "why_crossfit": 3, "why_rehab": 6, "why_compete": 1, "why_fullbody": 7,
+        "exp_beginner": 9, "exp_intermediate": 5, "exp_advanced": 2,
+        "resist_magnetic": 10, "resist_air": 2, "resist_water": 2, "resist_any": 7,
+        "guided_yes": 2, "guided_nice": 5, "guided_no": 9,
+        "budget_under_300": 10, "budget_300_600": 6, "budget_600_1200": 2, "budget_over_1200": 1,
+        "space_compact": 8, "space_medium": 8, "space_large": 7
+      },
+      "specs": { "resistance": "Magnetic (8 levels)", "footprint": "82\" x 19\"", "foldable": true, "noise": "Very quiet", "maxWeight": "250 lb", "monitor": "LCD (basic)" },
+      "verdict": { "gymQuality": "NO", "bestFor": "Budget-friendly starter rower" },
+      "pairsWith": ["rower-mat", "rower-seat-pad"]
+    },
+    {
+      "id": "fitness-reality-1000",
+      "name": "Fitness Reality 1000 Plus Rower",
+      "brand": "Fitness Reality",
+      "tier": "budget",
+      "price": 200,
+      "priceDisplay": "$200",
+      "asin": "B08YQF1PX9",
+      "amazonUrl": "https://www.amazon.com/dp/B08YQF1PX9?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 6, "why_crossfit": 2, "why_rehab": 7, "why_compete": 1, "why_fullbody": 6,
+        "exp_beginner": 9, "exp_intermediate": 4, "exp_advanced": 1,
+        "resist_magnetic": 9, "resist_air": 1, "resist_water": 1, "resist_any": 6,
+        "guided_yes": 1, "guided_nice": 4, "guided_no": 9,
+        "budget_under_300": 10, "budget_300_600": 5, "budget_600_1200": 1, "budget_over_1200": 0,
+        "space_compact": 8, "space_medium": 7, "space_large": 6
+      },
+      "specs": { "resistance": "Magnetic (14 levels)", "footprint": "89\" x 20\"", "foldable": true, "noise": "Very quiet", "maxWeight": "250 lb", "monitor": "LCD" },
+      "verdict": { "gymQuality": "NO", "bestFor": "Most affordable magnetic rower" },
+      "pairsWith": ["rower-mat", "rower-seat-pad"]
+    },
+    {
+      "id": "concept2-modeld",
+      "name": "Concept2 Model D (RowErg)",
+      "brand": "Concept2",
+      "tier": "premium",
+      "price": 990,
+      "priceDisplay": "$990",
+      "asin": "B0CKMQKWQH",
+      "amazonUrl": "https://www.amazon.com/dp/B0CKMQKWQH?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 9, "why_crossfit": 10, "why_rehab": 5, "why_compete": 10, "why_fullbody": 9,
+        "exp_beginner": 7, "exp_intermediate": 10, "exp_advanced": 10,
+        "resist_magnetic": 3, "resist_air": 10, "resist_water": 3, "resist_any": 9,
+        "guided_yes": 4, "guided_nice": 6, "guided_no": 9,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 10, "budget_over_1200": 8,
+        "space_compact": 5, "space_medium": 7, "space_large": 9
+      },
+      "specs": { "resistance": "Air (fan)", "footprint": "96\" x 24\"", "foldable": true, "noise": "Moderate (air)", "maxWeight": "500 lb", "monitor": "PM5 (Bluetooth/ANT+)" },
+      "verdict": { "gymQuality": "YES", "bestFor": "The gold standard - used by every gym & competitive rower" },
+      "pairsWith": ["rower-mat", "concept2-phone-holder", "heart-rate-belt"]
+    },
+    {
+      "id": "concept2-modele",
+      "name": "Concept2 Model E (RowErg Tall)",
+      "brand": "Concept2",
+      "tier": "premium",
+      "price": 1200,
+      "priceDisplay": "$1,200",
+      "asin": "B01B4AMRMI",
+      "amazonUrl": "https://www.amazon.com/dp/B01B4AMRMI?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 9, "why_crossfit": 9, "why_rehab": 7, "why_compete": 10, "why_fullbody": 9,
+        "exp_beginner": 7, "exp_intermediate": 10, "exp_advanced": 10,
+        "resist_magnetic": 3, "resist_air": 10, "resist_water": 3, "resist_any": 9,
+        "guided_yes": 4, "guided_nice": 6, "guided_no": 9,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 5, "budget_over_1200": 9,
+        "space_compact": 3, "space_medium": 6, "space_large": 9
+      },
+      "specs": { "resistance": "Air (fan)", "footprint": "96\" x 24\"", "foldable": true, "noise": "Moderate (air)", "maxWeight": "500 lb", "monitor": "PM5 (Bluetooth/ANT+)" },
+      "verdict": { "gymQuality": "YES", "bestFor": "Higher seat for easier mount/dismount" },
+      "pairsWith": ["rower-mat", "concept2-phone-holder", "heart-rate-belt"]
+    },
+    {
+      "id": "hydrow-rower",
+      "name": "Hydrow Rower",
+      "brand": "Hydrow",
+      "tier": "premium",
+      "price": 2495,
+      "priceDisplay": "$2,495",
+      "asin": "B0844GP7QP",
+      "amazonUrl": "https://www.amazon.com/dp/B0844GP7QP?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 9, "why_crossfit": 4, "why_rehab": 5, "why_compete": 5, "why_fullbody": 8,
+        "exp_beginner": 9, "exp_intermediate": 8, "exp_advanced": 6,
+        "resist_magnetic": 8, "resist_air": 3, "resist_water": 5, "resist_any": 7,
+        "guided_yes": 10, "guided_nice": 8, "guided_no": 2,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 0, "budget_over_1200": 7,
+        "space_compact": 3, "space_medium": 6, "space_large": 8
+      },
+      "specs": { "resistance": "Electromagnetic", "footprint": "86\" x 25\"", "foldable": false, "noise": "Very quiet", "maxWeight": "375 lb", "monitor": "22\" HD touchscreen" },
+      "verdict": { "gymQuality": "YES", "bestFor": "Best live rowing classes & premium build" },
+      "pairsWith": ["rower-mat", "heart-rate-belt"]
+    },
+    {
+      "id": "waterrower-natural",
+      "name": "WaterRower Natural Rowing Machine",
+      "brand": "WaterRower",
+      "tier": "premium",
+      "price": 1200,
+      "priceDisplay": "$1,200",
+      "asin": "B000N9ZXIC",
+      "amazonUrl": "https://www.amazon.com/dp/B000N9ZXIC?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 8, "why_crossfit": 4, "why_rehab": 6, "why_compete": 5, "why_fullbody": 8,
+        "exp_beginner": 8, "exp_intermediate": 8, "exp_advanced": 6,
+        "resist_magnetic": 3, "resist_air": 3, "resist_water": 10, "resist_any": 8,
+        "guided_yes": 3, "guided_nice": 5, "guided_no": 8,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 5, "budget_over_1200": 8,
+        "space_compact": 5, "space_medium": 7, "space_large": 8
+      },
+      "specs": { "resistance": "Water", "footprint": "84\" x 21\"", "foldable": false, "noise": "Soothing water swoosh", "maxWeight": "700 lb", "monitor": "S4 (ANT+)" },
+      "verdict": { "gymQuality": "YES", "bestFor": "Beautiful design with realistic water resistance" },
+      "pairsWith": ["rower-mat", "waterrower-tablet-arm"]
+    },
+    {
+      "id": "ergatta-rower",
+      "name": "Ergatta Rower",
+      "brand": "Ergatta",
+      "tier": "premium",
+      "price": 2200,
+      "priceDisplay": "$2,200",
+      "amazonUrl": "https://www.amazon.com/s?k=Ergatta+Rower&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 8, "why_crossfit": 4, "why_rehab": 5, "why_compete": 5, "why_fullbody": 8,
+        "exp_beginner": 9, "exp_intermediate": 8, "exp_advanced": 5,
+        "resist_magnetic": 3, "resist_air": 3, "resist_water": 10, "resist_any": 8,
+        "guided_yes": 9, "guided_nice": 8, "guided_no": 3,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 0, "budget_over_1200": 7,
+        "space_compact": 5, "space_medium": 7, "space_large": 8
+      },
+      "specs": { "resistance": "Water", "footprint": "86\" x 23\"", "foldable": false, "noise": "Soothing water swoosh", "maxWeight": "500 lb", "monitor": "17.3\" touchscreen" },
+      "verdict": { "gymQuality": "YES", "bestFor": "Gamified water rower with touchscreen" },
+      "pairsWith": ["rower-mat", "heart-rate-belt"]
+    },
+    {
+      "id": "echelon-row",
+      "name": "Echelon Row Smart Rower",
+      "brand": "Echelon",
+      "tier": "mid",
+      "price": 800,
+      "priceDisplay": "$800",
+      "asin": "B08F1NS5P1",
+      "amazonUrl": "https://www.amazon.com/dp/B08F1NS5P1?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 7, "why_crossfit": 4, "why_rehab": 5, "why_compete": 3, "why_fullbody": 7,
+        "exp_beginner": 8, "exp_intermediate": 7, "exp_advanced": 4,
+        "resist_magnetic": 9, "resist_air": 2, "resist_water": 2, "resist_any": 7,
+        "guided_yes": 8, "guided_nice": 8, "guided_no": 3,
+        "budget_under_300": 0, "budget_300_600": 3, "budget_600_1200": 9, "budget_over_1200": 4,
+        "space_compact": 6, "space_medium": 8, "space_large": 7
+      },
+      "specs": { "resistance": "Magnetic (32 levels)", "footprint": "86\" x 20\"", "foldable": true, "noise": "Quiet", "maxWeight": "300 lb", "monitor": "Tablet holder + app" },
+      "verdict": { "gymQuality": "NO", "bestFor": "Guided classes on a mid-range budget" },
+      "pairsWith": ["rower-mat", "rower-seat-pad"]
+    },
+    {
+      "id": "stamina-x-air",
+      "name": "Stamina X Air Rower",
+      "brand": "Stamina",
+      "tier": "budget",
+      "price": 400,
+      "priceDisplay": "$400",
+      "asin": "B00RPHF2AE",
+      "amazonUrl": "https://www.amazon.com/dp/B00RPHF2AE?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 7, "why_crossfit": 6, "why_rehab": 4, "why_compete": 3, "why_fullbody": 7,
+        "exp_beginner": 7, "exp_intermediate": 6, "exp_advanced": 4,
+        "resist_magnetic": 2, "resist_air": 8, "resist_water": 2, "resist_any": 7,
+        "guided_yes": 2, "guided_nice": 4, "guided_no": 8,
+        "budget_under_300": 2, "budget_300_600": 10, "budget_600_1200": 5, "budget_over_1200": 2,
+        "space_compact": 5, "space_medium": 7, "space_large": 7
+      },
+      "specs": { "resistance": "Air (fan)", "footprint": "87\" x 20\"", "foldable": true, "noise": "Moderate (air)", "maxWeight": "250 lb", "monitor": "LCD" },
+      "verdict": { "gymQuality": "NO", "bestFor": "Budget air rower for CrossFit feel" },
+      "pairsWith": ["rower-mat", "rower-seat-pad"]
+    },
+    {
+      "id": "nordictrack-rw900",
+      "name": "NordicTrack RW900 Rower",
+      "brand": "NordicTrack",
+      "tier": "mid",
+      "price": 1300,
+      "priceDisplay": "$1,300",
+      "asin": "B09RN7L485",
+      "amazonUrl": "https://www.amazon.com/dp/B09RN7L485?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 8, "why_crossfit": 4, "why_rehab": 5, "why_compete": 4, "why_fullbody": 8,
+        "exp_beginner": 8, "exp_intermediate": 8, "exp_advanced": 5,
+        "resist_magnetic": 8, "resist_air": 3, "resist_water": 3, "resist_any": 7,
+        "guided_yes": 10, "guided_nice": 8, "guided_no": 3,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 5, "budget_over_1200": 8,
+        "space_compact": 4, "space_medium": 7, "space_large": 8
+      },
+      "specs": { "resistance": "Magnetic (26 levels)", "footprint": "82\" x 22\"", "foldable": true, "noise": "Quiet", "maxWeight": "250 lb", "monitor": "22\" HD touchscreen" },
+      "verdict": { "gymQuality": "NO", "bestFor": "iFIT classes with 22\" screen" },
+      "pairsWith": ["rower-mat", "heart-rate-belt"]
+    },
+    {
+      "id": "lifefitness-row-hx",
+      "name": "Life Fitness HX Trainer Row",
+      "brand": "Life Fitness",
+      "tier": "premium",
+      "price": 1700,
+      "priceDisplay": "$1,700",
+      "asin": "B01EOLI8X6",
+      "amazonUrl": "https://www.amazon.com/dp/B01EOLI8X6?tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null,
+      "scores": {
+        "why_cardio": 8, "why_crossfit": 5, "why_rehab": 6, "why_compete": 5, "why_fullbody": 8,
+        "exp_beginner": 7, "exp_intermediate": 9, "exp_advanced": 8,
+        "resist_magnetic": 4, "resist_air": 8, "resist_water": 3, "resist_any": 8,
+        "guided_yes": 5, "guided_nice": 7, "guided_no": 7,
+        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1200": 2, "budget_over_1200": 8,
+        "space_compact": 4, "space_medium": 7, "space_large": 8
+      },
+      "specs": { "resistance": "Air + magnetic hybrid", "footprint": "95\" x 22\"", "foldable": false, "noise": "Low-moderate", "maxWeight": "400 lb", "monitor": "LCD + Bluetooth" },
+      "verdict": { "gymQuality": "YES", "bestFor": "Commercial-grade hybrid resistance" },
+      "pairsWith": ["rower-mat", "heart-rate-belt"]
+    }
+  ],
+  "accessories": [
+    { "id": "rower-mat", "name": "Rowing Machine Floor Mat", "priceDisplay": "$40", "asin": "B09VPCCYX4", "amazonUrl": "https://www.amazon.com/dp/B09VPCCYX4?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "rower-seat-pad", "name": "Rowing Machine Seat Cushion", "priceDisplay": "$25", "asin": "B01N96EA1J", "amazonUrl": "https://www.amazon.com/dp/B01N96EA1J?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "concept2-phone-holder", "name": "Concept2 Phone Holder", "priceDisplay": "$20", "asin": "B07YN5CP6Z", "amazonUrl": "https://www.amazon.com/dp/B07YN5CP6Z?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "waterrower-tablet-arm", "name": "WaterRower Tablet Arm", "priceDisplay": "$80", "asin": "B07GY34P25", "amazonUrl": "https://www.amazon.com/dp/B07GY34P25?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "heart-rate-belt", "name": "Polar H10 HR Monitor", "priceDisplay": "$90", "asin": "B07PM54P4N", "amazonUrl": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+  ]
+}

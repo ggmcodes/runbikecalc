@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Treadmill Finder Quiz - Find Your Perfect Treadmill | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/treadmill-finder">
+    <meta name="description" content="Answer 6 quick questions to find the perfect treadmill for your goals, space, and budget. Compare top-rated treadmills for walking, jogging, running, and serious training in 2026.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Treadmill Finder Quiz - Find Your Perfect Treadmill">
+    <meta property="og:description" content="Answer 6 quick questions to find the perfect treadmill for your goals, space, and budget.">
+    <meta property="og:image" content="https://runbikecalc.com/images/gear-guides-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/treadmill-finder">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Treadmill Finder Quiz",
+        "url": "https://runbikecalc.com/treadmill-finder",
+        "description": "Answer 6 quick questions to find the perfect treadmill for your goals, space, and budget.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <style>
+        /* Quiz Styles */
+        .quiz-progress {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .quiz-progress-bar {
+            height: 100%;
+            background: #C67B4E;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+        .quiz-step-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .quiz-options {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            text-align: left;
+            width: 100%;
+        }
+        .quiz-option:hover {
+            border-color: #C67B4E;
+            background: #fffbf7;
+        }
+        .quiz-option.selected {
+            border-color: #C67B4E;
+            background: #fef7f0;
+        }
+        .quiz-option-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            width: 2rem;
+            text-align: center;
+        }
+        .quiz-option-label {
+            font-weight: 500;
+            color: #111827;
+        }
+        .quiz-option-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.15rem;
+        }
+        .quiz-option-multi {
+            position: relative;
+        }
+        .quiz-check {
+            margin-left: auto;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 4px;
+            border: 2px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #C67B4E;
+            flex-shrink: 0;
+        }
+        .quiz-option.selected .quiz-check {
+            border-color: #C67B4E;
+            background: #fef7f0;
+        }
+        .quiz-continue-btn {
+            display: block;
+            width: 100%;
+            padding: 0.875rem;
+            background: #C67B4E;
+            color: #ffffff;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 0.75rem;
+        }
+        .quiz-continue-btn:hover {
+            background: #b06a3f;
+        }
+        .quiz-back-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: transparent;
+            color: #6b7280;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .quiz-back-btn:hover {
+            color: #111827;
+        }
+        .quiz-analyzing {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .quiz-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e5e7eb;
+            border-top-color: #C67B4E;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        .quiz-analyzing-text {
+            font-size: 1.1rem;
+            color: #374151;
+            font-weight: 500;
+        }
+        .quiz-slide-in {
+            animation: slideIn 0.35s ease-out;
+        }
+        .quiz-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            white-space: nowrap;
+        }
+        .quiz-result-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #C67B4E;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .quiz-result-rank {
+            position: absolute;
+            top: -0.75rem;
+            left: 1.25rem;
+            background: #C67B4E;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.2rem 0.75rem;
+            border-radius: 9999px;
+        }
+        .quiz-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .quiz-specs-table th {
+            text-align: left;
+            color: #6b7280;
+            font-weight: 500;
+            padding: 0.4rem 0.75rem;
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+            width: 40%;
+        }
+        .quiz-specs-table td {
+            padding: 0.4rem 0.75rem;
+            color: #111827;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .quiz-cta-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #C67B4E;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+            text-align: center;
+            width: 100%;
+        }
+        .quiz-cta-btn:hover {
+            background: #b06a3f;
+        }
+        .quiz-accessories {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+        .quiz-accessories-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-accessories-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .quiz-accessory-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: #C67B4E;
+            text-decoration: none;
+            padding: 0.3rem 0.6rem;
+            background: #fef7f0;
+            border-radius: 0.375rem;
+            border: 1px solid #fde8d0;
+            transition: background 0.2s;
+        }
+        .quiz-accessory-link:hover {
+            background: #fdebd4;
+        }
+        .quiz-accessory-price {
+            color: #6b7280;
+            font-size: 0.75rem;
+        }
+        .quiz-product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f9fafb;
+            flex-shrink: 0;
+        }
+        @media (max-width: 480px) {
+            .quiz-product-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .quiz-cross-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .quiz-cross-links a {
+            display: block;
+            padding: 1rem 1.25rem;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            color: #111827;
+            font-weight: 500;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .quiz-cross-links a:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 2px 8px rgba(198, 123, 78, 0.12);
+        }
+        .quiz-cross-links a span {
+            display: block;
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            font-weight: 400;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero */
+        .quiz-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            padding: 3rem 0 2.5rem;
+            text-align: center;
+        }
+        .quiz-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .quiz-hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 560px;
+            margin: 0 auto 1.25rem;
+        }
+        .quiz-hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .quiz-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.35rem 0.85rem;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 9999px;
+            color: rgba(255,255,255,0.9);
+        }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: rgba(255,255,255,0.9);
+        }
+        .breadcrumb span {
+            margin: 0 0.4rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1.25rem 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #111827;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.3rem;
+            color: #C67B4E;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        .faq-item.open .faq-question::after {
+            content: '\2212';
+        }
+        .faq-answer {
+            display: none;
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 0.75rem;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="quiz-hero">
+        <div class="container mx-auto px-4">
+            <div class="breadcrumb">
+                <a href="/">Home</a><span>&rsaquo;</span><a href="/gear-guides">Gear Guides</a><span>&rsaquo;</span>Treadmill Finder
+            </div>
+            <h1>Find Your Perfect Treadmill</h1>
+            <p>Answer 6 quick questions and we'll match you with the best treadmill for your goals, space, and budget.</p>
+            <div class="quiz-hero-badges">
+                <span class="quiz-hero-badge">6 Questions</span>
+                <span class="quiz-hero-badge">14 Treadmills</span>
+                <span class="quiz-hero-badge">2 Minutes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <section style="max-width: 640px; margin: 2.5rem auto; padding: 0 1rem;">
+        <div id="quiz-container"></div>
+        <div id="quiz-results" class="hidden"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="max-width: 700px; margin: 3rem auto; padding: 0 1rem;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What size motor do I need for a treadmill?</div>
+                <div class="faq-answer">For walking, a 2.0 CHP (continuous horsepower) motor is sufficient. For jogging, look for at least 2.5 CHP. Serious runners should aim for 3.0 CHP or higher. A stronger motor runs cooler at lower speeds, extending the treadmill's lifespan and providing smoother belt movement during speed changes and interval training.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Is a folding treadmill less durable than a non-folding one?</div>
+                <div class="faq-answer">Modern folding treadmills have improved significantly and many are just as durable as non-folding models for their price range. However, commercial-grade non-folding treadmills still tend to offer heavier frames, larger motors, and longer deck surfaces. If space is a concern, a quality folding treadmill from a reputable brand is an excellent choice for most home users.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What treadmill deck size do I need?</div>
+                <div class="faq-answer">A 20" x 60" deck is ideal for running. Walkers and shorter joggers can manage with 20" x 55". Taller runners (over 6') or those with a long stride should look for at least 22" x 60". A wider, longer deck provides a safer, more comfortable running surface and reduces the risk of stepping off the belt during intense workouts.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">How much should I spend on a treadmill?</div>
+                <div class="faq-answer">Budget treadmills under $500 work well for walking and light jogging. Mid-range models ($500-$1,000) offer better motors, larger decks, and incline options for regular joggers. Serious runners should invest $1,000-$2,000 for a durable machine with a powerful motor. Premium treadmills over $2,000 add features like touchscreens, decline capability, and commercial-grade construction.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Links -->
+    <section style="max-width: 700px; margin: 2rem auto 3rem; padding: 0 1rem;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">More Equipment Finders</h3>
+        <div class="quiz-cross-links">
+            <a href="/spin-bike-finder">
+                Spin Bike Finder
+                <span>Find your perfect indoor cycling bike</span>
+            </a>
+            <a href="/rower-finder">
+                Rowing Machine Finder
+                <span>Find the best rower for your goals</span>
+            </a>
+            <a href="/home-gym-finder">
+                Home Gym Finder
+                <span>Build your ideal home gym setup</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <section style="max-width: 640px; margin: 0 auto 3rem; padding: 0 1rem;">
+        <p style="font-size: 0.8rem; color: #9ca3af; text-align: center; line-height: 1.5;">
+            <strong style="color: #6b7280;">Affiliate Disclosure:</strong> RunBikeCalc earns a small commission from qualifying Amazon purchases at no extra cost to you. This helps us keep our calculators and tools free. We only recommend products we genuinely believe in.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Gear Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/best-running-shoes-2026" class="hover:text-white">Running Shoes</a></li>
+                        <li><a href="/blog/best-running-watches-2026" class="hover:text-white">Running Watches</a></li>
+                        <li><a href="/blog/best-bike-computers-2026" class="hover:text-white">Bike Computers</a></li>
+                        <li><a href="/blog/best-heart-rate-monitors-2026" class="hover:text-white">HR Monitors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-tools" class="hover:text-white">Running Tools</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">Cycling Tools</a></li>
+                        <li><a href="/heart-rate-tools" class="hover:text-white">Heart Rate Tools</a></li>
+                        <li><a href="/vo2-tools" class="hover:text-white">VO2 & Fitness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/search" class="hover:text-white">Search</a></li>
+                        <li><a href="/studies" class="hover:text-white">Research & Studies</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quiz Engine -->
+    <script src="/js/quiz-engine.js"></script>
+    <script>
+    (function() {
+        var questions = [
+            {
+                id: 'goal',
+                question: 'What will you mainly use the treadmill for?',
+                options: [
+                    { id: 'walking', icon: '\uD83D\uDEB6', label: 'Walking', desc: 'Daily walks and light exercise' },
+                    { id: 'jogging', icon: '\uD83C\uDFC3', label: 'Jogging', desc: 'Moderate-pace cardio sessions' },
+                    { id: 'running', icon: '\uD83C\uDFC3\u200D\u2642\uFE0F', label: 'Running', desc: 'Regular running workouts' },
+                    { id: 'training', icon: '\uD83C\uDFC6', label: 'Serious training', desc: 'Race prep and structured plans' }
+                ]
+            },
+            {
+                id: 'workout',
+                question: 'What type of workouts do you prefer?',
+                options: [
+                    { id: 'steady', icon: '\u23F1\uFE0F', label: 'Steady-state cardio', desc: 'Consistent pace for longer periods' },
+                    { id: 'hiit', icon: '\u26A1', label: 'HIIT intervals', desc: 'Alternating high and low intensity' },
+                    { id: 'light', icon: '\uD83C\uDF3F', label: 'Walking & light jogging', desc: 'Easy, low-impact sessions' },
+                    { id: 'incline_training', icon: '\u26F0\uFE0F', label: 'Incline training', desc: 'Hill climbs and incline walks' }
+                ]
+            },
+            {
+                id: 'incline',
+                question: 'How important is incline?',
+                subtitle: 'Incline adds intensity and targets different muscles.',
+                options: [
+                    { id: 'none', icon: '\u27A1\uFE0F', label: "Don't need it", desc: 'Flat surface is fine for me' },
+                    { id: 'moderate', icon: '\uD83D\uDCC8', label: 'Some incline (0\u201315%)', desc: 'Standard incline range for variety' },
+                    { id: 'maximum', icon: '\uD83C\uDFD4\uFE0F', label: 'Maximum incline (decline + steep)', desc: 'Full range including decline' }
+                ]
+            },
+            {
+                id: 'screen',
+                question: 'Do you want a built-in touchscreen for classes?',
+                subtitle: 'Touchscreen treadmills offer guided workouts and streaming content.',
+                options: [
+                    { id: 'yes', icon: '\uD83D\uDCF1', label: 'Yes, must have', desc: 'I want interactive classes built in' },
+                    { id: 'nice', icon: '\uD83D\uDC4D', label: 'Nice but not essential', desc: 'A basic display works too' },
+                    { id: 'no', icon: '\uD83D\uDCF2', label: "No, I'll use my own device", desc: 'Phone or tablet is enough' }
+                ]
+            },
+            {
+                id: 'budget',
+                question: "What's your budget?",
+                options: [
+                    { id: 'under500', icon: '\uD83D\uDCB0', label: 'Under $500', desc: 'Budget-friendly options' },
+                    { id: '500to1000', icon: '\uD83D\uDCB3', label: '$500\u2013$1,000', desc: 'Mid-range quality' },
+                    { id: '1000to2000', icon: '\uD83D\uDCB5', label: '$1,000\u2013$2,000', desc: 'Premium features' },
+                    { id: 'over2000', icon: '\uD83D\uDC8E', label: 'Over $2,000', desc: 'Best-in-class performance' }
+                ]
+            },
+            {
+                id: 'space',
+                question: 'How much space do you have?',
+                subtitle: 'Also consider noise if you live in an apartment.',
+                options: [
+                    { id: 'compact', icon: '\uD83C\uDFE2', label: 'Compact / quiet (apartment)', desc: 'Limited space, shared walls' },
+                    { id: 'medium', icon: '\uD83C\uDFE0', label: 'Medium room', desc: 'Dedicated workout area' },
+                    { id: 'large', icon: '\uD83C\uDFED', label: 'Large space (garage / basement)', desc: 'Plenty of room, noise not an issue' }
+                ]
+            }
+        ];
+
+        function scoreTreadmill(product, answers) {
+            var score = 0;
+            var scores = product.scores || {};
+
+            // Goal
+            if (answers.goal && scores['goal_' + answers.goal] !== undefined) {
+                score += scores['goal_' + answers.goal];
+            }
+            // Workout
+            if (answers.workout && scores['workout_' + answers.workout] !== undefined) {
+                score += scores['workout_' + answers.workout];
+            }
+            // Incline
+            if (answers.incline && scores['incline_' + answers.incline] !== undefined) {
+                score += scores['incline_' + answers.incline];
+            }
+            // Screen
+            if (answers.screen && scores['screen_' + answers.screen] !== undefined) {
+                score += scores['screen_' + answers.screen];
+            }
+            // Budget - eliminate if 0
+            if (answers.budget && scores['budget_' + answers.budget] !== undefined) {
+                var budgetScore = scores['budget_' + answers.budget];
+                if (budgetScore === 0) return 0;
+                score += budgetScore;
+            }
+            // Space
+            if (answers.space && scores['space_' + answers.space] !== undefined) {
+                score += scores['space_' + answers.space];
+            }
+
+            return score;
+        }
+
+        function renderResults(top, answers, accessories, tag) {
+            var html = '<div class="quiz-slide-in">';
+            html += '<h2 style="font-family:\'Playfair Display\',serif;font-size:1.6rem;font-weight:600;margin-bottom:0.5rem;">Your Top Treadmill Picks</h2>';
+            html += '<p style="color:#6b7280;margin-bottom:1.5rem;">Based on your answers, here are your best matches. <a href="#" id="quiz-retake" style="color:#C67B4E;text-decoration:underline;">Retake quiz</a></p>';
+
+            top.forEach(function(product, i) {
+                var rank = i + 1;
+                var specs = product.specs || {};
+
+                html += '<div class="quiz-result-card">';
+                html += '<div class="quiz-result-rank">#' + rank + '</div>';
+
+                // Product header with image
+                html += '<div style="display:flex;gap:16px;align-items:flex-start;margin-top:0.75rem;">';
+                if (product.imageUrl) {
+                    html += '<img src="' + product.imageUrl + '" alt="' + product.name + '" class="quiz-product-img" loading="lazy" />';
+                }
+                html += '<div style="flex:1;">';
+                html += '<p style="font-size:0.8rem;color:#6b7280;margin-bottom:0.15rem;">' + (product.brand || '') + '</p>';
+                html += '<h3 style="font-family:\'Playfair Display\',serif;font-size:1.25rem;font-weight:600;margin-bottom:0.25rem;">' + product.name + '</h3>';
+                html += '<p style="font-size:1.1rem;font-weight:600;color:#C67B4E;margin-bottom:0.5rem;">' + (product.priceDisplay || '') + '</p>';
+
+                // Folding badge
+                if (specs.folding) {
+                    html += renderBadge('Folds Up', 'green');
+                } else {
+                    html += renderBadge('Non-Folding', 'gray');
+                }
+                html += ' ';
+
+                // Best for verdict
+                if (product.bestFor) {
+                    html += renderBadge(product.bestFor, 'copper');
+                }
+                html += '</div>';
+                html += '</div>';
+
+                // Specs table
+                html += '<table class="quiz-specs-table">';
+                if (specs.speedRange) {
+                    html += '<tr><th>Speed Range</th><td>' + specs.speedRange + '</td></tr>';
+                }
+                if (specs.incline) {
+                    html += '<tr><th>Incline</th><td>' + specs.incline + '</td></tr>';
+                }
+                if (specs.deckSize) {
+                    html += '<tr><th>Deck Size</th><td>' + specs.deckSize + '</td></tr>';
+                }
+                if (specs.motor) {
+                    html += '<tr><th>Motor</th><td>' + specs.motor + '</td></tr>';
+                }
+                if (specs.maxWeight) {
+                    html += '<tr><th>Max Weight</th><td>' + specs.maxWeight + '</td></tr>';
+                }
+                html += '</table>';
+
+                // CTA
+                var ctaUrl = product.amazonUrl || amazonSearchUrl(product.name, tag);
+                html += '<a href="' + ctaUrl + '" target="_blank" rel="noopener noreferrer nofollow" class="quiz-cta-btn" data-affiliate="' + product.id + '">View on Amazon</a>';
+
+                // Accessories
+                html += renderAccessories(product, accessories, tag);
+
+                html += '</div>';
+            });
+
+            // Cross-links
+            html += '<div style="margin-top:2rem;">';
+            html += '<h3 style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-weight:600;margin-bottom:0.75rem;">Try Another Quiz</h3>';
+            html += '<div class="quiz-cross-links">';
+            html += '<a href="/spin-bike-finder">Spin Bike Finder<span>Find the perfect indoor cycling bike</span></a>';
+            html += '<a href="/rower-finder">Rowing Machine Finder<span>Find the best rower for your goals</span></a>';
+            html += '<a href="/home-gym-finder">Home Gym Finder<span>Build your ideal home gym</span></a>';
+            html += '</div></div>';
+
+            html += '</div>';
+            return html;
+        }
+
+        var quiz = new QuizEngine({
+            questions: questions,
+            dataUrl: '/data/treadmills.json',
+            scoreFn: scoreTreadmill,
+            renderFn: renderResults,
+            quizName: 'treadmill_finder',
+            affiliateTag: 'runbikecalc-20',
+            containerId: 'quiz-container',
+            resultsId: 'quiz-results'
+        });
+
+        quiz.init();
+    })();
+    </script>
+</body>
+</html>

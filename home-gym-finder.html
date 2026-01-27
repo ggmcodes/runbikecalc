@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Home Gym Finder Quiz - Build Your Perfect Home Gym | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/home-gym-finder">
+    <meta name="description" content="Take our 2-minute home gym quiz to find the perfect power rack, bench, and accessories for your space, budget, and training goals. 14 racks compared.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Home Gym Finder Quiz - Build Your Perfect Home Gym">
+    <meta property="og:description" content="Answer 6 questions and we'll recommend the perfect rack, bench, and accessories for your space and goals.">
+    <meta property="og:image" content="https://runbikecalc.com/images/gear-guides-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/home-gym-finder">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Home Gym Finder Quiz",
+        "url": "https://runbikecalc.com/home-gym-finder",
+        "description": "Interactive quiz to find the perfect power rack, bench, and accessories for your home gym setup.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <style>
+        /* Quiz Progress */
+        .quiz-progress {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .quiz-progress-bar {
+            height: 100%;
+            background: #C67B4E;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+        .quiz-step-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-question {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-subtitle {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Quiz Options */
+        .quiz-options {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            text-align: left;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .quiz-option:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 0 0 1px #C67B4E;
+        }
+        .quiz-option.selected {
+            border-color: #C67B4E;
+            background: #fef7f0;
+            box-shadow: 0 0 0 2px #C67B4E;
+        }
+        .quiz-option-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .quiz-option-label {
+            font-weight: 600;
+            color: #111827;
+        }
+        .quiz-option-desc {
+            font-size: 0.875rem;
+            color: #6b7280;
+            display: block;
+            margin-top: 0.15rem;
+        }
+
+        /* Multi-select */
+        .quiz-option-multi {
+            position: relative;
+        }
+        .quiz-check {
+            margin-left: auto;
+            font-size: 1.1rem;
+            color: #C67B4E;
+            font-weight: 700;
+            min-width: 1.2rem;
+            text-align: center;
+        }
+        .quiz-continue-btn {
+            display: block;
+            width: 100%;
+            padding: 0.9rem;
+            background: #C67B4E;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 0.75rem;
+        }
+        .quiz-continue-btn:hover {
+            background: #a8623a;
+        }
+        .quiz-back-btn {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            background: transparent;
+            color: #6b7280;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .quiz-back-btn:hover {
+            color: #111827;
+        }
+
+        /* Analyzing / Spinner */
+        .quiz-analyzing {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .quiz-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e5e7eb;
+            border-top-color: #C67B4E;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        .quiz-analyzing-text {
+            font-size: 1.1rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Results */
+        .quiz-slide-in {
+            animation: slideIn 0.35s ease-out;
+        }
+        .quiz-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+        }
+        .quiz-result-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #C67B4E;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .quiz-result-rank {
+            position: absolute;
+            top: -0.75rem;
+            left: 1rem;
+            background: #C67B4E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.2rem 0.7rem;
+            border-radius: 9999px;
+        }
+        .quiz-result-card h4 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #111827;
+            margin-top: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .quiz-result-card .quiz-brand {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-result-card .quiz-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #C67B4E;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Specs Table */
+        .quiz-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .quiz-specs-table tr {
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .quiz-specs-table td {
+            padding: 0.45rem 0.5rem;
+        }
+        .quiz-specs-table td:first-child {
+            font-weight: 600;
+            color: #374151;
+            width: 40%;
+        }
+        .quiz-specs-table td:last-child {
+            color: #6b7280;
+        }
+
+        /* Verdict */
+        .quiz-verdict {
+            font-size: 0.95rem;
+            color: #374151;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: #f9fafb;
+            border-radius: 0.5rem;
+        }
+        .quiz-verdict strong {
+            color: #111827;
+        }
+
+        /* CTA Button */
+        .quiz-cta-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #C67B4E;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            transition: background 0.2s;
+            margin-bottom: 1rem;
+        }
+        .quiz-cta-btn:hover {
+            background: #a8623a;
+            color: #fff;
+        }
+
+        /* Accessories */
+        .quiz-accessories {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .quiz-accessories-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+        .quiz-accessories-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .quiz-accessory-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 0.8rem;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #374151;
+            font-size: 0.875rem;
+            transition: border-color 0.2s;
+        }
+        .quiz-accessory-link:hover {
+            border-color: #C67B4E;
+            color: #111827;
+        }
+        .quiz-accessory-price {
+            font-weight: 600;
+            color: #C67B4E;
+        }
+        .quiz-product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f9fafb;
+            flex-shrink: 0;
+        }
+        @media (max-width: 480px) {
+            .quiz-product-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Cross Links */
+        .quiz-cross-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .quiz-cross-links a {
+            display: block;
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            text-align: center;
+            color: #374151;
+            font-weight: 600;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .quiz-cross-links a:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* Animations */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Section */
+        .quiz-hero {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+        }
+        .quiz-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+        .quiz-hero p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto 1.25rem;
+        }
+        .quiz-hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .quiz-hero-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.35rem 0.9rem;
+            border-radius: 9999px;
+            background: #fef7f0;
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+        .quiz-container-box {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        /* FAQ */
+        .quiz-faq {
+            max-width: 720px;
+            margin: 3rem auto 0;
+        }
+        .quiz-faq h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .quiz-faq-item {
+            margin-bottom: 1.25rem;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+        }
+        .quiz-faq-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-faq-item p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Retake */
+        .quiz-retake {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .quiz-retake a {
+            color: #C67B4E;
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Affiliate Disclosure */
+        .quiz-disclosure {
+            max-width: 720px;
+            margin: 2rem auto 0;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 640px) {
+            .quiz-hero h1 {
+                font-size: 2.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/gear-guides" class="hover:text-primary">Gear Guides</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Home Gym Finder</li>
+            </ol>
+        </nav>
+
+        <!-- Hero -->
+        <div class="quiz-hero">
+            <h1>Build Your Home Gym</h1>
+            <p>Answer 6 questions and we'll recommend the perfect rack, bench, and accessories for your space and goals.</p>
+            <div class="quiz-hero-badges">
+                <span class="quiz-hero-badge">6 Questions</span>
+                <span class="quiz-hero-badge">14 Racks</span>
+                <span class="quiz-hero-badge">2 Minutes</span>
+            </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div class="quiz-container-box">
+            <div id="quiz-container"></div>
+        </div>
+
+        <!-- Results Container (hidden until quiz completes) -->
+        <div id="quiz-results" class="hidden" style="max-width: 720px; margin: 2rem auto 0;"></div>
+
+        <!-- Cross Links -->
+        <div class="quiz-cross-links" style="max-width: 720px; margin: 2.5rem auto 0;">
+            <a href="/spin-bike-finder">Spin Bike Finder</a>
+            <a href="/treadmill-finder">Treadmill Finder</a>
+            <a href="/rower-finder">Rower Finder</a>
+        </div>
+
+        <!-- FAQ -->
+        <section class="quiz-faq">
+            <h2>Home Gym FAQ</h2>
+
+            <div class="quiz-faq-item">
+                <h3>Power rack vs squat stand - which should I buy?</h3>
+                <p>A power rack (full cage) provides four uprights with built-in safety bars, making it the safest option for solo lifting. A squat stand uses two independent uprights, takes less space, and costs less - but offers no built-in safeties unless you add spotter arms. Choose a full rack if you bench press alone or lift heavy. A squat stand works well if space is tight and you have a spotter or plan to add safety arms.</p>
+            </div>
+
+            <div class="quiz-faq-item">
+                <h3>How much should I spend on a home gym?</h3>
+                <p>A solid starter home gym (rack, bench, barbell, and 300 lb of plates) can cost $800-$1,500 total with budget-friendly brands like Titan or Fitness Reality. Mid-range setups with REP or Bells of Steel run $1,500-$3,000. A premium Rogue setup can exceed $4,000. Your rack is the centerpiece - spend 30-40% of your total budget there and build out accessories over time.</p>
+            </div>
+
+            <div class="quiz-faq-item">
+                <h3>What ceiling height do I need for a power rack?</h3>
+                <p>Most full-size power racks are 82-93 inches tall. For comfortable overhead pressing inside the rack, add at least 12 inches above the rack height. An 8-foot ceiling (96 inches) works for most racks under 84 inches. For taller racks (90+ inches) or overhead pressing, you need 9+ foot ceilings. Short-height and adjustable racks are available for basements with 7-foot ceilings.</p>
+            </div>
+
+            <div class="quiz-faq-item">
+                <h3>Do I need to bolt my power rack to the floor?</h3>
+                <p>Flat-foot racks (like the Titan X-3 Flat Foot or Rogue RML-390F) are designed to be stable without bolting, making them ideal for garage gyms. Standard four-post racks should be bolted down for safety during heavy squats, pull-ups, or muscle-ups. If you cannot bolt, use a flat-foot design or add heavy weight storage pegs at the base for extra stability.</p>
+            </div>
+        </section>
+
+        <!-- Affiliate Disclosure -->
+        <p class="quiz-disclosure">
+            RunBikeCalc is reader-supported. When you buy through links on this page, we may earn an affiliate commission at no extra cost to you. We only recommend products we have researched and believe in. Prices are approximate and subject to change.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Gear Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/best-running-shoes-2026" class="hover:text-white">Running Shoes</a></li>
+                        <li><a href="/blog/best-running-watches-2026" class="hover:text-white">Running Watches</a></li>
+                        <li><a href="/blog/best-bike-computers-2026" class="hover:text-white">Bike Computers</a></li>
+                        <li><a href="/blog/best-heart-rate-monitors-2026" class="hover:text-white">HR Monitors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-tools" class="hover:text-white">Running Tools</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">Cycling Tools</a></li>
+                        <li><a href="/heart-rate-tools" class="hover:text-white">Heart Rate Tools</a></li>
+                        <li><a href="/vo2-tools" class="hover:text-white">VO2 & Fitness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/search" class="hover:text-white">Search</a></li>
+                        <li><a href="/studies" class="hover:text-white">Research & Studies</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quiz Engine -->
+    <script src="/js/quiz-engine.js"></script>
+    <script>
+    (function() {
+        var questions = [
+            {
+                id: 'goal',
+                question: "What's your training goal?",
+                options: [
+                    { id: 'strength', icon: '\uD83D\uDCAA', label: 'General strength', desc: 'Build overall strength with compound lifts' },
+                    { id: 'bodybuilding', icon: '\uD83C\uDFCB\uFE0F', label: 'Bodybuilding', desc: 'Muscle size and aesthetics' },
+                    { id: 'powerlifting', icon: '\uD83C\uDFCB\uFE0F\u200D\u2642\uFE0F', label: 'Powerlifting', desc: 'Max squat, bench, and deadlift' },
+                    { id: 'functional', icon: '\uD83C\uDFC3', label: 'Functional fitness', desc: 'CrossFit, HYROX, athletic performance' },
+                    { id: 'general', icon: '\u2764\uFE0F', label: 'General fitness', desc: 'Stay in shape and feel good' }
+                ]
+            },
+            {
+                id: 'experience',
+                question: "What's your lifting experience?",
+                options: [
+                    { id: 'beginner', icon: '\uD83C\uDF31', label: 'Beginner', desc: 'Less than 1 year' },
+                    { id: 'intermediate', icon: '\uD83D\uDCAA', label: 'Intermediate', desc: '1-3 years' },
+                    { id: 'advanced', icon: '\uD83C\uDFC6', label: 'Advanced', desc: '3+ years' }
+                ]
+            },
+            {
+                id: 'lifts',
+                type: 'multi',
+                question: 'What lifts are most important?',
+                subtitle: 'Select all that apply',
+                options: [
+                    { id: 'squat', icon: '\uD83E\uDDBF', label: 'Squats' },
+                    { id: 'bench', icon: '\uD83D\uDECB\uFE0F', label: 'Bench press' },
+                    { id: 'deadlift', icon: '\uD83C\uDFCB\uFE0F', label: 'Deadlifts' },
+                    { id: 'ohp', icon: '\uD83D\uDE4C', label: 'Overhead press' },
+                    { id: 'pullup', icon: '\uD83E\uDDD7', label: 'Pull-ups' }
+                ]
+            },
+            {
+                id: 'space',
+                question: 'What space do you have?',
+                options: [
+                    { id: 'compact', icon: '\uD83C\uDFE0', label: 'Compact', desc: 'Must fold or have a small footprint' },
+                    { id: 'garage', icon: '\uD83D\uDE97', label: 'Garage gym', desc: 'Dedicated garage space' },
+                    { id: 'dedicated', icon: '\uD83C\uDFCB\uFE0F', label: 'Dedicated room', desc: 'Full room for the gym' }
+                ]
+            },
+            {
+                id: 'budget',
+                question: "What's your rack budget?",
+                subtitle: 'Just the rack - not including bench, barbell, or plates',
+                options: [
+                    { id: 'under_500', icon: '\uD83D\uDCB0', label: 'Under $500', desc: 'Best value options' },
+                    { id: '500_1000', icon: '\uD83D\uDCB3', label: '$500 - $1,000', desc: 'Mid-range quality' },
+                    { id: '1000_2000', icon: '\uD83D\uDCB3', label: '$1,000 - $2,000', desc: 'Premium racks' },
+                    { id: 'over_2000', icon: '\uD83D\uDC8E', label: 'Over $2,000', desc: 'Best of the best' }
+                ]
+            },
+            {
+                id: 'ceiling',
+                question: 'How tall is your ceiling?',
+                subtitle: 'Important for overhead pressing and pull-ups',
+                options: [
+                    { id: 'under_8', icon: '\u2B07\uFE0F', label: 'Under 8 feet', desc: 'Low basement ceiling' },
+                    { id: '8_9', icon: '\u2194\uFE0F', label: '8 - 9 feet', desc: 'Standard ceiling height' },
+                    { id: 'over_9', icon: '\u2B06\uFE0F', label: 'Over 9 feet', desc: 'Tall ceiling or garage' }
+                ]
+            }
+        ];
+
+        function scoreFn(product, answers) {
+            var scores = product.scores;
+            var total = 0;
+
+            // Goal
+            if (answers.goal) {
+                var goalKey = 'goal_' + answers.goal;
+                total += (scores[goalKey] || 0);
+            }
+
+            // Experience
+            if (answers.experience) {
+                var expKey = 'exp_' + answers.experience;
+                total += (scores[expKey] || 0);
+            }
+
+            // Lifts (multi-select)
+            if (answers.lifts && answers.lifts.length > 0) {
+                answers.lifts.forEach(function(lift) {
+                    var liftKey = 'lift_' + lift;
+                    total += (scores[liftKey] || 0);
+                });
+            }
+
+            // Space
+            if (answers.space) {
+                var spaceKey = 'space_' + answers.space;
+                total += (scores[spaceKey] || 0);
+            }
+
+            // Budget - zero score means eliminate
+            if (answers.budget) {
+                var budgetKey = 'budget_' + answers.budget;
+                var budgetScore = scores[budgetKey];
+                if (budgetScore === 0) return 0;
+                total += (budgetScore || 0);
+            }
+
+            // Ceiling
+            if (answers.ceiling) {
+                var ceilingKey = 'ceiling_' + answers.ceiling;
+                total += (scores[ceilingKey] || 0);
+            }
+
+            return total;
+        }
+
+        function renderFn(top, answers, accessories, tag) {
+            var html = '<div class="quiz-slide-in">';
+            html += '<h3 style="font-size:1.5rem;font-weight:700;color:#111827;text-align:center;margin-bottom:0.5rem;">Your Home Gym Setup</h3>';
+            html += '<p style="text-align:center;color:#6b7280;margin-bottom:2rem;">Based on your answers, here are our top rack recommendations with complete setup suggestions.</p>';
+
+            top.forEach(function(product, i) {
+                var rank = i + 1;
+
+                // Garage ready badge color
+                var garageColor = 'green';
+                if (product.verdict.garageGymReady === 'MAYBE') garageColor = 'copper';
+                if (product.verdict.garageGymReady === 'NO') garageColor = 'red';
+
+                html += '<div class="quiz-result-card">';
+                html += '<span class="quiz-result-rank">#' + rank + '</span>';
+                html += '<div style="display:flex;gap:16px;align-items:flex-start;margin-top:0.5rem;">';
+                if (product.imageUrl) {
+                    html += '<img src="' + product.imageUrl + '" alt="' + product.name + '" class="quiz-product-img" loading="lazy" />';
+                }
+                html += '<div style="flex:1;">';
+                html += '<h4 style="margin-top:0;">' + product.name + '</h4>';
+                html += '<div class="quiz-brand">' + product.brand + '</div>';
+                html += '<div class="quiz-price">' + product.priceDisplay + '</div>';
+                html += '</div>';
+                html += '</div>';
+
+                // Badges
+                html += '<div style="margin-bottom:1rem;">';
+                html += renderBadge('Garage Gym Ready: ' + product.verdict.garageGymReady, garageColor);
+                html += renderBadge(product.specs.type, 'blue');
+                html += '</div>';
+
+                // Specs table
+                html += '<table class="quiz-specs-table">';
+                html += '<tr><td>Type</td><td>' + product.specs.type + '</td></tr>';
+                html += '<tr><td>Footprint</td><td>' + product.specs.footprint + '</td></tr>';
+                html += '<tr><td>Height</td><td>' + product.specs.height + '</td></tr>';
+                html += '<tr><td>Weight Capacity</td><td>' + product.specs.weightCapacity + '</td></tr>';
+                html += '<tr><td>Pull-up Bar</td><td>' + (product.specs.pullUpBar ? 'Yes' : 'No') + '</td></tr>';
+                html += '<tr><td>J-Cups</td><td>' + (product.specs.jCups ? 'Yes' : 'No') + '</td></tr>';
+                html += '<tr><td>Safety Bars</td><td>' + (product.specs.safetyBars ? 'Yes' : 'No') + '</td></tr>';
+                html += '</table>';
+
+                // Best for verdict
+                html += '<div class="quiz-verdict"><strong>Best for:</strong> ' + product.verdict.bestFor + '</div>';
+
+                // Amazon CTA for rack
+                html += '<a href="' + product.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + product.id + '" class="quiz-cta-btn">View on Amazon</a>';
+
+                // Complete your setup - paired accessories
+                if (product.pairsWith && product.pairsWith.length > 0) {
+                    var matched = accessories.filter(function(a) { return product.pairsWith.indexOf(a.id) > -1; });
+                    if (matched.length > 0) {
+                        html += '<div class="quiz-accessories">';
+                        html += '<p class="quiz-accessories-title">Complete your setup:</p>';
+                        html += '<div class="quiz-accessories-list">';
+                        matched.forEach(function(a) {
+                            html += '<a href="' + a.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + a.id + '" class="quiz-accessory-link">';
+                            html += a.name + ' <span class="quiz-accessory-price">' + a.priceDisplay + '</span>';
+                            html += '</a>';
+                        });
+                        html += '</div>';
+                        html += '</div>';
+                    }
+                }
+
+                html += '</div>';
+            });
+
+            // Retake
+            html += '<div class="quiz-retake"><a href="#" id="quiz-retake">Retake Quiz</a></div>';
+            html += '</div>';
+
+            return html;
+        }
+
+        var quiz = new QuizEngine({
+            questions: questions,
+            dataUrl: '/data/racks.json',
+            scoreFn: scoreFn,
+            renderFn: renderFn,
+            quizName: 'home_gym_finder',
+            affiliateTag: 'runbikecalc-20',
+            containerId: 'quiz-container',
+            resultsId: 'quiz-results'
+        });
+
+        quiz.init();
+    })();
+    </script>
+</body>
+</html>

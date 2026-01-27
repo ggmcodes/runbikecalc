@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Rowing Machine Finder Quiz - Find Your Perfect Rower | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/rower-finder">
+    <meta name="description" content="Answer 6 quick questions to find the perfect rowing machine for your goals, space, and budget. Compare Concept2, Hydrow, WaterRower, Ergatta, and more.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rowing Machine Finder Quiz - Find Your Perfect Rower">
+    <meta property="og:description" content="Answer 6 quick questions to find the perfect rowing machine for your goals, space, and budget.">
+    <meta property="og:image" content="https://runbikecalc.com/images/gear-guides-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/rower-finder">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Rowing Machine Finder Quiz",
+        "url": "https://runbikecalc.com/rower-finder",
+        "description": "Answer 6 quick questions to find the perfect rowing machine for your goals, space, and budget.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <style>
+        /* Quiz Progress */
+        .quiz-progress {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .quiz-progress-bar {
+            height: 100%;
+            background: #C67B4E;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+        .quiz-step-label {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .quiz-question {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Quiz Options */
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            max-width: 520px;
+            margin: 0 auto 1.5rem;
+        }
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            text-align: left;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .quiz-option:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 2px 8px rgba(198,123,78,0.12);
+        }
+        .quiz-option.selected {
+            border-color: #C67B4E;
+            background: #fef7f0;
+            box-shadow: 0 2px 8px rgba(198,123,78,0.15);
+        }
+        .quiz-option-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            width: 2rem;
+            text-align: center;
+        }
+        .quiz-option-label {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .quiz-option-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-top: 0.15rem;
+        }
+
+        /* Multi-select */
+        .quiz-option-multi {
+            position: relative;
+        }
+        .quiz-check {
+            margin-left: auto;
+            font-size: 1.1rem;
+            color: #C67B4E;
+            font-weight: 700;
+            min-width: 1.25rem;
+            text-align: center;
+        }
+        .quiz-continue-btn {
+            display: block;
+            margin: 0 auto 1rem;
+            padding: 0.75rem 2.5rem;
+            background: #C67B4E;
+            color: #fff;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .quiz-continue-btn:hover {
+            background: #b06a3f;
+        }
+        .quiz-back-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            color: #6b7280;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .quiz-back-btn:hover {
+            color: #374151;
+        }
+
+        /* Analyzing */
+        .quiz-analyzing {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .quiz-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e5e7eb;
+            border-top-color: #C67B4E;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            animation: spin 0.8s linear infinite;
+        }
+        .quiz-analyzing-text {
+            font-size: 1.1rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Results */
+        .quiz-slide-in {
+            animation: slideIn 0.35s ease-out;
+        }
+        .quiz-badge {
+            display: inline-block;
+            padding: 0.2rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .quiz-result-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #C67B4E;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .quiz-result-rank {
+            position: absolute;
+            top: -0.75rem;
+            left: 1rem;
+            background: #C67B4E;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+        .quiz-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .quiz-specs-table th,
+        .quiz-specs-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .quiz-specs-table th {
+            color: #6b7280;
+            font-weight: 500;
+            width: 40%;
+        }
+        .quiz-specs-table td {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .quiz-cta-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #C67B4E;
+            color: #fff;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s;
+            text-align: center;
+        }
+        .quiz-cta-btn:hover {
+            background: #b06a3f;
+            color: #fff;
+        }
+        .quiz-accessories {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+        .quiz-accessories-title {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-accessories-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .quiz-accessory-link {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            color: #374151;
+            text-decoration: none;
+            transition: border-color 0.2s;
+        }
+        .quiz-accessory-link:hover {
+            border-color: #C67B4E;
+            color: #C67B4E;
+        }
+        .quiz-accessory-price {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .quiz-product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f9fafb;
+            flex-shrink: 0;
+        }
+        @media (max-width: 480px) {
+            .quiz-product-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Cross-links */
+        .quiz-cross-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .quiz-cross-links a {
+            display: block;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 600;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .quiz-cross-links a:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 2px 8px rgba(198,123,78,0.12);
+        }
+
+        /* FAQ section */
+        .faq-item {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+            text-align: left;
+        }
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+        .faq-icon {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 1.25rem 1rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/gear-guides" class="hover:text-primary">Gear Guides</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Rowing Machine Finder</li>
+            </ol>
+        </nav>
+
+        <!-- Hero -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Rowing Machine</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                Answer 6 quick questions and we'll match you with the best rowing machine for your goals, space, and budget.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span class="quiz-badge" style="background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe;">6 Questions</span>
+                <span class="quiz-badge" style="background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;">11 Rowers</span>
+                <span class="quiz-badge" style="background:#fef3e2;color:#92400e;border:1px solid #fde68a;">2 Minutes</span>
+            </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div style="max-width: 640px; margin: 0 auto;">
+            <div id="quiz-container"></div>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden" style="max-width: 720px; margin: 0 auto;"></div>
+
+        <!-- Cross-links -->
+        <section style="max-width: 720px; margin: 3rem auto 0;">
+            <h2 class="text-2xl font-bold text-center mb-4">More Gear Finder Quizzes</h2>
+            <div class="quiz-cross-links">
+                <a href="/spin-bike-finder">
+                    <span style="font-size:1.6rem;display:block;margin-bottom:0.5rem;">&#x1F6B4;</span>
+                    Spin Bike Finder
+                </a>
+                <a href="/treadmill-finder">
+                    <span style="font-size:1.6rem;display:block;margin-bottom:0.5rem;">&#x1F3C3;</span>
+                    Treadmill Finder
+                </a>
+                <a href="/home-gym-finder">
+                    <span style="font-size:1.6rem;display:block;margin-bottom:0.5rem;">&#x1F3CB;</span>
+                    Home Gym Finder
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="max-width: 720px; margin: 3rem auto 0;">
+            <h2 class="text-2xl font-bold text-center mb-6">Rowing Machine FAQ</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Air vs water vs magnetic rowing machines?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p><strong>Air rowers</strong> (like the Concept2) generate resistance from a fan flywheel &mdash; the harder you pull, the more resistance you feel. They're the standard in gyms, CrossFit boxes, and competitive rowing. They're moderately loud.</p>
+                    <p style="margin-top:0.5rem;"><strong>Water rowers</strong> (like the WaterRower and Ergatta) use paddles spinning through a water tank. They produce a soothing swoosh sound and feel closest to on-water rowing. Resistance naturally increases with stroke intensity.</p>
+                    <p style="margin-top:0.5rem;"><strong>Magnetic rowers</strong> are the quietest option, using magnets for resistance. They're ideal for apartments and shared spaces. Electromagnetic models like the Hydrow offer precision resistance control for guided classes. However, the feel is less dynamic compared to air or water.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Is the Concept2 worth the price?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, for most serious rowers the Concept2 is absolutely worth it. It's the gold standard used by Olympic teams, CrossFit boxes, and every commercial gym worldwide. The PM5 monitor tracks every possible metric and connects to dozens of apps. It supports a 500 lb weight capacity, folds for storage, and is built to last decades with minimal maintenance. The resale value is also excellent &mdash; used Concept2 rowers hold 70-80% of their value.</p>
+                    <p style="margin-top:0.5rem;">The main downside is noise (the air fan) and the lack of built-in guided classes. If you want a quiet machine or Peloton-style classes, consider the Hydrow or Ergatta instead.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Best rowing machine for apartments?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>For apartments, you need a rower that's quiet and ideally foldable. <strong>Magnetic rowers</strong> are the best choice since they produce almost zero noise. The Sunny Health SF-RW5515 is the top budget pick &mdash; it's quiet, foldable, and only $230. For a mid-range option with classes, the Echelon Row folds upright and is whisper-quiet. If budget is no concern, the Hydrow is near-silent with its electromagnetic resistance and premium build.</p>
+                    <p style="margin-top:0.5rem;">Avoid air rowers in apartments if you share walls &mdash; the fan noise can be heard in adjacent rooms, especially during intense intervals.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How much space does a rowing machine need?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Most rowing machines need roughly 8-9 feet in length and 2 feet in width when in use. Add about 2 feet behind the machine for full leg extension if you're tall. A 9' x 4' area is a safe minimum for any rower.</p>
+                    <p style="margin-top:0.5rem;">Many rowers fold upright (Concept2, Sunny, Stamina X) to about 2' x 2' for storage. Water rowers like the WaterRower can stand on end but can't be fully emptied easily. The Hydrow does not fold, so it requires a permanent space or the optional Hydrow Upright Storage Kit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliate Disclosure -->
+        <div style="max-width: 720px; margin: 2rem auto 0; padding: 1rem; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+            <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">
+                <strong>Affiliate Disclosure:</strong> RunBikeCalc is reader-supported. When you buy through links on this page, we may earn a small affiliate commission at no extra cost to you. This helps us keep our calculators and tools free. We only recommend products we've researched thoroughly. Prices and availability are accurate as of the date of publication and may change. See our <a href="/privacy" style="color:#C67B4E;text-decoration:underline;">privacy policy</a> for details.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Gear Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/best-running-shoes-2026" class="hover:text-white">Running Shoes</a></li>
+                        <li><a href="/blog/best-running-watches-2026" class="hover:text-white">Running Watches</a></li>
+                        <li><a href="/blog/best-bike-computers-2026" class="hover:text-white">Bike Computers</a></li>
+                        <li><a href="/blog/best-heart-rate-monitors-2026" class="hover:text-white">HR Monitors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-tools" class="hover:text-white">Running Tools</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">Cycling Tools</a></li>
+                        <li><a href="/heart-rate-tools" class="hover:text-white">Heart Rate Tools</a></li>
+                        <li><a href="/vo2-tools" class="hover:text-white">VO2 & Fitness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/search" class="hover:text-white">Search</a></li>
+                        <li><a href="/studies" class="hover:text-white">Research & Studies</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quiz Engine -->
+    <script src="/js/quiz-engine.js"></script>
+    <script>
+    (function() {
+        var questions = [
+            {
+                id: 'why',
+                question: 'Why do you want a rowing machine?',
+                subtitle: 'Pick the main reason',
+                options: [
+                    { id: 'why_cardio', icon: '\u2764\uFE0F', label: 'Cardio fitness', desc: 'Improve endurance and heart health' },
+                    { id: 'why_crossfit', icon: '\uD83D\uDCAA', label: 'CrossFit / functional fitness', desc: 'WODs, HYROX, and athletic training' },
+                    { id: 'why_rehab', icon: '\uD83E\uDE7A', label: 'Rehab / low impact', desc: 'Gentle on joints, injury recovery' },
+                    { id: 'why_compete', icon: '\uD83C\uDFC6', label: 'Competitive rowing', desc: 'Training for erg tests or on-water rowing' },
+                    { id: 'why_fullbody', icon: '\uD83E\uDDD1\u200D\uD83E\uDD1D\u200D\uD83E\uDDD1', label: 'Full-body workout', desc: 'Strength and cardio in one machine' }
+                ]
+            },
+            {
+                id: 'experience',
+                question: "What's your rowing experience?",
+                subtitle: 'Be honest - we\'ll find the right fit',
+                options: [
+                    { id: 'exp_beginner', icon: '\uD83C\uDF31', label: 'Beginner', desc: 'Never rowed or just getting started' },
+                    { id: 'exp_intermediate', icon: '\uD83D\uDCAA', label: 'Intermediate', desc: 'Comfortable with rowing form' },
+                    { id: 'exp_advanced', icon: '\uD83C\uDF1F', label: 'Advanced / competitive', desc: 'Experienced rower or athlete' }
+                ]
+            },
+            {
+                id: 'resistance',
+                question: 'Preferred resistance type?',
+                subtitle: 'Each type has a different feel',
+                options: [
+                    { id: 'resist_magnetic', icon: '\uD83E\uDDF2', label: 'Magnetic', desc: 'Whisper-quiet, great for apartments' },
+                    { id: 'resist_air', icon: '\uD83D\uDCA8', label: 'Air', desc: 'Dynamic gym feel, gets louder as you pull harder' },
+                    { id: 'resist_water', icon: '\uD83C\uDF0A', label: 'Water', desc: 'Natural swoosh, closest to real rowing' },
+                    { id: 'resist_any', icon: '\uD83E\uDD37', label: 'No preference', desc: "I'm open to anything" }
+                ]
+            },
+            {
+                id: 'guided',
+                question: 'Do you want guided workouts / classes?',
+                subtitle: 'Some rowers include streaming classes',
+                options: [
+                    { id: 'guided_yes', icon: '\uD83D\uDCF1', label: 'Yes, must have', desc: 'I want Peloton-style live/on-demand classes' },
+                    { id: 'guided_nice', icon: '\uD83D\uDC4D', label: 'Nice to have', desc: 'I\'d try them but it\'s not essential' },
+                    { id: 'guided_no', icon: '\u274C', label: "Don't need", desc: 'I\'ll do my own programming' }
+                ]
+            },
+            {
+                id: 'budget',
+                question: "What's your budget?",
+                subtitle: 'This helps narrow down options',
+                options: [
+                    { id: 'budget_under_300', icon: '\uD83D\uDCB5', label: 'Under $300', desc: 'Entry-level magnetic rowers' },
+                    { id: 'budget_300_600', icon: '\uD83D\uDCB0', label: '$300 - $600', desc: 'Solid mid-range options' },
+                    { id: 'budget_600_1200', icon: '\uD83D\uDCB3', label: '$600 - $1,200', desc: 'Premium rowers (Concept2 range)' },
+                    { id: 'budget_over_1200', icon: '\uD83D\uDC8E', label: 'Over $1,200', desc: 'Top-tier with screens & classes' }
+                ]
+            },
+            {
+                id: 'space',
+                question: 'How much space do you have?',
+                subtitle: 'Rowers need 7-9 feet of length',
+                options: [
+                    { id: 'space_compact', icon: '\uD83C\uDFE2', label: 'Compact (apartment)', desc: 'Limited space, need foldable' },
+                    { id: 'space_medium', icon: '\uD83C\uDFE0', label: 'Medium room', desc: 'Spare bedroom or garage corner' },
+                    { id: 'space_large', icon: '\uD83C\uDFDB\uFE0F', label: 'Large space', desc: 'Dedicated home gym area' }
+                ]
+            }
+        ];
+
+        function scoreFn(product, answers) {
+            var keys = [
+                answers.why,
+                answers.experience,
+                answers.resistance,
+                answers.guided,
+                answers.budget,
+                answers.space
+            ];
+            var total = 0;
+            for (var i = 0; i < keys.length; i++) {
+                var key = keys[i];
+                if (key && product.scores[key] !== undefined) {
+                    if (product.scores[key] === 0) return 0;
+                    total += product.scores[key];
+                }
+            }
+            return total;
+        }
+
+        function overrideFn(scored, answers) {
+            // If competitive rowing, force Concept2 Model D to #1
+            if (answers.why === 'why_compete') {
+                for (var i = 0; i < scored.length; i++) {
+                    if (scored[i].id === 'concept2-modeld') {
+                        scored[i]._score += 100;
+                    }
+                }
+            }
+            // If water resistance preferred, boost WaterRower and Ergatta
+            if (answers.resistance === 'resist_water') {
+                for (var j = 0; j < scored.length; j++) {
+                    if (scored[j].id === 'waterrower-natural' || scored[j].id === 'ergatta-rower') {
+                        scored[j]._score += 20;
+                    }
+                }
+            }
+            // If compact space and not air preference, penalize air rowers for noise
+            if (answers.space === 'space_compact' && answers.resistance !== 'resist_air') {
+                for (var k = 0; k < scored.length; k++) {
+                    var res = scored[k].specs && scored[k].specs.resistance ? scored[k].specs.resistance.toLowerCase() : '';
+                    if (res.indexOf('air') > -1 && res.indexOf('magnetic') === -1) {
+                        scored[k]._score = Math.round(scored[k]._score * 0.5);
+                    }
+                }
+            }
+            return scored;
+        }
+
+        function renderFn(topPicks, answers, accessories, affiliateTag) {
+            var html = '';
+            html += '<div class="quiz-slide-in">';
+            html += '<h2 style="text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:0.5rem;">Your Top Rowing Machines</h2>';
+            html += '<p style="text-align:center;color:#6b7280;margin-bottom:2rem;">Based on your answers, here are your best matches.</p>';
+
+            for (var i = 0; i < topPicks.length; i++) {
+                var p = topPicks[i];
+                var rank = i + 1;
+
+                html += '<div class="quiz-result-card">';
+                html += '<span class="quiz-result-rank">#' + rank + '</span>';
+
+                // Header row with image
+                html += '<div style="display:flex;gap:16px;align-items:flex-start;margin-top:0.75rem;margin-bottom:0.75rem;">';
+                if (p.imageUrl) {
+                    html += '<img src="' + p.imageUrl + '" alt="' + p.name + '" class="quiz-product-img" loading="lazy" />';
+                }
+                html += '<div style="flex:1;">';
+                html += '<h3 style="font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.25rem;">' + p.name + '</h3>';
+                html += '<p style="font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem;">' + p.brand + ' &middot; ' + p.priceDisplay + '</p>';
+
+                // Badges
+                var gymColor = p.verdict.gymQuality === 'YES' ? 'green' : 'gray';
+                html += renderBadge('Gym Quality: ' + p.verdict.gymQuality, gymColor) + ' ';
+
+                // Resistance type badge
+                var resistText = p.specs.resistance;
+                var resistColor = 'gray';
+                if (resistText.toLowerCase().indexOf('air') > -1) resistColor = 'blue';
+                if (resistText.toLowerCase().indexOf('water') > -1) resistColor = 'blue';
+                if (resistText.toLowerCase().indexOf('magnetic') > -1 && resistText.toLowerCase().indexOf('electro') === -1) resistColor = 'green';
+                if (resistText.toLowerCase().indexOf('electromagnetic') > -1) resistColor = 'copper';
+                html += renderBadge(resistText, resistColor);
+
+                html += '</div>';
+                html += '</div>';
+
+                // Best for verdict
+                html += '<p style="font-size:0.9rem;color:#92400e;font-weight:600;background:#fef7f0;padding:0.5rem 0.75rem;border-radius:0.5rem;margin-bottom:0.75rem;">' + p.verdict.bestFor + '</p>';
+
+                // Specs table
+                html += '<table class="quiz-specs-table">';
+                html += '<tr><th>Resistance</th><td>' + p.specs.resistance + '</td></tr>';
+                html += '<tr><th>Footprint</th><td>' + p.specs.footprint + '</td></tr>';
+                html += '<tr><th>Foldable</th><td>' + (p.specs.foldable ? 'Yes' : 'No') + '</td></tr>';
+                html += '<tr><th>Noise Level</th><td>' + p.specs.noise + '</td></tr>';
+                html += '<tr><th>Max User Weight</th><td>' + p.specs.maxWeight + '</td></tr>';
+                html += '<tr><th>Monitor</th><td>' + p.specs.monitor + '</td></tr>';
+                html += '</table>';
+
+                // CTA button
+                html += '<div style="text-align:center;margin-top:1rem;">';
+                html += '<a href="' + p.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + p.id + '" class="quiz-cta-btn">Check Price on Amazon</a>';
+                html += '</div>';
+
+                // Accessories
+                html += renderAccessories(p, accessories, affiliateTag);
+
+                html += '</div>';
+            }
+
+            // Retake link
+            html += '<div style="text-align:center;margin-top:1.5rem;">';
+            html += '<a href="#" id="quiz-retake" style="color:#C67B4E;font-weight:600;text-decoration:underline;font-size:0.95rem;">Retake Quiz</a>';
+            html += '</div>';
+
+            html += '</div>';
+            return html;
+        }
+
+        var quiz = new QuizEngine({
+            questions: questions,
+            dataUrl: '/data/rowers.json',
+            scoreFn: scoreFn,
+            renderFn: renderFn,
+            overrideFn: overrideFn,
+            quizName: 'rower_finder',
+            affiliateTag: 'runbikecalc-20',
+            containerId: 'quiz-container',
+            resultsId: 'quiz-results'
+        });
+
+        quiz.init();
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Spin Bike Finder Quiz - Find Your Perfect Indoor Cycle | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/spin-bike-finder">
+    <meta name="description" content="Take our 2-minute quiz to find the perfect spin bike for your budget, space, and fitness goals. Compare 13 indoor cycling bikes from budget to premium with personalized recommendations.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Spin Bike Finder Quiz - Find Your Perfect Indoor Cycle">
+    <meta property="og:description" content="Take our 2-minute quiz to find the perfect spin bike for your budget, space, and fitness goals.">
+    <meta property="og:image" content="https://runbikecalc.com/images/gear-guides-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/spin-bike-finder">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Spin Bike Finder Quiz",
+        "url": "https://runbikecalc.com/spin-bike-finder",
+        "description": "Interactive quiz to find the perfect spin bike based on your budget, space, and fitness goals.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <style>
+        /* Quiz Progress */
+        .quiz-progress {
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 9999px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .quiz-progress-bar {
+            background: #C67B4E;
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 0.4s ease;
+        }
+        .quiz-step-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-question {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-subtitle {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .quiz-option {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 16px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            text-align: left;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .quiz-option:hover {
+            border-color: #C67B4E;
+        }
+        .quiz-option.selected {
+            border-color: #C67B4E;
+            background-color: #fef7f0;
+        }
+        .quiz-option-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .quiz-option-label {
+            font-weight: 600;
+        }
+        .quiz-option-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+        .quiz-option-multi {
+            cursor: pointer;
+        }
+        .quiz-check {
+            color: #C67B4E;
+            margin-left: auto;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .quiz-continue-btn {
+            background: #C67B4E;
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 0.75rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            max-width: 600px;
+            margin: 16px auto 0;
+            display: block;
+            transition: background 0.2s;
+        }
+        .quiz-continue-btn:hover {
+            background: #a5623d;
+        }
+        .quiz-back-btn {
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 12px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 16px;
+        }
+        .quiz-back-btn:hover {
+            color: #374151;
+        }
+        .quiz-analyzing {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .quiz-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e5e7eb;
+            border-top-color: #C67B4E;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        .quiz-analyzing-text {
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        .quiz-slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+        .quiz-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .quiz-result-card {
+            background: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #C67B4E;
+        }
+        .quiz-result-rank {
+            background: #C67B4E;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .quiz-specs-table {
+            width: 100%;
+            font-size: 0.85rem;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .quiz-specs-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .quiz-specs-table td {
+            padding: 6px 10px;
+        }
+        .quiz-specs-table td:first-child {
+            font-weight: 600;
+            color: #374151;
+            width: 40%;
+        }
+        .quiz-specs-table td:last-child {
+            color: #6b7280;
+        }
+        .quiz-cta-btn {
+            background: #C67B4E;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            transition: background 0.2s;
+            font-size: 0.95rem;
+        }
+        .quiz-cta-btn:hover {
+            background: #a5623d;
+            color: #fff;
+        }
+        .quiz-accessories {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .quiz-accessories-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-accessories-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .quiz-accessory-link {
+            font-size: 0.8rem;
+            color: #C67B4E;
+            text-decoration: none;
+        }
+        .quiz-accessory-link:hover {
+            text-decoration: underline;
+        }
+        .quiz-accessory-price {
+            color: #6b7280;
+        }
+        .quiz-product-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f9fafb;
+            flex-shrink: 0;
+        }
+        @media (max-width: 480px) {
+            .quiz-product-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .quiz-cross-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .quiz-cross-links {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .quiz-cross-link-card {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+            text-decoration: none;
+            color: #374151;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .quiz-cross-link-card:hover {
+            border-color: #C67B4E;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .quiz-cross-link-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .quiz-cross-link-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .quiz-cross-link-desc {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 pt-6 pb-2">
+        <nav class="text-sm text-gray-500" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-gray-700">Home</a>
+            <span class="mx-2">&rsaquo;</span>
+            <a href="/gear-guides" class="hover:text-gray-700">Gear Guides</a>
+            <span class="mx-2">&rsaquo;</span>
+            <span class="text-gray-900">Spin Bike Finder</span>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(135deg, #C67B4E 0%, #a5623d 100%);" class="py-12 mb-8">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem;">Find Your Perfect Spin Bike</h1>
+            <p style="font-size: 1.15rem; opacity: 0.92; max-width: 600px; margin: 0 auto 1.5rem;">Answer 5 quick questions and we'll match you with the best indoor cycling bike for your goals, budget, and space.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <span style="background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600;">5 Questions</span>
+                <span style="background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600;">13 Bikes</span>
+                <span style="background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600;">2 Minutes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <main class="container mx-auto px-4 pb-12">
+        <div id="quiz-container" style="max-width: 700px; margin: 0 auto; background: #fff; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 2rem;">
+            <!-- Quiz questions rendered here by JS -->
+        </div>
+
+        <div id="quiz-results" class="hidden" style="max-width: 700px; margin: 0 auto;">
+            <!-- Results rendered here by JS -->
+        </div>
+
+        <!-- Cross-Links to Other Quizzes -->
+        <div style="max-width: 700px; margin: 3rem auto 0;">
+            <h2 style="font-size: 1.25rem; font-weight: 700; text-align: center; margin-bottom: 1rem;">Find More Home Gym Equipment</h2>
+            <div class="quiz-cross-links">
+                <a href="/treadmill-finder" class="quiz-cross-link-card">
+                    <div class="quiz-cross-link-icon">&#127939;</div>
+                    <div class="quiz-cross-link-title">Treadmill Finder</div>
+                    <div class="quiz-cross-link-desc">Running &amp; walking treadmills</div>
+                </a>
+                <a href="/rower-finder" class="quiz-cross-link-card">
+                    <div class="quiz-cross-link-icon">&#128675;</div>
+                    <div class="quiz-cross-link-title">Rower Finder</div>
+                    <div class="quiz-cross-link-desc">Indoor rowing machines</div>
+                </a>
+                <a href="/home-gym-finder" class="quiz-cross-link-card">
+                    <div class="quiz-cross-link-icon">&#127947;</div>
+                    <div class="quiz-cross-link-title">Home Gym Finder</div>
+                    <div class="quiz-cross-link-desc">Racks, benches &amp; weights</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="max-width: 700px; margin: 3rem auto 0;">
+            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">What should I look for in a spin bike?</h3>
+                <p style="color: #4b5563; line-height: 1.6;">The most important factors are resistance type (magnetic is quieter and lower maintenance than felt pad), flywheel weight (heavier flywheels create smoother pedaling), adjustability (seat and handlebar height/depth), weight capacity, and warranty. If you plan to use streaming classes, Bluetooth connectivity is essential. For apartment dwellers, noise level and footprint are critical considerations.</p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Is a Peloton worth it compared to cheaper alternatives?</h3>
+                <p style="color: #4b5563; line-height: 1.6;">Peloton offers the best integrated class experience with its large touchscreen and live/on-demand content, but you pay a premium for the bike plus a monthly subscription ($44/mo). Alternatives like the Schwinn IC4 or Bowflex C6 cost significantly less and work with multiple apps (Peloton app, Zwift, Apple Fitness+) via Bluetooth. If you are self-motivated or prefer app variety, a mid-range alternative saves thousands over time.</p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">How much space does a spin bike need?</h3>
+                <p style="color: #4b5563; line-height: 1.6;">Most spin bikes have a footprint of roughly 4 feet long by 2 feet wide. You will want at least 2 feet of clearance on each side for comfortable mounting and pedaling. Budget about 6 by 4 feet of total floor space. Some models like the YOSUDA and JOROTO have transport wheels for easy storage when not in use, making them suitable for apartment corners or shared spaces.</p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">What is the difference between magnetic and friction resistance?</h3>
+                <p style="color: #4b5563; line-height: 1.6;">Friction (felt pad) resistance uses a brake pad pressing against the flywheel. It is affordable but wears over time, requires replacement pads, and is louder. Magnetic resistance uses magnets near the flywheel to create resistance without contact. It is virtually silent, maintenance-free, and provides smoother resistance transitions. Magnetic bikes cost more upfront but save on maintenance and are far better for apartment use or early-morning workouts.</p>
+            </div>
+        </div>
+
+        <!-- Affiliate Disclosure -->
+        <div style="max-width: 700px; margin: 2rem auto 0;">
+            <p style="font-size: 0.8rem; color: #9ca3af; line-height: 1.6; text-align: center;">
+                <strong>Affiliate Disclosure:</strong> RunBikeCalc is reader-supported. When you buy through links on this page, we may earn a small affiliate commission at no extra cost to you. This helps us keep our calculators and tools free. We only recommend products we have researched and believe offer genuine value. All prices are approximate and may vary.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Gear Guides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog/best-running-shoes-2026" class="hover:text-white">Running Shoes</a></li>
+                        <li><a href="/blog/best-running-watches-2026" class="hover:text-white">Running Watches</a></li>
+                        <li><a href="/blog/best-bike-computers-2026" class="hover:text-white">Bike Computers</a></li>
+                        <li><a href="/blog/best-heart-rate-monitors-2026" class="hover:text-white">HR Monitors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-tools" class="hover:text-white">Running Tools</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">Cycling Tools</a></li>
+                        <li><a href="/heart-rate-tools" class="hover:text-white">Heart Rate Tools</a></li>
+                        <li><a href="/vo2-tools" class="hover:text-white">VO2 & Fitness</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/blog" class="hover:text-white">Training Blog</a></li>
+                        <li><a href="/search" class="hover:text-white">Search</a></li>
+                        <li><a href="/studies" class="hover:text-white">Research & Studies</a></li>
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quiz Engine -->
+    <script src="/js/quiz-engine.js"></script>
+    <script>
+    (function() {
+        var questions = [
+            {
+                id: 'goal',
+                question: "What's your main fitness goal?",
+                subtitle: 'This helps us match bike features to your needs.',
+                options: [
+                    { id: 'weight_loss', icon: '\uD83D\uDD25', label: 'Weight loss', desc: 'High-calorie burn workouts' },
+                    { id: 'general_fitness', icon: '\u2764\uFE0F', label: 'General fitness', desc: 'Stay active and healthy' },
+                    { id: 'cycling_training', icon: '\uD83D\uDEB4', label: 'Cycling training', desc: 'Improve power and endurance' },
+                    { id: 'peloton_alt', icon: '\uD83D\uDCB0', label: 'Peloton alternative', desc: 'Great bike without the Peloton price' }
+                ]
+            },
+            {
+                id: 'classes',
+                question: 'How important are streaming classes?',
+                subtitle: 'Apps like Peloton, Zwift, or Apple Fitness+.',
+                options: [
+                    { id: 'must_have', icon: '\uD83D\uDCF1', label: 'Must have', desc: 'I need guided classes to stay motivated' },
+                    { id: 'nice', icon: '\uD83D\uDC4D', label: 'Nice to have', desc: "I'd use them but it's not a dealbreaker" },
+                    { id: 'dont_need', icon: '\uD83D\uDE45', label: "Don't need", desc: "I'll do my own workouts" }
+                ]
+            },
+            {
+                id: 'budget',
+                question: "What's your budget?",
+                subtitle: 'Including any accessories you might need.',
+                options: [
+                    { id: 'under_300', icon: '\uD83D\uDCB5', label: 'Under $300', desc: 'Entry-level bikes' },
+                    { id: '300_600', icon: '\uD83D\uDCB3', label: '$300 \u2013 $600', desc: 'Mid-value sweet spot' },
+                    { id: '600_1000', icon: '\uD83D\uDCB3', label: '$600 \u2013 $1,000', desc: 'Premium features' },
+                    { id: 'over_1000', icon: '\uD83D\uDC8E', label: 'Over $1,000', desc: 'Top-tier bikes' }
+                ]
+            },
+            {
+                id: 'space',
+                question: 'How much space do you have?',
+                subtitle: 'Where will the bike live?',
+                options: [
+                    { id: 'small', icon: '\uD83C\uDFE2', label: 'Small', desc: 'Apartment corner or tight space' },
+                    { id: 'medium', icon: '\uD83C\uDFE0', label: 'Medium', desc: 'Spare room or dedicated area' },
+                    { id: 'large', icon: '\uD83C\uDFED', label: 'Large', desc: 'Garage or basement gym' }
+                ]
+            },
+            {
+                id: 'dealbreakers',
+                type: 'multi',
+                question: 'Any dealbreakers?',
+                subtitle: 'Select all that apply (or skip with Continue).',
+                options: [
+                    { id: 'quiet', icon: '\uD83E\uDD2B', label: 'Must be quiet', desc: 'Apartment-friendly noise level' },
+                    { id: 'screen', icon: '\uD83D\uDCFA', label: 'Need built-in screen', desc: 'Touchscreen on the bike' },
+                    { id: 'adjustable', icon: '\uD83D\uDD27', label: 'Highly adjustable', desc: 'Fits multiple body types' },
+                    { id: 'warranty', icon: '\uD83D\uDEE1\uFE0F', label: 'Strong warranty', desc: '5+ years frame coverage' },
+                    { id: 'compact', icon: '\uD83D\uDCCF', label: 'Must be compact', desc: 'Small footprint or foldable' }
+                ]
+            }
+        ];
+
+        function scoreFn(product, answers) {
+            var scores = product.scores;
+            var total = 0;
+
+            // Goal
+            var goalKey = 'goal_' + answers.goal;
+            total += (scores[goalKey] || 0);
+
+            // Classes
+            var classKey = 'classes_' + answers.classes;
+            total += (scores[classKey] || 0);
+
+            // Budget - hard filter
+            var budgetKey = 'budget_' + answers.budget;
+            var budgetScore = scores[budgetKey];
+            if (budgetScore === 0) return 0;
+            total += (budgetScore || 0);
+
+            // Space
+            var spaceKey = 'space_' + answers.space;
+            total += (scores[spaceKey] || 0);
+
+            // Dealbreakers (multi) - bonus points
+            var deals = answers.dealbreakers || [];
+            deals.forEach(function(d) {
+                var dealKey = 'deal_' + d;
+                total += (scores[dealKey] || 0);
+            });
+
+            return total;
+        }
+
+        function renderFn(topProducts, answers, accessories, affiliateTag) {
+            var html = '<h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;text-align:center;">Your Top Spin Bike Matches</h2>';
+            html += '<p style="color:#6b7280;text-align:center;margin-bottom:2rem;">Based on your answers, here are your best options.</p>';
+
+            topProducts.forEach(function(p, i) {
+                var rankNum = i + 1;
+                var skipColor = p.verdict.skipPeloton === 'YES' ? 'green' : (p.verdict.skipPeloton === 'MAYBE' ? 'copper' : 'red');
+
+                html += '<div class="quiz-result-card">';
+                html += '<div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">';
+                html += '<div class="quiz-result-rank">#' + rankNum + '</div>';
+                if (p.imageUrl) {
+                    html += '<img src="' + p.imageUrl + '" alt="' + p.name + '" class="quiz-product-img" loading="lazy" />';
+                }
+                html += '<div style="flex:1;">';
+                html += '<h3 style="font-weight:700;font-size:1.1rem;margin:0;">' + p.name + '</h3>';
+                html += '<p style="color:#6b7280;font-size:0.85rem;margin:0;">' + p.brand + ' &middot; ' + p.priceDisplay + '</p>';
+                html += '</div>';
+                html += renderBadge('Skip Peloton? ' + p.verdict.skipPeloton, skipColor);
+                html += '</div>';
+
+                // Specs table
+                html += '<table class="quiz-specs-table">';
+                html += '<tr><td>Resistance</td><td>' + p.specs.resistance + '</td></tr>';
+                html += '<tr><td>Flywheel</td><td>' + p.specs.flywheel + '</td></tr>';
+                html += '<tr><td>Display</td><td>' + p.specs.display + '</td></tr>';
+                html += '<tr><td>Max Weight</td><td>' + p.specs.maxWeight + '</td></tr>';
+                html += '<tr><td>Warranty</td><td>' + p.specs.warranty + '</td></tr>';
+                html += '</table>';
+
+                // Best for verdict
+                html += '<p style="font-size:0.9rem;margin-bottom:1rem;"><strong>Best for:</strong> ' + p.verdict.bestFor + '</p>';
+
+                // CTA button
+                html += '<a href="' + p.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + p.id + '" class="quiz-cta-btn">View on Amazon &rarr;</a>';
+
+                // Accessories
+                html += renderAccessories(p, accessories, affiliateTag);
+
+                html += '</div>';
+            });
+
+            // Retake button
+            html += '<div style="text-align:center;margin-top:2rem;">';
+            html += '<button id="quiz-retake" style="background:none;border:2px solid #C67B4E;color:#C67B4E;padding:12px 32px;border-radius:0.5rem;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s,color 0.2s;">Retake Quiz</button>';
+            html += '</div>';
+
+            // Cross-links in results
+            html += '<div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;">';
+            html += '<p style="text-align:center;font-weight:600;margin-bottom:1rem;">Try Our Other Equipment Finders</p>';
+            html += '<div class="quiz-cross-links">';
+            html += '<a href="/treadmill-finder" class="quiz-cross-link-card"><div class="quiz-cross-link-icon">&#127939;</div><div class="quiz-cross-link-title">Treadmill Finder</div></a>';
+            html += '<a href="/rower-finder" class="quiz-cross-link-card"><div class="quiz-cross-link-icon">&#128675;</div><div class="quiz-cross-link-title">Rower Finder</div></a>';
+            html += '<a href="/home-gym-finder" class="quiz-cross-link-card"><div class="quiz-cross-link-icon">&#127947;</div><div class="quiz-cross-link-title">Home Gym Finder</div></a>';
+            html += '</div>';
+            html += '</div>';
+
+            return html;
+        }
+
+        var quiz = new QuizEngine({
+            questions: questions,
+            dataUrl: '/data/spin-bikes.json',
+            scoreFn: scoreFn,
+            renderFn: renderFn,
+            quizName: 'spin-bike-finder',
+            affiliateTag: 'runbikecalc-20',
+            containerId: 'quiz-container',
+            resultsId: 'quiz-results'
+        });
+
+        quiz.init();
+    })();
+    </script>
+</body>
+</html>

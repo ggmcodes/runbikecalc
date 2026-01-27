@@ -6,6 +6,7 @@
     "build-css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
     "fetch-images": "node scripts/fetch-amazon-images.js",
+    "fetch-quiz-products": "node scripts/fetch-quiz-products.js",
     "update-products": "python3 scripts/add-product-images.py",
     "update-products:dry": "python3 scripts/add-product-images.py --dry-run"
   },
