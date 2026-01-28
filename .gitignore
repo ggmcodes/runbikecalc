@@ -28,3 +28,6 @@ build/
 # Tailwind CSS build
 output.cssscripts/config.py
 scripts/config.py
+
+# Large data files (affiliate product feeds)
+data/backcountry-products.txt
