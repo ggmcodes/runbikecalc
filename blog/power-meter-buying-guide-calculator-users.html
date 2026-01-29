@@ -18,7 +18,25 @@
     <script>tailwind.config = {theme: {extend: {colors: {'primary': '#2563eb','secondary': '#10b981','accent': '#f59e0b','dark': '#1f2937'}}}}</script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="application/ld+json">{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Which power meter type is most accurate?","acceptedAnswer": {"@type": "Answer","text": "All modern power meters from reputable brands are accurate within +/-1-2%. Crank spider and pedal-based units are most common. Consistency matters more than absolute accuracy - your FTP calculator results will be valid as long as you use the same power meter consistently."}},{"@type": "Question","name": "Can I use a smart trainer as a power meter?","acceptedAnswer": {"@type": "Answer","text": "Yes, quality smart trainers (Wahoo Kickr, Tacx Neo, etc.) are accurate to +/-1-2%. They work well for indoor FTP testing and training. For outdoor use, you'll still need a bike-mounted power meter. Some variance between trainer and outdoor power is normal."}}]}</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question","name": "Which power meter type is most accurate?","acceptedAnswer": {"@type": "Answer","text": "All modern power meters from reputable brands are accurate within +/-1-2%. Crank spider and pedal-based units are most common. Consistency matters more than absolute accuracy - your FTP calculator results will be valid as long as you use the same power meter consistently."}},
+            {"@type": "Question","name": "Can I use a smart trainer as a power meter?","acceptedAnswer": {"@type": "Answer","text": "Yes, quality smart trainers (Wahoo Kickr, Tacx Neo, etc.) are accurate to +/-1-2%. They work well for indoor FTP testing and training. For outdoor use, you'll still need a bike-mounted power meter. Some variance between trainer and outdoor power is normal."}},
+            {"@type": "Question","name": "How much does a good power meter cost?","acceptedAnswer": {"@type": "Answer","text": "Budget options start around $300-400 for single-sided crank meters. Quality dual-sided pedal meters range $700-1,100. High-end spider and pedal options exceed $1,200. Smart trainers offering power data range $400-2,500 depending on features and accuracy."}},
+            {"@type": "Question","name": "How do I calibrate a power meter?","acceptedAnswer": {"@type": "Answer","text": "Most modern power meters use zero-offset calibration, done via their companion app before each ride. Warm up the bike for 10 minutes, ensure it's on a level surface, and perform the zero-offset in the app. Some meters like Garmin pedals also support spindown calibration for additional accuracy checks."}},
+            {"@type": "Question","name": "Can I switch power meters between bikes?","acceptedAnswer": {"@type": "Answer","text": "Pedal-based systems like Garmin Rally and Favero Assioma transfer between bikes easily - just swap the pedals. Crank arm meters must be reinstalled on different cranksets. Spider meters are crankset-specific. Hub-based PowerTap can move to any wheelset."}},
+            {"@type": "Question","name": "What's the difference between single-sided and dual-sided?","acceptedAnswer": {"@type": "Answer","text": "Single-sided meters measure one leg (usually left) and double the power, assuming symmetrical effort. Dual-sided measures both legs independently, providing true total power output. For training purposes, single-sided is acceptable; dual-sided offers more data and accuracy for analytics."}},
+            {"@type": "Question","name": "Do I need a power meter to use your calculator?","acceptedAnswer": {"@type": "Answer","text": "No, our FTP calculator works with power meter readings or estimated power from heart rate, perceived exertion, or smart trainer data. Power meters provide the most accurate data, but any consistent power source works for calculating training zones."}},
+            {"@type": "Question","name": "How often should I replace my power meter?","acceptedAnswer": {"@type": "Answer","text": "Quality power meters last 5-10+ years with proper maintenance. Batteries need replacement annually. Cleats on pedal meters may need replacing every 1-2 years depending on use. Most units remain accurate throughout their lifespan if calibrated regularly."}},
+            {"@type": "Question","name": "Are power meters waterproof?","acceptedAnswer": {"@type": "Answer","text": "All modern power meters from major brands are rated IP67 or better, meaning they handle rain, puddles, and cleaning. However, avoid submerging in water or high-pressure washing near connectors. Always dry thoroughly after wet rides."}},
+            {"@type": "Question","name": "Can two riders share one power meter?","acceptedAnswer": {"@type": "Answer","text": "Pedal-based meters can swap between riders easily if they use the same cleat system. Crank-based meters require reinstallation for different riders. Smart trainers can serve multiple riders if they adjust seat/fit between sessions. Data from different riders can't be directly compared on single-sided meters."}},
+            {"@type": "Question","name": "What compatibility issues should I know about?","acceptedAnswer": {"@type": "Answer","text": "Pedal meters require matching your specific cleat system (SPD-SL, Look Keo, Shimano SPD). Some crank meters only fit specific crank brands/generations. Chainring tooth counts vary by model. Check manufacturer compatibility charts before purchasing."}}
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -43,6 +61,17 @@
 
     <main class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
+            <!-- Backcountry Affiliate Banner -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-6 mb-8 shadow-lg">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Shop Power Meters at Backcountry</h3>
+                        <p class="text-blue-100 text-sm">Find all the gear featured in this guide with expert recommendations and competitive pricing.</p>
+                    </div>
+                    <a href="https://www.backcountry.com/powermeter" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors whitespace-nowrap">Browse at Backcountry →</a>
+                </div>
+            </div>
+
             <article class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="h-64 md:h-96 relative">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Cyclist with power meter on bike" class="w-full h-full object-cover">
@@ -152,6 +181,256 @@
 
                         <h2>Smart Trainer as Power Source</h2>
                         <p>For indoor-only training, a quality smart trainer (Wahoo Kickr, Tacx Neo, Elite Direto) provides accurate power data at +/-1-2%. Use it for FTP tests and all indoor workouts. Just maintain consistency - if you test indoors, compare to indoor results.</p>
+
+                        <h2>Top Product Recommendations by Category</h2>
+
+                        <h3>Best Pedal-Based: Garmin Rally RS/RK</h3>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+                            <p class="mb-4">Dual-sided power measurement with +/-1% accuracy. Compatible with Look Keo cleats (RS) or Shimano SPD-SL (RK). Transfers between bikes easily. Real-time power metrics to head units. Temperature compensated.</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Price: $900-1,100</li>
+                                <li>Accuracy: +/-1%</li>
+                                <li>Installation: 15 minutes</li>
+                                <li>Connectivity: ANT+, Bluetooth</li>
+                                <li>Battery: ~25 hours per charge</li>
+                            </ul>
+                            <a href="https://www.backcountry.com/garmin-rally-power-meter" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">View at Backcountry →</a>
+                        </div>
+
+                        <h3>Best Value Dual-Sided: Favero Assioma Duo</h3>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6 my-6">
+                            <p class="mb-4">Dual-sided pedal power meter with Look Keo compatibility. Known for reliability and excellent customer service. Battery-powered pedals last ~25-30 hours. Excellent for multiple bike usage.</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Price: $750-850</li>
+                                <li>Accuracy: +/-1%</li>
+                                <li>Installation: 10 minutes</li>
+                                <li>Connectivity: ANT+, Bluetooth</li>
+                                <li>Battery: ~25-30 hours per charge</li>
+                            </ul>
+                            <a href="https://www.backcountry.com/favero-assioma-duo-power-meter" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">View at Backcountry →</a>
+                        </div>
+
+                        <h3>Best Budget Option: Stages Crank Arm (Single-Sided)</h3>
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-6 my-6">
+                            <p class="mb-4">Reliable single-sided measurement at an entry-level price. Stages offers compatibility with most crank models. Left-leg doubling is standard; works well for consistent training data.</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Price: $350-450</li>
+                                <li>Accuracy: +/-1.5%</li>
+                                <li>Installation: 30-45 minutes</li>
+                                <li>Connectivity: ANT+, Bluetooth</li>
+                                <li>Battery: ~200 hours per charge</li>
+                            </ul>
+                            <a href="https://www.backcountry.com/stages-power-meter" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">View at Backcountry →</a>
+                        </div>
+
+                        <h3>Best Crank Spider: Quarq DZero</h3>
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 my-6">
+                            <p class="mb-4">Integrated into crankset for durability and elegance. Measures total power directly with no estimation. Popular with serious racers and mountain bikers. Requires full crankset replacement.</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Price: $650-850</li>
+                                <li>Accuracy: +/-1-1.5%</li>
+                                <li>Installation: 45-60 minutes</li>
+                                <li>Connectivity: ANT+, Bluetooth</li>
+                                <li>Battery: ~200 hours per charge</li>
+                            </ul>
+                            <a href="https://www.backcountry.com/quarq-power-meter" target="_blank" rel="noopener noreferrer" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">View at Backcountry →</a>
+                        </div>
+
+                        <h3>Best Upgrade Path: Favero Assioma Uno (Single to Dual)</h3>
+                        <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6 my-6">
+                            <p class="mb-4">Start with single-sided measurement, add a second pedal later. Excellent entry point for those wanting to upgrade to dual-sided power. Same app and ecosystem as Duo.</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Price: $450-550 (single), add $300 for second pedal</li>
+                                <li>Accuracy: +/-1%</li>
+                                <li>Installation: 10 minutes</li>
+                                <li>Connectivity: ANT+, Bluetooth</li>
+                                <li>Battery: ~25-30 hours per charge</li>
+                            </ul>
+                            <a href="https://www.backcountry.com/favero-assioma-uno-power-meter" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">View at Backcountry →</a>
+                        </div>
+
+                        <h2>Installation Guides by Type</h2>
+
+                        <h3>Installing Pedal-Based Power Meters</h3>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-4">
+                            <li><strong>Check compatibility:</strong> Verify your shoes use the correct cleat system (SPD-SL, Look Keo, or Shimano SPD)</li>
+                            <li><strong>Install cleats on pedals:</strong> Use the provided hardware kit. Cleats typically attach with three bolts</li>
+                            <li><strong>Attach pedals to crank:</strong> Use a 15mm pedal wrench to thread pedals into crank arms (left reverse-threaded)</li>
+                            <li><strong>Set up in app:</strong> Download the manufacturer app and perform initial pairing and zero-offset calibration</li>
+                            <li><strong>Test connectivity:</strong> Pair with your head unit (Garmin, Wahoo, etc.) via ANT+ or Bluetooth</li>
+                        </ol>
+
+                        <h3>Installing Crank Arm Power Meters</h3>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-4">
+                            <li><strong>Remove existing crank arm:</strong> Use a crank puller tool to remove your left crank arm</li>
+                            <li><strong>Install power meter crank:</strong> Slide onto spindle and secure with dust cap and pinch bolt</li>
+                            <li><strong>Torque specifications:</strong> Follow manufacturer specs (typically 8-15 Nm for pinch bolt)</li>
+                            <li><strong>Calibrate in app:</strong> Perform zero-offset and spindown calibration per instructions</li>
+                            <li><strong>Verify alignment:</strong> Ensure crank arms are properly aligned before test ride</li>
+                        </ol>
+
+                        <h3>Installing Spider Power Meters</h3>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-4">
+                            <li><strong>Remove chainring assembly:</strong> Remove crank arm, then chainrings and spider</li>
+                            <li><strong>Transfer chainrings:</strong> Move existing chainrings to power meter spider (typically same bolt pattern)</li>
+                            <li><strong>Install on crank:</strong> Mount spider/power meter on spindle with appropriate spacers</li>
+                            <li><strong>Secure pinch bolts:</strong> Torque to manufacturer specifications (usually 8-12 Nm)</li>
+                            <li><strong>Calibrate:</strong> Perform initial calibration and zero-offset before riding</li>
+                        </ol>
+
+                        <h2>Power Meter Calibration Guide</h2>
+
+                        <h3>Zero-Offset Calibration (Before Each Ride)</h3>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 my-6">
+                            <p class="font-semibold mb-3">This 2-minute process corrects electronics drift:</p>
+                            <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-4">
+                                <li>Warm bike indoors for 10 minutes</li>
+                                <li>Place bike on level surface or trainer</li>
+                                <li>Open manufacturer app on phone</li>
+                                <li>Select "Zero-Offset" or "Calibrate" option</li>
+                                <li>Follow prompts (usually just tap a button)</li>
+                                <li>Confirm zero offset completed successfully</li>
+                                <li>Ready to ride</li>
+                            </ol>
+                            <p class="text-sm text-yellow-800 mt-3"><strong>Tip:</strong> Most modern systems perform zero-offset automatically on pairing. Manual zero-offset before key workouts adds confidence in data accuracy.</p>
+                        </div>
+
+                        <h3>Spindown Calibration (Monthly or as Needed)</h3>
+                        <p>Some meters like Garmin Rally support spindown calibration for additional accuracy checks:</p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-4">
+                            <li>Place bike on trainer</li>
+                            <li>Warm up for 5 minutes at steady pace</li>
+                            <li>Stop pedaling and let bike coast</li>
+                            <li>App measures deceleration and compares to expected values</li>
+                            <li>Adjustment applied to power meter firmware if needed</li>
+                        </ol>
+
+                        <h3>Battery Maintenance</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li>Pedal meters: Replace batteries annually or every 25-30 hours of use</li>
+                            <li>Crank meters: Battery lasts 200+ hours typically, check quarterly</li>
+                            <li>Spider meters: Long battery life, check before important events</li>
+                            <li>Always carry spare batteries for long races</li>
+                            <li>Power meter performance degrades noticeably when battery is low</li>
+                        </ul>
+
+                        <h2>Compatibility Detailed Information</h2>
+
+                        <h3>Pedal System Compatibility</h3>
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg my-6 overflow-hidden">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Cleat System</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Compatible Power Meters</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3">Shimano SPD-SL</td>
+                                    <td class="px-4 py-3">Garmin Rally RK, Favero Assioma, Wahoo Powrlink</td>
+                                    <td class="px-4 py-3">Most common road system</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">Look Keo</td>
+                                    <td class="px-4 py-3">Garmin Rally RS, Favero Assioma</td>
+                                    <td class="px-4 py-3">Popular among triathletes</td>
+                                </tr>
+                                <tr class="bg-blue-50">
+                                    <td class="px-4 py-3">Shimano SPD</td>
+                                    <td class="px-4 py-3">Limited options (mostly dual-purpose pedals)</td>
+                                    <td class="px-4 py-3">Mountain bike/gravel standard</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">Time Pedal System</td>
+                                    <td class="px-4 py-3">SRM power meters</td>
+                                    <td class="px-4 py-3">Specialty option</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>Crank Compatibility</h3>
+                        <p>Crank arm and spider power meters require specific compatibility with your bike's crankset. Key factors:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li><strong>Crank brand/model:</strong> Stages makes models for Shimano, SRAM, FSA, Campagnolo, and more</li>
+                            <li><strong>Spindle type:</strong> Square taper, Hollowtech II, or BB30 affects compatibility</li>
+                            <li><strong>Chainring teeth:</strong> Most meters support common ring sizes (50-52T, 34-36T for compact)</li>
+                            <li><strong>Spider compatibility:</strong> Quarq and Power2Max support SRAM and FSA models primarily</li>
+                            <li><strong>Check compatibility charts:</strong> Always verify your exact crankset model before purchasing</li>
+                        </ul>
+
+                        <h2>Budget Tier Recommendations</h2>
+
+                        <div class="grid md:grid-cols-2 gap-6 my-8">
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-red-900 mb-3">Entry-Level: Under $400</h3>
+                                <p class="text-gray-700 mb-4">Perfect for cyclists testing if power training works for them.</p>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                    <li>Stages single-sided crank ($350-400)</li>
+                                    <li>4iiii Precision single-sided ($350-400)</li>
+                                    <li>Previous-generation models on sale</li>
+                                </ul>
+                                <p class="text-xs text-red-800"><strong>Trade-off:</strong> Single-sided measurement, requires installation</p>
+                            </div>
+
+                            <div class="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-orange-900 mb-3">Value: $400-700</h3>
+                                <p class="text-gray-700 mb-4">Best balance of cost and functionality for most cyclists.</p>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                    <li>Favero Assioma Uno ($450-550)</li>
+                                    <li>4iiii Precision Duo ($600-700)</li>
+                                    <li>Stages dual-sided crank ($600-650)</li>
+                                </ul>
+                                <p class="text-xs text-orange-800"><strong>Benefit:</strong> Easy installation, multi-bike capability</p>
+                            </div>
+
+                            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-yellow-900 mb-3">Premium: $700-1,000</h3>
+                                <p class="text-gray-700 mb-4">High-quality options with full feature sets.</p>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                    <li>Favero Assioma Duo ($750-850)</li>
+                                    <li>Garmin Rally RS/RK ($900-1,100)</li>
+                                    <li>Quarq DZero ($650-850)</li>
+                                </ul>
+                                <p class="text-xs text-yellow-800"><strong>Advantage:</strong> Proven reliability, excellent support</p>
+                            </div>
+
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-green-900 mb-3">Elite: $1,000+</h3>
+                                <p class="text-gray-700 mb-4">Maximum features and brand prestige.</p>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                                    <li>SRM power meters ($2,000+)</li>
+                                    <li>Garmin Rally XC (all systems) ($1,200+)</li>
+                                    <li>Campagnolo Chorus/Record with power</li>
+                                </ul>
+                                <p class="text-xs text-green-800"><strong>Justification:</strong> Marginal accuracy gains, brand loyalty</p>
+                            </div>
+                        </div>
+
+                        <h2>Smart Trainer Comparison (Power Measurement)</h2>
+                        <p>If you're only training indoors, a smart trainer offers built-in power measurement:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li><strong>Wahoo Kickr:</strong> $900-1,500, +/-2% accuracy, excellent connectivity</li>
+                            <li><strong>Tacx Neo 2T:</strong> $800-1,000, +/-1% accuracy, quietest option</li>
+                            <li><strong>Elite Direto XR:</strong> $700-900, +/-2% accuracy, compact size</li>
+                            <li><strong>Sufferfest trainer:</strong> $500-700, +/-3% accuracy, budget option</li>
+                        </ul>
+
+                        <h2>Which Power Meter Should You Buy?</h2>
+                        <p>The best power meter is one you'll use consistently. Here's the decision matrix:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-3 mb-8">
+                            <li><strong>Choose pedal-based if:</strong> You have multiple bikes, travel frequently, value easy installation, or want to swap between bikes</li>
+                            <li><strong>Choose crank-based if:</strong> You want to save money, primarily use one bike, and don't mind a semi-permanent installation</li>
+                            <li><strong>Choose spider if:</strong> You prioritize durability, want true dual-sided measurement, and value race-proven reliability</li>
+                            <li><strong>Choose smart trainer if:</strong> You only train indoors, want simplicity without installation, and value ease of use</li>
+                            <li><strong>Start with single-sided if:</strong> You're budget-conscious, want to test power training, and are willing to upgrade later</li>
+                        </ul>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 my-8">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-3">Ready to Test Your FTP?</h3>
+                            <p class="text-blue-800 mb-4">Once your power meter is installed and calibrated, use our FTP calculator to establish your baseline and training zones.</p>
+                            <a href="/ftp-calculator" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Calculate Your FTP →</a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -162,11 +441,62 @@
             <div class="space-y-4">
                 <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
                     <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Which power meter type is most accurate?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">All modern power meters from reputable brands are accurate within +/-1-2%. Crank spider and pedal-based units are most common. Consistency matters more than absolute accuracy - your FTP calculator results will be valid as long as you use the same power meter consistently.</div>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">All modern power meters from reputable brands are accurate within +/-1-2%. Crank spider and pedal-based units are most common. Consistency matters more than absolute accuracy - your FTP calculator results will be valid as long as you use the same power meter consistently. The power meter that gives you the most usable data is the most accurate for your training purposes.</div>
                 </details>
+
                 <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
                     <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Can I use a smart trainer as a power meter?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Yes, quality smart trainers (Wahoo Kickr, Tacx Neo, etc.) are accurate to +/-1-2%. They work well for indoor FTP testing and training. For outdoor use, you'll still need a bike-mounted power meter. Some variance between trainer and outdoor power is normal.</div>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Yes, quality smart trainers (Wahoo Kickr, Tacx Neo, etc.) are accurate to +/-1-2%. They work well for indoor FTP testing and training. For outdoor use, you'll still need a bike-mounted power meter. Some variance between trainer and outdoor power is normal - this is due to different resistance models and human pacing variation, not equipment failure.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">How much does a good power meter cost?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Budget options start around $300-400 for single-sided crank meters like Stages or 4iiii. Quality dual-sided pedal meters range $700-1,100 (Garmin Rally, Favero Assioma). Premium options exceed $1,200. Smart trainers offering power data range $400-2,500 depending on features and accuracy. The entry point is actually quite accessible, with quality options available under $500.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">How do I calibrate a power meter?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Most modern power meters use zero-offset calibration, done via their companion app before each ride. Warm up the bike for 10 minutes, ensure it's on a level surface, and perform the zero-offset in the app. Some meters like Garmin pedals also support spindown calibration for additional accuracy checks. The entire process takes about 2 minutes. See our detailed calibration guide above for step-by-step instructions.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Can I switch power meters between bikes?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Pedal-based systems like Garmin Rally and Favero Assioma transfer between bikes easily - just swap the pedals, taking about 10 minutes per bike. Crank arm meters must be reinstalled on different cranksets, requiring tools and 30-45 minutes of work. Spider meters are crankset-specific and can't easily move. Hub-based PowerTap can move to any wheelset. For multi-bike cyclists, pedal-based systems offer the most flexibility.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">What's the difference between single-sided and dual-sided?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Single-sided meters measure one leg (usually left) and double the power, assuming symmetrical effort (50/50 left-right). Dual-sided measures both legs independently, providing true total power output and revealing left-right power imbalance. For training purposes, single-sided is acceptable and cost-effective. Dual-sided offers more data and accuracy for analytics and can reveal biomechanical issues. Many cyclists start single-sided and upgrade later.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Do I need a power meter to use your calculator?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">No, our FTP calculator works with power meter readings or estimated power from heart rate, perceived exertion, or smart trainer data. Power meters provide the most accurate data for precise zone calculations, but any consistent power source works for establishing baseline training zones. Many cyclists effectively train using heart rate zones or rate of perceived exertion until they invest in power measurement.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">How often should I replace my power meter?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Quality power meters last 5-10+ years with proper maintenance. Batteries need replacement annually or every 25-30 hours of use for pedal meters. Crank meters have longer battery life (200+ hours). Cleats on pedal meters may need replacing every 1-2 years depending on use. Most units remain accurate throughout their lifespan if calibrated regularly. Unlike computers, power meters don't degrade - they'll work the same at 5 years as at day one.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Are power meters waterproof?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">All modern power meters from major brands are rated IP67 or better, meaning they handle rain, puddles, and normal cleaning. They can be submerged briefly in water but should not be left in water or exposed to high-pressure washing near connectors. Always dry thoroughly after wet rides, paying special attention to battery compartments and connection points. Proper maintenance ensures long lifespan in wet conditions.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Can two riders share one power meter?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Pedal-based meters can swap between riders if they use the same cleat system - adjust shoe cleats or ride different shoes. Crank-based meters require reinstallation for different riders. Smart trainers can serve multiple riders if they adjust seat/fit between sessions. Data from different riders can't be directly compared on single-sided meters due to the left-leg doubling assumption. Families may consider smart trainers for shared training data.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">What compatibility issues should I know about?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">Pedal meters require matching your specific cleat system (SPD-SL for Shimano, Look Keo, or Shimano SPD for mountain). Some crank meters only fit specific crank brands and generations. Chainring tooth counts vary by model. Before purchasing, check manufacturer compatibility charts with your specific bike model and cleat system. This is especially important for crank-based systems. See our detailed compatibility table above for specifics.</div>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group hover:border-blue-300 transition-colors">
+                    <summary class="cursor-pointer p-6 font-semibold text-gray-900 hover:bg-blue-50 transition-colors flex justify-between items-center"><span class="text-lg">Will a power meter make me faster?</span><svg class="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">A power meter itself won't make you faster - proper training based on power data will. Power meters enable data-driven training by measuring actual effort objectively. This allows you to structure workouts more effectively, track fitness gains over time, and avoid training too hard or too easy. The speed gain comes from training smarter with the data, not from having a fancy device. Combined with structured training plans, power data accelerates fitness development.</div>
                 </details>
             </div>
         </section>
