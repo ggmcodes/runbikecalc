@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Running Shoe Replacement Calculator - When to Replace Your Shoes</title>
+    <link rel="canonical" href="https://runbikecalc.com/shoe-replacement-calculator">
+    <meta name="description" content="Calculate when to replace your running shoes based on weekly mileage, shoe type, body weight, and running surface. Get accurate replacement dates and track shoe lifespan.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Running Shoe Replacement Calculator - Track Your Shoe Lifespan">
+    <meta property="og:description" content="Find out exactly when your running shoes need replacing based on your mileage and running habits">
+    <meta property="og:image" content="https://runbikecalc.com/images/shoe-replacement-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/shoe-replacement-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running Shoe Replacement Calculator">
+    <meta name="twitter:description" content="Calculate when to replace your running shoes">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/shoe-replacement-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Running Shoe Replacement Calculator",
+        "url": "https://runbikecalc.com/shoe-replacement-calculator",
+        "description": "Calculate when to replace your running shoes based on mileage, shoe type, weight, and running surface",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many miles do running shoes last?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most running shoes last between 300-500 miles, depending on the shoe type, your weight, running surface, and gait. Lightweight racing shoes may only last 200-300 miles, while stability shoes can last up to 500-600 miles. Track your mileage to know when replacement is needed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I know when my running shoes need replacing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Signs your shoes need replacing include: worn outsole tread, compressed midsole that doesn't bounce back, new aches or pains after runs, visible creasing in the midsole foam, uneven wear patterns, and shoes feeling less cushioned or supportive than when new."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does body weight affect running shoe lifespan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, heavier runners compress the midsole foam faster, reducing shoe lifespan by 10-20%. A 200 lb runner might get 300-400 miles from shoes that would last 400-500 miles for a 140 lb runner. Factor in your weight when estimating replacement timing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do trail running shoes wear out faster than road shoes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trail running shoes typically last longer than road shoes (400-600 miles vs 300-500 miles) because softer surfaces cause less midsole compression. However, aggressive terrain can wear the outsole faster. Road and treadmill running create more consistent impact forces that compress foam quicker."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Shoe Replacement Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Quick Answer Box for Featured Snippet -->
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> Running shoes last 300-500 miles. At 20 miles/week, replace every 4-6 months. At 40 miles/week, replace every 2-3 months.
+            </p>
+        </div>
+
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Running Shoe Replacement Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate exactly when your running shoes need replacing based on your weekly mileage, shoe type, body weight, and running surface. Track your shoe lifespan and prevent injuries from worn footwear.</p>
+
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Shoe Replacement Date</h2>
+
+                    <form id="shoe-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="milesPerWeek" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Miles Per Week *
+                                </label>
+                                <input type="number"
+                                       id="milesPerWeek"
+                                       name="milesPerWeek"
+                                       class="calc-input-number"
+                                       placeholder="25"
+                                       required
+                                       min="1"
+                                       max="200"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your average weekly running mileage</p>
+                            </div>
+
+                            <div>
+                                <label for="currentMileage" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current Shoe Mileage
+                                </label>
+                                <input type="number"
+                                       id="currentMileage"
+                                       name="currentMileage"
+                                       class="calc-input-number"
+                                       placeholder="0"
+                                       min="0"
+                                       max="1000"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Miles already on your current shoes</p>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="shoeType" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Shoe Type *
+                                </label>
+                                <select id="shoeType" name="shoeType" class="calc-input-number text-left" required>
+                                    <option value="">Select shoe type</option>
+                                    <option value="daily">Daily Trainer</option>
+                                    <option value="stability">Stability/Motion Control</option>
+                                    <option value="lightweight">Lightweight/Racing Flat</option>
+                                    <option value="carbon">Carbon Plated Racer</option>
+                                    <option value="trail">Trail Runner</option>
+                                    <option value="maximal">Maximal Cushion</option>
+                                    <option value="minimal">Minimal/Barefoot Style</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Type of running shoe</p>
+                            </div>
+
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight *
+                                </label>
+                                <input type="number"
+                                       id="weight"
+                                       name="weight"
+                                       class="calc-input-number"
+                                       placeholder="160"
+                                       required
+                                       min="80"
+                                       max="400"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your weight in pounds</p>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="surface" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Primary Running Surface *
+                                </label>
+                                <select id="surface" name="surface" class="calc-input-number text-left" required>
+                                    <option value="">Select surface</option>
+                                    <option value="road">Road/Pavement</option>
+                                    <option value="treadmill">Treadmill</option>
+                                    <option value="track">Track</option>
+                                    <option value="trail">Trail/Dirt</option>
+                                    <option value="mixed">Mixed Surfaces</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Where you run most often</p>
+                            </div>
+
+                            <div>
+                                <label for="runningStyle" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Running Style
+                                </label>
+                                <select id="runningStyle" name="runningStyle" class="calc-input-number text-left">
+                                    <option value="neutral">Neutral</option>
+                                    <option value="overpronator">Overpronator (Heavy)</option>
+                                    <option value="supinator">Supinator/Underpronator</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Your foot strike pattern</p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Calculate Replacement Date
+                        </button>
+                    </form>
+
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Signs of Shoe Wear Section -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Signs Your Running Shoes Need Replacing</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-red-800 mb-3">Visual Signs</h3>
+                            <ul class="space-y-2 text-sm text-red-700">
+                                <li>Worn or smooth outsole tread</li>
+                                <li>Visible creasing in midsole foam</li>
+                                <li>Uneven wear patterns on sole</li>
+                                <li>Upper material breakdown</li>
+                                <li>Heel counter losing shape</li>
+                                <li>Visible midsole compression</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-orange-800 mb-3">Physical Signs</h3>
+                            <ul class="space-y-2 text-sm text-orange-700">
+                                <li>New aches or pains after running</li>
+                                <li>Shoes feel less cushioned</li>
+                                <li>Reduced energy return/bounce</li>
+                                <li>Foot fatigue during runs</li>
+                                <li>Shin splints or knee pain</li>
+                                <li>Blisters in new places</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">The Press Test</h3>
+                        <p class="text-sm text-blue-700">Press your thumb into the midsole. Fresh foam should compress and spring back quickly. If it stays compressed or feels hard, the cushioning is dead and it's time for new shoes.</p>
+                    </div>
+                </div>
+
+                <!-- Educational content -->
+                <div class="content-box">
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Running Shoe Lifespan</h2>
+                    <p>Running shoes are engineered with foam compounds that gradually break down with use. The midsole, which provides cushioning and energy return, degrades through repeated compression cycles. Understanding when to replace your shoes is crucial for injury prevention and optimal performance.</p>
+
+                    <h3>Shoe Lifespan by Type</h3>
+
+                    <h4>Daily Trainers (300-500 miles)</h4>
+                    <p>Standard daily training shoes are designed for durability and comfort across many miles. Quality trainers from major brands typically offer reliable cushioning through 400+ miles when used appropriately.</p>
+
+                    <h4>Stability Shoes (400-600 miles)</h4>
+                    <p>Motion control and stability shoes often feature denser foams and reinforced structures that can extend lifespan compared to neutral trainers. The medial post and firmer materials resist compression longer.</p>
+
+                    <h4>Lightweight Racing Flats (200-300 miles)</h4>
+                    <p>Racing flats sacrifice durability for weight savings. The thinner midsoles and lighter foams break down faster. Reserve these for races and speed workouts to maximize their lifespan.</p>
+
+                    <h4>Carbon Plated Racers (150-250 miles)</h4>
+                    <p>Super shoes with carbon fiber plates offer exceptional performance but limited durability. The soft, responsive foams degrade quickly. Track mileage carefully and retire them when bounce diminishes.</p>
+
+                    <h4>Trail Runners (400-600 miles)</h4>
+                    <p>Trail shoes often last longer because softer surfaces reduce midsole compression. However, aggressive terrain can wear the outsole faster. Inspect both cushioning and traction regularly.</p>
+
+                    <h4>Maximal Cushion Shoes (300-400 miles)</h4>
+                    <p>High-stack shoes with extra cushioning may feel plush longer but can develop dead spots as foam compresses. The larger foam volume makes degradation less obvious initially.</p>
+
+                    <h3>Factors Affecting Shoe Lifespan</h3>
+
+                    <h4>Body Weight Impact</h4>
+                    <p>Every foot strike compresses the midsole foam. Heavier runners generate more force, causing faster foam degradation. A runner weighing 200+ lbs may need to replace shoes 15-20% sooner than a 140 lb runner.</p>
+
+                    <h4>Running Surface Effects</h4>
+                    <ul>
+                        <li><strong>Pavement/Road:</strong> Hard surfaces create consistent high-impact forces that compress foam quickly</li>
+                        <li><strong>Treadmill:</strong> Slightly softer impact than road but very consistent, leading to even wear</li>
+                        <li><strong>Track:</strong> Rubberized surfaces reduce impact but tight turns increase lateral stress</li>
+                        <li><strong>Trail:</strong> Varied surfaces and softer terrain can extend midsole life</li>
+                    </ul>
+
+                    <h4>Running Gait and Style</h4>
+                    <ul>
+                        <li><strong>Overpronators:</strong> May wear through medial support faster</li>
+                        <li><strong>Supinators:</strong> Concentrated lateral wear can cause uneven breakdown</li>
+                        <li><strong>Heavy heel strikers:</strong> Accelerated heel cushion degradation</li>
+                    </ul>
+
+                    <h3>Extending Shoe Lifespan</h3>
+
+                    <h4>Rotation Strategy</h4>
+                    <p>Rotating between 2-3 pairs of shoes can extend each pair's lifespan by 25-40%. The foam recovers between runs, and varying cushioning systems reduces repetitive stress patterns.</p>
+
+                    <h4>Proper Care Tips</h4>
+                    <ul>
+                        <li>Allow 24-48 hours between wears for foam recovery</li>
+                        <li>Remove insoles after runs to air out moisture</li>
+                        <li>Never machine wash or dry - use damp cloth only</li>
+                        <li>Store in cool, dry place away from direct heat</li>
+                        <li>Use shoes only for running, not casual wear</li>
+                    </ul>
+
+                    <h3>Why Worn Shoes Cause Injuries</h3>
+                    <p>Running in worn shoes significantly increases injury risk. As cushioning degrades, impact forces transfer directly to joints and soft tissues. Studies show injury rates increase 50% when running in shoes past their recommended lifespan.</p>
+
+                    <h4>Common Injuries from Worn Shoes</h4>
+                    <ul>
+                        <li><strong>Plantar Fasciitis:</strong> Reduced arch support and cushioning</li>
+                        <li><strong>Shin Splints:</strong> Inadequate shock absorption</li>
+                        <li><strong>IT Band Syndrome:</strong> Uneven wear altering gait mechanics</li>
+                        <li><strong>Knee Pain:</strong> Loss of cushioning increasing joint stress</li>
+                        <li><strong>Stress Fractures:</strong> Repeated impact without adequate protection</li>
+                    </ul>
+
+                    <h3>Tracking Your Shoe Mileage</h3>
+                    <p>Most running watches and apps let you track mileage per shoe. Set up your shoes in Strava, Garmin Connect, or Nike Run Club to automatically log miles. Set alerts at 80% of expected lifespan to start shopping for replacements.</p>
+                </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+
+                <!-- Shoe Lifespan Quick Reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Shoe Lifespan Guide</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Daily Trainer</span>
+                            <span class="font-medium text-primary">300-500 mi</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Stability Shoe</span>
+                            <span class="font-medium text-primary">400-600 mi</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Racing Flat</span>
+                            <span class="font-medium text-primary">200-300 mi</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Carbon Racer</span>
+                            <span class="font-medium text-primary">150-250 mi</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Trail Runner</span>
+                            <span class="font-medium text-primary">400-600 mi</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Maximal Cushion</span>
+                            <span class="font-medium text-primary">300-400 mi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Recommendations -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Top Running Shoes 2026</h3>
+                    <p class="text-xs text-gray-500 mb-4">As an Amazon Associate, we earn from qualifying purchases.</p>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Brooks Ghost 16</h4>
+                            <p class="text-sm text-gray-600 mb-2">Best daily trainer for most runners. DNA LOFT cushioning.</p>
+                            <a href="https://www.amazon.com/s?k=Brooks+Ghost+16&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">ASICS Gel-Kayano 31</h4>
+                            <p class="text-sm text-gray-600 mb-2">Premium stability shoe with FF BLAST+ cushioning.</p>
+                            <a href="https://www.amazon.com/s?k=ASICS+Gel+Kayano+31&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">Nike Vaporfly 3</h4>
+                            <p class="text-sm text-gray-600 mb-2">Elite carbon racer for PRs and race day.</p>
+                            <a href="https://www.amazon.com/s?k=Nike+Vaporfly+3&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/training-load-calculator" class="text-primary hover:underline">Training Load Calculator</a></li>
+                        <li><a href="/recovery-calculator" class="text-primary hover:underline">Recovery Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Calculators Section -->
+        <section class="mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/running-pace-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Running Pace Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate your optimal training paces</p>
+                </a>
+                <a href="/race-nutrition-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Race Nutrition Calculator</h3>
+                    <p class="text-gray-600 text-sm">Plan your race day fueling strategy</p>
+                </a>
+                <a href="/training-load-balance-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Training Load Calculator</h3>
+                    <p class="text-gray-600 text-sm">Balance your training intensity</p>
+                </a>
+                <a href="/recovery-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Recovery Calculator</h3>
+                    <p class="text-gray-600 text-sm">Optimize your recovery time</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Running Shoe Guides</h2>
+            <p class="text-gray-600 mb-6">Learn more about choosing and caring for your running shoes</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/blog/best-running-shoes-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#128095;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">GEAR GUIDE</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Best Running Shoes 2026</h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to the top running shoes for every type of runner.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/best-trail-running-shoes-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#127956;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">TRAIL RUNNING</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Best Trail Running Shoes 2026</h3>
+                            <p class="text-gray-600 text-sm mb-3">Top trail shoes for technical terrain and long distances.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/shoe-replacement-calculator" class="hover:text-white">Shoe Replacement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/training-load-balance-calculator" class="hover:text-white">Training Load</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Shoe Replacement Calculator implementation
+        class ShoeReplacementCalculator extends Calculator {
+            constructor() {
+                super('shoe-form', 'results');
+
+                // Base lifespan by shoe type (in miles)
+                this.shoeLifespans = {
+                    'daily': { min: 300, max: 500, typical: 400, name: 'Daily Trainer' },
+                    'stability': { min: 400, max: 600, typical: 500, name: 'Stability Shoe' },
+                    'lightweight': { min: 200, max: 300, typical: 250, name: 'Lightweight Racing Flat' },
+                    'carbon': { min: 150, max: 250, typical: 200, name: 'Carbon Plated Racer' },
+                    'trail': { min: 400, max: 600, typical: 500, name: 'Trail Runner' },
+                    'maximal': { min: 300, max: 400, typical: 350, name: 'Maximal Cushion' },
+                    'minimal': { min: 250, max: 400, typical: 325, name: 'Minimal/Barefoot Style' }
+                };
+
+                // Surface modifiers (multiplier to lifespan)
+                this.surfaceModifiers = {
+                    'road': 1.0,
+                    'treadmill': 1.05,
+                    'track': 0.95,
+                    'trail': 1.15,
+                    'mixed': 1.0
+                };
+
+                // Running style modifiers
+                this.styleModifiers = {
+                    'neutral': 1.0,
+                    'overpronator': 0.9,
+                    'supinator': 0.92
+                };
+            }
+
+            calculate() {
+                const milesPerWeek = this.getInputValue('milesPerWeek');
+                const currentMileage = this.getInputValue('currentMileage', 0);
+                const shoeType = this.form.querySelector('[name="shoeType"]').value;
+                const weight = this.getInputValue('weight');
+                const surface = this.form.querySelector('[name="surface"]').value;
+                const runningStyle = this.form.querySelector('[name="runningStyle"]').value;
+
+                if (!milesPerWeek || !shoeType || !weight || !surface) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+
+                // Get base lifespan for shoe type
+                const shoeData = this.shoeLifespans[shoeType];
+                let expectedLifespan = shoeData.typical;
+
+                // Apply weight modifier (heavier = shorter lifespan)
+                // Base is 160 lbs, adjust by 0.5% per 10 lbs difference
+                const weightDiff = (weight - 160) / 10;
+                const weightModifier = 1 - (weightDiff * 0.05);
+                expectedLifespan *= Math.max(0.7, Math.min(1.3, weightModifier));
+
+                // Apply surface modifier
+                expectedLifespan *= this.surfaceModifiers[surface];
+
+                // Apply running style modifier
+                expectedLifespan *= this.styleModifiers[runningStyle];
+
+                // Calculate remaining miles
+                const milesRemaining = Math.max(0, expectedLifespan - currentMileage);
+                const percentUsed = Math.min(100, (currentMileage / expectedLifespan) * 100);
+
+                // Calculate weeks and replacement date
+                const weeksRemaining = milesRemaining / milesPerWeek;
+                const replacementDate = new Date();
+                replacementDate.setDate(replacementDate.getDate() + (weeksRemaining * 7));
+
+                // Calculate range dates
+                const minLifespan = shoeData.min * this.surfaceModifiers[surface] * this.styleModifiers[runningStyle] * Math.max(0.7, Math.min(1.3, weightModifier));
+                const maxLifespan = shoeData.max * this.surfaceModifiers[surface] * this.styleModifiers[runningStyle] * Math.max(0.7, Math.min(1.3, weightModifier));
+
+                const earliestDate = new Date();
+                earliestDate.setDate(earliestDate.getDate() + ((minLifespan - currentMileage) / milesPerWeek) * 7);
+
+                const latestDate = new Date();
+                latestDate.setDate(latestDate.getDate() + ((maxLifespan - currentMileage) / milesPerWeek) * 7);
+
+                // Determine status
+                let status, statusColor, statusBg;
+                if (percentUsed < 50) {
+                    status = 'Good Condition';
+                    statusColor = 'text-green-700';
+                    statusBg = 'bg-green-100';
+                } else if (percentUsed < 75) {
+                    status = 'Moderate Wear';
+                    statusColor = 'text-yellow-700';
+                    statusBg = 'bg-yellow-100';
+                } else if (percentUsed < 90) {
+                    status = 'Consider Replacing Soon';
+                    statusColor = 'text-orange-700';
+                    statusBg = 'bg-orange-100';
+                } else {
+                    status = 'Replace Now';
+                    statusColor = 'text-red-700';
+                    statusBg = 'bg-red-100';
+                }
+
+                // Generate recommendations
+                const recommendations = this.generateRecommendations(percentUsed, weeksRemaining, shoeType);
+
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Shoe Replacement Analysis</h3>
+
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Estimated Replacement Date</div>
+                            <div class="text-3xl font-bold">${replacementDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                            <div class="text-lg opacity-90 mt-2">${Math.round(weeksRemaining)} weeks from now</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Miles Remaining</h4>
+                                <div class="text-2xl font-bold text-blue-700">${Math.round(milesRemaining)}</div>
+                                <div class="text-sm text-blue-600">of ~${Math.round(expectedLifespan)} total</div>
+                            </div>
+
+                            <div class="${statusBg} p-4 rounded-lg text-center">
+                                <h4 class="font-semibold ${statusColor}">Shoe Status</h4>
+                                <div class="text-xl font-bold ${statusColor}">${status}</div>
+                                <div class="text-sm ${statusColor}">${Math.round(percentUsed)}% worn</div>
+                            </div>
+
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-purple-800">Current Mileage</h4>
+                                <div class="text-2xl font-bold text-purple-700">${currentMileage}</div>
+                                <div class="text-sm text-purple-600">miles logged</div>
+                            </div>
+                        </div>
+
+                        <!-- Wear Progress Bar -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Shoe Wear Progress</span>
+                                <span>${Math.round(percentUsed)}%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-4">
+                                <div class="h-4 rounded-full transition-all duration-500 ${percentUsed >= 90 ? 'bg-red-500' : percentUsed >= 75 ? 'bg-orange-500' : percentUsed >= 50 ? 'bg-yellow-500' : 'bg-green-500'}" style="width: ${Math.min(100, percentUsed)}%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>New</span>
+                                <span>50%</span>
+                                <span>75%</span>
+                                <span>Replace</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Calculation Details</h4>
+                            <div class="text-sm text-gray-700 space-y-1">
+                                <p>Shoe Type: ${shoeData.name}</p>
+                                <p>Weekly Mileage: ${milesPerWeek} miles/week</p>
+                                <p>Body Weight: ${weight} lbs</p>
+                                <p>Running Surface: ${surface.charAt(0).toUpperCase() + surface.slice(1)}</p>
+                                <p>Expected Lifespan Range: ${Math.round(minLifespan)}-${Math.round(maxLifespan)} miles</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Replacement Window</h4>
+                            <div class="text-sm text-blue-700">
+                                <p><strong>Earliest:</strong> ${earliestDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                                <p><strong>Latest:</strong> ${latestDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">Recommendations</h4>
+                            <ul class="text-sm text-green-700 space-y-1">
+                                ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My running shoes have ${Math.round(milesRemaining)} miles left. Replacement date: ${replacementDate.toLocaleDateString()}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+
+                this.saveValues();
+            }
+
+            generateRecommendations(percentUsed, weeksRemaining, shoeType) {
+                const recommendations = [];
+
+                if (percentUsed >= 90) {
+                    recommendations.push('Your shoes are past their optimal lifespan - replace immediately to prevent injury');
+                    recommendations.push('Do not use these shoes for speedwork or long runs');
+                } else if (percentUsed >= 75) {
+                    recommendations.push('Start shopping for replacement shoes now');
+                    recommendations.push('Consider breaking in new shoes while rotating with current pair');
+                } else if (percentUsed >= 50) {
+                    recommendations.push('Good time to identify your next shoe model');
+                    recommendations.push('Watch for sales on your preferred shoes');
+                }
+
+                if (weeksRemaining < 4) {
+                    recommendations.push('Order new shoes within the next week');
+                } else if (weeksRemaining < 8) {
+                    recommendations.push('Plan to purchase replacement shoes within a month');
+                }
+
+                recommendations.push('Track mileage in your running app for accurate monitoring');
+                recommendations.push('Rotate between 2-3 pairs to extend each shoe\'s lifespan');
+
+                if (shoeType === 'carbon') {
+                    recommendations.push('Reserve carbon shoes for races and key workouts only');
+                } else if (shoeType === 'lightweight') {
+                    recommendations.push('Use racing flats sparingly to maximize their lifespan');
+                }
+
+                return recommendations.slice(0, 5);
+            }
+        }
+
+        // Initialize calculator
+        const calculator = new ShoeReplacementCalculator();
+    </script>
+</body>
+</html>

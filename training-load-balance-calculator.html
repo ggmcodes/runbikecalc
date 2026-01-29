@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Training Load Balance Calculator - Acute vs Chronic Load & 80/20 Rule</title>
+    <link rel="canonical" href="https://runbikecalc.com/training-load-balance-calculator">
+    <meta name="description" content="Calculate your acute to chronic training load ratio (ACWR), assess injury risk, and visualize your 80/20 intensity distribution. Optimize your training balance for better performance.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Training Load Balance Calculator - ACWR & 80/20 Training">
+    <meta property="og:description" content="Calculate your training load ratio and injury risk assessment with 80/20 visualization">
+    <meta property="og:image" content="https://runbikecalc.com/images/training-load-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/training-load-balance-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Training Load Balance Calculator">
+    <meta name="twitter:description" content="Calculate ACWR and injury risk for optimal training">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/training-load-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Training Load Balance Calculator",
+        "url": "https://runbikecalc.com/training-load-balance-calculator",
+        "description": "Calculate acute to chronic training load ratio, assess injury risk, and visualize 80/20 training distribution",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the acute to chronic workload ratio (ACWR)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The acute to chronic workload ratio (ACWR) compares your recent training load (typically last 7 days) to your longer-term training load (typically 4-week rolling average). An ACWR of 0.8-1.3 is considered the 'sweet spot' for optimal training adaptation with minimal injury risk."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the 80/20 rule in running?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 80/20 rule suggests that approximately 80% of training should be at low intensity (Zone 1-2, easy pace) and 20% at moderate to high intensity (Zone 3-5, tempo to sprint). Research shows this distribution optimizes endurance adaptations while minimizing injury and overtraining risk."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What ACWR indicates high injury risk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An ACWR above 1.5 indicates high injury risk due to a spike in training load. An ACWR below 0.8 may indicate detraining or inadequate stimulus. The optimal 'sweet spot' is 0.8-1.3, with 0.9-1.1 being ideal for most athletes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my weekly training load?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Training load can be calculated using several methods: 1) TSS (Training Stress Score) from power/pace data, 2) TRIMP using heart rate, or 3) Simple method: duration (minutes) x intensity (RPE 1-10). For example, a 60-minute run at RPE 6 = 360 training load units."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Training Load Balance Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Quick Answer Box for Featured Snippet -->
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> Optimal ACWR is 0.8-1.3. Above 1.5 = high injury risk. Follow 80/20 rule: 80% easy, 20% hard training.
+            </p>
+        </div>
+
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Training Load Balance Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Calculate your acute to chronic workload ratio (ACWR), assess injury risk, and visualize your training intensity distribution. Optimize your training balance with the 80/20 rule for better performance and injury prevention.</p>
+
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Your Training Load Balance</h2>
+
+                    <!-- Method tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8">
+                                <button class="method-tab active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium" data-method="simple">
+                                    Simple (Hours/RPE)
+                                </button>
+                                <button class="method-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-method="advanced">
+                                    Advanced (TSS/TRIMP)
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <form id="load-form" class="space-y-6">
+                        <!-- Simple Method Fields -->
+                        <div id="simple-fields" class="method-fields">
+                            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                                <h3 class="font-semibold text-blue-800 mb-2">This Week's Training</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="thisWeekHours" class="block text-sm font-medium text-gray-700 mb-2">
+                                            Total Training Hours *
+                                        </label>
+                                        <input type="number"
+                                               id="thisWeekHours"
+                                               name="thisWeekHours"
+                                               class="calc-input-number"
+                                               placeholder="8"
+                                               required
+                                               min="0"
+                                               max="40"
+                                               step="0.5">
+                                    </div>
+                                    <div>
+                                        <label for="thisWeekRPE" class="block text-sm font-medium text-gray-700 mb-2">
+                                            Average RPE (1-10) *
+                                        </label>
+                                        <input type="number"
+                                               id="thisWeekRPE"
+                                               name="thisWeekRPE"
+                                               class="calc-input-number"
+                                               placeholder="6"
+                                               required
+                                               min="1"
+                                               max="10"
+                                               step="0.5">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                                <h3 class="font-semibold text-gray-800 mb-2">4-Week Average (Chronic Load)</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="avgWeekHours" class="block text-sm font-medium text-gray-700 mb-2">
+                                            Avg Weekly Hours *
+                                        </label>
+                                        <input type="number"
+                                               id="avgWeekHours"
+                                               name="avgWeekHours"
+                                               class="calc-input-number"
+                                               placeholder="7"
+                                               required
+                                               min="0"
+                                               max="40"
+                                               step="0.5">
+                                    </div>
+                                    <div>
+                                        <label for="avgWeekRPE" class="block text-sm font-medium text-gray-700 mb-2">
+                                            Avg RPE (1-10) *
+                                        </label>
+                                        <input type="number"
+                                               id="avgWeekRPE"
+                                               name="avgWeekRPE"
+                                               class="calc-input-number"
+                                               placeholder="5"
+                                               required
+                                               min="1"
+                                               max="10"
+                                               step="0.5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Method Fields -->
+                        <div id="advanced-fields" class="method-fields hidden">
+                            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                                <h3 class="font-semibold text-blue-800 mb-2">Acute Load (This Week)</h3>
+                                <div>
+                                    <label for="acuteLoad" class="block text-sm font-medium text-gray-700 mb-2">
+                                        TSS, TRIMP, or Training Units *
+                                    </label>
+                                    <input type="number"
+                                           id="acuteLoad"
+                                           name="acuteLoad"
+                                           class="calc-input-number"
+                                           placeholder="450"
+                                           min="0"
+                                           max="5000"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Total load from last 7 days</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                                <h3 class="font-semibold text-gray-800 mb-2">Chronic Load (4-Week Average)</h3>
+                                <div>
+                                    <label for="chronicLoad" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Weekly Average TSS/TRIMP *
+                                    </label>
+                                    <input type="number"
+                                           id="chronicLoad"
+                                           name="chronicLoad"
+                                           class="calc-input-number"
+                                           placeholder="400"
+                                           min="0"
+                                           max="5000"
+                                           step="1">
+                                    <p class="text-sm text-gray-600 mt-1">Average weekly load over last 28 days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 80/20 Distribution Section -->
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h3 class="font-semibold text-green-800 mb-4">Intensity Distribution (80/20 Rule)</h3>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div>
+                                    <label for="zone1Hours" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Easy/Zone 1-2 (hours)
+                                    </label>
+                                    <input type="number"
+                                           id="zone1Hours"
+                                           name="zone1Hours"
+                                           class="calc-input-number"
+                                           placeholder="6"
+                                           min="0"
+                                           max="40"
+                                           step="0.25">
+                                </div>
+                                <div>
+                                    <label for="zone3Hours" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Moderate/Zone 3 (hours)
+                                    </label>
+                                    <input type="number"
+                                           id="zone3Hours"
+                                           name="zone3Hours"
+                                           class="calc-input-number"
+                                           placeholder="1"
+                                           min="0"
+                                           max="20"
+                                           step="0.25">
+                                </div>
+                                <div>
+                                    <label for="zone4Hours" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Hard/Zone 4-5 (hours)
+                                    </label>
+                                    <input type="number"
+                                           id="zone4Hours"
+                                           name="zone4Hours"
+                                           class="calc-input-number"
+                                           placeholder="1"
+                                           min="0"
+                                           max="20"
+                                           step="0.25">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Analyze Training Load
+                        </button>
+                    </form>
+
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- ACWR Risk Zones -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">ACWR Risk Zones</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 rounded-lg bg-red-50">
+                            <div class="w-24 text-center">
+                                <span class="text-2xl font-bold text-red-700">1.5+</span>
+                            </div>
+                            <div class="flex-1 ml-4">
+                                <div class="font-semibold text-red-800">Danger Zone</div>
+                                <p class="text-sm text-red-700">High injury risk. Training spike too aggressive. Reduce load immediately.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-orange-50">
+                            <div class="w-24 text-center">
+                                <span class="text-2xl font-bold text-orange-700">1.3-1.5</span>
+                            </div>
+                            <div class="flex-1 ml-4">
+                                <div class="font-semibold text-orange-800">Caution Zone</div>
+                                <p class="text-sm text-orange-700">Elevated risk. Monitor closely for overtraining symptoms.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-green-50">
+                            <div class="w-24 text-center">
+                                <span class="text-2xl font-bold text-green-700">0.8-1.3</span>
+                            </div>
+                            <div class="flex-1 ml-4">
+                                <div class="font-semibold text-green-800">Sweet Spot</div>
+                                <p class="text-sm text-green-700">Optimal training zone. Good balance of stimulus and recovery.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 rounded-lg bg-blue-50">
+                            <div class="w-24 text-center">
+                                <span class="text-2xl font-bold text-blue-700">&lt;0.8</span>
+                            </div>
+                            <div class="flex-1 ml-4">
+                                <div class="font-semibold text-blue-800">Under-training</div>
+                                <p class="text-sm text-blue-700">May be detraining. Consider gradually increasing load if healthy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational content -->
+                <div class="content-box">
+                <article class="prose prose-lg max-w-none">
+                    <h2>Understanding Training Load Balance</h2>
+                    <p>Training load management is crucial for maximizing performance while minimizing injury risk. By monitoring both the amount and intensity of your training, you can make informed decisions about when to push harder and when to recover.</p>
+
+                    <h3>The Acute to Chronic Workload Ratio (ACWR)</h3>
+                    <p>The ACWR is the ratio between your recent training load (acute, typically 7 days) and your longer-term training load (chronic, typically 28-day rolling average). This metric helps identify when training spikes occur that could lead to injury.</p>
+
+                    <h4>How ACWR Works</h4>
+                    <ul>
+                        <li><strong>Acute Load:</strong> Sum of training load from the last 7 days</li>
+                        <li><strong>Chronic Load:</strong> Average weekly training load over the last 28 days</li>
+                        <li><strong>ACWR Formula:</strong> Acute Load / Chronic Load</li>
+                    </ul>
+
+                    <h4>Interpreting ACWR Values</h4>
+                    <ul>
+                        <li><strong>Below 0.8:</strong> Under-training - stimulus may be insufficient for adaptation</li>
+                        <li><strong>0.8 - 1.0:</strong> Maintenance or slight deload - good for recovery weeks</li>
+                        <li><strong>1.0 - 1.3:</strong> Progressive overload - ideal training zone</li>
+                        <li><strong>1.3 - 1.5:</strong> Elevated risk - proceed with caution</li>
+                        <li><strong>Above 1.5:</strong> High injury risk - reduce load immediately</li>
+                    </ul>
+
+                    <h3>The 80/20 Polarized Training Rule</h3>
+                    <p>Research by Stephen Seiler and others has shown that elite endurance athletes typically follow an 80/20 distribution: approximately 80% of training at low intensity and 20% at moderate-to-high intensity.</p>
+
+                    <h4>Why 80/20 Works</h4>
+                    <ul>
+                        <li><strong>Aerobic Development:</strong> Low-intensity work builds aerobic base without excessive fatigue</li>
+                        <li><strong>Recovery:</strong> Easy sessions allow recovery from hard efforts</li>
+                        <li><strong>Quality:</strong> Hard sessions can be truly hard when well-rested</li>
+                        <li><strong>Consistency:</strong> Lower injury and illness rates</li>
+                        <li><strong>Longevity:</strong> Sustainable approach for years of training</li>
+                    </ul>
+
+                    <h4>Zone Distribution Guidelines</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Intensity</th>
+                                <th>% of Training</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zone 1-2</td>
+                                <td>Easy/Aerobic</td>
+                                <td>75-80%</td>
+                            </tr>
+                            <tr>
+                                <td>Zone 3</td>
+                                <td>Tempo/Threshold</td>
+                                <td>5-10%</td>
+                            </tr>
+                            <tr>
+                                <td>Zone 4-5</td>
+                                <td>VO2max/Anaerobic</td>
+                                <td>10-15%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Calculating Training Load</h3>
+
+                    <h4>Simple Method: Session RPE</h4>
+                    <p>Multiply session duration (minutes) by perceived exertion (1-10 scale):</p>
+                    <ul>
+                        <li>60 min run at RPE 5 = 300 training units</li>
+                        <li>45 min intervals at RPE 8 = 360 training units</li>
+                        <li>90 min long run at RPE 6 = 540 training units</li>
+                    </ul>
+
+                    <h4>TSS (Training Stress Score)</h4>
+                    <p>Power-based metric used in cycling and running with power meters:</p>
+                    <ul>
+                        <li>TSS = (Duration x NP x IF) / (FTP x 3600) x 100</li>
+                        <li>1 hour at FTP = 100 TSS</li>
+                        <li>Weekly target: 400-700 TSS for recreational athletes</li>
+                    </ul>
+
+                    <h4>TRIMP (Training Impulse)</h4>
+                    <p>Heart rate-based training load metric:</p>
+                    <ul>
+                        <li>Accounts for time spent in each heart rate zone</li>
+                        <li>Higher zones weighted more heavily</li>
+                        <li>Good for mixed activities and running</li>
+                    </ul>
+
+                    <h3>Recovery Recommendations</h3>
+
+                    <h4>Signs of Overtraining</h4>
+                    <ul>
+                        <li>Elevated resting heart rate</li>
+                        <li>Poor sleep quality</li>
+                        <li>Persistent fatigue</li>
+                        <li>Decreased performance</li>
+                        <li>Mood changes and irritability</li>
+                        <li>Increased illness frequency</li>
+                        <li>Loss of motivation</li>
+                    </ul>
+
+                    <h4>When to Reduce Training</h4>
+                    <ul>
+                        <li>ACWR exceeds 1.5</li>
+                        <li>Multiple overtraining symptoms present</li>
+                        <li>Coming back from illness or injury</li>
+                        <li>During high life stress periods</li>
+                        <li>Every 3-4 weeks (planned deload)</li>
+                    </ul>
+
+                    <h3>Progressive Overload Guidelines</h3>
+                    <p>To safely increase training load while staying in the optimal ACWR zone:</p>
+                    <ul>
+                        <li><strong>10% Rule:</strong> Increase weekly volume by no more than 10%</li>
+                        <li><strong>Step Loading:</strong> 3 weeks building, 1 week recovery</li>
+                        <li><strong>One Variable:</strong> Change volume OR intensity, not both</li>
+                        <li><strong>Listen to Your Body:</strong> Adjust based on fatigue and recovery</li>
+                    </ul>
+
+                    <h3>Practical Application</h3>
+                    <p>Use this calculator weekly to monitor your training balance. Log your sessions in a training diary and input totals here to track trends over time. Combine ACWR monitoring with the 80/20 distribution check to ensure both safe progression and effective training.</p>
+                </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+
+                <!-- Quick Reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Reference</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <div class="font-semibold text-gray-800">Optimal ACWR</div>
+                            <div class="text-gray-600">0.8 - 1.3</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Ideal ACWR</div>
+                            <div class="text-gray-600">0.9 - 1.1</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">80/20 Distribution</div>
+                            <div class="text-gray-600">80% easy, 20% hard</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Weekly Increase</div>
+                            <div class="text-gray-600">Max 10% volume</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Deload Frequency</div>
+                            <div class="text-gray-600">Every 3-4 weeks</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RPE Scale Reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">RPE Scale</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>1-2</span>
+                            <span class="text-gray-600">Very light</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>3-4</span>
+                            <span class="text-gray-600">Light/Easy</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>5-6</span>
+                            <span class="text-gray-600">Moderate</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>7-8</span>
+                            <span class="text-gray-600">Hard</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>9-10</span>
+                            <span class="text-gray-600">Maximum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Recommendations -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Training Tools</h3>
+                    <p class="text-xs text-gray-500 mb-4">As an Amazon Associate, we earn from qualifying purchases.</p>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Garmin Forerunner 265</h4>
+                            <p class="text-sm text-gray-600 mb-2">Training load tracking, recovery advisor, VO2max.</p>
+                            <a href="https://www.amazon.com/s?k=Garmin+Forerunner+265&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Polar H10 HR Monitor</h4>
+                            <p class="text-sm text-gray-600 mb-2">Gold standard chest strap for accurate TRIMP data.</p>
+                            <a href="https://www.amazon.com/s?k=Polar+H10+heart+rate+monitor&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">WHOOP 4.0</h4>
+                            <p class="text-sm text-gray-600 mb-2">24/7 recovery and strain tracking.</p>
+                            <a href="https://www.amazon.com/s?k=WHOOP+4.0&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/recovery-calculator" class="text-primary hover:underline">Recovery Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                        <li><a href="/training-load-calculator" class="text-primary hover:underline">Training Load Calculator</a></li>
+                        <li><a href="/zone-2-calculator" class="text-primary hover:underline">Zone 2 Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Calculators Section -->
+        <section class="mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/heart-rate-zone-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Heart Rate Zone Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate your personalized training zones</p>
+                </a>
+                <a href="/recovery-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Recovery Calculator</h3>
+                    <p class="text-gray-600 text-sm">Optimize your recovery time</p>
+                </a>
+                <a href="/shoe-replacement-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Shoe Replacement Calculator</h3>
+                    <p class="text-gray-600 text-sm">Track your running shoe lifespan</p>
+                </a>
+                <a href="/race-nutrition-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Race Nutrition Calculator</h3>
+                    <p class="text-gray-600 text-sm">Plan your race day fueling</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Training Science Guides</h2>
+            <p class="text-gray-600 mb-6">Learn more about optimizing your training load and recovery</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/blog/what-is-zone-2-training-complete-guide" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#128154;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">TRAINING SCIENCE</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Zone 2 Training Guide</h3>
+                            <p class="text-gray-600 text-sm mb-3">Master the 80% of your training that builds aerobic fitness.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/base-building-aerobic-development-guide-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#127939;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">BASE TRAINING</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Base Building Guide</h3>
+                            <p class="text-gray-600 text-sm mb-3">Build a strong aerobic foundation for peak performance.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>18 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/training-load-balance-calculator" class="hover:text-white">Training Load Balance</a></li>
+                        <li><a href="/shoe-replacement-calculator" class="hover:text-white">Shoe Replacement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/recovery-calculator" class="hover:text-white">Recovery Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.method-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const method = this.dataset.method;
+
+                // Update active tab
+                document.querySelectorAll('.method-tab').forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                this.classList.add('active', 'border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500');
+
+                // Show/hide method fields
+                document.querySelectorAll('.method-fields').forEach(field => {
+                    field.classList.add('hidden');
+                });
+                document.getElementById(method + '-fields').classList.remove('hidden');
+
+                // Update required fields
+                calculator.currentMethod = method;
+            });
+        });
+
+        // Training Load Balance Calculator implementation
+        class TrainingLoadBalanceCalculator extends Calculator {
+            constructor() {
+                super('load-form', 'results');
+                this.currentMethod = 'simple';
+            }
+
+            calculate() {
+                let acuteLoad, chronicLoad;
+
+                if (this.currentMethod === 'simple') {
+                    // Calculate load from hours and RPE
+                    const thisWeekHours = this.getInputValue('thisWeekHours');
+                    const thisWeekRPE = this.getInputValue('thisWeekRPE');
+                    const avgWeekHours = this.getInputValue('avgWeekHours');
+                    const avgWeekRPE = this.getInputValue('avgWeekRPE');
+
+                    if (!thisWeekHours || !thisWeekRPE || !avgWeekHours || !avgWeekRPE) {
+                        this.displayError('Please fill in all training hours and RPE values.');
+                        return;
+                    }
+
+                    // Convert hours to minutes and multiply by RPE
+                    acuteLoad = (thisWeekHours * 60) * thisWeekRPE;
+                    chronicLoad = (avgWeekHours * 60) * avgWeekRPE;
+                } else {
+                    // Use direct TSS/TRIMP values
+                    acuteLoad = this.getInputValue('acuteLoad');
+                    chronicLoad = this.getInputValue('chronicLoad');
+
+                    if (!acuteLoad || !chronicLoad) {
+                        this.displayError('Please enter both acute and chronic load values.');
+                        return;
+                    }
+                }
+
+                // Calculate ACWR
+                const acwr = chronicLoad > 0 ? acuteLoad / chronicLoad : 0;
+
+                // Calculate 80/20 distribution
+                const zone1Hours = this.getInputValue('zone1Hours', 0);
+                const zone3Hours = this.getInputValue('zone3Hours', 0);
+                const zone4Hours = this.getInputValue('zone4Hours', 0);
+                const totalZoneHours = zone1Hours + zone3Hours + zone4Hours;
+
+                let easyPercent = 0, moderatePercent = 0, hardPercent = 0;
+                let intensityDistribution = null;
+
+                if (totalZoneHours > 0) {
+                    easyPercent = (zone1Hours / totalZoneHours) * 100;
+                    moderatePercent = (zone3Hours / totalZoneHours) * 100;
+                    hardPercent = (zone4Hours / totalZoneHours) * 100;
+                    intensityDistribution = {
+                        easy: easyPercent,
+                        moderate: moderatePercent,
+                        hard: hardPercent,
+                        total: totalZoneHours
+                    };
+                }
+
+                // Determine ACWR status
+                const { status, statusColor, statusBg, riskLevel, recommendation } = this.getACWRStatus(acwr);
+
+                // Generate 80/20 analysis
+                const distribution8020 = this.analyze8020Distribution(intensityDistribution);
+
+                // Generate recovery recommendations
+                const recoveryRecs = this.generateRecoveryRecommendations(acwr, intensityDistribution);
+
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Training Load Analysis</h3>
+
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Acute:Chronic Workload Ratio</div>
+                            <div class="text-5xl font-bold">${acwr.toFixed(2)}</div>
+                            <div class="text-lg opacity-90 mt-2">${status}</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Acute Load</h4>
+                                <div class="text-2xl font-bold text-blue-700">${Math.round(acuteLoad)}</div>
+                                <div class="text-sm text-blue-600">This week</div>
+                            </div>
+
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-purple-800">Chronic Load</h4>
+                                <div class="text-2xl font-bold text-purple-700">${Math.round(chronicLoad)}</div>
+                                <div class="text-sm text-purple-600">4-week average</div>
+                            </div>
+
+                            <div class="${statusBg} p-4 rounded-lg text-center">
+                                <h4 class="font-semibold ${statusColor}">Injury Risk</h4>
+                                <div class="text-xl font-bold ${statusColor}">${riskLevel}</div>
+                                <div class="text-sm ${statusColor}">Current level</div>
+                            </div>
+                        </div>
+
+                        <!-- ACWR Gauge -->
+                        <div class="mb-6">
+                            <div class="text-sm text-gray-600 mb-2">ACWR Range</div>
+                            <div class="relative h-8 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="absolute inset-0 flex">
+                                    <div class="h-full bg-blue-300" style="width: 27%"></div>
+                                    <div class="h-full bg-green-400" style="width: 17%"></div>
+                                    <div class="h-full bg-yellow-400" style="width: 7%"></div>
+                                    <div class="h-full bg-orange-400" style="width: 7%"></div>
+                                    <div class="h-full bg-red-400" style="width: 42%"></div>
+                                </div>
+                                <div class="absolute top-0 h-full w-1 bg-gray-900 transform -translate-x-1/2 transition-all" style="left: ${Math.min(100, (acwr / 2) * 100)}%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>0</span>
+                                <span>0.8</span>
+                                <span>1.0</span>
+                                <span>1.3</span>
+                                <span>1.5</span>
+                                <span>2.0</span>
+                            </div>
+                        </div>
+
+                        ${intensityDistribution ? `
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-4">80/20 Intensity Distribution</h4>
+                            <div class="mb-4">
+                                <div class="flex h-8 rounded-lg overflow-hidden">
+                                    <div class="bg-green-400 flex items-center justify-center text-white text-sm font-medium" style="width: ${easyPercent}%">${easyPercent.toFixed(0)}%</div>
+                                    <div class="bg-yellow-400 flex items-center justify-center text-gray-800 text-sm font-medium" style="width: ${moderatePercent}%">${moderatePercent > 5 ? moderatePercent.toFixed(0) + '%' : ''}</div>
+                                    <div class="bg-red-400 flex items-center justify-center text-white text-sm font-medium" style="width: ${hardPercent}%">${hardPercent > 5 ? hardPercent.toFixed(0) + '%' : ''}</div>
+                                </div>
+                                <div class="flex justify-between text-xs text-gray-600 mt-2">
+                                    <span>Easy (Zone 1-2): ${zone1Hours}h</span>
+                                    <span>Moderate (Zone 3): ${zone3Hours}h</span>
+                                    <span>Hard (Zone 4-5): ${zone4Hours}h</span>
+                                </div>
+                            </div>
+                            <div class="${distribution8020.statusBg} p-3 rounded">
+                                <div class="font-semibold ${distribution8020.statusColor}">${distribution8020.status}</div>
+                                <p class="text-sm ${distribution8020.statusColor}">${distribution8020.recommendation}</p>
+                            </div>
+                        </div>
+                        ` : ''}
+
+                        <div class="${statusBg} p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold ${statusColor} mb-2">Training Recommendation</h4>
+                            <p class="text-sm ${statusColor}">${recommendation}</p>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Recovery Recommendations</h4>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                ${recoveryRecs.map(rec => `<li>${rec}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-2">Next Week Targets</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-gray-600">Safe load range:</span>
+                                    <span class="font-medium ml-2">${Math.round(chronicLoad * 0.8)} - ${Math.round(chronicLoad * 1.3)}</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Optimal load:</span>
+                                    <span class="font-medium ml-2">${Math.round(chronicLoad * 1.0)} - ${Math.round(chronicLoad * 1.1)}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My ACWR: ${acwr.toFixed(2)} - ${status}')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+
+                this.saveValues();
+            }
+
+            getACWRStatus(acwr) {
+                if (acwr >= 1.5) {
+                    return {
+                        status: 'Danger Zone - High Injury Risk',
+                        statusColor: 'text-red-700',
+                        statusBg: 'bg-red-50',
+                        riskLevel: 'High',
+                        recommendation: 'Your training load spike is dangerous. Reduce volume and intensity immediately. Focus on recovery for the next 1-2 weeks. Consider cross-training or complete rest if experiencing any pain or fatigue.'
+                    };
+                } else if (acwr >= 1.3) {
+                    return {
+                        status: 'Caution Zone - Elevated Risk',
+                        statusColor: 'text-orange-700',
+                        statusBg: 'bg-orange-50',
+                        riskLevel: 'Elevated',
+                        recommendation: 'Your training load is elevated. Monitor for signs of overtraining (fatigue, poor sleep, elevated HR). Consider reducing next week\'s load by 10-20%. Ensure adequate sleep and nutrition.'
+                    };
+                } else if (acwr >= 0.8) {
+                    return {
+                        status: 'Sweet Spot - Optimal Training',
+                        statusColor: 'text-green-700',
+                        statusBg: 'bg-green-50',
+                        riskLevel: 'Low',
+                        recommendation: 'Excellent! Your training load is in the optimal zone for adaptation with minimal injury risk. Continue your current progression. You can safely increase load by up to 10% next week if feeling good.'
+                    };
+                } else {
+                    return {
+                        status: 'Under-Training Zone',
+                        statusColor: 'text-blue-700',
+                        statusBg: 'bg-blue-50',
+                        riskLevel: 'Detraining',
+                        recommendation: 'Your training load may be insufficient for optimal adaptation. If intentional (recovery week), this is fine. Otherwise, consider gradually increasing volume. Be cautious not to spike load too quickly.'
+                    };
+                }
+            }
+
+            analyze8020Distribution(distribution) {
+                if (!distribution) {
+                    return {
+                        status: 'Not analyzed',
+                        statusColor: 'text-gray-700',
+                        statusBg: 'bg-gray-100',
+                        recommendation: 'Enter your zone distribution to analyze your 80/20 balance.'
+                    };
+                }
+
+                const easyPercent = distribution.easy;
+                const hardPercent = distribution.moderate + distribution.hard;
+
+                if (easyPercent >= 75 && easyPercent <= 85) {
+                    return {
+                        status: 'Excellent 80/20 Balance',
+                        statusColor: 'text-green-700',
+                        statusBg: 'bg-green-100',
+                        recommendation: `Your ${easyPercent.toFixed(0)}% easy / ${hardPercent.toFixed(0)}% hard distribution is optimal for endurance development and recovery.`
+                    };
+                } else if (easyPercent > 85) {
+                    return {
+                        status: 'Very Polarized - Consider Adding Intensity',
+                        statusColor: 'text-blue-700',
+                        statusBg: 'bg-blue-100',
+                        recommendation: `At ${easyPercent.toFixed(0)}% easy, you may benefit from slightly more high-intensity work (intervals, tempo) to stimulate further adaptation.`
+                    };
+                } else if (easyPercent >= 65) {
+                    return {
+                        status: 'Slightly Too Intense',
+                        statusColor: 'text-yellow-700',
+                        statusBg: 'bg-yellow-100',
+                        recommendation: `Your ${easyPercent.toFixed(0)}% easy / ${hardPercent.toFixed(0)}% hard ratio is close but could benefit from more easy volume. Aim to shift 5-10% to Zone 1-2.`
+                    };
+                } else {
+                    return {
+                        status: 'Too Much Intensity - Risk of Overtraining',
+                        statusColor: 'text-red-700',
+                        statusBg: 'bg-red-100',
+                        recommendation: `At only ${easyPercent.toFixed(0)}% easy training, you're likely spending too much time in the "grey zone." This can lead to fatigue and plateau. Increase easy volume significantly.`
+                    };
+                }
+            }
+
+            generateRecoveryRecommendations(acwr, distribution) {
+                const recommendations = [];
+
+                if (acwr >= 1.3) {
+                    recommendations.push('Prioritize 8+ hours of sleep for optimal recovery');
+                    recommendations.push('Consider adding an extra rest day this week');
+                    recommendations.push('Focus on nutrition - ensure adequate protein and carbs');
+                }
+
+                if (acwr >= 1.5) {
+                    recommendations.push('Reduce training volume by 30-50% next week');
+                    recommendations.push('Replace hard sessions with easy recovery runs or cross-training');
+                    recommendations.push('Monitor resting heart rate - elevated HR indicates insufficient recovery');
+                }
+
+                if (acwr < 0.8) {
+                    recommendations.push('Gradual progression - increase load by 10-15% next week');
+                    recommendations.push('Ensure you are not avoiding training due to lingering fatigue');
+                }
+
+                if (distribution && distribution.easy < 70) {
+                    recommendations.push('Slow down your easy runs - many runners go too fast');
+                    recommendations.push('Use heart rate to stay in Zone 2 during easy sessions');
+                }
+
+                // Always add general recommendations
+                recommendations.push('Stay hydrated and maintain consistent sleep schedule');
+                recommendations.push('Track your morning heart rate and perceived energy daily');
+
+                return recommendations.slice(0, 5);
+            }
+        }
+
+        // Initialize calculator
+        const calculator = new TrainingLoadBalanceCalculator();
+    </script>
+</body>
+</html>

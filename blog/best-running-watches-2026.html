@@ -305,47 +305,65 @@
             </div>
 
             <!-- Quick Comparison -->
-            <div class="bg-gray-50 rounded-lg p-6 mb-10 overflow-x-auto">
-                <h2 class="text-2xl font-bold mb-4">Our Picks at a Glance</h2>
-                <table class="w-full text-sm">
-                    <thead class="bg-blue-600 text-white">
+            <h2 class="text-2xl font-bold mb-4">Quick Comparison</h2>
+            <div class="overflow-x-auto my-8">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                    <thead class="bg-gray-50">
                         <tr>
-                            <th class="p-3 text-left">Watch</th>
-                            <th class="p-3">Best For</th>
-                            <th class="p-3">GPS Battery</th>
-                            <th class="p-3">Price</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Model</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Price</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Battery Life</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">GPS Accuracy</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Music</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Maps</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">Best For</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="border-b bg-green-50">
-                            <td class="p-3 font-medium">Garmin Forerunner 265</td>
-                            <td class="p-3">Our Pick</td>
-                            <td class="p-3">20 hours</td>
-                            <td class="p-3">$449</td>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="bg-green-50">
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900">Garmin Forerunner 265</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">$449</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">20 hours GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Multi-band GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (500 songs)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Most Runners (Our Pick)</td>
                         </tr>
-                        <tr class="border-b">
-                            <td class="p-3 font-medium">Garmin Forerunner 965</td>
-                            <td class="p-3">Upgrade Pick</td>
-                            <td class="p-3">31 hours</td>
-                            <td class="p-3">$599</td>
-                        </tr>
-                        <tr class="border-b bg-gray-50">
-                            <td class="p-3 font-medium">COROS PACE 3</td>
-                            <td class="p-3">Budget Pick</td>
-                            <td class="p-3">38 hours</td>
-                            <td class="p-3">$229</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="p-3 font-medium">Polar Vantage V3</td>
-                            <td class="p-3">Best Training Analytics</td>
-                            <td class="p-3">53 hours</td>
-                            <td class="p-3">$599</td>
+                        <tr>
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900">Garmin Forerunner 965</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">$599</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">31 hours GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Multi-band GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (2000 songs)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (Full color)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Trail/Ultra Runners</td>
                         </tr>
                         <tr class="bg-gray-50">
-                            <td class="p-3 font-medium">Apple Watch Ultra 2</td>
-                            <td class="p-3">Best Smartwatch</td>
-                            <td class="p-3">12 hours</td>
-                            <td class="p-3">$799</td>
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900">COROS PACE 3</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">$229</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">38 hours GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Dual-frequency GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Budget/Ultra (Best Value)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900">Polar Vantage V3</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">$599</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">53 hours GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Dual-frequency GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">No</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (Offline)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Data-Driven Athletes</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900">Apple Watch Ultra 2</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">$799</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">12 hours GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Dual-frequency GPS</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (Apple Music)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">Yes (Apple Maps)</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">iPhone Users/Smartwatch</td>
                         </tr>
                     </tbody>
                 </table>

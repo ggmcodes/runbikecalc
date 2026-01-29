@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Race Nutrition Calculator - Fueling Strategy for Marathons & Races</title>
+    <link rel="canonical" href="https://runbikecalc.com/race-nutrition-calculator">
+    <meta name="description" content="Calculate your race day nutrition needs including carbs per hour, calories, hydration, and gel timing. Create a personalized fueling plan for marathon, half marathon, and ultramarathon races.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Race Nutrition Calculator - Plan Your Race Day Fueling">
+    <meta property="og:description" content="Create a personalized race nutrition plan with carb, calorie, and hydration calculations">
+    <meta property="og:image" content="https://runbikecalc.com/images/race-nutrition-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/race-nutrition-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og-site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Race Nutrition Calculator">
+    <meta name="twitter:description" content="Calculate your race day nutrition needs">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/race-nutrition-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Race Nutrition Calculator",
+        "url": "https://runbikecalc.com/race-nutrition-calculator",
+        "description": "Calculate race day nutrition needs including carbs, calories, hydration, and gel timing for marathons and endurance races",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many carbs do I need per hour during a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "During a marathon, aim for 60-90 grams of carbohydrates per hour. Elite runners and those using multiple carb sources (glucose + fructose) can utilize up to 90-120g/hour. Start fueling at 30-45 minutes into the race and consume carbs every 20-30 minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I take gels during a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Take your first gel at 30-45 minutes into the race, before you feel depleted. Continue taking gels every 20-30 minutes (approximately every 3-4 miles). Practice your gel timing during training to find what works best for your stomach."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much should I drink during a race?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Aim for 4-8 oz (120-240ml) of fluid every 15-20 minutes during a race. In hot conditions, increase to 6-12 oz. Include electrolytes, especially sodium, at a rate of 300-600mg per hour to replace losses from sweat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the best carb sources for race day?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Energy gels, chews, and sports drinks are the most practical race-day carb sources. Gels typically provide 20-30g carbs per packet. For optimal absorption, use products with multiple carb sources (maltodextrin/glucose + fructose) which allows higher absorption rates."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Race Nutrition Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Quick Answer Box for Featured Snippet -->
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> Marathon fueling: 60-90g carbs/hour, 1 gel every 20-30 min, 4-8 oz fluid every 15-20 min, 300-600mg sodium/hour
+            </p>
+        </div>
+
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Race Nutrition Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Create a personalized race day fueling strategy with precise calculations for carbohydrate intake, calorie needs, hydration plan, and gel/chew timing. Optimize your performance for any distance from 10K to ultramarathon.</p>
+
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Your Race Nutrition Plan</h2>
+
+                    <form id="nutrition-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="raceDistance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Distance *
+                                </label>
+                                <select id="raceDistance" name="raceDistance" class="calc-input-number text-left" required>
+                                    <option value="">Select distance</option>
+                                    <option value="10">10K (6.2 miles)</option>
+                                    <option value="15">15K (9.3 miles)</option>
+                                    <option value="21.1">Half Marathon (13.1 miles)</option>
+                                    <option value="42.2">Marathon (26.2 miles)</option>
+                                    <option value="50">50K Ultra (31.1 miles)</option>
+                                    <option value="80">50 Mile Ultra</option>
+                                    <option value="100">100K Ultra (62 miles)</option>
+                                    <option value="161">100 Mile Ultra</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Your race distance</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Expected Finish Time *
+                                </label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <input type="number"
+                                           id="hours"
+                                           name="hours"
+                                           class="calc-input-number"
+                                           placeholder="3"
+                                           min="0"
+                                           max="48">
+                                    <input type="number"
+                                           id="minutes"
+                                           name="minutes"
+                                           class="calc-input-number"
+                                           placeholder="30"
+                                           required
+                                           min="0"
+                                           max="59">
+                                    <input type="number"
+                                           id="seconds"
+                                           name="seconds"
+                                           class="calc-input-number"
+                                           placeholder="0"
+                                           min="0"
+                                           max="59">
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Hours : Minutes : Seconds</p>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="bodyWeight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight *
+                                </label>
+                                <input type="number"
+                                       id="bodyWeight"
+                                       name="bodyWeight"
+                                       class="calc-input-number"
+                                       placeholder="160"
+                                       required
+                                       min="80"
+                                       max="350"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your weight in pounds</p>
+                            </div>
+
+                            <div>
+                                <label for="intensity" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Race Intensity *
+                                </label>
+                                <select id="intensity" name="intensity" class="calc-input-number text-left" required>
+                                    <option value="">Select intensity</option>
+                                    <option value="easy">Easy (conversational pace)</option>
+                                    <option value="moderate">Moderate (comfortably hard)</option>
+                                    <option value="hard">Hard (race pace)</option>
+                                    <option value="max">Maximum (all-out effort)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Your planned race effort</p>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="weather" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Expected Weather
+                                </label>
+                                <select id="weather" name="weather" class="calc-input-number text-left">
+                                    <option value="cool">Cool (40-55°F / 4-13°C)</option>
+                                    <option value="moderate" selected>Moderate (55-70°F / 13-21°C)</option>
+                                    <option value="warm">Warm (70-80°F / 21-27°C)</option>
+                                    <option value="hot">Hot (80°F+ / 27°C+)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Race day temperature</p>
+                            </div>
+
+                            <div>
+                                <label for="gutTolerance" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gut Tolerance
+                                </label>
+                                <select id="gutTolerance" name="gutTolerance" class="calc-input-number text-left">
+                                    <option value="low">Sensitive (prone to GI issues)</option>
+                                    <option value="normal" selected>Normal</option>
+                                    <option value="high">Trained gut (high tolerance)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Your stomach tolerance during exercise</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="fuelPreference" class="block text-sm font-medium text-gray-700 mb-2">
+                                Fuel Type Preference
+                            </label>
+                            <select id="fuelPreference" name="fuelPreference" class="calc-input-number text-left">
+                                <option value="gels">Energy Gels</option>
+                                <option value="chews">Energy Chews/Gummies</option>
+                                <option value="mixed">Mixed (Gels + Chews)</option>
+                                <option value="drink">Sports Drink Only</option>
+                                <option value="real">Real Food</option>
+                            </select>
+                            <p class="text-sm text-gray-600 mt-1">Your preferred fueling method</p>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Generate Nutrition Plan
+                        </button>
+                    </form>
+
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Gel Timing Guide -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Gel & Chew Timing Guide</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="text-left p-3 font-semibold">Race Distance</th>
+                                    <th class="text-left p-3 font-semibold">First Gel</th>
+                                    <th class="text-left p-3 font-semibold">Gel Frequency</th>
+                                    <th class="text-left p-3 font-semibold">Total Gels</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-3">10K</td>
+                                    <td class="p-3">Usually not needed</td>
+                                    <td class="p-3">N/A</td>
+                                    <td class="p-3">0-1</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3">Half Marathon</td>
+                                    <td class="p-3">45 min / Mile 5</td>
+                                    <td class="p-3">Every 30 min</td>
+                                    <td class="p-3">2-3</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3">Marathon</td>
+                                    <td class="p-3">30-45 min / Mile 4</td>
+                                    <td class="p-3">Every 20-25 min</td>
+                                    <td class="p-3">5-8</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-3">50K Ultra</td>
+                                    <td class="p-3">30 min / Mile 3</td>
+                                    <td class="p-3">Every 20-30 min</td>
+                                    <td class="p-3">8-12</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">100K+ Ultra</td>
+                                    <td class="p-3">30 min</td>
+                                    <td class="p-3">Every 20-30 min + real food</td>
+                                    <td class="p-3">15+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Educational content -->
+                <div class="content-box">
+                <article class="prose prose-lg max-w-none">
+                    <h2>Race Day Nutrition Science</h2>
+                    <p>Proper fueling during endurance events is critical for performance. Your body can store approximately 2,000 calories of glycogen in muscles and liver, but marathon-level efforts burn 2,600+ calories. Without proper fueling, you'll hit "the wall" when glycogen depletes.</p>
+
+                    <h3>Carbohydrate Needs During Racing</h3>
+
+                    <h4>The Science of Carb Absorption</h4>
+                    <p>Your body can absorb approximately 60 grams of glucose per hour through the SGLT1 transporter in your intestines. By adding fructose (which uses a different transporter, GLUT5), you can increase absorption to 90-120 grams per hour. This is why modern sports nutrition products use multiple carb sources.</p>
+
+                    <h4>Carb Intake by Race Duration</h4>
+                    <ul>
+                        <li><strong>Under 1 hour:</strong> Usually not needed (water only)</li>
+                        <li><strong>1-2 hours:</strong> 30-60g/hour</li>
+                        <li><strong>2-3 hours:</strong> 60-90g/hour</li>
+                        <li><strong>3+ hours:</strong> 80-120g/hour (with trained gut)</li>
+                    </ul>
+
+                    <h3>Hydration Strategy</h3>
+
+                    <h4>Fluid Intake Guidelines</h4>
+                    <p>Dehydration of just 2% body weight can impair performance by 10-20%. However, overdrinking can cause dangerous hyponatremia (low blood sodium). The key is to drink to thirst and monitor urine color.</p>
+
+                    <h4>Hydration by Conditions</h4>
+                    <ul>
+                        <li><strong>Cool weather:</strong> 4-6 oz every 15-20 minutes</li>
+                        <li><strong>Moderate weather:</strong> 6-8 oz every 15-20 minutes</li>
+                        <li><strong>Hot weather:</strong> 8-12 oz every 15-20 minutes</li>
+                        <li><strong>Humid conditions:</strong> Add 20-30% more fluid</li>
+                    </ul>
+
+                    <h3>Electrolyte Requirements</h3>
+
+                    <h4>Sodium Needs</h4>
+                    <p>Sweat contains 500-2000mg sodium per liter. Most runners need 300-600mg sodium per hour during racing. Heavy sweaters (those with white salt stains on clothing) may need 700-1000mg/hour.</p>
+
+                    <h4>Other Electrolytes</h4>
+                    <ul>
+                        <li><strong>Potassium:</strong> 50-100mg/hour</li>
+                        <li><strong>Magnesium:</strong> 10-25mg/hour</li>
+                        <li><strong>Calcium:</strong> 25-50mg/hour</li>
+                    </ul>
+
+                    <h3>Fueling Product Comparison</h3>
+
+                    <h4>Energy Gels</h4>
+                    <ul>
+                        <li>Typically 20-30g carbs per packet</li>
+                        <li>Fast absorption, easy to carry</li>
+                        <li>Require water to consume</li>
+                        <li>Some contain caffeine (25-100mg)</li>
+                    </ul>
+
+                    <h4>Energy Chews</h4>
+                    <ul>
+                        <li>Usually 4-5g carbs per chew</li>
+                        <li>Easier on stomach for some runners</li>
+                        <li>More satisfying to chew</li>
+                        <li>Can be harder to consume while running fast</li>
+                    </ul>
+
+                    <h4>Sports Drinks</h4>
+                    <ul>
+                        <li>Provide hydration + carbs + electrolytes</li>
+                        <li>Typically 14-20g carbs per 8 oz</li>
+                        <li>Available at most race aid stations</li>
+                        <li>May cause bloating if consumed quickly</li>
+                    </ul>
+
+                    <h3>Training Your Gut</h3>
+                    <p>Your gut is trainable. Practice your race nutrition during training runs to increase carb absorption capacity and reduce GI distress. Studies show gut training can increase carb oxidation by 30%.</p>
+
+                    <h4>Gut Training Protocol</h4>
+                    <ul>
+                        <li>Start with lower carb intake and gradually increase</li>
+                        <li>Practice fueling at race pace, not just easy runs</li>
+                        <li>Test different products to find what works</li>
+                        <li>Build up to race-day amounts over 4-8 weeks</li>
+                    </ul>
+
+                    <h3>Common Race Nutrition Mistakes</h3>
+                    <ul>
+                        <li><strong>Starting too late:</strong> Begin fueling before you feel depleted</li>
+                        <li><strong>Trying new products:</strong> Never use untested nutrition on race day</li>
+                        <li><strong>Under-fueling:</strong> More common than over-fueling</li>
+                        <li><strong>Skipping electrolytes:</strong> Water alone can cause hyponatremia</li>
+                        <li><strong>Not practicing:</strong> Race nutrition needs training too</li>
+                    </ul>
+
+                    <h3>Pre-Race Nutrition</h3>
+                    <p>Your race nutrition starts before the gun. Proper carb loading and pre-race meal timing are crucial:</p>
+                    <ul>
+                        <li><strong>3-4 days before:</strong> Increase carbs to 8-10g/kg body weight</li>
+                        <li><strong>Night before:</strong> Carb-rich dinner, nothing too high in fiber</li>
+                        <li><strong>Race morning:</strong> 2-4g/kg carbs, 2-4 hours before start</li>
+                        <li><strong>30 min before:</strong> Optional small carb boost (100-200 cal)</li>
+                    </ul>
+                </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+
+                <!-- Quick Fueling Reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Fueling Guide</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="bg-blue-50 p-3 rounded">
+                            <div class="font-semibold text-blue-800">Half Marathon</div>
+                            <div class="text-blue-700">30-45g carbs/hour</div>
+                            <div class="text-blue-600">2-3 gels total</div>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded">
+                            <div class="font-semibold text-green-800">Marathon</div>
+                            <div class="text-green-700">60-90g carbs/hour</div>
+                            <div class="text-green-600">5-8 gels total</div>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded">
+                            <div class="font-semibold text-purple-800">Ultra (50K+)</div>
+                            <div class="text-purple-700">80-120g carbs/hour</div>
+                            <div class="text-purple-600">Mix gels + real food</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Recommendations -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Top Race Nutrition</h3>
+                    <p class="text-xs text-gray-500 mb-4">As an Amazon Associate, we earn from qualifying purchases.</p>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Maurten Gel 100</h4>
+                            <p class="text-sm text-gray-600 mb-2">25g carbs, hydrogel technology. Used by elite marathoners.</p>
+                            <a href="https://www.amazon.com/s?k=Maurten+Gel+100&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">SIS Beta Fuel</h4>
+                            <p class="text-sm text-gray-600 mb-2">40g carbs, 1:0.8 maltodextrin:fructose ratio.</p>
+                            <a href="https://www.amazon.com/s?k=SIS+Beta+Fuel+gel&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">GU Energy Gel</h4>
+                            <p class="text-sm text-gray-600 mb-2">22g carbs, multiple flavors. Race-proven reliability.</p>
+                            <a href="https://www.amazon.com/s?k=GU+Energy+Gel&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">Precision Fuel & Hydration</h4>
+                            <p class="text-sm text-gray-600 mb-2">30g carbs, multi-transportable. Science-backed formula.</p>
+                            <a href="https://www.amazon.com/s?k=Precision+Fuel+Hydration&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="calc-card">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/sweat-test-calculator" class="text-primary hover:underline">Sweat Test Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/race-pace-calculator" class="text-primary hover:underline">Race Pace Calculator</a></li>
+                        <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Calculators Section -->
+        <section class="mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/sweat-test-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Sweat Test Calculator</h3>
+                    <p class="text-gray-600 text-sm">Calculate your sweat rate and hydration needs</p>
+                </a>
+                <a href="/race-time-predictor" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Race Time Predictor</h3>
+                    <p class="text-gray-600 text-sm">Predict your finish time for any distance</p>
+                </a>
+                <a href="/shoe-replacement-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Shoe Replacement Calculator</h3>
+                    <p class="text-gray-600 text-sm">Know when to replace your running shoes</p>
+                </a>
+                <a href="/training-load-balance-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Training Load Calculator</h3>
+                    <p class="text-gray-600 text-sm">Balance your training intensity</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Race Nutrition Guides</h2>
+            <p class="text-gray-600 mb-6">Master your race day fueling with our comprehensive guides</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/blog/best-electrolytes-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#128167;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">HYDRATION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Best Electrolytes 2026</h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to electrolyte supplements for runners.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/best-carbs-endurance-athletes-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">&#127838;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-orange-600 font-semibold mb-1">NUTRITION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Best Carbs for Endurance Athletes</h3>
+                            <p class="text-gray-600 text-sm mb-3">Science-backed guide to carbohydrate fueling strategies.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/race-nutrition-calculator" class="hover:text-white">Race Nutrition</a></li>
+                        <li><a href="/shoe-replacement-calculator" class="hover:text-white">Shoe Replacement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/training-load-balance-calculator" class="hover:text-white">Training Load</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script>
+        // Race Nutrition Calculator implementation
+        class RaceNutritionCalculator extends Calculator {
+            constructor() {
+                super('nutrition-form', 'results');
+
+                // Carb absorption rates by gut tolerance
+                this.carbRates = {
+                    'low': { min: 30, max: 60 },
+                    'normal': { min: 60, max: 90 },
+                    'high': { min: 80, max: 120 }
+                };
+
+                // Intensity modifiers for calorie burn
+                this.intensityModifiers = {
+                    'easy': 0.8,
+                    'moderate': 1.0,
+                    'hard': 1.15,
+                    'max': 1.3
+                };
+
+                // Weather modifiers for hydration
+                this.weatherModifiers = {
+                    'cool': { fluid: 0.8, sodium: 0.7 },
+                    'moderate': { fluid: 1.0, sodium: 1.0 },
+                    'warm': { fluid: 1.3, sodium: 1.3 },
+                    'hot': { fluid: 1.6, sodium: 1.6 }
+                };
+
+                // Gel carb content
+                this.gelCarbs = 25; // average carbs per gel
+                this.chewCarbs = 4; // average carbs per chew
+            }
+
+            calculate() {
+                const raceDistance = parseFloat(this.form.querySelector('[name="raceDistance"]').value);
+                const hours = this.getInputValue('hours', 0);
+                const minutes = this.getInputValue('minutes');
+                const seconds = this.getInputValue('seconds', 0);
+                const bodyWeight = this.getInputValue('bodyWeight');
+                const intensity = this.form.querySelector('[name="intensity"]').value;
+                const weather = this.form.querySelector('[name="weather"]').value;
+                const gutTolerance = this.form.querySelector('[name="gutTolerance"]').value;
+                const fuelPreference = this.form.querySelector('[name="fuelPreference"]').value;
+
+                if (!raceDistance || !minutes || !bodyWeight || !intensity) {
+                    this.displayError('Please fill in all required fields.');
+                    return;
+                }
+
+                // Calculate race duration in hours
+                const totalHours = hours + (minutes / 60) + (seconds / 3600);
+
+                // Calculate calories burned
+                const weightKg = bodyWeight * 0.453592;
+                const baseCaloriesPerHour = weightKg * 10; // ~10 cal/kg/hour running
+                const caloriesPerHour = baseCaloriesPerHour * this.intensityModifiers[intensity];
+                const totalCalories = caloriesPerHour * totalHours;
+
+                // Calculate carb needs
+                const carbRate = this.carbRates[gutTolerance];
+                let targetCarbsPerHour;
+
+                if (totalHours < 1) {
+                    targetCarbsPerHour = 0; // Short races don't need carbs
+                } else if (totalHours < 2) {
+                    targetCarbsPerHour = carbRate.min;
+                } else if (totalHours < 3) {
+                    targetCarbsPerHour = (carbRate.min + carbRate.max) / 2;
+                } else {
+                    targetCarbsPerHour = carbRate.max;
+                }
+
+                const totalCarbs = targetCarbsPerHour * Math.max(0, totalHours - 0.5); // Start fueling at 30 min
+
+                // Calculate hydration needs
+                const baseFluidPerHour = 600; // ml
+                const fluidModifier = this.weatherModifiers[weather].fluid;
+                const fluidPerHour = baseFluidPerHour * fluidModifier;
+                const totalFluid = fluidPerHour * totalHours;
+
+                // Calculate electrolyte needs
+                const baseSodiumPerHour = 450; // mg
+                const sodiumModifier = this.weatherModifiers[weather].sodium;
+                const sodiumPerHour = baseSodiumPerHour * sodiumModifier;
+                const totalSodium = sodiumPerHour * totalHours;
+
+                // Calculate gel/chew timing
+                const gelsNeeded = Math.ceil(totalCarbs / this.gelCarbs);
+                const chewsNeeded = Math.ceil(totalCarbs / this.chewCarbs);
+
+                // Generate timing schedule
+                const schedule = this.generateFuelingSchedule(totalHours, targetCarbsPerHour, fuelPreference, raceDistance);
+
+                // Format results
+                const distanceName = this.getDistanceName(raceDistance);
+
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Your Race Nutrition Plan</h3>
+
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">${distanceName} Fueling Strategy</div>
+                            <div class="text-3xl font-bold">${targetCarbsPerHour}g carbs/hour</div>
+                            <div class="text-lg opacity-90 mt-2">${Math.round(totalCalories)} calories over ${totalHours.toFixed(1)} hours</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-orange-800">Total Carbs</h4>
+                                <div class="text-2xl font-bold text-orange-700">${Math.round(totalCarbs)}g</div>
+                                <div class="text-sm text-orange-600">for entire race</div>
+                            </div>
+
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Hydration</h4>
+                                <div class="text-2xl font-bold text-blue-700">${Math.round(fluidPerHour)}ml</div>
+                                <div class="text-sm text-blue-600">per hour</div>
+                            </div>
+
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-purple-800">Sodium</h4>
+                                <div class="text-2xl font-bold text-purple-700">${Math.round(sodiumPerHour)}mg</div>
+                                <div class="text-sm text-purple-600">per hour</div>
+                            </div>
+
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Gels Needed</h4>
+                                <div class="text-2xl font-bold text-green-700">${gelsNeeded}</div>
+                                <div class="text-sm text-green-600">@ 25g each</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Race Details</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                                <div>
+                                    <p>Distance: ${distanceName}</p>
+                                    <p>Expected Time: ${this.formatTime(totalHours)}</p>
+                                    <p>Body Weight: ${bodyWeight} lbs (${weightKg.toFixed(1)} kg)</p>
+                                </div>
+                                <div>
+                                    <p>Intensity: ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}</p>
+                                    <p>Weather: ${weather.charAt(0).toUpperCase() + weather.slice(1)}</p>
+                                    <p>Gut Tolerance: ${gutTolerance.charAt(0).toUpperCase() + gutTolerance.slice(1)}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-3">Fueling Schedule</h4>
+                            <div class="space-y-2 text-sm text-blue-700">
+                                ${schedule.map(item => `
+                                    <div class="flex justify-between items-center py-2 border-b border-blue-200 last:border-0">
+                                        <span class="font-medium">${item.time}</span>
+                                        <span>${item.action}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-green-800 mb-2">Hydration Plan</h4>
+                            <ul class="text-sm text-green-700 space-y-1">
+                                <li>Drink ${Math.round(fluidPerHour / 4)}-${Math.round(fluidPerHour / 3)} ml every 15-20 minutes</li>
+                                <li>Total fluid target: ${(totalFluid / 1000).toFixed(1)}L for entire race</li>
+                                <li>Include electrolytes at ${Math.round(sodiumPerHour)}mg sodium/hour</li>
+                                ${weather === 'hot' ? '<li><strong>Hot weather alert:</strong> Increase fluid intake and consider ice/cold sponges</li>' : ''}
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-yellow-800 mb-2">Important Reminders</h4>
+                            <ul class="text-sm text-yellow-700 space-y-1">
+                                <li>Practice this exact fueling strategy in training runs</li>
+                                <li>Never try new nutrition products on race day</li>
+                                <li>Start fueling early - before you feel depleted</li>
+                                <li>Take gels with water, not sports drink</li>
+                                <li>Adjust based on how you feel during the race</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="calculator.shareResult('My ${distanceName} nutrition plan: ${targetCarbsPerHour}g carbs/hour, ${gelsNeeded} gels, ${Math.round(fluidPerHour)}ml fluid/hour')" class="calc-button-secondary">
+                                Share Plan
+                            </button>
+                            <button onclick="calculator.printResult()" class="calc-button-secondary">
+                                Print Plan
+                            </button>
+                        </div>
+                    </div>
+                `);
+
+                this.saveValues();
+            }
+
+            generateFuelingSchedule(totalHours, carbsPerHour, preference, distance) {
+                const schedule = [];
+                const totalMinutes = totalHours * 60;
+
+                // Pre-race
+                schedule.push({ time: '-3 hours', action: 'Pre-race meal (2-4g carbs/kg body weight)' });
+                schedule.push({ time: '-30 min', action: 'Small carb boost (optional, 100-150 cal)' });
+                schedule.push({ time: 'Start', action: 'Begin race - hydrate at first aid station' });
+
+                if (totalHours < 1) {
+                    schedule.push({ time: 'During race', action: 'Water only - no fueling needed for short races' });
+                    return schedule;
+                }
+
+                // Calculate fueling intervals
+                const gelCarbs = preference === 'chews' ? 24 : 25; // 6 chews or 1 gel
+                const intervalMinutes = (gelCarbs / carbsPerHour) * 60;
+                const firstFuelMinutes = 30; // Start at 30 minutes
+
+                let currentMinute = firstFuelMinutes;
+                let fuelCount = 1;
+
+                while (currentMinute < totalMinutes - 15) {
+                    let action;
+                    if (preference === 'gels') {
+                        action = `Gel #${fuelCount} + water`;
+                    } else if (preference === 'chews') {
+                        action = `4-6 chews + water`;
+                    } else if (preference === 'mixed') {
+                        action = fuelCount % 2 === 1 ? `Gel #${Math.ceil(fuelCount/2)} + water` : `4-6 chews + water`;
+                    } else if (preference === 'drink') {
+                        action = `Sports drink (8-12 oz)`;
+                    } else {
+                        action = `Small snack (banana, dates, etc.)`;
+                    }
+
+                    schedule.push({
+                        time: this.formatMinutesToTime(currentMinute),
+                        action: action
+                    });
+
+                    currentMinute += intervalMinutes;
+                    fuelCount++;
+                }
+
+                // Add caffeine recommendation for longer races
+                if (totalHours >= 2.5) {
+                    const caffeineTiming = Math.round(totalMinutes - 60);
+                    schedule.push({
+                        time: this.formatMinutesToTime(caffeineTiming),
+                        action: 'Consider caffeinated gel for final push'
+                    });
+                }
+
+                schedule.push({ time: 'Finish', action: 'Recovery nutrition within 30 min (carbs + protein)' });
+
+                return schedule;
+            }
+
+            formatMinutesToTime(minutes) {
+                const hours = Math.floor(minutes / 60);
+                const mins = Math.round(minutes % 60);
+                if (hours === 0) {
+                    return `${mins} min`;
+                }
+                return `${hours}:${mins.toString().padStart(2, '0')}`;
+            }
+
+            formatTime(hours) {
+                const h = Math.floor(hours);
+                const m = Math.round((hours % 1) * 60);
+                if (h === 0) {
+                    return `${m} min`;
+                }
+                return `${h}h ${m}m`;
+            }
+
+            getDistanceName(distance) {
+                const names = {
+                    10: '10K',
+                    15: '15K',
+                    21.1: 'Half Marathon',
+                    42.2: 'Marathon',
+                    50: '50K Ultra',
+                    80: '50 Mile Ultra',
+                    100: '100K Ultra',
+                    161: '100 Mile Ultra'
+                };
+                return names[distance] || `${distance}K`;
+            }
+        }
+
+        // Initialize calculator
+        const calculator = new RaceNutritionCalculator();
+    </script>
+</body>
+</html>
