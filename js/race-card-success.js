@@ -7,7 +7,7 @@
     'use strict';
 
     const STORAGE_KEY = 'runbikecalc_premium_unlocked';
-    const REDIRECT_URL = '/race-card-builder';
+    const REDIRECT_URL = '/pace-band-generator';
     const COUNTDOWN_SECONDS = 3;
 
     // Unlock premium access immediately

@@ -17,13 +17,13 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
          crossorigin="anonymous"></script>
 
-    <title>Pace Band Generator - Printable Race Wristband | Free Tool</title>
+    <title>Pace Band & Race Card Generator - Printable Splits + Nutrition | RunBikeCalc</title>
     <link rel="canonical" href="https://runbikecalc.com/pace-band-generator">
-    <meta name="description" content="Generate custom pace bands for your race. Create printable wristbands with split times for 5K, 10K, half marathon, and marathon. Even splits or negative splits. Free pace band maker.">
+    <meta name="description" content="Generate custom pace bands and race cards for cycling, running, and triathlon. Printable wristbands and top tube cards with split times and nutrition reminders. Free preview, PDF download available.">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Pace Band Generator - Create Custom Race Wristbands">
-    <meta property="og:description" content="Free pace band generator for running races. Create printable wristbands with split times.">
+    <meta property="og:title" content="Pace Band & Race Card Generator - Splits + Nutrition for Race Day">
+    <meta property="og:description" content="Free pace band and race card generator for cycling, running, and triathlon. Split times plus nutrition reminders in one printable card.">
     <meta property="og:image" content="https://runbikecalc.com/images/pace-band-og.jpg">
     <meta property="og:url" content="https://runbikecalc.com/pace-band-generator">
     <meta property="og:type" content="website">
@@ -31,8 +31,8 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pace Band Generator">
-    <meta name="twitter:description" content="Create custom pace bands for your race with split times">
+    <meta name="twitter:title" content="Pace Band & Race Card Generator">
+    <meta name="twitter:description" content="Printable race cards with split times and nutrition plans for cycling, running, and triathlon">
     <meta name="twitter:image" content="https://runbikecalc.com/images/pace-band-twitter.jpg">
 
     <!-- Favicon -->
@@ -57,42 +57,22 @@
         }
     </script>
 
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
+
     <!-- Print CSS -->
     <style>
         @media print {
-            body * {
-                visibility: hidden;
-            }
-
-            #pace-band-print, #pace-band-print * {
-                visibility: visible;
-            }
-
-            #pace-band-print {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-            }
-
-            .no-print {
-                display: none !important;
-            }
-
-            @page {
-                size: portrait;
-                margin: 0.5cm;
-            }
+            body * { visibility: hidden; }
+            #race-card-print, #race-card-print * { visibility: visible; }
+            #race-card-print { position: absolute; left: 0; top: 0; width: 100%; }
+            .no-print { display: none !important; }
+            @page { size: portrait; margin: 0.5cm; }
         }
-
-        .pace-band-wristband {
-            border: 2px dashed #ccc;
-            page-break-inside: avoid;
-        }
-
-        .split-row:nth-child(even) {
-            background-color: #f9fafb;
-        }
+        .race-card-strip { border: 2px dashed #ccc; page-break-inside: avoid; }
+        .split-row:nth-child(even) { background-color: #f9fafb; }
+        .nutrition-row { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
     </style>
 
     <!-- Preconnect to external domains -->
@@ -103,16 +83,15 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Pace Band Generator",
+        "name": "Pace Band & Race Card Generator",
         "url": "https://runbikecalc.com/pace-band-generator",
-        "description": "Generate custom pace bands with split times for running races. Create printable wristbands for 5K, 10K, half marathon, and marathon.",
+        "description": "Generate custom pace bands and race cards with split times and nutrition reminders for cycling, running, and triathlon.",
         "applicationCategory": "SportsApplication",
         "operatingSystem": "All",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
+        "offers": [
+            { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free preview and screen display" },
+            { "@type": "Offer", "price": "5.00", "priceCurrency": "USD", "description": "PDF download for printing" }
+        ],
         "publisher": {
             "@type": "Organization",
             "name": "RunBikeCalc",
@@ -132,39 +111,31 @@
                 "name": "What is a pace band and how does it work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "A pace band is a printable wristband that shows your target split times for each mile or kilometer of a race. You wear it on your wrist during the race to stay on pace and achieve your goal finish time. It helps you avoid starting too fast and ensures even pacing throughout your race."
+                    "text": "A pace band is a printable strip that shows your target split times at each mile or kilometer marker during a race. Our enhanced race card version adds a nutrition column so you can track fueling alongside pacing. Wear it on your wrist, attach to your bike top tube, or pin to your race bib."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Should I use even splits or negative splits?",
+                "name": "What sports does the race card generator support?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "For most runners, negative splits (running the second half slightly faster) lead to better results and a more comfortable race experience. Even splits work well for experienced runners who know their pace. Start with a negative split strategy if you're unsure - it helps prevent going out too fast and hitting the wall."
+                    "text": "The generator supports cycling (25mi to 112mi+), running (5K to 50K+), and triathlon (Sprint, Olympic, 70.3, 140.6). Cycling cards are sized for bike top tubes, running cards for wristbands, and triathlon cards include separate swim/bike/run sections."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How do I print and use my pace band?",
+                "name": "How should I plan nutrition on my race card?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Generate your pace band, click Print, and print on regular paper. Cut out the band along the dashed lines, and wrap it around your wrist or attach it to your race bib. Some runners also laminate it or use clear packing tape for water resistance. Check your splits throughout the race to stay on pace."
+                    "text": "A general guideline is 30-60g of carbohydrates per hour for events over 90 minutes. For cycling, plan nutrition every 20-30 minutes. For running, every 30-45 minutes. The tool pre-populates sensible defaults based on your race distance that you can fully customize."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What race distances can I create pace bands for?",
+                "name": "Is the pace band preview free?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Our pace band generator supports 5K (3.1 miles), 10K (6.2 miles), half marathon (13.1 miles), and marathon (26.2 miles). You can generate pace bands in either miles or kilometers, with options for even splits or negative splits."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I save my pace band for future use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Your pace band settings are automatically saved to your browser's local storage. You can also save multiple pace bands with custom names for different races and training runs. Simply click 'Save Pace Band' and give it a name to access it later."
+                    "text": "Yes! The on-screen preview is completely free. You can also print directly from your browser at no cost. The $5 PDF option gives you a precisely formatted card sized for a bike top tube (1.5 x 6 inches) or wristband (1.5 x 8 inches) with cutting guides."
                 }
             },
             {
@@ -172,7 +143,7 @@
                 "name": "What's the difference between mile and kilometer splits?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Mile splits show your cumulative time at each mile marker (1, 2, 3, etc.), while kilometer splits show times at each kilometer (1K, 2K, 3K, etc.). Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers."
+                    "text": "Mile splits show cumulative time at each mile marker, while kilometer splits show times at each kilometer. Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers. You can switch between them freely."
                 }
             }
         ]
@@ -232,170 +203,220 @@
 
         <!-- Page heading -->
         <div class="mb-8 no-print">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">Race Pace Band Generator</h1>
-            <p class="text-lg text-gray-600">Create custom printable pace bands for your race. Generate split times for even or negative splits, print, and wear on your wrist during the race to stay on pace.</p>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Pace Band & Race Card Generator</h1>
+            <p class="text-lg text-gray-600">Create printable race cards with split times and nutrition reminders for cycling, running, or triathlon. Free preview on screen — download a formatted PDF ($5) sized for bike top tubes or wristbands.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Main content area -->
             <div class="md:col-span-2">
-                <!-- Pace Band Generator -->
+                <!-- Race Card Form -->
                 <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
-                    <h2 class="text-2xl font-semibold mb-6">Create Your Pace Band</h2>
+                    <h2 class="text-2xl font-semibold mb-6">Build Your Race Card</h2>
 
-                    <form id="pace-band-form" class="space-y-6">
-                        <!-- Target Finish Time -->
+                    <form id="race-card-form" class="space-y-6">
+                        <!-- Sport Type -->
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Target Finish Time *
-                            </label>
-                            <div class="grid grid-cols-3 gap-2">
-                                <div>
-                                    <input type="number"
-                                           id="hours"
-                                           name="hours"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                           placeholder="0"
-                                           min="0"
-                                           max="10"
-                                           value="0">
-                                    <p class="text-xs text-gray-600 mt-1">Hours</p>
-                                </div>
-                                <div>
-                                    <input type="number"
-                                           id="minutes"
-                                           name="minutes"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                           placeholder="30"
-                                           required
-                                           min="0"
-                                           max="59"
-                                           value="30">
-                                    <p class="text-xs text-gray-600 mt-1">Minutes</p>
-                                </div>
-                                <div>
-                                    <input type="number"
-                                           id="seconds"
-                                           name="seconds"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                           placeholder="0"
-                                           min="0"
-                                           max="59"
-                                           value="0">
-                                    <p class="text-xs text-gray-600 mt-1">Seconds</p>
-                                </div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Sport Type *</label>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="sport" value="cycling" checked class="w-4 h-4 text-primary">
+                                    <span>Cycling</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="sport" value="running" class="w-4 h-4 text-primary">
+                                    <span>Running</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="sport" value="triathlon" class="w-4 h-4 text-primary">
+                                    <span>Triathlon</span>
+                                </label>
                             </div>
+                            <p id="sport-hint" class="text-xs text-gray-500 mt-1">Card sized for bike top tube</p>
                         </div>
 
                         <!-- Race Distance -->
                         <div>
-                            <label for="race-distance" class="block text-sm font-medium text-gray-700 mb-2">
-                                Race Distance *
-                            </label>
-                            <select id="race-distance" name="distance" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                <option value="5k">5K (3.1 miles)</option>
-                                <option value="10k">10K (6.2 miles)</option>
-                                <option value="half">Half Marathon (13.1 miles / 21.1 km)</option>
-                                <option value="marathon" selected>Marathon (26.2 miles / 42.2 km)</option>
-                            </select>
+                            <label for="race-distance" class="block text-sm font-medium text-gray-700 mb-2">Race Distance *</label>
+                            <select id="race-distance" name="distance" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></select>
+                        </div>
+
+                        <!-- Custom Distance (hidden by default) -->
+                        <div id="custom-distance-group" class="hidden">
+                            <label for="custom-distance" class="block text-sm font-medium text-gray-700 mb-2">Custom Distance</label>
+                            <div class="flex gap-2 items-center">
+                                <input type="number" id="custom-distance" step="0.1" min="0.1" class="w-32 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="50">
+                                <span id="custom-distance-unit" class="text-gray-600">miles</span>
+                            </div>
                         </div>
 
                         <!-- Unit System -->
                         <div>
-                            <label for="unit-system" class="block text-sm font-medium text-gray-700 mb-2">
-                                Split Unit *
-                            </label>
+                            <label for="unit-system" class="block text-sm font-medium text-gray-700 mb-2">Unit System *</label>
                             <select id="unit-system" name="units" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
                                 <option value="miles">Miles</option>
                                 <option value="km">Kilometers</option>
                             </select>
                         </div>
 
-                        <!-- Split Strategy -->
-                        <div>
-                            <label for="split-strategy" class="block text-sm font-medium text-gray-700 mb-2">
-                                Pacing Strategy *
-                            </label>
-                            <select id="split-strategy" name="strategy" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                <option value="even">Even Splits (Same pace throughout)</option>
-                                <option value="negative">Negative Splits (Faster second half)</option>
-                            </select>
-                            <p class="text-xs text-gray-600 mt-1">Negative splits: First half 2-3% slower, second half 2-3% faster</p>
+                        <!-- Triathlon Distances (hidden by default) -->
+                        <div id="tri-distances-group" class="hidden space-y-4">
+                            <p class="text-sm font-medium text-gray-700">Triathlon Leg Distances</p>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div>
+                                    <label class="text-xs text-gray-500">Swim</label>
+                                    <input type="text" id="tri-swim-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
+                                </div>
+                                <div>
+                                    <label class="text-xs text-gray-500">Bike</label>
+                                    <input type="text" id="tri-bike-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
+                                </div>
+                                <div>
+                                    <label class="text-xs text-gray-500">Run</label>
+                                    <input type="text" id="tri-run-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Pace Band Name -->
-                        <div>
-                            <label for="band-name" class="block text-sm font-medium text-gray-700 mb-2">
-                                Pace Band Name (Optional)
-                            </label>
-                            <input type="text"
-                                   id="band-name"
-                                   name="bandName"
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                   placeholder="e.g., Boston Marathon 2025">
+                        <!-- Target Finish Time -->
+                        <div id="target-time-section">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Target Finish Time *</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div>
+                                    <input type="number" id="hours" name="hours" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="0" min="0" max="24" value="0">
+                                    <p class="text-xs text-gray-600 mt-1">Hours</p>
+                                </div>
+                                <div>
+                                    <input type="number" id="minutes" name="minutes" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="30" required min="0" max="59" value="30">
+                                    <p class="text-xs text-gray-600 mt-1">Minutes</p>
+                                </div>
+                                <div>
+                                    <input type="number" id="seconds" name="seconds" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="0" min="0" max="59" value="0">
+                                    <p class="text-xs text-gray-600 mt-1">Seconds</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="flex flex-wrap gap-4">
-                            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
-                                Generate Pace Band
-                            </button>
-                            <button type="button" id="save-band" class="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors hidden">
-                                Save Pace Band
-                            </button>
+                        <!-- Triathlon Leg Times (hidden by default) -->
+                        <div id="tri-times-group" class="hidden space-y-4">
+                            <p class="text-sm font-medium text-gray-700">Target Times by Leg</p>
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="text-xs text-gray-500 mb-1 block">Swim Target</label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div><input type="number" id="tri-swim-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="5" value="0"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
+                                        <div><input type="number" id="tri-swim-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="35"><p class="text-xs text-gray-600 mt-1">Min</p></div>
+                                        <div><input type="number" id="tri-swim-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-xs text-gray-500 mb-1 block">Bike Target</label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div><input type="number" id="tri-bike-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="12" value="2"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
+                                        <div><input type="number" id="tri-bike-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="45"><p class="text-xs text-gray-600 mt-1">Min</p></div>
+                                        <div><input type="number" id="tri-bike-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-xs text-gray-500 mb-1 block">Run Target</label>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div><input type="number" id="tri-run-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="8" value="2"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
+                                        <div><input type="number" id="tri-run-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Min</p></div>
+                                        <div><input type="number" id="tri-run-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Split Interval -->
+                        <div>
+                            <label for="split-interval" class="block text-sm font-medium text-gray-700 mb-2">Split Interval</label>
+                            <select id="split-interval" name="interval" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></select>
+                        </div>
+
+                        <!-- Nutrition Plan -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nutrition Plan</label>
+                            <p class="text-xs text-gray-500 mb-3">Add reminders for when to eat, drink, or take gels. These appear on your race card at the specified mile/km markers.</p>
+                            <div id="nutrition-rows" class="space-y-2 mb-3"></div>
+                            <button type="button" id="add-nutrition" class="text-sm text-primary hover:underline font-medium">+ Add Nutrition Reminder</button>
+                        </div>
+
+                        <!-- Race Name -->
+                        <div>
+                            <label for="race-name" class="block text-sm font-medium text-gray-700 mb-2">Race Name (Optional)</label>
+                            <input type="text" id="race-name" name="raceName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g., IRONMAN 70.3 Chattanooga">
+                        </div>
+
+                        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto">
+                            Generate Race Card
+                        </button>
                     </form>
                 </div>
 
-                <!-- Saved Pace Bands -->
-                <div id="saved-bands-section" class="bg-white rounded-lg shadow-md p-6 mb-8 no-print hidden">
-                    <h3 class="text-xl font-semibold mb-4">Saved Pace Bands</h3>
-                    <div id="saved-bands-list" class="space-y-2">
-                        <!-- Saved bands will be inserted here -->
-                    </div>
-                </div>
-
-                <!-- Generated Pace Band -->
-                <div id="pace-band-result" class="hidden">
+                <!-- Generated Race Card -->
+                <div id="race-card-result" class="hidden">
                     <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-xl font-semibold">Your Pace Band</h3>
-                            <button onclick="window.print()" class="bg-secondary text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition-colors">
-                                Print Pace Band
-                            </button>
+                        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+                            <h3 class="text-xl font-semibold">Your Race Card</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <button onclick="window.print()" class="bg-secondary text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition-colors text-sm">
+                                    Print Preview
+                                </button>
+                                <button id="download-pdf-btn" class="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors text-sm">
+                                    Download PDF — $5
+                                </button>
+                            </div>
                         </div>
-                        <p class="text-gray-600 mb-4">Cut along the dashed lines and wrap around your wrist or attach to your race bib.</p>
+                        <p class="text-gray-600 text-sm">Cut along the dashed lines. Attach to your bike top tube with tape or wrap around your wrist.</p>
                     </div>
 
-                    <!-- Printable Pace Band -->
-                    <div id="pace-band-print">
-                        <!-- Pace band content will be inserted here -->
-                    </div>
+                    <!-- Printable Race Card -->
+                    <div id="race-card-print"></div>
                 </div>
 
                 <!-- Educational content -->
                 <div class="content-box">
                 <article class="prose prose-lg max-w-none no-print">
-                    <h2>How to Use a Pace Band</h2>
-                    <p>A pace band is an essential racing tool that helps you maintain your target pace throughout your race. By displaying cumulative split times at each mile or kilometer marker, it keeps you on track to achieve your goal finish time.</p>
+                    <h2>How to Use a Race Card</h2>
+                    <p>A race card combines split times with nutrition reminders into a single compact strip you carry during your race. Unlike a basic pace band that only shows times, a race card is your complete race-day reference — telling you both where you should be and what you should be consuming at each checkpoint.</p>
 
-                    <h3>Creating Your Perfect Pace Band</h3>
+                    <h3>Three Columns, One Card</h3>
+                    <ul>
+                        <li><strong>Distance markers</strong> so you know exactly where you are</li>
+                        <li><strong>Cumulative goal times</strong> to stay on pace</li>
+                        <li><strong>Nutrition reminders</strong> so you never miss a fueling window</li>
+                    </ul>
+
+                    <h3>Race Cards for Different Sports</h3>
+
+                    <h4>Cycling</h4>
+                    <p>Cycling race cards are sized to fit on your bike's top tube (approximately 1.5" x 6"). Apply with clear packing tape or use a top tube race number holder. Cycling nutrition is especially important — plan for 40-60g of carbs per hour on rides over 90 minutes.</p>
+
+                    <h4>Running</h4>
+                    <p>Running race cards are sized for your wrist (approximately 1.5" x 8"). Wrap around your forearm and secure with clear tape or a sweatband. Keep nutrition simple — gels every 30-45 minutes with water at aid stations.</p>
+
+                    <h4>Triathlon</h4>
+                    <p>Triathlon race cards include separate sections for swim, bike, and run. The bike section is the most critical for nutrition since that's where you consume the most calories. Attach the card to your bike top tube and reference the run splits from memory or a separate wrist card.</p>
+
+                    <h3>Printing and Wearing Your Race Card</h3>
                     <ol>
-                        <li><strong>Set Your Goal:</strong> Enter your target finish time based on recent training runs or race performances</li>
-                        <li><strong>Choose Your Distance:</strong> Select from 5K, 10K, half marathon, or marathon</li>
-                        <li><strong>Pick Your Units:</strong> Match your race course markers (miles or kilometers)</li>
-                        <li><strong>Select Your Strategy:</strong> Even splits or negative splits</li>
+                        <li><strong>Print:</strong> Use the Print button or download the PDF for a precisely sized card</li>
+                        <li><strong>Cut:</strong> Cut along the dashed lines carefully</li>
+                        <li><strong>Weather-Proof:</strong> Optional — laminate or cover with clear packing tape</li>
+                        <li><strong>Attach:</strong> Top tube tape for cycling, wrist wrap for running, or pin to race bib</li>
+                        <li><strong>Use During Race:</strong> Check your actual time at each marker and follow nutrition cues</li>
                     </ol>
 
-                    <h3>Pacing Strategies Explained</h3>
-
-                    <h4>Even Splits</h4>
-                    <p>Running even splits means maintaining the same pace throughout the entire race. This strategy works well for experienced runners who know their capabilities and can maintain consistent effort. Even splits minimize the risk of fatigue from starting too fast.</p>
-
-                    <h4>Negative Splits</h4>
-                    <p>Negative splits involve running the second half of the race faster than the first half. This conservative approach helps you:</p>
+                    <h3>Nutrition Planning Tips</h3>
                     <ul>
-                        <li>Avoid going out too fast and "hitting the wall"</li>
-
+                        <li><strong>Test in training:</strong> Never try new nutrition on race day</li>
+                        <li><strong>Start early:</strong> Begin fueling within the first 30-45 minutes</li>
+                        <li><strong>Stay consistent:</strong> Small, frequent intake beats large, infrequent meals</li>
+                        <li><strong>Hydrate separately:</strong> Don't rely on gels alone — plan water intake too</li>
+                        <li><strong>Adjust for heat:</strong> Increase fluid and electrolyte intake in hot conditions</li>
+                    </ul>
+                </article>
 
                 <!-- Product Recommendations -->
                 <div class="bg-white rounded-lg shadow-md p-6 mt-6">
@@ -403,54 +424,22 @@
                     <p class="text-xs text-gray-500 mb-4">As an Amazon Associate, we earn from qualifying purchases.</p>
                     <div class="space-y-4">
                         <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">GU Energy Gel Variety Pack</h4>
+                            <p class="text-sm text-gray-600 mb-2">Race-day fuel for endurance events. Easy to carry and consume on the move.</p>
+                            <a href="https://www.amazon.com/s?k=GU+Energy+Gel+variety+pack&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4">
+                            <h4 class="font-medium text-gray-900 mb-1">Top Tube Race Number Holder</h4>
+                            <p class="text-sm text-gray-600 mb-2">Clear sleeve for attaching race cards and numbers to your bike top tube.</p>
+                            <a href="https://www.amazon.com/s?k=bike+top+tube+race+number+holder&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
+                        </div>
+                        <div>
                             <h4 class="font-medium text-gray-900 mb-1">Garmin Forerunner 265</h4>
                             <p class="text-sm text-gray-600 mb-2">AMOLED GPS watch with pace alerts and race predictor.</p>
                             <a href="https://www.amazon.com/s?k=Garmin+Forerunner+265&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
                         </div>
-                        <div class="border-b border-gray-100 pb-4">
-                            <h4 class="font-medium text-gray-900 mb-1">GU Energy Gel Variety Pack</h4>
-                            <p class="text-sm text-gray-600 mb-2">Race-day fuel for marathons and half marathons.</p>
-                            <a href="https://www.amazon.com/s?k=GU+Energy+Gel+variety+pack&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Nike Vaporfly 3</h4>
-                            <p class="text-sm text-gray-600 mb-2">Carbon-plated race shoe for PR potential.</p>
-                            <a href="https://www.amazon.com/s?k=Nike+Vaporfly+3+running+shoes&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
-                        </div>
                     </div>
                 </div>
-                        <li>Finish strong and pass other runners</li>
-                        <li>Achieve a more comfortable race experience</li>
-                        <li>Reduce the risk of injury or cramping</li>
-                    </ul>
-
-                    <h3>Printing and Wearing Your Pace Band</h3>
-                    <ol>
-                        <li><strong>Print:</strong> Click the Print button and print on regular paper</li>
-                        <li><strong>Cut:</strong> Cut along the dashed lines carefully</li>
-                        <li><strong>Weather-Proof:</strong> Optional - laminate or cover with clear packing tape</li>
-                        <li><strong>Attach:</strong> Wrap around your wrist, pin to your race bib, or attach to your watch strap</li>
-                        <li><strong>Use During Race:</strong> Check your actual time at each marker against your pace band</li>
-                    </ol>
-
-                    <h3>Tips for Race Day Success</h3>
-                    <ul>
-                        <li><strong>Start Conservative:</strong> Begin slightly slower than target pace to conserve energy</li>
-                        <li><strong>Stay Flexible:</strong> Adjust for weather, terrain, and how you feel</li>
-                        <li><strong>Account for Crowding:</strong> First mile may be slower due to race congestion</li>
-                        <li><strong>Use as a Guide:</strong> Don't panic if you're a few seconds off at each split</li>
-                        <li><strong>Practice in Training:</strong> Use pace bands during long training runs</li>
-                    </ul>
-
-                    <h3>Common Pace Band Mistakes to Avoid</h3>
-                    <ul>
-                        <li>Setting an unrealistic goal time</li>
-                        <li>Ignoring current weather conditions</li>
-                        <li>Not accounting for course elevation changes</li>
-                        <li>Being too rigid with pace targets</li>
-                        <li>Forgetting to factor in slower first mile due to crowds</li>
-                    </ul>
-                </article>
 
                 <!-- FAQ Section -->
                 <div class="space-y-6 mt-8 no-print">
@@ -458,39 +447,40 @@
 
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h4 class="font-semibold text-lg mb-2">What is a pace band and how does it work?</h4>
-                        <p class="text-gray-700">A pace band is a printable wristband that shows your target split times for each mile or kilometer of a race. You wear it on your wrist during the race to stay on pace and achieve your goal finish time. It helps you avoid starting too fast and ensures even pacing throughout your race.</p>
+                        <p class="text-gray-700">A pace band is a printable strip that shows your target split times at each mile or kilometer marker during a race. Our enhanced race card version adds a nutrition column so you can track fueling alongside pacing. Wear it on your wrist, attach to your bike top tube, or pin to your race bib.</p>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">Should I use even splits or negative splits?</h4>
-                        <p class="text-gray-700">For most runners, negative splits (running the second half slightly faster) lead to better results and a more comfortable race experience. Even splits work well for experienced runners who know their pace. Start with a negative split strategy if you're unsure - it helps prevent going out too fast and hitting the wall.</p>
+                        <h4 class="font-semibold text-lg mb-2">What sports does the race card generator support?</h4>
+                        <p class="text-gray-700">The generator supports cycling (25mi to 112mi+), running (5K to 50K+), and triathlon (Sprint, Olympic, 70.3, 140.6). Cycling cards are sized for bike top tubes, running cards for wristbands, and triathlon cards include separate swim/bike/run sections.</p>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">How do I print and use my pace band?</h4>
-                        <p class="text-gray-700">Generate your pace band, click Print, and print on regular paper. Cut out the band along the dashed lines, and wrap it around your wrist or attach it to your race bib. Some runners also laminate it or use clear packing tape for water resistance. Check your splits throughout the race to stay on pace.</p>
+                        <h4 class="font-semibold text-lg mb-2">How should I plan nutrition on my race card?</h4>
+                        <p class="text-gray-700">A general guideline is 30-60g of carbohydrates per hour for events over 90 minutes. For cycling, plan nutrition every 20-30 minutes. For running, every 30-45 minutes. The tool pre-populates sensible defaults based on your race distance that you can fully customize.</p>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">What race distances can I create pace bands for?</h4>
-                        <p class="text-gray-700">Our pace band generator supports 5K (3.1 miles), 10K (6.2 miles), half marathon (13.1 miles), and marathon (26.2 miles). You can generate pace bands in either miles or kilometers, with options for even splits or negative splits.</p>
+                        <h4 class="font-semibold text-lg mb-2">Is the pace band preview free?</h4>
+                        <p class="text-gray-700">Yes! The on-screen preview is completely free. You can also print directly from your browser at no cost. The $5 PDF option gives you a precisely formatted card sized for a bike top tube or wristband with cutting guides.</p>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">Can I save my pace band for future use?</h4>
-                        <p class="text-gray-700">Yes! Your pace band settings are automatically saved to your browser's local storage. You can also save multiple pace bands with custom names for different races and training runs. Simply click 'Save Pace Band' and give it a name to access it later.</p>
+                        <h4 class="font-semibold text-lg mb-2">Does the race card work for triathlon?</h4>
+                        <p class="text-gray-700">Yes! The triathlon mode generates a race card with separate sections for swim, bike, and run. Each section has its own split times and nutrition plan, helping you manage pacing and fueling across all three disciplines.</p>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h4 class="font-semibold text-lg mb-2">What's the difference between mile and kilometer splits?</h4>
-                        <p class="text-gray-700">Mile splits show your cumulative time at each mile marker (1, 2, 3, etc.), while kilometer splits show times at each kilometer (1K, 2K, 3K, etc.). Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers.</p>
+                        <p class="text-gray-700">Mile splits show cumulative time at each mile marker, while kilometer splits show times at each kilometer. Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers.</p>
                     </div>
+                </div>
                 </div>
             </div>
 
             <!-- Sidebar -->
             <aside class="md:col-span-1 no-print">
-                <!-- Quick Reference -->
+                <!-- Popular Goal Times -->
                 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                     <h3 class="text-xl font-semibold mb-4">Popular Goal Times</h3>
                     <div class="space-y-3 text-sm">
@@ -516,21 +506,38 @@
                     </div>
                 </div>
 
-                <!-- Race Card Builder Promo -->
-                <div class="bg-white rounded-lg shadow-md p-6 mb-6 border-t-4 border-accent">
-                    <h3 class="text-xl font-semibold mb-2">Race Card Builder</h3>
-                    <p class="text-sm text-gray-600 mb-4">Go beyond pace — add nutrition reminders to your race card. Sized for bike top tubes and wristbands.</p>
-                    <a href="/race-card-builder" class="inline-block bg-accent text-white px-4 py-2 rounded text-sm font-medium hover:bg-orange-700 transition-colors">Build Your Race Card</a>
+                <!-- Nutrition Quick Guide -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Nutrition Quick Guide</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">Under 90 min</h4>
+                            <p class="text-gray-600">Water only. No fueling needed.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">90 min - 3 hours</h4>
+                            <p class="text-gray-600">30-60g carbs/hour. Gel every 30-45 min.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">3+ hours</h4>
+                            <p class="text-gray-600">60-90g carbs/hour. Mix gels, bars, and drink mix.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-1">Hydration</h4>
+                            <p class="text-gray-600">500-750ml/hour. More in heat.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Related calculators -->
+                <!-- Related Tools -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-semibold mb-4">Related Tools</h3>
                     <ul class="space-y-3">
-                        <li><a href="/race-card-builder" class="text-primary hover:underline font-semibold">Race Card Builder</a></li>
                         <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
                         <li><a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
-                        <li><a href="/premium-training-plans" class="text-primary hover:underline">Marathon Training Plan</a></li>
+                        <li><a href="/race-nutrition-calculator" class="text-primary hover:underline">Race Nutrition Calculator</a></li>
+                        <li><a href="/sweat-test-calculator" class="text-primary hover:underline">Sweat Rate Calculator</a></li>
+                        <li><a href="/premium-training-plans" class="text-primary hover:underline">Training Plans</a></li>
                         <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zones</a></li>
                     </ul>
                 </div>
@@ -546,7 +553,6 @@
                     <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
                     <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -555,7 +561,6 @@
                         <li><a href="/pace-band-generator" class="hover:text-white">Pace Band Generator</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -564,7 +569,6 @@
                         <li><a href="/premium-training-plans" class="hover:text-white">Training Plans</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Site Info</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -572,7 +576,7 @@
                         <li><a href="/contact" class="hover:text-white">Contact</a></li>
                         <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
                     </ul>
-                    <p class="text-sm text-gray-500 mt-4">&copy; 2025 RunBikeCalc. All rights reserved.</p>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -598,254 +602,380 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
-        
+    (function() {
+        'use strict';
 
-        // Race distance data
-        const raceDistances = {
-            '5k': { miles: 3.1, km: 5 },
-            '10k': { miles: 6.2, km: 10 },
-            'half': { miles: 13.1, km: 21.1 },
-            'marathon': { miles: 26.2, km: 42.2 }
+        const STRIPE_LINK = 'https://buy.stripe.com/aFaeVebbE8LN1rt9yw2cg0d';
+        const PREMIUM_KEY = 'runbikecalc_premium_unlocked';
+
+        const DISTANCE_PRESETS = {
+            cycling: [
+                { label: '25 miles', value: 25 },
+                { label: '40 miles', value: 40 },
+                { label: '56 miles (Half Ironman)', value: 56 },
+                { label: '100 miles (Century)', value: 100 },
+                { label: '112 miles (Full Ironman)', value: 112 },
+                { label: 'Custom', value: 'custom' }
+            ],
+            running: [
+                { label: '5K (3.1 mi)', value: 3.1 },
+                { label: '10K (6.2 mi)', value: 6.2 },
+                { label: 'Half Marathon (13.1 mi)', value: 13.1 },
+                { label: 'Marathon (26.2 mi)', value: 26.2 },
+                { label: '50K (31.1 mi)', value: 31.1 },
+                { label: 'Custom', value: 'custom' }
+            ],
+            triathlon: [
+                { label: 'Sprint (750m / 12.4mi / 3.1mi)', value: 'sprint' },
+                { label: 'Olympic (1500m / 24.8mi / 6.2mi)', value: 'olympic' },
+                { label: '70.3 (1.2mi / 56mi / 13.1mi)', value: '70.3' },
+                { label: '140.6 (2.4mi / 112mi / 26.2mi)', value: '140.6' }
+            ]
         };
 
-        // Load saved pace bands from localStorage
-        function loadSavedBands() {
-            const saved = localStorage.getItem('paceBands');
-            return saved ? JSON.parse(saved) : [];
-        }
+        const TRI_DISTANCES = {
+            'sprint':  { swim: 0.47, bike: 12.4, run: 3.1 },
+            'olympic': { swim: 0.93, bike: 24.8, run: 6.2 },
+            '70.3':    { swim: 1.2,  bike: 56,   run: 13.1 },
+            '140.6':   { swim: 2.4,  bike: 112,  run: 26.2 }
+        };
 
-        // Save pace bands to localStorage
-        function saveBands(bands) {
-            localStorage.setItem('paceBands', JSON.stringify(bands));
-        }
+        const INTERVAL_PRESETS = {
+            cycling: [
+                { label: 'Every 5 miles', value: 5 },
+                { label: 'Every 10 miles', value: 10 },
+                { label: 'Every 20 miles', value: 20 }
+            ],
+            running: [
+                { label: 'Every 1 mile', value: 1 },
+                { label: 'Every 5K (3.1 mi)', value: 3.1 },
+                { label: 'Every 2 miles', value: 2 }
+            ],
+            triathlon: [
+                { label: 'Default intervals', value: 'auto' }
+            ]
+        };
 
-        // Display saved pace bands
-        function displaySavedBands() {
-            const bands = loadSavedBands();
-            const section = document.getElementById('saved-bands-section');
-            const list = document.getElementById('saved-bands-list');
-
-            if (bands.length === 0) {
-                section.classList.add('hidden');
-                return;
+        const NUTRITION_DEFAULTS = {
+            cycling: {
+                short: [
+                    { marker: 10, note: 'Water + electrolytes' },
+                    { marker: 20, note: 'Gel + water' },
+                    { marker: 30, note: 'Water + electrolytes' }
+                ],
+                medium: [
+                    { marker: 10, note: 'Water' },
+                    { marker: 20, note: 'Gel + water' },
+                    { marker: 30, note: 'Water + electrolytes' },
+                    { marker: 40, note: 'Bar or real food' },
+                    { marker: 50, note: 'Gel + water' },
+                    { marker: 60, note: 'Water + electrolytes' }
+                ],
+                long: [
+                    { marker: 10, note: 'Water' },
+                    { marker: 20, note: 'Gel + water' },
+                    { marker: 30, note: 'Water + electrolytes' },
+                    { marker: 40, note: 'Bar or real food' },
+                    { marker: 50, note: 'Gel + water' },
+                    { marker: 60, note: 'Water + electrolytes' },
+                    { marker: 70, note: 'Bar or real food' },
+                    { marker: 80, note: 'Gel + water' },
+                    { marker: 90, note: 'Water + electrolytes' },
+                    { marker: 100, note: 'Gel + water' }
+                ]
+            },
+            running: {
+                short: [
+                    { marker: 3, note: 'Water at aid station' }
+                ],
+                medium: [
+                    { marker: 4, note: 'Gel + water' },
+                    { marker: 8, note: 'Gel + water' },
+                    { marker: 11, note: 'Gel + water' }
+                ],
+                long: [
+                    { marker: 5, note: 'Gel + water' },
+                    { marker: 8, note: 'Water + electrolytes' },
+                    { marker: 11, note: 'Gel + water' },
+                    { marker: 14, note: 'Water + electrolytes' },
+                    { marker: 17, note: 'Gel + water' },
+                    { marker: 20, note: 'Gel + water' },
+                    { marker: 23, note: 'Gel or caffeine gel' }
+                ]
             }
+        };
 
-            section.classList.remove('hidden');
-            list.innerHTML = bands.map((band, index) => `
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div>
-                        <div class="font-medium">${band.name}</div>
-                        <div class="text-sm text-gray-600">${band.distance} - ${band.time} - ${band.strategy}</div>
-                    </div>
-                    <div class="flex gap-2">
-                        <button onclick="loadBand(${index})" class="text-primary hover:underline text-sm">Load</button>
-                        <button onclick="deleteBand(${index})" class="text-red-600 hover:underline text-sm">Delete</button>
-                    </div>
-                </div>
-            `).join('');
+        // DOM
+        const form = document.getElementById('race-card-form');
+        const sportRadios = document.querySelectorAll('input[name="sport"]');
+        const distanceSelect = document.getElementById('race-distance');
+        const unitSelect = document.getElementById('unit-system');
+        const intervalSelect = document.getElementById('split-interval');
+        const customDistGroup = document.getElementById('custom-distance-group');
+        const customDistInput = document.getElementById('custom-distance');
+        const customDistUnit = document.getElementById('custom-distance-unit');
+        const triDistGroup = document.getElementById('tri-distances-group');
+        const triTimesGroup = document.getElementById('tri-times-group');
+        const targetTimeSection = document.getElementById('target-time-section');
+        const sportHint = document.getElementById('sport-hint');
+        const nutritionContainer = document.getElementById('nutrition-rows');
+        const addNutritionBtn = document.getElementById('add-nutrition');
+        const resultDiv = document.getElementById('race-card-result');
+        const printDiv = document.getElementById('race-card-print');
+        const downloadBtn = document.getElementById('download-pdf-btn');
+
+        let currentSport = 'cycling';
+        let currentCardData = null;
+
+        function init() {
+            updateDistanceOptions();
+            updateIntervalOptions();
+            populateDefaultNutrition();
+            sportRadios.forEach(r => r.addEventListener('change', onSportChange));
+            distanceSelect.addEventListener('change', onDistanceChange);
+            unitSelect.addEventListener('change', onUnitChange);
+            addNutritionBtn.addEventListener('click', addNutritionRow);
+            form.addEventListener('submit', onFormSubmit);
+            downloadBtn.addEventListener('click', onDownloadPDF);
         }
 
-        // Load a saved pace band
-        function loadBand(index) {
-            const bands = loadSavedBands();
-            const band = bands[index];
-
-            // Parse time
-            const timeParts = band.time.split(':');
-            document.getElementById('hours').value = timeParts[0] || 0;
-            document.getElementById('minutes').value = timeParts[1] || 0;
-            document.getElementById('seconds').value = timeParts[2] || 0;
-
-            // Set other fields
-            document.getElementById('race-distance').value = band.distanceKey;
-            document.getElementById('unit-system').value = band.units;
-            document.getElementById('split-strategy').value = band.strategyKey;
-            document.getElementById('band-name').value = band.name;
-
-            // Generate the pace band
-            document.getElementById('pace-band-form').dispatchEvent(new Event('submit'));
+        function onSportChange(e) {
+            currentSport = e.target.value;
+            updateDistanceOptions();
+            updateIntervalOptions();
+            populateDefaultNutrition();
+            sportHint.textContent = { cycling: 'Card sized for bike top tube', running: 'Card sized for wristband', triathlon: 'Card with swim/bike/run sections' }[currentSport];
+            const isTri = currentSport === 'triathlon';
+            triDistGroup.classList.toggle('hidden', !isTri);
+            triTimesGroup.classList.toggle('hidden', !isTri);
+            targetTimeSection.classList.toggle('hidden', isTri);
+            customDistGroup.classList.add('hidden');
+            if (isTri) onDistanceChange();
         }
 
-        // Delete a saved pace band
-        function deleteBand(index) {
-            if (confirm('Delete this pace band?')) {
-                const bands = loadSavedBands();
-                bands.splice(index, 1);
-                saveBands(bands);
-                displaySavedBands();
+        function onDistanceChange() {
+            const val = distanceSelect.value;
+            customDistGroup.classList.toggle('hidden', val !== 'custom');
+            if (currentSport === 'triathlon' && TRI_DISTANCES[val]) {
+                const tri = TRI_DISTANCES[val];
+                const unit = unitSelect.value === 'km' ? 'km' : 'mi';
+                const f = unitSelect.value === 'km' ? 1.60934 : 1;
+                document.getElementById('tri-swim-dist').value = (tri.swim * f).toFixed(1) + ' ' + unit;
+                document.getElementById('tri-bike-dist').value = (tri.bike * f).toFixed(1) + ' ' + unit;
+                document.getElementById('tri-run-dist').value = (tri.run * f).toFixed(1) + ' ' + unit;
             }
+            populateDefaultNutrition();
         }
 
-        // Format time as HH:MM:SS
-        function formatTime(totalSeconds) {
-            const hours = Math.floor(totalSeconds / 3600);
-            const minutes = Math.floor((totalSeconds % 3600) / 60);
-            const seconds = Math.round(totalSeconds % 60);
+        function onUnitChange() {
+            customDistUnit.textContent = unitSelect.value === 'km' ? 'km' : 'miles';
+            updateIntervalOptions();
+            onDistanceChange();
+        }
 
-            if (hours > 0) {
-                return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        function onFormSubmit(e) {
+            e.preventDefault();
+            currentSport === 'triathlon' ? generateTriathlonCard() : generateRaceCard();
+        }
+
+        function updateDistanceOptions() {
+            distanceSelect.innerHTML = (DISTANCE_PRESETS[currentSport] || []).map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+        }
+
+        function updateIntervalOptions() {
+            const isKm = unitSelect.value === 'km';
+            let presets;
+            if (currentSport === 'cycling') {
+                presets = isKm ? [{ label: 'Every 10 km', value: 10 }, { label: 'Every 20 km', value: 20 }, { label: 'Every 30 km', value: 30 }] : INTERVAL_PRESETS.cycling;
+            } else if (currentSport === 'running') {
+                presets = isKm ? [{ label: 'Every 1 km', value: 1 }, { label: 'Every 5 km', value: 5 }, { label: 'Every 2 km', value: 2 }] : INTERVAL_PRESETS.running;
             } else {
-                return `${minutes}:${String(seconds).padStart(2, '0')}`;
+                presets = INTERVAL_PRESETS.triathlon;
             }
+            intervalSelect.innerHTML = presets.map(p => `<option value="${p.value}">${p.label}</option>`).join('');
         }
 
-        // Generate pace band
-        function generatePaceBand(formData) {
-            const hours = parseInt(formData.get('hours')) || 0;
-            const minutes = parseInt(formData.get('minutes')) || 0;
-            const seconds = parseInt(formData.get('seconds')) || 0;
-            const distanceKey = formData.get('distance');
-            const units = formData.get('units');
-            const strategy = formData.get('strategy');
-            const bandName = formData.get('bandName') || `${distanceKey.toUpperCase()} ${strategy} splits`;
-
-            // Calculate total time in seconds
-            const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
-
-            if (totalSeconds <= 0) {
-                alert('Please enter a valid finish time.');
-                return;
-            }
-
-            // Get distance
-            const distance = raceDistances[distanceKey][units];
-
-            // Calculate pace per unit
-            let pacePerUnit = totalSeconds / distance;
-
-            // Generate splits
-            const splits = [];
-            const numSplits = Math.ceil(distance);
-
-            if (strategy === 'even') {
-                // Even splits - same pace throughout
-                for (let i = 1; i <= numSplits; i++) {
-                    const splitTime = pacePerUnit * i;
-                    splits.push({
-                        marker: i,
-                        time: formatTime(splitTime),
-                        pace: formatTime(pacePerUnit)
-                    });
-                }
-            } else {
-                // Negative splits - first half 2.5% slower, second half 2.5% faster
-                const halfDistance = distance / 2;
-                const firstHalfPace = pacePerUnit * 1.025;
-                const secondHalfPace = pacePerUnit * 0.975;
-
-                for (let i = 1; i <= numSplits; i++) {
-                    let cumulativeTime;
-                    let currentPace;
-
-                    if (i <= halfDistance) {
-                        cumulativeTime = firstHalfPace * i;
-                        currentPace = firstHalfPace;
-                    } else {
-                        const firstHalfTime = firstHalfPace * halfDistance;
-                        const secondHalfDistance = i - halfDistance;
-                        cumulativeTime = firstHalfTime + (secondHalfPace * secondHalfDistance);
-                        currentPace = secondHalfPace;
-                    }
-
-                    splits.push({
-                        marker: i,
-                        time: formatTime(cumulativeTime),
-                        pace: formatTime(currentPace)
-                    });
-                }
-            }
-
-            // Display the pace band
-            displayPaceBand(splits, {
-                name: bandName,
-                distance: `${distanceKey.toUpperCase()} (${distance} ${units})`,
-                targetTime: formatTime(totalSeconds),
-                strategy: strategy === 'even' ? 'Even Splits' : 'Negative Splits',
-                units: units,
-                distanceKey: distanceKey,
-                strategyKey: strategy,
-                time: `${hours}:${minutes}:${seconds}`
-            });
-        }
-
-        // Display pace band
-        function displayPaceBand(splits, config) {
-            const resultDiv = document.getElementById('pace-band-result');
-            const printDiv = document.getElementById('pace-band-print');
-
-            // Create wristband HTML
-            const wristbandHTML = `
-                <div class="pace-band-wristband bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto mb-8">
-                    <div class="text-center mb-4 border-b-2 border-gray-300 pb-4">
-                        <h3 class="text-2xl font-bold text-gray-900">${config.name}</h3>
-                        <div class="text-lg text-gray-700 mt-2">${config.distance}</div>
-                        <div class="text-md text-gray-600">Target: ${config.targetTime}</div>
-                        <div class="text-sm text-gray-500">${config.strategy}</div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-2">
-                        ${splits.map(split => `
-                            <div class="split-row flex justify-between items-center p-2 rounded">
-                                <span class="font-semibold text-gray-900">${split.marker} ${config.units === 'miles' ? 'mi' : 'km'}</span>
-                                <span class="text-gray-700 font-medium">${split.time}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-
-                    <div class="text-center mt-4 pt-4 border-t-2 border-gray-300 text-xs text-gray-500">
-                        Generated by RunBikeCalc.com
-                    </div>
+        function addNutritionRow(marker, note) {
+            const markerVal = typeof marker === 'number' ? marker : '';
+            const noteVal = typeof note === 'string' ? note : '';
+            const unitLabel = unitSelect.value === 'km' ? 'km' : 'mi';
+            const row = document.createElement('div');
+            row.className = 'nutrition-row';
+            row.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <input type="number" class="nutrition-marker w-16 px-2 py-1.5 border border-gray-300 rounded-md text-sm" placeholder="0" min="0" step="0.1" value="${markerVal}">
+                    <span class="text-xs text-gray-500 font-medium w-6">${unitLabel}</span>
                 </div>
+                <input type="text" class="nutrition-note flex-1 px-2 py-1.5 border border-gray-300 rounded-md text-sm" placeholder="e.g., Gel + water" value="${noteVal}">
+                <button type="button" class="text-red-500 hover:text-red-700 text-sm font-bold px-2" onclick="this.parentElement.remove()">&#10005;</button>
             `;
+            nutritionContainer.appendChild(row);
+        }
 
-            printDiv.innerHTML = wristbandHTML;
+        function populateDefaultNutrition() {
+            nutritionContainer.innerHTML = '';
+            const distVal = distanceSelect.value;
+            if (currentSport === 'triathlon') {
+                const tri = TRI_DISTANCES[distVal];
+                if (!tri) return;
+                if (tri.bike >= 56) {
+                    for (let m = 10; m < tri.bike; m += 15) addNutritionRow(m, m % 30 === 0 ? 'Bar or real food' : 'Gel + water');
+                } else {
+                    addNutritionRow(Math.round(tri.bike / 3), 'Gel + water');
+                    addNutritionRow(Math.round(tri.bike * 2 / 3), 'Gel + water');
+                }
+                return;
+            }
+            const dist = parseFloat(distVal) || 0;
+            let defaults;
+            if (currentSport === 'cycling') {
+                defaults = dist <= 40 ? NUTRITION_DEFAULTS.cycling.short : dist <= 70 ? NUTRITION_DEFAULTS.cycling.medium : NUTRITION_DEFAULTS.cycling.long;
+            } else {
+                defaults = dist <= 6.2 ? NUTRITION_DEFAULTS.running.short : dist <= 13.1 ? NUTRITION_DEFAULTS.running.medium : NUTRITION_DEFAULTS.running.long;
+            }
+            if (defaults) defaults.filter(d => d.marker <= dist).forEach(d => addNutritionRow(d.marker, d.note));
+        }
+
+        function getNutritionEntries() {
+            const entries = [];
+            nutritionContainer.querySelectorAll('.nutrition-row').forEach(row => {
+                const marker = parseFloat(row.querySelector('.nutrition-marker').value);
+                const note = row.querySelector('.nutrition-note').value.trim();
+                if (!isNaN(marker) && note) entries.push({ marker, note });
+            });
+            return entries.sort((a, b) => a.marker - b.marker);
+        }
+
+        function formatTime(totalSeconds) {
+            if (totalSeconds < 0) totalSeconds = 0;
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = Math.round(totalSeconds % 60);
+            return h > 0 ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${m}:${String(s).padStart(2,'0')}`;
+        }
+
+        function getDistance() {
+            const val = distanceSelect.value;
+            return val === 'custom' ? (parseFloat(customDistInput.value) || 0) : (parseFloat(val) || 0);
+        }
+
+        function getTotalSeconds() {
+            return (parseInt(document.getElementById('hours').value) || 0) * 3600 + (parseInt(document.getElementById('minutes').value) || 0) * 60 + (parseInt(document.getElementById('seconds').value) || 0);
+        }
+
+        function generateRaceCard() {
+            const distance = getDistance(), totalSeconds = getTotalSeconds(), interval = parseFloat(intervalSelect.value) || 1;
+            const unit = unitSelect.value === 'km' ? 'km' : 'mi', raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
+            if (distance <= 0) { alert('Please enter a valid distance.'); return; }
+            if (totalSeconds <= 0) { alert('Please enter a valid finish time.'); return; }
+            const pacePerUnit = totalSeconds / distance, splits = [];
+            for (let d = interval; d <= distance; d += interval) {
+                const matchNut = nutrition.filter(n => n.marker > (d - interval) && n.marker <= d);
+                splits.push({ marker: Math.round(d * 10) / 10, time: formatTime(pacePerUnit * d), nutrition: matchNut.map(n => n.note).join(', ') || '' });
+            }
+            const lastMarker = splits.length ? splits[splits.length - 1].marker : 0;
+            if (Math.abs(lastMarker - distance) > 0.05) {
+                const remainNut = nutrition.filter(n => n.marker > lastMarker && n.marker <= distance);
+                splits.push({ marker: Math.round(distance * 10) / 10, time: formatTime(totalSeconds), nutrition: remainNut.map(n => n.note).join(', ') || 'FINISH' });
+            } else if (splits.length && !splits[splits.length - 1].nutrition) {
+                splits[splits.length - 1].nutrition = 'FINISH';
+            }
+            currentCardData = { sport: currentSport, raceName: raceName || `${distance} ${unit} ${currentSport}`, distance: `${distance} ${unit}`, targetTime: formatTime(totalSeconds), unit, splits };
+            displayRaceCard(currentCardData);
+        }
+
+        function generateTriathlonCard() {
+            const triKey = distanceSelect.value, tri = TRI_DISTANCES[triKey];
+            if (!tri) { alert('Please select a triathlon distance.'); return; }
+            const unit = unitSelect.value === 'km' ? 'km' : 'mi', factor = unitSelect.value === 'km' ? 1.60934 : 1;
+            const raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
+            function legSec(p) { return (parseInt(document.getElementById('tri-'+p+'-h').value)||0)*3600 + (parseInt(document.getElementById('tri-'+p+'-m').value)||0)*60 + (parseInt(document.getElementById('tri-'+p+'-s').value)||0); }
+            const swimSec = legSec('swim'), bikeSec = legSec('bike'), runSec = legSec('run'), totalSec = swimSec + bikeSec + runSec;
+            const swimDist = tri.swim * factor, swimInt = unitSelect.value === 'km' ? 0.5 : 0.25, swimPace = swimSec / swimDist, swimSplits = [];
+            for (let d = swimInt; d <= swimDist + 0.01; d += swimInt) swimSplits.push({ marker: Math.round(d * 100) / 100, time: formatTime(swimPace * d), nutrition: '' });
+            const bikeDist = tri.bike * factor, bikeInt = unitSelect.value === 'km' ? 10 : 5, bikePace = bikeSec / bikeDist, bikeSplits = [];
+            for (let d = bikeInt; d <= bikeDist + 0.01; d += bikeInt) {
+                const mn = nutrition.filter(n => n.marker > (d - bikeInt) && n.marker <= d);
+                bikeSplits.push({ marker: Math.round(d * 10) / 10, time: formatTime(swimSec + bikePace * d), nutrition: mn.map(n => n.note).join(', ') || '' });
+            }
+            const lastBike = bikeSplits.length ? bikeSplits[bikeSplits.length - 1].marker : 0;
+            if (Math.abs(lastBike - bikeDist) > 0.5) bikeSplits.push({ marker: Math.round(bikeDist * 10) / 10, time: formatTime(swimSec + bikeSec), nutrition: 'T2' });
+            const runDist = tri.run * factor, runPace = runSec / runDist, runSplits = [], t2 = swimSec + bikeSec;
+            for (let d = 1; d <= runDist + 0.01; d += 1) runSplits.push({ marker: Math.round(d * 10) / 10, time: formatTime(t2 + runPace * d), nutrition: d % 3 < 1 ? 'Water/cola at aid' : '' });
+            currentCardData = { sport: 'triathlon', raceName: raceName || `${triKey} Triathlon`, distance: triKey.toUpperCase(), targetTime: formatTime(totalSec), unit, sections: [
+                { name: 'SWIM', distance: swimDist.toFixed(1)+' '+unit, time: formatTime(swimSec), splits: swimSplits },
+                { name: 'BIKE', distance: bikeDist.toFixed(1)+' '+unit, time: formatTime(bikeSec), splits: bikeSplits },
+                { name: 'RUN', distance: runDist.toFixed(1)+' '+unit, time: formatTime(runSec), splits: runSplits }
+            ]};
+            displayRaceCard(currentCardData);
+        }
+
+        function displayRaceCard(data) {
+            let html = '';
+            if (data.sport === 'triathlon' && data.sections) {
+                html = `<div class="race-card-strip bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto mb-8">
+                    <div class="text-center mb-3 border-b-2 border-gray-800 pb-3"><h3 class="text-lg font-bold text-gray-900">${esc(data.raceName)}</h3><div class="text-sm text-gray-700">${data.distance} | Target: ${data.targetTime}</div></div>
+                    ${data.sections.map(s => `<div class="mb-3"><div class="bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-t">${s.name} — ${s.distance} — ${s.time}</div>
+                    <table class="w-full text-xs border-collapse"><thead><tr class="bg-gray-100"><th class="text-left px-2 py-1 border-b font-semibold w-16">${data.unit}</th><th class="text-left px-2 py-1 border-b font-semibold w-24">Time</th><th class="text-left px-2 py-1 border-b font-semibold">Nutrition</th></tr></thead><tbody>
+                    ${s.splits.map((r,i) => `<tr class="${i%2?'bg-gray-50':''}"><td class="px-2 py-1 border-b font-semibold">${r.marker}</td><td class="px-2 py-1 border-b">${r.time}</td><td class="px-2 py-1 border-b text-gray-600">${esc(r.nutrition)}</td></tr>`).join('')}
+                    </tbody></table></div>`).join('')}
+                    <div class="text-center text-xs text-gray-400 pt-2 border-t">RunBikeCalc.com</div></div>`;
+            } else {
+                html = `<div class="race-card-strip bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto mb-8">
+                    <div class="text-center mb-3 border-b-2 border-gray-800 pb-3"><h3 class="text-lg font-bold text-gray-900">${esc(data.raceName)}</h3><div class="text-sm text-gray-700">${data.distance} | Target: ${data.targetTime}</div></div>
+                    <table class="w-full text-sm border-collapse"><thead><tr class="bg-gray-100"><th class="text-left px-3 py-2 border-b font-semibold w-20">${data.unit==='km'?'KM':'Mile'}</th><th class="text-left px-3 py-2 border-b font-semibold w-28">Goal Time</th><th class="text-left px-3 py-2 border-b font-semibold">Nutrition</th></tr></thead><tbody>
+                    ${data.splits.map((s,i) => `<tr class="split-row ${i%2?'bg-gray-50':''}"><td class="px-3 py-2 border-b font-semibold">${s.marker}</td><td class="px-3 py-2 border-b">${s.time}</td><td class="px-3 py-2 border-b text-gray-600">${esc(s.nutrition)}</td></tr>`).join('')}
+                    </tbody></table><div class="text-center text-xs text-gray-400 pt-3 mt-3 border-t">RunBikeCalc.com</div></div>`;
+            }
+            printDiv.innerHTML = html;
             resultDiv.classList.remove('hidden');
-
-            // Show save button
-            document.getElementById('save-band').classList.remove('hidden');
-
-            // Store current config for saving
-            window.currentPaceBand = config;
-
-            // Scroll to result
             resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // Form submission
-        document.getElementById('pace-band-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            generatePaceBand(formData);
-        });
+        function esc(s) { if (!s) return ''; var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-        // Save pace band
-        document.getElementById('save-band').addEventListener('click', function() {
-            if (!window.currentPaceBand) {
-                alert('Please generate a pace band first.');
+        function onDownloadPDF() {
+            if (!currentCardData) { alert('Please generate a race card first.'); return; }
+            if (localStorage.getItem(PREMIUM_KEY) !== 'true') {
+                if (typeof gtag === 'function') gtag('event', 'begin_checkout', { 'event_category': 'Premium', 'event_label': 'Race Card PDF' });
+                window.location.href = STRIPE_LINK;
                 return;
             }
+            generatePDF(currentCardData);
+        }
 
-            const bands = loadSavedBands();
-
-            // Check if already saved
-            const existingIndex = bands.findIndex(b => b.name === window.currentPaceBand.name);
-            if (existingIndex !== -1) {
-                if (!confirm('A pace band with this name already exists. Overwrite?')) {
-                    return;
-                }
-                bands[existingIndex] = window.currentPaceBand;
+        function generatePDF(data) {
+            if (!window.jspdf) { alert('PDF library is still loading. Please try again in a moment.'); return; }
+            const { jsPDF } = window.jspdf;
+            let pw, ph;
+            if (data.sport === 'cycling') { pw = 432; ph = 108; }
+            else if (data.sport === 'running') { pw = 576; ph = 108; }
+            else { pw = 612; ph = 288; }
+            const doc = new jsPDF({ orientation: pw > ph ? 'landscape' : 'portrait', unit: 'pt', format: [pw, ph] });
+            const m = 8; let y = m;
+            doc.setFontSize(8); doc.setFont(undefined, 'bold');
+            doc.text(data.raceName, pw / 2, y + 8, { align: 'center' }); y += 12;
+            doc.setFontSize(6); doc.setFont(undefined, 'normal');
+            doc.text(`${data.distance} | Target: ${data.targetTime}`, pw / 2, y + 5, { align: 'center' }); y += 10;
+            doc.setLineDashPattern([3, 2], 0); doc.setDrawColor(180);
+            doc.rect(2, 2, pw - 4, ph - 4); doc.setLineDashPattern([], 0);
+            if (data.sport === 'triathlon' && data.sections) {
+                data.sections.forEach(sec => {
+                    doc.setFontSize(6); doc.setFont(undefined, 'bold');
+                    doc.text(`${sec.name} — ${sec.distance}`, m, y + 6); y += 8;
+                    doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit==='km'?'KM':'Mi', 'Time', 'Nutrition']], body: sec.splits.map(s => [String(s.marker), s.time, s.nutrition||'']), theme: 'grid', styles: { fontSize: 5, cellPadding: 1.5 }, headStyles: { fillColor: [50,50,50], fontSize: 5 }, columnStyles: { 0: { cellWidth: 25 }, 1: { cellWidth: 40 } } });
+                    y = doc.lastAutoTable.finalY + 4;
+                });
             } else {
-                bands.push(window.currentPaceBand);
+                doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit==='km'?'KM':'Mile', 'Goal Time', 'Nutrition']], body: data.splits.map(s => [String(s.marker), s.time, s.nutrition||'']), theme: 'grid', styles: { fontSize: 6, cellPadding: 2 }, headStyles: { fillColor: [50,50,50], fontSize: 6 }, columnStyles: { 0: { cellWidth: 35 }, 1: { cellWidth: 50 } } });
             }
+            doc.setFontSize(5); doc.setTextColor(150);
+            doc.text('RunBikeCalc.com', pw / 2, ph - 4, { align: 'center' });
+            doc.save(`race-card-${data.raceName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.pdf`);
+        }
 
-            saveBands(bands);
-            displaySavedBands();
-            alert('Pace band saved!');
-        });
-
-        // Initialize
-        displaySavedBands();
+        init();
+    })();
     </script>
 </body>
 </html>
