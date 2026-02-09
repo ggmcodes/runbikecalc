@@ -19,7 +19,7 @@
 
     <title>Pace Band & Race Card Generator - Printable Splits + Nutrition | RunBikeCalc</title>
     <link rel="canonical" href="https://runbikecalc.com/pace-band-generator">
-    <meta name="description" content="Generate custom pace bands and race cards for cycling, running, and triathlon. Printable wristbands and top tube cards with split times and nutrition reminders. Free preview, PDF download available.">
+    <meta name="description" content="Generate custom pace bands and race cards for cycling, running, and triathlon. Printable wristbands and top tube cards with split times and nutrition reminders.">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Pace Band & Race Card Generator - Splits + Nutrition for Race Day">
@@ -39,6 +39,12 @@
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
     <link rel="apple-touch-icon" href="/favicon.ico">
+    <meta name="theme-color" content="#C67B4E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,10 +53,18 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#7c3aed',
-                        accent: '#ea580c',
-                        dark: '#1f2937'
+                        'cream': '#FAF8F5',
+                        'cream-dark': '#F0EDE8',
+                        'charcoal': '#1A1A1A',
+                        'copper': '#C67B4E',
+                        'copper-light': '#D4916A',
+                        'copper-dark': '#A66840',
+                        'sage': '#7A9E7E',
+                        'warm-gray': '#6B6B6B',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Source Sans 3', 'sans-serif'],
                     }
                 }
             }
@@ -61,8 +75,87 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js" defer></script>
 
-    <!-- Print CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+
     <style>
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #FAF8F5;
+        }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Grain overlay */
+        .grain-overlay { position: relative; }
+        .grain-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Section divider */
+        .section-divider { width: 60px; height: 2px; background: #C67B4E; }
+
+        /* Premium inputs */
+        .premium-input {
+            background: white;
+            border: 1px solid #E5E5E5;
+            transition: all 0.2s ease;
+        }
+        .premium-input:focus {
+            border-color: #C67B4E;
+            box-shadow: 0 0 0 3px rgba(198, 123, 78, 0.1);
+            outline: none;
+        }
+        .premium-input:hover:not(:focus) { border-color: #D4D4D4; }
+
+        /* Sport tabs */
+        .sport-tab {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .sport-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 2px;
+            background: #C67B4E;
+            transition: width 0.3s ease;
+        }
+        .sport-tab:hover::after,
+        .sport-tab.active::after { width: 100%; }
+        .sport-tab.active { color: #1A1A1A; }
+
+        /* Card hover */
+        .card-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-lift:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.08); }
+
+        /* Link underline */
+        .link-underline { position: relative; }
+        .link-underline::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 1px; background: #C67B4E; transition: width 0.3s ease;
+        }
+        .link-underline:hover::after { width: 100%; }
+
+        /* Nutrition row */
+        .nutrition-row { display: flex; gap: 0.5rem; align-items: center; }
+
+        /* Fade in animation */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up { animation: fadeUp 0.5s ease forwards; }
+        .fade-up-d1 { animation-delay: 0.1s; opacity: 0; }
+        .fade-up-d2 { animation-delay: 0.2s; opacity: 0; }
+        .fade-up-d3 { animation-delay: 0.3s; opacity: 0; }
+
+        /* Print CSS */
         @media print {
             body * { visibility: hidden; }
             #race-card-print, #race-card-print * { visibility: visible; }
@@ -70,12 +163,9 @@
             .no-print { display: none !important; }
             @page { size: portrait; margin: 0.5cm; }
         }
-        .race-card-strip { border: 2px dashed #ccc; page-break-inside: avoid; }
-        .split-row:nth-child(even) { background-color: #f9fafb; }
-        .nutrition-row { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
     </style>
 
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Schema.org structured data -->
@@ -132,14 +222,6 @@
             },
             {
                 "@type": "Question",
-                "name": "Is the pace band preview free?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! The on-screen preview is completely free. You can also print directly from your browser at no cost. The $5 PDF option gives you a precisely formatted card sized for a bike top tube (1.5 x 6 inches) or wristband (1.5 x 8 inches) with cutting guides."
-                }
-            },
-            {
-                "@type": "Question",
                 "name": "What's the difference between mile and kilometer splits?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -149,17 +231,10 @@
         ]
     }
     </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/fonts.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Skip to main content for accessibility -->
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip to main content</a>
+<body class="bg-cream text-charcoal">
 
-    <!-- Site Navigation -->
+    <!-- Navigation -->
     <nav class="site-nav">
         <div class="nav-container">
             <a href="/" class="site-logo">RunBikeCalc</a>
@@ -190,393 +265,458 @@
         </div>
     </nav>
 
-    <!-- Main content -->
-    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
-        <!-- Breadcrumb navigation -->
-        <nav aria-label="Breadcrumb" class="mb-6 no-print">
-            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
-                <li><a href="/" class="hover:text-primary">Home</a></li>
-                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
-                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Pace Band Generator</li>
-            </ol>
-        </nav>
+    <!-- Main Content -->
+    <main class="grain-overlay">
+        <div class="relative z-10">
 
-        <!-- Page heading -->
-        <div class="mb-8 no-print">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">Pace Band & Race Card Generator</h1>
-            <p class="text-lg text-gray-600">Create printable race cards with split times and nutrition reminders for cycling, running, or triathlon. Free preview on screen — download a formatted PDF ($5) sized for bike top tubes or wristbands.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Main content area -->
-            <div class="md:col-span-2">
-                <!-- Race Card Form -->
-                <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
-                    <h2 class="text-2xl font-semibold mb-6">Build Your Race Card</h2>
-
-                    <form id="race-card-form" class="space-y-6">
-                        <!-- Sport Type -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Sport Type *</label>
-                            <div class="flex flex-wrap gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="sport" value="cycling" checked class="w-4 h-4 text-primary">
-                                    <span>Cycling</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="sport" value="running" class="w-4 h-4 text-primary">
-                                    <span>Running</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="sport" value="triathlon" class="w-4 h-4 text-primary">
-                                    <span>Triathlon</span>
-                                </label>
-                            </div>
-                            <p id="sport-hint" class="text-xs text-gray-500 mt-1">Card sized for bike top tube</p>
-                        </div>
-
-                        <!-- Race Distance -->
-                        <div>
-                            <label for="race-distance" class="block text-sm font-medium text-gray-700 mb-2">Race Distance *</label>
-                            <select id="race-distance" name="distance" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></select>
-                        </div>
-
-                        <!-- Custom Distance (hidden by default) -->
-                        <div id="custom-distance-group" class="hidden">
-                            <label for="custom-distance" class="block text-sm font-medium text-gray-700 mb-2">Custom Distance</label>
-                            <div class="flex gap-2 items-center">
-                                <input type="number" id="custom-distance" step="0.1" min="0.1" class="w-32 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="50">
-                                <span id="custom-distance-unit" class="text-gray-600">miles</span>
-                            </div>
-                        </div>
-
-                        <!-- Unit System -->
-                        <div>
-                            <label for="unit-system" class="block text-sm font-medium text-gray-700 mb-2">Unit System *</label>
-                            <select id="unit-system" name="units" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                <option value="miles">Miles</option>
-                                <option value="km">Kilometers</option>
-                            </select>
-                        </div>
-
-                        <!-- Triathlon Distances (hidden by default) -->
-                        <div id="tri-distances-group" class="hidden space-y-4">
-                            <p class="text-sm font-medium text-gray-700">Triathlon Leg Distances</p>
-                            <div class="grid grid-cols-3 gap-3">
-                                <div>
-                                    <label class="text-xs text-gray-500">Swim</label>
-                                    <input type="text" id="tri-swim-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
-                                </div>
-                                <div>
-                                    <label class="text-xs text-gray-500">Bike</label>
-                                    <input type="text" id="tri-bike-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
-                                </div>
-                                <div>
-                                    <label class="text-xs text-gray-500">Run</label>
-                                    <input type="text" id="tri-run-dist" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50" readonly>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Target Finish Time -->
-                        <div id="target-time-section">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Target Finish Time *</label>
-                            <div class="grid grid-cols-3 gap-2">
-                                <div>
-                                    <input type="number" id="hours" name="hours" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="0" min="0" max="24" value="0">
-                                    <p class="text-xs text-gray-600 mt-1">Hours</p>
-                                </div>
-                                <div>
-                                    <input type="number" id="minutes" name="minutes" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="30" required min="0" max="59" value="30">
-                                    <p class="text-xs text-gray-600 mt-1">Minutes</p>
-                                </div>
-                                <div>
-                                    <input type="number" id="seconds" name="seconds" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="0" min="0" max="59" value="0">
-                                    <p class="text-xs text-gray-600 mt-1">Seconds</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Triathlon Leg Times (hidden by default) -->
-                        <div id="tri-times-group" class="hidden space-y-4">
-                            <p class="text-sm font-medium text-gray-700">Target Times by Leg</p>
-                            <div class="space-y-3">
-                                <div>
-                                    <label class="text-xs text-gray-500 mb-1 block">Swim Target</label>
-                                    <div class="grid grid-cols-3 gap-2">
-                                        <div><input type="number" id="tri-swim-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="5" value="0"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
-                                        <div><input type="number" id="tri-swim-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="35"><p class="text-xs text-gray-600 mt-1">Min</p></div>
-                                        <div><input type="number" id="tri-swim-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="text-xs text-gray-500 mb-1 block">Bike Target</label>
-                                    <div class="grid grid-cols-3 gap-2">
-                                        <div><input type="number" id="tri-bike-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="12" value="2"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
-                                        <div><input type="number" id="tri-bike-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="45"><p class="text-xs text-gray-600 mt-1">Min</p></div>
-                                        <div><input type="number" id="tri-bike-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="text-xs text-gray-500 mb-1 block">Run Target</label>
-                                    <div class="grid grid-cols-3 gap-2">
-                                        <div><input type="number" id="tri-run-h" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="8" value="2"><p class="text-xs text-gray-600 mt-1">Hours</p></div>
-                                        <div><input type="number" id="tri-run-m" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Min</p></div>
-                                        <div><input type="number" id="tri-run-s" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="0" max="59" value="0"><p class="text-xs text-gray-600 mt-1">Sec</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Split Interval -->
-                        <div>
-                            <label for="split-interval" class="block text-sm font-medium text-gray-700 mb-2">Split Interval</label>
-                            <select id="split-interval" name="interval" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></select>
-                        </div>
-
-                        <!-- Nutrition Plan -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Nutrition Plan</label>
-                            <p class="text-xs text-gray-500 mb-3">Add reminders for when to eat, drink, or take gels. These appear on your race card at the specified mile/km markers.</p>
-                            <div id="nutrition-rows" class="space-y-2 mb-3"></div>
-                            <button type="button" id="add-nutrition" class="text-sm text-primary hover:underline font-medium">+ Add Nutrition Reminder</button>
-                        </div>
-
-                        <!-- Race Name -->
-                        <div>
-                            <label for="race-name" class="block text-sm font-medium text-gray-700 mb-2">Race Name (Optional)</label>
-                            <input type="text" id="race-name" name="raceName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="e.g., IRONMAN 70.3 Chattanooga">
-                        </div>
-
-                        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto">
-                            Generate Race Card
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Generated Race Card -->
-                <div id="race-card-result" class="hidden">
-                    <div class="bg-white rounded-lg shadow-md p-6 mb-8 no-print">
-                        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
-                            <h3 class="text-xl font-semibold">Your Race Card</h3>
-                            <div class="flex flex-wrap gap-3">
-                                <button onclick="window.print()" class="bg-secondary text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition-colors text-sm">
-                                    Print Preview
-                                </button>
-                                <button id="download-pdf-btn" class="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors text-sm">
-                                    Download PDF — $5
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 text-sm">Cut along the dashed lines. Attach to your bike top tube with tape or wrap around your wrist.</p>
-                    </div>
-
-                    <!-- Printable Race Card -->
-                    <div id="race-card-print"></div>
-                </div>
-
-                <!-- Educational content -->
-                <div class="content-box">
-                <article class="prose prose-lg max-w-none no-print">
-                    <h2>How to Use a Race Card</h2>
-                    <p>A race card combines split times with nutrition reminders into a single compact strip you carry during your race. Unlike a basic pace band that only shows times, a race card is your complete race-day reference — telling you both where you should be and what you should be consuming at each checkpoint.</p>
-
-                    <h3>Three Columns, One Card</h3>
-                    <ul>
-                        <li><strong>Distance markers</strong> so you know exactly where you are</li>
-                        <li><strong>Cumulative goal times</strong> to stay on pace</li>
-                        <li><strong>Nutrition reminders</strong> so you never miss a fueling window</li>
-                    </ul>
-
-                    <h3>Race Cards for Different Sports</h3>
-
-                    <h4>Cycling</h4>
-                    <p>Cycling race cards are sized to fit on your bike's top tube (approximately 1.5" x 6"). Apply with clear packing tape or use a top tube race number holder. Cycling nutrition is especially important — plan for 40-60g of carbs per hour on rides over 90 minutes.</p>
-
-                    <h4>Running</h4>
-                    <p>Running race cards are sized for your wrist (approximately 1.5" x 8"). Wrap around your forearm and secure with clear tape or a sweatband. Keep nutrition simple — gels every 30-45 minutes with water at aid stations.</p>
-
-                    <h4>Triathlon</h4>
-                    <p>Triathlon race cards include separate sections for swim, bike, and run. The bike section is the most critical for nutrition since that's where you consume the most calories. Attach the card to your bike top tube and reference the run splits from memory or a separate wrist card.</p>
-
-                    <h3>Printing and Wearing Your Race Card</h3>
-                    <ol>
-                        <li><strong>Print:</strong> Use the Print button or download the PDF for a precisely sized card</li>
-                        <li><strong>Cut:</strong> Cut along the dashed lines carefully</li>
-                        <li><strong>Weather-Proof:</strong> Optional — laminate or cover with clear packing tape</li>
-                        <li><strong>Attach:</strong> Top tube tape for cycling, wrist wrap for running, or pin to race bib</li>
-                        <li><strong>Use During Race:</strong> Check your actual time at each marker and follow nutrition cues</li>
+            <!-- Hero Section -->
+            <div class="pt-16 pb-12 text-center no-print">
+                <nav aria-label="Breadcrumb" class="mb-8">
+                    <ol class="flex flex-wrap justify-center gap-2 text-sm text-charcoal/50">
+                        <li><a href="/" class="hover:text-copper link-underline">Home</a></li>
+                        <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-copper link-underline">Running Tools</a></li>
+                        <li class="before:content-['/'] before:mx-2 text-charcoal font-medium">Pace Band Generator</li>
                     </ol>
+                </nav>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal mb-6 fade-up">
+                    Pace Band & Race Card
+                </h1>
+                <p class="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-6 fade-up fade-up-d1">
+                    Build a printable race card with split times and nutrition reminders. Sized for your bike top tube, wrist, or race bib.
+                </p>
+                <div class="section-divider mx-auto fade-up fade-up-d2"></div>
+            </div>
 
-                    <h3>Nutrition Planning Tips</h3>
-                    <ul>
-                        <li><strong>Test in training:</strong> Never try new nutrition on race day</li>
-                        <li><strong>Start early:</strong> Begin fueling within the first 30-45 minutes</li>
-                        <li><strong>Stay consistent:</strong> Small, frequent intake beats large, infrequent meals</li>
-                        <li><strong>Hydrate separately:</strong> Don't rely on gels alone — plan water intake too</li>
-                        <li><strong>Adjust for heat:</strong> Increase fluid and electrolyte intake in hot conditions</li>
-                    </ul>
-                </article>
-
-                <!-- Product Recommendations -->
-                <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-                    <h3 class="text-xl font-semibold mb-4">Race Day Essentials</h3>
-                    <p class="text-xs text-gray-500 mb-4">As an Amazon Associate, we earn from qualifying purchases.</p>
-                    <div class="space-y-4">
-                        <div class="border-b border-gray-100 pb-4">
-                            <h4 class="font-medium text-gray-900 mb-1">GU Energy Gel Variety Pack</h4>
-                            <p class="text-sm text-gray-600 mb-2">Race-day fuel for endurance events. Easy to carry and consume on the move.</p>
-                            <a href="https://www.amazon.com/s?k=GU+Energy+Gel+variety+pack&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
-                        </div>
-                        <div class="border-b border-gray-100 pb-4">
-                            <h4 class="font-medium text-gray-900 mb-1">Top Tube Race Number Holder</h4>
-                            <p class="text-sm text-gray-600 mb-2">Clear sleeve for attaching race cards and numbers to your bike top tube.</p>
-                            <a href="https://www.amazon.com/s?k=bike+top+tube+race+number+holder&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Garmin Forerunner 265</h4>
-                            <p class="text-sm text-gray-600 mb-2">AMOLED GPS watch with pace alerts and race predictor.</p>
-                            <a href="https://www.amazon.com/s?k=Garmin+Forerunner+265&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="text-sm text-primary hover:underline">View on Amazon</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Section -->
-                <div class="space-y-6 mt-8 no-print">
-                    <h3 class="text-2xl font-bold">Frequently Asked Questions</h3>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">What is a pace band and how does it work?</h4>
-                        <p class="text-gray-700">A pace band is a printable strip that shows your target split times at each mile or kilometer marker during a race. Our enhanced race card version adds a nutrition column so you can track fueling alongside pacing. Wear it on your wrist, attach to your bike top tube, or pin to your race bib.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">What sports does the race card generator support?</h4>
-                        <p class="text-gray-700">The generator supports cycling (25mi to 112mi+), running (5K to 50K+), and triathlon (Sprint, Olympic, 70.3, 140.6). Cycling cards are sized for bike top tubes, running cards for wristbands, and triathlon cards include separate swim/bike/run sections.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">How should I plan nutrition on my race card?</h4>
-                        <p class="text-gray-700">A general guideline is 30-60g of carbohydrates per hour for events over 90 minutes. For cycling, plan nutrition every 20-30 minutes. For running, every 30-45 minutes. The tool pre-populates sensible defaults based on your race distance that you can fully customize.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">Is the pace band preview free?</h4>
-                        <p class="text-gray-700">Yes! The on-screen preview is completely free. You can also print directly from your browser at no cost. The $5 PDF option gives you a precisely formatted card sized for a bike top tube or wristband with cutting guides.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">Does the race card work for triathlon?</h4>
-                        <p class="text-gray-700">Yes! The triathlon mode generates a race card with separate sections for swim, bike, and run. Each section has its own split times and nutrition plan, helping you manage pacing and fueling across all three disciplines.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-lg mb-2">What's the difference between mile and kilometer splits?</h4>
-                        <p class="text-gray-700">Mile splits show cumulative time at each mile marker, while kilometer splits show times at each kilometer. Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers.</p>
-                    </div>
-                </div>
+            <!-- Sport Tabs -->
+            <div class="flex justify-center mb-10 no-print fade-up fade-up-d3">
+                <div class="inline-flex gap-8 border-b border-charcoal/10 pb-1">
+                    <button class="sport-tab active text-sm font-medium tracking-wide uppercase text-charcoal/60 hover:text-charcoal pb-3" data-sport="cycling">
+                        Cycling
+                    </button>
+                    <button class="sport-tab text-sm font-medium tracking-wide uppercase text-charcoal/60 hover:text-charcoal pb-3" data-sport="running">
+                        Running
+                    </button>
+                    <button class="sport-tab text-sm font-medium tracking-wide uppercase text-charcoal/60 hover:text-charcoal pb-3" data-sport="triathlon">
+                        Triathlon
+                    </button>
                 </div>
             </div>
 
-            <!-- Sidebar -->
-            <aside class="md:col-span-1 no-print">
-                <!-- Popular Goal Times -->
-                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                    <h3 class="text-xl font-semibold mb-4">Popular Goal Times</h3>
-                    <div class="space-y-3 text-sm">
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Marathon</h4>
-                            <div class="space-y-1 text-gray-600">
-                                <div>3:00:00 - Elite</div>
-                                <div>3:30:00 - Advanced</div>
-                                <div>4:00:00 - Intermediate</div>
-                                <div>4:30:00 - Beginner+</div>
-                                <div>5:00:00 - Beginner</div>
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 pb-20">
+                <div class="grid lg:grid-cols-3 gap-8">
+
+                    <!-- Left Column: Form -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6 md:p-8 no-print">
+                            <form id="race-card-form" class="space-y-8">
+
+                                <!-- Section 1: Race Details -->
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="w-8 h-8 rounded-full bg-copper/10 text-copper flex items-center justify-center text-sm font-semibold">1</span>
+                                        <h3 class="font-display text-xl text-charcoal">Race Details</h3>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="race-distance" class="block text-sm font-medium text-charcoal/70 mb-2">Race Distance</label>
+                                            <select id="race-distance" name="distance" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal"></select>
+                                        </div>
+                                        <div>
+                                            <label for="unit-system" class="block text-sm font-medium text-charcoal/70 mb-2">Unit System</label>
+                                            <select id="unit-system" name="units" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal">
+                                                <option value="miles">Miles</option>
+                                                <option value="km">Kilometers</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Custom Distance (hidden) -->
+                                    <div id="custom-distance-group" class="hidden">
+                                        <label for="custom-distance" class="block text-sm font-medium text-charcoal/70 mb-2">Custom Distance</label>
+                                        <div class="flex gap-2 items-center">
+                                            <input type="number" id="custom-distance" step="0.1" min="0.1" class="premium-input w-32 px-4 py-3 rounded-sm text-charcoal" placeholder="50">
+                                            <span id="custom-distance-unit" class="text-charcoal/50 text-sm">miles</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Triathlon Leg Distances (hidden) -->
+                                    <div id="tri-distances-group" class="hidden">
+                                        <div class="grid grid-cols-3 gap-3 mt-2">
+                                            <div>
+                                                <label class="text-xs text-charcoal/50 mb-1 block">Swim</label>
+                                                <input type="text" id="tri-swim-dist" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal bg-cream-dark/50" readonly>
+                                            </div>
+                                            <div>
+                                                <label class="text-xs text-charcoal/50 mb-1 block">Bike</label>
+                                                <input type="text" id="tri-bike-dist" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal bg-cream-dark/50" readonly>
+                                            </div>
+                                            <div>
+                                                <label class="text-xs text-charcoal/50 mb-1 block">Run</label>
+                                                <input type="text" id="tri-run-dist" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal bg-cream-dark/50" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="race-name" class="block text-sm font-medium text-charcoal/70 mb-2">Race Name <span class="text-charcoal/30">(optional)</span></label>
+                                        <input type="text" id="race-name" name="raceName" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal" placeholder="e.g., IRONMAN 70.3 Chattanooga">
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Target Time -->
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="w-8 h-8 rounded-full bg-sage/20 text-sage flex items-center justify-center text-sm font-semibold">2</span>
+                                        <h3 class="font-display text-xl text-charcoal">Target Time</h3>
+                                    </div>
+
+                                    <!-- Standard time (cycling/running) -->
+                                    <div id="target-time-section">
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-charcoal/70 mb-2">Hours</label>
+                                                <input type="number" id="hours" name="hours" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal text-center" placeholder="0" min="0" max="24" value="0">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-charcoal/70 mb-2">Minutes</label>
+                                                <input type="number" id="minutes" name="minutes" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal text-center" placeholder="30" required min="0" max="59" value="30">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-charcoal/70 mb-2">Seconds</label>
+                                                <input type="number" id="seconds" name="seconds" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal text-center" placeholder="0" min="0" max="59" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Triathlon leg times (hidden) -->
+                                    <div id="tri-times-group" class="hidden space-y-4">
+                                        <div>
+                                            <label class="text-sm font-medium text-charcoal/70 mb-2 block">Swim Target</label>
+                                            <div class="grid grid-cols-3 gap-3">
+                                                <div><input type="number" id="tri-swim-h" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="5" value="0"><span class="text-xs text-charcoal/40 mt-1 block text-center">hr</span></div>
+                                                <div><input type="number" id="tri-swim-m" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="35"><span class="text-xs text-charcoal/40 mt-1 block text-center">min</span></div>
+                                                <div><input type="number" id="tri-swim-s" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="0"><span class="text-xs text-charcoal/40 mt-1 block text-center">sec</span></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-charcoal/70 mb-2 block">Bike Target</label>
+                                            <div class="grid grid-cols-3 gap-3">
+                                                <div><input type="number" id="tri-bike-h" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="12" value="2"><span class="text-xs text-charcoal/40 mt-1 block text-center">hr</span></div>
+                                                <div><input type="number" id="tri-bike-m" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="45"><span class="text-xs text-charcoal/40 mt-1 block text-center">min</span></div>
+                                                <div><input type="number" id="tri-bike-s" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="0"><span class="text-xs text-charcoal/40 mt-1 block text-center">sec</span></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-charcoal/70 mb-2 block">Run Target</label>
+                                            <div class="grid grid-cols-3 gap-3">
+                                                <div><input type="number" id="tri-run-h" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="8" value="2"><span class="text-xs text-charcoal/40 mt-1 block text-center">hr</span></div>
+                                                <div><input type="number" id="tri-run-m" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="0"><span class="text-xs text-charcoal/40 mt-1 block text-center">min</span></div>
+                                                <div><input type="number" id="tri-run-s" class="premium-input w-full px-3 py-2 rounded-sm text-charcoal text-center" min="0" max="59" value="0"><span class="text-xs text-charcoal/40 mt-1 block text-center">sec</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="split-interval" class="block text-sm font-medium text-charcoal/70 mb-2">Split Interval</label>
+                                        <select id="split-interval" name="interval" class="premium-input w-full px-4 py-3 rounded-sm text-charcoal"></select>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Nutrition Plan -->
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <span class="w-8 h-8 rounded-full bg-charcoal/10 text-charcoal flex items-center justify-center text-sm font-semibold">3</span>
+                                        <h3 class="font-display text-xl text-charcoal">Nutrition Plan</h3>
+                                    </div>
+                                    <p class="text-sm text-charcoal/50">Add reminders for when to eat, drink, or take gels. These show up at the specified markers on your card.</p>
+                                    <div id="nutrition-rows" class="space-y-2"></div>
+                                    <button type="button" id="add-nutrition" class="text-sm text-copper hover:text-copper-dark font-medium transition-colors">+ Add Nutrition Reminder</button>
+                                </div>
+
+                                <!-- Generate Button -->
+                                <button type="submit" class="w-full py-4 bg-charcoal text-cream font-medium tracking-wide hover:bg-charcoal/90 transition-colors">
+                                    Generate Race Card
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Race Card Output -->
+                        <div id="race-card-result" class="hidden mt-8">
+                            <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6 md:p-8 no-print">
+                                <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+                                    <div>
+                                        <h3 class="font-display text-2xl text-charcoal">Your Race Card</h3>
+                                        <p class="text-sm text-charcoal/50 mt-1" id="card-format-hint">Cut along the dashed lines. Attach to your bike top tube with tape.</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3">
+                                        <button onclick="window.print()" class="px-5 py-2.5 border border-charcoal/15 text-charcoal text-sm font-medium hover:bg-cream-dark transition-colors rounded-sm">
+                                            Print
+                                        </button>
+                                        <button id="download-pdf-btn" class="px-5 py-2.5 bg-copper text-white text-sm font-medium hover:bg-copper-dark transition-colors rounded-sm">
+                                            Download PDF &mdash; $5
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Preview -->
+                            <div id="race-card-print" class="mt-6"></div>
+                        </div>
+
+                        <!-- Educational Content -->
+                        <div class="content-box mt-8 no-print">
+                            <article class="prose prose-lg max-w-none">
+                                <h2 class="font-display">How to Use a Race Card</h2>
+                                <p>A race card combines split times with nutrition reminders into a single compact strip you carry during your race. Unlike a basic pace band that only shows times, a race card is your complete race-day reference &mdash; telling you both where you should be and what you should be consuming at each checkpoint.</p>
+
+                                <h3 class="font-display">Three Columns, One Card</h3>
+                                <ul>
+                                    <li><strong>Distance markers</strong> so you know exactly where you are</li>
+                                    <li><strong>Cumulative goal times</strong> to stay on pace</li>
+                                    <li><strong>Nutrition reminders</strong> so you never miss a fueling window</li>
+                                </ul>
+
+                                <h3 class="font-display">Race Cards by Sport</h3>
+
+                                <h4>Cycling</h4>
+                                <p>Cycling race cards are sized to fit on your bike's top tube (approximately 1.5" x 6"). Apply with clear packing tape or use a top tube race number holder. Plan for 40-60g of carbs per hour on rides over 90 minutes.</p>
+
+                                <h4>Running</h4>
+                                <p>Running race cards are sized for your wrist (approximately 1.5" x 8"). Wrap around your forearm and secure with clear tape or a sweatband. Keep nutrition simple &mdash; gels every 30-45 minutes with water at aid stations.</p>
+
+                                <h4>Triathlon</h4>
+                                <p>Triathlon race cards include separate sections for swim, bike, and run. The bike section is the most critical for nutrition since that's where you consume the most calories.</p>
+
+                                <h3 class="font-display">Printing Tips</h3>
+                                <ol>
+                                    <li><strong>Print:</strong> Use the Print button or download the PDF for a precisely sized card</li>
+                                    <li><strong>Cut:</strong> Cut along the dashed lines carefully</li>
+                                    <li><strong>Weather-Proof:</strong> Laminate or cover with clear packing tape</li>
+                                    <li><strong>Attach:</strong> Top tube tape for cycling, wrist wrap for running</li>
+                                </ol>
+                            </article>
+                        </div>
+
+                        <!-- Product Recommendations -->
+                        <div class="product-recommendations no-print mt-8">
+                            <h3 class="recommendations-title">Race Day Essentials</h3>
+                            <p class="affiliate-disclosure">As an Amazon Associate, we earn from qualifying purchases.</p>
+                            <div class="product-cards-grid">
+                                <div class="product-card">
+                                    <h4>GU Energy Gel Variety Pack</h4>
+                                    <p>Race-day fuel for endurance events. Easy to carry and consume on the move.</p>
+                                    <a href="https://www.amazon.com/s?k=GU+Energy+Gel+variety+pack&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+                                </div>
+                                <div class="product-card">
+                                    <h4>Top Tube Race Number Holder</h4>
+                                    <p>Clear sleeve for attaching race cards and numbers to your bike top tube.</p>
+                                    <a href="https://www.amazon.com/s?k=bike+top+tube+race+number+holder&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+                                </div>
+                                <div class="product-card">
+                                    <h4>Garmin Forerunner 265</h4>
+                                    <p>AMOLED GPS watch with pace alerts and race predictor.</p>
+                                    <a href="https://www.amazon.com/s?k=Garmin+Forerunner+265&tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-4">
-                            <h4 class="font-medium text-gray-900 mb-1">Half Marathon</h4>
-                            <div class="space-y-1 text-gray-600">
-                                <div>1:30:00 - Elite</div>
-                                <div>1:45:00 - Advanced</div>
-                                <div>2:00:00 - Intermediate</div>
-                                <div>2:15:00 - Beginner</div>
+
+                        <!-- FAQ Section -->
+                        <div class="mt-12 no-print">
+                            <h3 class="font-display text-2xl text-charcoal mb-6">Frequently Asked Questions</h3>
+                            <div class="space-y-4">
+                                <details class="bg-white rounded-sm shadow-sm border border-charcoal/5 group">
+                                    <summary class="px-6 py-4 cursor-pointer text-charcoal font-medium hover:text-copper transition-colors flex items-center justify-between">
+                                        What is a pace band and how does it work?
+                                        <svg class="w-5 h-5 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="px-6 pb-4 text-charcoal/70 text-sm leading-relaxed">A pace band is a printable strip that shows your target split times at each mile or kilometer marker during a race. Our enhanced race card version adds a nutrition column so you can track fueling alongside pacing. Wear it on your wrist, attach to your bike top tube, or pin to your race bib.</div>
+                                </details>
+                                <details class="bg-white rounded-sm shadow-sm border border-charcoal/5 group">
+                                    <summary class="px-6 py-4 cursor-pointer text-charcoal font-medium hover:text-copper transition-colors flex items-center justify-between">
+                                        What sports does the race card generator support?
+                                        <svg class="w-5 h-5 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="px-6 pb-4 text-charcoal/70 text-sm leading-relaxed">The generator supports cycling (25mi to 112mi+), running (5K to 50K+), and triathlon (Sprint, Olympic, 70.3, 140.6). Cycling cards are sized for bike top tubes, running cards for wristbands, and triathlon cards include separate swim/bike/run sections.</div>
+                                </details>
+                                <details class="bg-white rounded-sm shadow-sm border border-charcoal/5 group">
+                                    <summary class="px-6 py-4 cursor-pointer text-charcoal font-medium hover:text-copper transition-colors flex items-center justify-between">
+                                        How should I plan nutrition on my race card?
+                                        <svg class="w-5 h-5 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="px-6 pb-4 text-charcoal/70 text-sm leading-relaxed">A general guideline is 30-60g of carbohydrates per hour for events over 90 minutes. For cycling, plan nutrition every 20-30 minutes. For running, every 30-45 minutes. The tool pre-populates sensible defaults based on your race distance that you can fully customize.</div>
+                                </details>
+                                <details class="bg-white rounded-sm shadow-sm border border-charcoal/5 group">
+                                    <summary class="px-6 py-4 cursor-pointer text-charcoal font-medium hover:text-copper transition-colors flex items-center justify-between">
+                                        Does the race card work for triathlon?
+                                        <svg class="w-5 h-5 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="px-6 pb-4 text-charcoal/70 text-sm leading-relaxed">Yes! The triathlon mode generates a race card with separate sections for swim, bike, and run. Each section has its own split times and nutrition plan, helping you manage pacing and fueling across all three disciplines.</div>
+                                </details>
+                                <details class="bg-white rounded-sm shadow-sm border border-charcoal/5 group">
+                                    <summary class="px-6 py-4 cursor-pointer text-charcoal font-medium hover:text-copper transition-colors flex items-center justify-between">
+                                        What's the difference between mile and kilometer splits?
+                                        <svg class="w-5 h-5 text-charcoal/30 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                    </summary>
+                                    <div class="px-6 pb-4 text-charcoal/70 text-sm leading-relaxed">Mile splits show cumulative time at each mile marker, while kilometer splits show times at each kilometer. Use the unit system that matches your race course markers. US races typically use miles, while international races use kilometers.</div>
+                                </details>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Nutrition Quick Guide -->
-                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                    <h3 class="text-xl font-semibold mb-4">Nutrition Quick Guide</h3>
-                    <div class="space-y-3 text-sm">
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Under 90 min</h4>
-                            <p class="text-gray-600">Water only. No fueling needed.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">90 min - 3 hours</h4>
-                            <p class="text-gray-600">30-60g carbs/hour. Gel every 30-45 min.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">3+ hours</h4>
-                            <p class="text-gray-600">60-90g carbs/hour. Mix gels, bars, and drink mix.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Hydration</h4>
-                            <p class="text-gray-600">500-750ml/hour. More in heat.</p>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Sidebar -->
+                    <aside class="no-print space-y-6">
 
-                <!-- Related Tools -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Related Tools</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/running-pace-calculator" class="text-primary hover:underline">Running Pace Calculator</a></li>
-                        <li><a href="/race-time-predictor" class="text-primary hover:underline">Race Time Predictor</a></li>
-                        <li><a href="/race-nutrition-calculator" class="text-primary hover:underline">Race Nutrition Calculator</a></li>
-                        <li><a href="/sweat-test-calculator" class="text-primary hover:underline">Sweat Rate Calculator</a></li>
-                        <li><a href="/premium-training-plans" class="text-primary hover:underline">Training Plans</a></li>
-                        <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zones</a></li>
-                    </ul>
+                        <!-- What You Get -->
+                        <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6">
+                            <h3 class="font-display text-lg text-charcoal mb-4">What You Get</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <span class="text-copper mt-0.5">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-medium text-charcoal">3-column race card</p>
+                                        <p class="text-xs text-charcoal/50">Splits, times, and nutrition</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-copper mt-0.5">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-medium text-charcoal">Sized to fit</p>
+                                        <p class="text-xs text-charcoal/50">Top tube, wristband, or tri card</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-copper mt-0.5">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-medium text-charcoal">Custom nutrition plan</p>
+                                        <p class="text-xs text-charcoal/50">Pre-populated, fully editable</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="text-copper mt-0.5">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-medium text-charcoal">Dashed cut lines</p>
+                                        <p class="text-xs text-charcoal/50">Easy to trim and attach</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 pt-4 border-t border-charcoal/5">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-xs text-charcoal/40 uppercase tracking-wide">Preview</span>
+                                    <span class="text-sm text-sage font-medium">Free</span>
+                                </div>
+                                <div class="flex items-baseline gap-2 mt-1">
+                                    <span class="text-xs text-charcoal/40 uppercase tracking-wide">PDF Download</span>
+                                    <span class="text-sm text-copper font-semibold">$5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nutrition Quick Guide -->
+                        <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6">
+                            <h3 class="font-display text-lg text-charcoal mb-4">Nutrition Quick Guide</h3>
+                            <div class="space-y-4 text-sm">
+                                <div class="pb-3 border-b border-charcoal/5">
+                                    <p class="font-medium text-charcoal mb-1">Under 90 min</p>
+                                    <p class="text-charcoal/50">Water only. No fueling needed.</p>
+                                </div>
+                                <div class="pb-3 border-b border-charcoal/5">
+                                    <p class="font-medium text-charcoal mb-1">90 min &ndash; 3 hours</p>
+                                    <p class="text-charcoal/50">30-60g carbs/hour. Gel every 30-45 min.</p>
+                                </div>
+                                <div class="pb-3 border-b border-charcoal/5">
+                                    <p class="font-medium text-charcoal mb-1">3+ hours</p>
+                                    <p class="text-charcoal/50">60-90g carbs/hour. Mix gels, bars, and drink mix.</p>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-charcoal mb-1">Hydration</p>
+                                    <p class="text-charcoal/50">500-750ml/hour. More in heat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Popular Goal Times -->
+                        <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6">
+                            <h3 class="font-display text-lg text-charcoal mb-4">Popular Goal Times</h3>
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="font-medium text-charcoal mb-2">Marathon</p>
+                                    <div class="space-y-1 text-charcoal/50">
+                                        <div class="flex justify-between"><span>Elite</span><span class="font-medium text-charcoal/70">3:00:00</span></div>
+                                        <div class="flex justify-between"><span>Advanced</span><span class="font-medium text-charcoal/70">3:30:00</span></div>
+                                        <div class="flex justify-between"><span>Intermediate</span><span class="font-medium text-charcoal/70">4:00:00</span></div>
+                                        <div class="flex justify-between"><span>Beginner</span><span class="font-medium text-charcoal/70">5:00:00</span></div>
+                                    </div>
+                                </div>
+                                <div class="pt-3 border-t border-charcoal/5">
+                                    <p class="font-medium text-charcoal mb-2">Half Marathon</p>
+                                    <div class="space-y-1 text-charcoal/50">
+                                        <div class="flex justify-between"><span>Elite</span><span class="font-medium text-charcoal/70">1:30:00</span></div>
+                                        <div class="flex justify-between"><span>Advanced</span><span class="font-medium text-charcoal/70">1:45:00</span></div>
+                                        <div class="flex justify-between"><span>Intermediate</span><span class="font-medium text-charcoal/70">2:00:00</span></div>
+                                        <div class="flex justify-between"><span>Beginner</span><span class="font-medium text-charcoal/70">2:15:00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Tools -->
+                        <div class="bg-white rounded-sm shadow-sm border border-charcoal/5 p-6">
+                            <h3 class="font-display text-lg text-charcoal mb-4">Related Tools</h3>
+                            <div class="space-y-3">
+                                <a href="/running-pace-calculator" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Running Pace Calculator</a>
+                                <a href="/race-time-predictor" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Race Time Predictor</a>
+                                <a href="/race-nutrition-calculator" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Race Nutrition Calculator</a>
+                                <a href="/sweat-test-calculator" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Sweat Rate Calculator</a>
+                                <a href="/premium-training-plans" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Training Plans</a>
+                                <a href="/heart-rate-zone-calculator" class="block text-sm text-charcoal/70 hover:text-copper transition-colors link-underline">Heart Rate Zones</a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-            </aside>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white mt-16 no-print">
-        <div class="container mx-auto px-4 py-12">
+    <footer class="bg-charcoal text-white no-print">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
-                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                    <h4 class="font-display text-lg mb-4">RunBikeCalc</h4>
+                    <p class="text-white/50 text-sm">Free calculator tools for runners, cyclists, and endurance athletes.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
-                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
-                        <li><a href="/pace-band-generator" class="hover:text-white">Pace Band Generator</a></li>
+                    <h4 class="font-display text-lg mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-white/50 text-sm">
+                        <li><a href="/running-pace-calculator" class="hover:text-white transition-colors">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white transition-colors">Race Time Predictor</a></li>
+                        <li><a href="/pace-band-generator" class="hover:text-white transition-colors">Pace Band Generator</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
-                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
-                        <li><a href="/premium-training-plans" class="hover:text-white">Training Plans</a></li>
+                    <h4 class="font-display text-lg mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-white/50 text-sm">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white transition-colors">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white transition-colors">VO2 Max</a></li>
+                        <li><a href="/premium-training-plans" class="hover:text-white transition-colors">Training Plans</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/about" class="hover:text-white">About</a></li>
-                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
-                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                    <h4 class="font-display text-lg mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-white/50 text-sm">
+                        <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
                     </ul>
-                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                    <p class="text-sm text-white/30 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -707,7 +847,7 @@
 
         // DOM
         const form = document.getElementById('race-card-form');
-        const sportRadios = document.querySelectorAll('input[name="sport"]');
+        const sportTabs = document.querySelectorAll('.sport-tab');
         const distanceSelect = document.getElementById('race-distance');
         const unitSelect = document.getElementById('unit-system');
         const intervalSelect = document.getElementById('split-interval');
@@ -717,12 +857,12 @@
         const triDistGroup = document.getElementById('tri-distances-group');
         const triTimesGroup = document.getElementById('tri-times-group');
         const targetTimeSection = document.getElementById('target-time-section');
-        const sportHint = document.getElementById('sport-hint');
         const nutritionContainer = document.getElementById('nutrition-rows');
         const addNutritionBtn = document.getElementById('add-nutrition');
         const resultDiv = document.getElementById('race-card-result');
         const printDiv = document.getElementById('race-card-print');
         const downloadBtn = document.getElementById('download-pdf-btn');
+        const formatHint = document.getElementById('card-format-hint');
 
         let currentSport = 'cycling';
         let currentCardData = null;
@@ -731,20 +871,21 @@
             updateDistanceOptions();
             updateIntervalOptions();
             populateDefaultNutrition();
-            sportRadios.forEach(r => r.addEventListener('change', onSportChange));
+            sportTabs.forEach(tab => tab.addEventListener('click', onSportTabClick));
             distanceSelect.addEventListener('change', onDistanceChange);
             unitSelect.addEventListener('change', onUnitChange);
-            addNutritionBtn.addEventListener('click', addNutritionRow);
+            addNutritionBtn.addEventListener('click', function() { addNutritionRow(); });
             form.addEventListener('submit', onFormSubmit);
             downloadBtn.addEventListener('click', onDownloadPDF);
         }
 
-        function onSportChange(e) {
-            currentSport = e.target.value;
+        function onSportTabClick(e) {
+            sportTabs.forEach(t => t.classList.remove('active'));
+            e.target.classList.add('active');
+            currentSport = e.target.dataset.sport;
             updateDistanceOptions();
             updateIntervalOptions();
             populateDefaultNutrition();
-            sportHint.textContent = { cycling: 'Card sized for bike top tube', running: 'Card sized for wristband', triathlon: 'Card with swim/bike/run sections' }[currentSport];
             const isTri = currentSport === 'triathlon';
             triDistGroup.classList.toggle('hidden', !isTri);
             triTimesGroup.classList.toggle('hidden', !isTri);
@@ -754,12 +895,12 @@
         }
 
         function onDistanceChange() {
-            const val = distanceSelect.value;
+            var val = distanceSelect.value;
             customDistGroup.classList.toggle('hidden', val !== 'custom');
             if (currentSport === 'triathlon' && TRI_DISTANCES[val]) {
-                const tri = TRI_DISTANCES[val];
-                const unit = unitSelect.value === 'km' ? 'km' : 'mi';
-                const f = unitSelect.value === 'km' ? 1.60934 : 1;
+                var tri = TRI_DISTANCES[val];
+                var unit = unitSelect.value === 'km' ? 'km' : 'mi';
+                var f = unitSelect.value === 'km' ? 1.60934 : 1;
                 document.getElementById('tri-swim-dist').value = (tri.swim * f).toFixed(1) + ' ' + unit;
                 document.getElementById('tri-bike-dist').value = (tri.bike * f).toFixed(1) + ' ' + unit;
                 document.getElementById('tri-run-dist').value = (tri.run * f).toFixed(1) + ' ' + unit;
@@ -779,12 +920,12 @@
         }
 
         function updateDistanceOptions() {
-            distanceSelect.innerHTML = (DISTANCE_PRESETS[currentSport] || []).map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+            distanceSelect.innerHTML = (DISTANCE_PRESETS[currentSport] || []).map(function(p) { return '<option value="' + p.value + '">' + p.label + '</option>'; }).join('');
         }
 
         function updateIntervalOptions() {
-            const isKm = unitSelect.value === 'km';
-            let presets;
+            var isKm = unitSelect.value === 'km';
+            var presets;
             if (currentSport === 'cycling') {
                 presets = isKm ? [{ label: 'Every 10 km', value: 10 }, { label: 'Every 20 km', value: 20 }, { label: 'Every 30 km', value: 30 }] : INTERVAL_PRESETS.cycling;
             } else if (currentSport === 'running') {
@@ -792,70 +933,63 @@
             } else {
                 presets = INTERVAL_PRESETS.triathlon;
             }
-            intervalSelect.innerHTML = presets.map(p => `<option value="${p.value}">${p.label}</option>`).join('');
+            intervalSelect.innerHTML = presets.map(function(p) { return '<option value="' + p.value + '">' + p.label + '</option>'; }).join('');
         }
 
         function addNutritionRow(marker, note) {
-            const markerVal = typeof marker === 'number' ? marker : '';
-            const noteVal = typeof note === 'string' ? note : '';
-            const unitLabel = unitSelect.value === 'km' ? 'km' : 'mi';
-            const row = document.createElement('div');
+            var markerVal = typeof marker === 'number' ? marker : '';
+            var noteVal = typeof note === 'string' ? note : '';
+            var unitLabel = unitSelect.value === 'km' ? 'km' : 'mi';
+            var row = document.createElement('div');
             row.className = 'nutrition-row';
-            row.innerHTML = `
-                <div class="flex items-center gap-1">
-                    <input type="number" class="nutrition-marker w-16 px-2 py-1.5 border border-gray-300 rounded-md text-sm" placeholder="0" min="0" step="0.1" value="${markerVal}">
-                    <span class="text-xs text-gray-500 font-medium w-6">${unitLabel}</span>
-                </div>
-                <input type="text" class="nutrition-note flex-1 px-2 py-1.5 border border-gray-300 rounded-md text-sm" placeholder="e.g., Gel + water" value="${noteVal}">
-                <button type="button" class="text-red-500 hover:text-red-700 text-sm font-bold px-2" onclick="this.parentElement.remove()">&#10005;</button>
-            `;
+            row.innerHTML = '<div class="flex items-center gap-1"><input type="number" class="nutrition-marker premium-input w-16 px-2 py-2 rounded-sm text-sm text-charcoal text-center" placeholder="0" min="0" step="0.1" value="' + markerVal + '"><span class="text-xs text-charcoal/40 font-medium w-6">' + unitLabel + '</span></div><input type="text" class="nutrition-note premium-input flex-1 px-3 py-2 rounded-sm text-sm text-charcoal" placeholder="e.g., Gel + water" value="' + noteVal + '"><button type="button" class="w-8 h-8 flex items-center justify-center text-charcoal/30 hover:text-red-500 transition-colors" onclick="this.parentElement.remove()"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>';
             nutritionContainer.appendChild(row);
         }
 
         function populateDefaultNutrition() {
             nutritionContainer.innerHTML = '';
-            const distVal = distanceSelect.value;
+            var distVal = distanceSelect.value;
             if (currentSport === 'triathlon') {
-                const tri = TRI_DISTANCES[distVal];
+                var tri = TRI_DISTANCES[distVal];
                 if (!tri) return;
                 if (tri.bike >= 56) {
-                    for (let m = 10; m < tri.bike; m += 15) addNutritionRow(m, m % 30 === 0 ? 'Bar or real food' : 'Gel + water');
+                    for (var m = 10; m < tri.bike; m += 15) addNutritionRow(m, m % 30 === 0 ? 'Bar or real food' : 'Gel + water');
                 } else {
                     addNutritionRow(Math.round(tri.bike / 3), 'Gel + water');
                     addNutritionRow(Math.round(tri.bike * 2 / 3), 'Gel + water');
                 }
                 return;
             }
-            const dist = parseFloat(distVal) || 0;
-            let defaults;
+            var dist = parseFloat(distVal) || 0;
+            var defaults;
             if (currentSport === 'cycling') {
                 defaults = dist <= 40 ? NUTRITION_DEFAULTS.cycling.short : dist <= 70 ? NUTRITION_DEFAULTS.cycling.medium : NUTRITION_DEFAULTS.cycling.long;
             } else {
                 defaults = dist <= 6.2 ? NUTRITION_DEFAULTS.running.short : dist <= 13.1 ? NUTRITION_DEFAULTS.running.medium : NUTRITION_DEFAULTS.running.long;
             }
-            if (defaults) defaults.filter(d => d.marker <= dist).forEach(d => addNutritionRow(d.marker, d.note));
+            if (defaults) defaults.filter(function(d) { return d.marker <= dist; }).forEach(function(d) { addNutritionRow(d.marker, d.note); });
         }
 
         function getNutritionEntries() {
-            const entries = [];
-            nutritionContainer.querySelectorAll('.nutrition-row').forEach(row => {
-                const marker = parseFloat(row.querySelector('.nutrition-marker').value);
-                const note = row.querySelector('.nutrition-note').value.trim();
-                if (!isNaN(marker) && note) entries.push({ marker, note });
+            var entries = [];
+            nutritionContainer.querySelectorAll('.nutrition-row').forEach(function(row) {
+                var marker = parseFloat(row.querySelector('.nutrition-marker').value);
+                var note = row.querySelector('.nutrition-note').value.trim();
+                if (!isNaN(marker) && note) entries.push({ marker: marker, note: note });
             });
-            return entries.sort((a, b) => a.marker - b.marker);
+            return entries.sort(function(a, b) { return a.marker - b.marker; });
         }
 
         function formatTime(totalSeconds) {
             if (totalSeconds < 0) totalSeconds = 0;
-            const h = Math.floor(totalSeconds / 3600);
-            const m = Math.floor((totalSeconds % 3600) / 60);
-            const s = Math.round(totalSeconds % 60);
-            return h > 0 ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${m}:${String(s).padStart(2,'0')}`;
+            var h = Math.floor(totalSeconds / 3600);
+            var m = Math.floor((totalSeconds % 3600) / 60);
+            var s = Math.round(totalSeconds % 60);
+            return h > 0 ? h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0') : m + ':' + String(s).padStart(2, '0');
         }
 
         function getDistance() {
-            const val = distanceSelect.value;
+            var val = distanceSelect.value;
             return val === 'custom' ? (parseFloat(customDistInput.value) || 0) : (parseFloat(val) || 0);
         }
 
@@ -864,68 +998,78 @@
         }
 
         function generateRaceCard() {
-            const distance = getDistance(), totalSeconds = getTotalSeconds(), interval = parseFloat(intervalSelect.value) || 1;
-            const unit = unitSelect.value === 'km' ? 'km' : 'mi', raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
+            var distance = getDistance(), totalSeconds = getTotalSeconds(), interval = parseFloat(intervalSelect.value) || 1;
+            var unit = unitSelect.value === 'km' ? 'km' : 'mi', raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
             if (distance <= 0) { alert('Please enter a valid distance.'); return; }
             if (totalSeconds <= 0) { alert('Please enter a valid finish time.'); return; }
-            const pacePerUnit = totalSeconds / distance, splits = [];
-            for (let d = interval; d <= distance; d += interval) {
-                const matchNut = nutrition.filter(n => n.marker > (d - interval) && n.marker <= d);
-                splits.push({ marker: Math.round(d * 10) / 10, time: formatTime(pacePerUnit * d), nutrition: matchNut.map(n => n.note).join(', ') || '' });
+            var pacePerUnit = totalSeconds / distance, splits = [];
+            for (var d = interval; d <= distance; d += interval) {
+                var matchNut = nutrition.filter(function(n) { return n.marker > (d - interval) && n.marker <= d; });
+                splits.push({ marker: Math.round(d * 10) / 10, time: formatTime(pacePerUnit * d), nutrition: matchNut.map(function(n) { return n.note; }).join(', ') || '' });
             }
-            const lastMarker = splits.length ? splits[splits.length - 1].marker : 0;
+            var lastMarker = splits.length ? splits[splits.length - 1].marker : 0;
             if (Math.abs(lastMarker - distance) > 0.05) {
-                const remainNut = nutrition.filter(n => n.marker > lastMarker && n.marker <= distance);
-                splits.push({ marker: Math.round(distance * 10) / 10, time: formatTime(totalSeconds), nutrition: remainNut.map(n => n.note).join(', ') || 'FINISH' });
+                var remainNut = nutrition.filter(function(n) { return n.marker > lastMarker && n.marker <= distance; });
+                splits.push({ marker: Math.round(distance * 10) / 10, time: formatTime(totalSeconds), nutrition: remainNut.map(function(n) { return n.note; }).join(', ') || 'FINISH' });
             } else if (splits.length && !splits[splits.length - 1].nutrition) {
                 splits[splits.length - 1].nutrition = 'FINISH';
             }
-            currentCardData = { sport: currentSport, raceName: raceName || `${distance} ${unit} ${currentSport}`, distance: `${distance} ${unit}`, targetTime: formatTime(totalSeconds), unit, splits };
+            currentCardData = { sport: currentSport, raceName: raceName || distance + ' ' + unit + ' ' + currentSport, distance: distance + ' ' + unit, targetTime: formatTime(totalSeconds), unit: unit, splits: splits };
+            formatHint.textContent = currentSport === 'cycling' ? 'Cut along dashed lines. Attach to your bike top tube with tape.' : 'Cut along dashed lines. Wrap around your wrist and secure with tape.';
             displayRaceCard(currentCardData);
         }
 
         function generateTriathlonCard() {
-            const triKey = distanceSelect.value, tri = TRI_DISTANCES[triKey];
+            var triKey = distanceSelect.value, tri = TRI_DISTANCES[triKey];
             if (!tri) { alert('Please select a triathlon distance.'); return; }
-            const unit = unitSelect.value === 'km' ? 'km' : 'mi', factor = unitSelect.value === 'km' ? 1.60934 : 1;
-            const raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
-            function legSec(p) { return (parseInt(document.getElementById('tri-'+p+'-h').value)||0)*3600 + (parseInt(document.getElementById('tri-'+p+'-m').value)||0)*60 + (parseInt(document.getElementById('tri-'+p+'-s').value)||0); }
-            const swimSec = legSec('swim'), bikeSec = legSec('bike'), runSec = legSec('run'), totalSec = swimSec + bikeSec + runSec;
-            const swimDist = tri.swim * factor, swimInt = unitSelect.value === 'km' ? 0.5 : 0.25, swimPace = swimSec / swimDist, swimSplits = [];
-            for (let d = swimInt; d <= swimDist + 0.01; d += swimInt) swimSplits.push({ marker: Math.round(d * 100) / 100, time: formatTime(swimPace * d), nutrition: '' });
-            const bikeDist = tri.bike * factor, bikeInt = unitSelect.value === 'km' ? 10 : 5, bikePace = bikeSec / bikeDist, bikeSplits = [];
-            for (let d = bikeInt; d <= bikeDist + 0.01; d += bikeInt) {
-                const mn = nutrition.filter(n => n.marker > (d - bikeInt) && n.marker <= d);
-                bikeSplits.push({ marker: Math.round(d * 10) / 10, time: formatTime(swimSec + bikePace * d), nutrition: mn.map(n => n.note).join(', ') || '' });
+            var unit = unitSelect.value === 'km' ? 'km' : 'mi', factor = unitSelect.value === 'km' ? 1.60934 : 1;
+            var raceName = document.getElementById('race-name').value.trim(), nutrition = getNutritionEntries();
+            function legSec(p) { return (parseInt(document.getElementById('tri-' + p + '-h').value) || 0) * 3600 + (parseInt(document.getElementById('tri-' + p + '-m').value) || 0) * 60 + (parseInt(document.getElementById('tri-' + p + '-s').value) || 0); }
+            var swimSec = legSec('swim'), bikeSec = legSec('bike'), runSec = legSec('run'), totalSec = swimSec + bikeSec + runSec;
+            var swimDist = tri.swim * factor, swimInt = unitSelect.value === 'km' ? 0.5 : 0.25, swimPace = swimSec / swimDist, swimSplits = [];
+            for (var d = swimInt; d <= swimDist + 0.01; d += swimInt) swimSplits.push({ marker: Math.round(d * 100) / 100, time: formatTime(swimPace * d), nutrition: '' });
+            var bikeDist = tri.bike * factor, bikeInt = unitSelect.value === 'km' ? 10 : 5, bikePace = bikeSec / bikeDist, bikeSplits = [];
+            for (var d2 = bikeInt; d2 <= bikeDist + 0.01; d2 += bikeInt) {
+                var mn = nutrition.filter(function(n) { return n.marker > (d2 - bikeInt) && n.marker <= d2; });
+                bikeSplits.push({ marker: Math.round(d2 * 10) / 10, time: formatTime(swimSec + bikePace * d2), nutrition: mn.map(function(n) { return n.note; }).join(', ') || '' });
             }
-            const lastBike = bikeSplits.length ? bikeSplits[bikeSplits.length - 1].marker : 0;
+            var lastBike = bikeSplits.length ? bikeSplits[bikeSplits.length - 1].marker : 0;
             if (Math.abs(lastBike - bikeDist) > 0.5) bikeSplits.push({ marker: Math.round(bikeDist * 10) / 10, time: formatTime(swimSec + bikeSec), nutrition: 'T2' });
-            const runDist = tri.run * factor, runPace = runSec / runDist, runSplits = [], t2 = swimSec + bikeSec;
-            for (let d = 1; d <= runDist + 0.01; d += 1) runSplits.push({ marker: Math.round(d * 10) / 10, time: formatTime(t2 + runPace * d), nutrition: d % 3 < 1 ? 'Water/cola at aid' : '' });
-            currentCardData = { sport: 'triathlon', raceName: raceName || `${triKey} Triathlon`, distance: triKey.toUpperCase(), targetTime: formatTime(totalSec), unit, sections: [
-                { name: 'SWIM', distance: swimDist.toFixed(1)+' '+unit, time: formatTime(swimSec), splits: swimSplits },
-                { name: 'BIKE', distance: bikeDist.toFixed(1)+' '+unit, time: formatTime(bikeSec), splits: bikeSplits },
-                { name: 'RUN', distance: runDist.toFixed(1)+' '+unit, time: formatTime(runSec), splits: runSplits }
+            var runDist = tri.run * factor, runPace = runSec / runDist, runSplits = [], t2 = swimSec + bikeSec;
+            for (var d3 = 1; d3 <= runDist + 0.01; d3 += 1) runSplits.push({ marker: Math.round(d3 * 10) / 10, time: formatTime(t2 + runPace * d3), nutrition: d3 % 3 < 1 ? 'Water/cola at aid' : '' });
+            currentCardData = { sport: 'triathlon', raceName: raceName || triKey.toUpperCase() + ' Triathlon', distance: triKey.toUpperCase(), targetTime: formatTime(totalSec), unit: unit, sections: [
+                { name: 'SWIM', distance: swimDist.toFixed(1) + ' ' + unit, time: formatTime(swimSec), splits: swimSplits },
+                { name: 'BIKE', distance: bikeDist.toFixed(1) + ' ' + unit, time: formatTime(bikeSec), splits: bikeSplits },
+                { name: 'RUN', distance: runDist.toFixed(1) + ' ' + unit, time: formatTime(runSec), splits: runSplits }
             ]};
+            formatHint.textContent = 'Triathlon card with swim, bike, and run sections. Print landscape for best results.';
             displayRaceCard(currentCardData);
         }
 
         function displayRaceCard(data) {
-            let html = '';
+            var html = '';
+            var headerBg = 'background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);';
             if (data.sport === 'triathlon' && data.sections) {
-                html = `<div class="race-card-strip bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto mb-8">
-                    <div class="text-center mb-3 border-b-2 border-gray-800 pb-3"><h3 class="text-lg font-bold text-gray-900">${esc(data.raceName)}</h3><div class="text-sm text-gray-700">${data.distance} | Target: ${data.targetTime}</div></div>
-                    ${data.sections.map(s => `<div class="mb-3"><div class="bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-t">${s.name} — ${s.distance} — ${s.time}</div>
-                    <table class="w-full text-xs border-collapse"><thead><tr class="bg-gray-100"><th class="text-left px-2 py-1 border-b font-semibold w-16">${data.unit}</th><th class="text-left px-2 py-1 border-b font-semibold w-24">Time</th><th class="text-left px-2 py-1 border-b font-semibold">Nutrition</th></tr></thead><tbody>
-                    ${s.splits.map((r,i) => `<tr class="${i%2?'bg-gray-50':''}"><td class="px-2 py-1 border-b font-semibold">${r.marker}</td><td class="px-2 py-1 border-b">${r.time}</td><td class="px-2 py-1 border-b text-gray-600">${esc(r.nutrition)}</td></tr>`).join('')}
-                    </tbody></table></div>`).join('')}
-                    <div class="text-center text-xs text-gray-400 pt-2 border-t">RunBikeCalc.com</div></div>`;
+                html = '<div style="border: 2px dashed #ccc; border-radius: 4px; overflow: hidden; max-width: 640px; margin: 0 auto; background: white;">' +
+                    '<div style="' + headerBg + ' padding: 12px 16px; text-align: center;"><div style="color: #FAF8F5; font-family: Playfair Display, serif; font-size: 16px; font-weight: 600;">' + esc(data.raceName) + '</div><div style="color: rgba(250,248,245,0.6); font-size: 12px; margin-top: 2px;">' + data.distance + ' &middot; Target ' + data.targetTime + '</div></div>';
+                data.sections.forEach(function(sec) {
+                    html += '<div style="background: #C67B4E; color: white; font-size: 11px; font-weight: 700; padding: 6px 16px; letter-spacing: 0.05em; text-transform: uppercase;">' + sec.name + ' &mdash; ' + sec.distance + ' &mdash; ' + sec.time + '</div>' +
+                        '<table style="width: 100%; border-collapse: collapse; font-size: 12px;"><thead><tr style="background: #F0EDE8;"><th style="text-align: left; padding: 6px 16px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5; width: 60px;">' + (data.unit === 'km' ? 'KM' : 'Mi') + '</th><th style="text-align: left; padding: 6px 12px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5; width: 80px;">Time</th><th style="text-align: left; padding: 6px 16px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5;">Nutrition</th></tr></thead><tbody>';
+                    sec.splits.forEach(function(r, i) {
+                        html += '<tr style="background: ' + (i % 2 ? '#FAFAF8' : 'white') + ';"><td style="padding: 5px 16px; border-bottom: 1px solid #F0EDE8; font-weight: 600; color: #1A1A1A;">' + r.marker + '</td><td style="padding: 5px 12px; border-bottom: 1px solid #F0EDE8; color: #6B6B6B;">' + r.time + '</td><td style="padding: 5px 16px; border-bottom: 1px solid #F0EDE8; color: ' + (r.nutrition ? '#C67B4E' : '#ccc') + '; font-size: 11px;">' + (esc(r.nutrition) || '&mdash;') + '</td></tr>';
+                    });
+                    html += '</tbody></table>';
+                });
+                html += '<div style="text-align: center; padding: 8px; color: #ccc; font-size: 10px; border-top: 1px solid #F0EDE8;">RunBikeCalc.com</div></div>';
             } else {
-                html = `<div class="race-card-strip bg-white rounded-lg shadow-lg p-4 max-w-2xl mx-auto mb-8">
-                    <div class="text-center mb-3 border-b-2 border-gray-800 pb-3"><h3 class="text-lg font-bold text-gray-900">${esc(data.raceName)}</h3><div class="text-sm text-gray-700">${data.distance} | Target: ${data.targetTime}</div></div>
-                    <table class="w-full text-sm border-collapse"><thead><tr class="bg-gray-100"><th class="text-left px-3 py-2 border-b font-semibold w-20">${data.unit==='km'?'KM':'Mile'}</th><th class="text-left px-3 py-2 border-b font-semibold w-28">Goal Time</th><th class="text-left px-3 py-2 border-b font-semibold">Nutrition</th></tr></thead><tbody>
-                    ${data.splits.map((s,i) => `<tr class="split-row ${i%2?'bg-gray-50':''}"><td class="px-3 py-2 border-b font-semibold">${s.marker}</td><td class="px-3 py-2 border-b">${s.time}</td><td class="px-3 py-2 border-b text-gray-600">${esc(s.nutrition)}</td></tr>`).join('')}
-                    </tbody></table><div class="text-center text-xs text-gray-400 pt-3 mt-3 border-t">RunBikeCalc.com</div></div>`;
+                html = '<div style="border: 2px dashed #ccc; border-radius: 4px; overflow: hidden; max-width: 560px; margin: 0 auto; background: white;">' +
+                    '<div style="' + headerBg + ' padding: 12px 16px; text-align: center;"><div style="color: #FAF8F5; font-family: Playfair Display, serif; font-size: 16px; font-weight: 600;">' + esc(data.raceName) + '</div><div style="color: rgba(250,248,245,0.6); font-size: 12px; margin-top: 2px;">' + data.distance + ' &middot; Target ' + data.targetTime + '</div></div>' +
+                    '<table style="width: 100%; border-collapse: collapse; font-size: 13px;"><thead><tr style="background: #F0EDE8;"><th style="text-align: left; padding: 8px 16px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5; width: 70px;">' + (data.unit === 'km' ? 'KM' : 'Mile') + '</th><th style="text-align: left; padding: 8px 12px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5; width: 90px;">Goal Time</th><th style="text-align: left; padding: 8px 16px; font-weight: 600; color: #1A1A1A; border-bottom: 1px solid #E5E5E5;">Nutrition</th></tr></thead><tbody>';
+                data.splits.forEach(function(s, i) {
+                    var isFinish = s.nutrition === 'FINISH';
+                    html += '<tr style="background: ' + (isFinish ? '#F0EDE8' : i % 2 ? '#FAFAF8' : 'white') + ';"><td style="padding: 7px 16px; border-bottom: 1px solid #F0EDE8; font-weight: 600; color: #1A1A1A;">' + s.marker + '</td><td style="padding: 7px 12px; border-bottom: 1px solid #F0EDE8; color: #6B6B6B;">' + s.time + '</td><td style="padding: 7px 16px; border-bottom: 1px solid #F0EDE8; color: ' + (isFinish ? '#1A1A1A; font-weight: 700' : s.nutrition ? '#C67B4E' : '#ccc') + '; font-size: 12px;">' + (esc(s.nutrition) || '&mdash;') + '</td></tr>';
+                });
+                html += '</tbody></table><div style="text-align: center; padding: 8px; color: #ccc; font-size: 10px; border-top: 1px solid #F0EDE8;">RunBikeCalc.com</div></div>';
             }
             printDiv.innerHTML = html;
             resultDiv.classList.remove('hidden');
@@ -946,32 +1090,32 @@
 
         function generatePDF(data) {
             if (!window.jspdf) { alert('PDF library is still loading. Please try again in a moment.'); return; }
-            const { jsPDF } = window.jspdf;
-            let pw, ph;
+            var jsPDF = window.jspdf.jsPDF;
+            var pw, ph;
             if (data.sport === 'cycling') { pw = 432; ph = 108; }
             else if (data.sport === 'running') { pw = 576; ph = 108; }
             else { pw = 612; ph = 288; }
-            const doc = new jsPDF({ orientation: pw > ph ? 'landscape' : 'portrait', unit: 'pt', format: [pw, ph] });
-            const m = 8; let y = m;
+            var doc = new jsPDF({ orientation: pw > ph ? 'landscape' : 'portrait', unit: 'pt', format: [pw, ph] });
+            var m = 8, y = m;
             doc.setFontSize(8); doc.setFont(undefined, 'bold');
             doc.text(data.raceName, pw / 2, y + 8, { align: 'center' }); y += 12;
             doc.setFontSize(6); doc.setFont(undefined, 'normal');
-            doc.text(`${data.distance} | Target: ${data.targetTime}`, pw / 2, y + 5, { align: 'center' }); y += 10;
+            doc.text(data.distance + ' | Target: ' + data.targetTime, pw / 2, y + 5, { align: 'center' }); y += 10;
             doc.setLineDashPattern([3, 2], 0); doc.setDrawColor(180);
             doc.rect(2, 2, pw - 4, ph - 4); doc.setLineDashPattern([], 0);
             if (data.sport === 'triathlon' && data.sections) {
-                data.sections.forEach(sec => {
+                data.sections.forEach(function(sec) {
                     doc.setFontSize(6); doc.setFont(undefined, 'bold');
-                    doc.text(`${sec.name} — ${sec.distance}`, m, y + 6); y += 8;
-                    doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit==='km'?'KM':'Mi', 'Time', 'Nutrition']], body: sec.splits.map(s => [String(s.marker), s.time, s.nutrition||'']), theme: 'grid', styles: { fontSize: 5, cellPadding: 1.5 }, headStyles: { fillColor: [50,50,50], fontSize: 5 }, columnStyles: { 0: { cellWidth: 25 }, 1: { cellWidth: 40 } } });
+                    doc.text(sec.name + ' - ' + sec.distance, m, y + 6); y += 8;
+                    doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit === 'km' ? 'KM' : 'Mi', 'Time', 'Nutrition']], body: sec.splits.map(function(s) { return [String(s.marker), s.time, s.nutrition || '']; }), theme: 'grid', styles: { fontSize: 5, cellPadding: 1.5 }, headStyles: { fillColor: [50, 50, 50], fontSize: 5 }, columnStyles: { 0: { cellWidth: 25 }, 1: { cellWidth: 40 } } });
                     y = doc.lastAutoTable.finalY + 4;
                 });
             } else {
-                doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit==='km'?'KM':'Mile', 'Goal Time', 'Nutrition']], body: data.splits.map(s => [String(s.marker), s.time, s.nutrition||'']), theme: 'grid', styles: { fontSize: 6, cellPadding: 2 }, headStyles: { fillColor: [50,50,50], fontSize: 6 }, columnStyles: { 0: { cellWidth: 35 }, 1: { cellWidth: 50 } } });
+                doc.autoTable({ startY: y, margin: { left: m, right: m }, head: [[data.unit === 'km' ? 'KM' : 'Mile', 'Goal Time', 'Nutrition']], body: data.splits.map(function(s) { return [String(s.marker), s.time, s.nutrition || '']; }), theme: 'grid', styles: { fontSize: 6, cellPadding: 2 }, headStyles: { fillColor: [50, 50, 50], fontSize: 6 }, columnStyles: { 0: { cellWidth: 35 }, 1: { cellWidth: 50 } } });
             }
             doc.setFontSize(5); doc.setTextColor(150);
             doc.text('RunBikeCalc.com', pw / 2, ph - 4, { align: 'center' });
-            doc.save(`race-card-${data.raceName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.pdf`);
+            doc.save('race-card-' + data.raceName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() + '.pdf');
         }
 
         init();
