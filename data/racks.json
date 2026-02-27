@@ -7,8 +7,7 @@
       "tier": "budget",
       "price": 300,
       "priceDisplay": "$300",
-      "asin": "B01NBOVAIJ",
-      "amazonUrl": "https://www.amazon.com/dp/B01NBOVAIJ?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Fitness+Reality+810XLT+Power+Cage&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -30,8 +29,7 @@
       "tier": "budget",
       "price": 200,
       "priceDisplay": "$200",
-      "asin": "B07GZF5JWW",
-      "amazonUrl": "https://www.amazon.com/dp/B07GZF5JWW?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=CAP+Barbell+Power+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -53,8 +51,7 @@
       "tier": "mid",
       "price": 450,
       "priceDisplay": "$450",
-      "asin": "B00GHNLK9E",
-      "amazonUrl": "https://www.amazon.com/dp/B00GHNLK9E?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Titan+T-2+Series+Power+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -76,8 +73,7 @@
       "tier": "mid",
       "price": 500,
       "priceDisplay": "$500",
-      "asin": "B07KY515S9",
-      "amazonUrl": "https://www.amazon.com/dp/B07KY515S9?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=REP+PR-1100+Power+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -165,8 +161,7 @@
       "tier": "mid",
       "price": 650,
       "priceDisplay": "$650",
-      "asin": "B09CLNPXR2",
-      "amazonUrl": "https://www.amazon.com/dp/B09CLNPXR2?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Titan+X-3+Series+Flat+Foot+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -188,8 +183,7 @@
       "tier": "compact",
       "price": 700,
       "priceDisplay": "$700",
-      "asin": "B07BMG6RC8",
-      "amazonUrl": "https://www.amazon.com/dp/B07BMG6RC8?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=PRx+Performance+Profile+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -233,8 +227,7 @@
       "tier": "budget",
       "price": 350,
       "priceDisplay": "$350",
-      "asin": "B002EJC990",
-      "amazonUrl": "https://www.amazon.com/dp/B002EJC990?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Valor+Fitness+BD-7+Power+Rack&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -317,12 +310,12 @@
     }
   ],
   "accessories": [
-    { "id": "flat-bench", "name": "Amazon Basics Flat Weight Bench", "priceDisplay": "$55", "asin": "B072Z1WN4S", "amazonUrl": "https://www.amazon.com/dp/B072Z1WN4S?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "adjustable-bench", "name": "REP AB-3000 Adjustable Bench", "priceDisplay": "$300", "asin": "B00YNS7D9G", "amazonUrl": "https://www.amazon.com/dp/B00YNS7D9G?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "olympic-barbell", "name": "CAP Barbell Olympic Bar (7ft)", "priceDisplay": "$120", "asin": "B07D3Q7NGJ", "amazonUrl": "https://www.amazon.com/dp/B07D3Q7NGJ?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "flat-bench", "name": "Flat Weight Bench", "priceDisplay": "$55", "amazonUrl": "https://www.amazon.com/s?k=Flat+Weight+Bench&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "adjustable-bench", "name": "REP AB-3000 Adjustable Bench", "priceDisplay": "$300", "amazonUrl": "https://www.amazon.com/s?k=REP+AB-3000+Adjustable+Bench&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "olympic-barbell", "name": "CAP Barbell Olympic Bar (7ft)", "priceDisplay": "$120", "amazonUrl": "https://www.amazon.com/s?k=CAP+Barbell+Olympic+Bar+7ft&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
     { "id": "rogue-barbell", "name": "Rogue Ohio Bar", "priceDisplay": "$295", "amazonUrl": "https://www.amazon.com/s?k=Rogue+Ohio+Bar&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "bumper-plates", "name": "Bumper Plate Set (260 lb)", "priceDisplay": "$350", "asin": "B01J2J0PJ0", "amazonUrl": "https://www.amazon.com/dp/B01J2J0PJ0?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "horse-stall-mat", "name": "Horse Stall Mat (4x6 ft)", "priceDisplay": "$50", "asin": "B07CNLLZGP", "amazonUrl": "https://www.amazon.com/dp/B07CNLLZGP?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "dip-attachment", "name": "Power Rack Dip Attachment", "priceDisplay": "$60", "asin": "B0BGHJVXV7", "amazonUrl": "https://www.amazon.com/dp/B0BGHJVXV7?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    { "id": "bumper-plates", "name": "Bumper Plate Set (260 lb)", "priceDisplay": "$350", "amazonUrl": "https://www.amazon.com/s?k=Bumper+Plate+Set+260+lb&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "horse-stall-mat", "name": "Horse Stall Mat (4x6 ft)", "priceDisplay": "$50", "amazonUrl": "https://www.amazon.com/s?k=Horse+Stall+Mat+4x6&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "dip-attachment", "name": "Power Rack Dip Attachment", "priceDisplay": "$60", "amazonUrl": "https://www.amazon.com/s?k=Power+Rack+Dip+Attachment&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
   ]
 }

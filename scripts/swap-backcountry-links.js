@@ -279,8 +279,8 @@ function processFile(filePath, feed, dryRun = false) {
     let noMatchCount = 0;
     const swaps = [];
 
-    // Find all Amazon affiliate links
-    const amazonLinkPattern = /https:\/\/www\.amazon\.com\/(?:dp\/[A-Z0-9]+|s\?k=[^"&]+)[^"]*tag=runbikecalc-20/g;
+    // Find all Amazon affiliate links (legacy - Amazon links have been removed)
+    const amazonLinkPattern = /https:\/\/www\.amazon\.com\/(?:dp\/[A-Z0-9]+|s\?k=[^"&]+)[^"]*/g;
     const matches = html.match(amazonLinkPattern) || [];
     const uniqueLinks = [...new Set(matches)];
 
@@ -341,8 +341,8 @@ function processFile(filePath, feed, dryRun = false) {
             }
         );
 
-        // Update "Check Price on Amazon" buttons to "Check Price on Backcountry"
-        html = html.replace(/Check Price on Amazon/g, 'Check Price on Backcountry');
+        // Update "Check Price" buttons to "Check Price on Backcountry"
+        html = html.replace(/Check Price/g, 'Check Price on Backcountry');
 
         fs.writeFileSync(filePath, html, 'utf8');
         console.log(`  Wrote ${swaps.length} swaps to file`);

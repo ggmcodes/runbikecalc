@@ -801,8 +801,8 @@
                 // Best for verdict
                 html += '<div class="quiz-verdict"><strong>Best for:</strong> ' + product.verdict.bestFor + '</div>';
 
-                // Amazon CTA for rack
-                html += '<a href="' + product.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + product.id + '" class="quiz-cta-btn">View on Amazon</a>';
+                // CTA for rack
+                html += '<a href="' + product.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + product.id + '" class="quiz-cta-btn">Check Price</a>';
 
                 // Complete your setup - paired accessories
                 if (product.pairsWith && product.pairsWith.length > 0) {
@@ -837,7 +837,7 @@
             scoreFn: scoreFn,
             renderFn: renderFn,
             quizName: 'home_gym_finder',
-            affiliateTag: 'runbikecalc-20',
+            affiliateTag: '',
             containerId: 'quiz-container',
             resultsId: 'quiz-results'
         });

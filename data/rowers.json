@@ -7,8 +7,7 @@
       "tier": "budget",
       "price": 230,
       "priceDisplay": "$230",
-      "asin": "B017HSNIEW",
-      "amazonUrl": "https://www.amazon.com/dp/B017HSNIEW?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Sunny+Health+SF-RW5515+Magnetic+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -30,8 +29,7 @@
       "tier": "budget",
       "price": 200,
       "priceDisplay": "$200",
-      "asin": "B08YQF1PX9",
-      "amazonUrl": "https://www.amazon.com/dp/B08YQF1PX9?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Fitness+Reality+1000+Plus+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -53,8 +51,7 @@
       "tier": "premium",
       "price": 990,
       "priceDisplay": "$990",
-      "asin": "B0CKMQKWQH",
-      "amazonUrl": "https://www.amazon.com/dp/B0CKMQKWQH?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Concept2+Model+D+RowErg&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -76,8 +73,7 @@
       "tier": "premium",
       "price": 1200,
       "priceDisplay": "$1,200",
-      "asin": "B01B4AMRMI",
-      "amazonUrl": "https://www.amazon.com/dp/B01B4AMRMI?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Concept2+Model+E+RowErg+Tall&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -99,8 +95,7 @@
       "tier": "premium",
       "price": 2495,
       "priceDisplay": "$2,495",
-      "asin": "B0844GP7QP",
-      "amazonUrl": "https://www.amazon.com/dp/B0844GP7QP?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Hydrow+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -122,8 +117,7 @@
       "tier": "premium",
       "price": 1200,
       "priceDisplay": "$1,200",
-      "asin": "B000N9ZXIC",
-      "amazonUrl": "https://www.amazon.com/dp/B000N9ZXIC?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=WaterRower+Natural+Rowing+Machine&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -167,8 +161,7 @@
       "tier": "mid",
       "price": 800,
       "priceDisplay": "$800",
-      "asin": "B08F1NS5P1",
-      "amazonUrl": "https://www.amazon.com/dp/B08F1NS5P1?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Echelon+Row+Smart+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -190,8 +183,7 @@
       "tier": "budget",
       "price": 400,
       "priceDisplay": "$400",
-      "asin": "B00RPHF2AE",
-      "amazonUrl": "https://www.amazon.com/dp/B00RPHF2AE?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Stamina+X+Air+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -213,8 +205,7 @@
       "tier": "mid",
       "price": 1300,
       "priceDisplay": "$1,300",
-      "asin": "B09RN7L485",
-      "amazonUrl": "https://www.amazon.com/dp/B09RN7L485?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+RW900+Rower&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -236,8 +227,7 @@
       "tier": "premium",
       "price": 1700,
       "priceDisplay": "$1,700",
-      "asin": "B01EOLI8X6",
-      "amazonUrl": "https://www.amazon.com/dp/B01EOLI8X6?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Life+Fitness+HX+Trainer+Row&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -254,10 +244,10 @@
     }
   ],
   "accessories": [
-    { "id": "rower-mat", "name": "Rowing Machine Floor Mat", "priceDisplay": "$40", "asin": "B09VPCCYX4", "amazonUrl": "https://www.amazon.com/dp/B09VPCCYX4?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "rower-seat-pad", "name": "Rowing Machine Seat Cushion", "priceDisplay": "$25", "asin": "B01N96EA1J", "amazonUrl": "https://www.amazon.com/dp/B01N96EA1J?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "concept2-phone-holder", "name": "Concept2 Phone Holder", "priceDisplay": "$20", "asin": "B07YN5CP6Z", "amazonUrl": "https://www.amazon.com/dp/B07YN5CP6Z?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "waterrower-tablet-arm", "name": "WaterRower Tablet Arm", "priceDisplay": "$80", "asin": "B07GY34P25", "amazonUrl": "https://www.amazon.com/dp/B07GY34P25?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "heart-rate-belt", "name": "Polar H10 HR Monitor", "priceDisplay": "$90", "asin": "B07PM54P4N", "amazonUrl": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    { "id": "rower-mat", "name": "Rowing Machine Floor Mat", "priceDisplay": "$40", "amazonUrl": "https://www.amazon.com/s?k=Rowing+Machine+Floor+Mat&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "rower-seat-pad", "name": "Rowing Machine Seat Cushion", "priceDisplay": "$25", "amazonUrl": "https://www.amazon.com/s?k=Rowing+Machine+Seat+Cushion&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "concept2-phone-holder", "name": "Concept2 Phone Holder", "priceDisplay": "$20", "amazonUrl": "https://www.amazon.com/s?k=Concept2+Phone+Holder&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "waterrower-tablet-arm", "name": "WaterRower Tablet Arm", "priceDisplay": "$80", "amazonUrl": "https://www.amazon.com/s?k=WaterRower+Tablet+Arm&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "heart-rate-belt", "name": "Polar H10 HR Monitor", "priceDisplay": "$90", "amazonUrl": "https://www.amazon.com/s?k=Polar+H10+HR+Monitor&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
   ]
 }

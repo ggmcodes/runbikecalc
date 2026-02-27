@@ -1,6 +1,6 @@
 /**
  * Product Recommendations for RunBikeCalc
- * Shows contextual Amazon affiliate products after calculator results
+ * Shows contextual product recommendations after calculator results
  */
 
 const AFFILIATE_TAG = 'runbikecalc-20';
@@ -272,7 +272,7 @@ function getProductRecommendations(calculatorType, calculatorResults = {}) {
 }
 
 /**
- * Build Amazon search URL
+ * Build product search URL
  * @param {string} searchTerms - URL-encoded search terms
  * @returns {string} Full Amazon search URL with affiliate tag
  */
@@ -305,7 +305,7 @@ function renderProductRecommendations(containerId, calculatorType, results = {})
     // Create disclosure
     const disclosure = document.createElement('p');
     disclosure.className = 'affiliate-disclosure';
-    disclosure.textContent = 'As an Amazon Associate, we earn from qualifying purchases.';
+    disclosure.textContent = 'Product links may earn us a commission at no additional cost to you.';
     container.appendChild(disclosure);
 
     // Create product grid
@@ -329,7 +329,7 @@ function renderProductRecommendations(containerId, calculatorType, results = {})
         cardLink.target = '_blank';
         cardLink.rel = 'noopener sponsored';
         cardLink.className = 'btn-amazon';
-        cardLink.textContent = 'View on Amazon';
+        cardLink.textContent = 'Check Price';
         card.appendChild(cardLink);
 
         grid.appendChild(card);

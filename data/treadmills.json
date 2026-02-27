@@ -7,8 +7,7 @@
       "tier": "budget",
       "price": 300,
       "priceDisplay": "$300",
-      "asin": "B0842L3WP3",
-      "amazonUrl": "https://www.amazon.com/dp/B0842L3WP3?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Goplus+2-in-1+Folding+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -30,8 +29,7 @@
       "tier": "compact",
       "price": 260,
       "priceDisplay": "$260",
-      "asin": "B0BTXDKSVG",
-      "amazonUrl": "https://www.amazon.com/dp/B0BTXDKSVG?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Sperax+Walking+Pad+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -53,8 +51,7 @@
       "tier": "budget",
       "price": 400,
       "priceDisplay": "$400",
-      "asin": "B01M0L0D90",
-      "amazonUrl": "https://www.amazon.com/dp/B01M0L0D90?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=XTERRA+Fitness+TR150+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -76,8 +73,7 @@
       "tier": "mid",
       "price": 1000,
       "priceDisplay": "$1,000",
-      "asin": "B0090WZW02",
-      "amazonUrl": "https://www.amazon.com/dp/B0090WZW02?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Sole+F63+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -99,8 +95,7 @@
       "tier": "mid",
       "price": 1000,
       "priceDisplay": "$1,000",
-      "asin": "B08JQPB3QT",
-      "amazonUrl": "https://www.amazon.com/dp/B08JQPB3QT?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Horizon+7.0+AT+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -122,8 +117,7 @@
       "tier": "premium",
       "price": 1800,
       "priceDisplay": "$1,800",
-      "asin": "B08VPW7XYY",
-      "amazonUrl": "https://www.amazon.com/dp/B08VPW7XYY?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+Commercial+1750&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -145,8 +139,7 @@
       "tier": "premium",
       "price": 2995,
       "priceDisplay": "$2,995",
-      "asin": "B0CFR8GWYR",
-      "amazonUrl": "https://www.amazon.com/dp/B0CFR8GWYR?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Peloton+Tread&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -168,8 +161,7 @@
       "tier": "mid",
       "price": 1300,
       "priceDisplay": "$1,300",
-      "asin": "B08N3NL32C",
-      "amazonUrl": "https://www.amazon.com/dp/B08N3NL32C?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=ProForm+Pro+2000+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -191,8 +183,7 @@
       "tier": "mid",
       "price": 1500,
       "priceDisplay": "$1,500",
-      "asin": "B0D6HNP297",
-      "amazonUrl": "https://www.amazon.com/dp/B0D6HNP297?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Sole+F80+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -214,8 +205,7 @@
       "tier": "premium",
       "price": 2800,
       "priceDisplay": "$2,800",
-      "asin": "B09359YFWL",
-      "amazonUrl": "https://www.amazon.com/dp/B09359YFWL?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+X32i+Incline+Trainer&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -226,7 +216,7 @@
         "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 0, "budget_over_2000": 9,
         "space_compact": 1, "space_medium": 5, "space_large": 9
       },
-      "specs": { "speed": "0-12 mph", "incline": "-6% to 40%", "deck": "65\" x 22\"", "motor": "4.25 HP", "folding": false, "maxWeight": "300 lb" },
+      "specs": { "speed": "0-12 mph", "incline": "-6% to 40%", "deck": "65\" x 22\" (slat belt)", "motor": "4.25 HP", "folding": false, "maxWeight": "300 lb" },
       "verdict": { "bestFor": "Extreme incline training (-6% to 40%)" },
       "pairsWith": ["tread-mat", "heart-rate-strap"]
     },
@@ -237,8 +227,7 @@
       "tier": "mid",
       "price": 1500,
       "priceDisplay": "$1,500",
-      "asin": "B08PB3YX52",
-      "amazonUrl": "https://www.amazon.com/dp/B08PB3YX52?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Bowflex+Treadmill+10&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -260,8 +249,7 @@
       "tier": "mid",
       "price": 1300,
       "priceDisplay": "$1,300",
-      "asin": "B0812NX1TQ",
-      "amazonUrl": "https://www.amazon.com/dp/B0812NX1TQ?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Horizon+7.4+AT+Studio+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -305,8 +293,7 @@
       "tier": "budget",
       "price": 250,
       "priceDisplay": "$250",
-      "asin": "B07QK3BMKD",
-      "amazonUrl": "https://www.amazon.com/dp/B07QK3BMKD?tag=runbikecalc-20",
+      "amazonUrl": "https://www.amazon.com/s?k=Weslo+Cadence+G+5.9+Treadmill&tag=runbikecalc-20",
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
@@ -323,9 +310,9 @@
     }
   ],
   "accessories": [
-    { "id": "tread-mat", "name": "Treadmill Floor Mat", "priceDisplay": "$40", "asin": "B07J2NV7X7", "amazonUrl": "https://www.amazon.com/dp/B07J2NV7X7?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "tread-lube", "name": "Treadmill Belt Lubricant", "priceDisplay": "$10", "asin": "B00TOYAJ7C", "amazonUrl": "https://www.amazon.com/dp/B00TOYAJ7C?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "heart-rate-strap", "name": "Polar H10 HR Strap", "priceDisplay": "$90", "asin": "B08GHQD4NJ", "amazonUrl": "https://www.amazon.com/dp/B08GHQD4NJ?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "standing-desk", "name": "Adjustable Standing Desk", "priceDisplay": "$200", "asin": "B0DHRCQXVH", "amazonUrl": "https://www.amazon.com/dp/B0DHRCQXVH?tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    { "id": "tread-mat", "name": "Treadmill Floor Mat", "priceDisplay": "$40", "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Floor+Mat&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "tread-lube", "name": "Treadmill Belt Lubricant", "priceDisplay": "$10", "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Belt+Lubricant&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "heart-rate-strap", "name": "Polar H10 HR Strap", "priceDisplay": "$90", "amazonUrl": "https://www.amazon.com/s?k=Polar+H10+HR+Strap&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
+    { "id": "standing-desk", "name": "Adjustable Standing Desk", "priceDisplay": "$200", "amazonUrl": "https://www.amazon.com/s?k=Adjustable+Standing+Desk&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
   ]
 }

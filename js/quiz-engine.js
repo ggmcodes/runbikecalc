@@ -13,7 +13,7 @@ class QuizEngine {
     this.scoreFn = config.scoreFn;
     this.renderFn = config.renderFn;
     this.quizName = config.quizName;
-    this.affiliateTag = config.affiliateTag || 'runbikecalc-20';
+    this.affiliateTag = config.affiliateTag || '';
     this.overrideFn = config.overrideFn || null;
     this.containerId = config.containerId || 'quiz-container';
     this.resultsId = config.resultsId || 'quiz-results';
@@ -325,9 +325,9 @@ class QuizEngine {
   }
 }
 
-// Helper: build Amazon search URL with affiliate tag
-function amazonSearchUrl(query, tag) {
-  return 'https://www.amazon.com/s?k=' + encodeURIComponent(query) + '&tag=' + tag;
+// Helper: build Amazon search URL for a product
+function amazonSearchUrl(query) {
+  return 'https://www.amazon.com/s?k=' + encodeURIComponent(query) + '&tag=runbikecalc-20';
 }
 
 // Helper: render a badge (returns safe HTML string from controlled data)
@@ -364,5 +364,6 @@ function renderAccessories(product, accessories, tag) {
 
 window.QuizEngine = QuizEngine;
 window.amazonSearchUrl = amazonSearchUrl;
+window.productSearchUrl = amazonSearchUrl;
 window.renderBadge = renderBadge;
 window.renderAccessories = renderAccessories;

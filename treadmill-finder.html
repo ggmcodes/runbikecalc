@@ -757,8 +757,8 @@
                 html += '</table>';
 
                 // CTA
-                var ctaUrl = product.amazonUrl || amazonSearchUrl(product.name, tag);
-                html += '<a href="' + ctaUrl + '" target="_blank" rel="noopener noreferrer nofollow" class="quiz-cta-btn" data-affiliate="' + product.id + '">View on Amazon</a>';
+                var ctaUrl = product.amazonUrl || productSearchUrl(product.name);
+                html += '<a href="' + ctaUrl + '" target="_blank" rel="noopener noreferrer nofollow" class="quiz-cta-btn" data-affiliate="' + product.id + '">Check Price</a>';
 
                 // Accessories
                 html += renderAccessories(product, accessories, tag);
@@ -785,7 +785,7 @@
             scoreFn: scoreTreadmill,
             renderFn: renderResults,
             quizName: 'treadmill_finder',
-            affiliateTag: 'runbikecalc-20',
+            affiliateTag: '',
             containerId: 'quiz-container',
             resultsId: 'quiz-results'
         });

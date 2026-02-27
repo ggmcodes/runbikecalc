@@ -640,7 +640,7 @@
                 html += '<p style="font-size:0.9rem;margin-bottom:1rem;"><strong>Best for:</strong> ' + p.verdict.bestFor + '</p>';
 
                 // CTA button
-                html += '<a href="' + p.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + p.id + '" class="quiz-cta-btn">View on Amazon &rarr;</a>';
+                html += '<a href="' + p.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + p.id + '" class="quiz-cta-btn">Check Price &rarr;</a>';
 
                 // Accessories
                 html += renderAccessories(p, accessories, affiliateTag);
@@ -672,7 +672,7 @@
             scoreFn: scoreFn,
             renderFn: renderFn,
             quizName: 'spin-bike-finder',
-            affiliateTag: 'runbikecalc-20',
+            affiliateTag: '',
             containerId: 'quiz-container',
             resultsId: 'quiz-results'
         });
