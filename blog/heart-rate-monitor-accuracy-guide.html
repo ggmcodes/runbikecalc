@@ -37,6 +37,9 @@
         ]
     }
     </script>
+<link rel="stylesheet" href="/css/conversion-popup.css">
+<link rel="stylesheet" href="/css/sticky-banner.css">
+<link rel="stylesheet" href="/css/inline-cta.css">
 </head>
 <body class="bg-gray-50">
     <nav class="site-nav"><div class="nav-container"><a href="/" class="site-logo">RunBikeCalc</a><div class="nav-links"><a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a><a href="/running-tools" class="nav-link">Running</a><a href="/cycling-tools" class="nav-link">Cycling</a><a href="/heart-rate-tools" class="nav-link">Heart Rate</a><a href="/blog" class="nav-link">Journal</a></div><div style="display: flex; align-items: center; gap: 1rem;"><a href="/premium-training-plans" class="nav-cta">Start Training</a><button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div><div id="mobile-nav" class="mobile-menu"><a href="/premium-training-plans">Training Plans</a><a href="/running-tools">Running Tools</a><a href="/cycling-tools">Cycling Tools</a><a href="/heart-rate-tools">Heart Rate</a><a href="/blog">Journal</a></div></nav>
@@ -288,5 +291,23 @@
 
     <footer class="bg-dark text-white py-12 mt-16"><div class="container mx-auto px-4"><div class="grid md:grid-cols-4 gap-8"><div><h3 class="text-xl font-bold mb-4">RunBikeCalc</h3><p class="text-gray-400">Professional calculators for endurance athletes.</p></div><div><h4 class="font-semibold mb-4">Calculators</h4><ul class="space-y-2 text-gray-400"><li><a href="/heart-rate-zone-calculator" class="hover:text-white">Heart Rate Zones</a></li><li><a href="/lactate-threshold-calculator" class="hover:text-white">LTHR Calculator</a></li></ul></div><div><h4 class="font-semibold mb-4">Training Guides</h4><ul class="space-y-2 text-gray-400"><li><a href="/heart-rate-hub" class="hover:text-white">Heart Rate Training</a></li></ul></div><div><h4 class="font-semibold mb-4">Resources</h4><ul class="space-y-2 text-gray-400"><li><a href="/about" class="hover:text-white">About</a></li><li><a href="/blog" class="hover:text-white">Blog</a></li></ul></div></div><div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"><p>&copy; 2026 RunBikeCalc. All rights reserved.</p></div></div></footer>
 <script src="/js/blog-enhance.js" defer></script>
+<script>
+window.POPUP_CONFIG = {
+  headline: "Wait — Special Offer!",
+  product: "Premium Training Plans",
+  description: "Export your custom training plans to PDF & calendar. Unlock advanced periodization, tapering & race-specific workouts.",
+  price: "$5",
+  ctaText: "Unlock Premium Plans — Just $5",
+  ctaUrl: "https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06",
+  secondaryText: "No thanks",
+  accentColor: "#2563eb",
+  excludePaths: ["/success"]
+};
+</script>
+<script src="/js/conversion-popup.js"></script>
+<script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success']};</script>
+<script src="/js/sticky-banner.js"></script>
+<script>window.INLINE_CTA_CONFIG={badge:'Premium',headline:'Export Your Custom Plan to PDF and Calendar',body:'Upgrade to Premium for PDF exports, calendar sync, advanced periodization, and race-specific workout programming. One-time purchase, lifetime access.',ctaText:'Unlock Premium \u2014 Just $5',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',secondaryText:'See premium features',secondaryUrl:'/premium-training-plans.html',accentColor:'#2563eb',bgFrom:'#eff6ff',bgTo:'#f0f9ff',borderColor:'#bfdbfe',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
+<script src="/js/inline-cta.js"></script>
 </body>
 </html>

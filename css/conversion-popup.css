@@ -1,0 +1,192 @@
+/**
+ * Conversion Popup Styles
+ * Purchase-focused exit-intent popup
+ * Uses CSS custom properties set by conversion-popup.js
+ */
+
+.cp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.cp-overlay.cp-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cp-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  transform: translateY(-20px) scale(0.95);
+  transition: transform 0.3s ease;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.cp-overlay.cp-active .cp-modal {
+  transform: translateY(0) scale(1);
+}
+
+.cp-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.cp-close:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.cp-content {
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.cp-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--cp-accent, #2563eb);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.cp-headline {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.cp-product {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--cp-accent, #2563eb);
+  margin: 0 0 0.75rem;
+}
+
+.cp-description {
+  font-size: 0.9375rem;
+  color: #64748b;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.cp-cta {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--cp-accent, #2563eb);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cp-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cp-cta:active {
+  transform: translateY(0);
+}
+
+.cp-dismiss {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.75rem 0.5rem 0;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.cp-dismiss:hover {
+  color: #64748b;
+}
+
+.cp-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.cp-secure svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 479px) {
+  .cp-content {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .cp-headline {
+    font-size: 1.375rem;
+  }
+
+  .cp-product {
+    font-size: 1rem;
+  }
+
+  .cp-description {
+    font-size: 0.875rem;
+  }
+
+  .cp-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
