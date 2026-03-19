@@ -1,6 +1,6 @@
 /**
  * RunBikeCalc Auto-Enhance
- * Automatically adds product recommendations + AggregateRating schema
+ * Automatically adds product recommendations
  * to all calculator pages. Include once — works everywhere.
  */
 (function() {
@@ -141,8 +141,7 @@
     if (document.querySelector('.product-recommendations') ||
         document.querySelector('.product-cards-grid') ||
         document.querySelectorAll('[href*="tag=runbikecalc-20"]').length > 2) {
-        // Page already has products — skip product injection, but still do schema
-        injectSchema();
+        // Page already has products — skip product injection
         return;
     }
 
@@ -208,60 +207,12 @@
         }
     }
 
-    // ========== AGGREGATE RATING SCHEMA ==========
-
-    // Rating data per category (realistic values)
-    var ratings = {
-        heartRate: { value: '4.8', count: '2341' },
-        running: { value: '4.9', count: '4127' },
-        cycling: { value: '4.8', count: '3215' },
-        fitness: { value: '4.7', count: '1893' },
-        recovery: { value: '4.8', count: '1456' },
-        nutrition: { value: '4.7', count: '2089' },
-        triathlon: { value: '4.9', count: '1678' }
-    };
-
-    function injectSchema() {
-        // Check if AggregateRating already exists
-        var scripts = document.querySelectorAll('script[type="application/ld+json"]');
-        for (var i = 0; i < scripts.length; i++) {
-            if (scripts[i].textContent.indexOf('AggregateRating') !== -1) return;
-        }
-
-        // Find existing WebApplication schema and enhance it
-        var rating = ratings[category] || { value: '4.8', count: '1500' };
-        var pageTitle = document.title.split('|')[0].split('-')[0].trim();
-
-        var schema = {
-            '@context': 'https://schema.org',
-            '@type': 'WebApplication',
-            'name': pageTitle,
-            'url': 'https://runbikecalc.com/' + path,
-            'applicationCategory': 'SportsApplication',
-            'operatingSystem': 'All',
-            'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
-            'aggregateRating': {
-                '@type': 'AggregateRating',
-                'ratingValue': rating.value,
-                'ratingCount': rating.count,
-                'bestRating': '5'
-            }
-        };
-
-        var script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(schema);
-        document.head.appendChild(script);
-    }
-
     // Run on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             injectProducts();
-            injectSchema();
         });
     } else {
         injectProducts();
-        injectSchema();
     }
 })();
