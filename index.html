@@ -260,6 +260,14 @@
                         Explore Tools
                     </a>
                 </div>
+
+                <!-- Trust badge -->
+                <div class="mt-8 animate-fade-up opacity-0" style="animation-delay: 0.5s">
+                    <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-full border border-charcoal/10">
+                        <span class="text-copper font-display text-lg font-semibold">50,000+</span>
+                        <span class="text-charcoal/60 text-sm font-medium">athletes use our tools every month</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -285,60 +293,46 @@
 
             <!-- Plans Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="/premium-training-plans" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🏃</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Running</h3>
-                        <p class="text-charcoal/60 text-sm mb-6">5K to 100-Mile Ultra</p>
-                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                            Build Plan
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
+                        <p class="text-charcoal/60 text-sm">5K to 100-Mile Ultra</p>
                     </div>
-                </a>
+                </div>
 
-                <a href="/premium-training-plans" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🚴</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Cycling</h3>
-                        <p class="text-charcoal/60 text-sm mb-6">Century & Gran Fondo</p>
-                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                            Build Plan
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
+                        <p class="text-charcoal/60 text-sm">Century & Gran Fondo</p>
                     </div>
-                </a>
+                </div>
 
-                <a href="/premium-training-plans" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🏊</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Triathlon</h3>
-                        <p class="text-charcoal/60 text-sm mb-6">Sprint to Ironman</p>
-                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                            Build Plan
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
+                        <p class="text-charcoal/60 text-sm">Sprint to Ironman</p>
                     </div>
-                </a>
+                </div>
 
-                <a href="/premium-training-plans" class="card-lift group bg-cream-dark p-8 relative overflow-hidden">
+                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">💪</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Hyrox</h3>
-                        <p class="text-charcoal/60 text-sm mb-6">Open, Pro & Doubles</p>
-                        <span class="inline-flex items-center text-copper font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                            Build Plan
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
+                        <p class="text-charcoal/60 text-sm">Open, Pro & Doubles</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Single CTA for all plans -->
+            <div class="text-center mt-12">
+                <a href="/premium-training-plans" class="inline-flex items-center justify-center bg-charcoal text-cream px-10 py-4 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-all group">
+                    Build Your Plan
+                    <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -419,6 +413,7 @@
                 <p class="text-lg text-charcoal/60">
                     25+ free tools to optimize every aspect of your training
                 </p>
+                <input type="text" id="calc-search" placeholder="Search 55+ calculators..." class="w-full max-w-md mx-auto block mt-8 px-4 py-3 border border-gray-300 rounded-lg text-charcoal focus:ring-2 focus:ring-copper focus:border-copper">
             </div>
 
             <!-- Heart Rate -->
@@ -740,9 +735,20 @@ window.POPUP_CONFIG = {
 };
 </script>
 <script src="/js/conversion-popup.js"></script>
-<script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success']};</script>
+<script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success','/','/index.html']};</script>
 <script src="/js/sticky-banner.js"></script>
 <script>window.INLINE_CTA_CONFIG={badge:'Premium',headline:'Export Your Custom Plan to PDF and Calendar',body:'Upgrade to Premium for PDF exports, calendar sync, advanced periodization, and race-specific workout programming. One-time purchase, lifetime access.',ctaText:'Unlock Premium \u2014 Just $5',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',secondaryText:'See premium features',secondaryUrl:'/premium-training-plans.html',accentColor:'#2563eb',bgFrom:'#eff6ff',bgTo:'#f0f9ff',borderColor:'#bfdbfe',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
 <script src="/js/inline-cta.js"></script>
+<script>
+document.getElementById('calc-search').addEventListener('input', function() {
+    var query = this.value.toLowerCase();
+    var section = document.getElementById('calculators');
+    var cards = section.querySelectorAll('.calc-card');
+    for (var i = 0; i < cards.length; i++) {
+        var text = cards[i].textContent.toLowerCase();
+        cards[i].style.display = text.includes(query) ? '' : 'none';
+    }
+});
+</script>
 </body>
 </html>
