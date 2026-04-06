@@ -80,3 +80,6 @@ vo2-tools.html
 watts-to-calories-calculator.html
 zone-2-calculator.html
 zone-2-training-plan-generator
+blog/best-running-shorts-2026.html
+blog/best-water-bottles-running-cycling-2026.html
+blog/best-bike-lights-2026.html

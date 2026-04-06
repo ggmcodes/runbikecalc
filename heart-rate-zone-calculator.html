@@ -693,6 +693,120 @@
             </div>
         </div>
 
+        <!-- Device-Specific Setup Guides -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">How to Set Up Heart Rate Zones on Your Device</h2>
+            <p class="text-gray-600 mb-6">Use the zones from the calculator above and enter them into your watch or app. Here is exactly how to do it on each platform.</p>
+
+            <div class="space-y-6">
+                <!-- Garmin Setup -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-3">How to Set Heart Rate Zones on Garmin</h3>
+                    <ol class="text-sm text-blue-800 space-y-2 list-decimal list-inside mb-3">
+                        <li>Open the <strong>Garmin Connect</strong> app and tap the device icon</li>
+                        <li>Navigate to <strong>Device Settings &gt; User Settings &gt; Heart Rate Zones</strong></li>
+                        <li>Choose <strong>"Based on Max HR"</strong> or <strong>"Based on Heart Rate Reserve"</strong> (Karvonen method)</li>
+                        <li>Enter your actual max HR from a field test rather than the 220-minus-age default</li>
+                        <li>Edit each zone boundary to match the values from the calculator above</li>
+                        <li>Sync your device to apply the changes</li>
+                    </ol>
+                    <div class="bg-blue-100 p-3 rounded text-xs text-blue-700">
+                        <strong>Important:</strong> Garmin's factory-default zones use generic percentages that may not match your physiology. Entering a tested max HR and custom boundaries gives you far more accurate training feedback. If you know your <a href="/max-heart-rate-calculator" class="underline hover:text-blue-900">true max heart rate</a>, start there.
+                    </div>
+                </div>
+
+                <!-- Apple Watch Setup -->
+                <div class="bg-gray-50 border border-gray-300 rounded-lg p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">How to Set Heart Rate Zones on Apple Watch</h3>
+                    <ol class="text-sm text-gray-700 space-y-2 list-decimal list-inside mb-3">
+                        <li>Open the <strong>Health</strong> app on your iPhone and go to <strong>Browse &gt; Heart &gt; Heart Rate Zones</strong></li>
+                        <li>By default Apple Watch auto-calculates zones from your health data</li>
+                        <li>To customize: open <strong>Settings &gt; Workout &gt; Heart Rate Zones &gt; Manual</strong></li>
+                        <li>Enter zone boundaries that match your calculated zones from above</li>
+                    </ol>
+                    <div class="bg-gray-200 p-3 rounded text-xs text-gray-700">
+                        <strong>Limitation:</strong> Apple Watch relies on an optical wrist sensor only, which can drift by 5-10 bpm during high-intensity intervals. For threshold and <a href="/vo2-max-calculator" class="underline hover:text-gray-900">VO2 max</a> work, pair a Bluetooth chest strap for better accuracy.
+                    </div>
+                </div>
+
+                <!-- Polar Setup -->
+                <div class="bg-red-50 border border-red-200 rounded-lg p-5">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">How to Set Heart Rate Zones on Polar</h3>
+                    <ol class="text-sm text-red-800 space-y-2 list-decimal list-inside mb-3">
+                        <li>Open <strong>Polar Flow</strong> (app or web) and go to <strong>Settings &gt; Heart Rate Zones</strong></li>
+                        <li>Polar supports up to <strong>5 fully configurable zones</strong> with custom boundaries</li>
+                        <li>Enter zone values manually or import from a Running Index test</li>
+                        <li>Optionally run Polar's <strong>Fitness Test (OwnIndex)</strong> to get a VO2 max estimate that informs zone setup</li>
+                    </ol>
+                    <div class="bg-red-100 p-3 rounded text-xs text-red-700">
+                        <strong>Tip:</strong> Polar's OwnIndex correlates well with lab-tested VO2 max. Combine it with your <a href="/zone-2-calculator" class="underline hover:text-red-900">Zone 2 calculator</a> results for a training plan grounded in real data.
+                    </div>
+                </div>
+
+                <!-- COROS Setup -->
+                <div class="bg-orange-50 border border-orange-200 rounded-lg p-5">
+                    <h3 class="text-lg font-semibold text-orange-900 mb-3">How to Set Heart Rate Zones on COROS</h3>
+                    <ol class="text-sm text-orange-800 space-y-2 list-decimal list-inside mb-3">
+                        <li>Open the <strong>COROS</strong> app and go to <strong>Profile &gt; Heart Rate Zones</strong></li>
+                        <li>Choose between <strong>threshold-based</strong> or <strong>max HR-based</strong> zone calculation</li>
+                        <li>For threshold-based zones, enter your LTHR from a <a href="/lactate-threshold-calculator" class="underline hover:text-orange-900">field test</a></li>
+                        <li>Edit each zone boundary to match the values from your calculation</li>
+                    </ol>
+                    <div class="bg-orange-100 p-3 rounded text-xs text-orange-700">
+                        <strong>Note:</strong> COROS threshold-based zones are more useful for experienced athletes who have done a proper lactate threshold test. If you are unsure of your LTHR, use max HR-based zones instead.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chest Strap vs Wrist HR -->
+        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Chest Strap vs Wrist HR: Which Is Better for Zone Training?</h2>
+            <p class="text-gray-600 mb-6">Accurate heart rate data is the foundation of zone training. The sensor you use determines how reliable your zone readings actually are.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                <div class="bg-white p-5 rounded-lg border border-purple-200">
+                    <h4 class="font-bold text-gray-800 mb-1">Wrist Optical HR</h4>
+                    <p class="text-xs text-gray-500 mb-3">Built into most watches</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Accuracy: +/-5-10 bpm</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Struggles in cold weather</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Less reliable on darker skin tones</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Lag during intervals</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Convenient, always on</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-green-300">
+                    <h4 class="font-bold text-gray-800 mb-1">Chest Strap</h4>
+                    <p class="text-xs text-gray-500 mb-3">Gold standard (e.g., Garmin HRM-Pro Plus)</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Accuracy: +/-1-2 bpm</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Instant response to intensity changes</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Works in all conditions</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Can feel uncomfortable</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Extra device to charge</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-indigo-200">
+                    <h4 class="font-bold text-gray-800 mb-1">Arm Band</h4>
+                    <p class="text-xs text-gray-500 mb-3">Compromise (e.g., Polar Verity Sense)</p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Accuracy: +/-2-4 bpm</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>More comfortable than chest</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">+</span>Good for swimming</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Less accurate than chest strap</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">-</span>Can slip during running</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg border border-purple-200">
+                <h4 class="font-semibold text-gray-800 mb-2">Our Recommendation</h4>
+                <p class="text-sm text-gray-700 mb-2">Use a <strong>chest strap</strong> for <a href="/zone-2-calculator" class="text-primary hover:underline">Zone 2 training</a>, threshold workouts, and interval sessions where precision matters. Wrist HR is fine for easy runs where staying in an exact zone is less critical.</p>
+                <p class="text-sm text-gray-700">For detailed comparisons and our top picks, read our <a href="/blog/best-heart-rate-monitors-2026" class="text-primary hover:underline">best heart rate monitors for 2026</a> guide, the <a href="/blog/heart-rate-monitor-running-complete-guide-2026" class="text-primary hover:underline">complete heart rate monitor guide for runners</a>, and our <a href="/blog/running-heart-rate-zones-complete-guide-2026" class="text-primary hover:underline">complete guide to running heart rate zones</a>.</p>
+            </div>
+        </div>
+
         <!-- FAQ Section -->
         <div class="space-y-6">
             <div class="bg-white border border-gray-200 rounded-lg p-6">

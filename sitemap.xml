@@ -7608,4 +7608,22 @@
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-running-shorts-2026</loc>
+        <lastmod>2026-04-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-water-bottles-running-cycling-2026</loc>
+        <lastmod>2026-04-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-bike-lights-2026</loc>
+        <lastmod>2026-04-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
