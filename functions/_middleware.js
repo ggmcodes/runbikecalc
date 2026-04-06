@@ -5,7 +5,14 @@ export async function onRequest(context) {
   // 1. Redirect .html URLs to clean URLs (301)
   if (pathname.endsWith('.html')) {
     const cleanPath = pathname.slice(0, -5);
-    return Response.redirect(new URL(cleanPath + url.search, url.origin), 301);
+    // /index.html should redirect to / not /index
+    const redirectPath = cleanPath === '/index' ? '/' : cleanPath;
+    return Response.redirect(new URL(redirectPath + url.search, url.origin), 301);
+  }
+
+  // 1b. Redirect /index to / (301)
+  if (pathname === '/index') {
+    return Response.redirect(new URL('/' + url.search, url.origin), 301);
   }
 
   // 2. Skip if root, has file extension, or ends with slash
