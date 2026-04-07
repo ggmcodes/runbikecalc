@@ -352,7 +352,7 @@ function renderAccessories(product, accessories, tag) {
 
   var html = '<div class="quiz-accessories"><p class="quiz-accessories-title">Pairs well with:</p><div class="quiz-accessories-list">';
   matched.forEach(function(a) {
-    html += '<a href="' + a.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + a.id + '" class="quiz-accessory-link">';
+    html += '<a href="' + a.amazonUrl + '" target="_blank" rel="noopener sponsored" data-affiliate="' + a.id + '" class="quiz-accessory-link">';
     if (a.imageMedium || a.imageUrl) {
       html += '<img src="' + (a.imageMedium || a.imageUrl) + '" alt="' + a.name + '" style="width:40px;height:40px;object-fit:contain;border-radius:4px;flex-shrink:0;" loading="lazy" /> ';
     }

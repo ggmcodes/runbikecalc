@@ -806,7 +806,7 @@
                 html += '<div class="quiz-verdict"><strong>Best for:</strong> ' + product.verdict.bestFor + '</div>';
 
                 // CTA for rack
-                html += '<a href="' + product.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + product.id + '" class="quiz-cta-btn">Check Price</a>';
+                html += '<a href="' + product.amazonUrl + '" target="_blank" rel="noopener sponsored" data-affiliate="' + product.id + '" class="inline-block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg transition text-sm">Check Price on Amazon</a>';
 
                 // Complete your setup - paired accessories
                 if (product.pairsWith && product.pairsWith.length > 0) {
@@ -816,7 +816,7 @@
                         html += '<p class="quiz-accessories-title">Complete your setup:</p>';
                         html += '<div class="quiz-accessories-list">';
                         matched.forEach(function(a) {
-                            html += '<a href="' + a.amazonUrl + '" target="_blank" rel="noopener noreferrer nofollow" data-affiliate="' + a.id + '" class="quiz-accessory-link">';
+                            html += '<a href="' + a.amazonUrl + '" target="_blank" rel="noopener sponsored" data-affiliate="' + a.id + '" class="quiz-accessory-link">';
                             html += a.name + ' <span class="quiz-accessory-price">' + a.priceDisplay + '</span>';
                             html += '</a>';
                         });

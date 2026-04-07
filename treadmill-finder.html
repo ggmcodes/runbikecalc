@@ -762,7 +762,7 @@
 
                 // CTA
                 var ctaUrl = product.amazonUrl || productSearchUrl(product.name);
-                html += '<a href="' + ctaUrl + '" target="_blank" rel="noopener noreferrer nofollow" class="quiz-cta-btn" data-affiliate="' + product.id + '">Check Price</a>';
+                html += '<a href="' + ctaUrl + '" target="_blank" rel="noopener sponsored" class="inline-block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg transition text-sm" data-affiliate="' + product.id + '">Check Price on Amazon</a>';
 
                 // Accessories
                 html += renderAccessories(product, accessories, tag);
