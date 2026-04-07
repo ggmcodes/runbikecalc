@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Free Embeddable Calculators for Your Website | RunBikeCalc</title>
+    <link rel="canonical" href="https://runbikecalc.com/embed">
+    <meta name="description" content="Add free running pace calculators and heart rate zone calculators to your website. Lightweight, embeddable widgets with one line of code. No sign-up required.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Free Embeddable Running & Fitness Calculators | RunBikeCalc">
+    <meta property="og:description" content="Add free running pace calculators and heart rate zone calculators to your website with a single line of code.">
+    <meta property="og:url" content="https://runbikecalc.com/embed">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Embeddable Calculators for Your Website">
+    <meta name="twitter:description" content="Lightweight, responsive running and fitness calculator widgets. Embed with one line of code.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://runbikecalc.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Embed Calculators",
+                "item": "https://runbikecalc.com/embed"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Free Embeddable Calculators for Your Website",
+        "url": "https://runbikecalc.com/embed",
+        "description": "Add free running pace calculators and heart rate zone calculators to your website with a single line of code.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are the RunBikeCalc widgets free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all RunBikeCalc embeddable widgets are 100% free. Just copy the embed code and paste it into your website. We only ask that you keep the 'Powered by RunBikeCalc' attribution link."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do the widgets slow down my website?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Each widget is under 5KB, loads asynchronously, and uses Shadow DOM for complete CSS isolation. They have zero external dependencies and won't affect your page performance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I customize the widget appearance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The widgets use Shadow DOM so they won't conflict with your site's styles, but the built-in styling is designed to look clean on any website. The widgets are responsive and adapt to their container width."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <style>
+        .embed-code-block {
+            position: relative;
+            background: #1a202c;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0 0;
+            overflow-x: auto;
+        }
+        .embed-code-block code {
+            color: #e2e8f0;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #4a5568;
+            color: #e2e8f0;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .copy-btn:hover { background: #718096; }
+        .copy-btn.copied { background: #38a169; }
+        .widget-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+        .widget-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+        .feature-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: #ebf8ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .feature-icon.green { background: #f0fff4; }
+        .preview-section {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .preview-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 16px;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 40px 0 32px;
+        }
+        .hero-section h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .hero-section p {
+            font-size: 1.125rem;
+            color: #4a5568;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+            .hero-section h1 { font-size: 1.75rem; }
+            .widget-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Embed Calculators</li>
+            </ol>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>Free Embeddable Calculators<br>for Your Website</h1>
+            <p>Add fully functional running pace calculators and heart rate zone calculators to your blog, coaching site, or fitness app. One line of code. No sign-up. No cost.</p>
+        </div>
+
+        <!-- Why Embed Section -->
+        <div class="feature-grid" style="margin-bottom: 40px;">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="16" height="16" fill="none" stroke="#3182ce" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                    <strong style="font-size: 14px;">Lightweight</strong>
+                    <p style="font-size: 13px; color: #718096; margin: 2px 0 0;">Under 5KB each. Zero external dependencies. Won't slow your site down.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon green">
+                    <svg width="16" height="16" fill="none" stroke="#38a169" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                    <strong style="font-size: 14px;">Isolated</strong>
+                    <p style="font-size: 13px; color: #718096; margin: 2px 0 0;">Shadow DOM encapsulation. No CSS conflicts with your existing styles.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="16" height="16" fill="none" stroke="#3182ce" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                    <strong style="font-size: 14px;">Responsive</strong>
+                    <p style="font-size: 13px; color: #718096; margin: 2px 0 0;">Works on mobile, tablet, and desktop. Adapts to any container width.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon green">
+                    <svg width="16" height="16" fill="none" stroke="#38a169" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </div>
+                <div>
+                    <strong style="font-size: 14px;">Easy Setup</strong>
+                    <p style="font-size: 13px; color: #718096; margin: 2px 0 0;">Copy one line of code. Paste it anywhere on your page. Done.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Widget 1: Pace Calculator -->
+        <div class="widget-card" id="pace-widget">
+            <h3>Running Pace Calculator Widget</h3>
+            <p style="color: #4a5568; margin-bottom: 16px;">Let your readers calculate their running pace directly on your page. Enter distance and time to get pace per mile, pace per km, and speed. Perfect for running blogs, coaching sites, and race recap articles.</p>
+
+            <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Embed Code</h4>
+            <div class="embed-code-block">
+                <button class="copy-btn" onclick="copyCode(this)" data-code='&lt;script src="https://runbikecalc.com/widgets/pace-calculator-widget.js"&gt;&lt;/script&gt;'>Copy</button>
+                <pre><code>&lt;script src="https://runbikecalc.com/widgets/pace-calculator-widget.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="preview-section">
+                <div class="preview-label">Live Preview</div>
+                <script src="/widgets/pace-calculator-widget.js"></script>
+            </div>
+        </div>
+
+        <!-- Widget 2: HR Zone Calculator -->
+        <div class="widget-card" id="zone-widget">
+            <h3>Heart Rate Zone Calculator Widget</h3>
+            <p style="color: #4a5568; margin-bottom: 16px;">Give your audience an interactive heart rate zone calculator. Supports both the standard max HR method and Karvonen (heart rate reserve) method with optional resting HR input. Ideal for fitness sites, personal trainer blogs, and endurance coaching platforms.</p>
+
+            <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Embed Code</h4>
+            <div class="embed-code-block">
+                <button class="copy-btn" onclick="copyCode(this)" data-code='&lt;script src="https://runbikecalc.com/widgets/zone-calculator-widget.js"&gt;&lt;/script&gt;'>Copy</button>
+                <pre><code>&lt;script src="https://runbikecalc.com/widgets/zone-calculator-widget.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="preview-section">
+                <div class="preview-label">Live Preview</div>
+                <script src="/widgets/zone-calculator-widget.js"></script>
+            </div>
+        </div>
+
+        <!-- How to Embed Section -->
+        <div class="widget-card">
+            <h3>How to Add a Widget to Your Site</h3>
+            <ol style="padding-left: 20px; color: #4a5568; line-height: 1.8;">
+                <li><strong>Choose a widget</strong> from the options above.</li>
+                <li><strong>Copy the embed code</strong> by clicking the "Copy" button.</li>
+                <li><strong>Paste the code</strong> into your HTML where you want the calculator to appear.</li>
+                <li><strong>Publish your page</strong> &mdash; the widget loads automatically.</li>
+            </ol>
+            <p style="color: #718096; font-size: 14px; margin-top: 16px;">Works with WordPress, Squarespace, Wix, Ghost, Hugo, Next.js, and any platform that supports custom HTML. For WordPress, use a "Custom HTML" block in the editor.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="widget-card">
+            <h3>Frequently Asked Questions</h3>
+
+            <div style="margin-top: 16px;">
+                <h4 style="font-weight: 600; margin-bottom: 6px;">Are the widgets free?</h4>
+                <p style="color: #4a5568; margin-bottom: 16px;">Yes, 100% free. We only ask that you keep the "Powered by RunBikeCalc" attribution link visible.</p>
+
+                <h4 style="font-weight: 600; margin-bottom: 6px;">Will this slow down my website?</h4>
+                <p style="color: #4a5568; margin-bottom: 16px;">No. Each widget is under 5KB of vanilla JavaScript with zero external dependencies. They load asynchronously and won't block your page rendering.</p>
+
+                <h4 style="font-weight: 600; margin-bottom: 6px;">Will the widget conflict with my CSS?</h4>
+                <p style="color: #4a5568; margin-bottom: 16px;">No. Each widget uses Shadow DOM, which fully encapsulates its styles. Your site's CSS cannot leak in, and the widget's CSS cannot leak out.</p>
+
+                <h4 style="font-weight: 600; margin-bottom: 6px;">Can I use multiple widgets on the same page?</h4>
+                <p style="color: #4a5568; margin-bottom: 16px;">Yes. Each widget creates a unique instance, so you can embed both the pace calculator and heart rate zone calculator on the same page without conflicts.</p>
+
+                <h4 style="font-weight: 600; margin-bottom: 6px;">Do you track my visitors?</h4>
+                <p style="color: #4a5568;">No. The widgets contain no tracking code, cookies, or analytics. They run entirely in the browser with no server calls.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: 40px 0 20px;">
+            <p style="color: #718096; font-size: 14px;">Need a custom calculator widget for your site? <a href="/contact" style="color: #3182ce; text-decoration: underline;">Get in touch</a>.</p>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/partner" class="hover:text-white">Partner With Us</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+
+      <!-- More from Cozy River Studios -->
+      <div class="border-t border-cream-dark mt-8 pt-6">
+        <h4 class="text-sm font-semibold mb-3">More from Cozy River Studios</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-sm">
+          <a href="https://disasterprepcalc.com" target="_blank" rel="noopener" style="text-decoration: none; color: #6b7280;">
+            <span style="font-weight: 500; color: #374151;">DisasterPrepCalc</span> &mdash; Emergency preparedness planning tools
+          </a>
+        </div>
+      </div>
+
+</footer>
+
+    <!-- Copy to Clipboard Script -->
+    <script>
+    function copyCode(btn) {
+        var code = btn.getAttribute('data-code');
+        // Decode HTML entities
+        var txt = document.createElement('textarea');
+        txt.textContent = code;
+        var decoded = txt.textContent
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"');
+        navigator.clipboard.writeText(decoded).then(function() {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function() {
+                btn.textContent = 'Copy';
+                btn.classList.remove('copied');
+            }, 2000);
+        });
+    }
+    </script>
+</body>
+</html>

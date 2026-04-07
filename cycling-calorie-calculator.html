@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+    <title>Cycling Calorie Calculator — Calories Burned Cycling by Speed & Terrain</title>
+    <link rel="canonical" href="https://runbikecalc.com/cycling-calorie-calculator">
+    <meta name="description" content="Calculate exactly how many calories you burn cycling. Enter weight, duration or distance, intensity, and terrain. Uses MET values for accuracy — not generic estimates.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cycling Calorie Calculator — Calories Burned Cycling by Speed & Terrain">
+    <meta property="og:description" content="Calculate accurate calories burned cycling based on weight, speed, distance, and terrain. Includes cycling vs running comparison.">
+    <meta property="og:image" content="https://runbikecalc.com/images/cycling-calorie-calculator-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/cycling-calorie-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cycling Calorie Calculator — Calories Burned Cycling by Speed & Terrain">
+    <meta name="twitter:description" content="Enter your weight, speed, and terrain to see exactly how many calories you burned cycling.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/cycling-calorie-calculator-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Schema.org structured data — WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Cycling Calorie Calculator",
+        "url": "https://runbikecalc.com/cycling-calorie-calculator",
+        "description": "Calculate calories burned cycling based on weight, duration, distance, intensity, and terrain using MET values",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many calories does cycling burn per hour?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cycling burns roughly 400–1,000 calories per hour depending on rider weight and speed. A 150 lb rider cycling at a moderate 13 mph burns about 480 calories per hour. At vigorous 17 mph that rises to around 570 calories. Speed, terrain, and body weight are the three biggest variables."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does cycling burn as many calories as running?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Running generally burns more calories per minute than cycling at a comparable perceived effort level, because running requires supporting your body weight. However, because cycling is lower-impact, most cyclists can sustain longer sessions, which can result in equal or greater total calorie expenditure per workout."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is a cycling calorie calculator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MET-based calculators like this one are accurate to within 10–15% for most riders. Individual differences in cycling efficiency, drafting, bike type, and fitness level all affect the true number. Pairing a heart rate monitor with speed data gives the most precise real-world estimate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does hilly terrain burn more cycling calories?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Climbing hills increases the metabolic cost of cycling significantly. Hilly terrain adds roughly 20% more calories burned compared to flat riding at the same speed. Mountainous or sustained climbing terrain can increase calorie burn by 40% or more."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many calories does a 30-minute bike ride burn?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A 30-minute bike ride burns approximately 200–500 calories depending on your weight and intensity. A 150 lb rider at moderate intensity (13 mph) burns roughly 240 calories in 30 minutes. At vigorous intensity (17 mph) that increases to about 285 calories."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/conversion-popup.css">
+    <link rel="stylesheet" href="/css/sticky-banner.css">
+    <link rel="stylesheet" href="/css/inline-cta.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/cycling-tools" class="hover:text-primary">Cycling Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Cycling Calorie Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Quick Answer Box for Featured Snippet -->
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> Cycling burns 400–1,000 calories/hour. A 150 lb rider at moderate pace (13 mph) burns roughly 480 cal/hr on flat terrain.
+            </p>
+        </div>
+
+        <!-- Page heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Cycling Calorie Calculator</h1>
+        <p class="text-lg text-gray-600 mb-8">Find out exactly how many calories you burn cycling based on your weight, speed, duration or distance, and terrain. Our bike ride calorie calculator uses MET science — not vague estimates — so you get numbers you can actually use for nutrition planning and weight loss tracking.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Main content area -->
+            <div class="md:col-span-2">
+                <!-- Calculator card -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">Calculate Calories Burned Cycling</h2>
+
+                    <!-- Method tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav class="-mb-px flex space-x-8">
+                                <button class="method-tab active border-b-2 border-primary text-primary py-2 px-1 text-sm font-medium" data-method="time">
+                                    By Duration
+                                </button>
+                                <button class="method-tab border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 text-sm font-medium" data-method="distance">
+                                    By Distance
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <form id="cycling-calories-form" class="space-y-6">
+                        <!-- Common fields: weight -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Body Weight *
+                                </label>
+                                <input type="number"
+                                       id="weight"
+                                       name="weight"
+                                       class="calc-input-number"
+                                       placeholder="150"
+                                       required
+                                       min="80"
+                                       max="400"
+                                       step="1">
+                                <p class="text-sm text-gray-600 mt-1">Your current body weight</p>
+                            </div>
+
+                            <div>
+                                <label for="weightUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Weight Unit
+                                </label>
+                                <select id="weightUnit" name="weightUnit" class="calc-input-number text-left">
+                                    <option value="lbs">Pounds (lbs)</option>
+                                    <option value="kg">Kilograms (kg)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose your preferred unit</p>
+                            </div>
+                        </div>
+
+                        <!-- Intensity dropdown (always visible) -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="intensity" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Cycling Intensity *
+                                </label>
+                                <select id="intensity" name="intensity" class="calc-input-number text-left" required>
+                                    <option value="">Select intensity</option>
+                                    <option value="casual">Casual (&lt;12 mph) — Leisure / commuting</option>
+                                    <option value="moderate">Moderate (12–15 mph) — Fitness riding</option>
+                                    <option value="vigorous">Vigorous (16–19 mph) — Fast training</option>
+                                    <option value="racing">Racing (20+ mph) — Race / hammering</option>
+                                    <option value="spinning">Spinning / Indoor cycling class</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Choose the effort that best matches your ride</p>
+                            </div>
+
+                            <div>
+                                <label for="terrain" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Terrain
+                                </label>
+                                <select id="terrain" name="terrain" class="calc-input-number text-left">
+                                    <option value="flat">Flat — Roads, bike paths</option>
+                                    <option value="hilly">Hilly — Rolling terrain (+20%)</option>
+                                    <option value="mountainous">Mountainous — Sustained climbing (+40%)</option>
+                                </select>
+                                <p class="text-sm text-gray-600 mt-1">Terrain significantly affects calorie burn</p>
+                            </div>
+                        </div>
+
+                        <!-- Duration method fields -->
+                        <div id="time-fields" class="method-fields">
+                            <div>
+                                <label for="duration" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Duration *
+                                </label>
+                                <input type="number"
+                                       id="duration"
+                                       name="duration"
+                                       class="calc-input-number"
+                                       placeholder="60"
+                                       min="1"
+                                       max="600"
+                                       step="1"
+                                       required>
+                                <p class="text-sm text-gray-600 mt-1">Total riding time in minutes</p>
+                            </div>
+                        </div>
+
+                        <!-- Distance method fields -->
+                        <div id="distance-fields" class="method-fields hidden">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="distance" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance *
+                                    </label>
+                                    <input type="number"
+                                           id="distance"
+                                           name="distance"
+                                           class="calc-input-number"
+                                           placeholder="20"
+                                           min="0.1"
+                                           max="500"
+                                           step="0.1">
+                                    <p class="text-sm text-gray-600 mt-1">Distance of your bike ride</p>
+                                </div>
+
+                                <div>
+                                    <label for="distanceUnit" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Distance Unit
+                                    </label>
+                                    <select id="distanceUnit" name="distanceUnit" class="calc-input-number text-left">
+                                        <option value="miles">Miles</option>
+                                        <option value="km">Kilometers</option>
+                                    </select>
+                                    <p class="text-sm text-gray-600 mt-1">Choose distance unit</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calc-button">
+                            Calculate Calories Burned
+                        </button>
+                    </form>
+
+                    <!-- Results section -->
+                    <div id="results" class="hidden mt-8">
+                        <!-- Results will be inserted here -->
+                    </div>
+
+                    <!-- Product Recommendations (shown after calculation) -->
+                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
+                </div>
+
+                <!-- Affiliate gear cards -->
+                <div class="calc-card mb-8">
+                    <h2 class="text-xl font-semibold mb-4">Track Your Cycling Calories More Accurately</h2>
+                    <p class="text-sm text-gray-600 mb-4">A GPS cycling computer or heart rate monitor takes calorie estimates from good to precise. Here are the two tools most serious cyclists use:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <!-- Garmin Edge 540 -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">GPS Cycling Computer</div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Garmin Edge 540</h3>
+                            <p class="text-sm text-gray-600 mb-3">Displays real-time calorie burn, power data, and training load. Syncs with heart rate monitors for accuracy you can trust on every ride.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <a rel="sponsored noopener" href="https://www.amazon.com/dp/B0BWGJR18P?tag=runbikecalc-20" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold text-sm px-4 py-2 rounded transition-colors">
+                                    View on Amazon
+                                </a>
+                                <a rel="sponsored noopener" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block bg-white hover:bg-gray-50 text-gray-800 font-semibold text-sm px-4 py-2 rounded border border-gray-300 transition-colors">
+                                    Backcountry
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Wahoo TICKR -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Heart Rate Monitor</div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Wahoo TICKR HR Monitor</h3>
+                            <p class="text-sm text-gray-600 mb-3">Chest-strap accuracy with Bluetooth and ANT+ broadcast. Pairs with any cycling computer or phone app to improve calorie calculation precision by up to 20%.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <a rel="sponsored noopener" href="https://www.amazon.com/dp/B07GQMN8HZ?tag=runbikecalc-20" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold text-sm px-4 py-2 rounded transition-colors">
+                                    View on Amazon
+                                </a>
+                                <a rel="sponsored noopener" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block bg-white hover:bg-gray-50 text-gray-800 font-semibold text-sm px-4 py-2 rounded border border-gray-300 transition-colors">
+                                    Backcountry
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3">Disclosure: Links above are affiliate links. We may earn a small commission at no extra cost to you.</p>
+                </div>
+
+                <!-- Educational content -->
+                <div class="content-box">
+                <article class="prose prose-lg max-w-none">
+                    <h2>How Many Calories Does Cycling Burn?</h2>
+                    <p>Cycling is one of the most efficient forms of cardiovascular exercise — efficient both for your joints and for calorie-burning potential over long durations. The number of calories burned on a bike ride depends on four primary variables: your body weight, riding intensity (speed), duration or distance, and terrain.</p>
+
+                    <p>Most estimates you see on smartwatches and stationary bikes use a simple formula derived from MET values — Metabolic Equivalent of Task. Our cycling calorie calculator applies the same science, refined for actual cycling intensities and terrain grades based on published compendium research.</p>
+
+                    <h3>Calories Burned Cycling by Speed (150 lb Rider, 60 Minutes)</h3>
+                    <p>Use this table as a quick reference for how cycling speed affects calorie burn. Values are for a 150 lb (68 kg) rider on flat terrain over one hour.</p>
+
+                    <div style="overflow-x: auto;">
+                    <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: #f1f5f9;">
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Speed</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Intensity</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">MET Value</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Cal / Hour</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Cal / 30 Min</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">&lt;12 mph</td>
+                                <td style="padding: 9px 12px;">Casual / Leisure</td>
+                                <td style="padding: 9px 12px;">4.0</td>
+                                <td style="padding: 9px 12px;"><strong>272</strong></td>
+                                <td style="padding: 9px 12px;">136</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                                <td style="padding: 9px 12px;">12–15 mph</td>
+                                <td style="padding: 9px 12px;">Moderate</td>
+                                <td style="padding: 9px 12px;">6.8</td>
+                                <td style="padding: 9px 12px;"><strong>462</strong></td>
+                                <td style="padding: 9px 12px;">231</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">16–19 mph</td>
+                                <td style="padding: 9px 12px;">Vigorous</td>
+                                <td style="padding: 9px 12px;">8.0</td>
+                                <td style="padding: 9px 12px;"><strong>544</strong></td>
+                                <td style="padding: 9px 12px;">272</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                                <td style="padding: 9px 12px;">20+ mph</td>
+                                <td style="padding: 9px 12px;">Racing</td>
+                                <td style="padding: 9px 12px;">10.0</td>
+                                <td style="padding: 9px 12px;"><strong>680</strong></td>
+                                <td style="padding: 9px 12px;">340</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">Indoor</td>
+                                <td style="padding: 9px 12px;">Spinning Class</td>
+                                <td style="padding: 9px 12px;">8.5</td>
+                                <td style="padding: 9px 12px;"><strong>578</strong></td>
+                                <td style="padding: 9px 12px;">289</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b;">Values calculated using: Calories = MET x weight(kg) x time(hrs). Based on 150 lb (68 kg) rider on flat terrain.</p>
+
+                    <h3>How Terrain Affects Cycling Calorie Burn</h3>
+                    <p>Terrain is one of the most underrated factors in cycling calorie calculations. Many apps ignore it entirely, which leads to significant underestimates for riders who tackle hills.</p>
+                    <ul>
+                        <li><strong>Flat terrain:</strong> Baseline MET value, no adjustment needed</li>
+                        <li><strong>Hilly terrain:</strong> Adds approximately 20% more calories burned over the same duration at the same speed</li>
+                        <li><strong>Mountainous / sustained climbing:</strong> Adds approximately 40% more calories — the energy cost of gaining elevation is substantial</li>
+                    </ul>
+                    <p>For context: a 150 lb rider doing an hour of moderate cycling burns about 462 calories on flat roads. On a hilly route that same hour jumps to 554 calories. On a mountain climb it reaches 647 calories.</p>
+
+                    <h2>Cycling vs Running Calorie Burn</h2>
+                    <p>The most common question we get is: does cycling burn as many calories as running? The short answer is that running burns more calories per minute at a comparable effort, but cycling allows most athletes to sustain effort longer, often resulting in comparable or greater total calorie burn per session.</p>
+
+                    <div style="overflow-x: auto;">
+                    <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: #f1f5f9;">
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Activity</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Speed / Effort</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">MET</th>
+                                <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #cbd5e1;">Cal / Hour (150 lb)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">Running</td>
+                                <td style="padding: 9px 12px;">6 mph (10 min/mile)</td>
+                                <td style="padding: 9px 12px;">10.0</td>
+                                <td style="padding: 9px 12px;"><strong>680</strong></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                                <td style="padding: 9px 12px;">Running</td>
+                                <td style="padding: 9px 12px;">8 mph (7.5 min/mile)</td>
+                                <td style="padding: 9px 12px;">13.5</td>
+                                <td style="padding: 9px 12px;"><strong>918</strong></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">Cycling</td>
+                                <td style="padding: 9px 12px;">12–15 mph (moderate)</td>
+                                <td style="padding: 9px 12px;">6.8</td>
+                                <td style="padding: 9px 12px;"><strong>462</strong></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                                <td style="padding: 9px 12px;">Cycling</td>
+                                <td style="padding: 9px 12px;">16–19 mph (vigorous)</td>
+                                <td style="padding: 9px 12px;">8.0</td>
+                                <td style="padding: 9px 12px;"><strong>544</strong></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 9px 12px;">Cycling</td>
+                                <td style="padding: 9px 12px;">20+ mph (racing)</td>
+                                <td style="padding: 9px 12px;">10.0</td>
+                                <td style="padding: 9px 12px;"><strong>680</strong></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                                <td style="padding: 9px 12px;">Spinning</td>
+                                <td style="padding: 9px 12px;">Indoor class</td>
+                                <td style="padding: 9px 12px;">8.5</td>
+                                <td style="padding: 9px 12px;"><strong>578</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p>The key practical difference: running has a higher injury risk that limits session length and weekly volume. Cycling allows high-volume training with less cumulative stress. Many endurance athletes use cycling as an active recovery tool or cross-training method precisely because they can burn significant calories without pounding their joints. See our <a href="/calories-burned-running-calculator" class="text-primary hover:underline">running calorie calculator</a> for a direct side-by-side comparison with your own numbers.</p>
+
+                    <h3>The MET Formula Explained</h3>
+                    <p>Every result from this cycling calorie calculator uses the same formula published in exercise science research:</p>
+                    <p><strong>Calories = MET x weight (kg) x duration (hours) x terrain modifier</strong></p>
+                    <p>MET (Metabolic Equivalent of Task) represents the ratio of your working metabolic rate to your resting metabolic rate. A MET of 1.0 is sitting still. Casual cycling at a MET of 4.0 means you are burning energy four times faster than at rest. Racing at MET 10.0 means ten times your resting rate.</p>
+                    <p>The terrain modifier we apply is based on grade-adjusted energy cost research: flat = 1.0x, hilly = 1.2x, mountainous = 1.4x.</p>
+
+                    <h3>Factors That Affect Your Actual Calorie Burn</h3>
+                    <h4>Body Weight</h4>
+                    <p>Heavier riders burn more calories because moving a larger mass requires more energy. A 200 lb rider burns roughly 33% more calories per hour than a 150 lb rider at the same speed.</p>
+
+                    <h4>Cycling Efficiency</h4>
+                    <p>More experienced cyclists develop better pedaling mechanics and aerodynamic position, meaning they can maintain the same speed at a lower metabolic cost. This is one reason why MET-based calculators may slightly overestimate calorie burn for highly trained riders.</p>
+
+                    <h4>Drafting</h4>
+                    <p>Drafting behind another rider can reduce aerodynamic drag by 20–40%, meaningfully lowering calorie burn at the same speed. Group ride calorie numbers will be lower than solo ride estimates at equivalent speeds.</p>
+
+                    <h4>Bike Type</h4>
+                    <p>Road bikes on pavement are the most efficient. Mountain bikes on trails, due to rolling resistance and rider position, demand more energy. An e-bike with pedal assist naturally reduces calorie burn.</p>
+
+                    <h3>Using Cycling for Weight Loss</h3>
+                    <p>Cycling is one of the most sustainable exercises for long-term calorie deficit because it is low-impact and enjoyable enough that most people stick with it. A 150 lb rider cycling at moderate intensity five days per week for one hour would burn roughly 2,310 additional calories — about two-thirds of a pound of fat per week from exercise alone, without any dietary changes.</p>
+                    <p>For practical cycling weight loss strategies, read our guide on <a href="/blog/cycling-for-weight-loss-2025" class="text-primary hover:underline">cycling for weight loss in 2025</a>. To optimize your training zones for maximum fat burn, use our <a href="/heart-rate-zone-calculator" class="text-primary hover:underline">heart rate zone calculator</a> and <a href="/ftp-calculator" class="text-primary hover:underline">FTP calculator</a> to dial in the right intensities.</p>
+
+                    <h3>Calorie Burn Across Common Cycling Scenarios</h3>
+                    <ul>
+                        <li><strong>30-minute commute (casual, 150 lb):</strong> ~136 calories</li>
+                        <li><strong>1-hour group ride (moderate, 150 lb):</strong> ~462 calories</li>
+                        <li><strong>2-hour endurance ride (moderate, 150 lb):</strong> ~924 calories</li>
+                        <li><strong>45-minute spinning class (150 lb):</strong> ~434 calories</li>
+                        <li><strong>Century ride — 100 miles (~6 hrs moderate, 150 lb):</strong> ~2,770 calories</li>
+                        <li><strong>1-hour mountain climb (vigorous, 150 lb, mountainous):</strong> ~762 calories</li>
+                    </ul>
+
+                    <h3>How to Get More Accurate Calorie Estimates</h3>
+                    <p>MET-based calculators are accurate within 10–15% for most riders. To improve precision:</p>
+                    <ul>
+                        <li><strong>Add a heart rate monitor:</strong> Heart rate correlates more directly with oxygen consumption than speed alone. Devices like the Wahoo TICKR HR monitor paired with a cycling computer can improve calorie estimate accuracy to within 5–10%.</li>
+                        <li><strong>Use a power meter:</strong> Measuring actual power output in watts is the gold standard for cycling calorie calculation. If you have a power meter, use your normalized power and kilojoule data (1 kJ ≈ 1 kcal at roughly 24% mechanical efficiency).</li>
+                        <li><strong>Track with a GPS computer:</strong> A device like the Garmin Edge 540 factors in real-time speed, grade, and heart rate for the most accurate all-around estimate without a dedicated power meter.</li>
+                        <li><strong>Use consistent inputs:</strong> Always enter your current weight and choose the intensity level that matches your perceived exertion, not just your target speed.</li>
+                    </ul>
+                </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+
+                <!-- Quick calorie reference -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Calories / Hour by Weight</h3>
+                    <p class="text-xs text-gray-500 mb-3">Moderate pace (13 mph), flat terrain</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>120 lbs</span>
+                            <span class="font-medium">~370 cal/hr</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>150 lbs</span>
+                            <span class="font-medium">~462 cal/hr</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>175 lbs</span>
+                            <span class="font-medium">~540 cal/hr</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>200 lbs</span>
+                            <span class="font-medium">~617 cal/hr</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>225 lbs</span>
+                            <span class="font-medium">~694 cal/hr</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2">MET 6.8, flat terrain modifier 1.0</p>
+                </div>
+
+                <!-- Related calculators -->
+                <div class="calc-card mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Related Calculators</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/calories-burned-running-calculator" class="text-primary hover:underline">Calories Burned Running</a></li>
+                        <li><a href="/ftp-calculator" class="text-primary hover:underline">FTP Calculator</a></li>
+                        <li><a href="/heart-rate-zone-calculator" class="text-primary hover:underline">Heart Rate Zone Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="text-primary hover:underline">Power-to-Weight Ratio</a></li>
+                        <li><a href="/vo2-max-calculator" class="text-primary hover:underline">VO2 Max Calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Blog cross-link -->
+                <div class="calc-card">
+                    <h3 class="text-lg font-semibold mb-3">Further Reading</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="/blog/cycling-for-weight-loss-2025" class="text-primary hover:underline font-medium">Cycling for Weight Loss Guide</a>
+                            <p class="text-gray-500 text-xs mt-0.5">How to structure rides for maximum fat burn</p>
+                        </li>
+                        <li>
+                            <a href="/blog/cycling-for-weight-loss-2025" class="text-primary hover:underline font-medium">Best Cycling Intensity for Fat Loss</a>
+                            <p class="text-gray-500 text-xs mt-0.5">Zone 2 vs interval training breakdown</p>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Calculators Section -->
+        <section class="mt-12">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Related Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="/calories-burned-running-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Running Calorie Calculator</h3>
+                    <p class="text-gray-600 text-sm">Compare calories burned running vs cycling</p>
+                </a>
+                <a href="/ftp-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">FTP Calculator</h3>
+                    <p class="text-gray-600 text-sm">Find your Functional Threshold Power</p>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Heart Rate Zone Calculator</h3>
+                    <p class="text-gray-600 text-sm">Train in the right zone for fat burn</p>
+                </a>
+                <a href="/power-to-weight-ratio-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:border-primary hover:shadow-sm transition-all duration-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-1">Power-to-Weight Calculator</h3>
+                    <p class="text-gray-600 text-sm">Optimize your performance-to-weight ratio</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="mt-12 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 border border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Maximize Your Cycling Results</h2>
+            <p class="text-gray-600 mb-6">Guides to help you burn more calories and ride stronger</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/blog/cycling-for-weight-loss-2025" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🚴</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-orange-600 font-semibold mb-1">WEIGHT LOSS</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Cycling for Weight Loss 2025</h3>
+                            <p class="text-gray-600 text-sm mb-3">Complete guide to structuring rides for maximum and sustainable fat loss.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>14 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/what-is-zone-2-training-complete-guide" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">FAT BURNING</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Zone 2 Training Guide</h3>
+                            <p class="text-gray-600 text-sm mb-3">Master Zone 2 cycling for optimal fat burning and aerobic base building.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/ftp-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">TRAINING</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">FTP Calculator</h3>
+                            <p class="text-gray-600 text-sm mb-3">Calculate your Functional Threshold Power to train smarter and burn more at threshold.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>Tool</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/heart-rate-zone-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">❤️</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">INTENSITY</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zone Calculator</h3>
+                            <p class="text-gray-600 text-sm mb-3">Find your exact training zones to maximize calorie burn at the right effort level.</p>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <span>Tool</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Cycling Hub CTA -->
+            <div class="mt-6 bg-white rounded-lg p-6 border-2 border-blue-300">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Explore All Cycling Tools</h3>
+                        <p class="text-gray-600 text-sm">FTP, power-to-weight, heart rate zones, and more — all in one place.</p>
+                    </div>
+                    <a href="/cycling-tools" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg whitespace-nowrap">
+                        View Cycling Tools
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Cycling Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/cycling-calorie-calculator" class="hover:text-white">Cycling Calorie Calculator</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
+                        <li><a href="/cycling-tools" class="hover:text-white">All Cycling Tools</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zone Calculator</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Running Calories</a></li>
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Running Pace</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/partner" class="hover:text-white">Partner With Us</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+
+        <!-- More from Cozy River Studios -->
+        <div class="border-t border-cream-dark mt-8 pt-6">
+            <h4 class="text-sm font-semibold mb-3">More from Cozy River Studios</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-sm">
+                <a href="https://disasterprepcalc.com" target="_blank" rel="noopener" style="text-decoration: none; color: #6b7280;">
+                    <span style="font-weight: 500; color: #374151;">DisasterPrepCalc</span> — Emergency preparedness planning tools
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator-base.js"></script>
+    <script src="/js/product-recommendations.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.method-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const method = this.dataset.method;
+
+                // Update active tab
+                document.querySelectorAll('.method-tab').forEach(t => {
+                    t.classList.remove('active', 'border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                this.classList.add('active', 'border-primary', 'text-primary');
+                this.classList.remove('border-transparent', 'text-gray-500');
+
+                // Show/hide method fields
+                document.querySelectorAll('.method-fields').forEach(field => {
+                    field.classList.add('hidden');
+                });
+                document.getElementById(method + '-fields').classList.remove('hidden');
+
+                // Update required fields
+                cyclingCalc.updateRequiredFields(method);
+            });
+        });
+
+        // MET values for cycling intensities
+        const CYCLING_METS = {
+            casual:   4.0,
+            moderate: 6.8,
+            vigorous: 8.0,
+            racing:   10.0,
+            spinning: 8.5
+        };
+
+        // Speed lookup (mph) per intensity — used for distance-based duration estimation
+        const INTENSITY_SPEED_MPH = {
+            casual:   10,
+            moderate: 13.5,
+            vigorous: 17.5,
+            racing:   21,
+            spinning: null  // indoor — no meaningful speed for distance calc
+        };
+
+        // Terrain modifiers
+        const TERRAIN_MODIFIERS = {
+            flat:        1.0,
+            hilly:       1.2,
+            mountainous: 1.4
+        };
+
+        // Food equivalents
+        const FOOD_EQUIVALENTS = [
+            { name: 'banana',            cal: 105  },
+            { name: 'slice of pizza',    cal: 285  },
+            { name: 'can of Coke',       cal: 140  },
+            { name: 'chocolate bar',     cal: 250  },
+            { name: 'energy gel',        cal: 100  },
+            { name: 'granola bar',       cal: 190  },
+            { name: 'chicken breast',    cal: 165  }
+        ];
+
+        // Running MET for comparison (moderate 10 min/mile)
+        const RUNNING_MET_MODERATE = 10.0;
+
+        class CyclingCalorieCalculator extends Calculator {
+            constructor(formId, resultId) {
+                super(formId, resultId);
+                this.currentMethod = 'time';
+            }
+
+            updateRequiredFields(method) {
+                this.currentMethod = method;
+
+                // Clear method-specific required attributes
+                const distanceEl = document.getElementById('distance');
+                const durationEl = document.getElementById('duration');
+
+                distanceEl.required = false;
+                durationEl.required = false;
+
+                if (method === 'time') {
+                    durationEl.required = true;
+                } else if (method === 'distance') {
+                    distanceEl.required = true;
+                }
+            }
+
+            calculate() {
+                const weight    = this.getInputValue('weight');
+                const weightUnit = this.form.querySelector('[name="weightUnit"]').value;
+                const intensity  = this.form.querySelector('[name="intensity"]').value;
+                const terrain    = this.form.querySelector('[name="terrain"]').value;
+
+                // Validate common fields
+                if (!weight) {
+                    this.displayError('Please enter your body weight.');
+                    return;
+                }
+                if (!intensity) {
+                    this.displayError('Please select a cycling intensity.');
+                    return;
+                }
+
+                const weightKg = weightUnit === 'lbs' ? weight * 0.453592 : weight;
+                const met      = CYCLING_METS[intensity];
+                const terrainMod = TERRAIN_MODIFIERS[terrain] || 1.0;
+
+                let durationHrs = null;
+                let distanceDisplay = null;
+                let distanceUnit = null;
+
+                if (this.currentMethod === 'time') {
+                    const duration = this.getInputValue('duration');
+                    if (!duration || duration < 1) {
+                        this.displayError('Please enter a valid duration in minutes.');
+                        return;
+                    }
+                    durationHrs = duration / 60;
+                } else {
+                    // distance method
+                    const distance = this.getInputValue('distance');
+                    distanceUnit   = this.form.querySelector('[name="distanceUnit"]').value;
+
+                    if (!distance || distance <= 0) {
+                        this.displayError('Please enter a valid distance.');
+                        return;
+                    }
+
+                    distanceDisplay = distance;
+
+                    if (intensity === 'spinning') {
+                        this.displayError('Distance input is not applicable for spinning / indoor cycling. Please use the Duration tab.');
+                        return;
+                    }
+
+                    // Convert distance to miles for speed lookup
+                    const distanceMiles = distanceUnit === 'km' ? distance * 0.621371 : distance;
+                    const speedMph = INTENSITY_SPEED_MPH[intensity];
+                    durationHrs = distanceMiles / speedMph;
+                }
+
+                // Core formula: Calories = MET x weight(kg) x time(hrs) x terrain modifier
+                const calories = met * weightKg * durationHrs * terrainMod;
+                const durationMins = Math.round(durationHrs * 60);
+
+                // Derived metrics
+                const calPerMinute = calories / (durationHrs * 60);
+                const fatCalories  = Math.round(calories * 0.65);
+                const carbCalories = Math.round(calories * 0.35);
+
+                // Running comparison (same duration, moderate running MET)
+                const runningCalories = RUNNING_MET_MODERATE * weightKg * durationHrs;
+                const diffPct = Math.round(((runningCalories - calories) / runningCalories) * 100);
+
+                // Food equivalents
+                const foodLines = FOOD_EQUIVALENTS.map(f => {
+                    const count = (calories / f.cal).toFixed(1);
+                    return `<li>${count} x ${f.name} (~${f.cal} cal each)</li>`;
+                }).join('');
+
+                // Terrain label
+                const terrainLabels = { flat: 'Flat', hilly: 'Hilly (+20%)', mountainous: 'Mountainous (+40%)' };
+                const intensityLabels = {
+                    casual:   'Casual (&lt;12 mph)',
+                    moderate: 'Moderate (12–15 mph)',
+                    vigorous: 'Vigorous (16–19 mph)',
+                    racing:   'Racing (20+ mph)',
+                    spinning: 'Spinning / Indoor'
+                };
+
+                this.displayResult(`
+                    <div class="calc-result">
+                        <h3 class="text-xl font-semibold mb-6">Cycling Calorie Results</h3>
+
+                        <div class="bg-primary text-white p-6 rounded-lg mb-6 text-center">
+                            <div class="text-lg font-semibold mb-2">Total Calories Burned Cycling</div>
+                            <div class="text-5xl font-bold">${Math.round(calories)}</div>
+                            <div class="text-lg opacity-90 mt-2">calories</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-green-800">Fat Calories</h4>
+                                <div class="text-2xl font-bold text-green-700">${fatCalories}</div>
+                                <div class="text-sm text-green-600">~65% of total</div>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-orange-800">Carb Calories</h4>
+                                <div class="text-2xl font-bold text-orange-700">${carbCalories}</div>
+                                <div class="text-sm text-orange-600">~35% of total</div>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <h4 class="font-semibold text-blue-800">Burn Rate</h4>
+                                <div class="text-2xl font-bold text-blue-700">${calPerMinute.toFixed(1)}</div>
+                                <div class="text-sm text-blue-600">calories / minute</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-3">Ride Summary</h4>
+                            <div class="text-sm text-gray-700 space-y-1">
+                                <p>• Body weight: ${weight} ${weightUnit} (${weightKg.toFixed(1)} kg)</p>
+                                <p>• Intensity: ${intensityLabels[intensity]}</p>
+                                <p>• MET value: ${met}</p>
+                                <p>• Terrain: ${terrainLabels[terrain]}</p>
+                                <p>• Duration: ${durationMins} minutes</p>
+                                ${distanceDisplay ? `<p>• Distance: ${distanceDisplay} ${distanceUnit}</p>` : ''}
+                                <p>• Formula: ${met} MET × ${weightKg.toFixed(1)} kg × ${durationHrs.toFixed(2)} hrs × ${terrainMod} terrain = <strong>${Math.round(calories)} cal</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-amber-800 mb-2">Cycling vs Running (same duration)</h4>
+                            <div class="text-sm text-amber-700 space-y-1">
+                                <p>• Cycling (this ride): <strong>${Math.round(calories)} calories</strong></p>
+                                <p>• Running at moderate pace (10 min/mile): <strong>${Math.round(runningCalories)} calories</strong></p>
+                                <p>• Running burns ${diffPct > 0 ? diffPct + '% more' : Math.abs(diffPct) + '% fewer'} calories over the same duration at these intensities.</p>
+                                <p class="mt-2 text-xs text-amber-600">Note: cycling is lower-impact, so longer total ride duration is often achievable — which can offset the per-minute calorie difference.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-blue-800 mb-2">Food Equivalents</h4>
+                            <p class="text-sm text-blue-700 mb-2">Your ${Math.round(calories)} calories burned is equivalent to eating:</p>
+                            <ul class="text-sm text-blue-700 list-disc list-inside space-y-0.5">
+                                ${foodLines}
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold mb-2">Nutrition & Recovery Tips</h4>
+                            <div class="text-sm text-gray-700 space-y-1">
+                                ${calories > 400 ? '<p>• Consume post-ride nutrition within 30 minutes — prioritize carbs and protein (3:1 ratio)</p>' : ''}
+                                ${calories > 600 ? '<p>• Consider on-bike nutrition: 200–300 cal/hour for rides over 75 minutes</p>' : ''}
+                                ${calories > 800 ? '<p>• Electrolyte replacement is important — aim for 400–700 mg sodium per hour of riding</p>' : ''}
+                                <p>• Rehydrate: drink 16–24 oz of fluid for every pound of weight lost during the ride</p>
+                                <p>• Include protein in your recovery meal to support muscle repair</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="cyclingCalc.shareResult('I burned ${Math.round(calories)} calories on my bike ride!')" class="calc-button-secondary">
+                                Share Result
+                            </button>
+                            <button onclick="cyclingCalc.printResult()" class="calc-button-secondary">
+                                Print Result
+                            </button>
+                        </div>
+                    </div>
+                `);
+
+                // Show product recommendations
+                if (typeof renderProductRecommendations === 'function') {
+                    document.getElementById('recommendations').classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'calories-cycling');
+                }
+
+                this.saveValues();
+            }
+        }
+
+        // Initialize calculator
+        const cyclingCalc = new CyclingCalorieCalculator('cycling-calories-form', 'results');
+    </script>
+    <script src="/js/auto-enhance.js" defer></script>
+    <script>
+    window.POPUP_CONFIG = {
+      headline: "Wait — Special Offer!",
+      product: "Premium Training Plans",
+      description: "Export your custom training plans to PDF & calendar. Unlock advanced periodization, tapering & race-specific workouts.",
+      price: "$5",
+      ctaText: "Unlock Premium Plans — Just $5",
+      ctaUrl: "https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06",
+      secondaryText: "No thanks",
+      accentColor: "#2563eb",
+      excludePaths: ["/success"]
+    };
+    </script>
+    <script src="/js/conversion-popup.js"></script>
+    <script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success']};</script>
+    <script src="/js/sticky-banner.js"></script>
+    <script>window.INLINE_CTA_CONFIG={badge:'Premium',headline:'Export Your Custom Plan to PDF and Calendar',body:'Upgrade to Premium for PDF exports, calendar sync, advanced periodization, and race-specific workout programming. One-time purchase, lifetime access.',ctaText:'Unlock Premium \u2014 Just $5',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',secondaryText:'See premium features',secondaryUrl:'/premium-training-plans.html',accentColor:'#2563eb',bgFrom:'#eff6ff',bgTo:'#f0f9ff',borderColor:'#bfdbfe',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
+    <script src="/js/inline-cta.js"></script>
+    <script src="/js/speculation-rules.js" defer></script>
+</body>
+</html>
