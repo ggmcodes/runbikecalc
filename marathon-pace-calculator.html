@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Marathon Pace Calculator — Mile-by-Mile Splits & Pace Band Generator</title>
+    <link rel="canonical" href="https://runbikecalc.com/marathon-pace-calculator">
+    <meta name="description" content="Free marathon pace calculator with mile-by-mile splits, km splits, checkpoint times, negative split planning, and a printable pace band for race day. Plan your perfect 26.2.">
+    <meta name="keywords" content="marathon pace calculator, marathon split calculator, marathon pace chart, negative split calculator, marathon pace band, BQ pace calculator">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Marathon Pace Calculator — Mile-by-Mile Splits & Pace Band Generator">
+    <meta property="og:description" content="Generate mile-by-mile splits, checkpoint times, and a printable pace band for your marathon.">
+    <meta property="og:image" content="https://runbikecalc.com/images/marathon-pace-og.jpg">
+    <meta property="og:url" content="https://runbikecalc.com/marathon-pace-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marathon Pace Calculator — Mile-by-Mile Splits & Pace Band Generator">
+    <meta name="twitter:description" content="Mile-by-mile splits, checkpoint times, negative split planning, and a printable pace band for race day.">
+    <meta name="twitter:image" content="https://runbikecalc.com/images/marathon-pace-twitter.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://runbikecalc.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Running Tools",
+                "item": "https://runbikecalc.com/running-tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Marathon Pace Calculator",
+                "item": "https://runbikecalc.com/marathon-pace-calculator"
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Marathon Pace Calculator",
+        "url": "https://runbikecalc.com/marathon-pace-calculator",
+        "description": "Calculate marathon mile-by-mile splits, km splits, checkpoint times, and generate a printable pace band with negative split support",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RunBikeCalc",
+            "url": "https://runbikecalc.com"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What pace do I need to run a 4-hour marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To finish a marathon in 4 hours, you need to average 9:09 per mile (5:41 per km). This means passing the halfway mark at approximately 2:00:00 for an even split, or 2:01-2:02 if running a slight negative split strategy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a negative split in a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A negative split means running the second half of the marathon faster than the first half. For example, running the first half in 2:02 and the second half in 1:58 for a 4:00 finish. Most coaches recommend aiming for 5-15 seconds per mile faster in the second half."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good marathon pace for beginners?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good first marathon pace is typically 10:00-12:00 per mile (6:12-7:27 per km), which translates to a 4:22-5:15 finish time. The key is to run at a comfortable, conversational pace for the first 20 miles and not start too fast."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my marathon pace from a half marathon time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A common method is to double your half marathon time and add 10-20 minutes. More precisely, multiply your half marathon time by 2.1 for a conservative estimate. For example, a 1:45 half marathon predicts roughly a 3:40-3:50 marathon."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Boston Marathon qualifying time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Boston Marathon qualifying (BQ) times vary by age and gender. For men 18-34, the standard is 3:00:00. For women 18-34, it is 3:30:00. Each older age group adds 5 minutes. Note that in recent years you typically need to beat the standard by 5-6 minutes to gain entry."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use mile splits or kilometer splits for a marathon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use whichever matches the race course markers. Most US marathons mark miles, while international marathons mark kilometers. Our calculator provides both. Kilometer splits feel more frequent (41 checkpoints vs 26), which can help mentally."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a pace band and how do I use it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A pace band is a small strip (often worn on the wrist) showing your target split time at each mile or kilometer marker. Print it, cut it out, and tape it to your wrist or pin it to your bib. Check it at each marker to confirm you are on pace."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does hitting the wall slow you down?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hitting the wall (glycogen depletion around mile 18-22) can slow runners by 1-3 minutes per mile. Proper fueling (30-60g carbs per hour), adequate long runs in training, and conservative early pacing are the best strategies to avoid it."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/conversion-popup.css">
+<link rel="stylesheet" href="/css/sticky-banner.css">
+<link rel="stylesheet" href="/css/inline-cta.css">
+
+    <!-- Print Styles for Pace Band -->
+    <style>
+        @media print {
+            body * { visibility: hidden; }
+            #pace-band-print, #pace-band-print * { visibility: visible; }
+            #pace-band-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                font-size: 9pt;
+            }
+            #pace-band-print table {
+                width: 100%;
+                border-collapse: collapse;
+                page-break-inside: avoid;
+            }
+            #pace-band-print td, #pace-band-print th {
+                border: 1px solid #333;
+                padding: 2px 6px;
+                text-align: center;
+                font-size: 9pt;
+            }
+            #pace-band-print .pace-band-header {
+                font-size: 12pt;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+            #pace-band-print .pace-band-sub {
+                font-size: 8pt;
+                text-align: center;
+                margin-bottom: 8px;
+            }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/running-tools" class="hover:text-primary">Running Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Marathon Pace Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Quick Answer Box for Featured Snippet -->
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> A 4:00 marathon requires 9:09/mile pace. A 3:30 marathon requires 8:01/mile. Enter your target time below for full mile-by-mile splits.
+            </p>
+        </div>
+
+        <!-- Page heading -->
+        <div class="flex flex-col md:flex-row items-center mb-8">
+            <div class="md:w-2/3 md:pr-8">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Marathon Pace Calculator</h1>
+                <p class="text-lg text-gray-600 mb-6">Generate mile-by-mile and km-by-km split tables, checkpoint times for every major distance marker, and a printable pace band you can wear on race day. Supports even splits and negative split strategies.</p>
+            </div>
+            <div class="md:w-1/3">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                     alt="Marathon runners checking their pace during a race"
+                     class="w-full h-48 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+                <div class="text-2xl font-bold text-blue-600">26.2 mi</div>
+                <div class="text-sm text-gray-600">Marathon Distance</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+                <div class="text-2xl font-bold text-green-600">42.195 km</div>
+                <div class="text-sm text-gray-600">In Kilometers</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+                <div class="text-2xl font-bold text-amber-500">4:30:00</div>
+                <div class="text-sm text-gray-600">Avg Finish Time</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+                <div class="text-2xl font-bold text-purple-600">2:01:09</div>
+                <div class="text-sm text-gray-600">World Record</div>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-12">
+            <h2 class="text-2xl font-bold mb-6">Calculate Your Marathon Splits</h2>
+
+            <form id="marathon-form" onsubmit="event.preventDefault(); calculateMarathon();">
+                <!-- Input Mode Toggle -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Input Method</label>
+                    <div class="flex gap-3">
+                        <button type="button" id="mode-time" onclick="setInputMode('time')" class="px-4 py-2 rounded-lg font-semibold bg-blue-600 text-white">
+                            Target Finish Time
+                        </button>
+                        <button type="button" id="mode-pace" onclick="setInputMode('pace')" class="px-4 py-2 rounded-lg font-semibold bg-gray-200 text-gray-700">
+                            Target Pace
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Target Finish Time -->
+                <div id="time-inputs" class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Target Finish Time</label>
+                    <div class="flex gap-3 items-center">
+                        <div>
+                            <input type="number" id="finish-hours" class="w-20 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-center" placeholder="3" min="1" max="8" value="4">
+                            <p class="text-xs text-gray-500 mt-1 text-center">Hours</p>
+                        </div>
+                        <span class="text-xl font-bold text-gray-400 mt-[-16px]">:</span>
+                        <div>
+                            <input type="number" id="finish-minutes" class="w-20 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-center" placeholder="00" min="0" max="59" value="0">
+                            <p class="text-xs text-gray-500 mt-1 text-center">Minutes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Target Pace -->
+                <div id="pace-inputs" class="mb-6 hidden">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Target Pace</label>
+                    <div class="flex gap-3 items-center">
+                        <div>
+                            <input type="number" id="pace-min" class="w-20 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-center" placeholder="9" min="4" max="16" value="9">
+                            <p class="text-xs text-gray-500 mt-1 text-center">Minutes</p>
+                        </div>
+                        <span class="text-xl font-bold text-gray-400 mt-[-16px]">:</span>
+                        <div>
+                            <input type="number" id="pace-sec" class="w-20 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-center" placeholder="09" min="0" max="59" value="9">
+                            <p class="text-xs text-gray-500 mt-1 text-center">Seconds</p>
+                        </div>
+                        <div>
+                            <select id="pace-unit" class="px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                                <option value="mile">per mile</option>
+                                <option value="km">per km</option>
+                            </select>
+                            <p class="text-xs text-gray-500 mt-1">&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Negative Split Toggle -->
+                <div class="mb-6 bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex items-center gap-3 mb-2">
+                        <input type="checkbox" id="negative-split" class="w-5 h-5 text-blue-600 rounded">
+                        <label for="negative-split" class="text-sm font-medium text-gray-700">Enable Negative Split</label>
+                    </div>
+                    <div id="negative-split-options" class="hidden mt-3">
+                        <label class="block text-sm text-gray-600 mb-1">Run the second half faster by:</label>
+                        <div class="flex gap-2 items-center">
+                            <input type="number" id="neg-split-sec" class="w-20 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-center" placeholder="10" min="1" max="60" value="10">
+                            <span class="text-sm text-gray-600">seconds per mile</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Typical range: 5-15 seconds per mile faster in the second half.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg text-lg">
+                    Generate Splits & Pace Band
+                </button>
+
+                <!-- Quick Presets -->
+                <div class="mt-4">
+                    <p class="text-sm text-gray-500 mb-2">Quick presets:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="setPreset(3,0)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">3:00</button>
+                        <button type="button" onclick="setPreset(3,15)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">3:15</button>
+                        <button type="button" onclick="setPreset(3,30)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">3:30</button>
+                        <button type="button" onclick="setPreset(3,45)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">3:45</button>
+                        <button type="button" onclick="setPreset(4,0)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">4:00</button>
+                        <button type="button" onclick="setPreset(4,15)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">4:15</button>
+                        <button type="button" onclick="setPreset(4,30)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">4:30</button>
+                        <button type="button" onclick="setPreset(5,0)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">5:00</button>
+                        <button type="button" onclick="setPreset(5,30)" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm">5:30</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Results -->
+            <div id="marathon-results" class="hidden mt-8">
+                <!-- Summary Row -->
+                <div class="grid md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-blue-600 text-white p-5 rounded-lg text-center">
+                        <div class="text-sm font-semibold mb-1 opacity-90">Finish Time</div>
+                        <div id="res-finish" class="text-3xl font-bold"></div>
+                    </div>
+                    <div class="bg-green-600 text-white p-5 rounded-lg text-center">
+                        <div class="text-sm font-semibold mb-1 opacity-90">Pace / Mile</div>
+                        <div id="res-pace-mile" class="text-3xl font-bold"></div>
+                    </div>
+                    <div class="bg-amber-500 text-white p-5 rounded-lg text-center">
+                        <div class="text-sm font-semibold mb-1 opacity-90">Pace / KM</div>
+                        <div id="res-pace-km" class="text-3xl font-bold"></div>
+                    </div>
+                    <div class="bg-purple-600 text-white p-5 rounded-lg text-center">
+                        <div class="text-sm font-semibold mb-1 opacity-90">Split Type</div>
+                        <div id="res-split-type" class="text-3xl font-bold"></div>
+                    </div>
+                </div>
+
+                <!-- Checkpoint Times -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">Checkpoint Times</h3>
+                    <div id="checkpoints" class="grid grid-cols-2 md:grid-cols-6 gap-3"></div>
+                </div>
+
+                <!-- Tab Toggle: Miles vs KM -->
+                <div class="flex gap-2 mb-4 border-b border-gray-200">
+                    <button type="button" id="tab-miles" onclick="showSplitTab('miles')" class="px-4 py-2 font-semibold text-blue-600 border-b-2 border-blue-600">Mile Splits</button>
+                    <button type="button" id="tab-km" onclick="showSplitTab('km')" class="px-4 py-2 font-semibold text-gray-500 border-b-2 border-transparent hover:text-gray-700">KM Splits</button>
+                </div>
+
+                <!-- Mile Split Table -->
+                <div id="splits-miles" class="overflow-x-auto mb-6">
+                    <table class="w-full bg-white text-sm" id="mile-table">
+                        <thead>
+                            <tr class="bg-blue-600 text-white">
+                                <th class="px-3 py-2 text-left">Mile</th>
+                                <th class="px-3 py-2 text-left">Split</th>
+                                <th class="px-3 py-2 text-left">Cumulative</th>
+                                <th class="px-3 py-2 text-left">Pace/Mile</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mile-splits-body"></tbody>
+                    </table>
+                </div>
+
+                <!-- KM Split Table -->
+                <div id="splits-km" class="overflow-x-auto mb-6 hidden">
+                    <table class="w-full bg-white text-sm" id="km-table">
+                        <thead>
+                            <tr class="bg-green-600 text-white">
+                                <th class="px-3 py-2 text-left">KM</th>
+                                <th class="px-3 py-2 text-left">Split</th>
+                                <th class="px-3 py-2 text-left">Cumulative</th>
+                                <th class="px-3 py-2 text-left">Pace/KM</th>
+                            </tr>
+                        </thead>
+                        <tbody id="km-splits-body"></tbody>
+                    </table>
+                </div>
+
+                <!-- Print Pace Band Button -->
+                <div class="flex gap-3 mb-6 no-print">
+                    <button type="button" onclick="printPaceBand()" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-purple-800 transition-all duration-300 shadow-lg">
+                        Print Pace Band
+                    </button>
+                    <button type="button" onclick="document.getElementById('marathon-results').scrollIntoView({behavior:'smooth'})" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">
+                        Back to Top
+                    </button>
+                </div>
+
+                <!-- Printable Pace Band (hidden until print) -->
+                <div id="pace-band-print" class="hidden">
+                    <div class="pace-band-header">Marathon Pace Band</div>
+                    <div class="pace-band-sub" id="pace-band-subtitle"></div>
+                    <table id="pace-band-table">
+                        <thead>
+                            <tr>
+                                <th>Mile</th>
+                                <th>Split</th>
+                                <th>Elapsed</th>
+                                <th>&nbsp;</th>
+                                <th>Mile</th>
+                                <th>Split</th>
+                                <th>Elapsed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pace-band-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marathon Pace Chart -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Marathon Pace Chart</h2>
+            <p class="text-gray-600 mb-4">Quick reference showing the required pace per mile and per km for common marathon finish times from 3:00 to 5:30.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-md text-sm">
+                    <thead>
+                        <tr class="bg-blue-600 text-white">
+                            <th class="px-4 py-3 text-left">Finish Time</th>
+                            <th class="px-4 py-3 text-left">Pace / Mile</th>
+                            <th class="px-4 py-3 text-left">Pace / KM</th>
+                            <th class="px-4 py-3 text-left">Half Split</th>
+                            <th class="px-4 py-3 text-left">5K Split</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200" id="pace-chart-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- BQ Paces by Age Group -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Boston Marathon Qualifying Paces by Age Group</h2>
+            <p class="text-gray-600 mb-4">The Boston Athletic Association sets qualifying standards by age and gender. Note: in recent years, runners typically need to beat the standard by 5-6 minutes to secure entry.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-md text-sm">
+                    <thead>
+                        <tr class="bg-amber-500 text-white">
+                            <th class="px-4 py-3 text-left">Age Group</th>
+                            <th class="px-4 py-3 text-left">Men BQ</th>
+                            <th class="px-4 py-3 text-left">Men Pace/Mile</th>
+                            <th class="px-4 py-3 text-left">Women BQ</th>
+                            <th class="px-4 py-3 text-left">Women Pace/Mile</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">18-34</td>
+                            <td class="px-4 py-3">3:00:00</td>
+                            <td class="px-4 py-3">6:52</td>
+                            <td class="px-4 py-3">3:30:00</td>
+                            <td class="px-4 py-3">8:01</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">35-39</td>
+                            <td class="px-4 py-3">3:05:00</td>
+                            <td class="px-4 py-3">7:03</td>
+                            <td class="px-4 py-3">3:35:00</td>
+                            <td class="px-4 py-3">8:12</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">40-44</td>
+                            <td class="px-4 py-3">3:10:00</td>
+                            <td class="px-4 py-3">7:15</td>
+                            <td class="px-4 py-3">3:40:00</td>
+                            <td class="px-4 py-3">8:23</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">45-49</td>
+                            <td class="px-4 py-3">3:20:00</td>
+                            <td class="px-4 py-3">7:38</td>
+                            <td class="px-4 py-3">3:50:00</td>
+                            <td class="px-4 py-3">8:46</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">50-54</td>
+                            <td class="px-4 py-3">3:25:00</td>
+                            <td class="px-4 py-3">7:49</td>
+                            <td class="px-4 py-3">3:55:00</td>
+                            <td class="px-4 py-3">8:58</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">55-59</td>
+                            <td class="px-4 py-3">3:35:00</td>
+                            <td class="px-4 py-3">8:12</td>
+                            <td class="px-4 py-3">4:05:00</td>
+                            <td class="px-4 py-3">9:21</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">60-64</td>
+                            <td class="px-4 py-3">3:50:00</td>
+                            <td class="px-4 py-3">8:46</td>
+                            <td class="px-4 py-3">4:20:00</td>
+                            <td class="px-4 py-3">9:55</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">65-69</td>
+                            <td class="px-4 py-3">4:05:00</td>
+                            <td class="px-4 py-3">9:21</td>
+                            <td class="px-4 py-3">4:35:00</td>
+                            <td class="px-4 py-3">10:29</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">70-74</td>
+                            <td class="px-4 py-3">4:20:00</td>
+                            <td class="px-4 py-3">9:55</td>
+                            <td class="px-4 py-3">4:50:00</td>
+                            <td class="px-4 py-3">11:03</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">75-79</td>
+                            <td class="px-4 py-3">4:35:00</td>
+                            <td class="px-4 py-3">10:29</td>
+                            <td class="px-4 py-3">5:05:00</td>
+                            <td class="px-4 py-3">11:37</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-medium">80+</td>
+                            <td class="px-4 py-3">4:50:00</td>
+                            <td class="px-4 py-3">11:03</td>
+                            <td class="px-4 py-3">5:20:00</td>
+                            <td class="px-4 py-3">12:12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- How to Pace a Marathon -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">How to Pace a Marathon</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-gray-600 mb-6">Pacing strategy can make or break your marathon. Here are the two main approaches and when to use each.</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Even Split -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                        <h3 class="font-semibold text-blue-800 mb-3">Even Split Strategy</h3>
+                        <p class="text-sm text-blue-700 mb-3">Run the same pace for every mile from start to finish. This is the safest and most recommended strategy for first-time and intermediate marathoners.</p>
+                        <ul class="space-y-2 text-sm text-blue-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">+</span>
+                                <span>Simplest to plan and execute</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">+</span>
+                                <span>Most energy-efficient pacing pattern</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">+</span>
+                                <span>Reduces risk of hitting the wall</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">+</span>
+                                <span>Best for your first marathon or a new distance PR attempt</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Negative Split -->
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-5">
+                        <h3 class="font-semibold text-green-800 mb-3">Negative Split Strategy</h3>
+                        <p class="text-sm text-green-700 mb-3">Run the second half of the marathon 1-3 minutes faster than the first half. This requires discipline to hold back early when you feel fresh.</p>
+                        <ul class="space-y-2 text-sm text-green-700">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">+</span>
+                                <span>Used by most world-record performances</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">+</span>
+                                <span>Finish strong while others fade</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">+</span>
+                                <span>Mentally rewarding to pass runners in the last 10K</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-600 mr-2">!</span>
+                                <span>Requires experience and strong pace discipline</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <h4 class="font-semibold text-amber-800 mb-2">Key Pacing Rules</h4>
+                    <ul class="space-y-2 text-sm text-amber-700">
+                        <li><strong>Mile 1:</strong> Always run your first mile 10-15 seconds slower than goal pace. The adrenaline and crowds will tempt you to start fast — resist it.</li>
+                        <li><strong>Miles 1-10:</strong> Bank nothing. Run at or slightly slower than goal pace. Early speed is repaid with interest after mile 20.</li>
+                        <li><strong>Miles 10-20:</strong> Settle into goal pace. Take fuel at regular intervals (every 30-45 minutes). Stay mentally relaxed.</li>
+                        <li><strong>Miles 20-26.2:</strong> This is where the marathon begins. If you ran the first half correctly, you have the energy to maintain or accelerate. Shorten your focus to one mile at a time.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliate Section: Marathon Day Essentials -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Marathon Day Essentials</h2>
+            <p class="text-gray-600 mb-6">Tested and recommended gear for race day. These are the products we use and trust.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Garmin FR265 -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
+                    <h3 class="text-lg font-semibold mb-2">Garmin Forerunner 265</h3>
+                    <p class="text-sm text-gray-600 mb-3">AMOLED GPS running watch with real-time pace, advanced training metrics, and race-day widgets.</p>
+                    <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Real-time pace & split alerts</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Race predictor & training status</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>13-hour GPS battery life</li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://www.amazon.com/s?k=Garmin+Forerunner+265&tag=runbikecalc-20" target="_blank" rel="noopener noreferrer sponsored" class="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow">
+                            Check Price on Amazon
+                        </a>
+                        <a href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" rel="noopener noreferrer sponsored" class="block w-full text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-4 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 shadow">
+                            Shop at Backcountry
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GU Energy Gel Pack -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-green-500">
+                    <h3 class="text-lg font-semibold mb-2">GU Energy Gel Variety Pack</h3>
+                    <p class="text-sm text-gray-600 mb-3">24-pack of GU gels in assorted flavors. 100 calories and 20mg caffeine per gel — the marathon fueling standard.</p>
+                    <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Easy to digest mid-race</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Electrolytes + amino acids</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Take every 45 min during marathon</li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://www.amazon.com/s?k=GU+Energy+Gel+variety+pack&tag=runbikecalc-20" target="_blank" rel="noopener noreferrer sponsored" class="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow">
+                            Check Price on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Race Belt -->
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-500">
+                    <h3 class="text-lg font-semibold mb-2">SPIbelt Race Belt</h3>
+                    <p class="text-sm text-gray-600 mb-3">Low-profile running belt for bib number, gels, phone, and keys. No bounce, no chafe, expandable pocket.</p>
+                    <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Holds 6+ gels for marathon fueling</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Clip bib without safety pins</li>
+                        <li class="flex items-start"><span class="text-green-600 mr-2">&#10003;</span>Bounce-free design</li>
+                    </ul>
+                    <div class="space-y-2">
+                        <a href="https://www.amazon.com/s?k=SPIbelt+race+belt&tag=runbikecalc-20" target="_blank" rel="noopener noreferrer sponsored" class="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow">
+                            Check Price on Amazon
+                        </a>
+                        <a href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" rel="noopener noreferrer sponsored" class="block w-full text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-4 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 shadow">
+                            Shop at Backcountry
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-500 italic mt-4">
+                <strong>Affiliate Disclosure:</strong> Product links may earn us a commission at no additional cost to you. This helps support our free calculators.
+            </p>
+        </section>
+
+        <!-- Related Articles / Internal Links -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Related Guides</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="/running-pace-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">⏱️</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">CALCULATOR</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Running Pace Calculator</h3>
+                            <p class="text-gray-600 text-sm">Calculate pace for any distance — perfect for training runs and shorter races.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/race-time-predictor" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-green-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🏁</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-green-600 font-semibold mb-1">PREDICTOR</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Race Time Predictor</h3>
+                            <p class="text-gray-600 text-sm">Predict your marathon finish time from a recent 5K, 10K, or half marathon result.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/marathon-training-plan-complete-guide-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">📋</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">TRAINING</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Marathon Training Plan Guide 2026</h3>
+                            <p class="text-gray-600 text-sm">Complete 16-20 week marathon training plans for beginners through advanced runners.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/boston-marathon-qualifying-guide" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-amber-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🦄</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-amber-600 font-semibold mb-1">BQ GUIDE</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Boston Marathon Qualifying Guide</h3>
+                            <p class="text-gray-600 text-sm">Qualifying standards, training strategies, and course selection tips for your BQ.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/best-energy-gels-chews-2026" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-red-600 font-semibold mb-1">NUTRITION</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Best Energy Gels & Chews 2026</h3>
+                            <p class="text-gray-600 text-sm">Tested and ranked — the best marathon fueling products for race day and long runs.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">RunBikeCalc</h4>
+                    <p class="text-gray-400">Free calculator tools for runners, cyclists, and endurance athletes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Running Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/running-pace-calculator" class="hover:text-white">Pace Calculator</a></li>
+                        <li><a href="/race-time-predictor" class="hover:text-white">Race Time Predictor</a></li>
+                        <li><a href="/calories-burned-running-calculator" class="hover:text-white">Calories Burned</a></li>
+                        <li><a href="/run-walk-calculator" class="hover:text-white">Run-Walk Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heart-rate-zone-calculator" class="hover:text-white">HR Zones</a></li>
+                        <li><a href="/vo2-max-calculator" class="hover:text-white">VO2 Max</a></li>
+                        <li><a href="/ftp-calculator" class="hover:text-white">FTP Calculator</a></li>
+                        <li><a href="/power-to-weight-ratio-calculator" class="hover:text-white">Power-to-Weight</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Site Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/partner" class="hover:text-white">Partner With Us</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mt-4">&copy; 2026 RunBikeCalc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backcountry Partner Banner -->
+        <div class="mb-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311" target="_blank" class="inline-block hover:opacity-95 transition-opacity">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" border="0" />
+        </div>
+
+      <!-- More from Cozy River Studios -->
+      <div class="border-t border-cream-dark mt-8 pt-6">
+        <h4 class="text-sm font-semibold mb-3">More from Cozy River Studios</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-sm">
+          <a href="https://disasterprepcalc.com" target="_blank" rel="noopener" style="text-decoration: none; color: #6b7280;">
+            <span style="font-weight: 500; color: #374151;">DisasterPrepCalc</span> — Emergency preparedness planning tools
+          </a>
+        </div>
+      </div>
+
+</footer>
+
+    <!-- JavaScript -->
+    <script src="/js/product-recommendations.js"></script>
+    <script>
+        // ========== Constants ==========
+        const MARATHON_MILES = 26.2;
+        const MARATHON_KM = 42.195;
+        const MILE_TO_KM = 1.60934;
+
+        // ========== Helper Functions ==========
+        function formatTime(totalSeconds) {
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = Math.round(totalSeconds % 60);
+            if (h > 0) {
+                return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+            }
+            return m + ':' + String(s).padStart(2, '0');
+        }
+
+        function formatPace(totalSeconds) {
+            const m = Math.floor(totalSeconds / 60);
+            const s = Math.round(totalSeconds % 60);
+            return m + ':' + String(s).padStart(2, '0');
+        }
+
+        // ========== Input Mode Toggle ==========
+        function setInputMode(mode) {
+            if (mode === 'time') {
+                document.getElementById('time-inputs').classList.remove('hidden');
+                document.getElementById('pace-inputs').classList.add('hidden');
+                document.getElementById('mode-time').classList.add('bg-blue-600', 'text-white');
+                document.getElementById('mode-time').classList.remove('bg-gray-200', 'text-gray-700');
+                document.getElementById('mode-pace').classList.add('bg-gray-200', 'text-gray-700');
+                document.getElementById('mode-pace').classList.remove('bg-blue-600', 'text-white');
+            } else {
+                document.getElementById('time-inputs').classList.add('hidden');
+                document.getElementById('pace-inputs').classList.remove('hidden');
+                document.getElementById('mode-pace').classList.add('bg-blue-600', 'text-white');
+                document.getElementById('mode-pace').classList.remove('bg-gray-200', 'text-gray-700');
+                document.getElementById('mode-time').classList.add('bg-gray-200', 'text-gray-700');
+                document.getElementById('mode-time').classList.remove('bg-blue-600', 'text-white');
+            }
+        }
+
+        // ========== Negative Split Toggle ==========
+        document.getElementById('negative-split').addEventListener('change', function() {
+            document.getElementById('negative-split-options').classList.toggle('hidden', !this.checked);
+        });
+
+        // ========== Presets ==========
+        function setPreset(h, m) {
+            setInputMode('time');
+            document.getElementById('finish-hours').value = h;
+            document.getElementById('finish-minutes').value = m;
+            calculateMarathon();
+        }
+
+        // ========== Tab Toggle ==========
+        function showSplitTab(tab) {
+            if (tab === 'miles') {
+                document.getElementById('splits-miles').classList.remove('hidden');
+                document.getElementById('splits-km').classList.add('hidden');
+                document.getElementById('tab-miles').classList.add('text-blue-600', 'border-blue-600');
+                document.getElementById('tab-miles').classList.remove('text-gray-500', 'border-transparent');
+                document.getElementById('tab-km').classList.add('text-gray-500', 'border-transparent');
+                document.getElementById('tab-km').classList.remove('text-green-600', 'border-green-600');
+            } else {
+                document.getElementById('splits-km').classList.remove('hidden');
+                document.getElementById('splits-miles').classList.add('hidden');
+                document.getElementById('tab-km').classList.add('text-green-600', 'border-green-600');
+                document.getElementById('tab-km').classList.remove('text-gray-500', 'border-transparent');
+                document.getElementById('tab-miles').classList.add('text-gray-500', 'border-transparent');
+                document.getElementById('tab-miles').classList.remove('text-blue-600', 'border-blue-600');
+            }
+        }
+
+        // ========== Main Calculation ==========
+        function calculateMarathon() {
+            let totalSeconds;
+            const isTimeMode = !document.getElementById('time-inputs').classList.contains('hidden');
+
+            if (isTimeMode) {
+                const h = parseInt(document.getElementById('finish-hours').value) || 0;
+                const m = parseInt(document.getElementById('finish-minutes').value) || 0;
+                totalSeconds = h * 3600 + m * 60;
+            } else {
+                const pMin = parseInt(document.getElementById('pace-min').value) || 0;
+                const pSec = parseInt(document.getElementById('pace-sec').value) || 0;
+                const pUnit = document.getElementById('pace-unit').value;
+                let paceSecPerMile = pMin * 60 + pSec;
+                if (pUnit === 'km') {
+                    paceSecPerMile = paceSecPerMile * MILE_TO_KM;
+                }
+                totalSeconds = paceSecPerMile * MARATHON_MILES;
+            }
+
+            if (totalSeconds < 6000 || totalSeconds > 50000) {
+                alert('Please enter a valid marathon time (roughly 1:40 to 13:00).');
+                return;
+            }
+
+            const useNegSplit = document.getElementById('negative-split').checked;
+            const negSplitSec = useNegSplit ? (parseInt(document.getElementById('neg-split-sec').value) || 10) : 0;
+
+            // Average pace per mile
+            const avgPacePerMile = totalSeconds / MARATHON_MILES;
+            const avgPacePerKm = totalSeconds / MARATHON_KM;
+
+            // Calculate first half and second half pace (for negative split)
+            // If negative split: first half is slower, second half is faster
+            // Total time = 13.1 * firstPace + 13.1 * secondPace
+            // secondPace = firstPace - negSplitSec
+            // totalSeconds = 13.1 * firstPace + 13.1 * (firstPace - negSplitSec)
+            // totalSeconds = 13.1 * 2 * firstPace - 13.1 * negSplitSec
+            // firstPace = (totalSeconds + 13.1 * negSplitSec) / (2 * 13.1)
+            const halfMiles = MARATHON_MILES / 2; // 13.1
+            let firstHalfPace, secondHalfPace;
+            if (useNegSplit && negSplitSec > 0) {
+                firstHalfPace = (totalSeconds + halfMiles * negSplitSec) / (2 * halfMiles);
+                secondHalfPace = firstHalfPace - negSplitSec;
+            } else {
+                firstHalfPace = avgPacePerMile;
+                secondHalfPace = avgPacePerMile;
+            }
+
+            // Summary
+            document.getElementById('res-finish').textContent = formatTime(totalSeconds);
+            document.getElementById('res-pace-mile').textContent = formatPace(avgPacePerMile);
+            document.getElementById('res-pace-km').textContent = formatPace(avgPacePerKm);
+            document.getElementById('res-split-type').textContent = useNegSplit ? 'Neg' : 'Even';
+
+            // ===== Mile Splits =====
+            let mileSplitsHTML = '';
+            let cumulativeSec = 0;
+            const mileSplitData = []; // for pace band
+            for (let mile = 1; mile <= 27; mile++) {
+                let dist, label;
+                if (mile <= 26) {
+                    dist = 1.0;
+                    label = mile;
+                } else {
+                    dist = 0.2;
+                    label = '26.2';
+                }
+                const pace = (mile <= 13) ? firstHalfPace : secondHalfPace;
+                const splitSec = pace * dist;
+                cumulativeSec += splitSec;
+
+                const isHalf = (mile === 13);
+                const isFull = (mile === 27);
+                const rowClass = isHalf ? ' class="bg-blue-50 font-semibold"' : (isFull ? ' class="bg-green-50 font-semibold"' : (mile % 2 === 0 ? ' class="bg-gray-50"' : ''));
+
+                mileSplitsHTML += '<tr' + rowClass + '>';
+                mileSplitsHTML += '<td class="px-3 py-2">' + label + '</td>';
+                mileSplitsHTML += '<td class="px-3 py-2">' + formatPace(splitSec) + '</td>';
+                mileSplitsHTML += '<td class="px-3 py-2">' + formatTime(cumulativeSec) + '</td>';
+                mileSplitsHTML += '<td class="px-3 py-2">' + formatPace(pace) + '/mi</td>';
+                mileSplitsHTML += '</tr>';
+
+                mileSplitData.push({ label: label, split: formatPace(splitSec), cumulative: formatTime(cumulativeSec) });
+            }
+            document.getElementById('mile-splits-body').innerHTML = mileSplitsHTML;
+
+            // ===== KM Splits =====
+            let kmSplitsHTML = '';
+            let kmCumulativeSec = 0;
+            for (let km = 1; km <= 43; km++) {
+                let dist, label;
+                if (km <= 42) {
+                    dist = 1.0;
+                    label = km;
+                } else {
+                    dist = 0.195;
+                    label = '42.195';
+                }
+                // Determine if this km is in first or second half
+                const kmInMiles = km / MILE_TO_KM;
+                const pace = (kmInMiles <= halfMiles) ? firstHalfPace : secondHalfPace;
+                const pacePerKm = pace / MILE_TO_KM;
+                const splitSec = pacePerKm * dist;
+                kmCumulativeSec += splitSec;
+
+                const isHalf = (km === 21);
+                const isFull = (km === 43);
+                const rowClass = isHalf ? ' class="bg-green-50 font-semibold"' : (isFull ? ' class="bg-green-100 font-semibold"' : (km % 2 === 0 ? ' class="bg-gray-50"' : ''));
+
+                kmSplitsHTML += '<tr' + rowClass + '>';
+                kmSplitsHTML += '<td class="px-3 py-2">' + label + '</td>';
+                kmSplitsHTML += '<td class="px-3 py-2">' + formatPace(splitSec) + '</td>';
+                kmSplitsHTML += '<td class="px-3 py-2">' + formatTime(kmCumulativeSec) + '</td>';
+                kmSplitsHTML += '<td class="px-3 py-2">' + formatPace(pacePerKm) + '/km</td>';
+                kmSplitsHTML += '</tr>';
+            }
+            document.getElementById('km-splits-body').innerHTML = kmSplitsHTML;
+
+            // ===== Checkpoint Times =====
+            const checkpoints = [
+                { name: '5K', dist: 3.10686 },
+                { name: '10K', dist: 6.21371 },
+                { name: 'Half', dist: 13.1 },
+                { name: '30K', dist: 18.6411 },
+                { name: '20 mi', dist: 20 },
+                { name: '40K', dist: 24.8548 }
+            ];
+            let cpHTML = '';
+            checkpoints.forEach(cp => {
+                let cpTime = 0;
+                // Split into first half and second half contribution
+                if (cp.dist <= halfMiles) {
+                    cpTime = cp.dist * firstHalfPace;
+                } else {
+                    cpTime = halfMiles * firstHalfPace + (cp.dist - halfMiles) * secondHalfPace;
+                }
+                cpHTML += '<div class="bg-white border border-gray-200 rounded-lg p-3 text-center shadow-sm">';
+                cpHTML += '<div class="text-xs text-gray-500 font-semibold">' + cp.name + '</div>';
+                cpHTML += '<div class="text-lg font-bold text-gray-900">' + formatTime(cpTime) + '</div>';
+                cpHTML += '</div>';
+            });
+            document.getElementById('checkpoints').innerHTML = cpHTML;
+
+            // ===== Pace Band (for printing) =====
+            let pbHTML = '';
+            const half = Math.ceil(mileSplitData.length / 2);
+            for (let i = 0; i < half; i++) {
+                const left = mileSplitData[i];
+                const right = mileSplitData[i + half] || { label: '', split: '', cumulative: '' };
+                pbHTML += '<tr>';
+                pbHTML += '<td>' + left.label + '</td>';
+                pbHTML += '<td>' + left.split + '</td>';
+                pbHTML += '<td>' + left.cumulative + '</td>';
+                pbHTML += '<td style="width:10px"></td>';
+                pbHTML += '<td>' + right.label + '</td>';
+                pbHTML += '<td>' + right.split + '</td>';
+                pbHTML += '<td>' + right.cumulative + '</td>';
+                pbHTML += '</tr>';
+            }
+            document.getElementById('pace-band-body').innerHTML = pbHTML;
+            const splitLabel = useNegSplit ? 'Negative Split (' + negSplitSec + 's/mi faster 2nd half)' : 'Even Split';
+            document.getElementById('pace-band-subtitle').textContent = 'Target: ' + formatTime(totalSeconds) + ' | Pace: ' + formatPace(avgPacePerMile) + '/mi | ' + splitLabel;
+
+            // Show results
+            document.getElementById('marathon-results').classList.remove('hidden');
+            document.getElementById('marathon-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Show product recommendations
+            if (typeof renderProductRecommendations === 'function') {
+                const recEl = document.getElementById('recommendations');
+                if (recEl) {
+                    recEl.classList.remove('hidden');
+                    renderProductRecommendations('recommendations', 'marathon-pace');
+                }
+            }
+        }
+
+        // ========== Print Pace Band ==========
+        function printPaceBand() {
+            document.getElementById('pace-band-print').classList.remove('hidden');
+            setTimeout(function() {
+                window.print();
+                // Re-hide after print dialog closes
+                setTimeout(function() {
+                    document.getElementById('pace-band-print').classList.add('hidden');
+                }, 500);
+            }, 100);
+        }
+
+        // ========== Pace Chart Table (Static) ==========
+        function buildPaceChart() {
+            const finishTimes = [
+                [3,0], [3,15], [3,30], [3,45],
+                [4,0], [4,15], [4,30], [4,45],
+                [5,0], [5,15], [5,30]
+            ];
+            let html = '';
+            finishTimes.forEach(function(ft) {
+                const totalSec = ft[0] * 3600 + ft[1] * 60;
+                const pacePerMile = totalSec / MARATHON_MILES;
+                const pacePerKm = totalSec / MARATHON_KM;
+                const halfSplit = totalSec / 2;
+                const fiveKSplit = (totalSec / MARATHON_KM) * 5;
+                const label = ft[0] + ':' + String(ft[1]).padStart(2, '0') + ':00';
+
+                html += '<tr class="hover:bg-gray-50">';
+                html += '<td class="px-4 py-3 font-medium">' + label + '</td>';
+                html += '<td class="px-4 py-3">' + formatPace(pacePerMile) + '</td>';
+                html += '<td class="px-4 py-3">' + formatPace(pacePerKm) + '</td>';
+                html += '<td class="px-4 py-3">' + formatTime(halfSplit) + '</td>';
+                html += '<td class="px-4 py-3">' + formatTime(fiveKSplit) + '</td>';
+                html += '</tr>';
+            });
+            document.getElementById('pace-chart-body').innerHTML = html;
+        }
+
+        // ========== Initialize ==========
+        window.addEventListener('load', function() {
+            buildPaceChart();
+        });
+    </script>
+    <script src="/js/auto-enhance.js" defer></script>
+<script>
+window.POPUP_CONFIG = {
+  headline: "Wait — Special Offer!",
+  product: "Premium Training Plans",
+  description: "Export your custom training plans to PDF & calendar. Unlock advanced periodization, tapering & race-specific workouts.",
+  price: "$5",
+  ctaText: "Unlock Premium Plans — Just $5",
+  ctaUrl: "https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06",
+  secondaryText: "No thanks",
+  accentColor: "#2563eb",
+  excludePaths: ["/success"]
+};
+</script>
+<script src="/js/conversion-popup.js"></script>
+<script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success']};</script>
+<script src="/js/sticky-banner.js"></script>
+<script>window.INLINE_CTA_CONFIG={badge:'Premium',headline:'Export Your Custom Plan to PDF and Calendar',body:'Upgrade to Premium for PDF exports, calendar sync, advanced periodization, and race-specific workout programming. One-time purchase, lifetime access.',ctaText:'Unlock Premium \u2014 Just $5',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',secondaryText:'See premium features',secondaryUrl:'/premium-training-plans.html',accentColor:'#2563eb',bgFrom:'#eff6ff',bgTo:'#f0f9ff',borderColor:'#bfdbfe',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
+<script src="/js/inline-cta.js"></script>
+<script src="/js/speculation-rules.js" defer></script>
+</body>
+</html>
