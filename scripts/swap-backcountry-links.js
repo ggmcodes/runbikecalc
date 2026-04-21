@@ -1,415 +1,479 @@
 #!/usr/bin/env node
 /**
- * Backcountry Affiliate Link Swap Script
+ * Swap generic Backcountry storefront links to deep-product links.
  *
- * Swaps Amazon affiliate links with Backcountry links where products exist in the feed.
- * Backcountry offers 8% commission (vs Amazon's ~3-4%) with 30-day referral period.
+ * Problem: ~400 links on the site point to the legacy generic storefront
+ *   https://backcountry.tnu8.net/c/6910798/1107350/5311
+ * which bleeds conversions (users land on a category, not a product).
  *
- * Usage: node scripts/swap-backcountry-links.js [--dry-run] [--file <path>]
+ * This script:
+ *   1. Finds every <a> tag whose href is EXACTLY the legacy storefront URL
+ *      (no query string). Excludes the footer banner by class signature.
+ *   2. Extracts product context from the <a> inner text plus nearby headings/images.
+ *   3. Matches against the Backcountry catalog.
+ *   4. If matched: rewrites href to a deep product link (campaign 1942899 + prodsku).
+ *   5. If not matched: rewrites href to the current storefront (campaign 358742).
+ *
+ * Modes:
+ *   --report-only   Emit CSV of candidates + match results. No writes.
+ *   --dry-run       Print proposed swaps. No writes.
+ *   --preview       Write scripts/.swap-preview.log. No permanent writes.
+ *   (no flag)       Apply swaps in-place.
  */
 
 const fs = require('fs');
 const path = require('path');
+const {
+    loadCatalog,
+    buildBackcountryLink,
+    buildStorefrontLink,
+    normalizeProductName,
+    CAMPAIGN
+} = require('./backcountry-lib');
 
-// Configuration
-const CONFIG = {
-    feedPath: path.join(__dirname, '../data/backcountry-products.txt'),
-    blogDir: path.join(__dirname, '../blog'),
-    // Target files for Backcountry link swap (products they carry)
-    targetFiles: [
-        'best-running-watches-2026.html',
-        'best-triathlon-watches-2026.html',
-        'best-running-shoes-2026.html',
-        'best-trail-running-shoes-2026.html',
-        'best-cycling-shoes-2026.html',
-        'best-bike-computers-2026.html',
-        'best-smart-trainers-2026.html',
-        'best-power-meters-2026.html',
-        'best-heart-rate-monitors-2026.html',
-        'best-fitness-trackers-2026.html'
-    ],
-    // Brands we want to swap to Backcountry (verified in feed)
-    targetBrands: [
-        'Garmin', 'COROS', 'Suunto', 'Wahoo', 'Polar',
-        'Nike', 'Brooks', 'HOKA', 'Altra', 'Saucony',
-        'Shimano', 'Sidi', 'Giro', 'Lake',
-        'Castelli', 'PEARL iZUMi', 'Pearl Izumi'
-    ]
-};
+const ROOT = path.join(__dirname, '..');
+const BLOG_DIR = path.join(ROOT, 'blog');
 
-// Product name normalization for matching
-function normalizeProductName(name) {
-    return name
-        .toLowerCase()
-        .replace(/['']/g, "'")
-        .replace(/\s+/g, ' ')
-        .replace(/[^\w\s'-]/g, '')
-        .trim();
-}
+const LEGACY_STOREFRONT_URL = `https://backcountry.tnu8.net/c/6910798/1107350/5311`;
 
-// Extract base product name (remove size, color variants)
-function getBaseProductName(fullName) {
-    // Remove common suffixes like size, color
-    const name = fullName
-        .replace(/,?\s*(men's|women's|unisex)/gi, '')
-        .replace(/,?\s*\d+(\.\d+)?\s*(mm|cm|m|"|inch|size)?$/gi, '')
-        .replace(/,?\s*(black|white|grey|gray|blue|red|green|navy|charcoal|orange|yellow|silver|gold|purple|pink|brown|tan|beige)[\s,]*$/gi, '')
-        .replace(/,?\s*[SML]$/gi, '')
-        .replace(/,?\s*(small|medium|large|x-?large|xx-?large)$/gi, '')
-        .trim();
-    return name;
-}
+// Banner signature — these <a> tags are the 15%-off footer banner, leave them alone.
+const BANNER_CLASS_SIGNATURE = 'inline-block hover:opacity-95';
+const BANNER_INNER_HTML_MIN_LENGTH = 500;
 
-// Load and parse Backcountry product feed
-function loadBackcountryFeed() {
-    console.log('Loading Backcountry product feed...');
-    const feedContent = fs.readFileSync(CONFIG.feedPath, 'utf8');
-    const lines = feedContent.split('\n');
-
-    // Skip header row
-    const products = [];
-    const productsByBrand = new Map();
-    const productsByName = new Map();
-
-    for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line.trim()) continue;
-
-        const cols = line.split('\t');
-        if (cols.length < 22) continue;
-
-        const product = {
-            sku: cols[0],
-            name: cols[1],
-            url: cols[2],
-            imageUrl: cols[3],
-            price: cols[4],
-            inStock: cols[5] === 'Y',
-            manufacturer: cols[15],
-            parentSku: cols[20],
-            parentName: cols[21]
-        };
-
-        // Skip out of stock items
-        if (!product.inStock) continue;
-
-        // Only index products from target brands
-        const brandMatch = CONFIG.targetBrands.find(b =>
-            product.manufacturer.toLowerCase() === b.toLowerCase()
-        );
-        if (!brandMatch) continue;
-
-        products.push(product);
-
-        // Index by manufacturer
-        const brandKey = product.manufacturer.toLowerCase();
-        if (!productsByBrand.has(brandKey)) {
-            productsByBrand.set(brandKey, []);
-        }
-        productsByBrand.set(brandKey, [...productsByBrand.get(brandKey), product]);
-
-        // Index by normalized parent name (more reliable for matching)
-        if (product.parentName) {
-            const nameKey = normalizeProductName(product.parentName);
-            if (!productsByName.has(nameKey)) {
-                productsByName.set(nameKey, product);
-            }
-        }
-
-        // Also index by product name
-        const prodNameKey = normalizeProductName(getBaseProductName(product.name));
-        if (!productsByName.has(prodNameKey)) {
-            productsByName.set(prodNameKey, product);
-        }
-    }
-
-    console.log(`Loaded ${products.length} products from ${productsByBrand.size} target brands`);
-    return { products, productsByBrand, productsByName };
-}
-
-// Products that should NOT be matched (accessories, not main products)
-const EXCLUDE_PATTERNS = [
-    'case', 'mount', 'strap', 'band', 'holder', 'adapter', 'adaptor',
-    'charger', 'cable', 'tool', 'cleat', 'replacement'
+const TARGET_BRANDS = [
+    'Garmin', 'COROS', 'Suunto', 'Wahoo', 'Polar',
+    'Nike', 'Brooks', 'HOKA', 'Altra', 'Saucony', 'Salomon', 'Asics', 'New Balance',
+    'Merrell', 'La Sportiva', 'Scarpa', 'ON', 'On Running',
+    'Shimano', 'Sidi', 'Giro', 'Lake', 'Specialized', 'SRAM', 'Fizik',
+    'Castelli', 'PEARL iZUMi', 'Pearl Izumi', 'Rapha', 'Sportful', 'Assos', 'POC', 'Gore', 'Gore Wear',
+    'Oakley', 'Smith', 'Tifosi', 'Goodr', 'Julbo', '100%',
+    'Osprey', 'CamelBak', 'Nathan', 'Ultimate Direction', 'Black Diamond',
+    'Patagonia', 'The North Face', 'Outdoor Research', 'Arcteryx', "Arc'teryx", 'Columbia',
+    'Kask', 'Bell', 'Bontrager', 'POC', 'Lazer', 'Smith Optics',
+    'Continental', 'Vittoria', 'Pirelli', 'Panaracer', 'Schwalbe', 'Michelin', 'WTB',
+    'Apidura', 'Revelate Designs', 'Ortlieb', 'Topeak', 'Restrap', 'Blackburn',
+    'MSR', 'Big Agnes', 'Sea to Summit', 'Therm-a-Rest', 'NEMO', 'Exped',
+    'Skratch Labs', 'Nuun', 'Gu', 'Maurten', 'Tailwind', 'Honey Stinger', 'Clif',
+    'Hydro Flask', 'Yeti', 'Nalgene',
+    'Lezyne', 'NiteRider', 'Knog', 'Light & Motion',    // bike lights
+    'Kryptonite', 'Abus', 'OnGuard',                     // bike locks
+    'Look', 'Crankbrothers', 'Speedplay', 'Time',        // pedals
+    'WTB', 'SQlab', 'Selle Italia', 'Selle San Marco', 'Brooks England'  // saddles
 ];
 
-// Manual product mappings for known products that need special handling
-// Maps normalized search term to Backcountry parent name
+const EXCLUDE_PATTERNS = [
+    'case', 'mount', 'strap', 'band', 'holder', 'adapter', 'adaptor',
+    'charger', 'cable', 'tool kit', 'cleat', 'replacement', 'spare parts'
+];
+
 const MANUAL_MAPPINGS = {
-    // Power meters
     'garmin rally xc200': 'Rally XC Dual-Sided Power Meter Pedals',
     'garmin rally xc100': 'Rally XC Single-Sided Power Meter Pedals',
     'garmin rally rs200': 'Rally RS Dual-Sided Power Meter Pedals',
     'garmin rally rs100': 'Rally RS Single-Sided Power Meter Pedals',
     'garmin rally rk200': 'Rally RK Dual-Sided Power Meter Pedals',
     'garmin rally rk100': 'Rally RK Single-Sided Power Meter Pedals',
-    // Cycling shoes
     'shimano s-phyre rc9': 'RC903 S-PHYRE Cycling Shoe',
     'shimano rc903': 'RC903 S-PHYRE Cycling Shoe',
     'shimano rc702': 'RC702 Cycling Shoe',
     'shimano rc502': 'RC502 Cycling Shoe',
     'shimano xc502': 'XC502 Mountain Bike Shoe',
     'shimano xc702': 'XC702 Mountain Bike Shoe',
-    // Bike computers
     'garmin edge 1040': 'Edge 1040 Solar GPS Bike Computer',
     'garmin edge 1040 solar': 'Edge 1040 Solar GPS Bike Computer',
     'garmin edge explore 2': 'Edge Explore 2 GPS',
-    'garmin edge 550': 'Edge 550 Bike Computer',
-    'garmin edge 850': 'Edge 850 Bike Computer',
-    // Trail shoes
     'hoka speedgoat 6': 'Speedgoat 6 Trail Running Shoe',
     'altra timp 5': 'Timp 5 Trail Running Shoe'
 };
 
-// Find best matching Backcountry product for a given product name/brand
-function findBackcountryMatch(productName, brand, feed) {
-    const { productsByBrand, productsByName } = feed;
+// Threshold for keyword-based matching. Since candidates are already filtered to
+// the correct brand bucket (productsByBrand), scoring 2 means "brand + ≥1 product-specific keyword"
+// which is a safe bar given the -20 penalty for model-number mismatch.
+const MIN_MATCH_SCORE = 2;
 
-    // Normalize search terms
+// ---------------------------------------------------------------------------
+// Catalog loading + matching
+
+function loadIndexedCatalog() {
+    console.log(`Loading Backcountry catalog (brands: ${TARGET_BRANDS.length})...`);
+    const catalog = loadCatalog({ brands: TARGET_BRANDS });
+    console.log(`Loaded ${catalog.products.length} products from ${catalog.productsByBrand.size} target brands.`);
+    return catalog;
+}
+
+function findBackcountryMatch(productName, brand, catalog) {
+    const { productsByBrand, productsByName } = catalog;
+
     const searchName = normalizeProductName(productName);
     const searchBrand = brand ? brand.toLowerCase() : '';
-
-    // Extract the model number/name from search (e.g., "265" from "Forerunner 265")
     const searchModel = searchName.match(/\b(\d{3,4})\b/)?.[1] || '';
 
-    // Check manual mappings first
     if (MANUAL_MAPPINGS[searchName]) {
         const targetName = normalizeProductName(MANUAL_MAPPINGS[searchName]);
-        // Find product by parent name
-        for (const [key, product] of productsByName) {
-            if (normalizeProductName(product.parentName || '').includes(targetName) ||
-                targetName.includes(normalizeProductName(product.parentName || ''))) {
-                return product;
+        for (const product of productsByName.values()) {
+            const parentNorm = normalizeProductName(product.parentName || '');
+            if (parentNorm.includes(targetName) || targetName.includes(parentNorm)) {
+                return { product, score: 100, reason: 'manual' };
             }
         }
     }
 
-    // Try exact parent name match first
     if (productsByName.has(searchName)) {
         const match = productsByName.get(searchName);
-        const matchNameLower = (match.parentName || match.name).toLowerCase();
-        // Skip if it's an accessory
-        if (!EXCLUDE_PATTERNS.some(p => matchNameLower.includes(p))) {
-            return match;
+        const nameLower = (match.parentName || match.name).toLowerCase();
+        if (!EXCLUDE_PATTERNS.some(p => nameLower.includes(p))) {
+            return { product: match, score: 50, reason: 'exact-name' };
         }
     }
 
-    // Try matching by brand + keywords
     if (searchBrand && productsByBrand.has(searchBrand)) {
         const brandProducts = productsByBrand.get(searchBrand);
-
-        // Extract key identifiers from product name
-        const keywords = searchName.split(' ').filter(w =>
-            w.length > 2 && !['the', 'and', 'for', 'with', 'mens', 'womens'].includes(w)
+        const brandWords = searchBrand.toLowerCase().split(/\s+/);
+        const GENERIC_STOPWORDS = new Set([
+            'the', 'and', 'for', 'with', 'mens', 'womens', 'unisex',
+            'shop', 'buy', 'browse', 'all', 'best', 'top', 'pick', 'new',
+            'running', 'cycling', 'bike', 'road', 'trail', 'gravel',
+            'gear', 'watch', 'watches', 'shoe', 'shoes', 'pack', 'packs',
+            'tool', 'tools', 'light', 'lights', 'lock', 'locks', 'pump', 'pumps',
+            'saddle', 'saddles', 'tire', 'tires', 'helmet', 'helmets',
+            'glove', 'gloves', 'jersey', 'jerseys', 'short', 'shorts',
+            'bottle', 'bottles', 'vest', 'vests', 'computer', 'computers',
+            'pedal', 'pedals', 'trainer', 'trainers', 'sunglasses', 'sunglass',
+            'clothing', 'apparel', 'accessory', 'accessories'
+        ]);
+        const keywords = searchName.split(/\s+/).filter(w =>
+            w.length > 2 &&
+            !GENERIC_STOPWORDS.has(w) &&
+            !brandWords.includes(w)
         );
+        // Require at least one meaningful keyword; otherwise no reliable deep match.
+        if (keywords.length === 0) return null;
 
-        // Score each product
-        let bestMatch = null;
+        let best = null;
         let bestScore = 0;
-
         for (const product of brandProducts) {
-            const productNameNorm = normalizeProductName(product.parentName || product.name);
-            const productNameLower = (product.parentName || product.name).toLowerCase();
+            const norm = normalizeProductName(product.parentName || product.name);
+            const lower = (product.parentName || product.name).toLowerCase();
+            if (EXCLUDE_PATTERNS.some(p => lower.includes(p))) continue;
 
-            // Skip accessories/cases
-            if (EXCLUDE_PATTERNS.some(p => productNameLower.includes(p))) {
-                continue;
-            }
-
-            // Count matching keywords
             let score = 0;
             for (const kw of keywords) {
-                if (productNameNorm.includes(kw)) {
-                    score += 2;
-                }
+                if (norm.includes(kw)) score += 2;
             }
-
-            // CRITICAL: Model number must match exactly if present in search
-            const productModel = productNameNorm.match(/\b(\d{3,4})\b/)?.[1] || '';
+            const productModel = norm.match(/\b(\d{3,4})\b/)?.[1] || '';
             if (searchModel && productModel) {
-                if (searchModel === productModel) {
-                    score += 10; // Big bonus for exact model match
-                } else {
-                    // Different model numbers - penalize heavily
-                    score -= 20;
-                }
+                if (searchModel === productModel) score += 10;
+                else score -= 20;
             }
-
             if (score > bestScore) {
                 bestScore = score;
-                bestMatch = product;
+                best = product;
             }
         }
-
-        // Require minimum match quality
-        if (bestScore >= 4) {
-            return bestMatch;
+        if (best && bestScore >= MIN_MATCH_SCORE) {
+            return { product: best, score: bestScore, reason: 'keyword' };
         }
     }
 
     return null;
 }
 
-// Extract product info from Amazon link context
-function extractProductFromContext(html, amazonUrl) {
-    // Try to find product name near the Amazon link
-    const urlEscaped = amazonUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// ---------------------------------------------------------------------------
+// HTML parsing — find generic storefront <a> tags
 
-    // Look for alt text in nearby img tags
-    const altMatch = html.match(new RegExp(`<img[^>]*alt=["']([^"']+)["'][^>]*>[\\s\\S]{0,500}${urlEscaped}|${urlEscaped}[\\s\\S]{0,500}<img[^>]*alt=["']([^"']+)["']`, 'i'));
-    if (altMatch) {
-        return altMatch[1] || altMatch[2];
+function findGenericLinks(html) {
+    const escaped = LEGACY_STOREFRONT_URL.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+    const pattern = new RegExp(
+        `<a\\b[^>]*href="${escaped}"[^>]*>([\\s\\S]*?)</a>`,
+        'g'
+    );
+
+    const results = [];
+    let m;
+    while ((m = pattern.exec(html)) !== null) {
+        const fullMatch = m[0];
+        const innerHtml = m[1];
+        const openTag = fullMatch.slice(0, fullMatch.indexOf('>') + 1);
+
+        if (openTag.includes(BANNER_CLASS_SIGNATURE)) continue;
+        if (innerHtml.length >= BANNER_INNER_HTML_MIN_LENGTH) continue;
+
+        const innerText = innerHtml.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+        results.push({
+            fullMatch,
+            openTag,
+            innerHtml,
+            innerText,
+            index: m.index,
+            before: html.slice(Math.max(0, m.index - 400), m.index),
+            after: html.slice(m.index + fullMatch.length, m.index + fullMatch.length + 600)
+        });
+    }
+    return results;
+}
+
+// Generic-CTA signals — if the link's inner text is just a category-level shop CTA,
+// don't try to force a product match. Let it fall through to storefront-upgrade.
+const CATEGORY_CTA_PATTERNS = [
+    /\bbrowse\b/i,
+    /\bshop all\b/i,
+    /\ball\s+(tools|lights|locks|pumps|saddles|shoes|bikes|helmets|gloves|jerseys|tires|shorts|watches|trainers|computers|sunglasses|bottles|vests|packs)/i,
+    /\bbike (tools|lights|locks|pumps|saddles|shoes)\b/i
+];
+
+function isCategoryCTA(innerText) {
+    return CATEGORY_CTA_PATTERNS.some(p => p.test(innerText));
+}
+
+// Amazon URLs near the link = strong product-card signal.
+// Farther away = probably an old card from earlier in the page — don't trust.
+const CLOSE_CONTEXT_CHARS = 250;
+
+function identifyProduct(match) {
+    // If the link itself is a category-level CTA, don't attempt a product match.
+    if (isCategoryCTA(match.innerText)) return null;
+
+    const candidates = [];
+
+    // 1. Sibling Amazon search URL WITHIN 250 CHARS — high-confidence product-card signal.
+    const closeBefore = match.before.slice(-CLOSE_CONTEXT_CHARS);
+    const closeAfter = match.after.slice(0, CLOSE_CONTEXT_CHARS);
+    const amazonSearchPattern = /amazon\.com\/s\?k=([^"&]+)[^"]*/gi;
+
+    const beforeAmazon = [...closeBefore.matchAll(amazonSearchPattern)];
+    if (beforeAmazon.length > 0) {
+        const decoded = decodeURIComponent(beforeAmazon[beforeAmazon.length - 1][1].replace(/\+/g, ' '));
+        // Skip generic search terms like "road+bike+tires" that are 3+ words of category keywords
+        if (!isCategoryCTA(decoded)) candidates.push(decoded);
+    }
+    const afterAmazon = [...closeAfter.matchAll(amazonSearchPattern)];
+    if (afterAmazon.length > 0) {
+        const decoded = decodeURIComponent(afterAmazon[0][1].replace(/\+/g, ' '));
+        if (!isCategoryCTA(decoded)) candidates.push(decoded);
     }
 
-    // Look for product name in nearby text
-    const contextMatch = html.match(new RegExp(`>([^<]*(?:Garmin|COROS|Suunto|Wahoo|Polar|Nike|Brooks|HOKA|Altra|Saucony|Shimano|Sidi|Giro|Lake)[^<]*)<[\\s\\S]{0,300}${urlEscaped}`, 'i'));
-    if (contextMatch) {
-        return contextMatch[1].trim();
+    // 2. Amazon /dp/ASIN links nearby — at minimum signal a product-card context.
+    // (Text candidates below carry the product name.)
+
+    // 3. Nearest preceding <p> with product-name-like class, close to the link.
+    const productParaPattern = /<p[^>]*class="[^"]*(?:font-bold|product-name|text-gray-900)[^"]*"[^>]*>([^<]{3,100})<\/p>/gi;
+    const paraMatches = [...closeBefore.matchAll(productParaPattern)];
+    if (paraMatches.length > 0) {
+        candidates.push(paraMatches[paraMatches.length - 1][1].trim());
     }
 
+    // 4. Nearest heading close to the link
+    const headingMatches = [...closeBefore.matchAll(/<(h[1-6]|strong)[^>]*>([^<]{3,100})<\/\1>/gi)];
+    if (headingMatches.length > 0) {
+        candidates.push(headingMatches[headingMatches.length - 1][2].trim());
+    }
+
+    // 5. Image alt text close to the link
+    const altPattern = /<img[^>]+alt="([^"]{3,120})"/gi;
+    const beforeAlt = [...closeBefore.matchAll(altPattern)];
+    if (beforeAlt.length > 0) candidates.push(beforeAlt[beforeAlt.length - 1][1].trim());
+    const afterAlt = [...closeAfter.matchAll(altPattern)];
+    if (afterAlt.length > 0) candidates.push(afterAlt[0][1].trim());
+
+    for (const text of candidates) {
+        const lower = text.toLowerCase();
+        for (const brand of TARGET_BRANDS) {
+            if (lower.includes(brand.toLowerCase())) {
+                return { productName: text, brand };
+            }
+        }
+    }
     return null;
 }
 
-// Process a single HTML file
-function processFile(filePath, feed, dryRun = false) {
-    console.log(`\nProcessing: ${path.basename(filePath)}`);
+function extractSlugFromProduct(product) {
+    try {
+        const url = new URL(product.url);
+        const raw = url.searchParams.get('u');
+        if (raw) {
+            const decoded = decodeURIComponent(raw);
+            return decoded.replace(/^https?:\/\/(?:www\.)?backcountry\.com\//, '').replace(/\?.*$/, '');
+        }
+    } catch (e) { /* fall through */ }
+    const parent = product.parentName || product.name;
+    return parent.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+}
 
-    let html = fs.readFileSync(filePath, 'utf8');
-    let swapCount = 0;
-    let noMatchCount = 0;
-    const swaps = [];
+// ---------------------------------------------------------------------------
+// Per-file processing
 
-    // Find all Amazon affiliate links (legacy - Amazon links have been removed)
-    const amazonLinkPattern = /https:\/\/www\.amazon\.com\/(?:dp\/[A-Z0-9]+|s\?k=[^"&]+)[^"]*/g;
-    const matches = html.match(amazonLinkPattern) || [];
-    const uniqueLinks = [...new Set(matches)];
+function processFile(filePath, catalog) {
+    const html = fs.readFileSync(filePath, 'utf8');
+    const matches = findGenericLinks(html);
+    if (matches.length === 0) return { filePath, swaps: [] };
 
-    console.log(`  Found ${uniqueLinks.length} unique Amazon links`);
-
-    for (const amazonUrl of uniqueLinks) {
-        // Extract product info from context
-        const productName = extractProductFromContext(html, amazonUrl);
-
-        if (!productName) {
-            console.log(`  - Could not extract product name for: ${amazonUrl.substring(0, 60)}...`);
-            noMatchCount++;
-            continue;
+    const swaps = matches.map(m => {
+        const identified = identifyProduct(m);
+        let match = null;
+        if (identified && identified.brand) {
+            match = findBackcountryMatch(identified.productName, identified.brand, catalog);
         }
 
-        // Detect brand from product name
-        const brandMatch = CONFIG.targetBrands.find(b =>
-            productName.toLowerCase().includes(b.toLowerCase())
-        );
-
-        if (!brandMatch) {
-            console.log(`  - No target brand found in: "${productName}"`);
-            noMatchCount++;
-            continue;
-        }
-
-        // Find Backcountry match
-        const bcProduct = findBackcountryMatch(productName, brandMatch, feed);
-
-        if (bcProduct) {
-            swaps.push({
-                original: amazonUrl,
-                replacement: bcProduct.url,
-                productName: productName,
-                bcProductName: bcProduct.parentName || bcProduct.name,
-                price: bcProduct.price
-            });
-            swapCount++;
+        let newHref;
+        let action;
+        if (match) {
+            const slug = extractSlugFromProduct(match.product);
+            newHref = buildBackcountryLink(match.product.sku, slug);
+            action = 'deep-product';
         } else {
-            console.log(`  - No Backcountry match for: "${productName}" (${brandMatch})`);
-            noMatchCount++;
-        }
-    }
-
-    // Apply swaps
-    if (!dryRun && swaps.length > 0) {
-        for (const swap of swaps) {
-            // Replace Amazon URL with Backcountry URL
-            html = html.split(swap.original).join(swap.replacement);
+            newHref = buildStorefrontLink();
+            action = 'storefront-upgrade';
         }
 
-        // Ensure all Backcountry links have rel="sponsored"
-        html = html.replace(
-            /(href="https:\/\/backcountry\.tnu8\.net[^"]*")/g,
-            (match) => {
-                // Check if already has rel attribute
-                return match;
-            }
-        );
+        return {
+            fullMatch: m.fullMatch,
+            innerText: m.innerText,
+            identified,
+            match,
+            newHref,
+            action
+        };
+    });
 
-        // Update "Check Price" buttons to "Check Price on Backcountry"
-        html = html.replace(/Check Price/g, 'Check Price on Backcountry');
-
-        fs.writeFileSync(filePath, html, 'utf8');
-        console.log(`  Wrote ${swaps.length} swaps to file`);
-    }
-
-    // Report
-    console.log(`  Results: ${swapCount} swapped, ${noMatchCount} kept as Amazon`);
-
-    return { swapCount, noMatchCount, swaps };
+    return { filePath, swaps };
 }
 
-// Main execution
+function applySwapsToHtml(html, swaps) {
+    let out = html;
+    for (const swap of swaps) {
+        const oldHref = `href="${LEGACY_STOREFRONT_URL}"`;
+        const newHref = `href="${swap.newHref}"`;
+        const newFullMatch = swap.fullMatch.replace(oldHref, newHref);
+        out = out.replace(swap.fullMatch, newFullMatch);
+    }
+    return out;
+}
+
+function listCandidateFiles() {
+    const files = [];
+    const addIfHasLink = (full) => {
+        try {
+            if (fs.readFileSync(full, 'utf8').includes(LEGACY_STOREFRONT_URL)) {
+                files.push(full);
+            }
+        } catch (e) { /* skip */ }
+    };
+    for (const f of fs.readdirSync(ROOT)) {
+        if (f.endsWith('.html')) addIfHasLink(path.join(ROOT, f));
+    }
+    for (const f of fs.readdirSync(BLOG_DIR)) {
+        if (f.endsWith('.html')) addIfHasLink(path.join(BLOG_DIR, f));
+    }
+    return files.sort();
+}
+
+function csvField(value) {
+    const s = String(value ?? '');
+    if (s.includes(',') || s.includes('"') || s.includes('\n')) {
+        return `"${s.replace(/"/g, '""')}"`;
+    }
+    return s;
+}
+
+// ---------------------------------------------------------------------------
+// Main
+
 function main() {
     const args = process.argv.slice(2);
     const dryRun = args.includes('--dry-run');
-    const singleFile = args.includes('--file') ? args[args.indexOf('--file') + 1] : null;
+    const reportOnly = args.includes('--report-only');
+    const preview = args.includes('--preview');
+    const fileArg = args.indexOf('--file') >= 0 ? args[args.indexOf('--file') + 1] : null;
 
-    console.log('='.repeat(60));
-    console.log('Backcountry Affiliate Link Swap Script');
-    console.log('='.repeat(60));
-    if (dryRun) console.log('*** DRY RUN - No files will be modified ***\n');
+    const catalog = loadIndexedCatalog();
+    const files = fileArg ? [path.resolve(fileArg)] : listCandidateFiles();
 
-    // Load feed
-    const feed = loadBackcountryFeed();
-
-    // Determine files to process
-    let files = [];
-    if (singleFile) {
-        files = [path.resolve(singleFile)];
-    } else {
-        files = CONFIG.targetFiles.map(f => path.join(CONFIG.blogDir, f));
+    if (reportOnly) {
+        process.stdout.write('file,innerText,brand,matchedSku,matchedName,score,action\n');
     }
 
-    // Process each file
-    let totalSwaps = 0;
-    let totalKept = 0;
-    const allSwaps = [];
+    let totalLinks = 0;
+    let totalDeepProduct = 0;
+    let totalStorefrontUpgrade = 0;
+    const perFileSummary = [];
+    const previewLines = [];
 
     for (const file of files) {
-        if (!fs.existsSync(file)) {
-            console.log(`\nSkipping (not found): ${path.basename(file)}`);
-            continue;
+        const { swaps } = processFile(file, catalog);
+        if (swaps.length === 0) continue;
+        totalLinks += swaps.length;
+
+        for (const swap of swaps) {
+            if (swap.action === 'deep-product') totalDeepProduct++;
+            else totalStorefrontUpgrade++;
+
+            if (reportOnly) {
+                const row = [
+                    path.relative(ROOT, file),
+                    swap.innerText || '',
+                    swap.identified?.brand || '',
+                    swap.match?.product.sku || '',
+                    swap.match?.product.parentName || swap.match?.product.name || '',
+                    swap.match?.score || 0,
+                    swap.action
+                ].map(csvField).join(',');
+                process.stdout.write(row + '\n');
+            }
         }
 
-        const result = processFile(file, feed, dryRun);
-        totalSwaps += result.swapCount;
-        totalKept += result.noMatchCount;
-        allSwaps.push(...result.swaps);
+        perFileSummary.push({
+            file: path.relative(ROOT, file),
+            swaps: swaps.length,
+            deep: swaps.filter(s => s.action === 'deep-product').length,
+            storefront: swaps.filter(s => s.action === 'storefront-upgrade').length
+        });
+
+        if (preview) {
+            previewLines.push('');
+            previewLines.push('='.repeat(80));
+            previewLines.push(`FILE: ${path.relative(ROOT, file)}  (${swaps.length} swaps)`);
+            previewLines.push('='.repeat(80));
+            for (const s of swaps) {
+                previewLines.push('');
+                previewLines.push(`[${s.action}]  inner="${s.innerText}"  brand=${s.identified?.brand || '?'}`);
+                if (s.match) {
+                    previewLines.push(`  matched: ${s.match.product.parentName || s.match.product.name} (sku=${s.match.product.sku}, score=${s.match.score})`);
+                }
+                previewLines.push(`  OLD: ${LEGACY_STOREFRONT_URL}`);
+                previewLines.push(`  NEW: ${s.newHref}`);
+            }
+        } else if (!reportOnly && !dryRun) {
+            const html = fs.readFileSync(file, 'utf8');
+            const updated = applySwapsToHtml(html, swaps);
+            fs.writeFileSync(file, updated, 'utf8');
+        } else if (dryRun) {
+            console.log(`\n${path.relative(ROOT, file)} (${swaps.length} swaps)`);
+            for (const s of swaps) {
+                const tag = s.action === 'deep-product' ? '→DEEP' : '→STOREFRONT';
+                console.log(`  ${tag} "${s.innerText}" [${s.identified?.brand || '?'}] ${s.match ? `-> ${s.match.product.parentName} (score=${s.match.score})` : '-> (no match)'}`);
+            }
+        }
     }
 
-    // Summary
+    if (preview) {
+        const previewPath = path.join(__dirname, '.swap-preview.log');
+        fs.writeFileSync(previewPath, previewLines.join('\n'), 'utf8');
+        console.log(`\nPreview written to ${path.relative(ROOT, previewPath)} (${previewLines.length} lines)`);
+    }
+
+    if (reportOnly) return;
+
     console.log('\n' + '='.repeat(60));
     console.log('SUMMARY');
     console.log('='.repeat(60));
-    console.log(`Total links swapped to Backcountry: ${totalSwaps}`);
-    console.log(`Total links kept as Amazon: ${totalKept}`);
-
-    if (allSwaps.length > 0) {
-        console.log('\nSwapped products:');
-        for (const swap of allSwaps) {
-            console.log(`  - ${swap.productName} -> ${swap.bcProductName} ($${swap.price})`);
-        }
-    }
-
-    if (dryRun) {
-        console.log('\n*** DRY RUN COMPLETE - Run without --dry-run to apply changes ***');
-    }
+    console.log(`Files with generic storefront links: ${perFileSummary.length}`);
+    console.log(`Total links to swap: ${totalLinks}`);
+    console.log(`  -> Deep product (campaign ${CAMPAIGN.DEEP_PRODUCT}): ${totalDeepProduct}`);
+    console.log(`  -> Storefront upgrade (campaign ${CAMPAIGN.PROMO_15_OFF} — 15% off promo): ${totalStorefrontUpgrade}`);
+    if (dryRun) console.log('\n*** DRY RUN — no files modified ***');
+    else if (preview) console.log(`\n*** PREVIEW — no files modified ***`);
+    else console.log(`\n${totalLinks} links swapped across ${perFileSummary.length} files.`);
 }
 
-main();
+if (require.main === module) main();
