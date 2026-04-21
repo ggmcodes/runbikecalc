@@ -117,9 +117,12 @@ function loadCatalog(opts = {}) {
         if (brandsLower && !brandsLower.includes(manufacturer.toLowerCase())) continue;
 
         const name = cols[1] || '';
-        const nameLower = name.toLowerCase();
-        if (nameIncludesLower && !nameIncludesLower.some(s => nameLower.includes(s))) continue;
-        if (nameExcludesLower && nameExcludesLower.some(s => nameLower.includes(s))) continue;
+        const parentName = cols[21] || '';
+        // Filter against parent name primarily (product category), falling back to full name.
+        // This prevents color/variant strings like "Silicone Band" from excluding a PACE 3 watch.
+        const filterTarget = (parentName || name).toLowerCase();
+        if (nameIncludesLower && !nameIncludesLower.some(s => filterTarget.includes(s))) continue;
+        if (nameExcludesLower && nameExcludesLower.some(s => filterTarget.includes(s))) continue;
 
         const product = {
             sku: cols[0],
@@ -132,7 +135,7 @@ function loadCatalog(opts = {}) {
             productType: cols[17] || '',
             category: cols[18] || '',
             parentSku: cols[20] || '',
-            parentName: cols[21] || '',
+            parentName,
             bullets: [cols[34], cols[35], cols[36], cols[37], cols[38]].filter(b => b && b.trim()),
             altImages: [cols[39], cols[40], cols[41], cols[42], cols[43]].filter(img => img && img.startsWith('http'))
         };
