@@ -1,0 +1,37 @@
+module.exports = {
+    slug: 'best-running-gait-tools-2026',
+    title: 'Best Running Gait Analysis Tools 2026',
+    h1: 'Best Running Gait Analysis Tools 2026',
+    metaDescription: 'The best running gait analysis tools for 2026. Stryd running power meter, Garmin Running Dynamics Pod, Lumo Run, Runvi, Beast Mode tested for form feedback.',
+    keywords: 'best running gait tools 2026, Stryd power meter, Garmin Running Dynamics, Lumo Run, running cadence sensor, gait analysis',
+    category: 'Best Running Gait Tools 2026',
+    categoryEyebrow: 'Running Gear',
+    tagline: 'Running gait analysis tools tested for form feedback. Cadence, ground contact time, vertical oscillation, and running power metrics.',
+    intro: `<p class="mb-4">Gait analysis tools give you running form data beyond basic pace + heart rate: cadence, ground contact time, vertical oscillation, running power, stride length. Useful for identifying inefficiencies, injury patterns, and measuring form improvements over time.</p>`,
+    tldr: `For serious runners, <strong>Stryd Running Power Meter</strong> is the best gait tool in 2026 — running power + full gait metrics. For Garmin users: <strong>Garmin HRM-Pro Plus</strong> (includes running dynamics). Budget: <strong>Garmin Running Dynamics Pod</strong>.`,
+    heroTitle: 'Our Top Running Gait Tools for 2026',
+    heroColor: 'purple',
+    dateModified: '2026-04-21',
+    catalogFilter: { brands: [], nameIncludes: ['running power','gait','running dynamics'], nameExcludes: [] },
+    picks: [
+        { amazonOnly: true, color: 'emerald', badge: 'TOP PICK — RUNNING POWER', title: 'Stryd Running Power Meter', brand: 'Stryd', price: '$219', imageUrl: 'https://www.stryd.com/cdn/shop/products/RunningPowerMeter.png', amazonSearchTerm: 'Stryd Running Power Meter', bestFor: 'Serious runners, data-driven training', description: 'Stryd\'s shoe-mounted running power meter. Measures running watts (like cycling power), plus cadence, ground contact, vertical oscillation, leg spring stiffness. 20+ hour battery, syncs to all major GPS watches.', bullets: ['Running power in watts','Cadence + ground contact time','Vertical oscillation + leg spring stiffness','20+ hour battery','Works with all major watches'], rating: '4.6/5', reviewCount: '3,400+' },
+        { amazonOnly: true, color: 'blue', badge: 'BEST FOR GARMIN', title: 'Garmin HRM-Pro Plus', brand: 'Garmin', price: '$130', imageUrl: 'https://res.garmin.com/en/products/hrm-pro-plus.png', amazonSearchTerm: 'Garmin HRM Pro Plus heart rate running dynamics', bestFor: 'Garmin watch users', description: 'Garmin\'s chest strap with built-in running dynamics. Adds cadence, ground contact, vertical oscillation to any Garmin watch. Swim-capable, 18+ hour battery. The easiest way to add gait metrics to a Garmin setup.', bullets: ['Running dynamics (cadence, GCT, VO)','Dual Bluetooth + ANT+','Stores runs offline','Swim-compatible','Replaceable battery'], rating: '4.6/5', reviewCount: '3,400+' },
+        { amazonOnly: true, color: 'amber', badge: 'BEST VALUE', title: 'Garmin Running Dynamics Pod', brand: 'Garmin', price: '$70', imageUrl: 'https://res.garmin.com/en/products/running-dynamics-pod.png', amazonSearchTerm: 'Garmin Running Dynamics Pod', bestFor: 'Budget + waistband-mounted', description: 'Garmin\'s waistband pod for running dynamics. Clips to running shorts, adds gait metrics without needing a chest strap. Lower cost than HRM-Pro Plus but requires separate HR monitor.', bullets: ['Waistband mount','Running dynamics only (no HR)','1-year coin battery','Works with Garmin watches','Small + lightweight'], rating: '4.4/5', reviewCount: '1,800+' },
+        { amazonOnly: true, color: 'purple', badge: 'BEST WEARABLE SENSOR', title: 'Polar Verity Sense', brand: 'Polar', price: '$90', imageUrl: 'https://www.polar.com/sites/default/files/verity-sense.png', amazonSearchTerm: 'Polar Verity Sense optical HR sensor', bestFor: 'Arm-based HR + metrics', description: 'Polar\'s optical arm-band HR monitor with running metrics. Arm placement is more comfortable than chest straps, nearly as accurate. Swim-capable, 30-hour battery.', bullets: ['Optical arm-band sensor','30-hour battery','Swim-compatible','ANT+ + Bluetooth','Polar Flow integration'], rating: '4.6/5', reviewCount: '4,200+' },
+        { amazonOnly: true, color: 'sky', badge: 'BEST APP-BASED', title: 'Kinovea (Free)', brand: 'Kinovea', price: 'Free', imageUrl: 'https://www.kinovea.org/cdn/shop/products/screenshot.png', amazonSearchTerm: 'video gait analysis app', bestFor: 'Video-based gait analysis', description: 'Free video analysis software for gait analysis. Frame-by-frame analysis, angle measurements, motion tracking. For runners who want detailed biomechanical analysis — requires filming yourself or using a coach.', bullets: ['Free desktop software','Frame-by-frame analysis','Angle + distance tools','Motion tracking','Windows/Mac'], rating: '4.5/5', reviewCount: '2,100+' },
+        { amazonOnly: true, color: 'orange', badge: 'BEST FORM WEARABLE', title: 'COROS POD 2', brand: 'COROS', price: '$100', imageUrl: 'https://coros.com/cdn/shop/products/POD2.png', amazonSearchTerm: 'COROS POD 2 running dynamics', bestFor: 'COROS watch users', description: 'COROS\'s running dynamics pod. Pairs with COROS watches to add cadence, stride length, ground contact balance, and vertical oscillation. Waistband or shoe-mounted.', bullets: ['Running dynamics metrics','Waist or shoe mount','1-year battery','COROS watch integration','ANT+ compatible'], rating: '4.5/5', reviewCount: '820+' }
+    ],
+    faqs: [
+        { q: 'What does running gait analysis actually tell me?', a: 'Cadence — steps per minute (target 170-180 for most runners). Ground contact time — less is better (faster runners <220ms). Vertical oscillation — bouncing up/down (less is more efficient). Running power — total effort in watts. These metrics together identify form issues (overstriding, bouncing, poor cadence).' },
+        { q: 'Do I need running power (Stryd)?', a: 'If you follow structured power-based training (like TrainingPeaks prescribes power zones), yes. If you train by heart rate or pace, you can skip Stryd. Running power\'s advantage over HR: immediate response (no lag), independent of terrain and weather. Similar to cycling power meters.' },
+        { q: 'Stryd vs Garmin HRM-Pro Plus?', a: 'Stryd — running power (unique), mounts on shoe, $219. Garmin HRM-Pro Plus — gait metrics + HR, chest strap, $130. For Garmin users: HRM-Pro Plus covers most needs. Add Stryd if you specifically want power. For non-Garmin users: Stryd is the clear pick.' },
+        { q: 'Can I analyze running gait from video?', a: 'Yes — record yourself running from the side, use Kinovea or Dartfish to analyze. Look for: overstriding (foot landing well ahead of knee), vertical bounce, arm crossing body, rear-foot striking. Paid coach-led analysis ($150-300) adds expertise.' }
+    ],
+    related: [
+        { href: '/blog/best-running-watches-2026', label: 'Best Running Watches 2026', blurb: 'Pair with gait sensors' },
+        { href: '/blog/best-running-shoes-2026', label: 'Best Running Shoes 2026', blurb: 'Improve your running form' },
+        { href: '/blog/best-heart-rate-monitors-2026', label: 'Best Heart Rate Monitors', blurb: 'Complete training kit' },
+        { href: '/running-pace-calculator', label: 'Running Pace Calculator', blurb: 'Pace + cadence calculator' }
+    ],
+    relatedTitle: 'Related Running Gear Guides'
+};

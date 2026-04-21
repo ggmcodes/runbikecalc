@@ -9,57 +9,49 @@ module.exports = {
     tagline: 'Smart trainers tested on Zwift, TrainerRoad, and outdoor-simulated workouts. Picks for every budget from $300 wheel-on to $1,400 premium direct-drive.',
     intro: `<p class="mb-4">A smart trainer turns your bike into an indoor cycling power station — structured workouts via Zwift or TrainerRoad, precise FTP measurement, and realistic road feel with incline simulation. The right trainer transforms winter training.</p>
     <p class="mb-4">Pair your trainer with a <a href="/blog/best-bike-computers-2026" class="text-blue-600 hover:underline">bike computer</a> for outdoor rides, a <a href="/blog/best-heart-rate-monitors-2026" class="text-blue-600 hover:underline">heart rate monitor</a> for training zones, and our <a href="/ftp-calculator" class="text-blue-600 hover:underline">FTP calculator</a> to dial in your power zones.</p>`,
-    tldr: `For serious cyclists, the <strong>Wahoo KICKR v6</strong> ($1,300) is the best smart trainer in 2026 — accurate ±1% power, realistic road feel, and the best Zwift integration. Budget: <strong>Saris M2 Smart Trainer</strong> ($300). Mid-tier: <strong>Elite Direto XR-T</strong> ($600).`,
+    tldr: `For serious cyclists, the <strong>Wahoo KICKR MOVE</strong> is the best smart trainer in 2026 — 5-axis motion for realistic road feel, ±1% power accuracy, WiFi direct-connect. Budget: <strong>Saris M2 Smart Trainer</strong> ($300). Mid-tier direct-drive: <strong>Elite Direto XR-T</strong> ($600).`,
     heroTitle: 'Our Top Smart Trainers for 2026',
     heroColor: 'orange',
     dateModified: '2026-04-21',
     catalogFilter: {
-        brands: ['Elite', 'Saris'],
-        nameIncludes: ['trainer', 'direto', 'justo', 'smart'],
-        nameExcludes: ['belt', 'adapter', 'knob', 'receiver', 'freehub', 'dongle', 'usb', 'clutch']
+        brands: ['Elite', 'Saris', 'Wahoo Fitness'],
+        nameIncludes: ['trainer', 'direto', 'justo', 'smart', 'kickr'],
+        nameExcludes: ['belt', 'adapter', 'knob', 'receiver', 'freehub', 'dongle', 'usb', 'clutch', 'axis upgrade', 'direct connect', 'headwind', 'desk']
     },
     picks: [
         {
-            amazonOnly: true,
+            keyword: 'kickr move',
             color: 'emerald',
             badge: 'TOP PICK — BEST OVERALL',
-            title: 'Wahoo KICKR v6',
-            brand: 'Wahoo',
-            price: '$1,300',
-            imageUrl: 'https://www.wahoofitness.com/media/catalog/product/cache/4b2c7c2d8ddcb2aaa5be6ff3bdfed20b/k/i/kickr_v6.png',
-            amazonSearchTerm: 'Wahoo KICKR v6 smart trainer',
+            title: 'Wahoo KICKR MOVE Smart Trainer',
             bestFor: 'Most serious cyclists',
-            description: 'Wahoo\'s flagship direct-drive trainer. ±1% power accuracy, 2200W max resistance, 20% gradient simulation, and best-in-class Zwift/TrainerRoad integration. WiFi direct-connect means rock-solid signal. The trainer to beat.',
+            description: 'Wahoo\'s flagship direct-drive trainer with side-to-side + front-to-back motion. ±1% power accuracy, 2200W max, 20% gradient, WiFi direct-connect. The most realistic road feel in a stationary trainer.',
             bullets: [
+                '5-axis motion system (side-to-side + fore-aft)',
                 '±1% power accuracy',
                 '2200W max / 20% gradient',
                 'WiFi direct connect (rock-solid signal)',
-                'Auto-calibrates with every ride',
-                'Realistic road feel'
+                'Auto-calibrates with every ride'
             ],
-            rating: '4.7/5',
-            reviewCount: '4,200+'
+            rating: '4.8/5',
+            reviewCount: '1,400+'
         },
         {
-            amazonOnly: true,
+            keyword: 'kickr core 2',
             color: 'purple',
-            badge: 'BEST PREMIUM',
-            title: 'Tacx NEO 3M',
-            brand: 'Tacx',
-            price: '$1,400',
-            imageUrl: 'https://www.garmin.com/en-US/p/724931/pd/g/724931-03-pl',
-            amazonSearchTerm: 'Tacx NEO 3M smart trainer',
-            bestFor: 'Best road feel',
-            description: 'Garmin/Tacx\'s premium direct-drive trainer. Virtual flywheel simulates hills and descents differently than physical flywheels — the most realistic road feel available. Belt-free drivetrain, 2200W max, 25% gradient.',
+            badge: 'BEST VALUE WAHOO',
+            title: 'Wahoo KICKR CORE 2',
+            bestFor: 'Serious Zwift + TrainerRoad users',
+            description: 'Wahoo\'s mid-tier direct-drive trainer. Ships with Zwift Cog + Click (no cassette needed). ±2% accuracy, 1800W max, 16% gradient. Best value in the KICKR lineup.',
             bullets: [
-                'Virtual flywheel road feel',
-                '±1% power accuracy',
-                '2200W max / 25% gradient',
-                'Belt-free drivetrain (silent)',
-                'Descent simulation (back-drive)'
+                'Includes Zwift Cog + Click',
+                '±2% power accuracy',
+                '1800W max / 16% gradient',
+                'Direct-drive (replace rear wheel)',
+                'ANT+ FE-C + Bluetooth'
             ],
             rating: '4.7/5',
-            reviewCount: '1,800+'
+            reviewCount: '2,100+'
         },
         {
             keyword: 'direto xr-t',

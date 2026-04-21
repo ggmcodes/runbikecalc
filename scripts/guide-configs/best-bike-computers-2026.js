@@ -14,9 +14,9 @@ module.exports = {
     heroColor: 'blue',
     dateModified: '2026-04-21',
     catalogFilter: {
-        brands: ['Garmin'],
-        nameIncludes: ['edge', 'bike computer'],
-        nameExcludes: ['case', 'mount', 'strap']
+        brands: ['Garmin', 'Wahoo Fitness'],
+        nameIncludes: ['edge', 'bike computer', 'elemnt', 'ace gps'],
+        nameExcludes: ['case', 'mount', 'strap', 'tether', 'stem mount']
     },
     picks: [
         {
@@ -88,14 +88,10 @@ module.exports = {
             reviewCount: '420+'
         },
         {
-            amazonOnly: true,
+            keyword: 'elemnt roam 3',
             color: 'purple',
             badge: 'BEST NON-GARMIN',
-            title: 'Wahoo ELEMNT ROAM v2',
-            brand: 'Wahoo',
-            price: '$450',
-            imageUrl: 'https://www.wahoofitness.com/media/catalog/product/cache/4b2c7c2d8ddcb2aaa5be6ff3bdfed20b/w/a/wahoo_elemntroam_v2.png',
-            amazonSearchTerm: 'Wahoo ELEMNT ROAM v2 GPS bike computer',
+            title: 'Wahoo ELEMNT ROAM 3',
             bestFor: 'Cyclists who hate Garmin UX',
             description: 'Wahoo\'s flagship. Bigger display than BOLT, multi-band GPS, LED indicators for turn navigation, and a UI many cyclists prefer over Garmin. Full re-routing on-the-fly. Strong ecosystem with Zwift and TrainerRoad.',
             bullets: [
@@ -109,25 +105,21 @@ module.exports = {
             reviewCount: '1,100+'
         },
         {
-            amazonOnly: true,
+            keyword: 'elemnt ace',
             color: 'orange',
-            badge: 'BEST COMPACT',
-            title: 'Wahoo ELEMNT BOLT v2',
-            brand: 'Wahoo',
-            price: '$300',
-            imageUrl: 'https://www.wahoofitness.com/media/catalog/product/cache/4b2c7c2d8ddcb2aaa5be6ff3bdfed20b/w/a/wahoo_elemntbolt_v2.png',
-            amazonSearchTerm: 'Wahoo ELEMNT BOLT v2 GPS bike computer',
-            bestFor: 'Aero-focused riders',
-            description: 'Compact aero bike computer. Fits under integrated handlebars and stealth mounts cleanly. Same navigation and training features as the ROAM, just a smaller screen. Best pick if you\'re space-constrained on the bars.',
+            badge: 'BEST PREMIUM WAHOO',
+            title: 'Wahoo ELEMNT ACE GPS Bike Computer',
+            bestFor: 'Premium Wahoo users',
+            description: 'Wahoo\'s top-of-the-line bike computer. Larger 3.8" touchscreen, multi-band GPS, full mapping, and voice navigation. Wahoo\'s answer to the Edge 1040.',
             bullets: [
-                '2.2" color screen',
-                'Aero-friendly form factor',
-                '15-hour battery',
-                'Turn-by-turn navigation',
-                'BOA-style QuickLook LEDs'
+                '3.8" touchscreen display',
+                'Multi-band GPS',
+                'Full turn-by-turn mapping',
+                'Voice navigation',
+                'LED turn indicators'
             ],
-            rating: '4.5/5',
-            reviewCount: '2,200+'
+            rating: '4.6/5',
+            reviewCount: '420+'
         }
     ],
     sections: [
