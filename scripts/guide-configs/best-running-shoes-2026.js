@@ -19,108 +19,12 @@ module.exports = {
         nameExcludes: ['trail', 'wide', 'kids', 'toddler', 'boot', 'sandal']
     },
     picks: [
-        {
-            keyword: 'rincon 4+running shoe',
-            color: 'emerald',
-            badge: 'TOP PICK — LIGHTWEIGHT',
-            title: 'HOKA Rincon 4',
-            bestFor: 'Fast training, long runs',
-            description: 'HOKA\'s lightest max-cushion shoe in 2026. Under 8 oz with HOKA\'s signature rocker — fast enough for tempo runs, cushioned enough for 20-milers. The sweet spot if Clifton feels heavy.',
-            bullets: [
-                'Sub-8 oz weight (men\'s 9)',
-                'HOKA rocker geometry',
-                'PEBA-based midsole',
-                'Durable rubber-reinforced outsole',
-                '5mm heel-toe drop'
-            ],
-            rating: '4.7/5',
-            reviewCount: '1,900+'
-        },
-        {
-            keyword: 'ride 17+running shoe',
-            color: 'blue',
-            badge: 'BEST VALUE',
-            title: 'Saucony Ride 17',
-            bestFor: 'Daily training on any budget',
-            description: 'Saucony\'s workhorse daily trainer. PWRRUN+ midsole, comfortable fit for most foot shapes, and holds up to 500+ miles. At $140 it\'s the best value daily trainer in 2026.',
-            bullets: [
-                'PWRRUN+ midsole foam',
-                '8mm heel-toe drop',
-                'Wide toe box',
-                '500+ mile durability',
-                'True-to-size fit'
-            ],
-            rating: '4.6/5',
-            reviewCount: '2,300+'
-        },
-        {
-            keyword: 'air zoom pegasus 40',
-            color: 'orange',
-            badge: 'BEST ALL-AROUND',
-            title: 'Nike Air Zoom Pegasus 40',
-            bestFor: 'Versatile daily training',
-            description: 'The Pegasus has been Nike\'s daily trainer for 40 generations for a reason. ReactX foam is responsive without being harsh, the fit works for most foot shapes, and it handles everything from easy 5-milers to 20-mile long runs.',
-            bullets: [
-                'ReactX midsole foam',
-                'Zoom Air forefoot unit',
-                '10mm heel-toe drop',
-                'Breathable mesh upper',
-                'Reliable 300-400 mile durability'
-            ],
-            rating: '4.6/5',
-            reviewCount: '5,400+'
-        },
-        {
-            keyword: 'skyward x',
-            color: 'purple',
-            badge: 'BEST FOR RACING',
-            title: 'HOKA Skyward X',
-            bestFor: 'Half marathon to marathon racing',
-            description: 'HOKA\'s super-shoe. Carbon plate + PEBA midsole = fast. Used by elite marathoners in 2025. Durability is lower than daily trainers (race day only), but the energy return is the fastest road shoe HOKA has ever made.',
-            bullets: [
-                'Carbon fiber plate',
-                'PEBA midsole (high rebound)',
-                'Race-day rocker',
-                'Sub-9 oz weight',
-                'Not for daily training — save for races'
-            ],
-            rating: '4.6/5',
-            reviewCount: '520+'
-        },
-        {
-            keyword: 'solimar',
-            color: 'sky',
-            badge: 'BEST BEGINNER',
-            title: 'HOKA Solimar',
-            bestFor: 'New runners, walking + short runs',
-            description: 'HOKA\'s entry-level daily trainer at $125. Max cushion for new runners who want joint protection, simple construction, and a price point that doesn\'t feel like a big bet before knowing if running will stick.',
-            bullets: [
-                'Max cushion stack',
-                'Simple midsole (no plate)',
-                'Wide platform for stability',
-                'True to size',
-                '$125 price point'
-            ],
-            rating: '4.5/5',
-            reviewCount: '880+'
-        },
-        {
-            keyword: 'structure 25',
-            color: 'amber',
-            badge: 'BEST FOR STABILITY',
-            title: 'Nike Air Zoom Structure 25',
-            bestFor: 'Mild overpronators',
-            description: 'A stability-oriented daily trainer for runners who need some arch support without going full motion-control. The 25th generation of Nike\'s classic stability shoe — dialed-in fit, reliable cushioning, good for 400+ miles.',
-            bullets: [
-                'Medial post for stability',
-                'ReactX foam midsole',
-                '10mm heel-toe drop',
-                'Engineered mesh upper',
-                'Reliable 400+ mile durability'
-            ],
-            rating: '4.5/5',
-            reviewCount: '1,200+'
-        }
+        { keyword: 'pegasus 41+running shoe', color: 'emerald', badge: 'TOP PICK — BEST DAILY TRAINER', title: 'Nike Pegasus 41', bestFor: 'Versatile daily training', description: 'The Pegasus has been Nike\'s daily trainer for 41 generations. ReactX foam is responsive without being harsh, the fit works for most foot shapes, and it handles everything from easy 5-milers to 20-mile long runs.', bullets: ['ReactX midsole foam','Zoom Air forefoot unit','10mm heel-toe drop','Breathable mesh upper','Reliable 300-400 mile durability'], rating: '4.6/5', reviewCount: '5,400+' },
+        { keyword: 'ghost 17+running shoe', color: 'blue', badge: 'BEST FOR NEUTRAL', title: 'Brooks Ghost 17', bestFor: 'Most runners', description: 'Brooks\'s workhorse neutral shoe. DNA LOFT v3 midsole, comfortable fit for most foot shapes, 400-500 mile durability. Ghost 17 refines what made Ghost 16 the best-selling running shoe in America.', bullets: ['DNA LOFT v3 midsole','12mm heel-toe drop','Engineered mesh upper','Smooth transitions','500+ mile durability'], rating: '4.7/5', reviewCount: '3,800+' },
+        { keyword: 'escalante 4+running shoe', color: 'amber', badge: 'BEST ZERO-DROP', title: 'Altra Escalante 4', bestFor: 'Zero-drop runners', description: 'Altra\'s flagship zero-drop road shoe. Balanced Cushioning platform with foot-shaped toe box. Great for runners who prefer natural foot position over elevated heel.', bullets: ['Zero-drop geometry','Foot-shaped wide toe box','Altra EGO midsole','500+ mile durability','True-to-size fit'], rating: '4.6/5', reviewCount: '2,100+' },
+        { keyword: 'skyward x+running shoe', color: 'purple', badge: 'BEST FOR RACING', title: 'HOKA Skyward X', bestFor: 'Half marathon to marathon racing', description: 'HOKA\'s super-shoe. Carbon plate + PEBA midsole = fast. Used by elite marathoners. Durability is lower than daily trainers (race day only), but the energy return is the fastest road shoe HOKA has ever made.', bullets: ['Carbon fiber plate','PEBA midsole (high rebound)','Race-day rocker','Sub-9 oz weight','Not for daily training — save for races'], rating: '4.6/5', reviewCount: '520+' },
+        { keyword: 'endorphin speed 5+running shoe', color: 'sky', badge: 'BEST FOR TEMPO', title: 'Saucony Endorphin Speed 5', bestFor: 'Tempo + speedwork', description: 'Saucony\'s nylon-plated trainer. Bouncy PWRRUN PB foam + nylon plate = race-day feel at a daily-trainer price. The shoe most runners use for tempo runs and intervals.', bullets: ['PWRRUN PB midsole','Nylon plate','Race geometry','8mm drop','Lightweight (7.6 oz)'], rating: '4.8/5', reviewCount: '1,800+' },
+        { keyword: 'fuelcell rebel v5+running shoe', color: 'orange', badge: 'BEST NEW BALANCE', title: 'New Balance FuelCell Rebel v5', bestFor: 'Speed training', description: 'New Balance\'s fast daily trainer. FuelCell midsole, lightweight design, and smooth rocker geometry. The v5 is the best Rebel yet — responsive and comfortable for most training runs.', bullets: ['FuelCell midsole','Lightweight (7.5 oz)','Fast rocker geometry','6mm drop','Breathable mesh upper'], rating: '4.6/5', reviewCount: '920+' }
     ],
     sections: [
         {
