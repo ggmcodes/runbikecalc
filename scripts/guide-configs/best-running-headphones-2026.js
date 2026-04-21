@@ -1,0 +1,37 @@
+module.exports = {
+    slug: 'best-running-headphones-2026',
+    title: 'Best Running Headphones 2026: Earbuds, Bone Conduction & Open-Ear',
+    h1: 'Best Running Headphones 2026',
+    metaDescription: 'The best running headphones for 2026. Shokz OpenRun, AirPods Pro, Jabra Elite, Beats Fit Pro tested for sweat resistance, fit during runs, and battery life.',
+    keywords: 'best running headphones 2026, Shokz OpenRun, AirPods running, Jabra Elite, best bone conduction headphones, running earbuds, sweat-resistant headphones',
+    category: 'Best Running Headphones 2026',
+    categoryEyebrow: 'Running Gear',
+    tagline: 'Running headphones tested for fit during runs, sweat resistance, and battery life. Bone conduction + in-ear + open-ear picks.',
+    intro: `<p class="mb-4">A running headphone has to solve three problems: stay in your ears during 2+ hours of motion, survive sweat, and have enough battery for long runs. Bone conduction adds safety (awareness of surroundings). This guide covers what we actually use.</p>`,
+    tldr: `For safety-conscious outdoor runners, <strong>Shokz OpenRun Pro 2</strong> is the best bone conduction running headphone in 2026. For in-ear: <strong>AirPods Pro 2</strong>. Budget: <strong>Anker Soundcore Sport X10</strong>.`,
+    heroTitle: 'Our Top Running Headphones for 2026',
+    heroColor: 'purple',
+    dateModified: '2026-04-21',
+    catalogFilter: { brands: [], nameIncludes: ['headphone','earbud'], nameExcludes: ['case only','charger'] },
+    picks: [
+        { amazonOnly: true, color: 'emerald', badge: 'TOP PICK — SAFETY', title: 'Shokz OpenRun Pro 2', brand: 'Shokz', price: '$180', imageUrl: 'https://shokz.com/cdn/shop/products/OpenRunPro2.png', amazonSearchTerm: 'Shokz OpenRun Pro 2 bone conduction headphones', bestFor: 'Road running, awareness of surroundings', description: 'Shokz\'s flagship bone conduction headphones. Sits on cheekbones, leaves ears open — hear traffic, dogs, cyclists. 12-hour battery, IP55 sweatproof. Industry standard for outdoor runners who prioritize safety.', bullets: ['Bone conduction (ears stay open)','12-hour battery','IP55 sweat/water resistant','Lightweight (27g)','Magnetic charging'], rating: '4.7/5', reviewCount: '8,400+' },
+        { amazonOnly: true, color: 'blue', badge: 'BEST IN-EAR', title: 'Apple AirPods Pro 2', brand: 'Apple', price: '$250', imageUrl: 'https://www.apple.com/v/airpods-pro/k/images/overview/hero.png', amazonSearchTerm: 'Apple AirPods Pro 2', bestFor: 'iPhone users, all-day wear', description: 'Apple\'s flagship earbuds. Excellent sound, good running fit with adjustable tips, sweat-resistant. Active noise cancellation + transparency mode lets you hear surroundings when needed.', bullets: ['Active noise cancellation','Transparency mode','IPX4 sweat resistance','6-hour battery (30hr with case)','Seamless iPhone integration'], rating: '4.8/5', reviewCount: '52,000+' },
+        { amazonOnly: true, color: 'amber', badge: 'BEST RUNNING FIT', title: 'Beats Fit Pro', brand: 'Beats', price: '$200', imageUrl: 'https://www.beatsbydre.com/content/dam/beats/web/en/consumer/products/earphones/beats-fit-pro.png', amazonSearchTerm: 'Beats Fit Pro running earbuds', bestFor: 'High-motion running', description: 'Beats\'s running-specific earbuds with wing tips that lock them in your ears. Don\'t fall out even on intense runs. Apple H1 chip, ANC, transparency, IPX4.', bullets: ['Wing tip lock-in','Active noise cancellation','Transparency mode','IPX4 sweat resistance','6-hour battery'], rating: '4.7/5', reviewCount: '18,000+' },
+        { amazonOnly: true, color: 'sky', badge: 'BEST OPEN-EAR', title: 'Shokz OpenFit', brand: 'Shokz', price: '$180', imageUrl: 'https://shokz.com/cdn/shop/products/OpenFit.png', amazonSearchTerm: 'Shokz OpenFit open-ear earbuds', bestFor: 'Open-ear comfort without bone conduction', description: 'Shokz\'s air-conduction earbuds. Clip over ear (not in ear canal), hear surroundings AND better music quality than bone conduction. Great for runners who find OpenRun sound lacking.', bullets: ['Air conduction (not in ear)','Better music quality than bone conduction','IPX5 sweat resistance','7-hour battery','Comfortable for long wear'], rating: '4.6/5', reviewCount: '4,200+' },
+        { amazonOnly: true, color: 'orange', badge: 'BEST VALUE', title: 'Anker Soundcore Sport X10', brand: 'Anker', price: '$70', imageUrl: 'https://cdn.shopify.com/s/files/1/0596/8739/2817/products/SportX10.png', amazonSearchTerm: 'Anker Soundcore Sport X10 running earbuds', bestFor: 'Budget-focused runners', description: 'Anker\'s rotating-design running earbuds. Lock into ears with 210° rotation, IPX7 fully waterproof, 8-hour battery. At $70 the best value running earbud in 2026.', bullets: ['210° rotating design','IPX7 fully waterproof','8-hour battery','Bass-boosted sound','Under $80'], rating: '4.5/5', reviewCount: '11,000+' },
+        { amazonOnly: true, color: 'rose', badge: 'BEST BATTERY LIFE', title: 'Jabra Elite 8 Active', brand: 'Jabra', price: '$200', imageUrl: 'https://www.jabra.com/-/media/aem/jabra/consumer/consumer-headsets/jabra-elite-8-active/overview/jabra-elite-8-active-product-image.png', amazonSearchTerm: 'Jabra Elite 8 Active running earbuds', bestFor: 'Long runs and ultras', description: 'Jabra\'s sport earbuds. IP68 fully rugged, 8-hour battery (32hr with case), ShakeGrip anti-slip. Built specifically for sports — handles rain, sweat, and multi-hour efforts.', bullets: ['IP68 fully waterproof/dustproof','8-hour battery','ShakeGrip anti-slip coating','Adaptive ANC','Military-grade drop test'], rating: '4.6/5', reviewCount: '6,800+' }
+    ],
+    faqs: [
+        { q: 'Bone conduction vs in-ear headphones for running?', a: 'Bone conduction (Shokz) — ears stay open, safer for outdoor runs, lower audio quality. In-ear (AirPods) — better audio, more isolation, less safe on roads. Most safety-conscious outdoor runners pick bone conduction; treadmill/trail runners prefer in-ear.' },
+        { q: 'Will AirPods Pro stay in during a run?', a: 'For most runners, yes — the silicone tips create a decent seal. For runners with unusual ear canal shapes or very intense motion, Beats Fit Pro (with wing tips) stays in better. AirPods Pro 3 rumored for late 2026.' },
+        { q: 'What\'s the best running headphone for music quality?', a: 'AirPods Pro 2 (Apple ecosystem) or Sony WF-1000XM5 (Android ecosystem) are the best-sounding running-capable earbuds. Bone conduction (Shokz) sacrifices audio quality for safety — acceptable for podcasts, weak for music.' },
+        { q: 'IPX4 vs IPX5 vs IP68 — which sweat resistance do I need?', a: 'IPX4 (AirPods Pro) — light rain and sweat. IPX5-7 (Beats, Anker) — heavy sweat and full rain. IP68 (Jabra Elite 8 Active) — submersion and dust. For running, IPX4 is minimum; IPX5+ if you sweat a lot or run in heavy rain.' }
+    ],
+    related: [
+        { href: '/blog/best-running-watches-2026', label: 'Best Running Watches 2026', blurb: 'Pair with your running watch' },
+        { href: '/blog/best-running-shoes-2026', label: 'Best Running Shoes 2026', blurb: 'Complete running kit' },
+        { href: '/blog/best-running-sunglasses-2026', label: 'Best Running Sunglasses 2026', blurb: 'Eye protection' },
+        { href: '/blog/best-running-shorts-2026', label: 'Best Running Shorts 2026', blurb: 'Running apparel' }
+    ],
+    relatedTitle: 'Related Running Gear Guides'
+};
