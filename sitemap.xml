@@ -2640,4 +2640,28 @@
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-cycling-rain-jackets-2026</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-bike-workstands-2026</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-bike-travel-cases-2026</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://runbikecalc.com/blog/best-aero-helmets-2026</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
