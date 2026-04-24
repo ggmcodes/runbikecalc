@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/css/conversion-popup.css">
     <link rel="stylesheet" href="/css/sticky-banner.css">
     <link rel="stylesheet" href="/css/inline-cta.css">
+    <link rel="stylesheet" href="/css/calc-refined.css">
 
     <script type="application/ld+json">
     {
@@ -89,7 +90,7 @@
     }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="calc-page calc-page--climb text-gray-900">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
 
     <nav class="site-nav">
@@ -131,113 +132,163 @@
             </ol>
         </nav>
 
-        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
-            <p class="text-lg font-semibold text-gray-800">
-                <strong>Quick Answer:</strong> Climb time ≈ distance ÷ velocity, where velocity is solved from P = m·g·(sinθ + Crr·cosθ)·v + ½·CdA·ρ·v³. A fit amateur at 3.5 W/kg climbs Alpe d'Huez (13.8 km, 8.1%) in ~58 min.
-            </p>
-        </div>
+        <section class="calc-hero">
+            <div class="calc-hero__eyebrow">Cycling Tools · Climbing</div>
+            <h1 class="calc-hero__h1">How long will this climb <em>actually</em> take?</h1>
+            <p class="calc-hero__dek">Predict your time up any mountain from distance, gradient, weight, and sustained power. Works for Strava segments, local climbs, and the famous alpine passes — complete with VAM and W/kg benchmarks.</p>
+            <div class="calc-hero__formula">
+                <div class="calc-hero__formula-label">Quick answer</div>
+                <div class="calc-hero__formula-body">Climb time ≈ distance ÷ velocity, where velocity is solved from <code>P = m·g·(sinθ + Crr·cosθ)·v + ½·CdA·ρ·v³</code>. A fit amateur at 3.5 W/kg climbs Alpe d'Huez (13.8 km, 8.1%) in ~58 min.</div>
+            </div>
+        </section>
 
-        <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Bike Climb Time Calculator</h1>
-        <p class="text-lg text-gray-700 mb-8 max-w-3xl">Predict how long any climb will take at your sustained power. Works for local climbs, Strava segments, and famous mountains — includes VAM and average speed.</p>
+        <section class="calc-form">
+            <div class="calc-form__header">
+                <h2 class="calc-form__h2">Enter your climb</h2>
+                <span class="calc-form__h2-num">Step 01</span>
+            </div>
 
-        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-8 mb-8">
-            <h2 class="font-serif text-2xl font-bold mb-6">Enter your climb details</h2>
-
-            <div class="mb-6">
-                <label class="block text-sm font-semibold mb-2">Famous climbs (optional)</label>
-                <select id="preset" class="w-full md:w-auto border border-gray-300 rounded-lg px-3 py-2">
-                    <option value="">— Custom —</option>
-                    <option value="13.8,8.1">Alpe d'Huez (13.8 km, 8.1%)</option>
-                    <option value="21.5,7.5">Mont Ventoux (21.5 km, 7.5%)</option>
-                    <option value="21.6,7.5">Col du Tourmalet (21.6 km, 7.4%)</option>
-                    <option value="16.2,7.1">Passo dello Stelvio (16.2 km, 7.1%)</option>
-                    <option value="7.6,6.3">Mt Washington Auto Rd (12.2 km, 12%)</option>
-                    <option value="15.1,5.4">Mt Lemmon (15.1 mi, 5.4%)</option>
-                    <option value="10.8,4.8">Mt Diablo (10.8 mi, 4.8%)</option>
-                    <option value="16.1,5.1">Haleakala (36 mi from sea, 5.1%)</option>
+            <div class="calc-form__presets">
+                <label class="calc-form__preset-label" for="preset">Famous Climbs &nbsp;·&nbsp; Optional Starting Point</label>
+                <select id="preset" class="calc-form__preset-select">
+                    <option value="">— Custom entry —</option>
+                    <option value="13.8,8.1">Alpe d'Huez · 13.8 km · 8.1%</option>
+                    <option value="21.5,7.5">Mont Ventoux · 21.5 km · 7.5%</option>
+                    <option value="21.6,7.5">Col du Tourmalet · 21.6 km · 7.4%</option>
+                    <option value="16.2,7.1">Passo dello Stelvio · 16.2 km · 7.1%</option>
+                    <option value="7.6,6.3">Mt Washington Auto Rd · 12.2 km · 12%</option>
+                    <option value="15.1,5.4">Mt Lemmon · 15.1 mi · 5.4%</option>
+                    <option value="10.8,4.8">Mt Diablo · 10.8 mi · 4.8%</option>
+                    <option value="16.1,5.1">Haleakala · 36 mi from sea · 5.1%</option>
                 </select>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="distance">Climb distance</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="distance" step="0.01" value="13.8" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
-                        <select id="distUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="distance">Climb Distance</label>
+                    <div class="calc-field__group">
+                        <input type="number" id="distance" step="0.01" value="13.8" class="calc-field__input" inputmode="decimal">
+                        <select id="distUnit" class="calc-field__select" aria-label="Distance units">
                             <option value="km">km</option>
                             <option value="mi">mi</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="gradient">Average gradient (%)</label>
-                    <input type="number" id="gradient" step="0.1" value="8.1" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="gradient">Average Gradient (%)</label>
+                    <input type="number" id="gradient" step="0.1" value="8.1" class="calc-field__input" inputmode="decimal">
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="rider">Rider weight</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="rider" step="0.1" value="70" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
-                        <select id="riderUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="rider">Rider Weight</label>
+                    <div class="calc-field__group">
+                        <input type="number" id="rider" step="0.1" value="70" class="calc-field__input" inputmode="decimal">
+                        <select id="riderUnit" class="calc-field__select" aria-label="Rider weight units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="bike">Bike + gear weight</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="bike" step="0.1" value="8" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
-                        <select id="bikeUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="bike">Bike + Gear Weight</label>
+                    <div class="calc-field__group">
+                        <input type="number" id="bike" step="0.1" value="8" class="calc-field__input" inputmode="decimal">
+                        <select id="bikeUnit" class="calc-field__select" aria-label="Bike weight units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="watts">Sustained power (watts)</label>
-                    <input type="number" id="watts" step="1" value="245" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="watts">Sustained Power (watts)</label>
+                    <input type="number" id="watts" step="1" value="245" class="calc-field__input" inputmode="numeric">
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="surface">Surface / Crr</label>
-                    <select id="surface" class="w-full border border-gray-300 rounded-lg px-3 py-2">
-                        <option value="0.004">Smooth tarmac (0.004)</option>
-                        <option value="0.005" selected>Average road (0.005)</option>
-                        <option value="0.007">Rough pavement (0.007)</option>
-                        <option value="0.012">Gravel (0.012)</option>
+                <div class="calc-field">
+                    <label class="calc-field__label" for="surface">Surface · Crr</label>
+                    <select id="surface" class="calc-field__select">
+                        <option value="0.004">Smooth tarmac · 0.004</option>
+                        <option value="0.005" selected>Average road · 0.005</option>
+                        <option value="0.007">Rough pavement · 0.007</option>
+                        <option value="0.012">Gravel · 0.012</option>
                     </select>
                 </div>
             </div>
 
-            <button id="calcBtn" class="w-full md:w-auto bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition">Calculate Climb Time</button>
+            <button id="calcBtn" class="calc-submit" type="button">
+                Calculate Climb Time
+                <svg class="calc-submit__arrow" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
 
-            <div id="results" class="mt-8 hidden">
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="font-serif text-xl font-bold mb-4">Your Estimated Climb</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Time</div>
-                            <div id="outTime" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Avg Speed</div>
-                            <div id="outSpeed" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">VAM</div>
-                            <div id="outVam" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                            <div class="text-xs text-gray-500">m / hr ascent</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">W / kg</div>
-                            <div id="outWkg" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                        </div>
-                    </div>
-                    <p id="outContext" class="text-sm text-gray-600 mt-4"></p>
+            <div id="results" class="calc-results hidden">
+                <div class="calc-results__header">
+                    <h3 class="calc-results__h3">Your estimated climb</h3>
+                    <span class="calc-results__tag">Live estimate</span>
                 </div>
+                <div class="calc-results__grid">
+                    <div class="calc-results__tile calc-results__tile--primary">
+                        <div class="calc-results__tile-label">Finishing Time</div>
+                        <div id="outTime" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">at sustained power</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">Avg Speed</div>
+                        <div id="outSpeed" class="calc-results__tile-value">—</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">VAM</div>
+                        <div id="outVam" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">m / hr ascent</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">Power / Weight</div>
+                        <div id="outWkg" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">W / kg</div>
+                    </div>
+                </div>
+                <p id="outContext" class="calc-results__context"></p>
             </div>
         </section>
 
-        <section class="prose prose-lg max-w-none mb-10">
+        <!-- Backcountry Product Card -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gradient-to-r from-emerald-50 to-white border-2 border-emerald-200 rounded-xl p-6 shadow-sm">
+                <p class="text-xs font-bold text-emerald-700 uppercase mb-2">Featured at Backcountry — 15% off first order</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC02V-BLA-ONESIZ&u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-elemnt-bolt-3-gps-cycling-computer&intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" class="flex-shrink-0">
+                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/WHA/WHAC02V/BLA.jpg" alt="Wahoo ELEMNT BOLT 3" class="w-32 h-32 object-contain bg-white rounded-lg p-2">
+                    </a>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Wahoo ELEMNT BOLT 3</h3>
+                        <p class="text-sm text-gray-600 mb-2">Track actual climb times and compare to this calculator's predictions. Built-in climb detection and VAM display.</p>
+                        <div class="flex items-center gap-3 flex-wrap">
+                            <span class="text-2xl font-bold text-emerald-700">$349.99</span>
+                            <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC02V-BLA-ONESIZ&u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-elemnt-bolt-3-gps-cycling-computer&intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-lg text-sm">Shop at Backcountry (15% off)</a>
+                            <a href="https://www.amazon.com/s?k=Wahoo+ELEMNT+BOLT+3&tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener noreferrer" class="inline-block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg text-sm">Check on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backcountry 15% off Banner -->
+        <div class="my-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311?intsrc=CATF_15689" target="_blank" class="inline-block hover:opacity-95 transition-opacity w-full">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" alt="">
+        </div>
+
+        <section class="calc-prose">
             <h2>How the bike climb calculator works</h2>
             <p>The calculator solves the standard cycling power equation for velocity, then divides distance by that velocity to get time. The equation balances three forces that resist your forward motion on a climb:</p>
             <ul>
@@ -268,48 +319,85 @@
                 <li><strong>85-90% of FTP</strong> for climbs lasting 1-2 hours.</li>
                 <li><strong>75-85% of FTP</strong> for multi-hour efforts (Tour-stage style).</li>
             </ul>
-            <p>Don't know your FTP? Run our <a href="/ftp-calculator" class="text-primary underline">FTP Calculator</a> first. Need training zones? Try the <a href="/heart-rate-zone-calculator" class="text-primary underline">Heart Rate Zone Calculator</a>.</p>
+            <p>Don't know your FTP? Run our <a href="/ftp-calculator">FTP Calculator</a> first. Need training zones? Try the <a href="/heart-rate-zone-calculator">Heart Rate Zone Calculator</a>.</p>
         </section>
 
-        <section class="bg-gray-100 rounded-xl p-6 md:p-8 mb-10">
-            <h2 class="font-serif text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">How accurate is this calculator?</summary>
-                    <p class="mt-2 text-gray-700">Within 3-5% for steady-state climbs on dry pavement in calm conditions. Accuracy drops with variable gradients, switchbacks, wind, and changes in rider pacing. The calculator assumes constant power, which real climbs rarely match exactly.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">Does wind affect the result?</summary>
-                    <p class="mt-2 text-gray-700">Not in this version — the model uses still-air aerodynamics. For steep climbs (over 7%) at climbing speeds, wind has minimal effect. On shallower climbs at higher speeds, headwinds can add 10-30 seconds per km.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">What is a good W/kg for climbing?</summary>
-                    <p class="mt-2 text-gray-700">2.0-2.5 W/kg is fitness-level, 3.0-3.5 is solid amateur, 4.0+ is competitive racer, 5.0+ is elite, 6.0+ is pro. Climbing speed scales linearly with W/kg on steep gradients.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">How long does Alpe d'Huez take?</summary>
-                    <p class="mt-2 text-gray-700">At 3.0 W/kg: ~68 min. At 3.5 W/kg: ~58 min. At 4.0 W/kg: ~51 min. At 5.0 W/kg: ~42 min. The pro record (Pantani, 1997) is 37:35 at an estimated 6.5 W/kg.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">Can I use this for Zwift climbs?</summary>
-                    <p class="mt-2 text-gray-700">Yes — Zwift uses the same physics model, so predictions are very accurate on Zwift. The main variable is trainer power smoothing and whether you hold steady power or punch above on steeper sections.</p>
-                </details>
+        <section class="calc-faq">
+            <div class="calc-faq__header">
+                <h2 class="calc-faq__h2">Frequently Asked Questions</h2>
+                <span class="calc-faq__tag">5 Questions</span>
+            </div>
+            <div class="calc-faq__list">
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">01</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">How accurate is this calculator?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Within 3-5% for steady-state climbs on dry pavement in calm conditions. Accuracy drops with variable gradients, switchbacks, wind, and changes in rider pacing. The calculator assumes constant power, which real climbs rarely match exactly.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">02</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">Does wind affect the result?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Not in this version — the model uses still-air aerodynamics. For steep climbs (over 7%) at climbing speeds, wind has minimal effect. On shallower climbs at higher speeds, headwinds can add 10-30 seconds per km.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">03</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">What is a good W/kg for climbing?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">2.0-2.5 W/kg is fitness-level, 3.0-3.5 is solid amateur, 4.0+ is competitive racer, 5.0+ is elite, 6.0+ is pro. Climbing speed scales linearly with W/kg on steep gradients.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">04</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">How long does Alpe d'Huez take?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">At 3.0 W/kg: ~68 min. At 3.5 W/kg: ~58 min. At 4.0 W/kg: ~51 min. At 5.0 W/kg: ~42 min. The pro record (Pantani, 1997) is 37:35 at an estimated 6.5 W/kg.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">05</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">Can I use this for Zwift climbs?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Yes — Zwift uses the same physics model, so predictions are very accurate on Zwift. The main variable is trainer power smoothing and whether you hold steady power or punch above on steeper sections.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <a href="/ftp-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">FTP Calculator →</div>
-                <div class="text-sm text-gray-600">Test your functional threshold power</div>
-            </a>
-            <a href="/power-to-weight-ratio-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">W/kg Calculator →</div>
-                <div class="text-sm text-gray-600">Calculate your power-to-weight ratio</div>
-            </a>
-            <a href="/bike-gearing-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">Bike Gearing Calculator →</div>
-                <div class="text-sm text-gray-600">Pick the right gear for steep climbs</div>
-            </a>
+        <section class="calc-related">
+            <div class="calc-related__header">
+                <h2 class="calc-related__h2">Keep going</h2>
+                <span class="calc-related__tag">Related · Cycling</span>
+            </div>
+            <div class="calc-related__grid">
+                <a href="/ftp-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Baseline Power</span>
+                    <h3 class="calc-related__card-title">FTP Calculator</h3>
+                    <p class="calc-related__card-dek">Dial in the watts you enter here — test your functional threshold power using the 20-min, ramp, or race-data methods.</p>
+                </a>
+                <a href="/power-to-weight-ratio-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Rider Benchmark</span>
+                    <h3 class="calc-related__card-title">W/kg Calculator</h3>
+                    <p class="calc-related__card-dek">Translate raw watts into the power-to-weight ratio that actually determines who wins on the climbs.</p>
+                </a>
+                <a href="/bike-gearing-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Equipment</span>
+                    <h3 class="calc-related__card-title">Bike Gearing Calculator</h3>
+                    <p class="calc-related__card-dek">Pick the right chainring and cassette combo so you can sustain your target cadence at climbing speed.</p>
+                </a>
+            </div>
         </section>
     </main>
 

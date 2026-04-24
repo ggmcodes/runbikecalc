@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/css/conversion-popup.css">
     <link rel="stylesheet" href="/css/sticky-banner.css">
     <link rel="stylesheet" href="/css/inline-cta.css">
+    <link rel="stylesheet" href="/css/calc-refined.css">
 
     <script type="application/ld+json">
     {
@@ -89,7 +90,7 @@
     }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="calc-page calc-page--drafting text-gray-900">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
 
     <nav class="site-nav">
@@ -131,101 +132,149 @@
             </ol>
         </nav>
 
-        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
-            <p class="text-lg font-semibold text-gray-800">
-                <strong>Quick Answer:</strong> Drafting directly behind one rider saves about 30% of aero drag at 35 km/h — roughly 60-80 watts for a typical cyclist. Mid-pack peloton savings reach 40-55% of total power.
-            </p>
-        </div>
+        <section class="calc-hero">
+            <div class="calc-hero__eyebrow">Cycling Tools · Aerodynamics</div>
+            <h1 class="calc-hero__h1">How many watts does drafting <em>really</em> save?</h1>
+            <p class="calc-hero__dek">CFD-backed estimates of the power you save behind a wheel, deep in a paceline, or buried mid-pack. Based on published wind-tunnel and CFD data (Blocken et al.) across eight draft positions.</p>
+            <div class="calc-hero__formula">
+                <div class="calc-hero__formula-label">Quick answer</div>
+                <div class="calc-hero__formula-body">Drafting directly behind one rider saves about <strong>30% of aero drag</strong> at 35 km/h — roughly 60–80 watts for a typical cyclist. Mid-pack peloton savings reach 40–55% of total power.</div>
+            </div>
+        </section>
 
-        <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Cycling Drafting Power Calculator</h1>
-        <p class="text-lg text-gray-700 mb-8 max-w-3xl">How many watts do you save drafting behind a wheel, in a paceline, or mid-pack? This calculator uses published aero data to tell you.</p>
+        <section class="calc-form">
+            <div class="calc-form__header">
+                <h2 class="calc-form__h2">Ride conditions</h2>
+                <span class="calc-form__h2-num">Step 01</span>
+            </div>
 
-        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-8 mb-8">
-            <h2 class="font-serif text-2xl font-bold mb-6">Ride conditions</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="speed">Cycling speed</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="speed" step="0.1" value="35" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
-                        <select id="speedUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+            <div class="calc-grid">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="speed">Cycling Speed</label>
+                    <div class="calc-field__group">
+                        <input type="number" id="speed" step="0.1" value="35" class="calc-field__input" inputmode="decimal">
+                        <select id="speedUnit" class="calc-field__select" aria-label="Speed units">
                             <option value="kph">kph</option>
                             <option value="mph">mph</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="position">Draft position</label>
-                    <select id="position" class="w-full border border-gray-300 rounded-lg px-3 py-2">
-                        <option value="1.00">Solo (no draft) — baseline</option>
-                        <option value="0.71" selected>Directly behind one rider (close, ~0.5m)</option>
-                        <option value="0.68">2nd wheel in a 2-rider paceline</option>
-                        <option value="0.63">3rd+ wheel in a paceline</option>
-                        <option value="0.55">Mid-pack in a group of 10+</option>
-                        <option value="0.48">Deep in peloton (40+ riders)</option>
-                        <option value="0.85">Echelon / side draft (crosswind)</option>
-                        <option value="0.92">1 meter behind (gap)</option>
+                <div class="calc-field">
+                    <label class="calc-field__label" for="position">Draft Position</label>
+                    <select id="position" class="calc-field__select">
+                        <option value="1.00">Solo · no draft · baseline</option>
+                        <option value="0.71" selected>Directly behind one rider · ~0.5 m gap</option>
+                        <option value="0.68">2nd wheel · 2-rider paceline</option>
+                        <option value="0.63">3rd+ wheel · paceline</option>
+                        <option value="0.55">Mid-pack · group of 10+</option>
+                        <option value="0.48">Deep peloton · 40+ riders</option>
+                        <option value="0.85">Echelon · side draft · crosswind</option>
+                        <option value="0.92">1 meter behind · gap</option>
                     </select>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="rider">Rider weight</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="rider" step="0.1" value="70" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
-                        <select id="riderUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+                <div class="calc-field">
+                    <label class="calc-field__label" for="rider">Rider Weight</label>
+                    <div class="calc-field__group">
+                        <input type="number" id="rider" step="0.1" value="70" class="calc-field__input" inputmode="decimal">
+                        <select id="riderUnit" class="calc-field__select" aria-label="Rider weight units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="cda">Aero position (CdA)</label>
-                    <select id="cda" class="w-full border border-gray-300 rounded-lg px-3 py-2">
-                        <option value="0.40">Upright / tops (0.40)</option>
-                        <option value="0.324" selected>Road bike on hoods (0.32)</option>
-                        <option value="0.28">Road bike in drops (0.28)</option>
-                        <option value="0.24">TT / aero position (0.24)</option>
-                        <option value="0.21">Pro TT (0.21)</option>
+                <div class="calc-field">
+                    <label class="calc-field__label" for="cda">Aero Position · CdA</label>
+                    <select id="cda" class="calc-field__select">
+                        <option value="0.40">Upright · tops · 0.40</option>
+                        <option value="0.324" selected>Road bike · hoods · 0.32</option>
+                        <option value="0.28">Road bike · drops · 0.28</option>
+                        <option value="0.24">TT · aero position · 0.24</option>
+                        <option value="0.21">Pro TT · 0.21</option>
                     </select>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2" for="hours">Duration (hours)</label>
-                    <input type="number" id="hours" step="0.5" value="3" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                <div class="calc-field" style="grid-column: 1 / -1;">
+                    <label class="calc-field__label" for="hours">Duration (hours)</label>
+                    <input type="number" id="hours" step="0.5" value="3" class="calc-field__input" inputmode="decimal">
                 </div>
             </div>
 
-            <button id="calcBtn" class="w-full md:w-auto bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition">Calculate Savings</button>
+            <button id="calcBtn" class="calc-submit" type="button">
+                Calculate Savings
+                <svg class="calc-submit__arrow" fill="none" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
 
-            <div id="results" class="mt-8 hidden">
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="font-serif text-xl font-bold mb-4">Your Drafting Savings</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Solo Power</div>
-                            <div id="outSolo" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                            <div class="text-xs text-gray-500">watts</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Drafting</div>
-                            <div id="outDraft" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                            <div class="text-xs text-gray-500">watts</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Watts Saved</div>
-                            <div id="outSaved" class="text-2xl font-bold text-emerald-600 mt-1">—</div>
-                            <div id="outPct" class="text-xs text-gray-500">—</div>
-                        </div>
-                        <div class="bg-sky-50 rounded-lg p-4">
-                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Energy Saved</div>
-                            <div id="outKj" class="text-2xl font-bold text-gray-900 mt-1">—</div>
-                            <div class="text-xs text-gray-500">kJ over duration</div>
-                        </div>
-                    </div>
-                    <p id="outContext" class="text-sm text-gray-600 mt-4"></p>
+            <div id="results" class="calc-results hidden">
+                <div class="calc-results__header">
+                    <h3 class="calc-results__h3">Your drafting savings</h3>
+                    <span class="calc-results__tag">CFD-based estimate</span>
                 </div>
+                <div class="calc-results__grid">
+                    <div class="calc-results__tile calc-results__tile--primary">
+                        <div class="calc-results__tile-label">Watts Saved</div>
+                        <div id="outSaved" class="calc-results__tile-value">—</div>
+                        <div id="outPct" class="calc-results__tile-unit">—</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">Solo Power</div>
+                        <div id="outSolo" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">watts</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">Drafting Power</div>
+                        <div id="outDraft" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">watts</div>
+                    </div>
+                    <div class="calc-results__tile">
+                        <div class="calc-results__tile-label">Energy Saved</div>
+                        <div id="outKj" class="calc-results__tile-value">—</div>
+                        <div class="calc-results__tile-unit">kJ over duration</div>
+                    </div>
+                </div>
+                <p id="outContext" class="calc-results__context"></p>
             </div>
         </section>
 
-        <section class="prose prose-lg max-w-none mb-10">
+        <!-- Backcountry Product Card -->
+        <div class="max-w-4xl mx-auto my-8">
+            <div class="bg-gradient-to-r from-emerald-50 to-white border-2 border-emerald-200 rounded-xl p-6 shadow-sm">
+                <p class="text-xs font-bold text-emerald-700 uppercase mb-2">Featured at Backcountry — 15% off first order</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC02V-BLA-ONESIZ&u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-elemnt-bolt-3-gps-cycling-computer&intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" class="flex-shrink-0">
+                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/WHA/WHAC02V/BLA.jpg" alt="Wahoo ELEMNT BOLT 3" class="w-32 h-32 object-contain bg-white rounded-lg p-2">
+                    </a>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Wahoo ELEMNT BOLT 3</h3>
+                        <p class="text-sm text-gray-600 mb-2">See real-time power in the paceline. Compare your drafting watts to your solo FTP — the Bolt's power field makes it obvious.</p>
+                        <div class="flex items-center gap-3 flex-wrap">
+                            <span class="text-2xl font-bold text-emerald-700">$349.99</span>
+                            <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC02V-BLA-ONESIZ&u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-elemnt-bolt-3-gps-cycling-computer&intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-lg text-sm">Shop at Backcountry (15% off)</a>
+                            <a href="https://www.amazon.com/s?k=Wahoo+ELEMNT+BOLT+3&tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener noreferrer" class="inline-block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg text-sm">Check on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backcountry 15% off Banner -->
+        <div class="my-8">
+            <a rel="sponsored" href="https://backcountry.tnu8.net/c/6910798/1107350/5311?intsrc=CATF_15689" target="_blank" class="inline-block hover:opacity-95 transition-opacity w-full">
+                <div class="flex items-center justify-between max-w-[728px] mx-auto h-[90px] rounded-lg overflow-hidden shadow-lg" style="background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 25%, rgba(245,245,245,0.9) 40%, rgba(200,210,220,0.85) 100%);">
+                    <div class="flex items-center px-6 h-full bg-gray-100" style="min-width: 180px;">
+                        <span class="text-xl font-semibold text-gray-900 tracking-tight">Backcountry</span>
+                    </div>
+                    <div class="flex-1 px-4 text-left">
+                        <div class="text-xl font-bold text-gray-900">15% Off Your First Order</div>
+                        <div class="text-sm text-gray-600">New Customer Offer</div>
+                    </div>
+                    <div class="px-6">
+                        <span class="inline-block px-6 py-2 bg-white text-gray-900 font-semibold text-sm rounded border border-gray-300">Shop Now</span>
+                    </div>
+                </div>
+            </a>
+            <img height="0" width="0" src="https://backcountry.tnu8.net/i/6910798/1107350/5311" style="position:absolute;visibility:hidden;" alt="">
+        </div>
+
+        <section class="calc-prose">
             <h2>How drafting actually works</h2>
             <p>The lead rider creates a low-pressure wake behind them, and a rider in that wake encounters less air resistance. The closer and more directly you sit in that wake, the larger the savings. Published CFD studies (Blocken et al., 2013; Íñiguez-de-la Torre, 2020) show these rough reductions in aerodynamic drag:</p>
             <ul>
@@ -240,7 +289,7 @@
 
             <h2>The physics behind the numbers</h2>
             <p>At steady speed on flat ground, your power output is:</p>
-            <p class="bg-gray-100 p-4 rounded-lg font-mono text-sm">P = (m·g·Crr · v + ½·CdA·ρ·v³) / drivetrain efficiency</p>
+            <p><code>P = (m·g·Crr · v + ½·CdA·ρ·v³) / drivetrain efficiency</code></p>
             <p>Drafting reduces the CdA term — your effective frontal drag drops by the position factor. Notice that the aero term scales with <strong>v³</strong>: at 40 km/h, doubling speed to 50 km/h doesn't just double aero drag, it multiplies it by 1.95. That's why drafting savings grow so fast as pace increases.</p>
 
             <h2>Race applications</h2>
@@ -255,41 +304,82 @@
             </ul>
         </section>
 
-        <section class="bg-gray-100 rounded-xl p-6 md:p-8 mb-10">
-            <h2 class="font-serif text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">Why is mid-pack more efficient than 2nd wheel?</summary>
-                    <p class="mt-2 text-gray-700">A rider near the middle of a 10+ pack has riders in front AND to the sides, which further disrupts the air they'd otherwise hit. Lead-out trains and peloton "washing machine" formations exploit this geometry.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">Is the rider in front slowed down?</summary>
-                    <p class="mt-2 text-gray-700">Slightly. CFD shows the leader's drag drops about 2-3% when a rider sits close behind (reduced rear eddy effects). This is why pro teams close up formation on descents and in crosswinds.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">Does drafting help in Zwift?</summary>
-                    <p class="mt-2 text-gray-700">Yes. Zwift applies draft reductions that approximately match real-world CFD. Saving 20-30% in a Zwift blob is realistic, which is why sitting in a group is so much easier than ITT-ing the same power.</p>
-                </details>
-                <details class="bg-white rounded-lg p-4">
-                    <summary class="font-semibold cursor-pointer">What about drafting cars and trucks?</summary>
-                    <p class="mt-2 text-gray-700">Passing cars do create momentary draft pulses, especially box trucks — but this is extremely dangerous and illegal to intentionally exploit. Keep a safe gap.</p>
-                </details>
+        <section class="calc-faq">
+            <div class="calc-faq__header">
+                <h2 class="calc-faq__h2">Frequently Asked Questions</h2>
+                <span class="calc-faq__tag">5 Questions</span>
+            </div>
+            <div class="calc-faq__list">
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">01</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">How accurate is this calculator?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Within 10-15% for typical road cycling scenarios. The calculator uses average CdA values and published drafting coefficients from CFD studies (Blocken, Defraeye 2013). Real-world savings vary with wind direction, rider size, bike setup, and exact spacing.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">02</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">Why is mid-pack more efficient than 2nd wheel?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">A rider near the middle of a 10+ pack has riders in front AND to the sides, which further disrupts the air they'd otherwise hit. Lead-out trains and peloton "washing machine" formations exploit this geometry.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">03</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">Is the rider in front slowed down?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Slightly. CFD shows the leader's drag drops about 2-3% when a rider sits close behind (reduced rear eddy effects). This is why pro teams close up formation on descents and in crosswinds.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">04</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">Does drafting help in Zwift?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Yes. Zwift applies draft reductions that approximately match real-world CFD. Saving 20-30% in a Zwift blob is realistic, which is why sitting in a group is so much easier than ITT-ing the same power.</p>
+                    </details>
+                </div>
+                <div class="calc-faq__item">
+                    <span class="calc-faq__num">05</span>
+                    <details class="calc-faq__details">
+                        <summary class="calc-faq__summary">What about drafting cars and trucks?
+                            <svg class="calc-faq__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </summary>
+                        <p class="calc-faq__answer">Passing cars do create momentary draft pulses, especially box trucks — but this is extremely dangerous and illegal to intentionally exploit. Keep a safe gap.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <a href="/ftp-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">FTP Calculator →</div>
-                <div class="text-sm text-gray-600">Know your sustainable power first</div>
-            </a>
-            <a href="/bike-climb-time-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">Climb Time Calculator →</div>
-                <div class="text-sm text-gray-600">Where drafting doesn't matter</div>
-            </a>
-            <a href="/power-to-weight-ratio-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
-                <div class="font-semibold text-primary">W/kg Calculator →</div>
-                <div class="text-sm text-gray-600">Compare your climbing strength</div>
-            </a>
+        <section class="calc-related">
+            <div class="calc-related__header">
+                <h2 class="calc-related__h2">Keep going</h2>
+                <span class="calc-related__tag">Related · Performance</span>
+            </div>
+            <div class="calc-related__grid">
+                <a href="/ftp-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Baseline Power</span>
+                    <h3 class="calc-related__card-title">FTP Calculator</h3>
+                    <p class="calc-related__card-dek">Know the sustainable power you'd hold solo — the number drafting lets you spend more sparingly.</p>
+                </a>
+                <a href="/bike-climb-time-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Climbing</span>
+                    <h3 class="calc-related__card-title">Climb Time Calculator</h3>
+                    <p class="calc-related__card-dek">Where drafting barely matters and weight and wattage rule. Predict climb time from gradient and power.</p>
+                </a>
+                <a href="/power-to-weight-ratio-calculator" class="calc-related__card">
+                    <span class="calc-related__card-kicker">Rider Benchmark</span>
+                    <h3 class="calc-related__card-title">W/kg Calculator</h3>
+                    <p class="calc-related__card-dek">Compare your climbing strength in the currency that matters. W/kg is what separates riders on the climbs.</p>
+                </a>
+            </div>
         </section>
     </main>
 
