@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451" crossorigin="anonymous"></script>
+    <title>Bike Chain Length Calculator - Correct Chain Sizing for 1x, 2x, 3x Drivetrains</title>
+    <link rel="canonical" href="https://runbikecalc.com/bike-chain-length-calculator">
+    <meta name="description" content="Free bike chain length calculator using the Park Tool formula. Get the correct number of chain links for road, gravel, and mountain bikes. Supports 1x, 2x, and 3x drivetrains.">
+
+    <meta property="og:title" content="Bike Chain Length Calculator - Get the Right Number of Links">
+    <meta property="og:description" content="Calculate the correct chain length for any drivetrain using the largest-cog, largest-ring method.">
+    <meta property="og:url" content="https://runbikecalc.com/bike-chain-length-calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RunBikeCalc">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/conversion-popup.css">
+    <link rel="stylesheet" href="/css/sticky-banner.css">
+    <link rel="stylesheet" href="/css/inline-cta.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://runbikecalc.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Cycling Tools", "item": "https://runbikecalc.com/cycling-tools" },
+        { "@type": "ListItem", "position": 3, "name": "Bike Chain Length Calculator", "item": "https://runbikecalc.com/bike-chain-length-calculator" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Bike Chain Length Calculator",
+      "url": "https://runbikecalc.com/bike-chain-length-calculator",
+      "description": "Calculate correct bike chain length using the Park Tool formula.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate bike chain length?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Park Tool's formula: Links = 2·(chainstay in inches) + (largest chainring teeth ÷ 4) + (largest cassette cog teeth ÷ 4) + 1, rounded up to the nearest even number. Most drivetrains need a chain with the correct even number of full links." }
+        },
+        {
+          "@type": "Question",
+          "name": "What chain length do I need for a 52/36 with 11-30 cassette?",
+          "acceptedAnswer": { "@type": "Answer", "text": "With a typical 16.5\" (420 mm) chainstay: 2·16.5 + 52/4 + 30/4 + 1 = 33 + 13 + 7.5 + 1 = 54.5, rounded up to 56 links. That's 28 inches of chain." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I size to the big-big or small-small combo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Size to the largest chainring and largest cog (big-big). That ensures the derailleur cage has enough chain length even in the worst-case combination. Then check small-small has enough tension — if the cage is collapsed, the chain is too long." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does chain length differ for 1x setups?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. For 1x drivetrains, use the same formula but drop the second chainring term: Links = 2·(chainstay in inches) + (ring teeth ÷ 4) + (largest cog teeth ÷ 4) + 1. Modern clutch derailleurs (like SRAM AXS) often need 2 extra links — always verify with the manufacturer's spec." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my chainstay length isn't listed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Measure it: from the center of the bottom bracket to the center of the rear dropout. Typical values are 405-425 mm (16.0-16.7 inches) for road, 420-435 mm for gravel, and 420-450 mm for mountain bikes." }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded">Skip to main content</a>
+
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')" aria-label="Open menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/2026-top-picks">2026 Top Picks</a>
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <main id="main" class="container mx-auto px-4 py-8 md:py-12">
+        <nav aria-label="Breadcrumb" class="mb-6">
+            <ol class="flex flex-wrap gap-2 text-sm text-gray-600">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="before:content-['/'] before:mx-2"><a href="/cycling-tools" class="hover:text-primary">Cycling Tools</a></li>
+                <li class="before:content-['/'] before:mx-2 text-gray-900 font-medium">Bike Chain Length Calculator</li>
+            </ol>
+        </nav>
+
+        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg mb-6">
+            <p class="text-lg font-semibold text-gray-800">
+                <strong>Quick Answer:</strong> Chain length in links = 2·(chainstay in inches) + (big chainring ÷ 4) + (big cog ÷ 4) + 1 — round up to the nearest even number.
+            </p>
+        </div>
+
+        <h1 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4">Bike Chain Length Calculator</h1>
+        <p class="text-lg text-gray-700 mb-8 max-w-3xl">Get the correct chain length for any road, gravel, or mountain bike. Uses the Park Tool formula with big-big sizing and 1x/2x/3x support.</p>
+
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-8 mb-8">
+            <h2 class="font-serif text-2xl font-bold mb-6">Drivetrain details</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-sm font-semibold mb-2" for="cs">Chainstay length</label>
+                    <div class="flex gap-2">
+                        <input type="number" id="cs" step="0.1" value="420" class="flex-1 border border-gray-300 rounded-lg px-3 py-2">
+                        <select id="csUnit" class="border border-gray-300 rounded-lg px-2 py-2">
+                            <option value="mm">mm</option>
+                            <option value="in">in</option>
+                        </select>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">BB center to rear axle. Road: 405-425 mm. Gravel: 420-435. MTB: 420-450.</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2" for="setup">Drivetrain type</label>
+                    <select id="setup" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option value="2x">2x (double chainring — road/gravel)</option>
+                        <option value="1x">1x (single chainring — gravel/MTB)</option>
+                        <option value="3x">3x (triple chainring — touring)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2" for="ring">Largest chainring (teeth)</label>
+                    <input type="number" id="ring" step="1" value="52" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2" for="cog">Largest cassette cog (teeth)</label>
+                    <input type="number" id="cog" step="1" value="30" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2" for="clutch">Derailleur type</label>
+                    <select id="clutch" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option value="0">Standard (road, no clutch)</option>
+                        <option value="2">Clutch derailleur (Shimano RX / SRAM GX Type 2)</option>
+                        <option value="4">SRAM AXS Eagle 1x (add 4 links)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="calcBtn" class="w-full md:w-auto bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition">Calculate Chain Length</button>
+
+            <div id="results" class="mt-8 hidden">
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="font-serif text-xl font-bold mb-4">Recommended Chain Length</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-sky-50 rounded-lg p-4">
+                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Links</div>
+                            <div id="outLinks" class="text-2xl font-bold text-gray-900 mt-1">—</div>
+                            <div class="text-xs text-gray-500">(half-inch pitches)</div>
+                        </div>
+                        <div class="bg-sky-50 rounded-lg p-4">
+                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Length</div>
+                            <div id="outInches" class="text-2xl font-bold text-gray-900 mt-1">—</div>
+                        </div>
+                        <div class="bg-sky-50 rounded-lg p-4">
+                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Raw Formula</div>
+                            <div id="outRaw" class="text-2xl font-bold text-gray-900 mt-1">—</div>
+                        </div>
+                        <div class="bg-sky-50 rounded-lg p-4">
+                            <div class="text-xs uppercase tracking-wide text-gray-600 font-semibold">Chainstay</div>
+                            <div id="outCs" class="text-2xl font-bold text-gray-900 mt-1">—</div>
+                        </div>
+                    </div>
+                    <p id="outContext" class="text-sm text-gray-600 mt-4"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="prose prose-lg max-w-none mb-10">
+            <h2>The Park Tool chain length formula</h2>
+            <p>The industry-standard method for sizing a bike chain is the Park Tool formula, which sizes to the worst-case "big-big" combination (largest chainring + largest cog):</p>
+            <p class="bg-gray-100 p-4 rounded-lg font-mono text-sm">Links = 2 × (chainstay in inches) + (largest ring ÷ 4) + (largest cog ÷ 4) + 1</p>
+            <p>Round up to the nearest even number — chains only connect at full links. For clutch derailleurs, add 2 links for tensioner clearance. SRAM 1x Eagle typically needs 4 extra links.</p>
+
+            <h2>Why big-big sizing matters</h2>
+            <p>The big-big combination puts the most chain tension on your derailleur cage. If the chain is too short, you can damage the derailleur or snap a chain when shifting into that gear. If the chain is too long, the derailleur cage collapses and can slap the chainstay in the small-small combo.</p>
+            <p>The rule: sized for big-big with correct tension, then verify small-small doesn't cause a slack, derailleur-sagging situation. A correctly sized chain should have the derailleur cage in a roughly vertical position when in the middle of the cassette on the big ring.</p>
+
+            <h2>Common drivetrain examples</h2>
+            <ul>
+                <li><strong>Road 52/36 with 11-30 cassette, 420 mm chainstay:</strong> 56 links</li>
+                <li><strong>Gravel 46/30 with 11-36 cassette, 425 mm chainstay:</strong> 56 links</li>
+                <li><strong>Gravel 1x 42T with 10-44 cassette, 430 mm chainstay:</strong> 54 links (+2 for clutch = 56)</li>
+                <li><strong>MTB 1x 32T with 10-52 Eagle, 437 mm chainstay:</strong> 54 links (+4 for AXS = 58)</li>
+                <li><strong>Touring 3x 48/36/26 with 11-34, 440 mm chainstay:</strong> 58 links</li>
+            </ul>
+
+            <h2>How to measure your chainstay</h2>
+            <p>Measure from the center of the bottom bracket axle to the center of the rear dropout (where the axle sits). Use calipers or a steel ruler. On most road and gravel bikes this lands between 400-435 mm. Mountain bikes range from 420 mm (XC) to 460+ mm (enduro). Manufacturers publish chainstay length on the geometry chart.</p>
+        </section>
+
+        <section class="bg-gray-100 rounded-xl p-6 md:p-8 mb-10">
+            <h2 class="font-serif text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">What if the calculator gives an odd number?</summary>
+                    <p class="mt-2 text-gray-700">Round up to the nearest even number. Standard half-pitch chains can only be connected at full inner/outer link pairs, so the final count is always even.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">Do I need to add links for a clutch derailleur?</summary>
+                    <p class="mt-2 text-gray-700">Usually yes. Clutch derailleurs (Shimano GRX RX, XTR, SRAM Force/GX Type 2) need +2 links. SRAM Eagle 1x mountain drivetrains can need +4. Always double-check the derailleur manual.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">Can I use this calculator for an eMTB?</summary>
+                    <p class="mt-2 text-gray-700">Yes. Use the motor's output sprocket as the chainring input, and measure the chainstay from the motor axle (not the BB — eMTBs offset the BB forward). Most eMTB chains are sized the same way as regular MTBs.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">What tools do I need to cut a chain?</summary>
+                    <p class="mt-2 text-gray-700">A chain breaker (Park Tool CT-3.3 or similar) and a chain-keeper stand. For modern 11-12 speed chains, use a quick-link (KMC or Wippermann) rather than re-pressing a pin.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">Is there a way to size chain without math?</summary>
+                    <p class="mt-2 text-gray-700">Yes — the wrap-around method: wrap the new chain through big ring and big cog (skipping the derailleur), add 2 links, then cut. This gives the same result as the formula for most drivetrains. Use the calculator when you're ordering chain online and need the number in advance.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <a href="/bike-gearing-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
+                <div class="font-semibold text-primary">Bike Gearing Calculator →</div>
+                <div class="text-sm text-gray-600">Compare gear ratios and gear inches</div>
+            </a>
+            <a href="/bike-frame-size-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
+                <div class="font-semibold text-primary">Bike Frame Size Calculator →</div>
+                <div class="text-sm text-gray-600">Pick the right frame size for your height</div>
+            </a>
+            <a href="/bike-climb-time-calculator" class="block bg-white border border-gray-200 rounded-lg p-4 hover:shadow transition">
+                <div class="font-semibold text-primary">Climb Time Calculator →</div>
+                <div class="text-sm text-gray-600">Predict how long a climb will take</div>
+            </a>
+        </section>
+    </main>
+
+    <script>
+    (function () {
+        "use strict";
+
+        function calc() {
+            var csRaw = parseFloat(document.getElementById("cs").value);
+            var csUnit = document.getElementById("csUnit").value;
+            var ring = parseFloat(document.getElementById("ring").value);
+            var cog = parseFloat(document.getElementById("cog").value);
+            var extra = parseFloat(document.getElementById("clutch").value) || 0;
+
+            if (!(csRaw > 0 && ring > 0 && cog > 0)) return;
+
+            var csInches = csUnit === "mm" ? csRaw / 25.4 : csRaw;
+            var raw = 2 * csInches + ring / 4 + cog / 4 + 1;
+            var rounded = Math.ceil(raw);
+            if (rounded % 2 !== 0) rounded += 1;
+            var total = rounded + extra;
+
+            var inches = total * 0.5;
+            var mm = inches * 25.4;
+
+            document.getElementById("outLinks").textContent = total;
+            document.getElementById("outInches").textContent = inches.toFixed(1) + '" (' + Math.round(mm) + " mm)";
+            document.getElementById("outRaw").textContent = raw.toFixed(2);
+            document.getElementById("outCs").textContent = csInches.toFixed(2) + '"';
+            var note = "Based on big-big sizing.";
+            if (extra > 0) note += " Includes +" + extra + " links for clutch/derailleur clearance.";
+            note += " Always verify on the bike by shifting through all gear combinations before final pinning.";
+            document.getElementById("outContext").textContent = note;
+            document.getElementById("results").classList.remove("hidden");
+
+            if (window.gtag) {
+                window.gtag("event", "chain_length_calc", { ring: ring, cog: cog, links: total });
+            }
+        }
+
+        document.getElementById("calcBtn").addEventListener("click", calc);
+        document.getElementById("setup").addEventListener("change", function () {
+            if (this.value === "1x") {
+                document.getElementById("ring").value = 42;
+                document.getElementById("cog").value = 44;
+            } else if (this.value === "3x") {
+                document.getElementById("ring").value = 48;
+                document.getElementById("cog").value = 34;
+            } else {
+                document.getElementById("ring").value = 52;
+                document.getElementById("cog").value = 30;
+            }
+            calc();
+        });
+        calc();
+    })();
+    </script>
+
+    <script src="/js/auto-enhance.js" defer></script>
+    <script>
+    window.POPUP_CONFIG = {
+      headline: "Wait — Special Offer!",
+      product: "Premium Training Plans",
+      description: "Export your custom training plans to PDF & calendar. Unlock advanced periodization, tapering & race-specific workouts.",
+      price: "$5",
+      ctaText: "Unlock Premium Plans — Just $5",
+      ctaUrl: "https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06",
+      secondaryText: "No thanks",
+      accentColor: "#2563eb",
+      excludePaths: ["/success"]
+    };
+    </script>
+    <script src="/js/conversion-popup.js"></script>
+    <script>window.BANNER_CONFIG={message:'Premium Training Plans',highlight:'Just $5',detail:'PDF exports, calendar sync & more',ctaText:'Upgrade',ctaUrl:'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06',bgColor:'#2563eb',textColor:'#ffffff',excludePaths:['/success']};</script>
+    <script src="/js/sticky-banner.js"></script>
+    <script src="/js/speculation-rules.js" defer></script>
+</body>
+</html>
