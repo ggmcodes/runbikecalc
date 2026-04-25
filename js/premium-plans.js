@@ -16,7 +16,7 @@
             currentPlan: 'runbikecalc_current_plan'
         },
         MAX_SAVED_PLANS: 5,
-        STRIPE_LINK: 'https://buy.stripe.com/3cI28s7Zsfab0np3a82cg06'
+        ENDURE_WEEKLY_MAGIC: 'https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b'
     };
 
     // ==================== State ====================
@@ -458,77 +458,161 @@
     // ==================== Export Functions ====================
 
     function initExportButtons() {
-        // Calendar export
+        // Calendar export — completely free, no signup required
         document.getElementById('export-calendar')?.addEventListener('click', () => {
-            if (!state.isPremium) {
-                redirectToStripe();
-                return;
-            }
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
                 return;
             }
             TrainingPlanExporter.exportICS(state.currentPlan, '06:00');
+            if (typeof gtag === 'function') {
+                gtag('event', 'training_plan_export', { format: 'ics', gated: false });
+            }
         });
 
-        // PDF export
+        // PDF export — gated behind free email signup
         document.getElementById('export-pdf')?.addEventListener('click', () => {
-            if (!state.isPremium) {
-                redirectToStripe();
-                return;
-            }
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
+                return;
+            }
+            if (!state.isPremium) {
+                openEmailGate('pdf', () => TrainingPlanExporter.exportPDF(state.currentPlan));
                 return;
             }
             TrainingPlanExporter.exportPDF(state.currentPlan);
         });
 
-        // Excel/CSV export
+        // Excel/CSV export — gated behind free email signup
         document.getElementById('export-excel')?.addEventListener('click', () => {
-            if (!state.isPremium) {
-                redirectToStripe();
-                return;
-            }
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
+                return;
+            }
+            if (!state.isPremium) {
+                openEmailGate('spreadsheet', () => TrainingPlanExporter.exportCSV(state.currentPlan));
                 return;
             }
             TrainingPlanExporter.exportCSV(state.currentPlan);
         });
     }
 
-    function redirectToStripe() {
-        // Track conversion attempt
-        if (typeof gtag === 'function') {
-            gtag('event', 'begin_checkout', {
-                'event_category': 'Premium',
-                'event_label': 'Premium Training Plans'
-            });
+    function openEmailGate(format, onUnlock) {
+        // Existing email-gate.js handles the modal — fall back to inline if not present
+        if (typeof window.openEmailGate === 'function' && window.openEmailGate !== openEmailGate) {
+            window.openEmailGate(format, onUnlock);
+            return;
         }
-        window.location.href = CONFIG.STRIPE_LINK;
+        var existing = document.querySelector('.eg-modal');
+        if (existing) existing.remove();
+
+        var overlay = document.createElement('div');
+        overlay.className = 'eg-modal';
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:1rem;';
+
+        var card = document.createElement('div');
+        card.style.cssText = 'background:#FAF8F5;color:#1A1A1A;max-width:440px;width:100%;padding:2rem 1.75rem;border-radius:6px;font-family:"Source Sans 3",sans-serif;text-align:center;position:relative;border:1px solid rgba(124,45,58,0.18);';
+
+        var close = document.createElement('button');
+        close.type = 'button';
+        close.textContent = '×';
+        close.style.cssText = 'position:absolute;top:0.65rem;right:0.85rem;background:none;border:none;font-size:1.6rem;line-height:1;color:#888;cursor:pointer;';
+        close.addEventListener('click', function(){ overlay.remove(); });
+
+        var eyebrow = document.createElement('div');
+        eyebrow.style.cssText = 'font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.5rem;';
+        eyebrow.textContent = 'Free Export';
+
+        var h = document.createElement('h3');
+        h.style.cssText = 'font-family:"Playfair Display",Georgia,serif;font-size:1.65rem;font-weight:700;margin:0 0 0.5rem;line-height:1.15;';
+        h.textContent = format === 'pdf' ? 'Get the PDF — free.' : 'Get the spreadsheet — free.';
+
+        var sub = document.createElement('p');
+        sub.style.cssText = 'font-size:0.95rem;line-height:1.55;color:#444;margin:0 0 1.25rem;';
+        sub.textContent = 'Drop your email and we\'ll unlock the ' + (format === 'pdf' ? 'PDF' : 'spreadsheet') + ' export. You\'ll also get Endure Weekly — one weekly email for runners, cyclists, triathletes, and Hyrox athletes. Unsubscribe anytime.';
+
+        var form = document.createElement('form');
+        form.style.cssText = 'display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;';
+        form.setAttribute('novalidate', '');
+
+        var input = document.createElement('input');
+        input.type = 'email';
+        input.name = 'email';
+        input.required = true;
+        input.autocomplete = 'email';
+        input.placeholder = 'your@email.com';
+        input.style.cssText = 'flex:1 1 220px;min-width:0;padding:0.75rem 1rem;font-size:0.95rem;background:#fff;color:#1A1A1A;border:1px solid rgba(26,26,26,0.18);border-radius:4px;outline:none;font-family:inherit;';
+
+        var submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.textContent = 'Unlock & Download';
+        submit.style.cssText = 'padding:0.75rem 1.25rem;font-size:0.85rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#1A1A1A;color:#fff;border:none;border-radius:4px;cursor:pointer;font-family:inherit;';
+
+        var trust = document.createElement('p');
+        trust.style.cssText = 'font-size:0.78rem;color:rgba(26,26,26,0.55);margin:1rem 0 0;font-style:italic;';
+        trust.textContent = 'No spam. One-click unsubscribe.';
+
+        form.appendChild(input);
+        form.appendChild(submit);
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var email = (input.value || '').trim();
+            if (!email || email.indexOf('@') === -1) {
+                input.focus();
+                input.style.borderColor = '#dc2626';
+                return;
+            }
+            // Open Beehiiv magic link in new tab to confirm subscription
+            var url = CONFIG.ENDURE_WEEKLY_MAGIC + '?email=' + encodeURIComponent(email);
+            window.open(url, '_blank', 'noopener');
+            // Track signup
+            if (typeof gtag === 'function') {
+                gtag('event', 'newsletter_signup', {
+                    placement: 'training_plan_' + format,
+                    newsletter: 'endure_weekly',
+                    email_domain: email.split('@')[1] || ''
+                });
+            }
+            // Unlock all gated features locally
+            unlockPremium();
+            overlay.remove();
+            // Trigger the export
+            if (typeof onUnlock === 'function') onUnlock();
+            showToast('Unlocked. ' + (format === 'pdf' ? 'PDF' : 'Spreadsheet') + ' downloading…');
+        });
+
+        card.appendChild(close);
+        card.appendChild(eyebrow);
+        card.appendChild(h);
+        card.appendChild(sub);
+        card.appendChild(form);
+        card.appendChild(trust);
+        overlay.appendChild(card);
+        document.body.appendChild(overlay);
+
+        setTimeout(function(){ input.focus(); }, 50);
     }
 
     // ==================== Save & Share ====================
 
     function initSaveShare() {
-        // Save plan button
+        // Save plan button — gated behind free email signup
         document.getElementById('save-plan')?.addEventListener('click', () => {
-            if (!state.isPremium) {
-                redirectToStripe();
-                return;
-            }
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
+                return;
+            }
+            if (!state.isPremium) {
+                openEmailGate('save', () => savePlan());
                 return;
             }
             savePlan();
         });
 
-        // Share plan button
+        // Share plan button — gated behind free email signup
         document.getElementById('share-plan')?.addEventListener('click', () => {
             if (!state.isPremium) {
-                redirectToStripe();
+                openEmailGate('share', null);
                 return;
             }
             if (!state.currentPlan) {
