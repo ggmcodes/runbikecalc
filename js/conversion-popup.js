@@ -108,16 +108,22 @@
     cta.href = config.ctaUrl || '#';
     cta.textContent = config.ctaText || 'Get Access Now';
 
-    var dismiss = document.createElement('button');
-    dismiss.className = 'cp-dismiss';
-    dismiss.type = 'button';
+    var dismiss;
+    if (config.secondaryUrl) {
+      dismiss = document.createElement('a');
+      dismiss.href = config.secondaryUrl;
+      dismiss.className = 'cp-dismiss';
+      dismiss.style.textDecoration = 'underline';
+    } else {
+      dismiss = document.createElement('button');
+      dismiss.className = 'cp-dismiss';
+      dismiss.type = 'button';
+    }
     dismiss.textContent = config.secondaryText || 'No thanks';
 
-    var secure = document.createElement('div');
-    secure.className = 'cp-secure';
-    secure.appendChild(createLockIcon());
-    var secureText = document.createTextNode(' Secure checkout powered by Stripe');
-    secure.appendChild(secureText);
+    var trust = document.createElement('div');
+    trust.className = 'cp-secure';
+    trust.textContent = config.trustText || 'No spam. Unsubscribe anytime.';
 
     content.appendChild(iconDiv);
     content.appendChild(headline);
@@ -125,7 +131,7 @@
     content.appendChild(desc);
     content.appendChild(cta);
     content.appendChild(dismiss);
-    content.appendChild(secure);
+    content.appendChild(trust);
 
     modal.appendChild(closeBtn);
     modal.appendChild(content);
