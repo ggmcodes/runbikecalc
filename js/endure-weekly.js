@@ -122,17 +122,11 @@
   function injectFooterBlock() {
     var footer = document.querySelector("footer");
     if (!footer) return;
-    if (footer.querySelector(".ew-footer")) return;
+    if (document.querySelector(".ew-footer")) return;
     var block = buildFooterBlock();
-    var bottom = footer.querySelector(".footer-bottom");
-    var sister = footer.querySelector(".footer-sister-sites");
-    if (sister) {
-      sister.parentNode.insertBefore(block, sister);
-    } else if (bottom) {
-      bottom.parentNode.insertBefore(block, bottom);
-    } else {
-      footer.appendChild(block);
-    }
+    // Inject the newsletter block IMMEDIATELY BEFORE the footer
+    // (sits above the dark footer, below page content)
+    footer.parentNode.insertBefore(block, footer);
   }
 
   // ---- Sticky bottom bar ----
