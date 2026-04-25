@@ -885,11 +885,11 @@ class TrainingPlanGenerator extends Calculator {
 
         const price = document.createElement('span');
         price.className = 'text-3xl font-bold text-gray-900';
-        price.textContent = '$5';
+        price.textContent = 'Free';
 
         const priceNote = document.createElement('span');
         priceNote.className = 'text-gray-500 ml-2';
-        priceNote.textContent = 'one-time';
+        priceNote.textContent = 'with email signup';
 
         priceContainer.appendChild(price);
         priceContainer.appendChild(priceNote);
@@ -898,10 +898,10 @@ class TrainingPlanGenerator extends Calculator {
         // CTA Button
         const ctaLink = document.createElement('a');
         ctaLink.href = '/premium-training-plans';
-        ctaLink.className = 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl';
+        ctaLink.className = 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-cream font-medium tracking-wide hover:bg-copper transition-colors';
 
         const ctaText = document.createElement('span');
-        ctaText.textContent = 'Unlock Premium Exports';
+        ctaText.textContent = 'Get Free Exports';
         ctaLink.appendChild(ctaText);
 
         const arrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

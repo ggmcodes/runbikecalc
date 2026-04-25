@@ -65,13 +65,13 @@ class EmailGateHandler {
         // Create title
         const title = document.createElement('h3');
         title.className = 'text-2xl font-bold text-gray-900 mb-2';
-        title.textContent = 'Unlock Premium Exports';
+        title.textContent = 'Get free PDF & spreadsheet exports';
         iconContainer.appendChild(title);
 
         // Create description
         const description = document.createElement('p');
         description.className = 'text-gray-600';
-        description.textContent = 'Enter your email to unlock PDF and Excel exports. No spam, ever.';
+        description.textContent = 'Enter your email to unlock PDF and spreadsheet exports — completely free. You\'ll also get Endure Weekly, our weekly newsletter for runners, cyclists, triathletes, and Hyrox athletes. Unsubscribe anytime.';
         iconContainer.appendChild(description);
 
         // Create form
@@ -93,8 +93,8 @@ class EmailGateHandler {
         // Create submit button
         const submitBtn = document.createElement('button');
         submitBtn.type = 'submit';
-        submitBtn.className = 'w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors';
-        submitBtn.textContent = 'Unlock Premium Exports';
+        submitBtn.className = 'w-full bg-charcoal hover:bg-copper text-cream font-medium py-3 px-6 transition-colors';
+        submitBtn.textContent = 'Unlock Free Exports';
 
         form.appendChild(inputContainer);
         form.appendChild(submitBtn);
@@ -257,7 +257,7 @@ class EmailGateHandler {
         svg.appendChild(path);
 
         const span = document.createElement('span');
-        span.textContent = 'Premium exports unlocked!';
+        span.textContent = 'Exports unlocked! Welcome to Endure Weekly.';
 
         toast.appendChild(svg);
         toast.appendChild(span);
