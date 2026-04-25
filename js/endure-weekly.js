@@ -90,11 +90,11 @@
 
     var tag = document.createElement("p");
     tag.className = "ew-tagline";
-    tag.textContent = "Train. Race. Endure.";
+    tag.textContent = "Get the Ultimate Zone 2 Training Guide — free.";
 
     var sub = document.createElement("p");
     sub.className = "ew-sub";
-    sub.textContent = "One weekly email for runners, cyclists, triathletes, and Hyrox athletes. Gear drops, training intel, race calendar. Free.";
+    sub.textContent = "Subscribe to Endure Weekly and we'll send you our 15-minute Zone 2 guide — heart-rate ranges, sample workouts for run / bike / Hyrox, and the protocol elites use to build aerobic engines. Plus one weekly email for runners, cyclists, triathletes, and Hyrox athletes.";
 
     var form = document.createElement("form");
     form.setAttribute("novalidate", "");
@@ -150,9 +150,9 @@
     var copy = document.createElement("div");
     copy.className = "ew-copy";
     var strong = document.createElement("strong");
-    strong.textContent = "Endure Weekly";
+    strong.textContent = "Free Zone 2 Training Guide";
     var span = document.createElement("span");
-    span.textContent = "Weekly intel for runners, cyclists, triathletes, Hyrox athletes. Free.";
+    span.textContent = "Plus weekly intel for runners, cyclists, triathletes, Hyrox athletes.";
     copy.appendChild(strong);
     copy.appendChild(span);
 
@@ -202,11 +202,11 @@
 
     var h = document.createElement("h3");
     h.className = "ew-headline";
-    h.textContent = opts.headline || "Get the weekly endurance brief.";
+    h.textContent = opts.headline || "Get the Free Zone 2 Training Guide.";
 
     var sub = document.createElement("p");
     sub.className = "ew-sub";
-    sub.textContent = opts.sub || "One email per week — gear, training, races. Free for runners, cyclists, triathletes, and Hyrox athletes.";
+    sub.textContent = opts.sub || "Subscribe to Endure Weekly — we'll send our 15-min Zone 2 guide instantly. Then one weekly email for runners, cyclists, triathletes, and Hyrox athletes.";
 
     var form = document.createElement("form");
     form.setAttribute("novalidate", "");
