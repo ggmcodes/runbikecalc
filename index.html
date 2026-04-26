@@ -293,13 +293,48 @@
                     </a>
                 </div>
 
+                <!-- Newsletter capture (Z2 lead magnet) -->
+                <div class="mt-10 animate-fade-up opacity-0" style="animation-delay: 0.5s; max-width: 520px;">
+                    <div class="bg-white/85 backdrop-blur-sm border border-charcoal/10 p-5 sm:p-6">
+                        <p class="text-xs font-semibold tracking-[0.22em] uppercase text-copper mb-2">Free guide</p>
+                        <p class="font-display text-xl sm:text-2xl text-charcoal leading-tight mb-4">Get the <em class="text-copper">Ultimate Zone 2 Training Guide</em> — free.</p>
+                        <form id="hero-ew-form" class="flex flex-col sm:flex-row gap-2" novalidate>
+                            <input type="email" id="hero-ew-email" name="email" required autocomplete="email" placeholder="your@email.com" class="flex-1 px-4 py-3 bg-white border border-charcoal/20 text-charcoal text-sm focus:outline-none focus:border-copper focus:ring-2 focus:ring-copper/20 transition">
+                            <button type="submit" class="bg-charcoal hover:bg-copper text-cream font-medium tracking-wide uppercase text-xs px-6 py-3 transition-colors whitespace-nowrap">Send the Guide</button>
+                        </form>
+                        <p class="text-charcoal/50 text-xs mt-3 italic">Plus weekly intel for runners, cyclists, triathletes, Hyrox athletes. Unsubscribe in one click.</p>
+                    </div>
+                </div>
+
                 <!-- Trust badge -->
-                <div class="mt-8 animate-fade-up opacity-0" style="animation-delay: 0.5s">
+                <div class="mt-6 animate-fade-up opacity-0" style="animation-delay: 0.6s">
                     <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-full border border-charcoal/10">
                         <span class="text-copper font-display text-lg font-semibold">50,000+</span>
                         <span class="text-charcoal/60 text-sm font-medium">athletes use our tools every month</span>
                     </div>
                 </div>
+
+                <script>
+                  document.getElementById('hero-ew-form')?.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var input = document.getElementById('hero-ew-email');
+                    var email = (input.value || '').trim();
+                    if (!email || email.indexOf('@') === -1) { input.focus(); input.style.borderColor = '#dc2626'; return; }
+                    var url = 'https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b?email=' + encodeURIComponent(email);
+                    if (window.gtag) {
+                      try { window.gtag('event', 'newsletter_signup', { placement: 'hero', newsletter: 'endure_weekly', email_domain: email.split('@')[1] || '' }); } catch (e) {}
+                    }
+                    window.open(url, '_blank', 'noopener');
+                    var btn = e.target.querySelector('button[type="submit"]');
+                    if (btn) {
+                      var original = btn.textContent;
+                      btn.textContent = 'Check Your Email';
+                      btn.disabled = true;
+                      setTimeout(function() { btn.textContent = original; btn.disabled = false; }, 3000);
+                    }
+                    input.value = '';
+                  });
+                </script>
             </div>
         </div>
 

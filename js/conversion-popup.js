@@ -198,6 +198,13 @@
         showPopup();
       }
     });
+
+    // Time-based fallback: show after 20s on page if user hasn't already seen it
+    setTimeout(function() {
+      if (!hasBeenShown()) {
+        showPopup();
+      }
+    }, 20000);
   }
 
   if (document.readyState === 'loading') {
