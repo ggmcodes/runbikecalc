@@ -9,7 +9,7 @@ import re
 import json
 
 SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATE_MODIFIED = "2026-04-24"
+DATE_MODIFIED = "2026-04-26"
 PUBLISHER = {
     "@type": "Organization",
     "name": "RunBikeCalc",
