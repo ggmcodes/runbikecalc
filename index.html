@@ -270,72 +270,67 @@
 
         <!-- Content -->
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
-            <div class="max-w-2xl">
-                <p class="text-copper font-medium tracking-widest uppercase text-sm mb-6 animate-fade-up opacity-0" style="animation-delay: 0.1s">
-                    For the dedicated athlete
-                </p>
-                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-medium leading-[0.9] mb-8 animate-fade-up opacity-0" style="animation-delay: 0.2s">
-                    Train with<br>
-                    <span class="italic text-copper">purpose</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-charcoal/70 leading-relaxed mb-10 max-w-lg animate-fade-up opacity-0 font-light" style="animation-delay: 0.3s">
-                    Free personalized training plans and performance calculators built for runners, cyclists, and triathletes.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style="animation-delay: 0.4s">
-                    <a href="/premium-training-plans" class="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-all group">
-                        Build Your Plan
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                    <a href="#calculators" class="inline-flex items-center justify-center border-2 border-charcoal text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal hover:text-cream transition-all">
-                        Explore Tools
-                    </a>
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left: headline + CTAs -->
+                <div>
+                    <p class="text-copper font-medium tracking-widest uppercase text-sm mb-6 animate-fade-up opacity-0" style="animation-delay: 0.1s">
+                        For the dedicated athlete
+                    </p>
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-medium leading-[0.9] mb-8 animate-fade-up opacity-0" style="animation-delay: 0.2s">
+                        Train with<br>
+                        <span class="italic text-copper">purpose</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-charcoal/70 leading-relaxed mb-10 max-w-lg animate-fade-up opacity-0 font-light" style="animation-delay: 0.3s">
+                        Free personalized training plans and performance calculators built for runners, cyclists, and triathletes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style="animation-delay: 0.4s">
+                        <a href="/premium-training-plans" class="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-all group">
+                            Build Your Plan
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#calculators" class="inline-flex items-center justify-center border-2 border-charcoal text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-charcoal hover:text-cream transition-all">
+                            Explore Tools
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Newsletter capture (Z2 lead magnet) -->
-                <div class="mt-10 animate-fade-up opacity-0" style="animation-delay: 0.5s; max-width: 520px;">
-                    <div class="bg-white/85 backdrop-blur-sm border border-charcoal/10 p-5 sm:p-6">
-                        <p class="text-xs font-semibold tracking-[0.22em] uppercase text-copper mb-2">Free guide</p>
-                        <p class="font-display text-xl sm:text-2xl text-charcoal leading-tight mb-4">Get the <em class="text-copper">Ultimate Zone 2 Training Guide</em> — free.</p>
-                        <form id="hero-ew-form" class="flex flex-col sm:flex-row gap-2" novalidate>
-                            <input type="email" id="hero-ew-email" name="email" required autocomplete="email" placeholder="your@email.com" class="flex-1 px-4 py-3 bg-white border border-charcoal/20 text-charcoal text-sm focus:outline-none focus:border-copper focus:ring-2 focus:ring-copper/20 transition">
-                            <button type="submit" class="bg-charcoal hover:bg-copper text-cream font-medium tracking-wide uppercase text-xs px-6 py-3 transition-colors whitespace-nowrap">Send the Guide</button>
+                <!-- Right: newsletter capture (Z2 lead magnet) -->
+                <div class="animate-fade-up opacity-0" style="animation-delay: 0.5s">
+                    <div class="bg-white/90 backdrop-blur-sm border border-charcoal/10 p-6 sm:p-8 lg:p-10 shadow-xl">
+                        <p class="text-xs font-semibold tracking-[0.22em] uppercase text-copper mb-3">Free guide</p>
+                        <p class="font-display text-2xl sm:text-3xl text-charcoal leading-tight mb-5">Get the <em class="text-copper">Ultimate Zone 2 Training Guide</em> — free.</p>
+                        <p class="text-charcoal/65 text-base mb-6 leading-relaxed">The complete protocol — heart-rate ranges, sample workouts for run, bike, and Hyrox, and the discipline elites use. Delivered to your inbox.</p>
+                        <form id="hero-ew-form" class="flex flex-col gap-3" novalidate>
+                            <input type="email" id="hero-ew-email" name="email" required autocomplete="email" placeholder="your@email.com" class="w-full px-4 py-3 bg-white border border-charcoal/20 text-charcoal text-base focus:outline-none focus:border-copper focus:ring-2 focus:ring-copper/20 transition">
+                            <button type="submit" class="w-full bg-charcoal hover:bg-copper text-cream font-medium tracking-wide uppercase text-sm px-6 py-3.5 transition-colors">Send the Guide</button>
                         </form>
-                        <p class="text-charcoal/50 text-xs mt-3 italic">Plus weekly intel for runners, cyclists, triathletes, Hyrox athletes. Unsubscribe in one click.</p>
+                        <p class="text-charcoal/50 text-xs mt-4 italic">Plus weekly intel for runners, cyclists, triathletes, Hyrox athletes. Unsubscribe in one click.</p>
                     </div>
                 </div>
-
-                <!-- Trust badge -->
-                <div class="mt-6 animate-fade-up opacity-0" style="animation-delay: 0.6s">
-                    <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-full border border-charcoal/10">
-                        <span class="text-copper font-display text-lg font-semibold">50,000+</span>
-                        <span class="text-charcoal/60 text-sm font-medium">athletes use our tools every month</span>
-                    </div>
-                </div>
-
-                <script>
-                  document.getElementById('hero-ew-form')?.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    var input = document.getElementById('hero-ew-email');
-                    var email = (input.value || '').trim();
-                    if (!email || email.indexOf('@') === -1) { input.focus(); input.style.borderColor = '#dc2626'; return; }
-                    var url = 'https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b?email=' + encodeURIComponent(email);
-                    if (window.gtag) {
-                      try { window.gtag('event', 'newsletter_signup', { placement: 'hero', newsletter: 'endure_weekly', email_domain: email.split('@')[1] || '' }); } catch (e) {}
-                    }
-                    window.open(url, '_blank', 'noopener');
-                    var btn = e.target.querySelector('button[type="submit"]');
-                    if (btn) {
-                      var original = btn.textContent;
-                      btn.textContent = 'Check Your Email';
-                      btn.disabled = true;
-                      setTimeout(function() { btn.textContent = original; btn.disabled = false; }, 3000);
-                    }
-                    input.value = '';
-                  });
-                </script>
             </div>
+            <script>
+              document.getElementById('hero-ew-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var input = document.getElementById('hero-ew-email');
+                var email = (input.value || '').trim();
+                if (!email || email.indexOf('@') === -1) { input.focus(); input.style.borderColor = '#dc2626'; return; }
+                var url = 'https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b?email=' + encodeURIComponent(email);
+                if (window.gtag) {
+                  try { window.gtag('event', 'newsletter_signup', { placement: 'hero', newsletter: 'endure_weekly', email_domain: email.split('@')[1] || '' }); } catch (e) {}
+                }
+                window.open(url, '_blank', 'noopener');
+                var btn = e.target.querySelector('button[type="submit"]');
+                if (btn) {
+                  var original = btn.textContent;
+                  btn.textContent = 'Check Your Email';
+                  btn.disabled = true;
+                  setTimeout(function() { btn.textContent = original; btn.disabled = false; }, 3000);
+                }
+                input.value = '';
+              });
+            </script>
         </div>
 
         <!-- Scroll indicator -->
@@ -360,37 +355,41 @@
 
             <!-- Plans Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
+                <a href="/running-training-plan-generator" class="card-lift bg-cream-dark p-8 relative overflow-hidden block group">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🏃</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Running</h3>
-                        <p class="text-charcoal/60 text-sm">5K to 100-Mile Ultra</p>
+                        <p class="text-charcoal/60 text-sm mb-4">5K to 100-Mile Ultra</p>
+                        <span class="inline-flex items-center text-copper text-sm font-medium tracking-wide uppercase group-hover:gap-3 gap-2 transition-all">Build my plan <span aria-hidden="true">→</span></span>
                     </div>
-                </div>
+                </a>
 
-                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
+                <a href="/cycling-training-plan-generator" class="card-lift bg-cream-dark p-8 relative overflow-hidden block group">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🚴</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Cycling</h3>
-                        <p class="text-charcoal/60 text-sm">Century & Gran Fondo</p>
+                        <p class="text-charcoal/60 text-sm mb-4">Century &amp; Gran Fondo</p>
+                        <span class="inline-flex items-center text-copper text-sm font-medium tracking-wide uppercase group-hover:gap-3 gap-2 transition-all">Build my plan <span aria-hidden="true">→</span></span>
                     </div>
-                </div>
+                </a>
 
-                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
+                <a href="/triathlon-training-plan-generator" class="card-lift bg-cream-dark p-8 relative overflow-hidden block group">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">🏊</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Triathlon</h3>
-                        <p class="text-charcoal/60 text-sm">Sprint to Ironman</p>
+                        <p class="text-charcoal/60 text-sm mb-4">Sprint to Ironman</p>
+                        <span class="inline-flex items-center text-copper text-sm font-medium tracking-wide uppercase group-hover:gap-3 gap-2 transition-all">Build my plan <span aria-hidden="true">→</span></span>
                     </div>
-                </div>
+                </a>
 
-                <div class="card-lift bg-cream-dark p-8 relative overflow-hidden">
+                <a href="/hyrox-training-plan-generator" class="card-lift bg-cream-dark p-8 relative overflow-hidden block group">
                     <div class="relative z-10">
                         <span class="text-5xl mb-6 block">💪</span>
                         <h3 class="font-display text-2xl font-medium mb-2">Hyrox</h3>
-                        <p class="text-charcoal/60 text-sm">Open, Pro & Doubles</p>
+                        <p class="text-charcoal/60 text-sm mb-4">Open, Pro &amp; Doubles</p>
+                        <span class="inline-flex items-center text-copper text-sm font-medium tracking-wide uppercase group-hover:gap-3 gap-2 transition-all">Build my plan <span aria-hidden="true">→</span></span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Single CTA for all plans -->
