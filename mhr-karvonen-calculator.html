@@ -135,37 +135,62 @@
 <link rel="stylesheet" href="/css/conversion-popup.css">
 <link rel="stylesheet" href="/css/inline-cta.css">
 <link rel="stylesheet" href="/css/endure-weekly.css">
+<!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {theme:{extend:{colors:{'cream':'#FAF8F5','cream-dark':'#F0EDE8','charcoal':'#1A1A1A','copper':'#C67B4E','copper-light':'#D4916A','copper-dark':'#A66840','sage':'#7A9E7E','warm-gray':'#6B6B6B'},fontFamily:{'display':['Playfair Display','serif'],'body':['Source Sans 3','sans-serif']}}}}
+    </script>
+    <style>
+      body { font-family: 'Source Sans 3', sans-serif; background-color: #FAF8F5; color: #1A1A1A; padding-top: 5rem; }
+      .font-display { font-family: 'Playfair Display', serif; }
+      .eyebrow { display: inline-block; font-size: 0.72rem; letter-spacing: 0.22em; font-weight: 600; color: #C67B4E; text-transform: uppercase; }
+      .section-divider { width: 60px; height: 2px; background: #C67B4E; }
+      .link-underline { position: relative; }
+      .link-underline::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #C67B4E; transition: width 0.3s ease; }
+      .link-underline:hover::after { width: 100%; }
+      .ed-card { background: #fff; border: 1px solid rgba(26,26,26,0.08); padding: 1.5rem; transition: border-color 0.15s, transform 0.15s; }
+      .ed-card:hover { border-color: #C67B4E; transform: translateY(-2px); }
+      .ed-btn, .calc-button { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: #1A1A1A; color: #FAF8F5; border: none; border-radius: 0; cursor: pointer; transition: background-color 0.15s; }
+      .ed-btn:hover:not(:disabled), .calc-button:hover:not(:disabled) { background: #C67B4E; color: #FAF8F5; }
+      .bg-clip-text.text-transparent[class*="from-blue"], .bg-clip-text.text-transparent[class*="from-purple"], .bg-clip-text.text-transparent[class*="from-emerald"], .bg-clip-text.text-transparent[class*="from-cyan"], .bg-clip-text.text-transparent[class*="from-orange"], .bg-clip-text.text-transparent[class*="from-pink"] { background: none !important; -webkit-text-fill-color: #1A1A1A !important; color: #1A1A1A !important; font-family: 'Playfair Display', serif !important; }
+      [class*="bg-gradient-to-r"][class*="from-blue"], [class*="bg-gradient-to-r"][class*="from-purple"], [class*="bg-gradient-to-r"][class*="from-emerald"], [class*="bg-gradient-to-r"][class*="from-cyan"], [class*="bg-gradient-to-br"][class*="from-blue"], [class*="bg-gradient-to-br"][class*="from-purple"], [class*="bg-gradient-to-br"][class*="from-emerald"], [class*="bg-gradient-to-br"][class*="from-cyan"], [class*="bg-gradient-to-br"][class*="from-pink"] { background: #F0EDE8 !important; color: #1A1A1A !important; }
+      .bg-blue-50, .bg-sky-50, .bg-purple-50, .bg-emerald-50, .bg-green-50, .bg-amber-50, .bg-yellow-50, .bg-orange-50, .bg-cyan-50, .bg-teal-50, .bg-indigo-50, .bg-pink-50, .bg-rose-50 { background-color: #F0EDE8 !important; }
+      .bg-blue-100, .bg-sky-100, .bg-purple-100, .bg-emerald-100, .bg-green-100, .bg-amber-100, .bg-yellow-100, .bg-orange-100, .bg-cyan-100, .bg-teal-100, .bg-indigo-100, .bg-pink-100, .bg-rose-100 { background-color: rgba(198,123,78,0.12) !important; color: #1A1A1A !important; }
+      .site-nav { display: none !important; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-cream text-charcoal">
     <!-- Site Navigation -->
-    <nav class="site-nav">
-        <div class="nav-container">
-            <a href="/" class="site-logo">RunBikeCalc</a>
-            <div class="nav-links">
-                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
-                <a href="/running-tools" class="nav-link">Running</a>
-                <a href="/cycling-tools" class="nav-link">Cycling</a>
-                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
-                <a href="/2026-top-picks" class="nav-link nav-link-red">2026 Picks</a>
-                <a href="/blog" class="nav-link">Journal</a>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="/premium-training-plans" class="nav-cta">Start Training</a>
-                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-charcoal/5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="font-display text-2xl font-semibold tracking-tight text-charcoal">RunBikeCalc</a>
+          <div class="hidden lg:flex items-center gap-10">
+            <a href="/premium-training-plans" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal flex items-center gap-2">Plans <span class="bg-copper text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">NEW</span></a>
+            <a href="/running-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Running</a>
+            <a href="/cycling-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Cycling</a>
+            <a href="/heart-rate-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Heart Rate</a>
+            <a href="/2026-top-picks" class="link-underline text-sm font-semibold tracking-wide uppercase text-red-600 hover:text-red-700">2026 Picks</a>
+            <a href="/blog" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Journal</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="/premium-training-plans" class="hidden md:inline-flex bg-charcoal text-cream px-6 py-3 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-colors">Start Training</a>
+            <button id="mobile-menu-btn" class="lg:hidden p-2" onclick="document.getElementById('mobile-menu-x').classList.toggle('hidden')">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
         </div>
-        <div id="mobile-nav" class="mobile-menu">
-            <a href="/premium-training-plans">Training Plans</a>
-            <a href="/running-tools">Running Tools</a>
-            <a href="/cycling-tools">Cycling Tools</a>
-            <a href="/heart-rate-tools">Heart Rate</a>
-            <a href="/2026-top-picks">2026 Top Picks</a>
-            <a href="/blog">Journal</a>
+      </div>
+      <div id="mobile-menu-x" class="hidden lg:hidden bg-cream border-t border-charcoal/5">
+        <div class="px-6 py-6 space-y-4">
+          <a href="/premium-training-plans" class="block text-lg font-medium text-copper">Training Plans</a>
+          <a href="/running-tools" class="block text-lg text-charcoal/70">Running Tools</a>
+          <a href="/cycling-tools" class="block text-lg text-charcoal/70">Cycling Tools</a>
+          <a href="/heart-rate-tools" class="block text-lg text-charcoal/70">Heart Rate</a>
+          <a href="/2026-top-picks" class="block text-lg font-semibold text-red-600">2026 Top Picks</a>
+          <a href="/blog" class="block text-lg text-charcoal/70">Journal</a>
         </div>
+      </div>
     </nav>
 
     <!-- Main content -->
