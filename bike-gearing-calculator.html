@@ -480,8 +480,9 @@
                         <canvas id="speed-chart" width="400" height="200"></canvas>
                     </div>
 
-                    <!-- Product Recommendations (shown after calculation) -->
-                    <div id="recommendations" class="product-recommendations mt-6 hidden"></div>
+                    <!-- Product Recommendations -->
+                    <div id="recommendations" class="product-recommendations mt-6"></div>
+                    <script>document.addEventListener('DOMContentLoaded',function(){if(typeof renderProductRecommendations==='function'){renderProductRecommendations('recommendations','bike-gearing');}});</script>
                 </div>
             </div>
 
