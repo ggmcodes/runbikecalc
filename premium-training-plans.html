@@ -333,6 +333,10 @@
         .premium-unlocked .export-lock-overlay {
             display: none;
         }
+        /* Export button grid only appears once unlocked; overlay carries the locked-state CTA */
+        .export-buttons { display: none; }
+        .premium-unlocked .export-buttons { display: block; }
+        .export-lock-overlay { margin-top: 0.5rem; }
 
         /* Export buttons */
         .export-btn {
@@ -414,7 +418,8 @@
                     <a href="/running-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Running</a>
                     <a href="/cycling-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Cycling</a>
                     <a href="/heart-rate-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Heart Rate</a>
-                    <a href="/2026-top-picks" class="link-underline text-sm font-semibold tracking-wide uppercase text-red-600 hover:text-red-700">2026 Picks</a>
+            <a href="/recovery" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Recovery</a>
+                    
                     <a href="/blog" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Journal</a>
                 </div>
 
@@ -439,7 +444,8 @@
                 <a href="/running-tools" class="text-sm font-medium text-charcoal/70">Running Tools</a>
                 <a href="/cycling-tools" class="text-sm font-medium text-charcoal/70">Cycling Tools</a>
                 <a href="/heart-rate-tools" class="text-sm font-medium text-charcoal/70">Heart Rate</a>
-                <a href="/2026-top-picks" class="text-sm font-medium text-red-600">2026 Top Picks</a>
+                <a href="/recovery" class="text-sm font-medium text-charcoal/70">Recovery</a>
+                
                 <a href="/blog" class="text-sm font-medium text-charcoal/70">Journal</a>
                 <a href="#export-section" class="unlock-cta bg-copper text-white px-4 py-2 text-sm font-medium text-center">
                     Free Exports
@@ -869,7 +875,7 @@
                         <!-- Export Actions Section -->
                         <div class="relative">
                             <!-- Free + email-gated overlay (calendar always free; PDF/Excel email-gated) -->
-                            <div class="export-lock-overlay absolute inset-0 bg-cream/95 backdrop-blur-sm z-20 flex flex-col items-center justify-center rounded-sm" style="padding:1.5rem;">
+                            <div class="export-lock-overlay bg-cream-dark border border-charcoal/5 flex flex-col items-center justify-center rounded-sm" style="padding:2rem 1.5rem;">
                                 <div class="text-center" style="max-width:440px;">
                                     <div style="font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.75rem;">All Exports — Free</div>
                                     <h3 class="font-display text-2xl text-charcoal mb-2">Export your plan</h3>
@@ -900,8 +906,8 @@
                               });
                             </script>
 
-                            <!-- Export Buttons (visible behind overlay, fully visible when unlocked) -->
-                            <div class="locked-feature">
+                            <!-- Export Buttons (shown only when unlocked) -->
+                            <div class="locked-feature export-buttons">
                                 <div class="grid sm:grid-cols-3 gap-3 mb-4">
                                     <button id="export-calendar" class="export-btn flex items-center justify-center gap-2 px-4 py-3 bg-copper text-white font-medium hover:bg-copper-dark transition-colors">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

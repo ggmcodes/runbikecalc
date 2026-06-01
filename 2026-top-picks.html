@@ -107,6 +107,23 @@
       .bg-blue-50, .bg-sky-50, .bg-purple-50, .bg-emerald-50, .bg-green-50, .bg-amber-50, .bg-yellow-50, .bg-orange-50, .bg-cyan-50, .bg-teal-50, .bg-indigo-50, .bg-pink-50, .bg-rose-50 { background-color: #F0EDE8 !important; }
       .bg-blue-100, .bg-sky-100, .bg-purple-100, .bg-emerald-100, .bg-green-100, .bg-amber-100, .bg-yellow-100, .bg-orange-100, .bg-cyan-100, .bg-teal-100, .bg-indigo-100, .bg-pink-100, .bg-rose-100 { background-color: rgba(198,123,78,0.12) !important; color: #1A1A1A !important; }
       .site-nav { display: none !important; }
+      /* --- 2026 Picks product grid --- */
+      .pick-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+      @media (min-width: 768px) { .pick-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      @media (min-width: 1024px) { .pick-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; } }
+      .pick-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(26,26,26,0.08); border-radius: 6px; overflow: hidden; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+      .pick-card:hover { border-color: #C67B4E; transform: translateY(-3px); box-shadow: 0 14px 30px -14px rgba(26,26,26,0.22); }
+      .pick-card__main { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 1.25rem 1.1rem; flex: 1 1 auto; }
+      .pick-card__imgwrap { width: 100%; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 38%, #ffffff 0%, #F2EEE8 100%); border-radius: 4px; margin-bottom: 1.1rem; padding: 0.85rem; }
+      .pick-card__img { max-width: 82%; max-height: 82%; width: auto; height: auto; object-fit: contain; transition: transform .35s ease; }
+      .pick-card:hover .pick-card__img { transform: scale(1.06); }
+      .pick-card__tag { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 700; text-transform: uppercase; color: #A66840; margin-bottom: 0.55rem; }
+      .pick-card__name { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 0.95rem; line-height: 1.3; color: #1A1A1A; margin-bottom: 0.5rem; }
+      .pick-card__price { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-top: auto; }
+      .pick-card__read { display: flex; align-items: center; justify-content: center; gap: 0.35rem; border-top: 1px solid rgba(26,26,26,0.08); padding: 0.85rem 1rem; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.01em; color: #6B6B6B; text-align: center; transition: color .15s ease, background-color .15s ease; }
+      .pick-card__read:hover { color: #C67B4E; background: #FAF8F5; }
+      .pick-card__read .arr { transition: transform .2s ease; }
+      .pick-card__read:hover .arr { transform: translateX(3px); }
     </style>
 </head>
 <body class="bg-cream text-charcoal">
@@ -119,11 +136,12 @@
             <a href="/running-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Running</a>
             <a href="/cycling-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Cycling</a>
             <a href="/heart-rate-tools" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Heart Rate</a>
-            <a href="/2026-top-picks" class="link-underline text-sm font-semibold tracking-wide uppercase text-red-600 hover:text-red-700">2026 Picks</a>
+            <a href="/recovery" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Recovery</a>
+            
             <a href="/blog" class="link-underline text-sm font-medium tracking-wide uppercase text-charcoal/70 hover:text-charcoal">Journal</a>
           </div>
           <div class="flex items-center gap-4">
-            <a href="/premium-training-plans" class="hidden md:inline-flex bg-charcoal text-cream px-6 py-3 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-colors">Start Training</a>
+            <a href="/2026-top-picks" class="hidden md:inline-flex bg-charcoal text-cream px-6 py-3 text-sm font-medium tracking-wide hover:bg-charcoal/90 transition-colors">2026 Picks</a>
             <button id="mobile-menu-btn" class="lg:hidden p-2" onclick="document.getElementById('mobile-menu-x').classList.toggle('hidden')">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
@@ -136,7 +154,8 @@
           <a href="/running-tools" class="block text-lg text-charcoal/70">Running Tools</a>
           <a href="/cycling-tools" class="block text-lg text-charcoal/70">Cycling Tools</a>
           <a href="/heart-rate-tools" class="block text-lg text-charcoal/70">Heart Rate</a>
-          <a href="/2026-top-picks" class="block text-lg font-semibold text-red-600">2026 Top Picks</a>
+          <a href="/recovery" class="block text-lg text-charcoal/70">Recovery</a>
+          
           <a href="/blog" class="block text-lg text-charcoal/70">Journal</a>
         </div>
       </div>
@@ -195,42 +214,52 @@
                 <h2 class="text-2xl font-bold text-gray-900">Summer Essentials 2026</h2>
                 <span class="text-xs text-orange-600 font-semibold bg-orange-100 px-2 py-1 rounded">NEW</span>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ7Y7-DEEBOR-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-premio-evo-short-sleeve-jersey-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ7Y7/DEEBOR.jpg?t=875" alt="Castelli Premio Evo Jersey" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">HOT-WEATHER JERSEYS</span>
-                        <p class="text-gray-900 font-bold text-sm">Castelli Premio Evo Jersey</p>
-                        <p class="text-orange-600 font-bold">$300</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-jerseys-hot-weather-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Jerseys for Hot Weather →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLB0015-STRLEM-S60SERVINGRES&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-hydration-drink-mix-60-serving-bag&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLB0015/STRLEM.jpg?t=8929" alt="Skratch Labs Hydration Mix" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">ELECTROLYTES</span>
-                        <p class="text-gray-900 font-bold text-sm">Skratch Labs Hydration Mix</p>
-                        <p class="text-amber-600 font-bold">$58</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-electrolytes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Electrolytes 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SALZAOF-BLAMET-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-12l-set-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SAL/SALZAOF/BLAMET.jpg?t=7812" alt="Salomon Active Skin 12L" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">HYDRATION VESTS</span>
-                        <p class="text-gray-900 font-bold text-sm">Salomon Active Skin 12L</p>
-                        <p class="text-sky-600 font-bold">$130</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-hydration-vests-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Hydration Vests 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAMQ38L-ASP-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-dirt-series-podium-chill-21oz-bottle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/CAM/CAMQ38L/ASP.jpg?t=320" alt="CamelBak Podium Chill" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">WATER BOTTLES</span>
-                        <p class="text-gray-900 font-bold text-sm">CamelBak Podium Chill</p>
-                        <p class="text-blue-600 font-bold">$13</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-water-bottles-running-cycling-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Water Bottles 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING SUNGLASSES</span>
-                        <p class="text-gray-900 font-bold text-sm">Oakley Sutro</p>
-                        <p class="text-purple-600 font-bold">$203</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-sunglasses-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Sunglasses 2026 →</a></p>
-                    </a>
+            <div class="pick-grid">
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ7Y7-DEEBOR-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-premio-evo-short-sleeve-jersey-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ7Y7/DEEBOR.jpg?t=875" alt="Castelli Premio Evo Jersey" class="pick-card__img"></span>
+                            <span class="pick-card__tag">HOT-WEATHER JERSEYS</span>
+                            <span class="pick-card__name">Castelli Premio Evo Jersey</span>
+                            <span class="pick-card__price">$300</span>
+                        </a>
+                        <a href="/blog/best-cycling-jerseys-hot-weather-2026" class="pick-card__read">Read: Best Cycling Jerseys for Hot Weather <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLB0015-STRLEM-S60SERVINGRES&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-hydration-drink-mix-60-serving-bag&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLB0015/STRLEM.jpg?t=8929" alt="Skratch Labs Hydration Mix" class="pick-card__img"></span>
+                            <span class="pick-card__tag">ELECTROLYTES</span>
+                            <span class="pick-card__name">Skratch Labs Hydration Mix</span>
+                            <span class="pick-card__price">$58</span>
+                        </a>
+                        <a href="/blog/best-electrolytes-2026" class="pick-card__read">Read: Best Electrolytes 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SALZAOF-BLAMET-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-12l-set-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SAL/SALZAOF/BLAMET.jpg?t=7812" alt="Salomon Active Skin 12L" class="pick-card__img"></span>
+                            <span class="pick-card__tag">HYDRATION VESTS</span>
+                            <span class="pick-card__name">Salomon Active Skin 12L</span>
+                            <span class="pick-card__price">$130</span>
+                        </a>
+                        <a href="/blog/best-hydration-vests-2026" class="pick-card__read">Read: Best Hydration Vests 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAMQ38L-ASP-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-dirt-series-podium-chill-21oz-bottle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/CAM/CAMQ38L/ASP.jpg?t=320" alt="CamelBak Podium Chill" class="pick-card__img"></span>
+                            <span class="pick-card__tag">WATER BOTTLES</span>
+                            <span class="pick-card__name">CamelBak Podium Chill</span>
+                            <span class="pick-card__price">$13</span>
+                        </a>
+                        <a href="/blog/best-water-bottles-running-cycling-2026" class="pick-card__read">Read: Best Water Bottles 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING SUNGLASSES</span>
+                            <span class="pick-card__name">Oakley Sutro</span>
+                            <span class="pick-card__price">$203</span>
+                        </a>
+                        <a href="/blog/best-cycling-sunglasses-2026" class="pick-card__read">Read: Best Cycling Sunglasses 2026 <span class="arr">→</span></a>
+                    </div>
             </div>
         </section>
 
@@ -245,56 +274,70 @@
                 <h2 class="text-2xl font-bold text-gray-900">Running Gear</h2>
 
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF067/AQU.jpg?t=9761" alt="Garmin Forerunner 265" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING WATCHES</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Forerunner 265</p>
-                        <p class="text-emerald-600 font-bold">$450</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-watches-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Watches 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=HOKZ09M-BLABLA-S60&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fhoka-rincon-4-running-shoe-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/HOK/HOKZ09M/BLABLA.jpg?t=7625" alt="HOKA Rincon 4" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING SHOES</span>
-                        <p class="text-gray-900 font-bold text-sm">HOKA Rincon 4</p>
-                        <p class="text-blue-600 font-bold">$125</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-shoes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Shoes 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZABP-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-strider-pro-7in-shorts-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZABP/BLA.jpg?t=8029" alt="Patagonia Strider Pro" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING SHORTS</span>
-                        <p class="text-gray-900 font-bold text-sm">Patagonia Strider Pro</p>
-                        <p class="text-orange-600 font-bold">$95</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-shorts-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Shorts 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZACS-BLA-XS&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-peak-mission-27in-tight-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZACS/BLA.jpg?t=3133" alt="Patagonia Peak Mission" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING TIGHTS</span>
-                        <p class="text-gray-900 font-bold text-sm">Patagonia Peak Mission</p>
-                        <p class="text-purple-600 font-bold">$90</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-tights-leggings-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Tights 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZAVS-AQUBLU-XXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-houdini-jacket-kids&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZAVS/AQUBLU.jpg?t=7450" alt="Patagonia Houdini" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING JACKETS</span>
-                        <p class="text-gray-900 font-bold text-sm">Patagonia Houdini</p>
-                        <p class="text-sky-600 font-bold">$85</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-jackets-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Jackets 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-rose-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING SUNGLASSES</span>
-                        <p class="text-gray-900 font-bold text-sm">Oakley Sutro</p>
-                        <p class="text-rose-600 font-bold">$203</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-sunglasses-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Sunglasses 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SALZAOF-BLAMET-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-12l-set-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SAL/SALZAOF/BLAMET.jpg?t=7812" alt="Salomon Active Skin 12L" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING HYDRATION</span>
-                        <p class="text-gray-900 font-bold text-sm">Salomon Active Skin 12L</p>
-                        <p class="text-emerald-600 font-bold">$130</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-hydration-vests-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Hydration Vests 2026 →</a></p>
-                    </a>
+            <div class="pick-grid">
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF067/AQU.jpg?t=9761" alt="Garmin Forerunner 265" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING WATCHES</span>
+                            <span class="pick-card__name">Garmin Forerunner 265</span>
+                            <span class="pick-card__price">$450</span>
+                        </a>
+                        <a href="/blog/best-running-watches-2026" class="pick-card__read">Read: Best Running Watches 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=HOKZ09M-BLABLA-S60&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fhoka-rincon-4-running-shoe-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/HOK/HOKZ09M/BLABLA.jpg?t=7625" alt="HOKA Rincon 4" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING SHOES</span>
+                            <span class="pick-card__name">HOKA Rincon 4</span>
+                            <span class="pick-card__price">$125</span>
+                        </a>
+                        <a href="/blog/best-running-shoes-2026" class="pick-card__read">Read: Best Running Shoes 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZABP-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-strider-pro-7in-shorts-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZABP/BLA.jpg?t=8029" alt="Patagonia Strider Pro" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING SHORTS</span>
+                            <span class="pick-card__name">Patagonia Strider Pro</span>
+                            <span class="pick-card__price">$95</span>
+                        </a>
+                        <a href="/blog/best-running-shorts-2026" class="pick-card__read">Read: Best Running Shorts 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZACS-BLA-XS&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-peak-mission-27in-tight-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZACS/BLA.jpg?t=3133" alt="Patagonia Peak Mission" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING TIGHTS</span>
+                            <span class="pick-card__name">Patagonia Peak Mission</span>
+                            <span class="pick-card__price">$90</span>
+                        </a>
+                        <a href="/blog/best-running-tights-leggings-2026" class="pick-card__read">Read: Best Running Tights 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZAVS-AQUBLU-XXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-houdini-jacket-kids&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/PAT/PATZAVS/AQUBLU.jpg?t=7450" alt="Patagonia Houdini" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING JACKETS</span>
+                            <span class="pick-card__name">Patagonia Houdini</span>
+                            <span class="pick-card__price">$85</span>
+                        </a>
+                        <a href="/blog/best-running-jackets-2026" class="pick-card__read">Read: Best Running Jackets 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING SUNGLASSES</span>
+                            <span class="pick-card__name">Oakley Sutro</span>
+                            <span class="pick-card__price">$203</span>
+                        </a>
+                        <a href="/blog/best-running-sunglasses-2026" class="pick-card__read">Read: Best Running Sunglasses 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SALZAOF-BLAMET-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-12l-set-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SAL/SALZAOF/BLAMET.jpg?t=7812" alt="Salomon Active Skin 12L" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING HYDRATION</span>
+                            <span class="pick-card__name">Salomon Active Skin 12L</span>
+                            <span class="pick-card__price">$130</span>
+                        </a>
+                        <a href="/blog/best-running-hydration-vests-2026" class="pick-card__read">Read: Best Running Hydration Vests 2026 <span class="arr">→</span></a>
+                    </div>
             </div>
         </section>
 
@@ -309,84 +352,106 @@
                 <h2 class="text-2xl font-bold text-gray-900">Cycling Gear</h2>
 
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF03I-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-1040-solar-gps-bike-computer&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF03I/BLA.jpg?t=8169" alt="Garmin Edge 1040 Solar" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">BIKE COMPUTERS</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Edge 1040 Solar</p>
-                        <p class="text-emerald-600 font-bold">$700</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-bike-computers-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Bike Computers 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHIU1GL-WHI-S480&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-rc903-s-phyre-cycling-shoes-mens-shiu1gl&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SHI/SHIU1GL/WHI.jpg?t=259" alt="Shimano RC903 S-PHYRE" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING SHOES</span>
-                        <p class="text-gray-900 font-bold text-sm">Shimano RC903 S-PHYRE</p>
-                        <p class="text-blue-600 font-bold">$480</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-shoes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Shoes 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ7Y7-DEEBOR-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-premio-evo-short-sleeve-jersey-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ7Y7/DEEBOR.jpg?t=875" alt="Castelli Premio Evo Jersey" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING JERSEYS</span>
-                        <p class="text-gray-900 font-bold text-sm">Castelli Premio Evo Jersey</p>
-                        <p class="text-amber-600 font-bold">$300</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-jerseys-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Jerseys 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ826-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-endurance-4-bib-short-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ826/BLA.jpg?t=8102" alt="Castelli Endurance 3 Bib" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING BIB SHORTS</span>
-                        <p class="text-gray-900 font-bold text-sm">Castelli Endurance 3 Bib</p>
-                        <p class="text-purple-600 font-bold">$175</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-bib-shorts-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Bib Shorts 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=POCZ1EK-URABLA-S&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpoc-ventral-air-mips-helmet-pocz1ek&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/POC/POCZ1EK/URABLA.jpg?t=7836" alt="POC Ventral Air" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING HELMETS</span>
-                        <p class="text-gray-900 font-bold text-sm">POC Ventral Air</p>
-                        <p class="text-sky-600 font-bold">$130</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-helmets-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Helmets 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING SUNGLASSES</span>
-                        <p class="text-gray-900 font-bold text-sm">Oakley Sutro</p>
-                        <p class="text-orange-600 font-bold">$203</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-sunglasses-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Sunglasses 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SCQ00D1-BLA-S168&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-power-arc-expert-saddle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SCQ/SCQ00D1/BLA.jpg?t=6938" alt="Specialized Power Arc" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-rose-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING SADDLES</span>
-                        <p class="text-gray-900 font-bold text-sm">Specialized Power Arc</p>
-                        <p class="text-rose-600 font-bold">$170</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-saddles-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Saddles 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHI00DV-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-dura-ace-pd-r9100-4mm-spd-sl-pedals&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SHI/SHI00DV/ONECOL.jpg?t=5750" alt="Shimano Dura-Ace Pedals" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING PEDALS</span>
-                        <p class="text-gray-900 font-bold text-sm">Shimano Dura-Ace Pedals</p>
-                        <p class="text-emerald-600 font-bold">$300</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-pedals-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Pedals 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=ANOZ16K-OAPEVABL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fanon-m4-toric-goggles-mfi-mask&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/ANO/ANOZ16K/OAPEVABL.jpg?t=29" alt="Garmin Varia Radar" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">BIKE LIGHTS</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Varia Radar</p>
-                        <p class="text-purple-600 font-bold">$170</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-bike-lights-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Bike Lights 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=VITC04I-GUMBLA-S700A&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fvittoria-corsa-pro-control-g2.0-tubeless-tire&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/VIT/VITC04I/GUMBLA.jpg?t=4847" alt="Vittoria Corsa Pro Control" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">CYCLING TIRES</span>
-                        <p class="text-gray-900 font-bold text-sm">Vittoria Corsa Pro Control</p>
-                        <p class="text-blue-600 font-bold">$119</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-cycling-tires-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Cycling Tires 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=TOP000U-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Ftopeak-allien-ii-multi-tool&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/TOP/TOP000U/ONECOL.jpg?t=5280" alt="Topeak Alien II" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">BIKE MULTI-TOOLS</span>
-                        <p class="text-gray-900 font-bold text-sm">Topeak Alien II</p>
-                        <p class="text-sky-600 font-bold">$68</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-bike-multi-tools-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Bike Multi-Tools 2026 →</a></p>
-                    </a>
+            <div class="pick-grid">
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF03I-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-1040-solar-gps-bike-computer&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF03I/BLA.jpg?t=8169" alt="Garmin Edge 1040 Solar" class="pick-card__img"></span>
+                            <span class="pick-card__tag">BIKE COMPUTERS</span>
+                            <span class="pick-card__name">Garmin Edge 1040 Solar</span>
+                            <span class="pick-card__price">$700</span>
+                        </a>
+                        <a href="/blog/best-bike-computers-2026" class="pick-card__read">Read: Best Bike Computers 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHIU1GL-WHI-S480&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-rc903-s-phyre-cycling-shoes-mens-shiu1gl&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SHI/SHIU1GL/WHI.jpg?t=259" alt="Shimano RC903 S-PHYRE" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING SHOES</span>
+                            <span class="pick-card__name">Shimano RC903 S-PHYRE</span>
+                            <span class="pick-card__price">$480</span>
+                        </a>
+                        <a href="/blog/best-cycling-shoes-2026" class="pick-card__read">Read: Best Cycling Shoes 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ7Y7-DEEBOR-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-premio-evo-short-sleeve-jersey-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ7Y7/DEEBOR.jpg?t=875" alt="Castelli Premio Evo Jersey" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING JERSEYS</span>
+                            <span class="pick-card__name">Castelli Premio Evo Jersey</span>
+                            <span class="pick-card__price">$300</span>
+                        </a>
+                        <a href="/blog/best-cycling-jerseys-2026" class="pick-card__read">Read: Best Cycling Jerseys 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CSTZ826-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcastelli-endurance-4-bib-short-mens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/CST/CSTZ826/BLA.jpg?t=8102" alt="Castelli Endurance 3 Bib" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING BIB SHORTS</span>
+                            <span class="pick-card__name">Castelli Endurance 3 Bib</span>
+                            <span class="pick-card__price">$175</span>
+                        </a>
+                        <a href="/blog/best-cycling-bib-shorts-2026" class="pick-card__read">Read: Best Cycling Bib Shorts 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=POCZ1EK-URABLA-S&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpoc-ventral-air-mips-helmet-pocz1ek&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/POC/POCZ1EK/URABLA.jpg?t=7836" alt="POC Ventral Air" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING HELMETS</span>
+                            <span class="pick-card__name">POC Ventral Air</span>
+                            <span class="pick-card__price">$130</span>
+                        </a>
+                        <a href="/blog/best-cycling-helmets-2026" class="pick-card__read">Read: Best Cycling Helmets 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=OAK01UN-MATCARS24K-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Foakley-sutro-prizm-sunglasses&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/OAK/OAK01UN/MATCARS24K.jpg?t=8984" alt="Oakley Sutro" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING SUNGLASSES</span>
+                            <span class="pick-card__name">Oakley Sutro</span>
+                            <span class="pick-card__price">$203</span>
+                        </a>
+                        <a href="/blog/best-cycling-sunglasses-2026" class="pick-card__read">Read: Best Cycling Sunglasses 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SCQ00D1-BLA-S168&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-power-arc-expert-saddle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SCQ/SCQ00D1/BLA.jpg?t=6938" alt="Specialized Power Arc" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING SADDLES</span>
+                            <span class="pick-card__name">Specialized Power Arc</span>
+                            <span class="pick-card__price">$170</span>
+                        </a>
+                        <a href="/blog/best-cycling-saddles-2026" class="pick-card__read">Read: Best Cycling Saddles 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHI00DV-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-dura-ace-pd-r9100-4mm-spd-sl-pedals&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SHI/SHI00DV/ONECOL.jpg?t=5750" alt="Shimano Dura-Ace Pedals" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING PEDALS</span>
+                            <span class="pick-card__name">Shimano Dura-Ace Pedals</span>
+                            <span class="pick-card__price">$300</span>
+                        </a>
+                        <a href="/blog/best-cycling-pedals-2026" class="pick-card__read">Read: Best Cycling Pedals 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=ANOZ16K-OAPEVABL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fanon-m4-toric-goggles-mfi-mask&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/ANO/ANOZ16K/OAPEVABL.jpg?t=29" alt="Garmin Varia Radar" class="pick-card__img"></span>
+                            <span class="pick-card__tag">BIKE LIGHTS</span>
+                            <span class="pick-card__name">Garmin Varia Radar</span>
+                            <span class="pick-card__price">$170</span>
+                        </a>
+                        <a href="/blog/best-bike-lights-2026" class="pick-card__read">Read: Best Bike Lights 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=VITC04I-GUMBLA-S700A&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fvittoria-corsa-pro-control-g2.0-tubeless-tire&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/VIT/VITC04I/GUMBLA.jpg?t=4847" alt="Vittoria Corsa Pro Control" class="pick-card__img"></span>
+                            <span class="pick-card__tag">CYCLING TIRES</span>
+                            <span class="pick-card__name">Vittoria Corsa Pro Control</span>
+                            <span class="pick-card__price">$119</span>
+                        </a>
+                        <a href="/blog/best-cycling-tires-2026" class="pick-card__read">Read: Best Cycling Tires 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=TOP000U-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Ftopeak-allien-ii-multi-tool&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/TOP/TOP000U/ONECOL.jpg?t=5280" alt="Topeak Alien II" class="pick-card__img"></span>
+                            <span class="pick-card__tag">BIKE MULTI-TOOLS</span>
+                            <span class="pick-card__name">Topeak Alien II</span>
+                            <span class="pick-card__price">$68</span>
+                        </a>
+                        <a href="/blog/best-bike-multi-tools-2026" class="pick-card__read">Read: Best Bike Multi-Tools 2026 <span class="arr">→</span></a>
+                    </div>
             </div>
         </section>
 
@@ -401,42 +466,52 @@
                 <h2 class="text-2xl font-bold text-gray-900">Nutrition &amp; Hydration</h2>
 
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLB0015-STRLEM-S60SERVINGRES&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-hydration-drink-mix-60-serving-bag&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLB0015/STRLEM.jpg?t=8929" alt="Skratch Labs Hydration Mix" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">ELECTROLYTES</span>
-                        <p class="text-gray-900 font-bold text-sm">Skratch Labs Hydration Mix</p>
-                        <p class="text-blue-600 font-bold">$58</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-electrolytes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Electrolytes 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAMQ38L-ASP-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-dirt-series-podium-chill-21oz-bottle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/CAM/CAMQ38L/ASP.jpg?t=320" alt="CamelBak Podium Chill" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">WATER BOTTLES</span>
-                        <p class="text-gray-900 font-bold text-sm">CamelBak Podium Chill</p>
-                        <p class="text-sky-600 font-bold">$13</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-water-bottles-running-cycling-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Water Bottles 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GUS0016-CCCCO-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgu-roctane-energy-gel-24-pack&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GUS/GUS0016/CCCCO.jpg?t=760" alt="GU Roctane Energy Gel" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">ENERGY GELS</span>
-                        <p class="text-gray-900 font-bold text-sm">GU Roctane Energy Gel</p>
-                        <p class="text-emerald-600 font-bold">$72</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-energy-gels-chews-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Energy Gels 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00X-RAS-S8SERESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-superfuel-drink-mix&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLBB00X/RAS.jpg?t=3850" alt="Skratch Super High-Carb" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">ENDURANCE CARBS</span>
-                        <p class="text-gray-900 font-bold text-sm">Skratch Super High-Carb</p>
-                        <p class="text-orange-600 font-bold">$42</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-carbs-endurance-athletes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Carbs for Endurance →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00V-CHO-S24SRESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-recovery-drink-mix-24-serving&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLBB00V/CHO.jpg?t=4738" alt="Skratch Labs Recovery Mix" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">PROTEIN POWDER</span>
-                        <p class="text-gray-900 font-bold text-sm">Skratch Labs Recovery Mix</p>
-                        <p class="text-purple-600 font-bold">$57</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-protein-powder-endurance-athletes-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Protein Powder →</a></p>
-                    </a>
+            <div class="pick-grid">
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLB0015-STRLEM-S60SERVINGRES&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-hydration-drink-mix-60-serving-bag&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLB0015/STRLEM.jpg?t=8929" alt="Skratch Labs Hydration Mix" class="pick-card__img"></span>
+                            <span class="pick-card__tag">ELECTROLYTES</span>
+                            <span class="pick-card__name">Skratch Labs Hydration Mix</span>
+                            <span class="pick-card__price">$58</span>
+                        </a>
+                        <a href="/blog/best-electrolytes-2026" class="pick-card__read">Read: Best Electrolytes 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAMQ38L-ASP-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-dirt-series-podium-chill-21oz-bottle&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/CAM/CAMQ38L/ASP.jpg?t=320" alt="CamelBak Podium Chill" class="pick-card__img"></span>
+                            <span class="pick-card__tag">WATER BOTTLES</span>
+                            <span class="pick-card__name">CamelBak Podium Chill</span>
+                            <span class="pick-card__price">$13</span>
+                        </a>
+                        <a href="/blog/best-water-bottles-running-cycling-2026" class="pick-card__read">Read: Best Water Bottles 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GUS0016-CCCCO-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgu-roctane-energy-gel-24-pack&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GUS/GUS0016/CCCCO.jpg?t=760" alt="GU Roctane Energy Gel" class="pick-card__img"></span>
+                            <span class="pick-card__tag">ENERGY GELS</span>
+                            <span class="pick-card__name">GU Roctane Energy Gel</span>
+                            <span class="pick-card__price">$72</span>
+                        </a>
+                        <a href="/blog/best-energy-gels-chews-2026" class="pick-card__read">Read: Best Energy Gels 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00X-RAS-S8SERESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-superfuel-drink-mix&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLBB00X/RAS.jpg?t=3850" alt="Skratch Super High-Carb" class="pick-card__img"></span>
+                            <span class="pick-card__tag">ENDURANCE CARBS</span>
+                            <span class="pick-card__name">Skratch Super High-Carb</span>
+                            <span class="pick-card__price">$42</span>
+                        </a>
+                        <a href="/blog/best-carbs-endurance-athletes-2026" class="pick-card__read">Read: Best Carbs for Endurance <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00V-CHO-S24SRESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-recovery-drink-mix-24-serving&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLBB00V/CHO.jpg?t=4738" alt="Skratch Labs Recovery Mix" class="pick-card__img"></span>
+                            <span class="pick-card__tag">PROTEIN POWDER</span>
+                            <span class="pick-card__name">Skratch Labs Recovery Mix</span>
+                            <span class="pick-card__price">$57</span>
+                        </a>
+                        <a href="/blog/best-protein-powder-endurance-athletes-2026" class="pick-card__read">Read: Best Protein Powder <span class="arr">→</span></a>
+                    </div>
             </div>
         </section>
 
@@ -451,42 +526,52 @@
                 <h2 class="text-2xl font-bold text-gray-900">Wearables</h2>
 
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF067/AQU.jpg?t=9761" alt="Garmin Forerunner 265" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING WATCHES</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Forerunner 265</p>
-                        <p class="text-emerald-600 font-bold">$450</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-watches-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Watches 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF069-WHI-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-965-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF069/WHI.jpg?t=9989" alt="Garmin Forerunner 965" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">TRIATHLON WATCHES</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Forerunner 965</p>
-                        <p class="text-blue-600 font-bold">$600</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-triathlon-watches-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Triathlon Watches 2026 →</a></p>
-                    </a>
-                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF078-WHIPAS-S45M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-venu-3&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF078/WHIPAS.jpg?t=4910" alt="Garmin Venu 3" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-rose-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">FITNESS TRACKERS</span>
-                        <p class="text-gray-900 font-bold text-sm">Garmin Venu 3</p>
-                        <p class="text-rose-600 font-bold">$450</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-fitness-trackers-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Fitness Trackers 2026 →</a></p>
-                    </a>
-                    <a href="https://www.amazon.com/s?k=Polar%20H10%20Heart%20Rate%20Monitor&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://www.polar.com/sites/default/files/polar-h10.png" alt="Polar H10 Heart Rate Monitor" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">HEART RATE MONITORS</span>
-                        <p class="text-gray-900 font-bold text-sm">Polar H10 Heart Rate Monitor</p>
-                        <p class="text-purple-600 font-bold">$100</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-heart-rate-monitors-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Heart Rate Monitors 2026 →</a></p>
-                    </a>
-                    <a href="https://www.amazon.com/s?k=Shokz%20OpenRun%20Pro%202&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="bg-white rounded-xl p-4 text-center hover:shadow-xl transition group">
-                        <img loading="lazy" src="https://shokz.com/cdn/shop/products/OpenRunPro2.png" alt="Shokz OpenRun Pro 2" class="w-28 h-28 mx-auto object-contain mb-2 group-hover:scale-105 transition">
-                        <span class="inline-block bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded mb-1">RUNNING HEADPHONES</span>
-                        <p class="text-gray-900 font-bold text-sm">Shokz OpenRun Pro 2</p>
-                        <p class="text-sky-600 font-bold">$180</p>
-                        <p class="mt-2 text-xs"><a href="/blog/best-running-headphones-2026" class="text-blue-600 hover:text-blue-800 underline">Read: Best Running Headphones 2026 →</a></p>
-                    </a>
+            <div class="pick-grid">
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF067/AQU.jpg?t=9761" alt="Garmin Forerunner 265" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING WATCHES</span>
+                            <span class="pick-card__name">Garmin Forerunner 265</span>
+                            <span class="pick-card__price">$450</span>
+                        </a>
+                        <a href="/blog/best-running-watches-2026" class="pick-card__read">Read: Best Running Watches 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF069-WHI-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-965-watch&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF069/WHI.jpg?t=9989" alt="Garmin Forerunner 965" class="pick-card__img"></span>
+                            <span class="pick-card__tag">TRIATHLON WATCHES</span>
+                            <span class="pick-card__name">Garmin Forerunner 965</span>
+                            <span class="pick-card__price">$600</span>
+                        </a>
+                        <a href="/blog/best-triathlon-watches-2026" class="pick-card__read">Read: Best Triathlon Watches 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF078-WHIPAS-S45M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-venu-3&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/GRM/GRMF078/WHIPAS.jpg?t=4910" alt="Garmin Venu 3" class="pick-card__img"></span>
+                            <span class="pick-card__tag">FITNESS TRACKERS</span>
+                            <span class="pick-card__name">Garmin Venu 3</span>
+                            <span class="pick-card__price">$450</span>
+                        </a>
+                        <a href="/blog/best-fitness-trackers-2026" class="pick-card__read">Read: Best Fitness Trackers 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://www.amazon.com/s?k=Polar%20H10%20Heart%20Rate%20Monitor&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.polar.com/sites/default/files/polar-h10.png" alt="Polar H10 Heart Rate Monitor" class="pick-card__img"></span>
+                            <span class="pick-card__tag">HEART RATE MONITORS</span>
+                            <span class="pick-card__name">Polar H10 Heart Rate Monitor</span>
+                            <span class="pick-card__price">$100</span>
+                        </a>
+                        <a href="/blog/best-heart-rate-monitors-2026" class="pick-card__read">Read: Best Heart Rate Monitors 2026 <span class="arr">→</span></a>
+                    </div>
+                    <div class="pick-card">
+                        <a href="https://www.amazon.com/s?k=Shokz%20OpenRun%20Pro%202&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                            <span class="pick-card__imgwrap"><img loading="lazy" src="https://shokz.com/cdn/shop/products/OpenRunPro2.png" alt="Shokz OpenRun Pro 2" class="pick-card__img"></span>
+                            <span class="pick-card__tag">RUNNING HEADPHONES</span>
+                            <span class="pick-card__name">Shokz OpenRun Pro 2</span>
+                            <span class="pick-card__price">$180</span>
+                        </a>
+                        <a href="/blog/best-running-headphones-2026" class="pick-card__read">Read: Best Running Headphones 2026 <span class="arr">→</span></a>
+                    </div>
             </div>
         </section>
 
