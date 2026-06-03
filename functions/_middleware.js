@@ -10,7 +10,9 @@ const CONSOLIDATION_REDIRECTS = {
   "/blog/running-form-technique-guide-2026": "/blog/running-form-technique-complete-guide-2026",
   "/blog/running-injury-prevention-guide-2026": "/blog/running-injury-prevention-complete-guide",
   "/blog/sleep-optimization-athletes-complete-guide": "/blog/sleep-optimization-athletes-complete-guide-2026",
-  "/blog/sleep-optimization-athletes-guide-2026": "/blog/sleep-optimization-athletes-complete-guide-2026"
+  "/blog/sleep-optimization-athletes-guide-2026": "/blog/sleep-optimization-athletes-complete-guide-2026",
+  "/blog/running-taper-complete-guide-2026": "/blog/taper-week-strategies-complete-guide-2026",
+  "/blog/taper-week-complete-guide": "/blog/taper-week-strategies-complete-guide-2026"
 };
 
 export async function onRequest(context) {
