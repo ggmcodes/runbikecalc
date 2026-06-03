@@ -69,6 +69,15 @@
       .pick-card__read:hover { color: #C67B4E; background: #FAF8F5; }
       .pick-card__read .arr { transition: transform .2s ease; }
       .pick-card__read:hover .arr { transform: translateX(3px); }
+      /* dual-link buy footer (Backcountry 15% off + Find on Amazon) */
+      .pick-card__buy { border-top: 1px solid rgba(26,26,26,0.08); padding: 0.85rem 0.9rem 0.95rem; display: flex; flex-direction: column; gap: 0.5rem; }
+      .pick-card__bc { display: flex; align-items: center; justify-content: center; gap: 0.4rem; background: #1A1A1A; color: #FAF8F5; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.62rem 0.7rem; border-radius: 4px; transition: background-color .15s ease; }
+      .pick-card__bc:hover { background: #C67B4E; }
+      .pick-card__bc .off { background: rgba(255,255,255,0.18); padding: 0.06rem 0.42rem; border-radius: 999px; font-size: 0.6rem; letter-spacing: 0.02em; }
+      .pick-card__amz { display: flex; align-items: center; justify-content: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 600; color: #6B6B6B; transition: color .15s ease; }
+      .pick-card__amz:hover { color: #C67B4E; }
+      .pick-card__amz .arr { transition: transform .2s ease; }
+      .pick-card__amz:hover .arr { transform: translateX(3px); }
 
       /* --- Category tiles --- */
       .cat-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
@@ -141,7 +150,7 @@
                 </div>
                 <h2 class="font-display text-2xl font-bold text-charcoal">Editor's Recovery Picks</h2>
             </div>
-            <p class="text-warm-gray text-sm max-w-2xl mb-6">The recovery tools we reach for most — tested across real training blocks. Prices shown are MSRP and may change.</p>
+            <p class="text-warm-gray text-sm max-w-2xl mb-6">The recovery products we actually use — refuel, compression, and mobility gear. Shop Backcountry for <strong class="text-charcoal">15% off your first order</strong>, or compare on Amazon. Prices are MSRP and may change.</p>
             <div class="pick-grid">
                 <div class="pick-card">
                     <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00V-CHO-S24SRESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-recovery-drink-mix-24-serving&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
@@ -150,7 +159,22 @@
                         <span class="pick-card__name">Skratch Labs Recovery Mix</span>
                         <span class="pick-card__price">$57</span>
                     </a>
-                    <a href="/blog/post-workout-recovery-complete-guide-2026" class="pick-card__read">Read: Post-Workout Recovery <span class="arr">&rarr;</span></a>
+                    <div class="pick-card__buy">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00V-CHO-S24SRESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-recovery-drink-mix-24-serving&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__bc">Backcountry <span class="off">15% off</span></a>
+                        <a href="https://www.amazon.com/s?k=Skratch+Labs+Sport+Recovery+Mix&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__amz">Find on Amazon <span class="arr">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="pick-card">
+                    <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00X-RAS-S8SERESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-superfuel-drink-mix&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
+                        <span class="pick-card__imgwrap"><img loading="lazy" src="https://www.backcountry.com/images/items/1200/SLB/SLBB00X/RAS.jpg?t=3850" alt="Skratch Labs Sport Super High-Carb drink mix" class="pick-card__img"></span>
+                        <span class="pick-card__tag">Glycogen Refuel</span>
+                        <span class="pick-card__name">Skratch Super High-Carb</span>
+                        <span class="pick-card__price">$42</span>
+                    </a>
+                    <div class="pick-card__buy">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SLBB00X-RAS-S8SERESPOU&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fskratch-labs-sport-superfuel-drink-mix&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__bc">Backcountry <span class="off">15% off</span></a>
+                        <a href="https://www.amazon.com/s?k=Skratch+Labs+Super+High-Carb&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__amz">Find on Amazon <span class="arr">&rarr;</span></a>
+                    </div>
                 </div>
                 <div class="pick-card">
                     <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SWLZ8OH-LIGGRA-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsmartwool-run-targeted-cushion-ankle-sock-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__main">
@@ -159,7 +183,10 @@
                         <span class="pick-card__name">Smartwool Run Compression Sock</span>
                         <span class="pick-card__price">$25</span>
                     </a>
-                    <a href="/blog/best-compression-socks-running-2026" class="pick-card__read">Read: Best Compression Socks 2026 <span class="arr">&rarr;</span></a>
+                    <div class="pick-card__buy">
+                        <a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SWLZ8OH-LIGGRA-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsmartwool-run-targeted-cushion-ankle-sock-womens&amp;intsrc=CATF_2363" target="_blank" rel="noopener sponsored" class="pick-card__bc">Backcountry <span class="off">15% off</span></a>
+                        <a href="https://www.amazon.com/s?k=Smartwool+Run+Targeted+Cushion+Compression+Sock&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__amz">Find on Amazon <span class="arr">&rarr;</span></a>
+                    </div>
                 </div>
                 <div class="pick-card">
                     <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=YDL000E-MANCHA-S5MM&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fyoga-design-lab-infinity-yoga-mat&amp;intsrc=CATF_15689" target="_blank" rel="noopener sponsored" class="pick-card__main">
@@ -168,7 +195,10 @@
                         <span class="pick-card__name">Yoga Design Lab Infinity Mat</span>
                         <span class="pick-card__price">$116</span>
                     </a>
-                    <a href="/blog/mobility-stretching-complete-guide" class="pick-card__read">Read: Mobility &amp; Stretching Guide <span class="arr">&rarr;</span></a>
+                    <div class="pick-card__buy">
+                        <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=YDL000E-MANCHA-S5MM&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fyoga-design-lab-infinity-yoga-mat&amp;intsrc=CATF_15689" target="_blank" rel="noopener sponsored" class="pick-card__bc">Backcountry <span class="off">15% off</span></a>
+                        <a href="https://www.amazon.com/s?k=Yoga+Design+Lab+Infinity+Mat&amp;tag=runbikecalc-20" target="_blank" rel="noopener sponsored" class="pick-card__amz">Find on Amazon <span class="arr">&rarr;</span></a>
+                    </div>
                 </div>
             </div>
         </section>
