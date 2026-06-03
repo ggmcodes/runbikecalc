@@ -1,6 +1,27 @@
+// Consolidated duplicate pages -> canonical (301). Keyed by clean path.
+const CONSOLIDATION_REDIRECTS = {
+  "/blog/berlin-marathon-training-complete-guide": "/blog/berlin-marathon-training-guide-2026",
+  "/blog/best-recovery-tools-guide-2026": "/blog/best-recovery-tools-2026",
+  "/blog/chicago-marathon-training-guide-2026": "/blog/chicago-marathon-training-complete-guide",
+  "/blog/half-marathon-training-complete-guide-2026": "/blog/half-marathon-training-guide-2025",
+  "/blog/hrv-training-complete-guide": "/blog/hrv-training-complete-guide-2026",
+  "/blog/lactate-threshold-training-complete-guide-2026": "/blog/lactate-threshold-training-guide-2025",
+  "/blog/london-marathon-training-complete-guide": "/blog/london-marathon-training-guide-2026",
+  "/blog/running-form-technique-guide-2026": "/blog/running-form-technique-complete-guide-2026",
+  "/blog/running-injury-prevention-guide-2026": "/blog/running-injury-prevention-complete-guide",
+  "/blog/sleep-optimization-athletes-complete-guide": "/blog/sleep-optimization-athletes-complete-guide-2026",
+  "/blog/sleep-optimization-athletes-guide-2026": "/blog/sleep-optimization-athletes-complete-guide-2026"
+};
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   let pathname = url.pathname;
+
+  // 0. Consolidation 301s — match both clean and .html forms in a single hop.
+  const consolidationKey = pathname.endsWith('.html') ? pathname.slice(0, -5) : pathname;
+  if (CONSOLIDATION_REDIRECTS[consolidationKey]) {
+    return Response.redirect(new URL(CONSOLIDATION_REDIRECTS[consolidationKey] + url.search, url.origin), 301);
+  }
 
   // 1. Redirect .html URLs to clean URLs (301)
   if (pathname.endsWith('.html')) {
