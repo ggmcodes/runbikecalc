@@ -12,7 +12,17 @@ const CONSOLIDATION_REDIRECTS = {
   "/blog/sleep-optimization-athletes-complete-guide": "/blog/sleep-optimization-athletes-complete-guide-2026",
   "/blog/sleep-optimization-athletes-guide-2026": "/blog/sleep-optimization-athletes-complete-guide-2026",
   "/blog/running-taper-complete-guide-2026": "/blog/taper-week-strategies-complete-guide-2026",
-  "/blog/taper-week-complete-guide": "/blog/taper-week-strategies-complete-guide-2026"
+  "/blog/taper-week-complete-guide": "/blog/taper-week-strategies-complete-guide-2026",
+  "/blog/vo2-max-training-methods": "/blog/vo2-max-training-guide-2025",
+  "/blog/trail-running-training-complete-guide": "/blog/trail-running-complete-guide-2026",
+  "/blog/strength-training-runners-complete-guide-2026": "/blog/strength-training-for-runners-complete-guide",
+  "/blog/running-weight-loss-complete-guide-2026": "/blog/running-for-weight-loss-complete-guide-2026",
+  "/blog/running-for-beginners-guide-2026": "/blog/running-for-beginners-ultimate-guide-2025",
+  "/blog/hydration-athletes-complete-guide": "/blog/hydration-electrolytes-complete-guide-2026",
+  "/blog/running-heart-rate-zones-complete-guide-2026": "/blog/heart-rate-zones-running",
+  "/blog/cycling-climbing-training-complete-guide-2026": "/blog/cycling-climbing-complete-guide-2026",
+  "/blog/bike-fit-positioning-complete-guide-2026": "/blog/bike-fit-complete-guide-2026",
+  "/blog/best-running-shoes-for-plantar-fasciitis-2026": "/blog/best-running-shoes-plantar-fasciitis-2026"
 };
 
 export async function onRequest(context) {
