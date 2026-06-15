@@ -48,7 +48,7 @@
   font-size: 2.25rem;
   font-weight: 700;
   color: #1A1A1A;
-  margin: 0 0 0.4rem;
+  margin: 0 auto 0.4rem;
   line-height: 1.05;
 }
 .ew-footer .ew-tagline {
@@ -56,7 +56,7 @@
   font-style: italic;
   font-size: 1.05rem;
   color: #7C2D3A;
-  margin: 0 0 1.1rem;
+  margin: 0 auto 1.1rem;
   font-weight: 400;
 }
 .ew-footer .ew-sub {
@@ -117,7 +117,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.78rem;
   color: rgba(26, 26, 26, 0.55);
-  margin: 1.1rem 0 0;
+  margin: 1.1rem auto 0;
   font-style: italic;
 }
 
