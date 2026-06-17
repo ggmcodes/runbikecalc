@@ -11,16 +11,49 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 8, "goal_bodybuilding": 7, "goal_powerlifting": 4, "goal_functional": 5, "goal_general": 8,
-        "exp_beginner": 9, "exp_intermediate": 7, "exp_advanced": 3,
-        "lift_squat": 8, "lift_bench": 8, "lift_deadlift": 5, "lift_ohp": 7, "lift_pullup": 7,
-        "space_compact": 6, "space_garage": 8, "space_dedicated": 8,
-        "budget_under_500": 10, "budget_500_1000": 6, "budget_1000_2000": 2, "budget_over_2000": 1,
-        "ceiling_under_8": 8, "ceiling_8_9": 9, "ceiling_over_9": 8
+        "goal_strength": 8,
+        "goal_bodybuilding": 7,
+        "goal_powerlifting": 4,
+        "goal_functional": 5,
+        "goal_general": 8,
+        "exp_beginner": 9,
+        "exp_intermediate": 7,
+        "exp_advanced": 3,
+        "lift_squat": 8,
+        "lift_bench": 8,
+        "lift_deadlift": 5,
+        "lift_ohp": 7,
+        "lift_pullup": 7,
+        "space_compact": 6,
+        "space_garage": 8,
+        "space_dedicated": 8,
+        "budget_under_500": 10,
+        "budget_500_1000": 6,
+        "budget_1000_2000": 2,
+        "budget_over_2000": 1,
+        "ceiling_under_8": 8,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 8
       },
-      "specs": { "type": "Power Cage", "footprint": "50\" x 46\"", "height": "83.5\"", "weightCapacity": "800 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Best budget full power cage" },
-      "pairsWith": ["flat-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat"]
+      "specs": {
+        "type": "Power Cage",
+        "footprint": "50\" x 46\"",
+        "height": "83.5\"",
+        "weightCapacity": "800 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Best budget full power cage"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat"
+      ]
     },
     {
       "id": "cap-power-rack",
@@ -29,20 +62,52 @@
       "tier": "budget",
       "price": 200,
       "priceDisplay": "$200",
-      "amazonUrl": "https://www.amazon.com/s?k=CAP+Barbell+Power+Rack&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B00HYQP72O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31TR6hlojsL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31TR6hlojsL._SL160_.jpg",
       "scores": {
-        "goal_strength": 7, "goal_bodybuilding": 6, "goal_powerlifting": 3, "goal_functional": 4, "goal_general": 7,
-        "exp_beginner": 9, "exp_intermediate": 5, "exp_advanced": 2,
-        "lift_squat": 7, "lift_bench": 7, "lift_deadlift": 4, "lift_ohp": 6, "lift_pullup": 6,
-        "space_compact": 7, "space_garage": 7, "space_dedicated": 6,
-        "budget_under_500": 10, "budget_500_1000": 5, "budget_1000_2000": 1, "budget_over_2000": 0,
-        "ceiling_under_8": 8, "ceiling_8_9": 9, "ceiling_over_9": 8
+        "goal_strength": 7,
+        "goal_bodybuilding": 6,
+        "goal_powerlifting": 3,
+        "goal_functional": 4,
+        "goal_general": 7,
+        "exp_beginner": 9,
+        "exp_intermediate": 5,
+        "exp_advanced": 2,
+        "lift_squat": 7,
+        "lift_bench": 7,
+        "lift_deadlift": 4,
+        "lift_ohp": 6,
+        "lift_pullup": 6,
+        "space_compact": 7,
+        "space_garage": 7,
+        "space_dedicated": 6,
+        "budget_under_500": 10,
+        "budget_500_1000": 5,
+        "budget_1000_2000": 1,
+        "budget_over_2000": 0,
+        "ceiling_under_8": 8,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 8
       },
-      "specs": { "type": "Squat Stand / Light Cage", "footprint": "46\" x 42\"", "height": "82\"", "weightCapacity": "500 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "MAYBE", "bestFor": "Ultra-budget squat stand" },
-      "pairsWith": ["flat-bench", "olympic-barbell", "bumper-plates"]
+      "specs": {
+        "type": "Squat Stand / Light Cage",
+        "footprint": "46\" x 42\"",
+        "height": "82\"",
+        "weightCapacity": "500 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "MAYBE",
+        "bestFor": "Ultra-budget squat stand"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "olympic-barbell",
+        "bumper-plates"
+      ]
     },
     {
       "id": "titan-t2",
@@ -51,20 +116,54 @@
       "tier": "mid",
       "price": 450,
       "priceDisplay": "$450",
-      "amazonUrl": "https://www.amazon.com/s?k=Titan+T-2+Series+Power+Rack&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B09CF1ZXG1?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31dW3atMdLL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31dW3atMdLL._SL160_.jpg",
       "scores": {
-        "goal_strength": 8, "goal_bodybuilding": 8, "goal_powerlifting": 6, "goal_functional": 6, "goal_general": 8,
-        "exp_beginner": 8, "exp_intermediate": 8, "exp_advanced": 5,
-        "lift_squat": 9, "lift_bench": 9, "lift_deadlift": 5, "lift_ohp": 8, "lift_pullup": 8,
-        "space_compact": 5, "space_garage": 9, "space_dedicated": 9,
-        "budget_under_500": 9, "budget_500_1000": 8, "budget_1000_2000": 4, "budget_over_2000": 2,
-        "ceiling_under_8": 6, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 8,
+        "goal_bodybuilding": 8,
+        "goal_powerlifting": 6,
+        "goal_functional": 6,
+        "goal_general": 8,
+        "exp_beginner": 8,
+        "exp_intermediate": 8,
+        "exp_advanced": 5,
+        "lift_squat": 9,
+        "lift_bench": 9,
+        "lift_deadlift": 5,
+        "lift_ohp": 8,
+        "lift_pullup": 8,
+        "space_compact": 5,
+        "space_garage": 9,
+        "space_dedicated": 9,
+        "budget_under_500": 9,
+        "budget_500_1000": 8,
+        "budget_1000_2000": 4,
+        "budget_over_2000": 2,
+        "ceiling_under_8": 6,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Power Rack", "footprint": "48\" x 48\"", "height": "83\"", "weightCapacity": "700 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Best value mid-range rack" },
-      "pairsWith": ["adjustable-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Power Rack",
+        "footprint": "48\" x 48\"",
+        "height": "83\"",
+        "weightCapacity": "700 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Best value mid-range rack"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "rep-pr1100",
@@ -73,20 +172,54 @@
       "tier": "mid",
       "price": 500,
       "priceDisplay": "$500",
-      "amazonUrl": "https://www.amazon.com/s?k=REP+PR-1100+Power+Rack&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B07CHR5QDQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31L-HXp1VAL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31L-HXp1VAL._SL160_.jpg",
       "scores": {
-        "goal_strength": 9, "goal_bodybuilding": 8, "goal_powerlifting": 6, "goal_functional": 6, "goal_general": 8,
-        "exp_beginner": 8, "exp_intermediate": 9, "exp_advanced": 5,
-        "lift_squat": 9, "lift_bench": 9, "lift_deadlift": 5, "lift_ohp": 8, "lift_pullup": 8,
-        "space_compact": 5, "space_garage": 9, "space_dedicated": 9,
-        "budget_under_500": 8, "budget_500_1000": 9, "budget_1000_2000": 5, "budget_over_2000": 2,
-        "ceiling_under_8": 6, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 9,
+        "goal_bodybuilding": 8,
+        "goal_powerlifting": 6,
+        "goal_functional": 6,
+        "goal_general": 8,
+        "exp_beginner": 8,
+        "exp_intermediate": 9,
+        "exp_advanced": 5,
+        "lift_squat": 9,
+        "lift_bench": 9,
+        "lift_deadlift": 5,
+        "lift_ohp": 8,
+        "lift_pullup": 8,
+        "space_compact": 5,
+        "space_garage": 9,
+        "space_dedicated": 9,
+        "budget_under_500": 8,
+        "budget_500_1000": 9,
+        "budget_1000_2000": 5,
+        "budget_over_2000": 2,
+        "ceiling_under_8": 6,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Power Rack", "footprint": "48\" x 47\"", "height": "86\"", "weightCapacity": "700 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "REP quality at entry-level price" },
-      "pairsWith": ["adjustable-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Power Rack",
+        "footprint": "48\" x 47\"",
+        "height": "86\"",
+        "weightCapacity": "700 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "REP quality at entry-level price"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "rogue-sml2",
@@ -99,16 +232,49 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 8, "goal_bodybuilding": 7, "goal_powerlifting": 7, "goal_functional": 7, "goal_general": 7,
-        "exp_beginner": 6, "exp_intermediate": 8, "exp_advanced": 8,
-        "lift_squat": 9, "lift_bench": 7, "lift_deadlift": 6, "lift_ohp": 9, "lift_pullup": 5,
-        "space_compact": 9, "space_garage": 8, "space_dedicated": 7,
-        "budget_under_500": 2, "budget_500_1000": 9, "budget_1000_2000": 6, "budget_over_2000": 3,
-        "ceiling_under_8": 9, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 8,
+        "goal_bodybuilding": 7,
+        "goal_powerlifting": 7,
+        "goal_functional": 7,
+        "goal_general": 7,
+        "exp_beginner": 6,
+        "exp_intermediate": 8,
+        "exp_advanced": 8,
+        "lift_squat": 9,
+        "lift_bench": 7,
+        "lift_deadlift": 6,
+        "lift_ohp": 9,
+        "lift_pullup": 5,
+        "space_compact": 9,
+        "space_garage": 8,
+        "space_dedicated": 7,
+        "budget_under_500": 2,
+        "budget_500_1000": 9,
+        "budget_1000_2000": 6,
+        "budget_over_2000": 3,
+        "ceiling_under_8": 9,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Squat Stand", "footprint": "49\" x 48\"", "height": "92\"", "weightCapacity": "1000 lb", "pullUpBar": false, "jCups": true, "safetyBars": false },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Compact Rogue quality, no cage needed" },
-      "pairsWith": ["flat-bench", "rogue-barbell", "bumper-plates", "horse-stall-mat"]
+      "specs": {
+        "type": "Squat Stand",
+        "footprint": "49\" x 48\"",
+        "height": "92\"",
+        "weightCapacity": "1000 lb",
+        "pullUpBar": false,
+        "jCups": true,
+        "safetyBars": false
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Compact Rogue quality, no cage needed"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "rogue-barbell",
+        "bumper-plates",
+        "horse-stall-mat"
+      ]
     },
     {
       "id": "rogue-rml390f",
@@ -121,16 +287,50 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 10, "goal_bodybuilding": 9, "goal_powerlifting": 9, "goal_functional": 8, "goal_general": 8,
-        "exp_beginner": 6, "exp_intermediate": 9, "exp_advanced": 10,
-        "lift_squat": 10, "lift_bench": 10, "lift_deadlift": 6, "lift_ohp": 9, "lift_pullup": 10,
-        "space_compact": 2, "space_garage": 9, "space_dedicated": 10,
-        "budget_under_500": 0, "budget_500_1000": 3, "budget_1000_2000": 10, "budget_over_2000": 7,
-        "ceiling_under_8": 4, "ceiling_8_9": 8, "ceiling_over_9": 10
+        "goal_strength": 10,
+        "goal_bodybuilding": 9,
+        "goal_powerlifting": 9,
+        "goal_functional": 8,
+        "goal_general": 8,
+        "exp_beginner": 6,
+        "exp_intermediate": 9,
+        "exp_advanced": 10,
+        "lift_squat": 10,
+        "lift_bench": 10,
+        "lift_deadlift": 6,
+        "lift_ohp": 9,
+        "lift_pullup": 10,
+        "space_compact": 2,
+        "space_garage": 9,
+        "space_dedicated": 10,
+        "budget_under_500": 0,
+        "budget_500_1000": 3,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 7,
+        "ceiling_under_8": 4,
+        "ceiling_8_9": 8,
+        "ceiling_over_9": 10
       },
-      "specs": { "type": "Full Power Rack", "footprint": "53\" x 49\"", "height": "90.375\"", "weightCapacity": "1000+ lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Best overall home gym rack - Rogue quality" },
-      "pairsWith": ["adjustable-bench", "rogue-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Full Power Rack",
+        "footprint": "53\" x 49\"",
+        "height": "90.375\"",
+        "weightCapacity": "1000+ lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Best overall home gym rack - Rogue quality"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "rogue-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "rep-pr4000",
@@ -143,16 +343,50 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 10, "goal_bodybuilding": 9, "goal_powerlifting": 9, "goal_functional": 8, "goal_general": 8,
-        "exp_beginner": 6, "exp_intermediate": 9, "exp_advanced": 10,
-        "lift_squat": 10, "lift_bench": 10, "lift_deadlift": 6, "lift_ohp": 9, "lift_pullup": 10,
-        "space_compact": 3, "space_garage": 9, "space_dedicated": 10,
-        "budget_under_500": 0, "budget_500_1000": 8, "budget_1000_2000": 10, "budget_over_2000": 6,
-        "ceiling_under_8": 5, "ceiling_8_9": 9, "ceiling_over_9": 10
+        "goal_strength": 10,
+        "goal_bodybuilding": 9,
+        "goal_powerlifting": 9,
+        "goal_functional": 8,
+        "goal_general": 8,
+        "exp_beginner": 6,
+        "exp_intermediate": 9,
+        "exp_advanced": 10,
+        "lift_squat": 10,
+        "lift_bench": 10,
+        "lift_deadlift": 6,
+        "lift_ohp": 9,
+        "lift_pullup": 10,
+        "space_compact": 3,
+        "space_garage": 9,
+        "space_dedicated": 10,
+        "budget_under_500": 0,
+        "budget_500_1000": 8,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 6,
+        "ceiling_under_8": 5,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 10
       },
-      "specs": { "type": "Full Power Rack", "footprint": "49\" x 48\"", "height": "93\"", "weightCapacity": "1000 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Best value premium rack" },
-      "pairsWith": ["adjustable-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Full Power Rack",
+        "footprint": "49\" x 48\"",
+        "height": "93\"",
+        "weightCapacity": "1000 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Best value premium rack"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "titan-x3",
@@ -161,20 +395,54 @@
       "tier": "mid",
       "price": 650,
       "priceDisplay": "$650",
-      "amazonUrl": "https://www.amazon.com/s?k=Titan+X-3+Series+Flat+Foot+Rack&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B09CLRBGYC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31TkZ0u5krL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31TkZ0u5krL._SL160_.jpg",
       "scores": {
-        "goal_strength": 9, "goal_bodybuilding": 8, "goal_powerlifting": 8, "goal_functional": 7, "goal_general": 8,
-        "exp_beginner": 7, "exp_intermediate": 9, "exp_advanced": 8,
-        "lift_squat": 10, "lift_bench": 9, "lift_deadlift": 5, "lift_ohp": 8, "lift_pullup": 9,
-        "space_compact": 3, "space_garage": 9, "space_dedicated": 9,
-        "budget_under_500": 2, "budget_500_1000": 9, "budget_1000_2000": 6, "budget_over_2000": 3,
-        "ceiling_under_8": 5, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 9,
+        "goal_bodybuilding": 8,
+        "goal_powerlifting": 8,
+        "goal_functional": 7,
+        "goal_general": 8,
+        "exp_beginner": 7,
+        "exp_intermediate": 9,
+        "exp_advanced": 8,
+        "lift_squat": 10,
+        "lift_bench": 9,
+        "lift_deadlift": 5,
+        "lift_ohp": 8,
+        "lift_pullup": 9,
+        "space_compact": 3,
+        "space_garage": 9,
+        "space_dedicated": 9,
+        "budget_under_500": 2,
+        "budget_500_1000": 9,
+        "budget_1000_2000": 6,
+        "budget_over_2000": 3,
+        "ceiling_under_8": 5,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Full Power Rack", "footprint": "49\" x 48\"", "height": "91\"", "weightCapacity": "1100 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Heavy-duty rack at mid-range price" },
-      "pairsWith": ["adjustable-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Full Power Rack",
+        "footprint": "49\" x 48\"",
+        "height": "91\"",
+        "weightCapacity": "1100 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Heavy-duty rack at mid-range price"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "prx-profile-rack",
@@ -183,20 +451,52 @@
       "tier": "compact",
       "price": 700,
       "priceDisplay": "$700",
-      "amazonUrl": "https://www.amazon.com/s?k=PRx+Performance+Profile+Rack&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B09BDJKY2G?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31ndpeO1SDL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31ndpeO1SDL._SL160_.jpg",
       "scores": {
-        "goal_strength": 7, "goal_bodybuilding": 6, "goal_powerlifting": 5, "goal_functional": 7, "goal_general": 8,
-        "exp_beginner": 7, "exp_intermediate": 8, "exp_advanced": 5,
-        "lift_squat": 8, "lift_bench": 7, "lift_deadlift": 5, "lift_ohp": 7, "lift_pullup": 7,
-        "space_compact": 10, "space_garage": 7, "space_dedicated": 5,
-        "budget_under_500": 2, "budget_500_1000": 8, "budget_1000_2000": 5, "budget_over_2000": 2,
-        "ceiling_under_8": 7, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 7,
+        "goal_bodybuilding": 6,
+        "goal_powerlifting": 5,
+        "goal_functional": 7,
+        "goal_general": 8,
+        "exp_beginner": 7,
+        "exp_intermediate": 8,
+        "exp_advanced": 5,
+        "lift_squat": 8,
+        "lift_bench": 7,
+        "lift_deadlift": 5,
+        "lift_ohp": 7,
+        "lift_pullup": 7,
+        "space_compact": 10,
+        "space_garage": 7,
+        "space_dedicated": 5,
+        "budget_under_500": 2,
+        "budget_500_1000": 8,
+        "budget_1000_2000": 5,
+        "budget_over_2000": 2,
+        "ceiling_under_8": 7,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Wall-Mounted Folding", "footprint": "22\" x 24\" (folded)", "height": "90\"", "weightCapacity": "1000 lb", "pullUpBar": true, "jCups": true, "safetyBars": false },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Folds flat to 4\" - best for shared spaces" },
-      "pairsWith": ["flat-bench", "olympic-barbell", "bumper-plates"]
+      "specs": {
+        "type": "Wall-Mounted Folding",
+        "footprint": "22\" x 24\" (folded)",
+        "height": "90\"",
+        "weightCapacity": "1000 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": false
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Folds flat to 4\" - best for shared spaces"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "olympic-barbell",
+        "bumper-plates"
+      ]
     },
     {
       "id": "rogue-rm4",
@@ -209,16 +509,50 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 10, "goal_bodybuilding": 9, "goal_powerlifting": 10, "goal_functional": 8, "goal_general": 7,
-        "exp_beginner": 4, "exp_intermediate": 8, "exp_advanced": 10,
-        "lift_squat": 10, "lift_bench": 10, "lift_deadlift": 6, "lift_ohp": 9, "lift_pullup": 10,
-        "space_compact": 1, "space_garage": 7, "space_dedicated": 10,
-        "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 3, "budget_over_2000": 10,
-        "ceiling_under_8": 2, "ceiling_8_9": 7, "ceiling_over_9": 10
+        "goal_strength": 10,
+        "goal_bodybuilding": 9,
+        "goal_powerlifting": 10,
+        "goal_functional": 8,
+        "goal_general": 7,
+        "exp_beginner": 4,
+        "exp_intermediate": 8,
+        "exp_advanced": 10,
+        "lift_squat": 10,
+        "lift_bench": 10,
+        "lift_deadlift": 6,
+        "lift_ohp": 9,
+        "lift_pullup": 10,
+        "space_compact": 1,
+        "space_garage": 7,
+        "space_dedicated": 10,
+        "budget_under_500": 0,
+        "budget_500_1000": 0,
+        "budget_1000_2000": 3,
+        "budget_over_2000": 10,
+        "ceiling_under_8": 2,
+        "ceiling_8_9": 7,
+        "ceiling_over_9": 10
       },
-      "specs": { "type": "Monster Power Rack", "footprint": "53\" x 53\"", "height": "100\"", "weightCapacity": "1500+ lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Commercial-grade, unlimited upgrade path" },
-      "pairsWith": ["adjustable-bench", "rogue-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Monster Power Rack",
+        "footprint": "53\" x 53\"",
+        "height": "100\"",
+        "weightCapacity": "1500+ lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Commercial-grade, unlimited upgrade path"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "rogue-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "valor-bd7",
@@ -231,16 +565,48 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 7, "goal_bodybuilding": 7, "goal_powerlifting": 4, "goal_functional": 5, "goal_general": 7,
-        "exp_beginner": 9, "exp_intermediate": 6, "exp_advanced": 3,
-        "lift_squat": 8, "lift_bench": 7, "lift_deadlift": 4, "lift_ohp": 6, "lift_pullup": 7,
-        "space_compact": 5, "space_garage": 8, "space_dedicated": 7,
-        "budget_under_500": 10, "budget_500_1000": 6, "budget_1000_2000": 2, "budget_over_2000": 1,
-        "ceiling_under_8": 7, "ceiling_8_9": 9, "ceiling_over_9": 8
+        "goal_strength": 7,
+        "goal_bodybuilding": 7,
+        "goal_powerlifting": 4,
+        "goal_functional": 5,
+        "goal_general": 7,
+        "exp_beginner": 9,
+        "exp_intermediate": 6,
+        "exp_advanced": 3,
+        "lift_squat": 8,
+        "lift_bench": 7,
+        "lift_deadlift": 4,
+        "lift_ohp": 6,
+        "lift_pullup": 7,
+        "space_compact": 5,
+        "space_garage": 8,
+        "space_dedicated": 7,
+        "budget_under_500": 10,
+        "budget_500_1000": 6,
+        "budget_1000_2000": 2,
+        "budget_over_2000": 1,
+        "ceiling_under_8": 7,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 8
       },
-      "specs": { "type": "Power Rack", "footprint": "48\" x 42\"", "height": "83\"", "weightCapacity": "500 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "MAYBE", "bestFor": "Built-in lat pulldown option" },
-      "pairsWith": ["flat-bench", "olympic-barbell", "bumper-plates"]
+      "specs": {
+        "type": "Power Rack",
+        "footprint": "48\" x 42\"",
+        "height": "83\"",
+        "weightCapacity": "500 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "MAYBE",
+        "bestFor": "Built-in lat pulldown option"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "olympic-barbell",
+        "bumper-plates"
+      ]
     },
     {
       "id": "bells-of-steel-light-commercial",
@@ -253,16 +619,50 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 9, "goal_bodybuilding": 8, "goal_powerlifting": 8, "goal_functional": 7, "goal_general": 8,
-        "exp_beginner": 7, "exp_intermediate": 9, "exp_advanced": 8,
-        "lift_squat": 10, "lift_bench": 9, "lift_deadlift": 5, "lift_ohp": 8, "lift_pullup": 9,
-        "space_compact": 4, "space_garage": 9, "space_dedicated": 9,
-        "budget_under_500": 2, "budget_500_1000": 9, "budget_1000_2000": 6, "budget_over_2000": 3,
-        "ceiling_under_8": 5, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 9,
+        "goal_bodybuilding": 8,
+        "goal_powerlifting": 8,
+        "goal_functional": 7,
+        "goal_general": 8,
+        "exp_beginner": 7,
+        "exp_intermediate": 9,
+        "exp_advanced": 8,
+        "lift_squat": 10,
+        "lift_bench": 9,
+        "lift_deadlift": 5,
+        "lift_ohp": 8,
+        "lift_pullup": 9,
+        "space_compact": 4,
+        "space_garage": 9,
+        "space_dedicated": 9,
+        "budget_under_500": 2,
+        "budget_500_1000": 9,
+        "budget_1000_2000": 6,
+        "budget_over_2000": 3,
+        "ceiling_under_8": 5,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Full Power Rack", "footprint": "48\" x 48\"", "height": "90\"", "weightCapacity": "1000 lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Excellent build quality, Canadian brand" },
-      "pairsWith": ["adjustable-bench", "olympic-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Full Power Rack",
+        "footprint": "48\" x 48\"",
+        "height": "90\"",
+        "weightCapacity": "1000 lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Excellent build quality, Canadian brand"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "olympic-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     },
     {
       "id": "rep-squat-stand",
@@ -275,16 +675,48 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 7, "goal_bodybuilding": 6, "goal_powerlifting": 6, "goal_functional": 7, "goal_general": 7,
-        "exp_beginner": 7, "exp_intermediate": 8, "exp_advanced": 6,
-        "lift_squat": 8, "lift_bench": 6, "lift_deadlift": 6, "lift_ohp": 8, "lift_pullup": 5,
-        "space_compact": 9, "space_garage": 8, "space_dedicated": 6,
-        "budget_under_500": 9, "budget_500_1000": 7, "budget_1000_2000": 3, "budget_over_2000": 1,
-        "ceiling_under_8": 8, "ceiling_8_9": 9, "ceiling_over_9": 9
+        "goal_strength": 7,
+        "goal_bodybuilding": 6,
+        "goal_powerlifting": 6,
+        "goal_functional": 7,
+        "goal_general": 7,
+        "exp_beginner": 7,
+        "exp_intermediate": 8,
+        "exp_advanced": 6,
+        "lift_squat": 8,
+        "lift_bench": 6,
+        "lift_deadlift": 6,
+        "lift_ohp": 8,
+        "lift_pullup": 5,
+        "space_compact": 9,
+        "space_garage": 8,
+        "space_dedicated": 6,
+        "budget_under_500": 9,
+        "budget_500_1000": 7,
+        "budget_1000_2000": 3,
+        "budget_over_2000": 1,
+        "ceiling_under_8": 8,
+        "ceiling_8_9": 9,
+        "ceiling_over_9": 9
       },
-      "specs": { "type": "Squat Stand", "footprint": "48\" x 38\"", "height": "92\"", "weightCapacity": "1000 lb", "pullUpBar": false, "jCups": true, "safetyBars": false },
-      "verdict": { "garageGymReady": "YES", "bestFor": "Compact squat stand, add spotter arms" },
-      "pairsWith": ["flat-bench", "olympic-barbell", "bumper-plates"]
+      "specs": {
+        "type": "Squat Stand",
+        "footprint": "48\" x 38\"",
+        "height": "92\"",
+        "weightCapacity": "1000 lb",
+        "pullUpBar": false,
+        "jCups": true,
+        "safetyBars": false
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "Compact squat stand, add spotter arms"
+      },
+      "pairsWith": [
+        "flat-bench",
+        "olympic-barbell",
+        "bumper-plates"
+      ]
     },
     {
       "id": "rogue-rml490",
@@ -297,25 +729,108 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_strength": 10, "goal_bodybuilding": 9, "goal_powerlifting": 10, "goal_functional": 8, "goal_general": 8,
-        "exp_beginner": 5, "exp_intermediate": 9, "exp_advanced": 10,
-        "lift_squat": 10, "lift_bench": 10, "lift_deadlift": 6, "lift_ohp": 9, "lift_pullup": 10,
-        "space_compact": 2, "space_garage": 8, "space_dedicated": 10,
-        "budget_under_500": 0, "budget_500_1000": 2, "budget_1000_2000": 9, "budget_over_2000": 7,
-        "ceiling_under_8": 3, "ceiling_8_9": 8, "ceiling_over_9": 10
+        "goal_strength": 10,
+        "goal_bodybuilding": 9,
+        "goal_powerlifting": 10,
+        "goal_functional": 8,
+        "goal_general": 8,
+        "exp_beginner": 5,
+        "exp_intermediate": 9,
+        "exp_advanced": 10,
+        "lift_squat": 10,
+        "lift_bench": 10,
+        "lift_deadlift": 6,
+        "lift_ohp": 9,
+        "lift_pullup": 10,
+        "space_compact": 2,
+        "space_garage": 8,
+        "space_dedicated": 10,
+        "budget_under_500": 0,
+        "budget_500_1000": 2,
+        "budget_1000_2000": 9,
+        "budget_over_2000": 7,
+        "ceiling_under_8": 3,
+        "ceiling_8_9": 8,
+        "ceiling_over_9": 10
       },
-      "specs": { "type": "Full Power Rack (6-post)", "footprint": "53\" x 78\"", "height": "90\"", "weightCapacity": "1000+ lb", "pullUpBar": true, "jCups": true, "safetyBars": true },
-      "verdict": { "garageGymReady": "YES", "bestFor": "6-post design for serious lifters" },
-      "pairsWith": ["adjustable-bench", "rogue-barbell", "bumper-plates", "horse-stall-mat", "dip-attachment"]
+      "specs": {
+        "type": "Full Power Rack (6-post)",
+        "footprint": "53\" x 78\"",
+        "height": "90\"",
+        "weightCapacity": "1000+ lb",
+        "pullUpBar": true,
+        "jCups": true,
+        "safetyBars": true
+      },
+      "verdict": {
+        "garageGymReady": "YES",
+        "bestFor": "6-post design for serious lifters"
+      },
+      "pairsWith": [
+        "adjustable-bench",
+        "rogue-barbell",
+        "bumper-plates",
+        "horse-stall-mat",
+        "dip-attachment"
+      ]
     }
   ],
   "accessories": [
-    { "id": "flat-bench", "name": "Flat Weight Bench", "priceDisplay": "$55", "amazonUrl": "https://www.amazon.com/s?k=Flat+Weight+Bench&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "adjustable-bench", "name": "REP AB-3000 Adjustable Bench", "priceDisplay": "$300", "amazonUrl": "https://www.amazon.com/s?k=REP+AB-3000+Adjustable+Bench&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "olympic-barbell", "name": "CAP Barbell Olympic Bar (7ft)", "priceDisplay": "$120", "amazonUrl": "https://www.amazon.com/s?k=CAP+Barbell+Olympic+Bar+7ft&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "rogue-barbell", "name": "Rogue Ohio Bar", "priceDisplay": "$295", "amazonUrl": "https://www.amazon.com/s?k=Rogue+Ohio+Bar&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "bumper-plates", "name": "Bumper Plate Set (260 lb)", "priceDisplay": "$350", "amazonUrl": "https://www.amazon.com/s?k=Bumper+Plate+Set+260+lb&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "horse-stall-mat", "name": "Horse Stall Mat (4x6 ft)", "priceDisplay": "$50", "amazonUrl": "https://www.amazon.com/s?k=Horse+Stall+Mat+4x6&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "dip-attachment", "name": "Power Rack Dip Attachment", "priceDisplay": "$60", "amazonUrl": "https://www.amazon.com/s?k=Power+Rack+Dip+Attachment&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    {
+      "id": "flat-bench",
+      "name": "Flat Weight Bench",
+      "priceDisplay": "$55",
+      "amazonUrl": "https://www.amazon.com/s?k=Flat+Weight+Bench&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "adjustable-bench",
+      "name": "REP AB-3000 Adjustable Bench",
+      "priceDisplay": "$300",
+      "amazonUrl": "https://www.amazon.com/s?k=REP+AB-3000+Adjustable+Bench&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "olympic-barbell",
+      "name": "CAP Barbell Olympic Bar (7ft)",
+      "priceDisplay": "$120",
+      "amazonUrl": "https://www.amazon.com/s?k=CAP+Barbell+Olympic+Bar+7ft&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "rogue-barbell",
+      "name": "Rogue Ohio Bar",
+      "priceDisplay": "$295",
+      "amazonUrl": "https://www.amazon.com/s?k=Rogue+Ohio+Bar&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "bumper-plates",
+      "name": "Bumper Plate Set (260 lb)",
+      "priceDisplay": "$350",
+      "amazonUrl": "https://www.amazon.com/s?k=Bumper+Plate+Set+260+lb&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "horse-stall-mat",
+      "name": "Horse Stall Mat (4x6 ft)",
+      "priceDisplay": "$50",
+      "amazonUrl": "https://www.amazon.com/s?k=Horse+Stall+Mat+4x6&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "dip-attachment",
+      "name": "Power Rack Dip Attachment",
+      "priceDisplay": "$60",
+      "amazonUrl": "https://www.amazon.com/s?k=Power+Rack+Dip+Attachment&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    }
   ]
 }

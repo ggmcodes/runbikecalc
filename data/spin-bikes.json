@@ -7,19 +7,46 @@
       "tier": "budget",
       "price": 270,
       "priceDisplay": "$270",
-      "amazonUrl": "https://www.amazon.com/s?k=YOSUDA+Indoor+Cycling+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B097P77B69?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41m2gBVeddL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41m2gBVeddL._SL160_.jpg",
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 4, "goal_peloton_alt": 5,
-        "classes_must_have": 2, "classes_nice": 6, "classes_dont_need": 9,
-        "budget_under_300": 10, "budget_300_600": 6, "budget_600_1000": 3, "budget_over_1000": 1,
-        "space_small": 7, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 6, "deal_screen": 1, "deal_adjustable": 7, "deal_warranty": 4, "deal_compact": 7
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 4,
+        "goal_peloton_alt": 5,
+        "classes_must_have": 2,
+        "classes_nice": 6,
+        "classes_dont_need": 9,
+        "budget_under_300": 10,
+        "budget_300_600": 6,
+        "budget_600_1000": 3,
+        "budget_over_1000": 1,
+        "space_small": 7,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 6,
+        "deal_screen": 1,
+        "deal_adjustable": 7,
+        "deal_warranty": 4,
+        "deal_compact": 7
       },
-      "specs": { "resistance": "Felt pad", "flywheel": "35 lb", "display": "LCD (basic)", "maxWeight": "270 lb", "warranty": "1 year" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Budget-friendly starter bike" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "tablet-holder"]
+      "specs": {
+        "resistance": "Felt pad",
+        "flywheel": "35 lb",
+        "display": "LCD (basic)",
+        "maxWeight": "270 lb",
+        "warranty": "1 year"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Budget-friendly starter bike"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "tablet-holder"
+      ]
     },
     {
       "id": "joroto-x2",
@@ -32,15 +59,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 5, "goal_peloton_alt": 6,
-        "classes_must_have": 3, "classes_nice": 7, "classes_dont_need": 9,
-        "budget_under_300": 5, "budget_300_600": 10, "budget_600_1000": 5, "budget_over_1000": 2,
-        "space_small": 7, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 2, "deal_adjustable": 7, "deal_warranty": 5, "deal_compact": 7
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 5,
+        "goal_peloton_alt": 6,
+        "classes_must_have": 3,
+        "classes_nice": 7,
+        "classes_dont_need": 9,
+        "budget_under_300": 5,
+        "budget_300_600": 10,
+        "budget_600_1000": 5,
+        "budget_over_1000": 2,
+        "space_small": 7,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 2,
+        "deal_adjustable": 7,
+        "deal_warranty": 5,
+        "deal_compact": 7
       },
-      "specs": { "resistance": "Magnetic", "flywheel": "35 lb", "display": "LCD", "maxWeight": "280 lb", "warranty": "1 year" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Best value magnetic bike" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "tablet-holder"]
+      "specs": {
+        "resistance": "Magnetic",
+        "flywheel": "35 lb",
+        "display": "LCD",
+        "maxWeight": "280 lb",
+        "warranty": "1 year"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Best value magnetic bike"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "tablet-holder"
+      ]
     },
     {
       "id": "sunny-b1805",
@@ -53,15 +107,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 5, "goal_peloton_alt": 6,
-        "classes_must_have": 3, "classes_nice": 7, "classes_dont_need": 9,
-        "budget_under_300": 0, "budget_300_600": 10, "budget_600_1000": 5, "budget_over_1000": 2,
-        "space_small": 6, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 2, "deal_adjustable": 8, "deal_warranty": 5, "deal_compact": 6
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 5,
+        "goal_peloton_alt": 6,
+        "classes_must_have": 3,
+        "classes_nice": 7,
+        "classes_dont_need": 9,
+        "budget_under_300": 0,
+        "budget_300_600": 10,
+        "budget_600_1000": 5,
+        "budget_over_1000": 2,
+        "space_small": 6,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 2,
+        "deal_adjustable": 8,
+        "deal_warranty": 5,
+        "deal_compact": 6
       },
-      "specs": { "resistance": "Magnetic", "flywheel": "44 lb", "display": "LCD", "maxWeight": "300 lb", "warranty": "3 years frame" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Heavy flywheel on a budget" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "tablet-holder"]
+      "specs": {
+        "resistance": "Magnetic",
+        "flywheel": "44 lb",
+        "display": "LCD",
+        "maxWeight": "300 lb",
+        "warranty": "3 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Heavy flywheel on a budget"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "tablet-holder"
+      ]
     },
     {
       "id": "pyhigh-bike",
@@ -74,15 +155,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 7, "goal_cycling_training": 4, "goal_peloton_alt": 5,
-        "classes_must_have": 2, "classes_nice": 6, "classes_dont_need": 9,
-        "budget_under_300": 9, "budget_300_600": 8, "budget_600_1000": 3, "budget_over_1000": 1,
-        "space_small": 7, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 5, "deal_screen": 1, "deal_adjustable": 7, "deal_warranty": 4, "deal_compact": 7
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 7,
+        "goal_cycling_training": 4,
+        "goal_peloton_alt": 5,
+        "classes_must_have": 2,
+        "classes_nice": 6,
+        "classes_dont_need": 9,
+        "budget_under_300": 9,
+        "budget_300_600": 8,
+        "budget_600_1000": 3,
+        "budget_over_1000": 1,
+        "space_small": 7,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 5,
+        "deal_screen": 1,
+        "deal_adjustable": 7,
+        "deal_warranty": 4,
+        "deal_compact": 7
       },
-      "specs": { "resistance": "Felt pad", "flywheel": "35 lb", "display": "LCD (basic)", "maxWeight": "270 lb", "warranty": "1 year" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Affordable entry-level bike" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "tablet-holder"]
+      "specs": {
+        "resistance": "Felt pad",
+        "flywheel": "35 lb",
+        "display": "LCD (basic)",
+        "maxWeight": "270 lb",
+        "warranty": "1 year"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Affordable entry-level bike"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "tablet-holder"
+      ]
     },
     {
       "id": "schwinn-ic4",
@@ -91,19 +199,46 @@
       "tier": "mid",
       "price": 800,
       "priceDisplay": "$800",
-      "amazonUrl": "https://www.amazon.com/s?k=Schwinn+IC4+Indoor+Cycling+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B07WZXSDKW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41O1pNEjRZL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41O1pNEjRZL._SL160_.jpg",
       "scores": {
-        "goal_weight_loss": 8, "goal_general_fitness": 9, "goal_cycling_training": 7, "goal_peloton_alt": 9,
-        "classes_must_have": 7, "classes_nice": 9, "classes_dont_need": 7,
-        "budget_under_300": 0, "budget_300_600": 3, "budget_600_1000": 10, "budget_over_1000": 5,
-        "space_small": 6, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 5, "deal_adjustable": 8, "deal_warranty": 7, "deal_compact": 6
+        "goal_weight_loss": 8,
+        "goal_general_fitness": 9,
+        "goal_cycling_training": 7,
+        "goal_peloton_alt": 9,
+        "classes_must_have": 7,
+        "classes_nice": 9,
+        "classes_dont_need": 7,
+        "budget_under_300": 0,
+        "budget_300_600": 3,
+        "budget_600_1000": 10,
+        "budget_over_1000": 5,
+        "space_small": 6,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 5,
+        "deal_adjustable": 8,
+        "deal_warranty": 7,
+        "deal_compact": 6
       },
-      "specs": { "resistance": "Magnetic (100 levels)", "flywheel": "40 lb", "display": "LCD + Bluetooth", "maxWeight": "330 lb", "warranty": "10 years frame" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "#1 Peloton alternative" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "heart-rate-monitor"]
+      "specs": {
+        "resistance": "Magnetic (100 levels)",
+        "flywheel": "40 lb",
+        "display": "LCD + Bluetooth",
+        "maxWeight": "330 lb",
+        "warranty": "10 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "#1 Peloton alternative"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "heart-rate-monitor"
+      ]
     },
     {
       "id": "bowflex-c6",
@@ -116,15 +251,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 8, "goal_general_fitness": 9, "goal_cycling_training": 7, "goal_peloton_alt": 9,
-        "classes_must_have": 7, "classes_nice": 9, "classes_dont_need": 6,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 9, "budget_over_1000": 6,
-        "space_small": 5, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 5, "deal_adjustable": 9, "deal_warranty": 7, "deal_compact": 5
+        "goal_weight_loss": 8,
+        "goal_general_fitness": 9,
+        "goal_cycling_training": 7,
+        "goal_peloton_alt": 9,
+        "classes_must_have": 7,
+        "classes_nice": 9,
+        "classes_dont_need": 6,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 9,
+        "budget_over_1000": 6,
+        "space_small": 5,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 5,
+        "deal_adjustable": 9,
+        "deal_warranty": 7,
+        "deal_compact": 5
       },
-      "specs": { "resistance": "Magnetic (100 levels)", "flywheel": "40 lb", "display": "LCD + Bluetooth + dual HR", "maxWeight": "330 lb", "warranty": "10 years frame" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Best mid-range feature set" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (100 levels)",
+        "flywheel": "40 lb",
+        "display": "LCD + Bluetooth + dual HR",
+        "maxWeight": "330 lb",
+        "warranty": "10 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Best mid-range feature set"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "echelon-ex5",
@@ -137,15 +299,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 8, "goal_general_fitness": 8, "goal_cycling_training": 6, "goal_peloton_alt": 8,
-        "classes_must_have": 9, "classes_nice": 8, "classes_dont_need": 4,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 9, "budget_over_1000": 5,
-        "space_small": 6, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 7, "deal_screen": 8, "deal_adjustable": 7, "deal_warranty": 6, "deal_compact": 6
+        "goal_weight_loss": 8,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 6,
+        "goal_peloton_alt": 8,
+        "classes_must_have": 9,
+        "classes_nice": 8,
+        "classes_dont_need": 4,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 9,
+        "budget_over_1000": 5,
+        "space_small": 6,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 7,
+        "deal_screen": 8,
+        "deal_adjustable": 7,
+        "deal_warranty": 6,
+        "deal_compact": 6
       },
-      "specs": { "resistance": "Magnetic (32 levels)", "flywheel": "N/A (magnetic)", "display": "10\" HD touchscreen", "maxWeight": "300 lb", "warranty": "5 years frame" },
-      "verdict": { "skipPeloton": "MAYBE", "bestFor": "Built-in screen, Echelon classes" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (32 levels)",
+        "flywheel": "N/A (magnetic)",
+        "display": "10\" HD touchscreen",
+        "maxWeight": "300 lb",
+        "warranty": "5 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "MAYBE",
+        "bestFor": "Built-in screen, Echelon classes"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "joroto-x2pro",
@@ -158,15 +347,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 6, "goal_peloton_alt": 7,
-        "classes_must_have": 4, "classes_nice": 7, "classes_dont_need": 8,
-        "budget_under_300": 0, "budget_300_600": 10, "budget_600_1000": 7, "budget_over_1000": 3,
-        "space_small": 7, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 9, "deal_screen": 3, "deal_adjustable": 8, "deal_warranty": 5, "deal_compact": 7
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 6,
+        "goal_peloton_alt": 7,
+        "classes_must_have": 4,
+        "classes_nice": 7,
+        "classes_dont_need": 8,
+        "budget_under_300": 0,
+        "budget_300_600": 10,
+        "budget_600_1000": 7,
+        "budget_over_1000": 3,
+        "space_small": 7,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 9,
+        "deal_screen": 3,
+        "deal_adjustable": 8,
+        "deal_warranty": 5,
+        "deal_compact": 7
       },
-      "specs": { "resistance": "Magnetic", "flywheel": "40 lb", "display": "LCD + Bluetooth", "maxWeight": "300 lb", "warranty": "2 years" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Best value mid-range" },
-      "pairsWith": ["cadence-sensor", "bike-mat", "tablet-holder"]
+      "specs": {
+        "resistance": "Magnetic",
+        "flywheel": "40 lb",
+        "display": "LCD + Bluetooth",
+        "maxWeight": "300 lb",
+        "warranty": "2 years"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Best value mid-range"
+      },
+      "pairsWith": [
+        "cadence-sensor",
+        "bike-mat",
+        "tablet-holder"
+      ]
     },
     {
       "id": "peloton-bike",
@@ -179,15 +395,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 9, "goal_general_fitness": 9, "goal_cycling_training": 7, "goal_peloton_alt": 3,
-        "classes_must_have": 10, "classes_nice": 8, "classes_dont_need": 3,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 0, "budget_over_1000": 8,
-        "space_small": 5, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 10, "deal_adjustable": 7, "deal_warranty": 8, "deal_compact": 4
+        "goal_weight_loss": 9,
+        "goal_general_fitness": 9,
+        "goal_cycling_training": 7,
+        "goal_peloton_alt": 3,
+        "classes_must_have": 10,
+        "classes_nice": 8,
+        "classes_dont_need": 3,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 0,
+        "budget_over_1000": 8,
+        "space_small": 5,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 10,
+        "deal_adjustable": 7,
+        "deal_warranty": 8,
+        "deal_compact": 4
       },
-      "specs": { "resistance": "Magnetic", "flywheel": "N/A (magnetic)", "display": "21.5\" HD touchscreen", "maxWeight": "297 lb", "warranty": "5 years frame" },
-      "verdict": { "skipPeloton": "NO", "bestFor": "The gold standard for live classes" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic",
+        "flywheel": "N/A (magnetic)",
+        "display": "21.5\" HD touchscreen",
+        "maxWeight": "297 lb",
+        "warranty": "5 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "NO",
+        "bestFor": "The gold standard for live classes"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "peloton-bike-plus",
@@ -200,15 +443,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 9, "goal_general_fitness": 9, "goal_cycling_training": 8, "goal_peloton_alt": 2,
-        "classes_must_have": 10, "classes_nice": 8, "classes_dont_need": 2,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 0, "budget_over_1000": 6,
-        "space_small": 4, "space_medium": 7, "space_large": 8,
-        "deal_quiet": 8, "deal_screen": 10, "deal_adjustable": 9, "deal_warranty": 9, "deal_compact": 3
+        "goal_weight_loss": 9,
+        "goal_general_fitness": 9,
+        "goal_cycling_training": 8,
+        "goal_peloton_alt": 2,
+        "classes_must_have": 10,
+        "classes_nice": 8,
+        "classes_dont_need": 2,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 0,
+        "budget_over_1000": 6,
+        "space_small": 4,
+        "space_medium": 7,
+        "space_large": 8,
+        "deal_quiet": 8,
+        "deal_screen": 10,
+        "deal_adjustable": 9,
+        "deal_warranty": 9,
+        "deal_compact": 3
       },
-      "specs": { "resistance": "Magnetic (auto-follow)", "flywheel": "N/A", "display": "23.8\" rotating HD", "maxWeight": "297 lb", "warranty": "5 years frame" },
-      "verdict": { "skipPeloton": "NO", "bestFor": "Premium Peloton experience with auto-follow" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (auto-follow)",
+        "flywheel": "N/A",
+        "display": "23.8\" rotating HD",
+        "maxWeight": "297 lb",
+        "warranty": "5 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "NO",
+        "bestFor": "Premium Peloton experience with auto-follow"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "keiser-m3i",
@@ -217,19 +487,46 @@
       "tier": "premium",
       "price": 2200,
       "priceDisplay": "$2,200",
-      "amazonUrl": "https://www.amazon.com/s?k=Keiser+M3i+Indoor+Cycle&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B0DNQCPPSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31ZPhk5fWwL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31ZPhk5fWwL._SL160_.jpg",
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 10, "goal_peloton_alt": 5,
-        "classes_must_have": 3, "classes_nice": 5, "classes_dont_need": 9,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 0, "budget_over_1000": 8,
-        "space_small": 7, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 10, "deal_screen": 3, "deal_adjustable": 10, "deal_warranty": 10, "deal_compact": 7
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 10,
+        "goal_peloton_alt": 5,
+        "classes_must_have": 3,
+        "classes_nice": 5,
+        "classes_dont_need": 9,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 0,
+        "budget_over_1000": 8,
+        "space_small": 7,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 10,
+        "deal_screen": 3,
+        "deal_adjustable": 10,
+        "deal_warranty": 10,
+        "deal_compact": 7
       },
-      "specs": { "resistance": "Magnetic (rear)", "flywheel": "8 lb (rear-drive)", "display": "LCD + Bluetooth", "maxWeight": "350 lb", "warranty": "10 years frame" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Serious cyclists & gym-quality build" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (rear)",
+        "flywheel": "8 lb (rear-drive)",
+        "display": "LCD + Bluetooth",
+        "maxWeight": "350 lb",
+        "warranty": "10 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Serious cyclists & gym-quality build"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "stages-sc3",
@@ -242,15 +539,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 7, "goal_general_fitness": 8, "goal_cycling_training": 10, "goal_peloton_alt": 4,
-        "classes_must_have": 3, "classes_nice": 5, "classes_dont_need": 9,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 0, "budget_over_1000": 7,
-        "space_small": 6, "space_medium": 8, "space_large": 8,
-        "deal_quiet": 10, "deal_screen": 3, "deal_adjustable": 10, "deal_warranty": 9, "deal_compact": 5
+        "goal_weight_loss": 7,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 10,
+        "goal_peloton_alt": 4,
+        "classes_must_have": 3,
+        "classes_nice": 5,
+        "classes_dont_need": 9,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 0,
+        "budget_over_1000": 7,
+        "space_small": 6,
+        "space_medium": 8,
+        "space_large": 8,
+        "deal_quiet": 10,
+        "deal_screen": 3,
+        "deal_adjustable": 10,
+        "deal_warranty": 9,
+        "deal_compact": 5
       },
-      "specs": { "resistance": "Magnetic (belt)", "flywheel": "50 lb", "display": "LCD + Stages Power", "maxWeight": "350 lb", "warranty": "10 years frame" },
-      "verdict": { "skipPeloton": "YES", "bestFor": "Power-based training with real watts" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (belt)",
+        "flywheel": "50 lb",
+        "display": "LCD + Stages Power",
+        "maxWeight": "350 lb",
+        "warranty": "10 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "YES",
+        "bestFor": "Power-based training with real watts"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     },
     {
       "id": "nordictrack-s22i",
@@ -263,22 +587,84 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_weight_loss": 9, "goal_general_fitness": 9, "goal_cycling_training": 7, "goal_peloton_alt": 8,
-        "classes_must_have": 10, "classes_nice": 9, "classes_dont_need": 3,
-        "budget_under_300": 0, "budget_300_600": 0, "budget_600_1000": 0, "budget_over_1000": 8,
-        "space_small": 4, "space_medium": 7, "space_large": 8,
-        "deal_quiet": 7, "deal_screen": 10, "deal_adjustable": 8, "deal_warranty": 7, "deal_compact": 4
+        "goal_weight_loss": 9,
+        "goal_general_fitness": 9,
+        "goal_cycling_training": 7,
+        "goal_peloton_alt": 8,
+        "classes_must_have": 10,
+        "classes_nice": 9,
+        "classes_dont_need": 3,
+        "budget_under_300": 0,
+        "budget_300_600": 0,
+        "budget_600_1000": 0,
+        "budget_over_1000": 8,
+        "space_small": 4,
+        "space_medium": 7,
+        "space_large": 8,
+        "deal_quiet": 7,
+        "deal_screen": 10,
+        "deal_adjustable": 8,
+        "deal_warranty": 7,
+        "deal_compact": 4
       },
-      "specs": { "resistance": "Magnetic (auto-adjust)", "flywheel": "N/A", "display": "22\" HD touchscreen", "maxWeight": "350 lb", "warranty": "10 years frame" },
-      "verdict": { "skipPeloton": "MAYBE", "bestFor": "iFIT classes with auto-incline/decline" },
-      "pairsWith": ["bike-mat", "heart-rate-monitor", "spin-shoes"]
+      "specs": {
+        "resistance": "Magnetic (auto-adjust)",
+        "flywheel": "N/A",
+        "display": "22\" HD touchscreen",
+        "maxWeight": "350 lb",
+        "warranty": "10 years frame"
+      },
+      "verdict": {
+        "skipPeloton": "MAYBE",
+        "bestFor": "iFIT classes with auto-incline/decline"
+      },
+      "pairsWith": [
+        "bike-mat",
+        "heart-rate-monitor",
+        "spin-shoes"
+      ]
     }
   ],
   "accessories": [
-    { "id": "cadence-sensor", "name": "Wahoo RPM Cadence Sensor", "priceDisplay": "$40", "amazonUrl": "https://www.amazon.com/s?k=Wahoo+RPM+Cadence+Sensor&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "bike-mat", "name": "Spin Bike Floor Mat", "priceDisplay": "$30", "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Floor+Mat&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "tablet-holder", "name": "Spin Bike Tablet Holder", "priceDisplay": "$20", "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Tablet+Holder&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "heart-rate-monitor", "name": "Polar H10 HR Monitor", "priceDisplay": "$90", "amazonUrl": "https://www.amazon.com/s?k=Polar+H10+HR+Monitor&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "spin-shoes", "name": "SPD Cycling Shoes", "priceDisplay": "$60", "amazonUrl": "https://www.amazon.com/s?k=SPD+Cycling+Shoes&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    {
+      "id": "cadence-sensor",
+      "name": "Wahoo RPM Cadence Sensor",
+      "priceDisplay": "$40",
+      "amazonUrl": "https://www.amazon.com/dp/B00L9XNFPY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41yYR-Au2ZL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41yYR-Au2ZL._SL160_.jpg"
+    },
+    {
+      "id": "bike-mat",
+      "name": "Spin Bike Floor Mat",
+      "priceDisplay": "$30",
+      "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Floor+Mat&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "tablet-holder",
+      "name": "Spin Bike Tablet Holder",
+      "priceDisplay": "$20",
+      "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Tablet+Holder&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "heart-rate-monitor",
+      "name": "Polar H10 HR Monitor",
+      "priceDisplay": "$90",
+      "amazonUrl": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL160_.jpg"
+    },
+    {
+      "id": "spin-shoes",
+      "name": "SPD Cycling Shoes",
+      "priceDisplay": "$60",
+      "amazonUrl": "https://www.amazon.com/s?k=SPD+Cycling+Shoes&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    }
   ]
 }

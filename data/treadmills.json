@@ -7,20 +7,47 @@
       "tier": "budget",
       "price": 300,
       "priceDisplay": "$300",
-      "amazonUrl": "https://www.amazon.com/s?k=Goplus+2-in-1+Folding+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B081JDMJ4J?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41l8lp100GL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41l8lp100GL._SL160_.jpg",
       "scores": {
-        "goal_walk": 8, "goal_jog": 6, "goal_run": 2, "goal_train": 1,
-        "workout_steady": 6, "workout_hiit": 3, "workout_walk_jog": 9, "workout_incline": 1,
-        "incline_none": 10, "incline_some": 1, "incline_max": 0,
-        "screen_yes": 2, "screen_nice": 5, "screen_no": 9,
-        "budget_under_500": 10, "budget_500_1000": 5, "budget_1000_2000": 2, "budget_over_2000": 1,
-        "space_compact": 10, "space_medium": 7, "space_large": 5
+        "goal_walk": 8,
+        "goal_jog": 6,
+        "goal_run": 2,
+        "goal_train": 1,
+        "workout_steady": 6,
+        "workout_hiit": 3,
+        "workout_walk_jog": 9,
+        "workout_incline": 1,
+        "incline_none": 10,
+        "incline_some": 1,
+        "incline_max": 0,
+        "screen_yes": 2,
+        "screen_nice": 5,
+        "screen_no": 9,
+        "budget_under_500": 10,
+        "budget_500_1000": 5,
+        "budget_1000_2000": 2,
+        "budget_over_2000": 1,
+        "space_compact": 10,
+        "space_medium": 7,
+        "space_large": 5
       },
-      "specs": { "speed": "0.5-7.5 mph", "incline": "None", "deck": "40\" x 16\"", "motor": "2.25 HP", "folding": true, "maxWeight": "265 lb" },
-      "verdict": { "bestFor": "Under-desk walking & light jogging" },
-      "pairsWith": ["tread-mat", "tread-lube"]
+      "specs": {
+        "speed": "0.5-7.5 mph",
+        "incline": "None",
+        "deck": "40\" x 16\"",
+        "motor": "2.25 HP",
+        "folding": true,
+        "maxWeight": "265 lb"
+      },
+      "verdict": {
+        "bestFor": "Under-desk walking & light jogging"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube"
+      ]
     },
     {
       "id": "sperax-pad",
@@ -33,16 +60,43 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 9, "goal_jog": 4, "goal_run": 1, "goal_train": 0,
-        "workout_steady": 5, "workout_hiit": 1, "workout_walk_jog": 9, "workout_incline": 0,
-        "incline_none": 10, "incline_some": 0, "incline_max": 0,
-        "screen_yes": 1, "screen_nice": 3, "screen_no": 9,
-        "budget_under_500": 10, "budget_500_1000": 4, "budget_1000_2000": 1, "budget_over_2000": 0,
-        "space_compact": 10, "space_medium": 6, "space_large": 4
+        "goal_walk": 9,
+        "goal_jog": 4,
+        "goal_run": 1,
+        "goal_train": 0,
+        "workout_steady": 5,
+        "workout_hiit": 1,
+        "workout_walk_jog": 9,
+        "workout_incline": 0,
+        "incline_none": 10,
+        "incline_some": 0,
+        "incline_max": 0,
+        "screen_yes": 1,
+        "screen_nice": 3,
+        "screen_no": 9,
+        "budget_under_500": 10,
+        "budget_500_1000": 4,
+        "budget_1000_2000": 1,
+        "budget_over_2000": 0,
+        "space_compact": 10,
+        "space_medium": 6,
+        "space_large": 4
       },
-      "specs": { "speed": "0.5-6 mph", "incline": "None", "deck": "42\" x 17\"", "motor": "2.0 HP", "folding": true, "maxWeight": "240 lb" },
-      "verdict": { "bestFor": "Compact walking pad for small spaces" },
-      "pairsWith": ["tread-mat", "standing-desk"]
+      "specs": {
+        "speed": "0.5-6 mph",
+        "incline": "None",
+        "deck": "42\" x 17\"",
+        "motor": "2.0 HP",
+        "folding": true,
+        "maxWeight": "240 lb"
+      },
+      "verdict": {
+        "bestFor": "Compact walking pad for small spaces"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "standing-desk"
+      ]
     },
     {
       "id": "xterra-tr150",
@@ -51,20 +105,47 @@
       "tier": "budget",
       "price": 400,
       "priceDisplay": "$400",
-      "amazonUrl": "https://www.amazon.com/s?k=XTERRA+Fitness+TR150+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B01M0L0D90?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41fspUhVLTL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41fspUhVLTL._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 7, "goal_run": 4, "goal_train": 2,
-        "workout_steady": 7, "workout_hiit": 3, "workout_walk_jog": 8, "workout_incline": 4,
-        "incline_none": 7, "incline_some": 6, "incline_max": 1,
-        "screen_yes": 2, "screen_nice": 5, "screen_no": 8,
-        "budget_under_500": 10, "budget_500_1000": 6, "budget_1000_2000": 2, "budget_over_2000": 1,
-        "space_compact": 5, "space_medium": 8, "space_large": 7
+        "goal_walk": 7,
+        "goal_jog": 7,
+        "goal_run": 4,
+        "goal_train": 2,
+        "workout_steady": 7,
+        "workout_hiit": 3,
+        "workout_walk_jog": 8,
+        "workout_incline": 4,
+        "incline_none": 7,
+        "incline_some": 6,
+        "incline_max": 1,
+        "screen_yes": 2,
+        "screen_nice": 5,
+        "screen_no": 8,
+        "budget_under_500": 10,
+        "budget_500_1000": 6,
+        "budget_1000_2000": 2,
+        "budget_over_2000": 1,
+        "space_compact": 5,
+        "space_medium": 8,
+        "space_large": 7
       },
-      "specs": { "speed": "0.5-10 mph", "incline": "3 manual levels", "deck": "50\" x 16\"", "motor": "2.25 HP", "folding": true, "maxWeight": "250 lb" },
-      "verdict": { "bestFor": "Budget folding treadmill for walking & jogging" },
-      "pairsWith": ["tread-mat", "tread-lube"]
+      "specs": {
+        "speed": "0.5-10 mph",
+        "incline": "3 manual levels",
+        "deck": "50\" x 16\"",
+        "motor": "2.25 HP",
+        "folding": true,
+        "maxWeight": "250 lb"
+      },
+      "verdict": {
+        "bestFor": "Budget folding treadmill for walking & jogging"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube"
+      ]
     },
     {
       "id": "sole-f63",
@@ -73,20 +154,48 @@
       "tier": "mid",
       "price": 1000,
       "priceDisplay": "$1,000",
-      "amazonUrl": "https://www.amazon.com/s?k=Sole+F63+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B07QQBZBHK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/4177ZQhyhvL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/4177ZQhyhvL._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 9, "goal_run": 8, "goal_train": 6,
-        "workout_steady": 9, "workout_hiit": 6, "workout_walk_jog": 7, "workout_incline": 7,
-        "incline_none": 6, "incline_some": 9, "incline_max": 5,
-        "screen_yes": 4, "screen_nice": 7, "screen_no": 7,
-        "budget_under_500": 0, "budget_500_1000": 10, "budget_1000_2000": 7, "budget_over_2000": 3,
-        "space_compact": 3, "space_medium": 8, "space_large": 8
+        "goal_walk": 7,
+        "goal_jog": 9,
+        "goal_run": 8,
+        "goal_train": 6,
+        "workout_steady": 9,
+        "workout_hiit": 6,
+        "workout_walk_jog": 7,
+        "workout_incline": 7,
+        "incline_none": 6,
+        "incline_some": 9,
+        "incline_max": 5,
+        "screen_yes": 4,
+        "screen_nice": 7,
+        "screen_no": 7,
+        "budget_under_500": 0,
+        "budget_500_1000": 10,
+        "budget_1000_2000": 7,
+        "budget_over_2000": 3,
+        "space_compact": 3,
+        "space_medium": 8,
+        "space_large": 8
       },
-      "specs": { "speed": "0.5-12 mph", "incline": "0-15%", "deck": "60\" x 20\"", "motor": "3.0 HP", "folding": true, "maxWeight": "325 lb" },
-      "verdict": { "bestFor": "Best mid-range runner's treadmill" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0.5-12 mph",
+        "incline": "0-15%",
+        "deck": "60\" x 20\"",
+        "motor": "3.0 HP",
+        "folding": true,
+        "maxWeight": "325 lb"
+      },
+      "verdict": {
+        "bestFor": "Best mid-range runner's treadmill"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "horizon-7.0at",
@@ -95,20 +204,48 @@
       "tier": "mid",
       "price": 1000,
       "priceDisplay": "$1,000",
-      "amazonUrl": "https://www.amazon.com/s?k=Horizon+7.0+AT+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B0DJ3N5SY9?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 8, "goal_run": 9, "goal_train": 7,
-        "workout_steady": 8, "workout_hiit": 8, "workout_walk_jog": 7, "workout_incline": 7,
-        "incline_none": 6, "incline_some": 9, "incline_max": 5,
-        "screen_yes": 4, "screen_nice": 7, "screen_no": 7,
-        "budget_under_500": 0, "budget_500_1000": 10, "budget_1000_2000": 7, "budget_over_2000": 3,
-        "space_compact": 3, "space_medium": 8, "space_large": 8
+        "goal_walk": 7,
+        "goal_jog": 8,
+        "goal_run": 9,
+        "goal_train": 7,
+        "workout_steady": 8,
+        "workout_hiit": 8,
+        "workout_walk_jog": 7,
+        "workout_incline": 7,
+        "incline_none": 6,
+        "incline_some": 9,
+        "incline_max": 5,
+        "screen_yes": 4,
+        "screen_nice": 7,
+        "screen_no": 7,
+        "budget_under_500": 0,
+        "budget_500_1000": 10,
+        "budget_1000_2000": 7,
+        "budget_over_2000": 3,
+        "space_compact": 3,
+        "space_medium": 8,
+        "space_large": 8
       },
-      "specs": { "speed": "0.5-12 mph", "incline": "0-15%", "deck": "60\" x 20\"", "motor": "3.0 HP", "folding": true, "maxWeight": "325 lb" },
-      "verdict": { "bestFor": "HIIT-friendly with rapid speed changes" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0.5-12 mph",
+        "incline": "0-15%",
+        "deck": "60\" x 20\"",
+        "motor": "3.0 HP",
+        "folding": true,
+        "maxWeight": "325 lb"
+      },
+      "verdict": {
+        "bestFor": "HIIT-friendly with rapid speed changes"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "nordictrack-1750",
@@ -117,20 +254,48 @@
       "tier": "premium",
       "price": 1800,
       "priceDisplay": "$1,800",
-      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+Commercial+1750&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B0D5YKF4SK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31BAhBBSPSL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31BAhBBSPSL._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 9, "goal_run": 9, "goal_train": 8,
-        "workout_steady": 9, "workout_hiit": 8, "workout_walk_jog": 7, "workout_incline": 10,
-        "incline_none": 5, "incline_some": 9, "incline_max": 10,
-        "screen_yes": 10, "screen_nice": 8, "screen_no": 3,
-        "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 10, "budget_over_2000": 6,
-        "space_compact": 2, "space_medium": 7, "space_large": 9
+        "goal_walk": 7,
+        "goal_jog": 9,
+        "goal_run": 9,
+        "goal_train": 8,
+        "workout_steady": 9,
+        "workout_hiit": 8,
+        "workout_walk_jog": 7,
+        "workout_incline": 10,
+        "incline_none": 5,
+        "incline_some": 9,
+        "incline_max": 10,
+        "screen_yes": 10,
+        "screen_nice": 8,
+        "screen_no": 3,
+        "budget_under_500": 0,
+        "budget_500_1000": 0,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 6,
+        "space_compact": 2,
+        "space_medium": 7,
+        "space_large": 9
       },
-      "specs": { "speed": "0-12 mph", "incline": "-3% to 15%", "deck": "60\" x 22\"", "motor": "3.5 HP", "folding": true, "maxWeight": "300 lb" },
-      "verdict": { "bestFor": "iFIT classes with auto-adjust incline & decline" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0-12 mph",
+        "incline": "-3% to 15%",
+        "deck": "60\" x 22\"",
+        "motor": "3.5 HP",
+        "folding": true,
+        "maxWeight": "300 lb"
+      },
+      "verdict": {
+        "bestFor": "iFIT classes with auto-adjust incline & decline"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "peloton-tread",
@@ -139,20 +304,47 @@
       "tier": "premium",
       "price": 2995,
       "priceDisplay": "$2,995",
-      "amazonUrl": "https://www.amazon.com/s?k=Peloton+Tread&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B0FLQQ6Q4P?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31Z08HxiXYL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31Z08HxiXYL._SL160_.jpg",
       "scores": {
-        "goal_walk": 6, "goal_jog": 9, "goal_run": 9, "goal_train": 8,
-        "workout_steady": 9, "workout_hiit": 9, "workout_walk_jog": 6, "workout_incline": 8,
-        "incline_none": 5, "incline_some": 8, "incline_max": 7,
-        "screen_yes": 10, "screen_nice": 8, "screen_no": 2,
-        "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 0, "budget_over_2000": 8,
-        "space_compact": 2, "space_medium": 6, "space_large": 9
+        "goal_walk": 6,
+        "goal_jog": 9,
+        "goal_run": 9,
+        "goal_train": 8,
+        "workout_steady": 9,
+        "workout_hiit": 9,
+        "workout_walk_jog": 6,
+        "workout_incline": 8,
+        "incline_none": 5,
+        "incline_some": 8,
+        "incline_max": 7,
+        "screen_yes": 10,
+        "screen_nice": 8,
+        "screen_no": 2,
+        "budget_under_500": 0,
+        "budget_500_1000": 0,
+        "budget_1000_2000": 0,
+        "budget_over_2000": 8,
+        "space_compact": 2,
+        "space_medium": 6,
+        "space_large": 9
       },
-      "specs": { "speed": "0-12.5 mph", "incline": "0-12.5%", "deck": "59\" x 20\"", "motor": "3.0 HP", "folding": false, "maxWeight": "300 lb" },
-      "verdict": { "bestFor": "Best-in-class live running classes" },
-      "pairsWith": ["tread-mat", "heart-rate-strap"]
+      "specs": {
+        "speed": "0-12.5 mph",
+        "incline": "0-12.5%",
+        "deck": "59\" x 20\"",
+        "motor": "3.0 HP",
+        "folding": false,
+        "maxWeight": "300 lb"
+      },
+      "verdict": {
+        "bestFor": "Best-in-class live running classes"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "proform-pro-2000",
@@ -161,20 +353,48 @@
       "tier": "mid",
       "price": 1300,
       "priceDisplay": "$1,300",
-      "amazonUrl": "https://www.amazon.com/s?k=ProForm+Pro+2000+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B08N3NL32C?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31M4plx9X1L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31M4plx9X1L._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 8, "goal_run": 8, "goal_train": 7,
-        "workout_steady": 8, "workout_hiit": 7, "workout_walk_jog": 7, "workout_incline": 9,
-        "incline_none": 5, "incline_some": 9, "incline_max": 9,
-        "screen_yes": 8, "screen_nice": 8, "screen_no": 4,
-        "budget_under_500": 0, "budget_500_1000": 3, "budget_1000_2000": 10, "budget_over_2000": 5,
-        "space_compact": 2, "space_medium": 7, "space_large": 9
+        "goal_walk": 7,
+        "goal_jog": 8,
+        "goal_run": 8,
+        "goal_train": 7,
+        "workout_steady": 8,
+        "workout_hiit": 7,
+        "workout_walk_jog": 7,
+        "workout_incline": 9,
+        "incline_none": 5,
+        "incline_some": 9,
+        "incline_max": 9,
+        "screen_yes": 8,
+        "screen_nice": 8,
+        "screen_no": 4,
+        "budget_under_500": 0,
+        "budget_500_1000": 3,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 5,
+        "space_compact": 2,
+        "space_medium": 7,
+        "space_large": 9
       },
-      "specs": { "speed": "0-12 mph", "incline": "-3% to 15%", "deck": "60\" x 20\"", "motor": "3.25 HP", "folding": true, "maxWeight": "300 lb" },
-      "verdict": { "bestFor": "Decline + incline training on a budget" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0-12 mph",
+        "incline": "-3% to 15%",
+        "deck": "60\" x 20\"",
+        "motor": "3.25 HP",
+        "folding": true,
+        "maxWeight": "300 lb"
+      },
+      "verdict": {
+        "bestFor": "Decline + incline training on a budget"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "sole-f80",
@@ -187,16 +407,44 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 7, "goal_jog": 9, "goal_run": 9, "goal_train": 7,
-        "workout_steady": 9, "workout_hiit": 7, "workout_walk_jog": 7, "workout_incline": 8,
-        "incline_none": 6, "incline_some": 9, "incline_max": 6,
-        "screen_yes": 5, "screen_nice": 7, "screen_no": 7,
-        "budget_under_500": 0, "budget_500_1000": 2, "budget_1000_2000": 10, "budget_over_2000": 5,
-        "space_compact": 3, "space_medium": 8, "space_large": 8
+        "goal_walk": 7,
+        "goal_jog": 9,
+        "goal_run": 9,
+        "goal_train": 7,
+        "workout_steady": 9,
+        "workout_hiit": 7,
+        "workout_walk_jog": 7,
+        "workout_incline": 8,
+        "incline_none": 6,
+        "incline_some": 9,
+        "incline_max": 6,
+        "screen_yes": 5,
+        "screen_nice": 7,
+        "screen_no": 7,
+        "budget_under_500": 0,
+        "budget_500_1000": 2,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 5,
+        "space_compact": 3,
+        "space_medium": 8,
+        "space_large": 8
       },
-      "specs": { "speed": "0.5-12 mph", "incline": "0-15%", "deck": "60\" x 22\"", "motor": "3.5 HP", "folding": true, "maxWeight": "375 lb" },
-      "verdict": { "bestFor": "Durable, cushioned deck for daily runners" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0.5-12 mph",
+        "incline": "0-15%",
+        "deck": "60\" x 22\"",
+        "motor": "3.5 HP",
+        "folding": true,
+        "maxWeight": "375 lb"
+      },
+      "verdict": {
+        "bestFor": "Durable, cushioned deck for daily runners"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "nordictrack-x32i",
@@ -209,16 +457,43 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 6, "goal_jog": 8, "goal_run": 8, "goal_train": 10,
-        "workout_steady": 8, "workout_hiit": 9, "workout_walk_jog": 6, "workout_incline": 10,
-        "incline_none": 3, "incline_some": 8, "incline_max": 10,
-        "screen_yes": 10, "screen_nice": 8, "screen_no": 2,
-        "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 0, "budget_over_2000": 9,
-        "space_compact": 1, "space_medium": 5, "space_large": 9
+        "goal_walk": 6,
+        "goal_jog": 8,
+        "goal_run": 8,
+        "goal_train": 10,
+        "workout_steady": 8,
+        "workout_hiit": 9,
+        "workout_walk_jog": 6,
+        "workout_incline": 10,
+        "incline_none": 3,
+        "incline_some": 8,
+        "incline_max": 10,
+        "screen_yes": 10,
+        "screen_nice": 8,
+        "screen_no": 2,
+        "budget_under_500": 0,
+        "budget_500_1000": 0,
+        "budget_1000_2000": 0,
+        "budget_over_2000": 9,
+        "space_compact": 1,
+        "space_medium": 5,
+        "space_large": 9
       },
-      "specs": { "speed": "0-12 mph", "incline": "-6% to 40%", "deck": "65\" x 22\" (slat belt)", "motor": "4.25 HP", "folding": false, "maxWeight": "300 lb" },
-      "verdict": { "bestFor": "Extreme incline training (-6% to 40%)" },
-      "pairsWith": ["tread-mat", "heart-rate-strap"]
+      "specs": {
+        "speed": "0-12 mph",
+        "incline": "-6% to 40%",
+        "deck": "65\" x 22\" (slat belt)",
+        "motor": "4.25 HP",
+        "folding": false,
+        "maxWeight": "300 lb"
+      },
+      "verdict": {
+        "bestFor": "Extreme incline training (-6% to 40%)"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "bowflex-tread-10",
@@ -231,16 +506,44 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 7, "goal_jog": 8, "goal_run": 8, "goal_train": 7,
-        "workout_steady": 8, "workout_hiit": 7, "workout_walk_jog": 7, "workout_incline": 7,
-        "incline_none": 5, "incline_some": 8, "incline_max": 5,
-        "screen_yes": 9, "screen_nice": 8, "screen_no": 3,
-        "budget_under_500": 0, "budget_500_1000": 2, "budget_1000_2000": 9, "budget_over_2000": 4,
-        "space_compact": 3, "space_medium": 7, "space_large": 8
+        "goal_walk": 7,
+        "goal_jog": 8,
+        "goal_run": 8,
+        "goal_train": 7,
+        "workout_steady": 8,
+        "workout_hiit": 7,
+        "workout_walk_jog": 7,
+        "workout_incline": 7,
+        "incline_none": 5,
+        "incline_some": 8,
+        "incline_max": 5,
+        "screen_yes": 9,
+        "screen_nice": 8,
+        "screen_no": 3,
+        "budget_under_500": 0,
+        "budget_500_1000": 2,
+        "budget_1000_2000": 9,
+        "budget_over_2000": 4,
+        "space_compact": 3,
+        "space_medium": 7,
+        "space_large": 8
       },
-      "specs": { "speed": "0-12 mph", "incline": "-5% to 15%", "deck": "60\" x 22\"", "motor": "3.75 HP", "folding": true, "maxWeight": "400 lb" },
-      "verdict": { "bestFor": "High weight capacity with JRNY classes" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0-12 mph",
+        "incline": "-5% to 15%",
+        "deck": "60\" x 22\"",
+        "motor": "3.75 HP",
+        "folding": true,
+        "maxWeight": "400 lb"
+      },
+      "verdict": {
+        "bestFor": "High weight capacity with JRNY classes"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "horizon-studio",
@@ -249,20 +552,48 @@
       "tier": "mid",
       "price": 1300,
       "priceDisplay": "$1,300",
-      "amazonUrl": "https://www.amazon.com/s?k=Horizon+7.4+AT+Studio+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "amazonUrl": "https://www.amazon.com/dp/B08JQQHR7R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41wMaZFsNwL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41wMaZFsNwL._SL160_.jpg",
       "scores": {
-        "goal_walk": 7, "goal_jog": 8, "goal_run": 9, "goal_train": 7,
-        "workout_steady": 8, "workout_hiit": 9, "workout_walk_jog": 7, "workout_incline": 7,
-        "incline_none": 6, "incline_some": 8, "incline_max": 5,
-        "screen_yes": 5, "screen_nice": 7, "screen_no": 7,
-        "budget_under_500": 0, "budget_500_1000": 3, "budget_1000_2000": 10, "budget_over_2000": 4,
-        "space_compact": 3, "space_medium": 8, "space_large": 8
+        "goal_walk": 7,
+        "goal_jog": 8,
+        "goal_run": 9,
+        "goal_train": 7,
+        "workout_steady": 8,
+        "workout_hiit": 9,
+        "workout_walk_jog": 7,
+        "workout_incline": 7,
+        "incline_none": 6,
+        "incline_some": 8,
+        "incline_max": 5,
+        "screen_yes": 5,
+        "screen_nice": 7,
+        "screen_no": 7,
+        "budget_under_500": 0,
+        "budget_500_1000": 3,
+        "budget_1000_2000": 10,
+        "budget_over_2000": 4,
+        "space_compact": 3,
+        "space_medium": 8,
+        "space_large": 8
       },
-      "specs": { "speed": "0.5-12 mph", "incline": "0-15%", "deck": "60\" x 20\"", "motor": "3.5 HP", "folding": true, "maxWeight": "350 lb" },
-      "verdict": { "bestFor": "Fastest speed change dials for sprint intervals" },
-      "pairsWith": ["tread-mat", "tread-lube", "heart-rate-strap"]
+      "specs": {
+        "speed": "0.5-12 mph",
+        "incline": "0-15%",
+        "deck": "60\" x 20\"",
+        "motor": "3.5 HP",
+        "folding": true,
+        "maxWeight": "350 lb"
+      },
+      "verdict": {
+        "bestFor": "Fastest speed change dials for sprint intervals"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube",
+        "heart-rate-strap"
+      ]
     },
     {
       "id": "woodway-4front",
@@ -275,16 +606,42 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 5, "goal_jog": 8, "goal_run": 10, "goal_train": 10,
-        "workout_steady": 10, "workout_hiit": 8, "workout_walk_jog": 4, "workout_incline": 6,
-        "incline_none": 6, "incline_some": 7, "incline_max": 4,
-        "screen_yes": 3, "screen_nice": 5, "screen_no": 8,
-        "budget_under_500": 0, "budget_500_1000": 0, "budget_1000_2000": 0, "budget_over_2000": 7,
-        "space_compact": 1, "space_medium": 4, "space_large": 8
+        "goal_walk": 5,
+        "goal_jog": 8,
+        "goal_run": 10,
+        "goal_train": 10,
+        "workout_steady": 10,
+        "workout_hiit": 8,
+        "workout_walk_jog": 4,
+        "workout_incline": 6,
+        "incline_none": 6,
+        "incline_some": 7,
+        "incline_max": 4,
+        "screen_yes": 3,
+        "screen_nice": 5,
+        "screen_no": 8,
+        "budget_under_500": 0,
+        "budget_500_1000": 0,
+        "budget_1000_2000": 0,
+        "budget_over_2000": 7,
+        "space_compact": 1,
+        "space_medium": 4,
+        "space_large": 8
       },
-      "specs": { "speed": "0-12.5 mph", "incline": "0-15%", "deck": "68\" x 22\" (slat belt)", "motor": "5.0 HP", "folding": false, "maxWeight": "500 lb" },
-      "verdict": { "bestFor": "Commercial-grade slat belt, the gold standard" },
-      "pairsWith": ["tread-mat"]
+      "specs": {
+        "speed": "0-12.5 mph",
+        "incline": "0-15%",
+        "deck": "68\" x 22\" (slat belt)",
+        "motor": "5.0 HP",
+        "folding": false,
+        "maxWeight": "500 lb"
+      },
+      "verdict": {
+        "bestFor": "Commercial-grade slat belt, the gold standard"
+      },
+      "pairsWith": [
+        "tread-mat"
+      ]
     },
     {
       "id": "weslo-cadence",
@@ -297,22 +654,77 @@
       "imageUrl": null,
       "imageMedium": null,
       "scores": {
-        "goal_walk": 7, "goal_jog": 5, "goal_run": 2, "goal_train": 1,
-        "workout_steady": 5, "workout_hiit": 2, "workout_walk_jog": 7, "workout_incline": 3,
-        "incline_none": 7, "incline_some": 4, "incline_max": 0,
-        "screen_yes": 1, "screen_nice": 3, "screen_no": 8,
-        "budget_under_500": 10, "budget_500_1000": 5, "budget_1000_2000": 1, "budget_over_2000": 0,
-        "space_compact": 6, "space_medium": 7, "space_large": 6
+        "goal_walk": 7,
+        "goal_jog": 5,
+        "goal_run": 2,
+        "goal_train": 1,
+        "workout_steady": 5,
+        "workout_hiit": 2,
+        "workout_walk_jog": 7,
+        "workout_incline": 3,
+        "incline_none": 7,
+        "incline_some": 4,
+        "incline_max": 0,
+        "screen_yes": 1,
+        "screen_nice": 3,
+        "screen_no": 8,
+        "budget_under_500": 10,
+        "budget_500_1000": 5,
+        "budget_1000_2000": 1,
+        "budget_over_2000": 0,
+        "space_compact": 6,
+        "space_medium": 7,
+        "space_large": 6
       },
-      "specs": { "speed": "0-10 mph", "incline": "2 positions manual", "deck": "50\" x 16\"", "motor": "2.25 HP", "folding": true, "maxWeight": "250 lb" },
-      "verdict": { "bestFor": "Absolute cheapest option for light use" },
-      "pairsWith": ["tread-mat", "tread-lube"]
+      "specs": {
+        "speed": "0-10 mph",
+        "incline": "2 positions manual",
+        "deck": "50\" x 16\"",
+        "motor": "2.25 HP",
+        "folding": true,
+        "maxWeight": "250 lb"
+      },
+      "verdict": {
+        "bestFor": "Absolute cheapest option for light use"
+      },
+      "pairsWith": [
+        "tread-mat",
+        "tread-lube"
+      ]
     }
   ],
   "accessories": [
-    { "id": "tread-mat", "name": "Treadmill Floor Mat", "priceDisplay": "$40", "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Floor+Mat&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "tread-lube", "name": "Treadmill Belt Lubricant", "priceDisplay": "$10", "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Belt+Lubricant&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "heart-rate-strap", "name": "Polar H10 HR Strap", "priceDisplay": "$90", "amazonUrl": "https://www.amazon.com/s?k=Polar+H10+HR+Strap&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null },
-    { "id": "standing-desk", "name": "Adjustable Standing Desk", "priceDisplay": "$200", "amazonUrl": "https://www.amazon.com/s?k=Adjustable+Standing+Desk&tag=runbikecalc-20", "imageUrl": null, "imageMedium": null }
+    {
+      "id": "tread-mat",
+      "name": "Treadmill Floor Mat",
+      "priceDisplay": "$40",
+      "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Floor+Mat&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "tread-lube",
+      "name": "Treadmill Belt Lubricant",
+      "priceDisplay": "$10",
+      "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Belt+Lubricant&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    },
+    {
+      "id": "heart-rate-strap",
+      "name": "Polar H10 HR Strap",
+      "priceDisplay": "$90",
+      "amazonUrl": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL160_.jpg"
+    },
+    {
+      "id": "standing-desk",
+      "name": "Adjustable Standing Desk",
+      "priceDisplay": "$200",
+      "amazonUrl": "https://www.amazon.com/s?k=Adjustable+Standing+Desk&tag=runbikecalc-20",
+      "imageUrl": null,
+      "imageMedium": null
+    }
   ]
 }
