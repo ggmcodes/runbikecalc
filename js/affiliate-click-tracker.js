@@ -78,19 +78,25 @@
 
     if (!matchAffiliate(url.hostname)) return;
 
+    var asin = extractAsin(el.href) || "";
+    var cat = destinationCategory(url.hostname);
     var payload = {
+      transport_type: "beacon",
+      link_url: el.href,
+      link_domain: url.hostname,
+      affiliate_network: cat,
+      product_asin: asin,
       destination_domain: url.hostname,
-      destination_category: destinationCategory(url.hostname),
+      destination_category: cat,
       destination_url: el.href,
       page_path: window.location.pathname,
       link_text: linkText(el),
-      asin: extractAsin(el.href) || ""
+      asin: asin
     };
 
     if (window.gtag) {
       window.gtag("event", "affiliate_click", payload);
-    }
-    if (window.dataLayer) {
+    } else if (window.dataLayer) {
       window.dataLayer.push({ event: "affiliate_click", ...payload });
     }
   }
