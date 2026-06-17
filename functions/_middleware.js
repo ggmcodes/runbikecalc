@@ -29,6 +29,16 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
   let pathname = url.pathname;
 
+  // RETROSPEC BIKE FINDER POC — unpublished, pending the Retrospec deal/AvantLink.
+  // The static files were removed from the repo but Cloudflare kept redeploying
+  // stale copies, so block these paths at the edge (Functions DO deploy reliably).
+  // REMOVE this block when the deal signs and the Bike Finder is relaunched.
+  const RETROSPEC_BLOCK = ['/bike-finder', '/bike-finder.html', '/data/bikes.json', '/images/retrospec-logo.png'];
+  const retroKey = pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+  if (RETROSPEC_BLOCK.includes(retroKey)) {
+    return new Response('Not Found', { status: 404 });
+  }
+
   // 0. Consolidation 301s — match both clean and .html forms in a single hop.
   const consolidationKey = pathname.endsWith('.html') ? pathname.slice(0, -5) : pathname;
   if (CONSOLIDATION_REDIRECTS[consolidationKey]) {
