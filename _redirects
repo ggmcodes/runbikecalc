@@ -1,2 +1,6 @@
 # Hide unpublished Retrospec Bike Finder logo (POC offline until deal signs; remove on relaunch)
 /images/retrospec-logo.png / 302
+
+# Consolidate the older athlete-angle massage page into the comprehensive guide
+/blog/best-massage-guns-athletes-2026 /blog/best-massage-guns-2026 301
+/blog/best-massage-guns-athletes-2026.html /blog/best-massage-guns-2026 301
