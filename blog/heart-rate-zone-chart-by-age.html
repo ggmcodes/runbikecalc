@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78BHZZG6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-78BHZZG6CN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3180649272238451"
+         crossorigin="anonymous"></script>
+
+    <title>Heart Rate Zone Chart by Age: Zones 1-5 in BPM (Ages 20-75)</title>
+    <link rel="canonical" href="https://runbikecalc.com/blog/heart-rate-zone-chart-by-age">
+    <meta name="description" content="Heart rate zone chart by age: exact BPM ranges for Zones 1-5 at every age from 20 to 75, plus max heart rate formulas compared (220-age, Tanaka, Gulati, HUNT).">
+    <meta name="keywords" content="heart rate zone chart by age, heart rate zones by age, max heart rate by age, zone 2 heart rate, heart rate training zones chart, target heart rate by age">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Heart Rate Zone Chart by Age: Zones 1-5 in BPM">
+    <meta property="og:description" content="Complete heart rate zone reference chart: BPM ranges for all 5 zones at every age from 20 to 75, with max HR formulas compared.">
+    <meta property="og:image" content="https://runbikecalc.com/images/heart-rate-zone-chart.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Heart Rate Zone Chart by Age: Zones 1-5 in BPM (Ages 20-75)",
+        "description": "Reference chart of heart rate training zones 1-5 in beats per minute for every age from 20 to 75, with a comparison of max heart rate formulas",
+        "datePublished": "2026-07-02",
+        "author": {
+            "@type": "Organization",
+            "name": "RunBikeCalc"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are the 5 heart rate zones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Zone 1 (recovery) is 50-60% of max heart rate, Zone 2 (aerobic base) is 60-70%, Zone 3 (tempo) is 70-80%, Zone 4 (threshold) is 80-90%, and Zone 5 (VO2 max) is 90-100%. For a 40-year-old with an estimated max of 180 bpm, that is Zone 1 at 90-108, Zone 2 at 108-126, Zone 3 at 126-144, Zone 4 at 144-162, and Zone 5 at 162-180 bpm."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate my max heart rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The classic formula is 220 minus your age. The Tanaka formula (208 minus 0.7 times age) is more accurate across age groups, especially over 40. The Gulati formula for women is 206 minus 0.88 times age, and the HUNT study formula is 211 minus 0.64 times age for active adults. All formulas carry a margin of error of roughly plus or minus 10-12 bpm; a field test or lab test is the only way to know your true max."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good Zone 2 heart rate for a 50-year-old?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Using the 220 minus age estimate, a 50-year-old has a max heart rate around 170 bpm, making Zone 2 approximately 102-119 bpm (60-70% of max). Using the Tanaka formula (max of 173), Zone 2 is about 104-121 bpm. Zone 2 should feel easy enough to hold a conversation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which max heart rate formula is most accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Tanaka formula (208 minus 0.7 times age) is generally considered more accurate than 220 minus age, which underestimates max HR in older adults and overestimates it in younger ones. For women, the Gulati formula (206 minus 0.88 times age) was derived specifically from female data. No formula beats an actual field test or graded exercise test."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does max heart rate decline with age?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Max heart rate declines roughly 0.7 bpm per year regardless of fitness level, which is why every zone chart shifts downward with age. Training does not prevent this decline, but it does improve how much work you can do at any given heart rate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are age-based heart rate zones accurate enough for training?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "They are a reasonable starting point, but formulas can miss your true max by 10-12 bpm in either direction. For more precise zones, use the Karvonen method (which adds resting heart rate) or set zones from lactate threshold heart rate (LTHR) measured with a 30-minute time trial."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white !important; }
+            .container { max-width: 100% !important; }
+        }
+        .print-only { display: none; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://runbikecalc.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://runbikecalc.com/blog"},
+            {"@type": "ListItem", "position": 3, "name": "Heart Rate Zone Chart by Age: Zones 1-5"}
+        ]
+    }
+    </script>
+<link rel="stylesheet" href="/css/conversion-popup.css">
+<link rel="stylesheet" href="/css/inline-cta.css">
+<link rel="stylesheet" href="/css/endure-weekly.css?v=20260615">
+<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpiYzU3NWQxZi0xMWIxLTQwM2YtYTk4OC0zMGRkNGU5M2JkY2E=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+</head>
+<body class="bg-gray-50">
+    <!-- Site Navigation -->
+    <nav class="site-nav no-print">
+        <div class="nav-container">
+            <a href="/" class="site-logo">RunBikeCalc</a>
+            <div class="nav-links">
+                <a href="/premium-training-plans" class="nav-link">Plans<span class="new-badge">NEW</span></a>
+                <a href="/running-tools" class="nav-link">Running</a>
+                <a href="/cycling-tools" class="nav-link">Cycling</a>
+                <a href="/heart-rate-tools" class="nav-link">Heart Rate</a>
+                <a href="/recovery" class="nav-link">Recovery</a>
+
+                <a href="/blog" class="nav-link">Journal</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/2026-top-picks" class="nav-cta">2026 Picks</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="mobile-menu">
+            <a href="/premium-training-plans">Training Plans</a>
+            <a href="/running-tools">Running Tools</a>
+            <a href="/cycling-tools">Cycling Tools</a>
+            <a href="/heart-rate-tools">Heart Rate</a>
+            <a href="/recovery">Recovery</a>
+
+            <a href="/blog">Journal</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b no-print">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="/blog" class="hover:text-blue-600">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Heart Rate Zone Chart by Age</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-rose-600 to-red-600 text-white py-12 no-print">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Heart Rate Zone Chart by Age
+                </h1>
+                <p class="text-xl opacity-95">
+                    Zones 1-5 in BPM for Every Age from 20 to 75, Plus Max HR Formulas Compared
+                </p>
+                <div class="mt-6 flex justify-center gap-4 text-sm">
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Updated 2026</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full">Printable</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Quick Answer Box -->
+        <div class="max-w-4xl mx-auto mb-8">
+            <div class="bg-rose-50 border-l-4 border-rose-500 p-6 rounded-r-lg">
+                <p class="text-lg font-semibold text-gray-800">
+                    <strong>Quick Answer:</strong> Estimate max heart rate as 220 minus your age, then: Zone 1 = 50-60% of max | Zone 2 = 60-70% | Zone 3 = 70-80% | Zone 4 = 80-90% | Zone 5 = 90-100%. Example at age 40 (max 180 bpm): Z1 90-108, Z2 108-126, Z3 126-144, Z4 144-162, Z5 162-180 bpm.
+                </p>
+            </div>
+        </div>
+
+        <!-- Print Button -->
+        <div class="max-w-4xl mx-auto mb-6 no-print">
+            <button onclick="window.print()" class="bg-rose-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-700 transition flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                </svg>
+                Print This Chart
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <article class="max-w-4xl mx-auto">
+            <!-- Chart 1: Zones by age -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Heart Rate Zones 1-5 by Age (BPM)</h2>
+                <p class="text-gray-600 mb-6">Max heart rate estimated with the classic 220 minus age formula. Zone percentages: Z1 50-60%, Z2 60-70%, Z3 70-80%, Z4 80-90%, Z5 90-100% of max. All values in beats per minute.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-rose-600 text-white">
+                                <th class="p-3 font-semibold">Age</th>
+                                <th class="p-3 font-semibold">Est. Max HR</th>
+                                <th class="p-3 font-semibold">Zone 1<br><span class="font-normal text-xs">Recovery (50-60%)</span></th>
+                                <th class="p-3 font-semibold">Zone 2<br><span class="font-normal text-xs">Aerobic (60-70%)</span></th>
+                                <th class="p-3 font-semibold">Zone 3<br><span class="font-normal text-xs">Tempo (70-80%)</span></th>
+                                <th class="p-3 font-semibold">Zone 4<br><span class="font-normal text-xs">Threshold (80-90%)</span></th>
+                                <th class="p-3 font-semibold">Zone 5<br><span class="font-normal text-xs">VO2 Max (90-100%)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold">20</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">200</td>
+                                <td class="p-3 font-mono">100-120</td>
+                                <td class="p-3 font-mono font-semibold">120-140</td>
+                                <td class="p-3 font-mono">140-160</td>
+                                <td class="p-3 font-mono">160-180</td>
+                                <td class="p-3 font-mono">180-200</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold">25</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">195</td>
+                                <td class="p-3 font-mono">98-117</td>
+                                <td class="p-3 font-mono font-semibold">117-137</td>
+                                <td class="p-3 font-mono">137-156</td>
+                                <td class="p-3 font-mono">156-176</td>
+                                <td class="p-3 font-mono">176-195</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold">30</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">190</td>
+                                <td class="p-3 font-mono">95-114</td>
+                                <td class="p-3 font-mono font-semibold">114-133</td>
+                                <td class="p-3 font-mono">133-152</td>
+                                <td class="p-3 font-mono">152-171</td>
+                                <td class="p-3 font-mono">171-190</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold">35</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">185</td>
+                                <td class="p-3 font-mono">93-111</td>
+                                <td class="p-3 font-mono font-semibold">111-130</td>
+                                <td class="p-3 font-mono">130-148</td>
+                                <td class="p-3 font-mono">148-167</td>
+                                <td class="p-3 font-mono">167-185</td>
+                            </tr>
+                            <tr class="border-b bg-rose-50 hover:bg-rose-100">
+                                <td class="p-3 font-bold text-rose-700">40</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">180</td>
+                                <td class="p-3 font-mono">90-108</td>
+                                <td class="p-3 font-mono font-semibold">108-126</td>
+                                <td class="p-3 font-mono">126-144</td>
+                                <td class="p-3 font-mono">144-162</td>
+                                <td class="p-3 font-mono">162-180</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold">45</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">175</td>
+                                <td class="p-3 font-mono">88-105</td>
+                                <td class="p-3 font-mono font-semibold">105-123</td>
+                                <td class="p-3 font-mono">123-140</td>
+                                <td class="p-3 font-mono">140-158</td>
+                                <td class="p-3 font-mono">158-175</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold">50</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">170</td>
+                                <td class="p-3 font-mono">85-102</td>
+                                <td class="p-3 font-mono font-semibold">102-119</td>
+                                <td class="p-3 font-mono">119-136</td>
+                                <td class="p-3 font-mono">136-153</td>
+                                <td class="p-3 font-mono">153-170</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold">55</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">165</td>
+                                <td class="p-3 font-mono">83-99</td>
+                                <td class="p-3 font-mono font-semibold">99-116</td>
+                                <td class="p-3 font-mono">116-132</td>
+                                <td class="p-3 font-mono">132-149</td>
+                                <td class="p-3 font-mono">149-165</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold">60</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">160</td>
+                                <td class="p-3 font-mono">80-96</td>
+                                <td class="p-3 font-mono font-semibold">96-112</td>
+                                <td class="p-3 font-mono">112-128</td>
+                                <td class="p-3 font-mono">128-144</td>
+                                <td class="p-3 font-mono">144-160</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold">65</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">155</td>
+                                <td class="p-3 font-mono">78-93</td>
+                                <td class="p-3 font-mono font-semibold">93-109</td>
+                                <td class="p-3 font-mono">109-124</td>
+                                <td class="p-3 font-mono">124-140</td>
+                                <td class="p-3 font-mono">140-155</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold">70</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">150</td>
+                                <td class="p-3 font-mono">75-90</td>
+                                <td class="p-3 font-mono font-semibold">90-105</td>
+                                <td class="p-3 font-mono">105-120</td>
+                                <td class="p-3 font-mono">120-135</td>
+                                <td class="p-3 font-mono">135-150</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold">75</td>
+                                <td class="p-3 font-mono font-bold text-rose-600">145</td>
+                                <td class="p-3 font-mono">73-87</td>
+                                <td class="p-3 font-mono font-semibold">87-102</td>
+                                <td class="p-3 font-mono">102-116</td>
+                                <td class="p-3 font-mono">116-131</td>
+                                <td class="p-3 font-mono">131-145</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">For an age not listed, use our <a href="/heart-rate-zone-calculator" class="text-rose-600 hover:underline">heart rate zone calculator</a> to compute exact ranges, including Karvonen zones that account for your resting heart rate.</p>
+            </div>
+
+            <!-- Chart 2: Max HR formulas compared -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Max Heart Rate Formulas Compared</h2>
+                <p class="text-gray-600 mb-6">The 220 minus age formula is the most common but not the most accurate. Published alternatives from peer-reviewed studies give different estimates, especially past age 40.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="p-3 font-semibold">Formula</th>
+                                <th class="p-3 font-semibold">Equation</th>
+                                <th class="p-3 font-semibold">Best For</th>
+                                <th class="p-3 font-semibold">Max HR at 30</th>
+                                <th class="p-3 font-semibold">Max HR at 50</th>
+                                <th class="p-3 font-semibold">Max HR at 70</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-medium">Fox (classic)</td>
+                                <td class="p-3 font-mono">220 - age</td>
+                                <td class="p-3">Quick estimates; widely used defaults</td>
+                                <td class="p-3 font-mono">190</td>
+                                <td class="p-3 font-mono">170</td>
+                                <td class="p-3 font-mono">150</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-medium">Tanaka (2001)</td>
+                                <td class="p-3 font-mono">208 - 0.7 x age</td>
+                                <td class="p-3">General population; more accurate over 40</td>
+                                <td class="p-3 font-mono">187</td>
+                                <td class="p-3 font-mono">173</td>
+                                <td class="p-3 font-mono">159</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-medium">Gulati (2010)</td>
+                                <td class="p-3 font-mono">206 - 0.88 x age</td>
+                                <td class="p-3">Women (derived from 5,437 female subjects)</td>
+                                <td class="p-3 font-mono">180</td>
+                                <td class="p-3 font-mono">162</td>
+                                <td class="p-3 font-mono">144</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-medium">Nes / HUNT (2013)</td>
+                                <td class="p-3 font-mono">211 - 0.64 x age</td>
+                                <td class="p-3">Active and fit adults</td>
+                                <td class="p-3 font-mono">192</td>
+                                <td class="p-3 font-mono">179</td>
+                                <td class="p-3 font-mono">166</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <p class="text-yellow-800"><strong>Accuracy note:</strong> Every formula carries a standard error of roughly 10-12 bpm. Two 40-year-olds can have true max heart rates of 168 and 192 and both be perfectly normal. Treat formula-based zones as a starting point and adjust from field testing or perceived effort. See our <a href="/max-heart-rate-calculator" class="text-yellow-900 underline">max heart rate calculator</a> for all four formulas side by side.</p>
+                </div>
+            </div>
+
+            <!-- Chart 3: What each zone does -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">What Each Zone Does</h2>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-rose-600 text-white">
+                                <th class="p-3 font-semibold">Zone</th>
+                                <th class="p-3 font-semibold">% Max HR</th>
+                                <th class="p-3 font-semibold">Feels Like</th>
+                                <th class="p-3 font-semibold">Talk Test</th>
+                                <th class="p-3 font-semibold">Primary Benefit</th>
+                                <th class="p-3 font-semibold">Typical Weekly Share</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold text-gray-500">Zone 1</td>
+                                <td class="p-3 font-mono">50-60%</td>
+                                <td class="p-3">Very easy, warm-up effort</td>
+                                <td class="p-3">Full conversation, could sing</td>
+                                <td class="p-3">Recovery, blood flow</td>
+                                <td class="p-3">Warm-ups + recovery days</td>
+                            </tr>
+                            <tr class="border-b bg-blue-50 hover:bg-blue-100">
+                                <td class="p-3 font-bold text-blue-700">Zone 2</td>
+                                <td class="p-3 font-mono">60-70%</td>
+                                <td class="p-3">Easy, all-day pace</td>
+                                <td class="p-3">Full sentences comfortably</td>
+                                <td class="p-3">Aerobic base, fat oxidation, mitochondria</td>
+                                <td class="p-3 font-bold">70-80% of volume</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3 font-bold text-green-700">Zone 3</td>
+                                <td class="p-3 font-mono">70-80%</td>
+                                <td class="p-3">Moderate, "comfortably hard"</td>
+                                <td class="p-3">Short phrases only</td>
+                                <td class="p-3">Tempo endurance, race-pace economy</td>
+                                <td class="p-3">Small, targeted doses</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                                <td class="p-3 font-bold text-orange-600">Zone 4</td>
+                                <td class="p-3 font-mono">80-90%</td>
+                                <td class="p-3">Hard, sustainable 20-60 min</td>
+                                <td class="p-3">A few words at a time</td>
+                                <td class="p-3">Lactate threshold, race speed</td>
+                                <td class="p-3">1-2 sessions/week</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-red-600">Zone 5</td>
+                                <td class="p-3 font-mono">90-100%</td>
+                                <td class="p-3">Very hard, 30 sec to 5 min bursts</td>
+                                <td class="p-3">Cannot talk</td>
+                                <td class="p-3">VO2 max, top-end power</td>
+                                <td class="p-3">Short intervals only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Calculator CTA -->
+            <div class="bg-gradient-to-r from-rose-600 to-red-600 rounded-xl shadow-lg p-8 mb-8 text-white no-print">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold mb-4">Get Your Exact Zones</h2>
+                    <p class="text-lg opacity-90 mb-6">Our Heart Rate Zone Calculator computes all 5 zones from your exact age, and can use the Karvonen method with your resting heart rate for tighter accuracy.</p>
+                    <a href="/heart-rate-zone-calculator" class="inline-block bg-white text-rose-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                        Open Heart Rate Zone Calculator
+                    </a>
+                </div>
+            </div>
+
+            <!-- How to use -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Use This Chart</h2>
+
+                <div class="prose max-w-none text-gray-700">
+                    <ol class="list-decimal pl-6 space-y-3 mb-6">
+                        <li><strong>Find your age row</strong> (or the nearest one) and note the BPM range for each zone. For exact ranges at any age, use the <a href="/heart-rate-zone-calculator" class="text-rose-600 hover:underline">heart rate zone calculator</a>.</li>
+                        <li><strong>Sanity-check with the talk test.</strong> If the chart says Zone 2 but you cannot speak in full sentences, your true max HR is probably lower than the formula estimate. Adjust downward.</li>
+                        <li><strong>Spend most of your time low.</strong> Most successful endurance programs put 70-80% of weekly training time in Zones 1-2, with focused Zone 4-5 work once or twice a week.</li>
+                        <li><strong>Upgrade your zones over time.</strong> The Karvonen method (using resting heart rate) and LTHR-based zones (from a 30-minute time trial) are both more individual than age formulas. Try the <a href="/mhr-karvonen-calculator" class="text-rose-600 hover:underline">Karvonen calculator</a> or the <a href="/lthr-zone-calculator" class="text-rose-600 hover:underline">LTHR zone calculator</a> once you have some training data.</li>
+                    </ol>
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">When Age-Based Zones Break Down</h3>
+                    <p class="mb-4">Formulas assume you are average. They drift furthest from reality for lifelong athletes (often higher true max), people on heart rate affecting medication such as beta blockers (lower observed HR at every effort), and anyone at altitude or in high heat (elevated HR at the same effort). In those cases, anchor training to perceived effort and the talk test while you collect real data.</p>
+                </div>
+            </div>
+
+            <!-- FAQ (visible) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">What are the 5 heart rate zones?</h3>
+                        <p class="text-gray-700">Zone 1 (recovery) is 50-60% of max HR, Zone 2 (aerobic base) is 60-70%, Zone 3 (tempo) is 70-80%, Zone 4 (threshold) is 80-90%, and Zone 5 (VO2 max) is 90-100%. At age 40 with an estimated max of 180 bpm, that is Z1 90-108, Z2 108-126, Z3 126-144, Z4 144-162, and Z5 162-180 bpm.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">How do I calculate my max heart rate?</h3>
+                        <p class="text-gray-700">The classic estimate is 220 minus age. Tanaka (208 minus 0.7 times age) is more accurate across age groups, Gulati (206 minus 0.88 times age) was derived for women, and the HUNT formula (211 minus 0.64 times age) fits active adults. All carry roughly plus or minus 10-12 bpm of error.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">What is a good Zone 2 heart rate for a 50-year-old?</h3>
+                        <p class="text-gray-700">Approximately 102-119 bpm using 220 minus age (max 170), or about 104-121 bpm using Tanaka (max 173). It should feel easy enough to hold a conversation.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Which max heart rate formula is most accurate?</h3>
+                        <p class="text-gray-700">Tanaka is generally more accurate than 220 minus age, which underestimates max HR in older adults. For women, Gulati was built from female-only data. No formula beats an actual field test or graded exercise test.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Does max heart rate decline with age?</h3>
+                        <p class="text-gray-700">Yes, by roughly 0.7 bpm per year regardless of fitness. Training does not stop the decline, but it dramatically improves how much work you can do at any given heart rate.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Are age-based zones accurate enough for training?</h3>
+                        <p class="text-gray-700">They are a solid starting point but can miss your true max by 10-12 bpm either way. For tighter zones, use the Karvonen method with your resting heart rate, or set zones from lactate threshold heart rate measured in a 30-minute time trial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="bg-gray-100 rounded-lg p-6 mb-8 text-sm text-gray-600">
+                <p><strong>Disclaimer:</strong> This chart is a research-based reference compiled from published exercise science formulas. It is for informational purposes only and is not medical advice. Heart rate responses vary between individuals, and medications, heart conditions, and other health factors change these numbers. Consult a physician before starting heart rate based training, especially if you have a cardiac condition, take medication that affects heart rate, or are new to vigorous exercise.</p>
+            </div>
+        </article>
+
+        <!-- Related Calculators -->
+        <div class="max-w-4xl mx-auto mt-12 no-print">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Calculators and Guides</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="/heart-rate-zone-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-rose-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-rose-100 rounded-lg flex items-center justify-center">
+                                <span class="text-rose-600 font-bold text-lg">HR</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-rose-600 font-semibold mb-1">CALCULATOR</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Heart Rate Zone Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">All 5 zones from your exact age, with Karvonen option.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/max-heart-rate-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-red-100 rounded-lg flex items-center justify-center">
+                                <span class="text-red-600 font-bold text-lg">MX</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-red-600 font-semibold mb-1">CALCULATOR</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Max Heart Rate Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Compare Fox, Tanaka, Gulati, and HUNT estimates.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/zone-2-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="text-blue-600 font-bold text-lg">Z2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-blue-600 font-semibold mb-1">CALCULATOR</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Zone 2 Calculator</h4>
+                            <p class="text-gray-600 text-sm mb-3">Dial in your aerobic base training range.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/blog/max-heart-rate-formula-comparison" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="text-purple-600 font-bold text-lg">FX</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-purple-600 font-semibold mb-1">GUIDE</div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Max HR Formula Comparison</h4>
+                            <p class="text-gray-600 text-sm mb-3">Deep dive on which max heart rate formula to trust.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-16 no-print">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 RunBikeCalc. All rights reserved.</p>
+        </div>
+            <p class="mt-4 text-center text-sm text-gray-400"><a href="/partner" class="hover:text-white">Partner With Us</a></p>
+</footer>
+<script src="/js/blog-enhance.js" defer></script>
+<script>
+window.POPUP_CONFIG = {
+  headline: "Free Zone 2 Training Guide",
+  product: "Endure Weekly",
+  description: "The complete Zone 2 protocol: heart-rate ranges, sample workouts for run, bike, and Hyrox, and the discipline elites use to build their aerobic engine. Delivered to your inbox the moment you subscribe.",
+  ctaText: "Send Me the Guide",
+  ctaUrl: "https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b",
+  secondaryText: "Read it on the site →",
+  secondaryUrl: "/guides/ultimate-zone-2-training",
+  trustText: "No spam. Unsubscribe in one click.",
+  accentColor: "#7C2D3A",
+  excludePaths: ["/success", "/guides/ultimate-zone-2-training"]
+};
+</script>
+<script src="/js/conversion-popup.js"></script>
+<script src="/js/endure-weekly.js" defer></script>
+<script>window.INLINE_CTA_CONFIG={badge:'Free',headline:'Export your training plan for free',body:'Calendar (.ics) export is completely free with no signup. PDF and spreadsheet exports are available with a free email signup to Endure Weekly.',ctaText:'Get Free Exports',ctaUrl:'/premium-training-plans',secondaryText:'See export options',secondaryUrl:'/premium-training-plans',accentColor:'#7C2D3A',bgFrom:'#FAF8F5',bgTo:'#ffffff',borderColor:'rgba(124,45,58,0.18)',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
+<script src="/js/inline-cta.js"></script>
+<script src="/js/speculation-rules.js" defer></script>
+<script src="/js/affiliate-click-tracker.js" defer></script>
+    <script type="text/javascript" src="https://s.skimresources.com/js/304403X1792579.skimlinks.js"></script>
+</body>
+</html>
