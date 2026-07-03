@@ -10,9 +10,9 @@ function getHtmlFiles(dir, fileList = []) {
     files.forEach(file => {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'images') {
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'images' && file !== 'downloads') {
             getHtmlFiles(filePath, fileList);
-        } else if (file.endsWith('.html') && file !== 'offline.html') {
+        } else if (file.endsWith('.html') && file !== 'offline.html' && file !== 'download.html') {
             fileList.push(filePath);
         }
     });
@@ -39,6 +39,8 @@ function getPriority(filePath) {
 let urls = htmlFiles.map(file => {
     let url = file.replace('./', '').replace('.html', '');
     if (url === 'index') url = '';
+    // Subdirectory index pages resolve to the directory URL (e.g. setups/index -> setups/)
+    if (url.endsWith('/index')) url = url.slice(0, -'index'.length);
 
     // Clean URL format
     const loc = url === '' ? baseUrl + '/' : baseUrl + '/' + url;
