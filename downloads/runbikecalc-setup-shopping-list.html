@@ -22,6 +22,10 @@
     section h2 { font-size: 20px; }
     .tier-target { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; background: #0f766e; border-radius: 999px; padding: 4px 12px; white-space: nowrap; }
     .section-desc { font-size: 13px; color: #57746f; margin-bottom: 12px; margin-top: 4px; }
+    .tier-sub { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 18px 0 4px; border-bottom: 1px solid #7cc7c1; padding-bottom: 4px; }
+    .tier-sub h3 { font-size: 15px; color: #134e4a; }
+    .tier-pill { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #134e4a; background: #d5f2ef; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+    .tier-desc { font-size: 12px; color: #57746f; margin-bottom: 8px; }
     table { width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 13px; }
     thead th { background: #0f766e; color: #fff; text-align: left; padding: 8px 10px; font-weight: 600; }
     thead th:first-child { border-radius: 4px 0 0 0; }
@@ -47,11 +51,14 @@
       header h1 { font-size: 22px; }
       section h2 { font-size: 16px; }
       table { font-size: 11px; page-break-inside: avoid; }
-      section { page-break-inside: avoid; }
+      section { page-break-inside: auto; }
+      .tier-head { page-break-after: avoid; }
       thead th, tbody tr:nth-child(even), .tier-target, .buy-link { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       thead th { background: #0f766e !important; color: #fff !important; }
       tbody tr:nth-child(even) { background: #ecfaf8 !important; }
       .tier-target { background: #0f766e !important; color: #fff !important; }
+      .tier-pill { background: #d5f2ef !important; }
+      .tier-sub { page-break-after: avoid; }
       .buy-link { background: #ecfaf8 !important; }
     }
   </style>
@@ -60,21 +67,43 @@
   <header>
     <div class="brand">RunBikeCalc.com</div>
     <h1>The RunBikeCalc Setup Shopping List</h1>
-    <p class="subtitle">Four complete, ready-to-shop kits: beginner runner, triathlon race day, bike commuter, and Hyrox training</p>
+    <p class="subtitle">Four complete kits, each in three builds (Budget / Standard / Premium): beginner runner, triathlon race day, cycling, and Hyrox training</p>
   </header>
 
   <div class="print-btn-wrap">
     <button class="print-btn" onclick="window.print()">Print This Page</button>
   </div>
 
-  <p class="intro">Each kit keeps the pieces in balance at a target budget so nothing is the weak link. Click any product name to open it at the linked store (Backcountry or Amazon). Prices move often, so treat the totals as a planning snapshot and confirm sizing and current pricing before you buy.</p>
+  <p class="intro">Each kit comes in three builds: Budget, Standard, and Premium. Every build keeps the pieces in balance at its target budget so nothing is the weak link. Click any product name to open it at the linked store (Backcountry or Amazon). Prices move often, so treat the totals as a planning snapshot and confirm sizing and current pricing before you buy.</p>
 
   <section>
     <div class="tier-head">
       <h2>Beginner Runner Starter Kit</h2>
-      <span class="tier-target">Around $750</span>
+      <span class="tier-target">$208 to $2,250</span>
     </div>
-    <p class="section-desc">Everything a new runner actually needs for the first year: one great daily trainer, a GPS watch that tracks pace and heart rate, and the small stuff (socks, anti-chafe, hydration) that veterans wish they had bought on day one. Nothing here is filler.</p>
+    <p class="section-desc">Everything a new runner actually needs: shoes, a watch that tracks pace and heart rate, and the small stuff (socks, anti-chafe, recovery) that veterans wish they had bought on day one. Pick the build that matches your budget; nothing at any tier is filler.</p>
+    <div class="tier-sub">
+      <h3>Budget build</h3>
+      <span class="tier-pill">~$208</span>
+    </div>
+    <p class="tier-desc">Start running for about the price of one premium shoe: an honest entry-level trainer, a GPS watch that covers pace, distance, and heart rate basics, and the comfort items that keep you on the road. Upgrade pieces as the miles pile up.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0DPHXLV3G?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Nike Revolution 8</a><span class="brand">Nike &middot; Entry daily trainer</span></td><td class="cell-price">$75</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0DPHXLV3G?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0C7GJDZD7?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazfit Bip 5 Smart Watch</a><span class="brand">Amazfit &middot; Budget GPS watch</span></td><td class="cell-price">$70</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0C7GJDZD7?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B084HGRPBD?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Saucony RunDry Performance Tab Socks (Multi-Pack)</a><span class="brand">Saucony &middot; Running socks</span></td><td class="cell-price">$12</td><td><a class="buy-link" href="https://www.amazon.com/dp/B084HGRPBD?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B01FJNR0XM?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Baleaf 7in Lined Running Shorts</a><span class="brand">Baleaf &middot; Running shorts</span></td><td class="cell-price">$24</td><td><a class="buy-link" href="https://www.amazon.com/dp/B01FJNR0XM?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Body Glide Original Anti-Chafe Balm</a><span class="brand">Body Glide &middot; Anti-chafe</span></td><td class="cell-price">$11</td><td><a class="buy-link" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B071P2MQ5D?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon Basics High-Density Foam Roller (24 in)</a><span class="brand">Amazon Basics &middot; Recovery</span></td><td class="cell-price">$16</td><td><a class="buy-link" href="https://www.amazon.com/dp/B071P2MQ5D?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Budget total: <strong>$208</strong></p>
+    <div class="tier-sub">
+      <h3>Standard build</h3>
+      <span class="tier-pill">~$733</span>
+    </div>
+    <p class="tier-desc">The sweet spot for your first year: one great daily trainer, a real running watch, and the accessories that make every run better. This is the kit we would buy again.</p>
     <table>
       <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
       <tbody>
@@ -90,14 +119,60 @@
         <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0040EGNIU?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">TriggerPoint Grid 1.0 Foam Roller</a><span class="brand">TriggerPoint &middot; Recovery</span></td><td class="cell-price">$40</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0040EGNIU?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
       </tbody>
     </table>
-    <p class="tier-total">Estimated total: <strong>$733</strong></p>
+    <p class="tier-total">Estimated Standard total: <strong>$733</strong></p>
+    <div class="tier-sub">
+      <h3>Premium build</h3>
+      <span class="tier-pill">~$2,250</span>
+    </div>
+    <p class="tier-desc">The no-compromise build: a max-cushion daily trainer plus a carbon race shoe, a Fenix-class multisport watch, premium apparel, and real recovery tools. Built to carry you from first 5K through marathon training.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=HOKZ09R-COGRROGO-S100&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fhoka-skyward-x-running-shoe-womens&amp;intsrc=CATF_2363">Hoka Skyward X</a><span class="brand">Hoka &middot; Max-cushion daily trainer</span></td><td class="cell-price">$225</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=HOKZ09R-COGRROGO-S100&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fhoka-skyward-x-running-shoe-womens&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=NKE02ML-BK-M110&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fnike-vaporfly-3-running-shoe-mens&amp;intsrc=CATF_15689">Nike Vaporfly 3</a><span class="brand">Nike &middot; Carbon race shoe</span></td><td class="cell-price">$180</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=NKE02ML-BK-M110&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fnike-vaporfly-3-running-shoe-mens&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF07T-SIWHSIBA-S43M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-fenix-8-amoled-sport-watch&amp;intsrc=CATF_15689">Garmin Fenix 8 AMOLED</a><span class="brand">Garmin &middot; Multisport GPS watch</span></td><td class="cell-price">$1,000</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF07T-SIWHSIBA-S43M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-fenix-8-amoled-sport-watch&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AKZ000O-SIL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openrun-pro-2-mini-headphones&amp;intsrc=CATF_15689">Shokz OpenRun Pro 2</a><span class="brand">Shokz &middot; Open-ear headphones</span></td><td class="cell-price">$180</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AKZ000O-SIL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openrun-pro-2-mini-headphones&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SALZAOH-BLAMET-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-4l-running-vest-flasks&amp;intsrc=CATF_15689">Salomon Active Skin 4 Running Vest</a><span class="brand">Salomon &middot; Hydration vest</span></td><td class="cell-price">$110</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SALZAOH-BLAMET-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-active-skin-4l-running-vest-flasks&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZAID-BLA-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-storm-racer-jacket-mens&amp;intsrc=CATF_2363">Patagonia Storm Racer Jacket</a><span class="brand">Patagonia &middot; Waterproof shell</span></td><td class="cell-price">$249</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZAID-BLA-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-storm-racer-jacket-mens&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZABP-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-strider-pro-7in-shorts-mens&amp;intsrc=CATF_2363">Patagonia Strider Pro 7in Shorts</a><span class="brand">Patagonia &middot; Premium running shorts</span></td><td class="cell-price">$89</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=PATZABP-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpatagonia-strider-pro-7in-shorts-mens&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SWLZ8N7-WHI-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsmartwool-run-zero-cushion-low-ankle-sock&amp;intsrc=CATF_2363">Smartwool Run Zero Cushion Ankle Socks</a><span class="brand">Smartwool &middot; Merino running socks</span></td><td class="cell-price">$18</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SWLZ8N7-WHI-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsmartwool-run-zero-cushion-low-ankle-sock&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Theragun Prime Massage Gun</a><span class="brand">Therabody &middot; Percussive recovery</span></td><td class="cell-price">$199</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Premium total: <strong>$2,250</strong></p>
   </section>
   <section>
     <div class="tier-head">
       <h2>Triathlon Race Day Setup</h2>
-      <span class="tier-target">Around $2,000</span>
+      <span class="tier-target">$591 to $3,682</span>
     </div>
-    <p class="section-desc">The complete swim-bike-run checklist for your first (or fastest) race morning, assuming you already own the bike and running shoes. A multisport watch, open-water swim gear, race fuel, and the transition-bag small stuff that saves minutes for free.</p>
+    <p class="section-desc">The complete swim-bike-run checklist for race morning, assuming you already own the bike and running shoes. A multisport watch, open-water swim gear, race fuel, and the transition-bag small stuff that saves minutes for free.</p>
+    <div class="tier-sub">
+      <h3>Budget build</h3>
+      <span class="tier-pill">~$591</span>
+    </div>
+    <p class="tier-desc">A complete race-morning setup for your first sprint or Olympic tri without the four-figure spend: a proven budget multisport watch, a sleeveless wetsuit, and the same transition small stuff the podium finishers use.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=CQZ0012-INKNYLBAN-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcoros-pace-3-gps-sport-watch&amp;intsrc=CATF_15689">COROS Pace 3</a><span class="brand">COROS &middot; Multisport GPS watch</span></td><td class="cell-price">$229</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=CQZ0012-INKNYLBAN-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcoros-pace-3-gps-sport-watch&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B01M03B8DL?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Xterra Volt Sleeveless Triathlon Wetsuit</a><span class="brand">Xterra &middot; Open-water wetsuit</span></td><td class="cell-price">$169</td><td><a class="buy-link" href="https://www.amazon.com/dp/B01M03B8DL?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B06XJ59PGB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Sparx Men&#x27;s Triathlon Suit</a><span class="brand">Sparx &middot; Race suit</span></td><td class="cell-price">$65</td><td><a class="buy-link" href="https://www.amazon.com/dp/B06XJ59PGB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B07PKN4989?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Aegend Swim Goggles (2-Pack)</a><span class="brand">Aegend &middot; Swim goggles</span></td><td class="cell-price">$10</td><td><a class="buy-link" href="https://www.amazon.com/dp/B07PKN4989?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0C885J35P?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Retrospec Remi Bike Helmet</a><span class="brand">Retrospec &middot; Bike helmet</span></td><td class="cell-price">$37</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0C885J35P?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GDO001V-MIRAATCIBA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgoodr-circle-gs-polarized-sunglasses&amp;intsrc=CATF_15689">Goodr Circle Gs Polarized Sunglasses</a><span class="brand">Goodr &middot; Sunglasses</span></td><td class="cell-price">$30</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GDO001V-MIRAATCIBA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgoodr-circle-gs-polarized-sunglasses&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GUS0015-CCOUT-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgu-energy-gel-8-pack&amp;intsrc=CATF_15689">GU Energy Gel (8-Pack)</a><span class="brand">GU &middot; Race fuel</span></td><td class="cell-price">$18</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GUS0015-CCOUT-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgu-energy-gel-8-pack&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B07RQRPKQ5?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">RJ-Sport Race Number Belt</a><span class="brand">RJ-Sport &middot; Race belt</span></td><td class="cell-price">$9</td><td><a class="buy-link" href="https://www.amazon.com/dp/B07RQRPKQ5?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Lock Laces Elastic No-Tie Laces</a><span class="brand">Lock Laces &middot; Fast transitions</span></td><td class="cell-price">$10</td><td><a class="buy-link" href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAM00A0-BK-S24OZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-podium-water-bottle-24oz-cam00a0&amp;intsrc=CATF_2363">CamelBak Podium 24oz Bottle</a><span class="brand">CamelBak &middot; Bike bottle</span></td><td class="cell-price">$14</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=CAM00A0-BK-S24OZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fcamelbak-podium-water-bottle-24oz-cam00a0&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Budget total: <strong>$591</strong></p>
+    <div class="tier-sub">
+      <h3>Standard build</h3>
+      <span class="tier-pill">~$2,001</span>
+    </div>
+    <p class="tier-desc">The proven mid-range race kit: a flagship-adjacent multisport watch, a full-sleeve wetsuit, an aero-ish helmet, and a bike computer that will pace your ride perfectly.</p>
     <table>
       <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
       <tbody>
@@ -115,14 +190,58 @@
         <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Lock Laces Elastic No-Tie Laces</a><span class="brand">Lock Laces &middot; Fast transitions</span></td><td class="cell-price">$10</td><td><a class="buy-link" href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
       </tbody>
     </table>
-    <p class="tier-total">Estimated total: <strong>$2,001</strong></p>
+    <p class="tier-total">Estimated Standard total: <strong>$2,001</strong></p>
+    <div class="tier-sub">
+      <h3>Premium build</h3>
+      <span class="tier-pill">~$3,682</span>
+    </div>
+    <p class="tier-desc">The long-course build: a flagship watch and bike computer, a top-tier wetsuit, smart goggles that show your splits in the lens, an aero road helmet, and power meter pedals so every watt is accounted for.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF08I-CAGRDLTIBLBLWHBA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-970-watch&amp;intsrc=CATF_2363">Garmin Forerunner 970</a><span class="brand">Garmin &middot; Multisport GPS watch</span></td><td class="cell-price">$750</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF08I-CAGRDLTIBLBLWHBA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-970-watch&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=BLSB01P-BLA-MS&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fblueseventy-reaction-fullsuit-womens&amp;intsrc=CATF_15689">blueseventy Reaction Full Wetsuit</a><span class="brand">blueseventy &middot; Open-water wetsuit</span></td><td class="cell-price">$500</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=BLSB01P-BLA-MS&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fblueseventy-reaction-fullsuit-womens&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0DMBYN9B2?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Castelli Sanremo 3 Tri Suit</a><span class="brand">Castelli &middot; Race suit</span></td><td class="cell-price">$225</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0DMBYN9B2?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">FORM Smart Swim 2 Goggles</a><span class="brand">FORM &middot; Smart swim goggles</span></td><td class="cell-price">$199</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SCQ00UY-WHIBLA-S&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-s-works-evade-3-mips-helmet&amp;intsrc=CATF_15689">Specialized S-Works Evade 3 MIPS Helmet</a><span class="brand">Specialized &middot; Aero road helmet</span></td><td class="cell-price">$300</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SCQ00UY-WHIBLA-S&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-s-works-evade-3-mips-helmet&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=POCZ1D2-FLORTRCLROPASUGO-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpoc-elicit-sunglasses&amp;intsrc=CATF_2363">POC Elicit Sunglasses</a><span class="brand">POC &middot; Cycling sunglasses</span></td><td class="cell-price">$250</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=POCZ1D2-FLORTRCLROPASUGO-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpoc-elicit-sunglasses&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF03I-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-1040-solar-gps-bike-computer&amp;intsrc=CATF_15689">Garmin Edge 1040 Solar</a><span class="brand">Garmin &middot; Bike computer</span></td><td class="cell-price">$750</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF03I-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-1040-solar-gps-bike-computer&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC024-BLASIL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-powrlink-single-sided-power-meter-pedals&amp;intsrc=CATF_15689">Wahoo POWRLINK Zero Single-Sided Power Pedals</a><span class="brand">Wahoo &middot; Power meter pedals</span></td><td class="cell-price">$650</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC024-BLASIL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-powrlink-single-sided-power-meter-pedals&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=MRE0006-UNFCAF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100-caf-100&amp;intsrc=CATF_2363">Maurten Gel 100 CAF 100 (Box of 12)</a><span class="brand">Maurten &middot; Race fuel</span></td><td class="cell-price">$58</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=MRE0006-UNFCAF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100-caf-100&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Premium total: <strong>$3,682</strong></p>
   </section>
   <section>
     <div class="tier-head">
-      <h2>Bike Commuter Setup</h2>
-      <span class="tier-target">Around $850</span>
+      <h2>Cycling Setup</h2>
+      <span class="tier-target">$173 to $1,910</span>
     </div>
-    <p class="section-desc">Turn any bike into a year-round commuter: be seen (lights), stay dry (rain jacket and fenders), carry your stuff (pannier), never get stranded (pump, tubes, multi-tool), and keep the bike yours (a real U-lock).</p>
+    <p class="section-desc">From daily commuting to fast weekend road rides. The Budget and Standard builds cover the commuter essentials (lights, lock, cargo, rain gear, flat-fix kit), while the Premium build is a full road-cycling upgrade: clipless pedals and shoes, a bib-and-jersey kit, and a flagship bike computer.</p>
+    <div class="tier-sub">
+      <h3>Budget build</h3>
+      <span class="tier-pill">~$173</span>
+    </div>
+    <p class="tier-desc">Bare-bones but road-legal and self-sufficient: helmet, lights, lock, rain shell, fenders, and the flat-fix kit. Everything functional, nothing fancy.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0964HGPTR?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Retrospec Lennon Bike Helmet with LED Light</a><span class="brand">Retrospec &middot; Commuter helmet</span></td><td class="cell-price">$40</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0964HGPTR?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B07FC9NRRR?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Ascher USB Rechargeable Bike Light Set</a><span class="brand">Ascher &middot; Light set</span></td><td class="cell-price">$17</td><td><a class="buy-link" href="https://www.amazon.com/dp/B07FC9NRRR?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B01KD9AQ92?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Via Velo U-Lock with Cable</a><span class="brand">Via Velo &middot; Security</span></td><td class="cell-price">$32</td><td><a class="buy-link" href="https://www.amazon.com/dp/B01KD9AQ92?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B00CKCZOZC?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Frogg Toggs Ultra-Lite2 Rain Jacket</a><span class="brand">Frogg Toggs &middot; Rain jacket</span></td><td class="cell-price">$23</td><td><a class="buy-link" href="https://www.amazon.com/dp/B00CKCZOZC?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B000C1YPA8?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Planet Bike Clip-On Fenders (700c)</a><span class="brand">Planet Bike &middot; Fenders</span></td><td class="cell-price">$25</td><td><a class="buy-link" href="https://www.amazon.com/dp/B000C1YPA8?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B010B7Q40G?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">WOTOW 16-in-1 Bike Repair Tool Kit</a><span class="brand">WOTOW &middot; Multi-tool</span></td><td class="cell-price">$9</td><td><a class="buy-link" href="https://www.amazon.com/dp/B010B7Q40G?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0CJ4RQ8T5?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Vibrelli Mini Bike Pump (120 PSI)</a><span class="brand">Vibrelli &middot; Mini pump</span></td><td class="cell-price">$13</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0CJ4RQ8T5?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B09X8K1WVN?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Continental Race 28 Spare Tubes (2-Pack)</a><span class="brand">Continental &middot; Spares</span></td><td class="cell-price">$14</td><td><a class="buy-link" href="https://www.amazon.com/dp/B09X8K1WVN?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Budget total: <strong>$173</strong></p>
+    <div class="tier-sub">
+      <h3>Standard build</h3>
+      <span class="tier-pill">~$843</span>
+    </div>
+    <p class="tier-desc">Turn any bike into a year-round commuter: be seen (lights), stay dry (rain jacket and fenders), carry your stuff (pannier), never get stranded (pump, tubes, multi-tool), and keep the bike yours (a real U-lock).</p>
     <table>
       <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
       <tbody>
@@ -140,14 +259,54 @@
         <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=KOC000S-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fkom-cycling-phone-mount-bundle-kit&amp;intsrc=CATF_15689">KOM Cycling Phone Mount Bundle</a><span class="brand">KOM Cycling &middot; Phone mount</span></td><td class="cell-price">$30</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=KOC000S-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fkom-cycling-phone-mount-bundle-kit&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
       </tbody>
     </table>
-    <p class="tier-total">Estimated total: <strong>$843</strong></p>
+    <p class="tier-total">Estimated Standard total: <strong>$843</strong></p>
+    <div class="tier-sub">
+      <h3>Premium build</h3>
+      <span class="tier-pill">~$1,910</span>
+    </div>
+    <p class="tier-desc">A proper road-cycling upgrade for the rider who already owns the bike: an S-Works-class helmet, clipless pedals and race shoes, a premium bib-and-jersey kit, a flagship Garmin Edge, and a shop-quality floor pump.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SCQ00UZ-SAN-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-s-works-prevail-3-mips-helmet&amp;intsrc=CATF_15689">Specialized S-Works Prevail 3 MIPS Helmet</a><span class="brand">Specialized &middot; Road helmet</span></td><td class="cell-price">$300</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SCQ00UZ-SAN-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fspecialized-s-works-prevail-3-mips-helmet&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHI00DV-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-dura-ace-pd-r9100-4mm-spd-sl-pedals&amp;intsrc=CATF_2363">Shimano Dura-Ace PD-R9100 SPD-SL Pedals</a><span class="brand">Shimano &middot; Clipless pedals</span></td><td class="cell-price">$280</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHI00DV-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-dura-ace-pd-r9100-4mm-spd-sl-pedals&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHIU1GL-WHI-S480&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-rc903-s-phyre-cycling-shoes-mens-shiu1gl&amp;intsrc=CATF_2363">Shimano RC903 S-Phyre Cycling Shoes</a><span class="brand">Shimano &middot; Road cycling shoes</span></td><td class="cell-price">$450</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=SHIU1GL-WHI-S480&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-rc903-s-phyre-cycling-shoes-mens-shiu1gl&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AASZ03C-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fassos-mille-gt-bib-short-gto-c2-mens&amp;intsrc=CATF_15689">Assos Mille GT Bib Short GTO C2</a><span class="brand">Assos &middot; Bib shorts</span></td><td class="cell-price">$190</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AASZ03C-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fassos-mille-gt-bib-short-gto-c2-mens&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=RFAD04R-DARNAV-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Frapha-classic-jersey-mens-rfad04r&amp;intsrc=CATF_15689">Rapha Classic Jersey</a><span class="brand">Rapha &middot; Jersey</span></td><td class="cell-price">$140</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=RFAD04R-DARNAV-L&amp;u=https%3A%2F%2Fwww.backcountry.com%2Frapha-classic-jersey-mens-rfad04r&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF08W-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-850-bike-computer&amp;intsrc=CATF_2363">Garmin Edge 850</a><span class="brand">Garmin &middot; Bike computer</span></td><td class="cell-price">$450</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=GRMF08W-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-850-bike-computer&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=TOP001V-BK-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Ftopeak-joeblow-pro-x-floor-pump&amp;intsrc=CATF_2363">Topeak JoeBlow Pro X Floor Pump</a><span class="brand">Topeak &middot; Floor pump</span></td><td class="cell-price">$100</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/363181/5311?prodsku=TOP001V-BK-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Ftopeak-joeblow-pro-x-floor-pump&amp;intsrc=CATF_2363">Backcountry</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Premium total: <strong>$1,910</strong></p>
   </section>
   <section>
     <div class="tier-head">
       <h2>Hyrox Training Kit</h2>
-      <span class="tier-target">Around $1,900</span>
+      <span class="tier-target">$246 to $3,742</span>
     </div>
-    <p class="section-desc">Train all eight Hyrox stations at home: sled work, SkiErg pulls, wall balls, sandbag lunges, and farmers carries, plus the shoes and heart rate strap to keep every compromised run honest. Pair it with our free Hyrox training plan generator.</p>
+    <p class="section-desc">Train the Hyrox stations at home: sled work, SkiErg pulls, wall balls, sandbag lunges, and farmers carries, plus the shoes and heart rate strap to keep every compromised run honest. Pair it with our free Hyrox training plan generator.</p>
+    <div class="tier-sub">
+      <h3>Budget build</h3>
+      <span class="tier-pill">~$246</span>
+    </div>
+    <p class="tier-desc">Race prep on a shoestring: training shoes, a heart rate strap, and the loadable basics (kettlebell, sandbag, vest, bands). Use your gym&#x27;s SkiErg and sled for station work and save four figures.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0G4XBY3DJ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Reebok Nano Gym 1.0</a><span class="brand">Reebok &middot; Training shoes</span></td><td class="cell-price">$70</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0G4XBY3DJ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B07BS6B4PD?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">COOSPO H6 Heart Rate Monitor Chest Strap</a><span class="brand">COOSPO &middot; Heart rate strap</span></td><td class="cell-price">$27</td><td><a class="buy-link" href="https://www.amazon.com/dp/B07BS6B4PD?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0731FCS7T?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon Basics Cast Iron Kettlebell (35 lb)</a><span class="brand">Amazon Basics &middot; Kettlebell work</span></td><td class="cell-price">$52</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0731FCS7T?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B081168HGY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Yes4All Adjustable Training Sandbag</a><span class="brand">Yes4All &middot; Sandbag lunges</span></td><td class="cell-price">$46</td><td><a class="buy-link" href="https://www.amazon.com/dp/B081168HGY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B017O7Q4UG?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">CAP Barbell Adjustable Weighted Vest (20 lb)</a><span class="brand">CAP Barbell &middot; Weighted runs</span></td><td class="cell-price">$29</td><td><a class="buy-link" href="https://www.amazon.com/dp/B017O7Q4UG?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B07DWSPQQY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">WHATAFIT Resistance Bands Set with Handles</a><span class="brand">WHATAFIT &middot; Strength bands</span></td><td class="cell-price">$22</td><td><a class="buy-link" href="https://www.amazon.com/dp/B07DWSPQQY?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Budget total: <strong>$246</strong></p>
+    <div class="tier-sub">
+      <h3>Standard build</h3>
+      <span class="tier-pill">~$1,865</span>
+    </div>
+    <p class="tier-desc">Train all eight stations at home, anchored by a real Concept2 SkiErg and a weight sled, with the strength pieces to cover wall balls, lunges, and carries.</p>
     <table>
       <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
       <tbody>
@@ -163,7 +322,27 @@
         <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=YDL000E-MANCHA-S5MM&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fyoga-design-lab-infinity-yoga-mat&amp;intsrc=CATF_15689">Yoga Design Lab Infinity Mat</a><span class="brand">Yoga Design Lab &middot; Mobility / recovery mat</span></td><td class="cell-price">$116</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=YDL000E-MANCHA-S5MM&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fyoga-design-lab-infinity-yoga-mat&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
       </tbody>
     </table>
-    <p class="tier-total">Estimated total: <strong>$1,865</strong></p>
+    <p class="tier-total">Estimated Standard total: <strong>$1,865</strong></p>
+    <div class="tier-sub">
+      <h3>Premium build</h3>
+      <span class="tier-pill">~$3,742</span>
+    </div>
+    <p class="tier-desc">A full home Hyrox station: SkiErg and RowErg, a purpose-built push sled, a competition kettlebell, a plate carrier for weighted runs, and the race-day PUMA that fills Hyrox start lines.</p>
+    <table>
+      <thead><tr><th>Product</th><th class="col-price">Approx price</th><th class="col-buy">Buy link</th></tr></thead>
+      <tbody>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0FDX5VHWJ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">PUMA Deviate Nitro 3</a><span class="brand">PUMA &middot; Race-day running shoes</span></td><td class="cell-price">$120</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0FDX5VHWJ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08K-BLA-MXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-hrm-600&amp;intsrc=CATF_15689">Garmin HRM 600</a><span class="brand">Garmin &middot; Heart rate strap</span></td><td class="cell-price">$170</td><td><a class="buy-link" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08K-BLA-MXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-hrm-600&amp;intsrc=CATF_15689">Backcountry</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0FJNLLP83?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Concept2 SkiErg with Floor Stand</a><span class="brand">Concept2 &middot; SkiErg station</span></td><td class="cell-price">$1,070</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0FJNLLP83?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B00NH9WEUA?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Concept2 RowErg Indoor Rower</a><span class="brand">Concept2 &middot; Row station</span></td><td class="cell-price">$990</td><td><a class="buy-link" href="https://www.amazon.com/dp/B00NH9WEUA?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0995PJSR6?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Torque Fitness TANK M1 Push Sled</a><span class="brand">Torque Fitness &middot; Sled push/pull</span></td><td class="cell-price">$799</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0995PJSR6?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0BKQQ29RB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Kettlebell Kings Competition Kettlebell</a><span class="brand">Kettlebell Kings &middot; Kettlebell work</span></td><td class="cell-price">$190</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0BKQQ29RB?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B09NF25T7Z?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Titan Fitness Soft Wall Ball (14 lb)</a><span class="brand">Titan Fitness &middot; Wall balls</span></td><td class="cell-price">$83</td><td><a class="buy-link" href="https://www.amazon.com/dp/B09NF25T7Z?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0DWC45H3Z?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">5.11 TacTec Plate Carrier</a><span class="brand">5.11 Tactical &middot; Weighted runs</span></td><td class="cell-price">$250</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0DWC45H3Z?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+        <tr><td class="cell-product"><a href="https://www.amazon.com/dp/B0798XH4T9?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">REP Fitness Sandbag (Large)</a><span class="brand">REP Fitness &middot; Sandbag lunges</span></td><td class="cell-price">$70</td><td><a class="buy-link" href="https://www.amazon.com/dp/B0798XH4T9?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1">Amazon</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tier-total">Estimated Premium total: <strong>$3,742</strong></p>
   </section>
 
   <p class="disclaimer">Picks researched from manufacturer specs, published reviews, and verified owner reviews. Prices and availability are planning estimates only and change often. This is general information, not professional coaching or medical advice. Confirm sizing, compatibility, and current pricing before you buy.</p>
