@@ -1,3 +1,6 @@
+# Mediavine Journey ads.txt — redirect to Mediavine-hosted file so it stays current. Switched from AdSense (Jul 2026).
+/ads.txt  https://adstxt.journeymv.com/sites/bc575d1f-11b1-403f-a988-30dd4e93bdca/ads.txt  301
+
 # Hide unpublished Retrospec Bike Finder logo (POC offline until deal signs; remove on relaunch)
 /images/retrospec-logo.png / 302
 
