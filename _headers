@@ -4,3 +4,11 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Embeddable Retrospec Bike Finder — partners iframe this on their own sites
+/bike-finder-embed
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors *
+/bike-finder-embed.html
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors *
