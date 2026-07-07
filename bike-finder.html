@@ -152,6 +152,8 @@
       .bf-retake{ background:none; border:1.5px solid var(--copper); color:var(--copper-dark); padding:13px 34px; border-radius:.65rem; font-weight:700; cursor:pointer; font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; transition:all .18s; }
       .bf-retake:hover{ background:var(--copper); color:#fff; }
 
+      .bf-img{ display:block; max-height:200px; max-width:100%; margin:0 auto 1.1rem; object-fit:contain; }
+      .bf-imglink{ display:block; text-align:center; }
       .hidden{ display:none; }
       @keyframes spin{ to{ transform:rotate(360deg); } }
       @keyframes slideIn{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
@@ -355,7 +357,9 @@
             top.forEach(function(p, i){
                 var isTop = i === 0;
                 var pct = matchPct(p._score, best);
+                var url = p.affiliateUrl ? p.affiliateUrl : p.amazonUrl;
                 html += '<div class="bf-card' + (isTop ? ' top' : '') + '">';
+                if (p.image) { html += '<a href="' + url + '" target="_blank" rel="noopener sponsored" data-affiliate="' + p.id + '" class="bf-imglink"><img src="' + p.image + '" alt="' + p.name + '" class="bf-img" loading="lazy"></a>'; }
                 html += '<div class="bf-card-head">';
                 html += '<div class="bf-rank-wrap"><div class="bf-rank">' + (i+1) + '</div>' + (isTop ? '<span class="bf-matchpct">'+pct+'% match</span>' : '') + '</div>';
                 html += '<div style="flex:1;"><h3 class="bf-name">' + p.name + '</h3><p class="bf-name-meta">' + p.priceDisplay + (isTop ? ' &middot; Top match for you' : ' &middot; ' + pct + '% match') + '</p></div>';
@@ -373,7 +377,6 @@
                 html += '<div class="bf-spec"><dt>Notes</dt><dd>' + p.specs.weight + '</dd></div>';
                 html += '</div>';
 
-                var url = p.affiliateUrl ? p.affiliateUrl : p.amazonUrl;
                 html += '<a href="' + url + '" target="_blank" rel="noopener sponsored" data-affiliate="' + p.id + '" class="bf-cta">Shop the ' + p.name.replace('Retrospec ','') + ' <span class="arrow">→</span></a>';
 
                 if (isTop && p.pairsWith !== false) {
