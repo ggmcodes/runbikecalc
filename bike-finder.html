@@ -12,12 +12,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retrospec Bike Finder — Find Your Perfect Ride | RunBikeCalc</title>
-    <meta name="description" content="Answer 6 quick questions and we'll match you with the right Retrospec bike for your body, your terrain, and how you ride — from city commuters and cruisers to fat-tire e-bikes.">
+    <title>Bike Finder — Find Your Perfect Ride | RunBikeCalc</title>
+    <meta name="description" content="Answer 6 quick questions and we'll match you with the right bike for your body, your terrain, and how you ride — from city commuters and cruisers to fat-tire e-bikes.">
     <link rel="canonical" href="https://runbikecalc.com/bike-finder">
 
-    <meta property="og:title" content="Retrospec Bike Finder — Find Your Perfect Ride">
-    <meta property="og:description" content="Answer 6 quick questions and we'll match you with the right Retrospec bike for how you actually ride.">
+    <meta property="og:title" content="Bike Finder — Find Your Perfect Ride">
+    <meta property="og:description" content="Answer 6 quick questions and we'll match you with the right bike for how you actually ride.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="RunBikeCalc">
 
@@ -27,9 +27,9 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Retrospec Bike Finder",
+        "name": "Bike Finder",
         "url": "https://runbikecalc.com/bike-finder",
-        "description": "Interactive quiz that matches riders to the right Retrospec bike based on body fit, terrain, budget, and riding style.",
+        "description": "Interactive quiz that matches riders to the right bike based on body fit, terrain, budget, and riding style.",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -252,7 +252,7 @@
             {
                 id: 'height',
                 question: 'How tall is the rider?',
-                subtitle: "We'll flag the Retrospec frame sizes that fit best.",
+                subtitle: "We'll flag the frame sizes that fit best.",
                 options: [
                     { id: 'under_55', icon: '📏', label: 'Under 5’4″', desc: 'Look for low-standover & step-through frames' },
                     { id: '55_510', icon: '📏', label: '5’4″ – 5’10″', desc: 'The most common fit range' },
@@ -342,8 +342,8 @@
         function renderFn(top, answers, accessories) {
             var best = top[0] ? top[0]._score : 0;
             var html = '<div class="bf-results-head">';
-            html += '<div class="eyebrow" style="justify-content:center;margin-bottom:.7rem;">Your matches <span style="width:5px;height:5px;border-radius:50%;background:#C67B4E;display:inline-block;"></span> Retrospec</div>';
-            html += '<h2 class="font-display">Your Retrospec ride</h2>';
+            html += '<div class="eyebrow" style="justify-content:center;margin-bottom:.7rem;">Your matches</div>';
+            html += '<h2 class="font-display">Your perfect ride</h2>';
             html += '<p>Matched to your fit, terrain, and how you said you’ll ride.</p>';
             html += '</div>';
 
@@ -370,7 +370,7 @@
                 html += '<div class="bf-spec"><dt>Notes</dt><dd>' + p.specs.weight + '</dd></div>';
                 html += '</div>';
 
-                html += '<a href="' + url + '" target="_blank" rel="noopener sponsored" data-affiliate="' + p.id + '" class="bf-cta">Shop the ' + p.name.replace('Retrospec ','') + ' <span class="arrow">→</span></a>';
+                html += '<a href="' + url + '" target="_blank" rel="noopener sponsored" data-affiliate="' + p.id + '" class="bf-cta">Shop the ' + p.name + ' <span class="arrow">→</span></a>';
 
                 if (isTop && p.pairsWith !== false) {
                     var accs = accessories || [];
@@ -387,7 +387,7 @@
             });
 
             html += '<div style="text-align:center;margin:2rem 0 1rem;"><button id="quiz-retake" class="bf-retake">Retake the quiz</button></div>';
-            html += '<p style="text-align:center;color:#9b9b94;font-size:.82rem;margin-bottom:1rem;">Every recommendation above is a Retrospec model, matched to your answers.</p>';
+            html += '<p style="text-align:center;color:#9b9b94;font-size:.82rem;margin-bottom:1rem;">Every recommendation above is matched to your answers.</p>';
             return html;
         }
 
@@ -396,7 +396,7 @@
             dataUrl: '/data/bikes.json',
             scoreFn: scoreFn,
             renderFn: renderFn,
-            quizName: 'retrospec-bike-finder',
+            quizName: 'bike-finder',
             containerId: 'quiz-container',
             resultsId: 'quiz-results'
         });

@@ -1,16 +1,15 @@
 {
   "products": [
     {
-      "id": "retrospec-beaumont-7",
-      "name": "Retrospec Beaumont 7-Speed",
-      "brand": "Retrospec",
+      "id": "mambas-retro-city",
+      "name": "MAMBAS Retro City 7-Speed",
+      "brand": "MAMBAS",
       "tier": "city",
       "type": "City / Commuter",
-      "price": 300,
-      "priceDisplay": "$300",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Beaumont+7+Speed+City+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 229,
+      "priceDisplay": "$229",
+      "amazonUrl": "https://www.amazon.com/dp/B0H552Q7XZ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0H552Q7XZ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 10,
         "use_cruise": 7,
@@ -34,27 +33,27 @@
       },
       "specs": {
         "frame": "Step-through steel",
-        "speeds": "7-speed Shimano",
-        "brakes": "Linear-pull (V-brake)",
+        "speeds": "7-speed",
+        "brakes": "Front caliper + rear band brake",
         "best": "Flat-to-rolling city streets",
         "weight": "~33 lb"
       },
       "verdict": {
         "bestFor": "Everyday city commuting with an easy step-through frame",
-        "fit": "5'3\"\u20136'1\""
-      }
+        "fit": "5'3\"–6'1\""
+      },
+      "image": "https://m.media-amazon.com/images/I/41SOY+vCCrL._SL500_.jpg"
     },
     {
-      "id": "retrospec-harper-single",
-      "name": "Retrospec Harper Single-Speed",
-      "brand": "Retrospec",
+      "id": "avasta-fixie-single",
+      "name": "AVASTA Single-Speed Fixie",
+      "brand": "AVASTA",
       "tier": "city",
       "type": "Single-Speed / Fixie",
-      "price": 330,
-      "priceDisplay": "$330",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Harper+Single+Speed+Fixie&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 290,
+      "priceDisplay": "$290",
+      "amazonUrl": "https://www.amazon.com/dp/B0CS612ZP6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0CS612ZP6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 9,
         "use_cruise": 6,
@@ -77,28 +76,28 @@
         "pri_speed": 7
       },
       "specs": {
-        "frame": "Track-style steel",
+        "frame": "High-strength carbon steel",
         "speeds": "Single-speed (flip-flop hub)",
-        "brakes": "Front + rear caliper",
+        "brakes": "Dual caliper",
         "best": "Flat urban streets",
         "weight": "~24 lb"
       },
       "verdict": {
         "bestFor": "Low-maintenance flat-city riders who want a fast, clean look",
-        "fit": "5'4\"\u20136'2\""
-      }
+        "fit": "5'4\"–6'2\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51lKzAAX5aL._SL500_.jpg"
     },
     {
-      "id": "retrospec-chatham-7",
-      "name": "Retrospec Chatham 7-Speed Cruiser",
-      "brand": "Retrospec",
+      "id": "tracer-bora-cruiser",
+      "name": "Tracer Bora Beach Cruiser",
+      "brand": "Tracer",
       "tier": "cruiser",
       "type": "Beach Cruiser",
-      "price": 380,
-      "priceDisplay": "$380",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Chatham+7+Speed+Beach+Cruiser&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 500,
+      "priceDisplay": "$500",
+      "amazonUrl": "https://www.amazon.com/dp/B0CF8GJYJ7?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0CF8GJYJ7?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 5,
         "use_cruise": 10,
@@ -123,26 +122,26 @@
       "specs": {
         "frame": "Relaxed cruiser steel",
         "speeds": "7-speed",
-        "brakes": "Coaster + hand brake",
+        "brakes": "Coaster + disc",
         "best": "Boardwalks & flat neighborhoods",
         "weight": "~37 lb"
       },
       "verdict": {
         "bestFor": "Relaxed, upright cruising and weekend coffee runs",
-        "fit": "5'4\"\u20136'2\""
-      }
+        "fit": "5'4\"–6'2\""
+      },
+      "image": "https://m.media-amazon.com/images/I/41OOlZ-bDCL._SL500_.jpg"
     },
     {
-      "id": "retrospec-barron-plus",
-      "name": "Retrospec Barron Plus 21-Speed",
-      "brand": "Retrospec",
+      "id": "avasta-hybrid-21spd",
+      "name": "AVASTA 700C Hybrid 21-Speed",
+      "brand": "AVASTA",
       "tier": "hybrid",
       "type": "Comfort Hybrid",
-      "price": 420,
-      "priceDisplay": "$420",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Barron+Plus+21+Speed+Hybrid+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 290,
+      "priceDisplay": "$290",
+      "amazonUrl": "https://www.amazon.com/dp/B0DLKJ41RH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0DLKJ41RH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 7,
         "use_cruise": 6,
@@ -166,27 +165,27 @@
       },
       "specs": {
         "frame": "Aluminum hybrid",
-        "speeds": "21-speed",
-        "brakes": "Disc brakes",
+        "speeds": "21-speed Shimano EF500",
+        "brakes": "Dual disc brakes",
         "best": "Hilly & mixed terrain",
-        "weight": "~31 lb"
+        "weight": "Lightweight aluminum"
       },
       "verdict": {
         "bestFor": "Fitness riders tackling hills and longer mixed routes",
-        "fit": "5'4\"\u20136'3\""
-      }
+        "fit": "5'4\"–6'3\""
+      },
+      "image": "https://m.media-amazon.com/images/I/410YaGMITML._SL500_.jpg"
     },
     {
-      "id": "retrospec-amok-8",
-      "name": "Retrospec Amok 8-Speed Gravel",
-      "brand": "Retrospec",
+      "id": "tommaso-siena-gravel",
+      "name": "Tommaso Siena Gravel Adventure",
+      "brand": "Tommaso",
       "tier": "adventure",
       "type": "Gravel / Adventure",
-      "price": 530,
-      "priceDisplay": "$530",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Amok+Gravel+Adventure+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 650,
+      "priceDisplay": "$650",
+      "amazonUrl": "https://www.amazon.com/dp/B077735F9M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B077735F9M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 5,
         "use_cruise": 3,
@@ -209,28 +208,28 @@
         "pri_speed": 7
       },
       "specs": {
-        "frame": "Gravel-geometry alloy",
-        "speeds": "8-speed",
+        "frame": "Gravel-geometry aluminum",
+        "speeds": "Shimano Tourney",
         "brakes": "Disc brakes",
         "best": "Gravel, dirt paths & light trail",
-        "weight": "~28 lb"
+        "weight": "700x40c tires"
       },
       "verdict": {
         "bestFor": "Riders who mix pavement with gravel and light off-road",
-        "fit": "5'5\"\u20136'3\""
-      }
+        "fit": "5'5\"–6'3\""
+      },
+      "image": "https://m.media-amazon.com/images/I/41dj2NWfJNL._SL500_.jpg"
     },
     {
-      "id": "retrospec-judd-fold",
-      "name": "Retrospec Judd Folding Bike",
-      "brand": "Retrospec",
+      "id": "schwinn-hinge-folding",
+      "name": "Schwinn Hinge Folding Bike",
+      "brand": "Schwinn",
       "tier": "city",
       "type": "Folding",
       "price": 370,
       "priceDisplay": "$370",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Judd+Folding+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "amazonUrl": "https://www.amazon.com/dp/B00P470HIY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B00P470HIY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 9,
         "use_cruise": 5,
@@ -253,28 +252,28 @@
         "pri_speed": 3
       },
       "specs": {
-        "frame": "Folding alloy",
+        "frame": "Folding steel",
         "speeds": "Single-speed",
         "brakes": "Caliper",
         "best": "Transit & small-space commutes",
-        "weight": "~23 lb"
+        "weight": "20-inch alloy wheels"
       },
       "verdict": {
         "bestFor": "Apartment dwellers and multimodal commuters who need to fold & stash",
-        "fit": "5'0\"\u20136'0\""
-      }
+        "fit": "5'0\"–6'0\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51V53fi5dML._SL500_.jpg"
     },
     {
-      "id": "retrospec-beaumont-rev3",
-      "name": "Retrospec Beaumont Rev 3 E-Bike",
-      "brand": "Retrospec",
+      "id": "heybike-cityscape-ebike",
+      "name": "Heybike Cityscape 2.0 E-Bike",
+      "brand": "Heybike",
       "tier": "ebike",
       "type": "Class 2 City E-Bike",
-      "price": 1000,
-      "priceDisplay": "$1,000",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Beaumont+Rev+Electric+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 700,
+      "priceDisplay": "$700",
+      "amazonUrl": "https://www.amazon.com/dp/B0FWCMLPD5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0FWCMLPD5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 10,
         "use_cruise": 8,
@@ -297,28 +296,28 @@
         "pri_speed": 8
       },
       "specs": {
-        "frame": "Step-through / step-over alloy",
-        "speeds": "Pedal-assist + throttle",
+        "frame": "Step-thru alloy, front suspension",
+        "speeds": "Pedal-assist + throttle, 7-speed",
         "brakes": "Disc brakes",
-        "best": "Commutes with hills, ~42 mi range",
-        "weight": "Class 2 \u00b7 20 mph"
+        "best": "Commutes with hills, ~50 mi range",
+        "weight": "500W (1200W peak) motor"
       },
       "verdict": {
         "bestFor": "Commuters who want to arrive without sweating and flatten the hills",
-        "fit": "5'2\"\u20136'2\""
-      }
+        "fit": "5'2\"–6'2\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51pC8ClltmL._SL500_.jpg"
     },
     {
-      "id": "retrospec-chatham-rev3",
-      "name": "Retrospec Chatham Rev 3 Cruiser E-Bike",
-      "brand": "Retrospec",
+      "id": "wooken-cruiser-ebike",
+      "name": "Wooken City Cruiser E-Bike",
+      "brand": "Wooken",
       "tier": "ebike",
       "type": "Class 2 Cruiser E-Bike",
-      "price": 1000,
-      "priceDisplay": "$1,000",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Chatham+Rev+Electric+Cruiser&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 630,
+      "priceDisplay": "$630",
+      "amazonUrl": "https://www.amazon.com/dp/B0DPYNVZ77?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0DPYNVZ77?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 6,
         "use_cruise": 10,
@@ -341,28 +340,28 @@
         "pri_speed": 6
       },
       "specs": {
-        "frame": "Relaxed cruiser alloy",
+        "frame": "Step-thru alloy",
         "speeds": "Pedal-assist + throttle",
-        "brakes": "Disc brakes",
-        "best": "Easy cruising, ~45 mi range",
-        "weight": "Class 2 \u00b7 20 mph"
+        "brakes": "Mechanical disc",
+        "best": "Easy cruising, ~50 mi range",
+        "weight": "749W motor"
       },
       "verdict": {
         "bestFor": "Cruiser fans who want effortless, upright e-assisted rides",
-        "fit": "5'3\"\u20136'2\""
-      }
+        "fit": "5'3\"–6'2\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51mHplbqZ5L._SL500_.jpg"
     },
     {
-      "id": "retrospec-abbot-rev2",
-      "name": "Retrospec Abbot Rev 2 Commuter E-Bike",
-      "brand": "Retrospec",
+      "id": "engwe-ep2-ebike",
+      "name": "ENGWE EP-2 3.0 E-Bike",
+      "brand": "ENGWE",
       "tier": "ebike",
       "type": "Class 1 Commuter E-Bike",
-      "price": 1600,
-      "priceDisplay": "$1,600",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Abbot+Rev+Commuter+Electric+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 1099,
+      "priceDisplay": "$1,099",
+      "amazonUrl": "https://www.amazon.com/dp/B0GTQ3XHX5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0GTQ3XHX5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 10,
         "use_cruise": 6,
@@ -385,28 +384,28 @@
         "pri_speed": 10
       },
       "specs": {
-        "frame": "Commuter alloy, rack + fenders",
-        "speeds": "500W torque-sensing assist",
-        "brakes": "Hydraulic disc",
-        "best": "Longer fast commutes, ~72 mi range",
-        "weight": "Class 1 \u00b7 28 mph assist"
+        "frame": "One-piece magnesium, step-thru",
+        "speeds": "Torque-sensing pedal assist",
+        "brakes": "Tektro hydraulic disc",
+        "best": "Longer commutes with GPS anti-theft, up to 45 mi range",
+        "weight": "1500W peak motor"
       },
       "verdict": {
         "bestFor": "Serious commuters who want range, lights, fenders and a rear rack built in",
-        "fit": "5'4\"\u20136'3\""
-      }
+        "fit": "5'4\"–6'3\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51TSTRwrDjL._SL500_.jpg"
     },
     {
-      "id": "retrospec-valen-rev",
-      "name": "Retrospec Valen Rev+ Fat Tire E-Bike",
-      "brand": "Retrospec",
+      "id": "heybike-ranger-fattire-ebike",
+      "name": "Heybike Ranger 3.0 Pro E-Bike",
+      "brand": "Heybike",
       "tier": "ebike",
       "type": "Fat-Tire E-Bike",
-      "price": 1900,
-      "priceDisplay": "$1,900",
-      "amazonUrl": "https://www.amazon.com/s?k=Retrospec+Valen+Rev+Fat+Tire+Electric+Bike&tag=runbikecalc-20",
-      "affiliateUrl": "",
-      "imageUrl": null,
+      "price": 1499,
+      "priceDisplay": "$1,499",
+      "amazonUrl": "https://www.amazon.com/dp/B0H1J7J4CF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0H1J7J4CF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 5,
         "use_cruise": 6,
@@ -429,16 +428,17 @@
         "pri_speed": 9
       },
       "specs": {
-        "frame": "Fat-tire alloy, suspension fork",
-        "speeds": "750W + throttle",
-        "brakes": "Hydraulic disc",
-        "best": "Trails, sand & snow, ~68 mi range",
-        "weight": "4\" fat tires \u00b7 6 assist levels"
+        "frame": "Fat-tire alloy, full suspension",
+        "speeds": "Pedal-assist + throttle",
+        "brakes": "Dual hydraulic disc",
+        "best": "Trails, sand & all-terrain, ~90 mi range",
+        "weight": "1200W peak motor, 4\" tires"
       },
       "verdict": {
         "bestFor": "Adventure riders who want to go off-pavement with power to spare",
-        "fit": "5'5\"\u20136'4\""
-      }
+        "fit": "5'5\"–6'4\""
+      },
+      "image": "https://m.media-amazon.com/images/I/51b8eN0t9ZL._SL500_.jpg"
     }
   ],
   "accessories": [
