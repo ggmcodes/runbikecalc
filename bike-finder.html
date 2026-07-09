@@ -15,7 +15,6 @@
     <title>Retrospec Bike Finder — Find Your Perfect Ride | RunBikeCalc</title>
     <meta name="description" content="Answer 6 quick questions and we'll match you with the right Retrospec bike for your body, your terrain, and how you ride — from city commuters and cruisers to fat-tire e-bikes.">
     <link rel="canonical" href="https://runbikecalc.com/bike-finder">
-    <meta name="robots" content="noindex">
 
     <meta property="og:title" content="Retrospec Bike Finder — Find Your Perfect Ride">
     <meta property="og:description" content="Answer 6 quick questions and we'll match you with the right Retrospec bike for how you actually ride.">
@@ -34,8 +33,7 @@
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "publisher": { "@type": "Organization", "name": "RunBikeCalc", "url": "https://runbikecalc.com" },
-        "sponsor": { "@type": "Organization", "name": "Retrospec", "url": "https://www.retrospec.com" }
+        "publisher": { "@type": "Organization", "name": "RunBikeCalc", "url": "https://runbikecalc.com" }
     }
     </script>
 
@@ -194,11 +192,6 @@
           <span class="bf-chip"><b>~90</b> seconds</span>
           <span class="bf-chip">Matched to <b>how you ride</b></span>
         </div>
-        <div class="bf-sponsoredby">
-          <span class="sb-label">Sponsored by</span>
-          <img src="/images/retrospec-logo.png" alt="Retrospec" class="sb-logo">
-          <span class="sb-word">RETROSPEC</span>
-        </div>
       </div>
     </header>
 
@@ -211,7 +204,7 @@
     <!-- Affiliate Disclosure -->
     <div style="max-width:680px; margin:2.5rem auto 0; padding:0 1.5rem;">
       <p style="font-size:.78rem; color:#9b9b94; line-height:1.6; text-align:center;">
-        <strong style="color:#6B6B6B;">Sponsored partnership.</strong> This Bike Finder is presented in partnership with Retrospec. RunBikeCalc may earn an affiliate commission when you buy through links on this page, at no extra cost to you. Recommendations are matched to your answers; prices are approximate and may vary.
+        <strong style="color:#6B6B6B;">Affiliate disclosure.</strong> As an Amazon Associate, RunBikeCalc earns from qualifying purchases. Recommendations are matched to your answers; prices are approximate and may vary.
       </p>
     </div>
 
@@ -407,14 +400,6 @@
             containerId: 'quiz-container',
             resultsId: 'quiz-results'
         });
-
-        // Tag every completion with the sponsor for reporting
-        var _origTrack = quiz.trackEvent.bind(quiz);
-        quiz.trackEvent = function(name, params){
-            params = params || {};
-            params.sponsor = 'Retrospec';
-            _origTrack(name, params);
-        };
 
         quiz.init();
     })();
