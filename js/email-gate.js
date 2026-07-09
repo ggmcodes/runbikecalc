@@ -165,6 +165,8 @@ class EmailGateHandler {
      * @param {string} email
      */
     unlock(email) {
+        // Subscribe to Endure Weekly via Beehiiv magic link (opens confirmation in new tab)
+        window.open('https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b?email=' + encodeURIComponent(email) + '&utm_source=runbikecalc&utm_medium=email_gate', '_blank');
         localStorage.setItem(this.storageKey, email);
         this.closeModal();
         this.updateButtonStates();
