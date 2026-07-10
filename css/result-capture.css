@@ -1,0 +1,95 @@
+/**
+ * Result-moment email capture block for RunBikeCalc calculators.
+ * Matches the Endure Weekly editorial cream + oxblood palette
+ * (see css/endure-weekly.css).
+ */
+.rc-block {
+  background: #FAF8F5;
+  border: 1px solid rgba(124, 45, 58, 0.18);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  color: #1A1A1A;
+}
+.rc-block[hidden] {
+  display: none;
+}
+.rc-eyebrow {
+  display: inline-block;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: #7C2D3A;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+.rc-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1A1A1A;
+  margin: 0 0 0.4rem;
+}
+.rc-sub {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444444;
+  max-width: 460px;
+  margin: 0 auto 1.1rem;
+}
+.rc-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.rc-input {
+  flex: 1 1 220px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  border-radius: 8px;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #1A1A1A;
+}
+.rc-input:focus {
+  outline: none;
+  border-color: #7C2D3A;
+  box-shadow: 0 0 0 3px rgba(124, 45, 58, 0.12);
+}
+.rc-btn {
+  padding: 0.7rem 1.3rem;
+  background: #7C2D3A;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.rc-btn:hover {
+  background: #63242E;
+}
+.rc-fine {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  color: #777777;
+  margin: 0.75rem 0 0;
+}
+@media (max-width: 480px) {
+  .rc-block {
+    padding: 1.4rem 1rem;
+  }
+  .rc-headline {
+    font-size: 1.3rem;
+  }
+}
