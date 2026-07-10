@@ -22,7 +22,7 @@
   "description": "Free Cooper Test Calculator - Enter your 12-minute run distance to get instant VO2 max results and fitness rating by age/gender. Used by 50,000+ athletes. Works in meters or miles.",
   "image": "https://runbikecalc.com/images/og-default.jpg",
   "datePublished": "2025-01-01",
-  "dateModified": "2026-04-26",
+  "dateModified": "2026-07-10",
   "author": {
     "@type": "Organization",
     "name": "RunBikeCalc",
@@ -145,6 +145,22 @@
                     "@type": "Answer",
                     "text": "The average adult should aim to run 1.5-2.0 miles (2400-3200 meters) in 12 minutes. Elite athletes can exceed 3200 meters, while beginners may cover 1200-1600 meters. Use the Cooper Test Calculator to see how your distance compares to age-based standards."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Cooper test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Cooper test is a 12-minute run test developed by Dr. Kenneth Cooper in 1968 to estimate aerobic fitness. You run as far as possible in exactly 12 minutes on a flat, measured course, then convert the distance to VO2 max with the formula VO2 max = (distance in meters - 504.9) / 44.73. It correlates about 0.90 with laboratory VO2 max testing and is used by militaries, sports teams, and coaches worldwide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the normative data for the 12 minute Cooper run?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For men aged 20-29, a good 12-minute Cooper run is 2400-2800 meters and excellent is over 2800 meters. For women aged 20-29, good is 2000-2300 meters and excellent is over 2300 meters. Norms decline with age: men 40-49 rate good at 2100-2500 meters, women 40-49 at 1800-2100 meters. The full normative table on this page covers ages 13 through 60+ across five fitness bands."
+                }
             }
         ]
     }
@@ -241,6 +257,35 @@
                 <p class="text-lg font-semibold text-gray-800">
                     <strong>Quick Answer:</strong> Good VO2 max for men: 35-40 ml/kg/min | Women: 30-35 ml/kg/min | Elite athletes: 60+ ml/kg/min
                 </p>
+            </div>
+
+            <!-- Cooper Test Normative Data -->
+            <div class="bg-white border border-gray-200 rounded-lg p-4 mt-4">
+                <h2 class="text-lg font-bold text-gray-900 mb-2">Cooper Test Normative Data: 12-Minute Run Distance by Age</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b">
+                                <th class="p-2 text-left font-semibold">Age</th>
+                                <th class="p-2 text-left font-semibold">Men: Good</th>
+                                <th class="p-2 text-left font-semibold">Men: Excellent</th>
+                                <th class="p-2 text-left font-semibold">Women: Good</th>
+                                <th class="p-2 text-left font-semibold">Women: Excellent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b"><td class="p-2 font-medium">13-14</td><td class="p-2">2400-2700m</td><td class="p-2">&gt;2700m</td><td class="p-2">1900-2000m</td><td class="p-2">&gt;2000m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">15-16</td><td class="p-2">2500-2800m</td><td class="p-2">&gt;2800m</td><td class="p-2">2000-2100m</td><td class="p-2">&gt;2100m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">17-19</td><td class="p-2">2700-3000m</td><td class="p-2">&gt;3000m</td><td class="p-2">2100-2300m</td><td class="p-2">&gt;2300m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">20-29</td><td class="p-2">2400-2800m</td><td class="p-2">&gt;2800m</td><td class="p-2">2000-2300m</td><td class="p-2">&gt;2300m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">30-39</td><td class="p-2">2300-2700m</td><td class="p-2">&gt;2700m</td><td class="p-2">1900-2200m</td><td class="p-2">&gt;2200m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">40-49</td><td class="p-2">2100-2500m</td><td class="p-2">&gt;2500m</td><td class="p-2">1800-2100m</td><td class="p-2">&gt;2100m</td></tr>
+                            <tr class="border-b"><td class="p-2 font-medium">50-59</td><td class="p-2">2000-2400m</td><td class="p-2">&gt;2400m</td><td class="p-2">1600-1900m</td><td class="p-2">&gt;1900m</td></tr>
+                            <tr><td class="p-2 font-medium">60+</td><td class="p-2">1800-2200m</td><td class="p-2">&gt;2200m</td><td class="p-2">1400-1700m</td><td class="p-2">&gt;1700m</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">Distances are meters covered in 12 minutes. See the full five-band norms (Excellent through Poor) in our <a href="/blog/cooper-test-results-by-age-vo2-max-chart" class="text-blue-600 hover:underline">Cooper test results by age chart</a>, or enter your distance below to get your exact VO2 max and rating.</p>
             </div>
         </div>
     </div>
@@ -668,6 +713,20 @@
 
                     <!-- Advanced FAQ Section -->
                     <div class="space-y-6">
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">What is the Cooper test?</h3>
+                            <div class="prose text-gray-600">
+                                <p>The Cooper test is a 12-minute run test developed by Dr. Kenneth Cooper in 1968 to estimate aerobic fitness. You run as far as possible in exactly 12 minutes on a flat, measured course, then convert the distance to VO2 max with the formula VO2 max = (distance in meters - 504.9) / 44.73. It correlates about 0.90 with laboratory VO2 max testing and is used by militaries, sports teams, and coaches worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">What is the normative data for the 12 minute Cooper run?</h3>
+                            <div class="prose text-gray-600">
+                                <p>For men aged 20-29, a good 12-minute Cooper run is 2400-2800 meters and excellent is over 2800 meters. For women aged 20-29, good is 2000-2300 meters and excellent is over 2300 meters. Norms decline with age: men 40-49 rate good at 2100-2500 meters, women 40-49 at 1800-2100 meters. The normative table at the top of this page covers ages 13 through 60+, and our <a href="/blog/cooper-test-results-by-age-vo2-max-chart" class="text-blue-600 hover:underline">Cooper test results by age chart</a> has all five fitness bands.</p>
+                            </div>
+                        </div>
+
                         <div class="bg-white border border-gray-200 rounded-lg p-6">
                             <h3 class="text-lg font-semibold text-gray-800 mb-3">What is a good Cooper Test distance for my age?</h3>
                             <div class="prose text-gray-600">
