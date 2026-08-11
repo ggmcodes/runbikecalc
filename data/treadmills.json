@@ -7,7 +7,7 @@
       "tier": "budget",
       "price": 300,
       "priceDisplay": "$300",
-      "amazonUrl": "https://www.amazon.com/dp/B081JDMJ4J?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "amazonUrl": "https://www.amazon.com/dp/B07ZRSBP5S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/41l8lp100GL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41l8lp100GL._SL160_.jpg",
       "scores": {
@@ -100,12 +100,12 @@
     },
     {
       "id": "xterra-tr150",
-      "name": "XTERRA Fitness TR150 Treadmill",
+      "name": "XTERRA Fitness TRX1000 Treadmill",
       "brand": "XTERRA",
       "tier": "budget",
       "price": 400,
       "priceDisplay": "$400",
-      "amazonUrl": "https://www.amazon.com/dp/B01M0L0D90?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "amazonUrl": "https://www.amazon.com/dp/B0FBKNYX52?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/41fspUhVLTL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/41fspUhVLTL._SL160_.jpg",
       "scores": {
@@ -149,12 +149,12 @@
     },
     {
       "id": "sole-f63",
-      "name": "Sole F63 Treadmill",
-      "brand": "Sole",
+      "name": "NordicTrack Commercial 1250 Treadmill",
+      "brand": "NordicTrack",
       "tier": "mid",
       "price": 1000,
       "priceDisplay": "$1,000",
-      "amazonUrl": "https://www.amazon.com/dp/B07QQBZBHK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "amazonUrl": "https://www.amazon.com/dp/B0D5YJ4YW4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/4177ZQhyhvL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/4177ZQhyhvL._SL160_.jpg",
       "scores": {
@@ -399,7 +399,7 @@
     {
       "id": "sole-f80",
       "name": "Sole F80 Treadmill",
-      "brand": "Sole",
+      "brand": "NordicTrack",
       "tier": "mid",
       "price": 1500,
       "priceDisplay": "$1,500",
