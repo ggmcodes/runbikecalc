@@ -49,94 +49,46 @@
       ]
     },
     {
-      "id": "joroto-x2",
-      "name": "JOROTO X2 Magnetic Spin Bike",
-      "brand": "JOROTO",
+      "id": "sunny-nova",
+      "name": "Sunny Health Nova Smart Bike",
+      "brand": "Sunny Health",
       "tier": "budget",
-      "price": 350,
-      "priceDisplay": "$350",
-      "amazonUrl": "https://www.amazon.com/s?k=JOROTO+X2+Magnetic+Spin+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 300,
+      "priceDisplay": "$300",
+      "amazonUrl": "https://www.amazon.com/dp/B0DQ6F89GJ?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41NUv9vuEbL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41NUv9vuEbL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 7,
         "goal_general_fitness": 8,
-        "goal_cycling_training": 5,
+        "goal_cycling_training": 4,
         "goal_peloton_alt": 6,
-        "classes_must_have": 3,
+        "classes_must_have": 4,
         "classes_nice": 7,
-        "classes_dont_need": 9,
-        "budget_under_300": 5,
-        "budget_300_600": 10,
-        "budget_600_1000": 5,
-        "budget_over_1000": 2,
-        "space_small": 7,
+        "classes_dont_need": 8,
+        "budget_under_300": 9,
+        "budget_300_600": 8,
+        "budget_600_1000": 3,
+        "budget_over_1000": 1,
+        "space_small": 8,
         "space_medium": 8,
         "space_large": 8,
-        "deal_quiet": 8,
+        "deal_quiet": 9,
         "deal_screen": 2,
         "deal_adjustable": 7,
         "deal_warranty": 5,
-        "deal_compact": 7
+        "deal_compact": 8
       },
       "specs": {
-        "resistance": "Magnetic",
-        "flywheel": "35 lb",
-        "display": "LCD",
-        "maxWeight": "280 lb",
-        "warranty": "1 year"
-      },
-      "verdict": {
-        "skipPeloton": "YES",
-        "bestFor": "Best value magnetic bike"
-      },
-      "pairsWith": [
-        "cadence-sensor",
-        "bike-mat",
-        "tablet-holder"
-      ]
-    },
-    {
-      "id": "sunny-b1805",
-      "name": "Sunny Health SF-B1805 Magnetic Bike",
-      "brand": "Sunny Health",
-      "tier": "budget",
-      "price": 400,
-      "priceDisplay": "$400",
-      "amazonUrl": "https://www.amazon.com/s?k=Sunny+Health+SF-B1805+Magnetic+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
-      "scores": {
-        "goal_weight_loss": 7,
-        "goal_general_fitness": 8,
-        "goal_cycling_training": 5,
-        "goal_peloton_alt": 6,
-        "classes_must_have": 3,
-        "classes_nice": 7,
-        "classes_dont_need": 9,
-        "budget_under_300": 0,
-        "budget_300_600": 10,
-        "budget_600_1000": 5,
-        "budget_over_1000": 2,
-        "space_small": 6,
-        "space_medium": 8,
-        "space_large": 8,
-        "deal_quiet": 8,
-        "deal_screen": 2,
-        "deal_adjustable": 8,
-        "deal_warranty": 5,
-        "deal_compact": 6
-      },
-      "specs": {
-        "resistance": "Magnetic",
-        "flywheel": "44 lb",
-        "display": "LCD",
-        "maxWeight": "300 lb",
+        "resistance": "Magnetic (belt drive)",
+        "flywheel": "18 lb",
+        "display": "None (SunnyFit app via Bluetooth)",
+        "maxWeight": "Riders 5'0\" to 6'4\"",
         "warranty": "3 years frame"
       },
       "verdict": {
         "skipPeloton": "YES",
-        "bestFor": "Heavy flywheel on a budget"
+        "bestFor": "Beginner-friendly smart bike with SunnyFit app"
       },
       "pairsWith": [
         "cadence-sensor",
@@ -145,15 +97,15 @@
       ]
     },
     {
-      "id": "pyhigh-bike",
-      "name": "PYHIGH Indoor Cycling Bike",
-      "brand": "PYHIGH",
+      "id": "merach-bike",
+      "name": "MERACH Magnetic Exercise Bike",
+      "brand": "MERACH",
       "tier": "budget",
-      "price": 300,
-      "priceDisplay": "$300",
-      "amazonUrl": "https://www.amazon.com/s?k=PYHIGH+Indoor+Cycling+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 270,
+      "priceDisplay": "$270",
+      "amazonUrl": "https://www.amazon.com/dp/B0DHTQD768?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41oyhUcJumL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41oyhUcJumL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 7,
         "goal_general_fitness": 7,
@@ -162,29 +114,29 @@
         "classes_must_have": 2,
         "classes_nice": 6,
         "classes_dont_need": 9,
-        "budget_under_300": 9,
-        "budget_300_600": 8,
+        "budget_under_300": 10,
+        "budget_300_600": 7,
         "budget_600_1000": 3,
         "budget_over_1000": 1,
         "space_small": 7,
         "space_medium": 8,
         "space_large": 8,
-        "deal_quiet": 5,
+        "deal_quiet": 8,
         "deal_screen": 1,
         "deal_adjustable": 7,
         "deal_warranty": 4,
         "deal_compact": 7
       },
       "specs": {
-        "resistance": "Felt pad",
-        "flywheel": "35 lb",
-        "display": "LCD (basic)",
-        "maxWeight": "270 lb",
+        "resistance": "Magnetic",
+        "flywheel": "Cast iron (inertia-enhanced)",
+        "display": "LED + Merach app",
+        "maxWeight": "300 lb",
         "warranty": "1 year"
       },
       "verdict": {
         "skipPeloton": "YES",
-        "bestFor": "Affordable entry-level bike"
+        "bestFor": "Quiet budget bike with app tracking"
       },
       "pairsWith": [
         "cadence-sensor",
@@ -241,63 +193,63 @@
       ]
     },
     {
-      "id": "bowflex-c6",
-      "name": "Bowflex VeloCore C6",
-      "brand": "Bowflex",
+      "id": "sunny-evolution-pro",
+      "name": "Sunny Evolution Pro Magnetic Bike",
+      "brand": "Sunny Health",
       "tier": "mid",
-      "price": 900,
-      "priceDisplay": "$900",
-      "amazonUrl": "https://www.amazon.com/s?k=Bowflex+VeloCore+C6&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 700,
+      "priceDisplay": "$700",
+      "amazonUrl": "https://www.amazon.com/dp/B078F12DPL?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41ejop82HsL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41ejop82HsL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 8,
-        "goal_general_fitness": 9,
-        "goal_cycling_training": 7,
-        "goal_peloton_alt": 9,
-        "classes_must_have": 7,
-        "classes_nice": 9,
-        "classes_dont_need": 6,
+        "goal_general_fitness": 8,
+        "goal_cycling_training": 8,
+        "goal_peloton_alt": 7,
+        "classes_must_have": 3,
+        "classes_nice": 6,
+        "classes_dont_need": 9,
         "budget_under_300": 0,
         "budget_300_600": 0,
-        "budget_600_1000": 9,
-        "budget_over_1000": 6,
-        "space_small": 5,
+        "budget_600_1000": 10,
+        "budget_over_1000": 4,
+        "space_small": 6,
         "space_medium": 8,
         "space_large": 8,
-        "deal_quiet": 8,
-        "deal_screen": 5,
+        "deal_quiet": 9,
+        "deal_screen": 1,
         "deal_adjustable": 9,
-        "deal_warranty": 7,
-        "deal_compact": 5
+        "deal_warranty": 5,
+        "deal_compact": 6
       },
       "specs": {
-        "resistance": "Magnetic (100 levels)",
-        "flywheel": "40 lb",
-        "display": "LCD + Bluetooth + dual HR",
+        "resistance": "Magnetic",
+        "flywheel": "44 lb",
+        "display": "None (bring your own device)",
         "maxWeight": "330 lb",
-        "warranty": "10 years frame"
+        "warranty": "3 years frame"
       },
       "verdict": {
         "skipPeloton": "YES",
-        "bestFor": "Best mid-range feature set"
+        "bestFor": "Heavy 44 lb flywheel, gym-style ride"
       },
       "pairsWith": [
+        "cadence-sensor",
         "bike-mat",
-        "heart-rate-monitor",
-        "spin-shoes"
+        "heart-rate-monitor"
       ]
     },
     {
-      "id": "echelon-ex5",
-      "name": "Echelon EX-5 Connect Bike",
+      "id": "echelon-ex8s",
+      "name": "Echelon Connect EX-8s",
       "brand": "Echelon",
-      "tier": "mid",
-      "price": 840,
-      "priceDisplay": "$840",
-      "amazonUrl": "https://www.amazon.com/s?k=Echelon+EX-5+Connect+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "tier": "premium",
+      "price": 2000,
+      "priceDisplay": "$2,000",
+      "amazonUrl": "https://www.amazon.com/dp/B0CN7CDH6B?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/4122qselvQL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/4122qselvQL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 8,
         "goal_general_fitness": 8,
@@ -308,27 +260,27 @@
         "classes_dont_need": 4,
         "budget_under_300": 0,
         "budget_300_600": 0,
-        "budget_600_1000": 9,
-        "budget_over_1000": 5,
-        "space_small": 6,
-        "space_medium": 8,
+        "budget_600_1000": 0,
+        "budget_over_1000": 8,
+        "space_small": 5,
+        "space_medium": 7,
         "space_large": 8,
         "deal_quiet": 7,
-        "deal_screen": 8,
-        "deal_adjustable": 7,
+        "deal_screen": 9,
+        "deal_adjustable": 8,
         "deal_warranty": 6,
         "deal_compact": 6
       },
       "specs": {
         "resistance": "Magnetic (32 levels)",
-        "flywheel": "N/A (magnetic)",
-        "display": "10\" HD touchscreen",
+        "flywheel": "LED-lit flywheel",
+        "display": "24\" HD touchscreen (flips 180 degrees)",
         "maxWeight": "300 lb",
-        "warranty": "5 years frame"
+        "warranty": "1 year"
       },
       "verdict": {
         "skipPeloton": "MAYBE",
-        "bestFor": "Built-in screen, Echelon classes"
+        "bestFor": "Big touchscreen and Echelon classes"
       },
       "pairsWith": [
         "bike-mat",
@@ -341,11 +293,11 @@
       "name": "JOROTO X2 Pro Magnetic Bike",
       "brand": "JOROTO",
       "tier": "mid",
-      "price": 500,
-      "priceDisplay": "$500",
-      "amazonUrl": "https://www.amazon.com/s?k=JOROTO+X2+Pro+Magnetic+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 380,
+      "priceDisplay": "$380",
+      "amazonUrl": "https://www.amazon.com/dp/B0BG1KK8PX?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41EmzMyiGnL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41EmzMyiGnL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 7,
         "goal_general_fitness": 8,
@@ -370,9 +322,9 @@
       "specs": {
         "resistance": "Magnetic",
         "flywheel": "40 lb",
-        "display": "LCD + Bluetooth",
-        "maxWeight": "300 lb",
-        "warranty": "2 years"
+        "display": "LCD + JOROTO app",
+        "maxWeight": "350 lb",
+        "warranty": "1 year"
       },
       "verdict": {
         "skipPeloton": "YES",
@@ -389,11 +341,11 @@
       "name": "Peloton Bike",
       "brand": "Peloton",
       "tier": "premium",
-      "price": 1445,
-      "priceDisplay": "$1,445",
-      "amazonUrl": "https://www.amazon.com/s?k=Peloton+Bike&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 1345,
+      "priceDisplay": "$1,345",
+      "amazonUrl": "https://www.amazon.com/dp/B0FLQNKJMN?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31laQ1o0V2L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31laQ1o0V2L._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 9,
         "goal_general_fitness": 9,
@@ -437,11 +389,11 @@
       "name": "Peloton Bike+",
       "brand": "Peloton",
       "tier": "premium",
-      "price": 2495,
-      "priceDisplay": "$2,495",
-      "amazonUrl": "https://www.amazon.com/s?k=Peloton+Bike%2B&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 1945,
+      "priceDisplay": "$1,945",
+      "amazonUrl": "https://www.amazon.com/dp/B0FLQNCDJK?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41juilmBMEL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41juilmBMEL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 9,
         "goal_general_fitness": 9,
@@ -529,63 +481,15 @@
       ]
     },
     {
-      "id": "stages-sc3",
-      "name": "Stages SC3 Indoor Cycle",
-      "brand": "Stages",
-      "tier": "premium",
-      "price": 2500,
-      "priceDisplay": "$2,500",
-      "amazonUrl": "https://www.amazon.com/s?k=Stages+SC3+Indoor+Cycle&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
-      "scores": {
-        "goal_weight_loss": 7,
-        "goal_general_fitness": 8,
-        "goal_cycling_training": 10,
-        "goal_peloton_alt": 4,
-        "classes_must_have": 3,
-        "classes_nice": 5,
-        "classes_dont_need": 9,
-        "budget_under_300": 0,
-        "budget_300_600": 0,
-        "budget_600_1000": 0,
-        "budget_over_1000": 7,
-        "space_small": 6,
-        "space_medium": 8,
-        "space_large": 8,
-        "deal_quiet": 10,
-        "deal_screen": 3,
-        "deal_adjustable": 10,
-        "deal_warranty": 9,
-        "deal_compact": 5
-      },
-      "specs": {
-        "resistance": "Magnetic (belt)",
-        "flywheel": "50 lb",
-        "display": "LCD + Stages Power",
-        "maxWeight": "350 lb",
-        "warranty": "10 years frame"
-      },
-      "verdict": {
-        "skipPeloton": "YES",
-        "bestFor": "Power-based training with real watts"
-      },
-      "pairsWith": [
-        "bike-mat",
-        "heart-rate-monitor",
-        "spin-shoes"
-      ]
-    },
-    {
       "id": "nordictrack-s22i",
       "name": "NordicTrack S22i Studio Cycle",
       "brand": "NordicTrack",
       "tier": "premium",
-      "price": 1500,
-      "priceDisplay": "$1,500",
-      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+S22i+Studio+Cycle&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 1289,
+      "priceDisplay": "$1,289",
+      "amazonUrl": "https://www.amazon.com/dp/B08KBWQ9FJ?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41pJFF+nn9L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41pJFF+nn9L._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 9,
         "goal_general_fitness": 9,
@@ -608,7 +512,7 @@
         "deal_compact": 4
       },
       "specs": {
-        "resistance": "Magnetic (auto-adjust)",
+        "resistance": "Magnetic (24 digital levels)",
         "flywheel": "N/A",
         "display": "22\" HD touchscreen",
         "maxWeight": "350 lb",
@@ -636,19 +540,19 @@
     },
     {
       "id": "bike-mat",
-      "name": "Spin Bike Floor Mat",
+      "name": "Crostice Bike Mat (fits Peloton)",
       "priceDisplay": "$30",
-      "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Floor+Mat&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
+      "amazonUrl": "https://www.amazon.com/dp/B09QQMNJ61?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41Bv+zVsu4L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41Bv+zVsu4L._SL160_.jpg"
     },
     {
       "id": "tablet-holder",
-      "name": "Spin Bike Tablet Holder",
+      "name": "KDD Spin Bike Tablet Mount",
       "priceDisplay": "$20",
-      "amazonUrl": "https://www.amazon.com/s?k=Spin+Bike+Tablet+Holder&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
+      "amazonUrl": "https://www.amazon.com/dp/B091GDKSK7?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41rbkVVvA1L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41rbkVVvA1L._SL160_.jpg"
     },
     {
       "id": "heart-rate-monitor",
@@ -660,11 +564,11 @@
     },
     {
       "id": "spin-shoes",
-      "name": "SPD Cycling Shoes",
-      "priceDisplay": "$60",
-      "amazonUrl": "https://www.amazon.com/s?k=SPD+Cycling+Shoes&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
+      "name": "Shimano SH-XC102 SPD Shoes",
+      "priceDisplay": "$120",
+      "amazonUrl": "https://www.amazon.com/dp/B0FDXXPTFK?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31Xgh3t9aTL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31Xgh3t9aTL._SL160_.jpg"
     }
   ]
 }

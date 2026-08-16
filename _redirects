@@ -1,6 +1,10 @@
 # Mediavine Journey ads.txt — redirect to Mediavine-hosted file so it stays current. Switched from AdSense (Jul 2026).
 /ads.txt  https://adstxt.journeymv.com/sites/bc575d1f-11b1-403f-a988-30dd4e93bdca/ads.txt  301
 
+# Common sitemap-index paths probed by crawlers; the only sitemap is /sitemap.xml
+/sitemap_index.xml /sitemap.xml 301
+/sitemap-index.xml /sitemap.xml 301
+
 # Consolidate the older athlete-angle massage page into the comprehensive guide
 /blog/best-massage-guns-athletes-2026 /blog/best-massage-guns-2026 301
 /blog/best-massage-guns-athletes-2026.html /blog/best-massage-guns-2026 301

@@ -486,9 +486,8 @@
                         <canvas id="speed-chart" width="400" height="200"></canvas>
                     </div>
 
-                    <!-- Product Recommendations -->
-                    <div id="recommendations" class="product-recommendations mt-6"></div>
-                    <script>document.addEventListener('DOMContentLoaded',function(){if(typeof renderProductRecommendations==='function'){renderProductRecommendations('recommendations','bike-gearing');}});</script>
+                    <!-- Product recommendations: superseded by the static drivetrain parts
+                         block below, which uses real /dp ASINs instead of search links. -->
                 </div>
 
 <!-- Result-moment email capture (Endure Weekly) -->
@@ -503,6 +502,159 @@
     <p class="rc-fine">Free. No spam. Unsubscribe anytime.</p>
 </div>
 <script src="/js/result-capture.js" defer></script>
+
+<!-- Drivetrain Parts Picker (result-moment affiliate block) -->
+<section class="mt-8 bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-500" id="drivetrain-parts">
+    <h2 class="text-2xl font-bold text-gray-900 mb-2">Change Your Gearing: Parts That Fit</h2>
+    <p class="text-gray-600 mb-1">Your numbers above tell you what to change. A low ratio near or below 1.0 means you can spin up steep climbs. Above 1.2 and long climbs will hurt. If your highest ratio is under about 3.8 you will spin out on fast descents.</p>
+    <p class="text-xs text-gray-500 mb-6"><em>As an Amazon Associate we earn from qualifying purchases. Prices are approximate and change often, so check the current price on Amazon. Specs are compiled from manufacturer documentation, not from hands-on testing.</em></p>
+
+    <!-- Cassettes -->
+    <h3 class="text-lg font-bold text-gray-900 mb-1">1. Bigger cassette: the cheapest way to get a lower climbing gear</h3>
+    <p class="text-sm text-gray-600 mb-4">Going from an 11-28T to an 11-34T drops your lowest gear by about 18 percent for well under $100. Check your rear derailleur cage length first, since most short-cage (SS) road derailleurs top out at 30T or 32T.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <a href="https://www.amazon.com/dp/B07DLLLWBD?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41VJ4W7C5TL._SL500_.jpg" alt="Shimano 105 CS-R7000 11-speed cassette, 11-30T" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano 105 CS-R7000, 11-30T</span>
+            <span class="block text-xs text-gray-600 mt-1">11-speed. Works with short-cage derailleurs. The safe first step up from 11-28T.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$58</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B07DLLQ472?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31utxaBeqDL._SL500_.jpg" alt="Shimano 105 CS-HG700 11-speed cassette, 11-34T" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano 105 CS-HG700, 11-34T</span>
+            <span class="block text-xs text-gray-600 mt-1">11-speed. Widest range road option. Needs a medium-cage (GS) derailleur.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$55</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CKXQTXF7?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/51zl1-LMf5L._SL500_.jpg" alt="Shimano 105 CS-R7101 12-speed cassette, 11-34T" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano 105 CS-R7101, 11-34T</span>
+            <span class="block text-xs text-gray-600 mt-1">12-speed. For newer 105 Di2 and mechanical 12-speed builds on a Micro Spline or HG freehub.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$73</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B092VLPMSM?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41trXDt9+lL._SL500_.jpg" alt="SRAM Rival AXS XG-1250 12-speed cassette, 10-36T" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">SRAM Rival XG-1250, 10-36T</span>
+            <span class="block text-xs text-gray-600 mt-1">12-speed. The 10T top cog buys back the top end you lose running smaller rings. Requires an XDR driver body.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$128</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+    </div>
+
+    <!-- Chainrings -->
+    <h3 class="text-lg font-bold text-gray-900 mb-1">2. Chainrings: shift your whole range up or down</h3>
+    <p class="text-sm text-gray-600 mb-4">Swapping the front ring moves every gear at once. Dropping a 50T to a 46T lowers your entire range by about 8 percent. Match the bolt circle diameter (BCD) to your crank, since 4-bolt asymmetric 110 BCD Shimano rings are not interchangeable with older 5-bolt cranks.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <a href="https://www.amazon.com/dp/B07Y2DRWMX?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41qmxP5so+L._SL500_.jpg" alt="Shimano 105 FC-R7000 50T chainring, 4x110 BCD" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano 105 FC-R7000, 50T Outer</span>
+            <span class="block text-xs text-gray-600 mt-1">4x110 BCD asymmetric. The standard compact outer ring, for replacing a worn 50T.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$84</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B07LG74XFD?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41MOHxc7pzL._SL500_.jpg" alt="Shimano 105 FC-R7000 36T chainring, 4x110 BCD" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano 105 FC-R7000, 36T Inner</span>
+            <span class="block text-xs text-gray-600 mt-1">4x110 BCD. Inner ring for 52/36 semi-compact. Cheapest single part on this page that changes your gearing.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$23</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CWHK7TMZ?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41bTVVJ4X2L._SL500_.jpg" alt="Wolf Tooth oval 110 BCD asymmetric 4-bolt chainring" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Wolf Tooth Oval, 110 BCD</span>
+            <span class="block text-xs text-gray-600 mt-1">Oval profile varies the effective ring size through the pedal stroke. Popular for steady climbing efforts.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$90</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B0DFMQRPTP?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/41rtVLLUCKL._SL500_.jpg" alt="Wolf Tooth 110 BCD Drop-Stop 46T gravel chainring for 12-speed" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Wolf Tooth Drop-Stop, 46T 1x</span>
+            <span class="block text-xs text-gray-600 mt-1">110 BCD, 12-speed. Narrow-wide tooth profile for single-ring gravel and road builds with no front derailleur.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$90</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+    </div>
+
+    <!-- Chains -->
+    <h3 class="text-lg font-bold text-gray-900 mb-1">3. Chain: budget for a new one with any gearing change</h3>
+    <p class="text-sm text-gray-600 mb-4">A bigger cassette usually needs a longer chain, and a worn chain will chew through a new cassette in a few hundred miles. Run your new setup through the <a href="/bike-chain-length-calculator" class="text-blue-600 underline font-semibold">chain length calculator</a> before you cut links.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <a href="https://www.amazon.com/dp/B08HM4R2JD?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/21kPVLnmRTL._SL500_.jpg" alt="Shimano CN-HG601-11 11-speed chain with quick link" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano CN-HG601-11</span>
+            <span class="block text-xs text-gray-600 mt-1">11-speed, 126 links, quick link included. The default 105 and Ultegra replacement chain.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$35</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B0813Y5RBF?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31jJBT7qwbL._SL500_.jpg" alt="KMC X11 11-speed bicycle chain" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">KMC X11</span>
+            <span class="block text-xs text-gray-600 mt-1">11-speed. Cross-compatible with Shimano and SRAM 11-speed drivetrains, usually cheaper than the Shimano chain.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$30</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B089NFXLM1?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/21qqB2ceZAL._SL500_.jpg" alt="Shimano Deore CN-M6100 12-speed chain with quick link" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Shimano Deore CN-M6100</span>
+            <span class="block text-xs text-gray-600 mt-1">12-speed, 126 links, quick link included. The value pick for any Shimano 12-speed setup.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$30</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B01BZBSSQA?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31pLTNxOc4L._SL500_.jpg" alt="SRAM PC-1110 11-speed chain with PowerLock" class="w-full h-24 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">SRAM PC-1110</span>
+            <span class="block text-xs text-gray-600 mt-1">11-speed, 114 links, PowerLock included. For SRAM Rival and Apex 11-speed drivetrains.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$21</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+    </div>
+
+    <!-- Tools -->
+    <h3 class="text-lg font-bold text-gray-900 mb-1">4. Tools: do the swap yourself for the price of one shop visit</h3>
+    <p class="text-sm text-gray-600 mb-4">A cassette swap takes about ten minutes once you own the right four tools. Check chain wear first, because installing a new cassette on a stretched chain wastes both parts.</p>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <a href="https://www.amazon.com/dp/B000BR3LHQ?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/21h3mbHv1xL._SL500_.jpg" alt="Park Tool CC-3.2 bicycle chain checker" class="w-full h-20 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Park Tool CC-3.2</span>
+            <span class="block text-xs text-gray-600 mt-1">Chain wear checker, 5 to 12 speed. Use this first.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$13</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B01MSAUITJ?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/21Bo8Na9ZeL._SL500_.jpg" alt="Park Tool FR-5.2G cassette lockring tool with guide pin" class="w-full h-20 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Park Tool FR-5.2G</span>
+            <span class="block text-xs text-gray-600 mt-1">Cassette lockring tool. The guide pin version keeps it centered.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$13</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B07QMNJ2C4?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31Wh5Hvwm3L._SL500_.jpg" alt="Park Tool SR-2.3 sprocket remover chain whip" class="w-full h-20 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Park Tool SR-2.3</span>
+            <span class="block text-xs text-gray-600 mt-1">Chain whip. Holds the cassette while you break the lockring.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$53</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B07P4CCJYH?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31lgsUFYqyL._SL500_.jpg" alt="Park Tool CT-3.3 bicycle chain tool" class="w-full h-20 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Park Tool CT-3.3</span>
+            <span class="block text-xs text-gray-600 mt-1">Chain tool, 5 to 12 speed. Needed to size a new chain.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$49</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+        <a href="https://www.amazon.com/dp/B00D9NW32I?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="group block bg-gray-50 hover:bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-md transition p-3 text-center">
+            <img loading="lazy" src="https://m.media-amazon.com/images/I/31LswpaXWOL._SL500_.jpg" alt="Park Tool MLP-1.2 master link pliers" class="w-full h-20 object-contain mb-2 bg-white rounded">
+            <span class="block text-sm font-semibold text-blue-700 group-hover:text-blue-900 leading-snug">Park Tool MLP-1.2</span>
+            <span class="block text-xs text-gray-600 mt-1">Master link pliers. Opens and closes quick links without swearing.</span>
+            <span class="block text-xs font-bold text-gray-900 mt-1">~$19</span>
+            <span class="inline-block mt-2 bg-orange-400 group-hover:bg-orange-500 text-white font-bold py-1.5 px-3 rounded text-xs">Check on Amazon</span>
+        </a>
+    </div>
+
+    <p class="text-sm text-gray-600 mt-6 pt-4 border-t border-gray-200">Not sure a new cassette is the answer? Compare setups side by side in the calculator above, then read the <a href="/blog/best-smart-trainers-2026" class="text-blue-600 underline font-semibold">smart trainer guide</a> to test gearing changes indoors before you buy. This page is researched from manufacturer specs and owner reviews and is general information, not professional mechanical advice.</p>
+</section>
+
 
             </div>
 
@@ -973,27 +1125,7 @@
     </div>
 </div>
 
-<!-- Gear-Ratio Buyer Companion: chainrings, chain wear tools, tools -->
-<section class="max-w-4xl mx-auto my-8 px-4">
-    <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Tweaking Your Gearing? Top Picks for Each Upgrade</h3>
-        <p class="text-sm text-gray-600 mb-4">If this calculator told you your low gear is too tall (or your top end is too short), here's what most cyclists actually swap. <em class="text-xs text-gray-500">As an Amazon Associate, we earn from qualifying purchases.</em></p>
-        <ul class="space-y-3">
-            <li class="bg-white rounded-lg p-3 border border-blue-100">
-                <a href="https://www.amazon.com/dp/B0CWHK7TMZ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank" rel="nofollow sponsored noopener" class="font-semibold text-blue-700 hover:text-blue-900">Wolf Tooth Oval Chainring (110 BCD)</a>
-                <span class="block text-sm text-gray-600">Smaller chainring for compact cranks when you need lower gears without changing the cassette. ~$90.</span>
-            </li>
-            <li class="bg-white rounded-lg p-3 border border-blue-100">
-                <a href="https://www.amazon.com/dp/B000BR3LHQ?tag=runbikecalc-20&amp;linkCode=osi&amp;th=1&amp;psc=1" target="_blank" rel="nofollow sponsored noopener" class="font-semibold text-blue-700 hover:text-blue-900">Park Tool CC-3.2 Chain Wear Indicator</a>
-                <span class="block text-sm text-gray-600">Check chain stretch before swapping cassettes — a worn chain destroys a new cassette in weeks. ~$11.</span>
-            </li>
-            <li class="bg-white rounded-lg p-3 border border-blue-100">
-                <a href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=PAR007N-BL-ONESIZ&u=https%3A%2F%2Fwww.backcountry.com%2Fpark-tool-chain-whip-sprocket-remover-for-1-8in-cogs-sr-18.2&intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener" class="font-semibold text-blue-700 hover:text-blue-900">Park Tool SR-18.2 Chain Whip (Backcountry)</a>
-                <span class="block text-sm text-gray-600">The chain whip you actually need to swap a cassette at home. Pair with a lockring tool. <a href="https://www.amazon.com/dp/B07QMNJ2C4?tag=runbikecalc-20" target="_blank" rel="nofollow sponsored noopener" class="text-blue-600 underline">Check on Amazon</a> if Backcountry is out of stock. ~$45 for the pair.</span>
-            </li>
-        </ul>
-    </div>
-</section>
+
 
     </main>
 
@@ -1207,11 +1339,7 @@
             // Draw speed chart (simplified canvas drawing)
             drawSpeedChart(speeds, chainrings, cassette);
 
-            // Show product recommendations
-            if (typeof renderProductRecommendations === 'function') {
-                document.getElementById('recommendations').classList.remove('hidden');
-                renderProductRecommendations('recommendations', 'bike-gearing');
-            }
+            // Product recommendations are served by the static drivetrain parts block.
         }
 
         function drawSpeedChart(speeds, chainrings, cassette) {

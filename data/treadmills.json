@@ -50,18 +50,18 @@
       ]
     },
     {
-      "id": "sperax-pad",
-      "name": "Sperax Walking Pad Treadmill",
-      "brand": "Sperax",
+      "id": "ulfario-walking-pad",
+      "name": "Ulfario Walking Pad",
+      "brand": "Ulfario",
       "tier": "compact",
-      "price": 260,
-      "priceDisplay": "$260",
-      "amazonUrl": "https://www.amazon.com/s?k=Sperax+Walking+Pad+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 90,
+      "priceDisplay": "$90",
+      "amazonUrl": "https://www.amazon.com/dp/B0FX33GJ5D?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41rQ0C2ESpL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41rQ0C2ESpL._SL160_.jpg",
       "scores": {
         "goal_walk": 9,
-        "goal_jog": 4,
+        "goal_jog": 3,
         "goal_run": 1,
         "goal_train": 0,
         "workout_steady": 5,
@@ -83,19 +83,18 @@
         "space_large": 4
       },
       "specs": {
-        "speed": "0.5-6 mph",
+        "speed": "0.6-4 mph",
         "incline": "None",
-        "deck": "42\" x 17\"",
-        "motor": "2.0 HP",
+        "deck": "35.4\" x 15\"",
+        "motor": "440 W",
         "folding": true,
-        "maxWeight": "240 lb"
+        "maxWeight": "264 lb"
       },
       "verdict": {
-        "bestFor": "Compact walking pad for small spaces"
+        "bestFor": "Removable handlebar, slides under a bed or desk"
       },
       "pairsWith": [
-        "tread-mat",
-        "standing-desk"
+        "tread-mat"
       ]
     },
     {
@@ -202,8 +201,8 @@
       "name": "Horizon 7.0 AT Treadmill",
       "brand": "Horizon",
       "tier": "mid",
-      "price": 1000,
-      "priceDisplay": "$1,000",
+      "price": 935,
+      "priceDisplay": "$935",
       "amazonUrl": "https://www.amazon.com/dp/B0DJ3N5SY9?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL160_.jpg",
@@ -252,8 +251,8 @@
       "name": "NordicTrack Commercial 1750",
       "brand": "NordicTrack",
       "tier": "premium",
-      "price": 1800,
-      "priceDisplay": "$1,800",
+      "price": 1999,
+      "priceDisplay": "$1,999",
       "amazonUrl": "https://www.amazon.com/dp/B0D5YKF4SK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/31BAhBBSPSL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/31BAhBBSPSL._SL160_.jpg",
@@ -397,15 +396,15 @@
       ]
     },
     {
-      "id": "sole-f80",
-      "name": "Sole F80 Treadmill",
-      "brand": "NordicTrack",
+      "id": "proform-carbon-tlx",
+      "name": "ProForm Carbon TLX",
+      "brand": "ProForm",
       "tier": "mid",
-      "price": 1500,
-      "priceDisplay": "$1,500",
-      "amazonUrl": "https://www.amazon.com/s?k=Sole+F80+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 999,
+      "priceDisplay": "$999",
+      "amazonUrl": "https://www.amazon.com/dp/B0C6DTYQ3G?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31kq3r4+jKL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31kq3r4+jKL._SL160_.jpg",
       "scores": {
         "goal_walk": 7,
         "goal_jog": 9,
@@ -422,23 +421,23 @@
         "screen_nice": 7,
         "screen_no": 7,
         "budget_under_500": 0,
-        "budget_500_1000": 2,
-        "budget_1000_2000": 10,
+        "budget_500_1000": 10,
+        "budget_1000_2000": 6,
         "budget_over_2000": 5,
         "space_compact": 3,
         "space_medium": 8,
         "space_large": 8
       },
       "specs": {
-        "speed": "0.5-12 mph",
-        "incline": "0-15%",
-        "deck": "60\" x 22\"",
-        "motor": "3.5 HP",
+        "speed": "0-12 mph",
+        "incline": "0-12%",
+        "deck": "ProShox cushioned deck",
+        "motor": "iFIT-enabled motor",
         "folding": true,
-        "maxWeight": "375 lb"
+        "maxWeight": "300 lb"
       },
       "verdict": {
-        "bestFor": "Durable, cushioned deck for daily runners"
+        "bestFor": "Cushioned mid-range runner with iFIT auto-adjust"
       },
       "pairsWith": [
         "tread-mat",
@@ -447,27 +446,27 @@
       ]
     },
     {
-      "id": "nordictrack-x32i",
-      "name": "NordicTrack X32i Incline Trainer",
+      "id": "nordictrack-2450",
+      "name": "NordicTrack Commercial 2450",
       "brand": "NordicTrack",
       "tier": "premium",
-      "price": 2800,
-      "priceDisplay": "$2,800",
-      "amazonUrl": "https://www.amazon.com/s?k=NordicTrack+X32i+Incline+Trainer&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "price": 2499,
+      "priceDisplay": "$2,499",
+      "amazonUrl": "https://www.amazon.com/dp/B0D5YKDXDV?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31NVjoFCMQL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31NVjoFCMQL._SL160_.jpg",
       "scores": {
         "goal_walk": 6,
-        "goal_jog": 8,
-        "goal_run": 8,
-        "goal_train": 10,
-        "workout_steady": 8,
-        "workout_hiit": 9,
+        "goal_jog": 9,
+        "goal_run": 9,
+        "goal_train": 9,
+        "workout_steady": 9,
+        "workout_hiit": 8,
         "workout_walk_jog": 6,
-        "workout_incline": 10,
-        "incline_none": 3,
-        "incline_some": 8,
-        "incline_max": 10,
+        "workout_incline": 9,
+        "incline_none": 4,
+        "incline_some": 9,
+        "incline_max": 8,
         "screen_yes": 10,
         "screen_nice": 8,
         "screen_no": 2,
@@ -475,36 +474,37 @@
         "budget_500_1000": 0,
         "budget_1000_2000": 0,
         "budget_over_2000": 9,
-        "space_compact": 1,
-        "space_medium": 5,
+        "space_compact": 2,
+        "space_medium": 6,
         "space_large": 9
       },
       "specs": {
-        "speed": "0-12 mph",
-        "incline": "-6% to 40%",
-        "deck": "65\" x 22\" (slat belt)",
-        "motor": "4.25 HP",
-        "folding": false,
+        "speed": "0-14 mph",
+        "incline": "-3% to 12%",
+        "deck": "60\" x 20\"",
+        "motor": "Commercial-grade motor",
+        "folding": true,
         "maxWeight": "300 lb"
       },
       "verdict": {
-        "bestFor": "Extreme incline training (-6% to 40%)"
+        "bestFor": "24\" tilting touchscreen with iFIT auto-adjust"
       },
       "pairsWith": [
         "tread-mat",
+        "tread-lube",
         "heart-rate-strap"
       ]
     },
     {
-      "id": "bowflex-tread-10",
-      "name": "Bowflex Treadmill 10",
-      "brand": "Bowflex",
-      "tier": "mid",
-      "price": 1500,
-      "priceDisplay": "$1,500",
-      "amazonUrl": "https://www.amazon.com/s?k=Bowflex+Treadmill+10&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "id": "bowflex-t16",
+      "name": "BowFlex T16 Treadmill",
+      "brand": "BowFlex",
+      "tier": "premium",
+      "price": 2150,
+      "priceDisplay": "$2,150",
+      "amazonUrl": "https://www.amazon.com/dp/B0GSBKBRD8?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31I8-29nvEL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31I8-29nvEL._SL160_.jpg",
       "scores": {
         "goal_walk": 7,
         "goal_jog": 8,
@@ -516,28 +516,28 @@
         "workout_incline": 7,
         "incline_none": 5,
         "incline_some": 8,
-        "incline_max": 5,
+        "incline_max": 6,
         "screen_yes": 9,
         "screen_nice": 8,
         "screen_no": 3,
         "budget_under_500": 0,
         "budget_500_1000": 2,
-        "budget_1000_2000": 9,
-        "budget_over_2000": 4,
+        "budget_1000_2000": 4,
+        "budget_over_2000": 9,
         "space_compact": 3,
         "space_medium": 7,
         "space_large": 8
       },
       "specs": {
-        "speed": "0-12 mph",
-        "incline": "-5% to 15%",
+        "speed": "0.5-12 mph",
+        "incline": "0-15%",
         "deck": "60\" x 22\"",
-        "motor": "3.75 HP",
+        "motor": "3.5 HP",
         "folding": true,
-        "maxWeight": "400 lb"
+        "maxWeight": "375 lb"
       },
       "verdict": {
-        "bestFor": "High weight capacity with JRNY classes"
+        "bestFor": "16\" HD screen with streaming apps, 375 lb capacity"
       },
       "pairsWith": [
         "tread-mat",
@@ -596,96 +596,48 @@
       ]
     },
     {
-      "id": "woodway-4front",
-      "name": "Woodway 4Front Treadmill",
-      "brand": "Woodway",
-      "tier": "premium",
-      "price": 7000,
-      "priceDisplay": "$7,000+",
-      "amazonUrl": "https://www.amazon.com/s?k=Woodway+4Front+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
+      "id": "nordictrack-t5",
+      "name": "NordicTrack T Series 5",
+      "brand": "NordicTrack",
+      "tier": "budget",
+      "price": 499,
+      "priceDisplay": "$499",
+      "amazonUrl": "https://www.amazon.com/dp/B0CJ9W38VQ?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31chdUGXSAL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31chdUGXSAL._SL160_.jpg",
       "scores": {
-        "goal_walk": 5,
-        "goal_jog": 8,
-        "goal_run": 10,
-        "goal_train": 10,
-        "workout_steady": 10,
-        "workout_hiit": 8,
-        "workout_walk_jog": 4,
-        "workout_incline": 6,
+        "goal_walk": 8,
+        "goal_jog": 7,
+        "goal_run": 4,
+        "goal_train": 2,
+        "workout_steady": 7,
+        "workout_hiit": 3,
+        "workout_walk_jog": 8,
+        "workout_incline": 5,
         "incline_none": 6,
         "incline_some": 7,
-        "incline_max": 4,
+        "incline_max": 1,
         "screen_yes": 3,
         "screen_nice": 5,
         "screen_no": 8,
-        "budget_under_500": 0,
-        "budget_500_1000": 0,
-        "budget_1000_2000": 0,
-        "budget_over_2000": 7,
-        "space_compact": 1,
-        "space_medium": 4,
-        "space_large": 8
-      },
-      "specs": {
-        "speed": "0-12.5 mph",
-        "incline": "0-15%",
-        "deck": "68\" x 22\" (slat belt)",
-        "motor": "5.0 HP",
-        "folding": false,
-        "maxWeight": "500 lb"
-      },
-      "verdict": {
-        "bestFor": "Commercial-grade slat belt, the gold standard"
-      },
-      "pairsWith": [
-        "tread-mat"
-      ]
-    },
-    {
-      "id": "weslo-cadence",
-      "name": "Weslo Cadence G 5.9 Treadmill",
-      "brand": "Weslo",
-      "tier": "budget",
-      "price": 250,
-      "priceDisplay": "$250",
-      "amazonUrl": "https://www.amazon.com/s?k=Weslo+Cadence+G+5.9+Treadmill&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null,
-      "scores": {
-        "goal_walk": 7,
-        "goal_jog": 5,
-        "goal_run": 2,
-        "goal_train": 1,
-        "workout_steady": 5,
-        "workout_hiit": 2,
-        "workout_walk_jog": 7,
-        "workout_incline": 3,
-        "incline_none": 7,
-        "incline_some": 4,
-        "incline_max": 0,
-        "screen_yes": 1,
-        "screen_nice": 3,
-        "screen_no": 8,
         "budget_under_500": 10,
-        "budget_500_1000": 5,
+        "budget_500_1000": 6,
         "budget_1000_2000": 1,
         "budget_over_2000": 0,
         "space_compact": 6,
-        "space_medium": 7,
+        "space_medium": 8,
         "space_large": 6
       },
       "specs": {
         "speed": "0-10 mph",
-        "incline": "2 positions manual",
-        "deck": "50\" x 16\"",
-        "motor": "2.25 HP",
+        "incline": "0-10%",
+        "deck": "Cushioned folding deck (KeyFlex)",
+        "motor": "DurX motor",
         "folding": true,
-        "maxWeight": "250 lb"
+        "maxWeight": "300 lb"
       },
       "verdict": {
-        "bestFor": "Absolute cheapest option for light use"
+        "bestFor": "iFIT-ready starter treadmill with 10% incline"
       },
       "pairsWith": [
         "tread-mat",
@@ -696,19 +648,19 @@
   "accessories": [
     {
       "id": "tread-mat",
-      "name": "Treadmill Floor Mat",
-      "priceDisplay": "$40",
-      "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Floor+Mat&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
+      "name": "Marcy Equipment Mat",
+      "priceDisplay": "$29",
+      "amazonUrl": "https://www.amazon.com/dp/B0041GQH3S?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/41GJwOx-aFL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41GJwOx-aFL._SL160_.jpg"
     },
     {
       "id": "tread-lube",
-      "name": "Treadmill Belt Lubricant",
+      "name": "Spot On Treadmill Belt Lubricant",
       "priceDisplay": "$10",
-      "amazonUrl": "https://www.amazon.com/s?k=Treadmill+Belt+Lubricant&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
+      "amazonUrl": "https://www.amazon.com/dp/B0153WN84E?tag=runbikecalc-20",
+      "imageUrl": "https://m.media-amazon.com/images/I/31SZwlDugBL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31SZwlDugBL._SL160_.jpg"
     },
     {
       "id": "heart-rate-strap",
@@ -717,14 +669,6 @@
       "amazonUrl": "https://www.amazon.com/dp/B07PM54P4N?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "imageUrl": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL500_.jpg",
       "imageMedium": "https://m.media-amazon.com/images/I/31ej46yR6aL._SL160_.jpg"
-    },
-    {
-      "id": "standing-desk",
-      "name": "Adjustable Standing Desk",
-      "priceDisplay": "$200",
-      "amazonUrl": "https://www.amazon.com/s?k=Adjustable+Standing+Desk&tag=runbikecalc-20",
-      "imageUrl": null,
-      "imageMedium": null
     }
   ]
 }

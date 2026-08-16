@@ -1,7 +1,7 @@
 /**
  * RunBikeCalc Auto-Enhance
  * Automatically adds product recommendations
- * to all calculator pages. Include once — works everywhere.
+ * to all calculator pages. Include once, works everywhere.
  */
 (function() {
     'use strict';
@@ -26,39 +26,39 @@
 
     var products = {
         heartRate: [
-            { name: 'Polar H10 Heart Rate Monitor', search: 'Polar+H10+Heart+Rate+Monitor', desc: 'Gold standard chest strap. Best accuracy for zone-based training.' },
-            { name: 'Garmin HRM-Pro Plus', search: 'Garmin+HRM+Pro+Plus', desc: 'Advanced running dynamics with ground contact time.' },
-            { name: 'Wahoo TICKR', search: 'Wahoo+TICKR+Heart+Rate+Monitor', desc: 'Reliable, comfortable chest strap. Works with all training apps.' }
+            { name: 'Polar H10 Heart Rate Monitor', asin: 'B07PM54P4N', image: 'https://m.media-amazon.com/images/I/31ej46yR6aL._SL500_.jpg', price: '~$104', desc: 'Chest strap with dual Bluetooth and ANT+. The accuracy reference for zone-based training.' },
+            { name: 'Garmin HRM 600', asin: 'B0F7ZGDDCX', image: 'https://m.media-amazon.com/images/I/31DLbvOQoNL._SL500_.jpg', price: '~$158', desc: 'Garmin flagship chest strap with running dynamics including ground contact time.' },
+            { name: 'Wahoo TRACKR', asin: 'B0D52P8XS1', image: 'https://m.media-amazon.com/images/I/31Co6Uv-awL._SL500_.jpg', price: '~$99', desc: 'Rechargeable chest strap. Works with all major training apps.' }
         ],
         running: [
-            { name: 'Garmin Forerunner 265', search: 'Garmin+Forerunner+265', desc: 'AMOLED GPS watch with training readiness and HRV status.' },
-            { name: 'Nike Vaporfly 3', search: 'Nike+Vaporfly+3+running+shoes', desc: 'Carbon-plated race shoe. PR potential from 5K to marathon.' },
-            { name: 'COROS PACE 3', search: 'COROS+PACE+3', desc: 'Lightweight GPS watch with impressive battery life.' }
+            { name: 'Garmin Forerunner 265', asin: 'B0DVMWYCHD', image: 'https://m.media-amazon.com/images/I/51qrOvMYPOL._SL500_.jpg', price: '~$379', desc: 'AMOLED GPS watch with training readiness and HRV status.' },
+            { name: 'Nike Vaporfly 3', asin: 'B0DJGBQT45', image: 'https://m.media-amazon.com/images/I/31LeuoQnEXL._SL500_.jpg', price: '~$155', desc: 'Carbon-plated racing shoe for 5K to marathon distances.' },
+            { name: 'COROS PACE 4', asin: 'B0FYGTCX83', image: 'https://m.media-amazon.com/images/I/31oMzJX467L._SL500_.jpg', price: '~$249', desc: 'Lightweight GPS watch with long battery life.' }
         ],
         cycling: [
-            { name: 'Favero Assioma Duo', search: 'Favero+Assioma+Duo+power+meter', desc: 'Accurate dual-sided power pedals. Easy install on any bike.' },
-            { name: 'Wahoo KICKR CORE', search: 'Wahoo+KICKR+CORE+smart+trainer', desc: 'Direct-drive smart trainer. Perfect for structured indoor training.' },
-            { name: 'Garmin Edge 540', search: 'Garmin+Edge+540', desc: 'Full-featured cycling computer with power metrics and maps.' }
+            { name: 'Favero Assioma Duo', asin: 'B071JRXDKT', image: 'https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg', price: '~$628', desc: 'Dual-sided power meter pedals. Move between bikes with standard tools.' },
+            { name: 'Wahoo KICKR Core 2', asin: 'B0FLQDCR7X', image: 'https://m.media-amazon.com/images/I/310nAfwgifL._SL500_.jpg', price: '~$549', desc: 'Direct-drive smart trainer with Zwift Cog for structured indoor training.' },
+            { name: 'Garmin Edge 540', asin: 'B0BT36VBGM', image: 'https://m.media-amazon.com/images/I/41NtDVjOE3L._SL500_.jpg', price: '~$313', desc: 'Full-featured cycling computer with power metrics and maps.' }
         ],
         fitness: [
-            { name: 'Garmin Venu 3', search: 'Garmin+Venu+3', desc: 'AMOLED display with comprehensive health and fitness tracking.' },
-            { name: 'WHOOP 4.0', search: 'WHOOP+4.0+fitness+tracker', desc: 'Advanced recovery and strain tracking. 24/7 monitoring.' },
-            { name: 'Fitbit Charge 6', search: 'Fitbit+Charge+6', desc: 'Affordable tracker with HR zones and stress management.' }
+            { name: 'Garmin Venu 3', asin: 'B0H4RLFDC3', image: 'https://m.media-amazon.com/images/I/41yoK0GiYXL._SL500_.jpg', price: '~$289', desc: 'AMOLED smartwatch with comprehensive health and fitness tracking.' },
+            { name: 'WHOOP 5.0 (12-Month Peak Membership)', asin: 'B0DY2SWV16', image: 'https://m.media-amazon.com/images/I/31wN2FZpfZL._SL500_.jpg', price: '~$239', desc: 'Screenless band with 12 months of membership. Tracks recovery, strain, and sleep.' },
+            { name: 'Fitbit Charge 6', asin: 'B0FM9BKKPP', image: 'https://m.media-amazon.com/images/I/41J7zLD+2aL._SL500_.jpg', price: '~$149', desc: 'Tracker with HR zones and stress management.' }
         ],
         recovery: [
-            { name: 'Theragun Elite', search: 'Theragun+Elite+massage+gun', desc: 'Powerful percussion therapy with app-guided routines.' },
-            { name: 'TriggerPoint GRID Foam Roller', search: 'TriggerPoint+GRID+foam+roller', desc: 'Multi-density foam roller. Essential for recovery.' },
-            { name: 'Normatec 3 Leg Recovery', search: 'Normatec+3+compression+boots', desc: 'Dynamic compression therapy for faster recovery.' }
+            { name: 'Theragun Prime (6th Gen)', asin: 'B0H78D8R9Q', image: 'https://m.media-amazon.com/images/I/31ij9FmvFiL._SL500_.jpg', price: '~$329', desc: 'Percussion massage gun with app-guided routines.' },
+            { name: 'TriggerPoint GRID Foam Roller', asin: 'B0040EKZDY', image: 'https://m.media-amazon.com/images/I/41hOuseNM1L._SL500_.jpg', price: '~$28', desc: 'Multi-density foam roller for myofascial release.' },
+            { name: 'Hyperice Normatec 3', asin: 'B0B72QBWHC', image: 'https://m.media-amazon.com/images/I/31twvW0rxML._SL500_.jpg', price: '~$899', desc: 'Dynamic air compression boots with adjustable pressure levels.' }
         ],
         nutrition: [
-            { name: 'GU Energy Gel Variety Pack', search: 'GU+Energy+Gel+variety+pack', desc: 'Race-day fuel. Easy-to-digest carbs for endurance events.' },
-            { name: 'Precision Hydration Electrolytes', search: 'Precision+Hydration+electrolytes', desc: 'Stronger electrolytes for heavy sweaters and long events.' },
-            { name: 'Nathan Running Hydration Vest', search: 'Nathan+running+hydration+vest', desc: 'Carries water, nutrition, and phone for long runs.' }
+            { name: 'GU Energy Gel 24-Pack', asin: 'B00CQ7QDQA', image: 'https://m.media-amazon.com/images/I/41HBmkFLheL._SL500_.jpg', price: '~$49', desc: '24-pack of easy-to-digest carbohydrate gels for endurance events.' },
+            { name: 'Precision Fuel PF60 Drink Mix', asin: 'B0BSXQ56N6', image: 'https://m.media-amazon.com/images/I/41jxx9toENL._SL500_.jpg', price: '~$31', desc: 'Carb and electrolyte drink mix with 60g of carbohydrate per serving.' },
+            { name: 'Nathan Hydration Vest (2L)', asin: 'B01NALJI53', image: 'https://m.media-amazon.com/images/I/41RrOBRPGLL._SL500_.jpg', price: '~$74', desc: 'Carries 2L of water plus nutrition and a phone for long runs.' }
         ],
         triathlon: [
-            { name: 'Garmin Forerunner 965', search: 'Garmin+Forerunner+965', desc: 'Top GPS multisport watch with maps and training metrics.' },
-            { name: 'Favero Assioma Duo', search: 'Favero+Assioma+Duo+power+meter', desc: 'Power pedals that move between bikes. Great for tri training.' },
-            { name: 'GU Energy Gel Variety Pack', search: 'GU+Energy+Gel+variety+pack', desc: 'Essential race-day fuel for swim-bike-run events.' }
+            { name: 'Garmin Forerunner 965', asin: 'B0BS1TN8QL', image: 'https://m.media-amazon.com/images/I/41-mKcvYRwL._SL500_.jpg', price: '~$599', desc: 'Multisport GPS watch with AMOLED display, maps, and training metrics.' },
+            { name: 'Favero Assioma Duo', asin: 'B071JRXDKT', image: 'https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg', price: '~$628', desc: 'Power meter pedals that move between bikes.' },
+            { name: 'GU Energy Gel 24-Pack', asin: 'B00CQ7QDQA', image: 'https://m.media-amazon.com/images/I/41HBmkFLheL._SL500_.jpg', price: '~$49', desc: 'Carbohydrate gels for swim-bike-run fueling.' }
         ]
     };
 
@@ -141,12 +141,12 @@
     if (document.querySelector('.product-recommendations') ||
         document.querySelector('.product-cards-grid') ||
         document.querySelectorAll('[href*="tag=runbikecalc-20"]').length > 2) {
-        // Page already has products — skip product injection
+        // Page already has products; skip product injection
         return;
     }
 
     function injectProducts() {
-        // Find insertion point — before footer or at end of main
+        // Find insertion point: before footer or at end of main
         var footer = document.querySelector('footer');
         var main = document.querySelector('main') || document.querySelector('.container');
         if (!footer && !main) return;
@@ -175,20 +175,45 @@
             card.onmouseenter = function() { card.style.transform = 'translateY(-2px)'; card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; };
             card.onmouseleave = function() { card.style.transform = ''; card.style.boxShadow = ''; };
 
+            var url = 'https://www.amazon.com/dp/' + p.asin + '?tag=' + AFFILIATE_TAG;
+
+            var imgLink = document.createElement('a');
+            imgLink.href = url;
+            imgLink.target = '_blank';
+            imgLink.rel = 'nofollow sponsored noopener';
+            var img = document.createElement('img');
+            img.src = p.image;
+            img.alt = p.name;
+            img.loading = 'lazy';
+            img.style.cssText = 'height: 140px; width: 100%; object-fit: contain; display: block; margin: 0 auto 0.75rem;';
+            imgLink.appendChild(img);
+            card.appendChild(imgLink);
+
             var h4 = document.createElement('h4');
             h4.style.cssText = 'color: #C67B4E; margin: 0 0 0.5rem; font-size: 1rem; font-family: Playfair Display, serif;';
-            h4.textContent = p.name;
+            var titleLink = document.createElement('a');
+            titleLink.href = url;
+            titleLink.target = '_blank';
+            titleLink.rel = 'nofollow sponsored noopener';
+            titleLink.style.cssText = 'color: inherit; text-decoration: none;';
+            titleLink.textContent = p.name;
+            h4.appendChild(titleLink);
             card.appendChild(h4);
 
             var desc = document.createElement('p');
-            desc.style.cssText = 'margin: 0 0 1rem; color: #4b5563; font-size: 0.9rem; line-height: 1.5;';
+            desc.style.cssText = 'margin: 0 0 0.5rem; color: #4b5563; font-size: 0.9rem; line-height: 1.5;';
             desc.textContent = p.desc;
             card.appendChild(desc);
 
+            var price = document.createElement('p');
+            price.style.cssText = 'margin: 0 0 1rem; color: #1a1a1a; font-size: 0.9rem; font-weight: 600;';
+            price.textContent = p.price;
+            card.appendChild(price);
+
             var link = document.createElement('a');
-            link.href = 'https://www.amazon.com/s?k=' + p.search + '&tag=' + AFFILIATE_TAG;
+            link.href = url;
             link.target = '_blank';
-            link.rel = 'noopener sponsored';
+            link.rel = 'nofollow sponsored noopener';
             link.style.cssText = 'display: inline-block; background: #C67B4E; color: white; padding: 0.6rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.875rem;';
             link.textContent = 'View on Amazon';
             link.onmouseenter = function() { link.style.background = '#a5623d'; };
