@@ -882,5 +882,33 @@ window.POPUP_CONFIG = {
 <script src="/js/speculation-rules.js" defer></script>
 <script src="/js/affiliate-click-tracker.js" defer></script>
     <script type="text/javascript" src="https://s.skimresources.com/js/304403X1792579.skimlinks.js"></script>
+<script>
+/* Affiliate click tracking. Delegated and capture-phase so it covers links
+   added after load, with sendBeacon so the event survives navigating away. */
+(function(){
+  if (window.__affTrack) return; window.__affTrack = 1;
+  var HOSTS = /(^|\/\/|\.)amazon\.|amzn\.to|tnu8\.net|avantlink|impact\.com|geni\.us/i;
+  function link(el){
+    while (el && el !== document) {
+      if (el.tagName === 'A' && el.href && HOSTS.test(el.href)) return el;
+      el = el.parentNode;
+    }
+    return null;
+  }
+  document.addEventListener('click', function(e){
+    var a = link(e.target); if (!a) return;
+    if (typeof window.gtag !== 'function') return;
+    var m = a.href.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})/i);
+    window.gtag('event','affiliate_click',{
+      transport_type:'beacon',
+      link_url:a.href,
+      link_domain:/amazon\.|amzn\.to/i.test(a.href)?'amazon.com':'other',
+      product_asin:m?m[1]:'',
+      link_text:(a.textContent||'').trim().replace(/\s+/g,' ').slice(0,100),
+      page_path:location.pathname
+    });
+  }, {capture:true, passive:true});
+})();
+</script>
 </body>
 </html>
