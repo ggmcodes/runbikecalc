@@ -69,6 +69,15 @@
       .gift-why { font-size: 0.98rem; line-height: 1.55; color: #2a2a2a; margin-top: 0.25rem; }
       .gift-btn { display: inline-block; margin-top: 0.75rem; background: #1A1A1A; color: #FAF8F5; padding: 0.7rem 1.1rem; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; align-self: flex-start; }
       .gift-card:hover .gift-btn { background: #C67B4E; }
+      /* bc-dual-buttons */
+      .gift-imglink { display: contents; }
+      .gift-card .gift-name a { color: inherit !important; text-decoration: none !important; }
+      .gift-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+      .gift-btns .gift-btn { margin-top: 0; }
+      .gift-card a.gift-btn { color: #FAF8F5 !important; text-decoration: none !important; }
+      .gift-card a.gift-btn:hover { background: #C67B4E; }
+      .gift-card a.gift-btn-alt, .gift-card:hover a.gift-btn-alt { background: #fff; color: #1A1A1A !important; box-shadow: inset 0 0 0 1px #1A1A1A; }
+      .gift-card a.gift-btn-alt:hover { color: #C67B4E !important; box-shadow: inset 0 0 0 1px #C67B4E; }
       .gift-top { border: 2px solid #C67B4E; }
       .gift-top .gift-tier { color: #7C2D3A; }
       @media (min-width: 720px) { .gift-grid .gift-top { grid-column: 1 / -1; flex-direction: row; } .gift-grid .gift-top img { width: 40%; height: auto; max-height: 320px; } .gift-grid .gift-top .gift-body { justify-content: center; padding: 1.5rem; } }
@@ -195,43 +204,43 @@
 <h3>A beginner runner: the first real watch</h3>
 <p>One or two runs a week means the gift is a watch that shows pace, distance and heart rate without a manual. The <a href="https://www.amazon.com/dp/B0CT3SGHXL?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 165</a> does that for under $200; the <a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a> adds multi-band GPS and daily suggested workouts. Skip maps and flagships.</p>
 <p><strong>Do this first:</strong> <a href="/running-pace-calculator">Run their last 5K time through the pace calculator to see what the watch will show them</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 265</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a></span>
     <span class="gift-price">around $447</span>
     <span class="gift-why">AMOLED, multi-band GPS, training readiness, 20 hours of GPS, multisport mode. No maps, which they will not miss.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0CT3SGHXL?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41oVxbrB+mL._SL500_.jpg" alt="Garmin Forerunner 165" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CT3SGHXL?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41oVxbrB+mL._SL500_.jpg" alt="Garmin Forerunner 165" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Garmin Forerunner 165</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CT3SGHXL?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 165</a></span>
     <span class="gift-price">around $199</span>
     <span class="gift-why">Pace, distance, heart rate and daily suggested workouts at 43 mm and under $200. The beginner's watch.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF07G-BLASLAGRA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-165-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CT3SGHXL?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/219Zog3I5TL._SL500_.jpg" alt="Shokz OpenRun Pro 2" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/219Zog3I5TL._SL500_.jpg" alt="Shokz OpenRun Pro 2" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Shokz OpenRun Pro 2</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shokz OpenRun Pro 2</a></span>
     <span class="gift-price">around $180</span>
     <span class="gift-why">Open-ear bone conduction, 12 hours, IP55, USB-C. Hear traffic, keep the music.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openrun-pro-2-headphones&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B0C19RDWVF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31OIaul0SrL._SL500_.jpg" alt="Balega Hidden Comfort socks (3-pack)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0C19RDWVF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31OIaul0SrL._SL500_.jpg" alt="Balega Hidden Comfort socks (3-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Balega Hidden Comfort socks (3-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0C19RDWVF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Balega Hidden Comfort socks (3-pack)</a></span>
     <span class="gift-price">around $46</span>
     <span class="gift-why">Three pairs of the sock runners race in. Seamless toe, heel tab.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fbalega-hidden-comfort-lightweight-running-socks&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0C19RDWVF?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B09SK6KZSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B09SK6KZSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/4199RI4j0qL._SL500_.jpg" alt="SPIbelt Original running belt" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
@@ -240,16 +249,16 @@
     <span class="gift-why">The no-bounce running belt. Expandable pocket for a phone and a gel.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Body Glide Original anti-chafe balm</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Body Glide Original anti-chafe balm</a></span>
     <span class="gift-price">around $11</span>
     <span class="gift-why">The anti-chafe stick in every marathon bag.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fbodyglide-original-anti-chafe-balm&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B007DLVLDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/417ORi4AzpL._SL500_.jpg" alt="Lock Laces elastic no-tie laces" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
@@ -263,111 +272,111 @@
 <h3>A consistent runner: the mid-range upgrade</h3>
 <p>Three or four runs a week and a race or two a year. They will use training readiness, a chest strap and recovery tools. The <a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a> or <a href="https://www.amazon.com/dp/B0DK33HWZ6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Coros Pace Pro</a> is the watch; the <a href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Theragun Prime (6th Gen)</a> is the recovery gift.</p>
 <p><strong>Do this first:</strong> <a href="/heart-rate-zone-calculator">Set their zones with the heart-rate zone calculator so the new watch trains them properly</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 965</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 965</a></span>
     <span class="gift-price">around $500</span>
     <span class="gift-why">Multi-band GPS, full maps, 31 hours of GPS battery and every Garmin metric. The value flagship.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF069-AMPYEL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-965-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 265</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a></span>
     <span class="gift-price">around $447</span>
     <span class="gift-why">AMOLED, multi-band GPS, training readiness, 20 hours of GPS, multisport mode. No maps, which they will not miss.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0DK33HWZ6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41W9paR1WAL._SL500_.jpg" alt="Coros Pace Pro" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0DK33HWZ6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41W9paR1WAL._SL500_.jpg" alt="Coros Pace Pro" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Coros Pace Pro</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0DK33HWZ6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Coros Pace Pro</a></span>
     <span class="gift-price">around $299</span>
     <span class="gift-why">AMOLED, offline maps, 38 hours of GPS at 37 grams. The data-minded runner's alternative to Garmin.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fcoros-pace-pro-gps-sport-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0DK33HWZ6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Theragun Prime (6th Gen)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Theragun Prime (6th Gen)</a></span>
     <span class="gift-price">around $250</span>
     <span class="gift-why">16 mm amplitude, app-guided routines, quieter than earlier generations.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DTherabody%2BTheragun%2BPrime" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/319WN877QrL._SL500_.jpg" alt="Polar H10" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/319WN877QrL._SL500_.jpg" alt="Polar H10" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Polar H10</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Polar H10</a></span>
     <span class="gift-price">around $105</span>
     <span class="gift-why">The reference-grade chest strap: Bluetooth and ANT+ together, session memory.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=PLR003S-BLA-M-XXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpolar-h10-heart-rate-sensor&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B0040EKZDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41hOuseNM1L._SL500_.jpg" alt="TriggerPoint GRID Foam Roller" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0040EKZDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41hOuseNM1L._SL500_.jpg" alt="TriggerPoint GRID Foam Roller" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">TriggerPoint GRID Foam Roller</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0040EKZDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">TriggerPoint GRID Foam Roller</a></span>
     <span class="gift-price">around $29</span>
     <span class="gift-why">13 inch hollow-core roller. The recovery tool that actually gets used.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Ftrigger-point-grid-foam-roller&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0040EKZDY?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B0H51TZRMM?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/3168Cd3m1QL._SL500_.jpg" alt="goodr OG polarized sunglasses" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0H51TZRMM?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/3168Cd3m1QL._SL500_.jpg" alt="goodr OG polarized sunglasses" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">goodr OG polarized sunglasses</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0H51TZRMM?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">goodr OG polarized sunglasses</a></span>
     <span class="gift-price">around $30</span>
     <span class="gift-why">Polarized, no-slip, no-bounce, thirty dollars.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fgoodr-og-polarized-sunglasses&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0H51TZRMM?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B08HTSM5LR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41MaBwYVYAL._SL500_.jpg" alt="GU Energy Gel mixed box (24)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B08HTSM5LR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41MaBwYVYAL._SL500_.jpg" alt="GU Energy Gel mixed box (24)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">GU Energy Gel mixed box (24)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B08HTSM5LR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">GU Energy Gel mixed box (24)</a></span>
     <span class="gift-price">around $27</span>
     <span class="gift-why">24 caffeine-free gels, mixed flavours.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GUS0002-CCOU-S24PA&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgu-energy-gel-24-pack&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B08HTSM5LR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B0CFT3FLF8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41gH6eCLB7L._SL500_.jpg" alt="Darn Tough Bolt Micro Crew running sock" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CFT3FLF8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41gH6eCLB7L._SL500_.jpg" alt="Darn Tough Bolt Micro Crew running sock" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Darn Tough Bolt Micro Crew running sock</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CFT3FLF8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Darn Tough Bolt Micro Crew running sock</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">Merino running sock with a lifetime warranty.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=DRNC057-BLA-M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fdarn-tough-bolt-micro-crew-ultra-lightweight-running-sock&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CFT3FLF8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="run-3" hidden>
 <h3>A serious runner: the top tier will not be wasted</h3>
 <p>Five or more runs a week, a marathon on the calendar, talks about zones. This runner gets full value from a flagship watch, carbon race shoes and real recovery. The <a href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 965</a> is the value flagship; the <a href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 970</a> is the one they would not buy themselves.</p>
 <p><strong>Do this first:</strong> <a href="/marathon-pace-calculator">Use the marathon pace calculator with their goal time; the watch will pace them to it</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 970</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 970</a></span>
     <span class="gift-price">around $750</span>
     <span class="gift-why">The flagship: brighter AMOLED, sapphire, titanium, flashlight, ECG, 26 hours of GPS.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08I-CAGRDLTIBLBLWHBA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-970-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 965</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 965</a></span>
     <span class="gift-price">around $500</span>
     <span class="gift-why">Multi-band GPS, full maps, 31 hours of GPS battery and every Garmin metric. The value flagship.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF069-AMPYEL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-965-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0D5YKF4SK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0D5YKF4SK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/31BAhBBSPSL._SL500_.jpg" alt="NordicTrack Commercial 1750" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
@@ -376,138 +385,138 @@
     <span class="gift-why">12 mph, minus 3 to 12 percent grade, 22 by 60 inch belt, tilting touchscreen. Winter training at home.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0DJWNQGKX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31CadsyBCIL._SL500_.jpg" alt="Saucony Endorphin Pro 4" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0DJWNQGKX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31CadsyBCIL._SL500_.jpg" alt="Saucony Endorphin Pro 4" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Saucony Endorphin Pro 4</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0DJWNQGKX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Saucony Endorphin Pro 4</a></span>
     <span class="gift-price">around $167</span>
     <span class="gift-why">Carbon plate, PWRRUN HG foam, 8 mm drop. Buy their exact size and add a gift receipt.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DSaucony%2BEndorphin%2BPro%2B4" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0DJWNQGKX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/219Zog3I5TL._SL500_.jpg" alt="Shokz OpenRun Pro 2" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/219Zog3I5TL._SL500_.jpg" alt="Shokz OpenRun Pro 2" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Shokz OpenRun Pro 2</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shokz OpenRun Pro 2</a></span>
     <span class="gift-price">around $180</span>
     <span class="gift-why">Open-ear bone conduction, 12 hours, IP55, USB-C. Hear traffic, keep the music.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openrun-pro-2-headphones&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0D2HKCMBP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0992F7C9P?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41mScLY6ebL._SL500_.jpg" alt="Salomon ADV Skin 12 vest" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0992F7C9P?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41mScLY6ebL._SL500_.jpg" alt="Salomon ADV Skin 12 vest" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Salomon ADV Skin 12 vest</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0992F7C9P?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Salomon ADV Skin 12 vest</a></span>
     <span class="gift-price">around $178</span>
     <span class="gift-why">12 litre vest, two 500 ml flasks included. Check chest size.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fsalomon-adv-skin-12l-set-hydration-vest&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0992F7C9P?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07Y5L8Q9R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41XdCU6sClL._SL500_.jpg" alt="Nathan SpeedDraw Plus handheld" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07Y5L8Q9R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41XdCU6sClL._SL500_.jpg" alt="Nathan SpeedDraw Plus handheld" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Nathan SpeedDraw Plus handheld</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07Y5L8Q9R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Nathan SpeedDraw Plus handheld</a></span>
     <span class="gift-price">around $35</span>
     <span class="gift-why">18 oz insulated handheld with a grip-free strap and zip pocket.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fnathan-speeddraw-plus-insulated-water-bottle-18oz&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07Y5L8Q9R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B0G4NQHK9X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31yI4FIO1eL._SL500_.jpg" alt="BioLite Range 300 headlamp" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0G4NQHK9X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31yI4FIO1eL._SL500_.jpg" alt="BioLite Range 300 headlamp" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">BioLite Range 300 headlamp</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0G4NQHK9X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">BioLite Range 300 headlamp</a></span>
     <span class="gift-price">around $40</span>
     <span class="gift-why">300 lumens, USB-C, waterproof. The dark-morning fix.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DBioLite%2BRange%2B300%2Bheadlamp" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0G4NQHK9X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Maurten Gel 100 (12-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Maurten Gel 100 (12-pack)</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">Twelve hydrogel gels, 25 g carbs, no flavourings.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=MRE0005-UNF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Body Glide Original anti-chafe balm</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Body Glide Original anti-chafe balm</a></span>
     <span class="gift-price">around $11</span>
     <span class="gift-why">The anti-chafe stick in every marathon bag.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fbodyglide-original-anti-chafe-balm&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="run-4" hidden>
 <h3>A data-driven runner: recovery and the numbers</h3>
 <p>They already own a good watch and know their VO2 max. The gifts that land are recovery (<a href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Hyperice Normatec Elite</a>), accuracy (<a href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Polar H10</a>) and the flagship upgrade if their watch is more than three years old.</p>
 <p><strong>Do this first:</strong> <a href="/vo2-max-calculator">Check their VO2 max estimate against the race-time predictor; the recovery gear is what moves it</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Hyperice Normatec Elite</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Hyperice Normatec Elite</a></span>
     <span class="gift-price">around $1,099</span>
     <span class="gift-why">Wireless compression boots, seven pressure levels, app control. The recovery splurge.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DHyperice%2BNormatec%2BElite" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 970</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 970</a></span>
     <span class="gift-price">around $750</span>
     <span class="gift-why">The flagship: brighter AMOLED, sapphire, titanium, flashlight, ECG, 26 hours of GPS.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08I-CAGRDLTIBLBLWHBA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-970-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/319WN877QrL._SL500_.jpg" alt="Polar H10" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/319WN877QrL._SL500_.jpg" alt="Polar H10" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Polar H10</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Polar H10</a></span>
     <span class="gift-price">around $105</span>
     <span class="gift-why">The reference-grade chest strap: Bluetooth and ANT+ together, session memory.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=PLR003S-BLA-M-XXL&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fpolar-h10-heart-rate-sensor&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07PM565W2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Theragun Prime (6th Gen)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Theragun Prime (6th Gen)</a></span>
     <span class="gift-price">around $250</span>
     <span class="gift-why">16 mm amplitude, app-guided routines, quieter than earlier generations.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DTherabody%2BTheragun%2BPrime" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B0DX8FVG76?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31uBGmwMqdL._SL500_.jpg" alt="Tiger Tail The Stick" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0DX8FVG76?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31uBGmwMqdL._SL500_.jpg" alt="Tiger Tail The Stick" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Tiger Tail The Stick</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0DX8FVG76?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Tiger Tail The Stick</a></span>
     <span class="gift-price">around $30</span>
     <span class="gift-why">Rigid massage stick for calves and quads.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DTiger%2BTail%2BThe%2BStick" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0DX8FVG76?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B019GU4ILQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/51UjfsQEh3L._SL500_.jpg" alt="Nuun Sport electrolyte tablets (4-pack)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B019GU4ILQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/51UjfsQEh3L._SL500_.jpg" alt="Nuun Sport electrolyte tablets (4-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Nuun Sport electrolyte tablets (4-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B019GU4ILQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Nuun Sport electrolyte tablets (4-pack)</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">Four tubes of electrolyte tablets.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fnuun-sport-electrolyte-drink-tablets&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B019GU4ILQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Maurten Gel 100 (12-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Maurten Gel 100 (12-pack)</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">Twelve hydrogel gels, 25 g carbs, no flavourings.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=MRE0005-UNF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B0HGP24KS2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B0HGP24KS2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/41HRCH9kXcL._SL500_.jpg" alt="Zone 2 Training for Runners and Cyclists (paperback)" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
@@ -521,378 +530,378 @@
 <h3>A new cyclist: the kit that keeps them riding</h3>
 <p>One or two rides a week, riding on soft tyres with no tools. The floor pump, a multi-tool, a rear light and chamois cream are the gifts; a <a href="https://www.amazon.com/dp/B07WXDXCTH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Saris M2 wheel-on smart trainer</a> wheel-on trainer is the low-cost way to keep the habit through winter.</p>
 <p><strong>Do this first:</strong> <a href="/cadence-speed-calculator">The cadence and speed calculator shows what their gearing is doing on the hills they avoid</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B07WXDXCTH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41iSW+pwI3L._SL500_.jpg" alt="Saris M2 wheel-on smart trainer" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07WXDXCTH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41iSW+pwI3L._SL500_.jpg" alt="Saris M2 wheel-on smart trainer" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Saris M2 wheel-on smart trainer</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07WXDXCTH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Saris M2 wheel-on smart trainer</a></span>
     <span class="gift-price">around $200</span>
     <span class="gift-why">A wheel-on smart trainer for under $200. The low-cost way to keep a new cyclist riding through winter.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SRS1WUS-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsaris-m2-smart-trainer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07WXDXCTH?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B077KXQ995?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41ywBN6CkqL._SL500_.jpg" alt="Topeak JoeBlow Sport III floor pump" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B077KXQ995?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41ywBN6CkqL._SL500_.jpg" alt="Topeak JoeBlow Sport III floor pump" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Topeak JoeBlow Sport III floor pump</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B077KXQ995?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Topeak JoeBlow Sport III floor pump</a></span>
     <span class="gift-price">around $70</span>
     <span class="gift-why">Steel-barrel floor pump, 160 psi, TwinHead. The most-used object in the garage.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Ftopeak-joeblow-sport-iii-floor-pump&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B077KXQ995?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0GFGD1C1F?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41sjPI-ibOL._SL500_.jpg" alt="Giro Agilis MIPS helmet" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0GFGD1C1F?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41sjPI-ibOL._SL500_.jpg" alt="Giro Agilis MIPS helmet" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Giro Agilis MIPS helmet</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0GFGD1C1F?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Giro Agilis MIPS helmet</a></span>
     <span class="gift-price">around $120</span>
     <span class="gift-why">MIPS road helmet, Roc Loc fit, 32 vents. This listing is a Large.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fgiro-agilis-mips-helmet&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0GFGD1C1F?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B00ZDUGHCW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41fKYwsg2mL._SL500_.jpg" alt="Crankbrothers M19 multi-tool" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00ZDUGHCW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41fKYwsg2mL._SL500_.jpg" alt="Crankbrothers M19 multi-tool" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Crankbrothers M19 multi-tool</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00ZDUGHCW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Crankbrothers M19 multi-tool</a></span>
     <span class="gift-price">around $37</span>
     <span class="gift-why">19 tools with a chain breaker, in a saddle-bag size.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fcrank-brothers-multi-19-tool&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00ZDUGHCW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41-bDP9ojqL._SL500_.jpg" alt="Cateye ViZ450 rear light" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41-bDP9ojqL._SL500_.jpg" alt="Cateye ViZ450 rear light" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Cateye ViZ450 rear light</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Cateye ViZ450 rear light</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">450-lumen daytime rear light.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DCatEye%2BViZ450" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31gud3Ib1sL._SL500_.jpg" alt="CamelBak Podium Chill 24 oz" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31gud3Ib1sL._SL500_.jpg" alt="CamelBak Podium Chill 24 oz" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">CamelBak Podium Chill 24 oz</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">CamelBak Podium Chill 24 oz</a></span>
     <span class="gift-price">around $18</span>
     <span class="gift-why">Insulated 24 oz bottle with a self-sealing valve.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DCamelBak%2BPodium%2BChill%2B24oz%2Bbottle" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Chamois Butt&#x27;r Original (8 oz)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Chamois Butt&#x27;r Original (8 oz)</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">The original chamois cream. Eight ounces lasts a season.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpaceline-products-chamois-buttr-creme&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00NU928OO?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31BjtmQhnqL._SL500_.jpg" alt="Park Tool TL-1.2 tire levers" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00NU928OO?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31BjtmQhnqL._SL500_.jpg" alt="Park Tool TL-1.2 tire levers" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Park Tool TL-1.2 tire levers</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00NU928OO?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Park Tool TL-1.2 tire levers</a></span>
     <span class="gift-price">around $7</span>
     <span class="gift-why">Tyre levers that do not snap. Three for seven dollars.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DPark%2BTool%2BTL-1.2%2Btire%2Blevers" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00NU928OO?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="bike-2" hidden>
 <h3>A consistent cyclist: trainer or computer</h3>
 <p>Three or four rides a week and group rides. They need a smart trainer for winter (<a href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CORE 2 (Zwift Cog and Click)</a>) or a mapping computer for exploring (<a href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Edge 850</a>). Either is the big gift; the <a href="https://www.amazon.com/dp/B086TVFX1D?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Varia RTL515 radar</a> radar is the safety one.</p>
 <p><strong>Do this first:</strong> <a href="/ftp-calculator">Estimate their FTP from a 20-minute effort; a smart trainer will use it from the first ride</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/310nAfwgifL._SL500_.jpg" alt="Wahoo KICKR CORE 2 (Zwift Cog and Click)" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/310nAfwgifL._SL500_.jpg" alt="Wahoo KICKR CORE 2 (Zwift Cog and Click)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Wahoo KICKR CORE 2 (Zwift Cog and Click)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CORE 2 (Zwift Cog and Click)</a></span>
     <span class="gift-price">around $549</span>
     <span class="gift-why">Direct-drive, WiFi, ships with the Zwift Cog and Click. No cassette needed. The best-value trainer.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC034-BLAORA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-kickr-core-2-power-trainer-with-zwift-cog-and-click&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41n6CuMS-qL._SL500_.jpg" alt="Garmin Edge 850" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41n6CuMS-qL._SL500_.jpg" alt="Garmin Edge 850" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Edge 850</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Edge 850</a></span>
     <span class="gift-price">around $500</span>
     <span class="gift-why">Compact mapping computer with ClimbPro and a bright touchscreen.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08W-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-850-bike-computer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B086TVFX1D?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31AyHDOLj9L._SL500_.jpg" alt="Garmin Varia RTL515 radar" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B086TVFX1D?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31AyHDOLj9L._SL500_.jpg" alt="Garmin Varia RTL515 radar" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Garmin Varia RTL515 radar</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B086TVFX1D?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Varia RTL515 radar</a></span>
     <span class="gift-price">around $150</span>
     <span class="gift-why">Rear radar that shows cars on their computer. The safety gift riders wish they had bought earlier.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-varia-rtl515-rearview-radar-with-taillight&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B086TVFX1D?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B097DZ9XRG?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/21+T0L3HshS._SL500_.jpg" alt="Park Tool PCS-10.3 repair stand" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B097DZ9XRG?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/21+T0L3HshS._SL500_.jpg" alt="Park Tool PCS-10.3 repair stand" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Park Tool PCS-10.3 repair stand</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B097DZ9XRG?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Park Tool PCS-10.3 repair stand</a></span>
     <span class="gift-price">around $280</span>
     <span class="gift-why">Park Tool's home mechanic stand with the 100-3D clamp. Folds flat.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpark-tool-pcs-10.3-deluxe-home-mechanic-repair-stand&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B097DZ9XRG?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/21-O44X7leL._SL500_.jpg" alt="Wahoo ELEMNT ROAM V3" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/21-O44X7leL._SL500_.jpg" alt="Wahoo ELEMNT ROAM V3" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Wahoo ELEMNT ROAM V3</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo ELEMNT ROAM V3</a></span>
     <span class="gift-price">around $447</span>
     <span class="gift-why">Large screen, maps, and the simplest phone-app setup in the category.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC02W-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-elemnt-roam-3-gps-cycling-computer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0F4KRCY47?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41sm9h7EgqL._SL500_.jpg" alt="Muc-Off Bike Wash and Drivetrain kit" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41sm9h7EgqL._SL500_.jpg" alt="Muc-Off Bike Wash and Drivetrain kit" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Muc-Off Bike Wash and Drivetrain kit</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Muc-Off Bike Wash and Drivetrain kit</a></span>
     <span class="gift-price">around $55</span>
     <span class="gift-why">Bike wash, drivetrain cleaner and brushes.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DMuc-Off%2BWash%2BDrivetrain%2BKit" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B082MQQXCX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31H4+Bm4bKL._SL500_.jpg" alt="Lezyne Pocket Drive HP mini pump" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B082MQQXCX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31H4+Bm4bKL._SL500_.jpg" alt="Lezyne Pocket Drive HP mini pump" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Lezyne Pocket Drive HP mini pump</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B082MQQXCX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Lezyne Pocket Drive HP mini pump</a></span>
     <span class="gift-price">around $35</span>
     <span class="gift-why">High-pressure mini pump for a jersey pocket.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DLezyne%2BPocket%2BDrive%2BHP%2Bpump" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B082MQQXCX?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Chamois Butt&#x27;r Original (8 oz)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Chamois Butt&#x27;r Original (8 oz)</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">The original chamois cream. Eight ounces lasts a season.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpaceline-products-chamois-buttr-creme&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Park Tool GP-2 patch kit</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Park Tool GP-2 patch kit</a></span>
     <span class="gift-price">around $7</span>
     <span class="gift-why">Pre-glued patches. Two-minute flat fix.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpark-tool-pre-glued-super-patch-kit-gp-2c&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="bike-3" hidden>
 <h3>A serious cyclist: power, then the trainer upgrade</h3>
 <p>Five or more rides, structured training, races. If they train without power, the <a href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Favero Assioma Duo</a> is the gift. If they have power, the <a href="https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR V6</a> or <a href="https://www.amazon.com/dp/B0CP66SKGR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Tacx NEO 3M</a> trainer, or the <a href="https://www.amazon.com/dp/B09WTKMD26?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Edge 1040 Solar</a> for all-day rides.</p>
 <p><strong>Do this first:</strong> <a href="/power-to-weight-ratio-calculator">Their power-to-weight ratio tells you whether they are chasing watts or kilos; a power meter measures both</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg" alt="Favero Assioma Duo" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg" alt="Favero Assioma Duo" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Favero Assioma Duo</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Favero Assioma Duo</a></span>
     <span class="gift-price">around $539</span>
     <span class="gift-why">Pedal-based power, 1 percent, 50 hours, swaps between bikes. Look Keo cleats.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Ffavero-assioma-duo-power-meter&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31JfMo44gpL._SL500_.jpg" alt="Wahoo KICKR V6" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31JfMo44gpL._SL500_.jpg" alt="Wahoo KICKR V6" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Wahoo KICKR V6</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR V6</a></span>
     <span class="gift-price">around $850</span>
     <span class="gift-why">Heavier flywheel, 2,200 watts, 20 percent grade, WiFi. The racer's trainer; needs a cassette.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-kickr-smart-bike-trainer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BFF3KH98?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B09WTKMD26?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31XjDpOzrwL._SL500_.jpg" alt="Garmin Edge 1040 Solar" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B09WTKMD26?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31XjDpOzrwL._SL500_.jpg" alt="Garmin Edge 1040 Solar" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Edge 1040 Solar</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B09WTKMD26?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Edge 1040 Solar</a></span>
     <span class="gift-price">around $647</span>
     <span class="gift-why">Solar, 3.5 inch screen, multi-band GPS, full maps, up to 100 hours in battery saver.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF03I-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-1040-solar-gps-bike-computer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B09WTKMD26?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31bGxpffYnL._SL500_.jpg" alt="Wahoo KICKR CLIMB" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31bGxpffYnL._SL500_.jpg" alt="Wahoo KICKR CLIMB" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Wahoo KICKR CLIMB</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CLIMB</a></span>
     <span class="gift-price">around $649</span>
     <span class="gift-why">Tilts a Wahoo trainer up to 20 percent up and 10 percent down.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-kickr-climb&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41IxfdsCyTL._SL500_.jpg" alt="Wahoo KICKR HEADWIND fan" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41IxfdsCyTL._SL500_.jpg" alt="Wahoo KICKR HEADWIND fan" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Wahoo KICKR HEADWIND fan</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR HEADWIND fan</a></span>
     <span class="gift-price">around $320</span>
     <span class="gift-why">A fan that follows heart rate or speed, up to 30 mph.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-headwind-smart-fan&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0FLCNJ6T4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/416vV-CmM6L._SL500_.jpg" alt="Shimano Ultegra PD-R8000 pedals" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FLCNJ6T4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/416vV-CmM6L._SL500_.jpg" alt="Shimano Ultegra PD-R8000 pedals" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Shimano Ultegra PD-R8000 pedals</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FLCNJ6T4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shimano Ultegra PD-R8000 pedals</a></span>
     <span class="gift-price">around $200</span>
     <span class="gift-why">Carbon-bodied Ultegra pedals with a wide platform.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-ultegra-pd-r8000-pedals&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FLCNJ6T4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07ZPH1PR8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41VJHT9c8jL._SL500_.jpg" alt="Pearl Izumi Elite Gel gloves" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07ZPH1PR8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41VJHT9c8jL._SL500_.jpg" alt="Pearl Izumi Elite Gel gloves" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Pearl Izumi Elite Gel gloves</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07ZPH1PR8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Pearl Izumi Elite Gel gloves</a></span>
     <span class="gift-price">around $33</span>
     <span class="gift-why">Gel-padded gloves for long rides. Check size.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DPEARL%2BiZUMi%2BELITE%2BGel%2BGlove" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07ZPH1PR8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41-bDP9ojqL._SL500_.jpg" alt="Cateye ViZ450 rear light" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41-bDP9ojqL._SL500_.jpg" alt="Cateye ViZ450 rear light" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Cateye ViZ450 rear light</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Cateye ViZ450 rear light</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">450-lumen daytime rear light.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DCatEye%2BViZ450" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B08VJJWXSN?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Chamois Butt&#x27;r Original (8 oz)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Chamois Butt&#x27;r Original (8 oz)</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">The original chamois cream. Eight ounces lasts a season.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpaceline-products-chamois-buttr-creme&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Park Tool GP-2 patch kit</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Park Tool GP-2 patch kit</a></span>
     <span class="gift-price">around $7</span>
     <span class="gift-why">Pre-glued patches. Two-minute flat fix.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpark-tool-pre-glued-super-patch-kit-gp-2c&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="bike-4" hidden>
 <h3>A data-driven cyclist: the things they postpone</h3>
 <p>They have a trainer, a computer and power. The gifts that land are the add-ons they keep not buying: the <a href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR HEADWIND fan</a> fan, the <a href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CLIMB</a>, dual-sided power (<a href="https://www.amazon.com/dp/B0FQC9PJTT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Rally RS210</a>), carbon wheels (<a href="https://www.amazon.com/dp/B0BQ3B3GYP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shimano Ultegra C50 carbon wheelset</a>) or a rack for the car.</p>
 <p><strong>Do this first:</strong> <a href="/training-load-calculator">Their training load calculator numbers show when they are overreaching; the recovery gear is the answer</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0FQC9PJTT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31jo7-2IhNL._SL500_.jpg" alt="Garmin Rally RS210" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FQC9PJTT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31jo7-2IhNL._SL500_.jpg" alt="Garmin Rally RS210" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Rally RS210</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FQC9PJTT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Rally RS210</a></span>
     <span class="gift-price">around $900</span>
     <span class="gift-why">Dual-sided SPD-SL pedal power, 1 percent, 120 hours.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DGarmin%2BRally%2BRS210" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FQC9PJTT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BQ3B3GYP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41Tekpi63CL._SL500_.jpg" alt="Shimano Ultegra C50 carbon wheelset" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BQ3B3GYP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41Tekpi63CL._SL500_.jpg" alt="Shimano Ultegra C50 carbon wheelset" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Shimano Ultegra C50 carbon wheelset</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BQ3B3GYP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shimano Ultegra C50 carbon wheelset</a></span>
     <span class="gift-price">around $1,178</span>
     <span class="gift-why">50 mm carbon tubeless wheels, around 1,570 grams. Check freehub.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SHIU1FD-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshimano-ultegra-wh-r8170-c50-carbon-road-wheelset&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BQ3B3GYP?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B09W84YFWC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31wEzkPdgWL._SL500_.jpg" alt="Kuat Piston Pro X" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B09W84YFWC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31wEzkPdgWL._SL500_.jpg" alt="Kuat Piston Pro X" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Kuat Piston Pro X</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B09W84YFWC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Kuat Piston Pro X</a></span>
     <span class="gift-price">around $1,589</span>
     <span class="gift-why">Hitch rack with LED lights and a no-frame-contact clamp. Two bikes to 67 lb.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=KUAZ00J-GALGRA-S2IN&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fkuat-piston-pro-x-hitch-rack-2-bike&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B09W84YFWC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0CP66SKGR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31BhpC3MiEL._SL500_.jpg" alt="Garmin Tacx NEO 3M" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CP66SKGR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31BhpC3MiEL._SL500_.jpg" alt="Garmin Tacx NEO 3M" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Tacx NEO 3M</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CP66SKGR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Tacx NEO 3M</a></span>
     <span class="gift-price">around $1,800</span>
     <span class="gift-why">Motion plates, 1 percent accuracy, 25 percent grade, no calibration. The comfort trainer.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF07B-ONECOL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-tacx-neo-3m-smart-trainer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CP66SKGR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41IxfdsCyTL._SL500_.jpg" alt="Wahoo KICKR HEADWIND fan" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41IxfdsCyTL._SL500_.jpg" alt="Wahoo KICKR HEADWIND fan" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Wahoo KICKR HEADWIND fan</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR HEADWIND fan</a></span>
     <span class="gift-price">around $320</span>
     <span class="gift-why">A fan that follows heart rate or speed, up to 30 mph.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-headwind-smart-fan&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07JHL69VK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31bGxpffYnL._SL500_.jpg" alt="Wahoo KICKR CLIMB" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31bGxpffYnL._SL500_.jpg" alt="Wahoo KICKR CLIMB" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Wahoo KICKR CLIMB</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CLIMB</a></span>
     <span class="gift-price">around $649</span>
     <span class="gift-why">Tilts a Wahoo trainer up to 20 percent up and 10 percent down.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-kickr-climb&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07FJW6S3B?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B084GGSF8M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31XTMOOxr6L._SL500_.jpg" alt="Smith Wildcat sunglasses" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B084GGSF8M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31XTMOOxr6L._SL500_.jpg" alt="Smith Wildcat sunglasses" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Smith Wildcat sunglasses</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B084GGSF8M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Smith Wildcat sunglasses</a></span>
     <span class="gift-price">around $217</span>
     <span class="gift-why">Large-coverage ChromaPop sunglasses with a spare clear lens.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=SMI00KF-MABLRDMI-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fsmith-wildcat-chromapop-sunglasses&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B084GGSF8M?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41sm9h7EgqL._SL500_.jpg" alt="Muc-Off Bike Wash and Drivetrain kit" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41sm9h7EgqL._SL500_.jpg" alt="Muc-Off Bike Wash and Drivetrain kit" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Muc-Off Bike Wash and Drivetrain kit</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Muc-Off Bike Wash and Drivetrain kit</a></span>
     <span class="gift-price">around $55</span>
     <span class="gift-why">Bike wash, drivetrain cleaner and brushes.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DMuc-Off%2BWash%2BDrivetrain%2BKit" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07QT19ZN8?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31gud3Ib1sL._SL500_.jpg" alt="CamelBak Podium Chill 24 oz" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31gud3Ib1sL._SL500_.jpg" alt="CamelBak Podium Chill 24 oz" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">CamelBak Podium Chill 24 oz</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">CamelBak Podium Chill 24 oz</a></span>
     <span class="gift-price">around $18</span>
     <span class="gift-why">Insulated 24 oz bottle with a self-sealing valve.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DCamelBak%2BPodium%2BChill%2B24oz%2Bbottle" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07HGTSN7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31sxYVItkbL._SL500_.jpg" alt="Chamois Butt&#x27;r Original (8 oz)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Chamois Butt&#x27;r Original (8 oz)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Chamois Butt&#x27;r Original (8 oz)</a></span>
     <span class="gift-price">around $22</span>
     <span class="gift-why">The original chamois cream. Eight ounces lasts a season.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpaceline-products-chamois-buttr-creme&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000HZGTUS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31cwAXHSv6L._SL500_.jpg" alt="Park Tool GP-2 patch kit" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Park Tool GP-2 patch kit</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Park Tool GP-2 patch kit</a></span>
     <span class="gift-price">around $7</span>
     <span class="gift-why">Pre-glued patches. Two-minute flat fix.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fpark-tool-pre-glued-super-patch-kit-gp-2c&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B000WY730O?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="tri-1" hidden>
 <h3>A first-season triathlete: the multisport watch</h3>
 <p>Sprint and Olympic races on a phone app or a basic watch. The <a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a> handles pool and open-water swims with transitions; the transition-day kit (race belt, laces, goggles, bag) fills the rest of the list.</p>
 <p><strong>Do this first:</strong> <a href="/triathlon-training-plan-generator">Build them a triathlon training plan; the watch will follow it</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41DgfhWXRNL._SL500_.jpg" alt="Garmin Forerunner 265" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 265</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 265</a></span>
     <span class="gift-price">around $447</span>
     <span class="gift-why">AMOLED, multi-band GPS, training readiness, 20 hours of GPS, multisport mode. No maps, which they will not miss.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF067-AQU-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-265-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1T7G8S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B08527LT1G?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B08527LT1G?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/31hliXJA9vL._SL500_.jpg" alt="Speedo Teamster 35L backpack" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
@@ -901,16 +910,16 @@
     <span class="gift-why">35 litre wet-and-dry backpack. The budget transition bag.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B08411DQ96?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31XRqk2oorL._SL500_.jpg" alt="Polar H9" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B08411DQ96?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31XRqk2oorL._SL500_.jpg" alt="Polar H9" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Polar H9</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B08411DQ96?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Polar H9</a></span>
     <span class="gift-price">around $70</span>
     <span class="gift-why">The affordable version of the H10. Dual Bluetooth and ANT+ under seventy dollars.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DPolar%2BH9%2Bheart%2Brate%2Bsensor" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B08411DQ96?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B001GFLSIQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B001GFLSIQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/31InNFqXCZL._SL500_.jpg" alt="Speedo Vanquisher 2.0 mirrored goggles" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
@@ -951,52 +960,52 @@
 <h3>A consistent triathlete: the 965 and the bike leg</h3>
 <p>Racing Olympic and half distance, training three sports. The <a href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 965</a> is the watch; the <a href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CORE 2 (Zwift Cog and Click)</a> is the bike-leg gift; the <a href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">FORM Smart Swim 2 goggles</a> goggles are the surprise.</p>
 <p><strong>Do this first:</strong> <a href="/ftp-calculator">Their FTP sets the bike-leg pacing; a trainer or power meter lets them hold it</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41LITOXyC6L._SL500_.jpg" alt="Garmin Forerunner 965" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 965</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 965</a></span>
     <span class="gift-price">around $500</span>
     <span class="gift-why">Multi-band GPS, full maps, 31 hours of GPS battery and every Garmin metric. The value flagship.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF069-AMPYEL-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-965-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BS1XZY7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/310nAfwgifL._SL500_.jpg" alt="Wahoo KICKR CORE 2 (Zwift Cog and Click)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/310nAfwgifL._SL500_.jpg" alt="Wahoo KICKR CORE 2 (Zwift Cog and Click)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Wahoo KICKR CORE 2 (Zwift Cog and Click)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Wahoo KICKR CORE 2 (Zwift Cog and Click)</a></span>
     <span class="gift-price">around $549</span>
     <span class="gift-why">Direct-drive, WiFi, ships with the Zwift Cog and Click. No cassette needed. The best-value trainer.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=WHAC034-BLAORA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fwahoo-fitness-kickr-core-2-power-trainer-with-zwift-cog-and-click&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FLQDCR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41FOwa43S3L._SL500_.jpg" alt="FORM Smart Swim 2 goggles" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41FOwa43S3L._SL500_.jpg" alt="FORM Smart Swim 2 goggles" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">FORM Smart Swim 2 goggles</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">FORM Smart Swim 2 goggles</a></span>
     <span class="gift-price">around $199</span>
     <span class="gift-why">In-goggle display for pace, stroke rate, distance and heart rate.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fform-swim-smart-swim-2-goggles&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0BSZNRSXT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41CUSGHlgkL._SL500_.jpg" alt="Zoot Ultra Tri Bag" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0BSZNRSXT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41CUSGHlgkL._SL500_.jpg" alt="Zoot Ultra Tri Bag" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Zoot Ultra Tri Bag</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0BSZNRSXT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Zoot Ultra Tri Bag</a></span>
     <span class="gift-price">around $160</span>
     <span class="gift-why">Transition backpack with wet compartment and helmet pocket.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fzoot-ultra-tri-bag&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0BSZNRSXT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/21inDHxAjyL._SL500_.jpg" alt="Shokz OpenSwim Pro" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/21inDHxAjyL._SL500_.jpg" alt="Shokz OpenSwim Pro" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Shokz OpenSwim Pro</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shokz OpenSwim Pro</a></span>
     <span class="gift-price">around $230</span>
     <span class="gift-why">32 GB of MP3 for the pool, Bluetooth for the run, IP68.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AKZ000I-GRE-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openswim-pro-headphones&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B001GFLSIQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B001GFLSIQ?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/31InNFqXCZL._SL500_.jpg" alt="Speedo Vanquisher 2.0 mirrored goggles" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
@@ -1005,16 +1014,16 @@
     <span class="gift-why">Mirrored racing goggles. Buy two.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
-    <span class="gift-name">Maurten Gel 100 (12-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Maurten Gel 100 (12-pack)</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">Twelve hydrogel gels, 25 g carbs, no flavourings.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=MRE0005-UNF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00AQ0TEL0?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00AQ0TEL0?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/41RR-RvHX5L._SL500_.jpg" alt="VeloChampion race number belt" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
@@ -1023,75 +1032,75 @@
     <span class="gift-why">Race number belt with gel loops. On once in T1, stays on.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Body Glide Original anti-chafe balm</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Body Glide Original anti-chafe balm</a></span>
     <span class="gift-price">around $11</span>
     <span class="gift-why">The anti-chafe stick in every marathon bag.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fbodyglide-original-anti-chafe-balm&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="tri-3" hidden>
 <h3>A serious triathlete: power and recovery</h3>
 <p>Half and full distance, structured training, long bricks. Power on the bike (<a href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Favero Assioma Duo</a>) and recovery (<a href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Hyperice Normatec Elite</a>) are the gifts that change a season; the <a href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 970</a> is the flagship upgrade.</p>
 <p><strong>Do this first:</strong> <a href="/lthr-zone-calculator">LTHR zones from the calculator are what a full-distance athlete paces the run leg by</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg" alt="Favero Assioma Duo" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31jTk6g3iHL._SL500_.jpg" alt="Favero Assioma Duo" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Favero Assioma Duo</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Favero Assioma Duo</a></span>
     <span class="gift-price">around $539</span>
     <span class="gift-why">Pedal-based power, 1 percent, 50 hours, swaps between bikes. Look Keo cleats.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Ffavero-assioma-duo-power-meter&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B071JRXDKT?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Hyperice Normatec Elite</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Hyperice Normatec Elite</a></span>
     <span class="gift-price">around $1,099</span>
     <span class="gift-why">Wireless compression boots, seven pressure levels, app control. The recovery splurge.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DHyperice%2BNormatec%2BElite" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41QSY1rvKgL._SL500_.jpg" alt="Garmin Forerunner 970" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Forerunner 970</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Forerunner 970</a></span>
     <span class="gift-price">around $750</span>
     <span class="gift-why">The flagship: brighter AMOLED, sapphire, titanium, flashlight, ECG, 26 hours of GPS.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08I-CAGRDLTIBLBLWHBA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-forerunner-970-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0F8QWPVNK?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B01MEFBY7S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41yy4d+kppL._SL500_.jpg" alt="Profile Design FC35 aero bottle" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B01MEFBY7S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41yy4d+kppL._SL500_.jpg" alt="Profile Design FC35 aero bottle" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Profile Design FC35 aero bottle</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B01MEFBY7S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Profile Design FC35 aero bottle</a></span>
     <span class="gift-price">around $115</span>
     <span class="gift-why">35 oz front-mounted aero hydration between the aerobars.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DProfile%2BDesign%2BFC35%2Bbottle" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B01MEFBY7S?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41n6CuMS-qL._SL500_.jpg" alt="Garmin Edge 850" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41n6CuMS-qL._SL500_.jpg" alt="Garmin Edge 850" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Garmin Edge 850</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Edge 850</a></span>
     <span class="gift-price">around $500</span>
     <span class="gift-why">Compact mapping computer with ClimbPro and a bright touchscreen.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF08W-BLA-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-edge-850-bike-computer&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FQCHZD7T?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41MSMp6OLKL._SL500_.jpg" alt="Theragun Prime (6th Gen)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Theragun Prime (6th Gen)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Theragun Prime (6th Gen)</a></span>
     <span class="gift-price">around $250</span>
     <span class="gift-why">16 mm amplitude, app-guided routines, quieter than earlier generations.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DTherabody%2BTheragun%2BPrime" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0FKCJNHWB?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B004O6ECL4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="under" href="https://www.amazon.com/dp/B004O6ECL4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/31HaWI0qd4L._SL500_.jpg" alt="FINIS Swimmer&#x27;s Snorkel" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Under $50</span>
@@ -1109,66 +1118,66 @@
     <span class="gift-why">Waterproof metronome for stroke rate or lap pace.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Maurten Gel 100 (12-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Maurten Gel 100 (12-pack)</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">Twelve hydrogel gels, 25 g carbs, no flavourings.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=MRE0005-UNF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31YybVnuNML._SL500_.jpg" alt="Body Glide Original anti-chafe balm" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Body Glide Original anti-chafe balm</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Body Glide Original anti-chafe balm</a></span>
     <span class="gift-price">around $11</span>
     <span class="gift-why">The anti-chafe stick in every marathon bag.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fbodyglide-original-anti-chafe-balm&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B00288L2N6?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a></div>
+</div></div>
 </div><div class="finder-result" data-result="tri-4" hidden>
 <h3>A data-driven triathlete: the swim is the gap</h3>
 <p>They have the watch, the trainer and power. The swim is where the gifts are: <a href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">FORM Smart Swim 2 goggles</a> goggles, a <a href="https://www.amazon.com/dp/B005TVYVI2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">FINIS Tempo Trainer Pro</a>, <a href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shokz OpenSwim Pro</a> headphones. Add the <a href="https://www.amazon.com/dp/B0DD5S66GR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Fenix 8 Sapphire</a> if they want one watch for everything.</p>
 <p><strong>Do this first:</strong> <a href="/vo2-max-calculator">Their VO2 max and LTHR are set; the swim tech is what moves the first leg</a>.</p>
-<div class="gift-grid"><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0DD5S66GR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41r-ybdEv1L._SL500_.jpg" alt="Garmin Fenix 8 Sapphire" loading="lazy" width="220" height="220">
+<div class="gift-grid"><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0DD5S66GR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41r-ybdEv1L._SL500_.jpg" alt="Garmin Fenix 8 Sapphire" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Garmin Fenix 8 Sapphire</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0DD5S66GR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Garmin Fenix 8 Sapphire</a></span>
     <span class="gift-price">around $850</span>
     <span class="gift-why">One watch for triathlon, hiking and travel. Dive-rated, speaker and mic, about two weeks of battery.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=GRMF07S-CAGRDLTIBLPEGRSIBAA-S47M&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fgarmin-fenix-8-amoled-sapphire-sport-watch&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0DD5S66GR?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="big" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31xEb+J39RL._SL500_.jpg" alt="Hyperice Normatec Elite" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">The big gift</span>
-    <span class="gift-name">Hyperice Normatec Elite</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Hyperice Normatec Elite</a></span>
     <span class="gift-price">around $1,099</span>
     <span class="gift-why">Wireless compression boots, seven pressure levels, app control. The recovery splurge.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fstore%2Fsearch.jsp%3Fq%3DHyperice%2BNormatec%2BElite" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0D4876TX4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/41FOwa43S3L._SL500_.jpg" alt="FORM Smart Swim 2 goggles" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/41FOwa43S3L._SL500_.jpg" alt="FORM Smart Swim 2 goggles" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">FORM Smart Swim 2 goggles</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">FORM Smart Swim 2 goggles</a></span>
     <span class="gift-price">around $199</span>
     <span class="gift-why">In-goggle display for pace, stroke rate, distance and heart rate.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?u=https%3A%2F%2Fwww.backcountry.com%2Fform-swim-smart-swim-2-goggles&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CV8T39HS?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/21inDHxAjyL._SL500_.jpg" alt="Shokz OpenSwim Pro" loading="lazy" width="220" height="220">
+</div><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/21inDHxAjyL._SL500_.jpg" alt="Shokz OpenSwim Pro" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
-    <span class="gift-name">Shokz OpenSwim Pro</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Shokz OpenSwim Pro</a></span>
     <span class="gift-price">around $230</span>
     <span class="gift-why">32 GB of MP3 for the pool, Bluetooth for the run, IP68.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=AKZ000I-GRE-ONESIZ&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fshokz-openswim-pro-headphones&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B0CS3JBP67?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B005TVYVI2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="mid" href="https://www.amazon.com/dp/B005TVYVI2?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/41q8AlzvwQL._SL500_.jpg" alt="FINIS Tempo Trainer Pro" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Mid-range</span>
@@ -1195,16 +1204,16 @@
     <span class="gift-why">Tow float and dry bag for open-water swims.</span>
     <span class="gift-btn">See it on Amazon &rarr;</span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
-  <img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220">
+</a><div class="gift-card">
+  <a class="gift-imglink" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored"><img src="https://m.media-amazon.com/images/I/31ThZPzqPcL._SL500_.jpg" alt="Maurten Gel 100 (12-pack)" loading="lazy" width="220" height="220"></a>
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>
-    <span class="gift-name">Maurten Gel 100 (12-pack)</span>
+    <span class="gift-name"><a href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">Maurten Gel 100 (12-pack)</a></span>
     <span class="gift-price">around $50</span>
     <span class="gift-why">Twelve hydrogel gels, 25 g carbs, no flavourings.</span>
-    <span class="gift-btn">See it on Amazon &rarr;</span>
+    <span class="gift-btns"><a class="gift-btn" href="https://backcountry.tnu8.net/c/6910798/1942899/5311?prodsku=MRE0005-UNF-BOXOF12&amp;u=https%3A%2F%2Fwww.backcountry.com%2Fmaurten-gel-100&amp;intsrc=CATF_15689" target="_blank" rel="nofollow sponsored noopener noreferrer" data-bc="auto">Check Backcountry &rarr;</a><a class="gift-btn gift-btn-alt" href="https://www.amazon.com/dp/B07H319S3V?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">See it on Amazon &rarr;</a></span>
   </span>
-</a><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00AQ0TEL0?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
+</div><a class="gift-card" data-budget="stock" href="https://www.amazon.com/dp/B00AQ0TEL0?tag=runbikecalc-20&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow noopener sponsored">
   <img src="https://m.media-amazon.com/images/I/41RR-RvHX5L._SL500_.jpg" alt="VeloChampion race number belt" loading="lazy" width="220" height="220">
   <span class="gift-body">
     <span class="gift-tier">Stocking stuffer</span>

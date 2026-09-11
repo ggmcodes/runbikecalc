@@ -1,0 +1,1608 @@
+{
+ "_about": "ASIN to Backcountry mapping for scripts/add-backcountry-buttons.py. status product = verified backcountry.com product page (slug), search = tracked Backcountry search fallback (brand carried, exact model page not confirmed), none = do not add Backcountry. source says how it was verified: site reuse = slug already linked elsewhere on runbikecalc, web search = WebSearch site:backcountry.com on 2026-09-11.",
+ "asins": {
+  "B000GISTZ4": {
+   "name": "Whey or Plant Protein",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B000HZGTUS": {
+   "name": "Chamois Butt'r Original (8 oz)",
+   "status": "product",
+   "source": "web search: Paceline Original Chamois Butt'r Cream",
+   "slug": "paceline-products-chamois-buttr-creme"
+  },
+  "B000NPYY04": {
+   "name": "With what:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B000QSNYGI": {
+   "name": "Bottom line:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B000WY730O": {
+   "name": "Park Tool GP-2 patch kit",
+   "status": "product",
+   "source": "web search",
+   "slug": "park-tool-pre-glued-super-patch-kit-gp-2c"
+  },
+  "B000WYCD5O": {
+   "name": "Finish Line Wet chain lube",
+   "status": "product",
+   "source": "web search",
+   "slug": "finish-line-wet-lube-fin0005"
+  },
+  "B00115UN9Q": {
+   "name": "Body Glide For Her Anti-Chafe Balm",
+   "status": "search",
+   "source": "Bodyglide carried; For Her page not confirmed",
+   "query": "Bodyglide For Her"
+  },
+  "B001EJMS6K": {
+   "name": "Iron Gym Total Upper Body Workout Bar",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B001GFLSIQ": {
+   "name": "Speedo Vanquisher 2.0 mirrored goggles",
+   "status": "none",
+   "source": "web search miss, Speedo not carried"
+  },
+  "B00288L2N6": {
+   "name": "Body Glide Original anti-chafe balm",
+   "status": "product",
+   "source": "web search",
+   "slug": "bodyglide-original-anti-chafe-balm"
+  },
+  "B002IDZXRM": {
+   "name": "Finish Line Dry chain lube",
+   "status": "search",
+   "source": "web search: no dry lube page, Finish Line carried",
+   "query": "Finish Line Dry Lube"
+  },
+  "B002OP1Z44": {
+   "name": "Best Budget Barbell Set:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B003BMDI9E": {
+   "name": "Genuine Innovations AirChuck CO2 inflator",
+   "status": "search",
+   "source": "web search: Air Chuck Elite only, variant unclear",
+   "query": "Genuine Innovations Air Chuck"
+  },
+  "B003PGJLRO": {
+   "name": "Warning:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B0040EKZDY": {
+   "name": "TriggerPoint GRID Foam Roller",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "trigger-point-grid-foam-roller"
+  },
+  "B004O6ECL4": {
+   "name": "FINIS Swimmer's Snorkel",
+   "status": "none",
+   "source": "web search miss, FINIS not carried"
+  },
+  "B004U3Y8OM": {
+   "name": "Important:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B005TVYVI2": {
+   "name": "FINIS Tempo Trainer Pro",
+   "status": "none",
+   "source": "web search miss, FINIS not carried"
+  },
+  "B005UEB96K": {
+   "name": "Aquaphor Healing Ointment",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B006GUC9KC": {
+   "name": "TriggerPoint GRID Foam Roller",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "trigger-point-grid-foam-roller"
+  },
+  "B007DLVLDY": {
+   "name": "Lock Laces elastic no-tie laces",
+   "status": "none",
+   "source": "web search miss, Lock Laces not carried"
+  },
+  "B00A21NRNO": {
+   "name": "Warranty:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B00A8CCCS8": {
+   "name": "Best Kettlebells:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B00AQ0TEL0": {
+   "name": "VeloChampion race number belt",
+   "status": "none",
+   "source": "web search miss, VeloChampion not carried"
+  },
+  "B00GL2HMES": {
+   "name": "What to Expect",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B00J074W7Q": {
+   "name": "Orgain Organic Vegan Protein",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B00KXD5HPC": {
+   "name": "WaterRower Oak",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B00N4OX1J6": {
+   "name": "official HYROX Station 1 machine",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B00NH9WEUA": {
+   "name": "Concept2 RowErg",
+   "status": "none",
+   "source": "rower"
+  },
+  "B00NU928OO": {
+   "name": "Park Tool TL-1.2 tire levers",
+   "status": "search",
+   "source": "web search: only TL-1 page, Park Tool carried",
+   "query": "Park Tool TL-1.2 tire levers"
+  },
+  "B00ZDUGHCW": {
+   "name": "Crankbrothers M19 multi-tool",
+   "status": "product",
+   "source": "web search",
+   "slug": "crank-brothers-multi-19-tool"
+  },
+  "B015M09IQ4": {
+   "name": "Orange Seal Endurance sealant",
+   "status": "product",
+   "source": "web search",
+   "slug": "orange-seal-endurance-tubeless-sealant"
+  },
+  "B018SC90MK": {
+   "name": "Wetsuit (400-600)",
+   "status": "search",
+   "source": "web search: gendered pages",
+   "query": "XTERRA Vortex wetsuit"
+  },
+  "B0193V3DJ6": {
+   "name": "Skip if:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B019GU4ILQ": {
+   "name": "Nuun Sport electrolyte tablets (4-pack)",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "nuun-sport-electrolyte-drink-tablets"
+  },
+  "B019SCLFFO": {
+   "name": "New Wave Swim Buoy",
+   "status": "none",
+   "source": "web search miss, New Wave not carried"
+  },
+  "B01AMVB87A": {
+   "name": "Electrolyte Supplements",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B01AVDVHTI": {
+   "name": "Fit Simplify Resistance Loop Bands Set",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B01CGXURL0": {
+   "name": "FlipBelt Zipper",
+   "status": "none",
+   "source": "web search miss: FlipBelt"
+  },
+  "B01DFQSVK6": {
+   "name": "Sleep disruption:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B01KBGT9LS": {
+   "name": "Recommended for runners:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B01MEFBY7S": {
+   "name": "Profile Design FC35 aero bottle",
+   "status": "search",
+   "source": "web search: no FC35 page, Profile Design carried",
+   "query": "Profile Design FC35 bottle"
+  },
+  "B01MSSDEPK": {
+   "name": "CeraVe Hydrating Facial Cleanser",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B01N1UX8RW": {
+   "name": "RENPHO Elis 1",
+   "status": "none",
+   "source": "scale / measuring tools"
+  },
+  "B01N638AAE": {
+   "name": "Body Glide Original Anti-Chafe Balm",
+   "status": "product",
+   "source": "web search",
+   "slug": "bodyglide-original-anti-chafe-balm"
+  },
+  "B06X6J3RRY": {
+   "name": "Nathan Stridesport Armband",
+   "status": "search",
+   "source": "Nathan carried (web search)",
+   "query": "Nathan Stridesport armband"
+  },
+  "B06XCP8Y8S": {
+   "name": "Kryptonite Evolution U-lock",
+   "status": "search",
+   "source": "size variant unclear, Kryptonite carried",
+   "query": "Kryptonite Evolution U-Lock"
+  },
+  "B06XCTDYS6": {
+   "name": "Kryptonite Evolution Mini-5 U-lock",
+   "status": "product",
+   "source": "web search",
+   "slug": "kryptonite-evolution-mini-5-u-lock-double-deadbolt"
+  },
+  "B071JRXDKT": {
+   "name": "Favero Assioma Duo",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "favero-assioma-duo-power-meter"
+  },
+  "B072JYW6ZX": {
+   "name": "Favero Assioma Uno Power Meter Pedal",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "favero-assioma-uno-power-meter"
+  },
+  "B072KGPLX6": {
+   "name": "Sun Bum SPF 30 Lip Balm Variety Pack",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B077KXQ995": {
+   "name": "Topeak JoeBlow Sport III floor pump",
+   "status": "product",
+   "source": "web search",
+   "slug": "topeak-joeblow-sport-iii-floor-pump"
+  },
+  "B07BTGCJTW": {
+   "name": "Who benefits most:",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B07DLL2PYP": {
+   "name": "Shimano 105 PD-R7000 pedals",
+   "status": "product",
+   "source": "web search",
+   "slug": "shimano-105-pd-r7000-pedals"
+  },
+  "B07FJW6S3B": {
+   "name": "Wahoo KICKR CLIMB",
+   "status": "product",
+   "source": "web search",
+   "slug": "wahoo-fitness-kickr-climb"
+  },
+  "B07H319S3V": {
+   "name": "Maurten Gel 100 (12-pack)",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "maurten-gel-100",
+   "prodsku": "MRE0005-UNF-BOXOF12"
+  },
+  "B07HGTSN7X": {
+   "name": "CamelBak Podium Chill 24 oz",
+   "status": "search",
+   "source": "web search: slug ambiguous (big-chill-25oz / outdoor), CamelBak carried",
+   "query": "CamelBak Podium Chill 24oz bottle"
+  },
+  "B07JHL69VK": {
+   "name": "Wahoo KICKR HEADWIND fan",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "wahoo-headwind-smart-fan"
+  },
+  "B07K8XN48B": {
+   "name": "8.5W",
+   "status": "product",
+   "source": "web search",
+   "slug": "continental-grand-prix-5000-tire-clincher"
+  },
+  "B07PM54P4N": {
+   "name": "Polar H10",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "polar-h10-heart-rate-sensor",
+   "prodsku": "PLR003S-BLA-M-XXL"
+  },
+  "B07PM565W2": {
+   "name": "Polar H10",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "polar-h10-heart-rate-sensor",
+   "prodsku": "PLR003S-BLA-M-XXL"
+  },
+  "B07Q4TNFWQ": {
+   "name": "Superteam 50mm Carbon Clincher Wheelset",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B07QT19ZN8": {
+   "name": "Muc-Off Bike Wash and Drivetrain kit",
+   "status": "search",
+   "source": "web search: kit variant unclear, Muc-Off carried",
+   "query": "Muc-Off Wash Drivetrain Kit"
+  },
+  "B07SH31T9V": {
+   "name": "LMNT / Electrolyte Mix",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B07T6C2ZWL": {
+   "name": "Best Premium Barbell:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B07W6QTHM9": {
+   "name": "Alternatives worth considering",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-tacx-neo-2t-smart"
+  },
+  "B07WXDXCTH": {
+   "name": "Saris M2 wheel-on smart trainer",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "saris-m2-smart-trainer",
+   "prodsku": "SRS1WUS-BLA-ONESIZ"
+  },
+  "B07Y5L8Q9R": {
+   "name": "Nathan SpeedDraw Plus handheld",
+   "status": "product",
+   "source": "web search",
+   "slug": "nathan-speeddraw-plus-insulated-water-bottle-18oz"
+  },
+  "B07YLJPMC3": {
+   "name": "CeraVe Foaming Facial Cleanser",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B07ZG9KW79": {
+   "name": "Smith Signal",
+   "status": "product",
+   "source": "web search",
+   "slug": "smith-signal-mips-helmet"
+  },
+  "B07ZPH1PR8": {
+   "name": "Pearl Izumi Elite Gel gloves",
+   "status": "search",
+   "source": "web search: gendered pages, Amazon gender unknown",
+   "query": "PEARL iZUMi ELITE Gel Glove"
+  },
+  "B07ZQWJ79R": {
+   "name": "Fastest Gravel:",
+   "status": "product",
+   "source": "web search",
+   "slug": "pirelli-cinturato-gravel-h-tire-tubeless"
+  },
+  "B082MQQXCX": {
+   "name": "Lezyne Pocket Drive HP mini pump",
+   "status": "search",
+   "source": "web search: no HP page, Lezyne carried",
+   "query": "Lezyne Pocket Drive HP pump"
+  },
+  "B08411DQ96": {
+   "name": "Polar H9",
+   "status": "search",
+   "source": "web search: no H9 page, Polar carried",
+   "query": "Polar H9 heart rate sensor"
+  },
+  "B0844GP7QP": {
+   "name": "Hydrow Origin",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B084GGSF8M": {
+   "name": "Smith Wildcat sunglasses",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "smith-wildcat-chromapop-sunglasses",
+   "prodsku": "SMI00KF-MABLRDMI-ONESIZ"
+  },
+  "B08527LT1G": {
+   "name": "Speedo Teamster 35L backpack",
+   "status": "none",
+   "source": "web search miss, Speedo not carried"
+  },
+  "B086TVFX1D": {
+   "name": "Garmin Varia RTL515 radar",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-varia-rtl515-rearview-radar-with-taillight"
+  },
+  "B087H5FFGK": {
+   "name": "Supergoop! PLAY Everyday Lotion SPF 50",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B087HBVDYT": {
+   "name": "Supergoop! PLAY Body Mist SPF 50",
+   "status": "none",
+   "source": "skincare"
+  },
+  "B087YR8JPM": {
+   "name": "Zipp 303 S Carbon Gravel Wheels",
+   "status": "search",
+   "source": "web search: wheel vs wheelset variants",
+   "query": "Zipp 303 S"
+  },
+  "B087YTXTZQ": {
+   "name": "Zipp 303 Firecrest",
+   "status": "search",
+   "source": "web search: wheel vs wheelset variants",
+   "query": "Zipp 303 Firecrest"
+  },
+  "B088ND6FNQ": {
+   "name": "Best Value:",
+   "status": "product",
+   "source": "web search",
+   "slug": "continental-grand-prix-5000-tire-clincher"
+  },
+  "B08BQS61MR": {
+   "name": "Skip if:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B08CY8RWM9": {
+   "name": "DT Swiss XM 1700 Spline",
+   "status": "search",
+   "source": "web search: no XM 1700 page, DT Swiss carried",
+   "query": "DT Swiss XM 1700"
+  },
+  "B08HTSM5LR": {
+   "name": "GU Energy Gel mixed box (24)",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "gu-energy-gel-24-pack",
+   "prodsku": "GUS0002-CCOU-S24PA"
+  },
+  "B08JFWYVGK": {
+   "name": "OUXI Comfort Gel Saddle",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B08KZTFP97": {
+   "name": "Best All-Around:",
+   "status": "product",
+   "source": "web search",
+   "slug": "vittoria-corsa-pro-g2.0-tlr-tire"
+  },
+  "B08L3FFKC3": {
+   "name": "Jabra Elite Active 75t",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B08NPT5TR1": {
+   "name": "Zipp Service Course SL-70 XPLR Carbon",
+   "status": "product",
+   "source": "web search",
+   "slug": "zipp-service-course-sl-70-xplr-handlebar"
+  },
+  "B08P61K3BY": {
+   "name": "Physix Gear Compression Socks",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B08VJJWXSN": {
+   "name": "Cateye ViZ450 rear light",
+   "status": "search",
+   "source": "web search: no ViZ page, CatEye carried",
+   "query": "CatEye ViZ450"
+  },
+  "B08XY6DBMJ": {
+   "name": "Tifosi Swank sunglasses",
+   "status": "product",
+   "source": "web search",
+   "slug": "tifosi-optics-swank-sunglasses"
+  },
+  "B0951BYCXF": {
+   "name": "THE EDGE Lactate Meter Test Kit",
+   "status": "none",
+   "source": "scale / measuring tools"
+  },
+  "B0953X73TP": {
+   "name": "Garmin Forerunner 55",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-forerunner-55-sportwatch"
+  },
+  "B097DZ9XRG": {
+   "name": "Park Tool PCS-10.3 repair stand",
+   "status": "product",
+   "source": "web search",
+   "slug": "park-tool-pcs-10.3-deluxe-home-mechanic-repair-stand"
+  },
+  "B098CWFNF5": {
+   "name": "Cateye ViZ150 rear light",
+   "status": "search",
+   "source": "web search: no ViZ page, CatEye carried",
+   "query": "CatEye ViZ150"
+  },
+  "B0992F7C9P": {
+   "name": "Salomon ADV Skin 12 vest",
+   "status": "product",
+   "source": "web search",
+   "slug": "salomon-adv-skin-12l-set-hydration-vest"
+  },
+  "B099X65BSZ": {
+   "name": "ABUS Bordo 6000C folding lock",
+   "status": "product",
+   "source": "web search",
+   "slug": "abus-bordo-combo-6000c-lock"
+  },
+  "B09HKH3MZ3": {
+   "name": "Road or Triathlon Bike (2,000-10,000+)",
+   "status": "none",
+   "source": "card name too generic to match one product"
+  },
+  "B09M7LH4FM": {
+   "name": "Continental Race 28 inner tubes",
+   "status": "product",
+   "source": "web search",
+   "slug": "continental-race-tube"
+  },
+  "B09N2FG6CT": {
+   "name": "Pearl Izumi Quest Cycling Shorts",
+   "status": "search",
+   "source": "web search: gendered pages",
+   "query": "PEARL iZUMi Quest Short"
+  },
+  "B09SK6KZSN": {
+   "name": "SPIbelt Original running belt",
+   "status": "none",
+   "source": "web search miss, SPIbelt not carried"
+  },
+  "B09W84YFWC": {
+   "name": "Kuat Piston Pro X",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "kuat-piston-pro-x-hitch-rack-2-bike",
+   "prodsku": "KUAZ00J-GALGRA-S2IN"
+  },
+  "B09WTKMD26": {
+   "name": "Garmin Edge 1040 Solar",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-edge-1040-solar-gps-bike-computer",
+   "prodsku": "GRMF03I-BLA-ONESIZ"
+  },
+  "B0BFF3KH98": {
+   "name": "Alternatives worth considering",
+   "status": "product",
+   "source": "web search: Wahoo Fitness New KICKR Smart Trainer",
+   "slug": "wahoo-fitness-kickr-smart-bike-trainer"
+  },
+  "B0BH57YJ8Z": {
+   "name": "Torque Wrench (2-20 Nm)",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B0BHY7BQ8F": {
+   "name": "Alternatives worth considering",
+   "status": "product",
+   "source": "web search",
+   "slug": "wahoo-fitness-powrlink-dual-sided-power-meter-pedals"
+  },
+  "B0BHZVT9T6": {
+   "name": "Horizon T202 Folding Treadmill",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0BKTTKCYM": {
+   "name": "COROS APEX 2 Series GPS Watch",
+   "status": "product",
+   "source": "web search",
+   "slug": "coros-apex-2-gps-outdoor-watch"
+  },
+  "B0BQ3B3GYP": {
+   "name": "Shimano Ultegra C50 carbon wheelset",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "shimano-ultegra-wh-r8170-c50-carbon-road-wheelset",
+   "prodsku": "SHIU1FD-ONECOL-ONESIZ"
+  },
+  "B0BS1T7G8S": {
+   "name": "Garmin Forerunner 265",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-265-watch",
+   "prodsku": "GRMF067-AQU-ONESIZ"
+  },
+  "B0BS1T9J4Y": {
+   "name": "Garmin Forerunner 265",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-265-watch",
+   "prodsku": "GRMF067-AQU-ONESIZ"
+  },
+  "B0BS1XZY7T": {
+   "name": "Garmin Forerunner 965",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-965-watch",
+   "prodsku": "GRMF069-AMPYEL-ONESIZ"
+  },
+  "B0BSJYW743": {
+   "name": "Important Considerations",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B0BSZNRSXT": {
+   "name": "Zoot Ultra Tri Bag",
+   "status": "product",
+   "source": "web search",
+   "slug": "zoot-ultra-tri-bag"
+  },
+  "B0BT1Z69QJ": {
+   "name": "Selle Royal Respiro",
+   "status": "search",
+   "source": "web search: Athletic and Relaxed variants",
+   "query": "Selle Royal Respiro"
+  },
+  "B0BT36CRCQ": {
+   "name": "Garmin Edge 840",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-edge-840-computer"
+  },
+  "B0BT39FM5Y": {
+   "name": "Garmin Edge 840 Bundle",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-edge-840-bike-computer-bundle"
+  },
+  "B0BYFC6GBQ": {
+   "name": "Alternatives worth considering",
+   "status": "product",
+   "source": "web search",
+   "slug": "garmin-fenix-7x-pro-solar-sport-watch"
+  },
+  "B0C19RDWVF": {
+   "name": "Balega Hidden Comfort socks (3-pack)",
+   "status": "product",
+   "source": "web search",
+   "slug": "balega-hidden-comfort-lightweight-running-socks"
+  },
+  "B0C46J6XGM": {
+   "name": "Salomon Speedcross",
+   "status": "search",
+   "source": "model year/gender unclear, Salomon carried",
+   "query": "Salomon Speedcross"
+  },
+  "B0C7QVZZ7G": {
+   "name": "Fastest Road Tire:",
+   "status": "product",
+   "source": "web search",
+   "slug": "continental-grand-prix-5000-s-tr-tire-tubeless"
+  },
+  "B0C7RS5J1V": {
+   "name": "Lezyne Macro Drive 1400+ front light",
+   "status": "product",
+   "source": "web search",
+   "slug": "lezyne-macro-drive-1400-plus-headlight"
+  },
+  "B0CFT3FLF8": {
+   "name": "Darn Tough Bolt Micro Crew running sock",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "darn-tough-bolt-micro-crew-ultra-lightweight-running-sock",
+   "prodsku": "DRNC057-BLA-M"
+  },
+  "B0CFTCJFQS": {
+   "name": "Suunto Race",
+   "status": "product",
+   "source": "web search",
+   "slug": "suunto-race-sport-watch"
+  },
+  "B0CGM1Y8LD": {
+   "name": "DT Swiss PR 1600 Spline 32",
+   "status": "search",
+   "source": "web search: no PR 1600 page, DT Swiss carried",
+   "query": "DT Swiss PR 1600"
+  },
+  "B0CGMKK1D5": {
+   "name": "Reserve 30|SL Carbon Wheels",
+   "status": "search",
+   "source": "web search: several wheelsets",
+   "query": "Reserve 30 SL carbon wheels"
+  },
+  "B0CGYHZDT1": {
+   "name": "Brooks Ghost 16",
+   "status": "search",
+   "source": "web search: gendered pages, Amazon gender unknown",
+   "query": "Brooks Ghost 16"
+  },
+  "B0CLBFJRW3": {
+   "name": "Sunny Health Smart Pro Exercise Bike",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0CM863HWF": {
+   "name": "Fitbit Charge 6",
+   "status": "none",
+   "source": "Fitbit, not carried"
+  },
+  "B0CMR3FM5M": {
+   "name": "Hydrow Wave",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0CND1B7XD": {
+   "name": "Goniometer / Angle Finder",
+   "status": "none",
+   "source": "scale / measuring tools"
+  },
+  "B0CP66SKGR": {
+   "name": "Garmin Tacx NEO 3M",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-tacx-neo-3m-smart-trainer",
+   "prodsku": "GRMF07B-ONECOL-ONESIZ"
+  },
+  "B0CS3JBP67": {
+   "name": "Shokz OpenSwim Pro",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "shokz-openswim-pro-headphones",
+   "prodsku": "AKZ000I-GRE-ONESIZ"
+  },
+  "B0CT3SGHXL": {
+   "name": "Garmin Forerunner 165",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-165-watch",
+   "prodsku": "GRMF07G-BLASLAGRA-ONESIZ"
+  },
+  "B0CTD71KKG": {
+   "name": "Apple Watch Ultra 2",
+   "status": "none",
+   "source": "Apple Watch, not carried"
+  },
+  "B0CTD9KQTB": {
+   "name": "Top GPS Watch Recommendations",
+   "status": "none",
+   "source": "card name too generic to match one product"
+  },
+  "B0CV8T39HS": {
+   "name": "FORM Smart Swim 2 goggles",
+   "status": "product",
+   "source": "web search",
+   "slug": "form-swim-smart-swim-2-goggles"
+  },
+  "B0CXF1Z4W1": {
+   "name": "13.5W",
+   "status": "product",
+   "source": "web search",
+   "slug": "panaracer-gravelking-ss-tire-tubeless-panb006"
+  },
+  "B0CYJGF2LK": {
+   "name": "Recommended Plyometric Equipment",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0CZPRDRQG": {
+   "name": "",
+   "status": "search",
+   "source": "web search: no V3 page, Polar carried",
+   "query": "Polar Vantage V3"
+  },
+  "B0CZWD1BZW": {
+   "name": "ENVE Compact Drop Carbon Handlebar",
+   "status": "product",
+   "source": "web search",
+   "slug": "enve-compact-road-handlebar"
+  },
+  "B0D2HKCMBP": {
+   "name": "Shokz OpenRun Pro 2",
+   "status": "product",
+   "source": "web search",
+   "slug": "shokz-openrun-pro-2-headphones"
+  },
+  "B0D31V9XXD": {
+   "name": "Saucony Guide 18",
+   "status": "search",
+   "source": "gender unknown, Saucony carried",
+   "query": "Saucony Guide 18"
+  },
+  "B0D3RBYF3S": {
+   "name": "Shimano SH-RC302 road shoes",
+   "status": "search",
+   "source": "web search: gendered pages",
+   "query": "Shimano RC302"
+  },
+  "B0D46314PT": {
+   "name": "8.4W",
+   "status": "product",
+   "source": "web search",
+   "slug": "pirelli-p-zero-race-tlr-tire-pir1wvl"
+  },
+  "B0D4876TX4": {
+   "name": "Hyperice Normatec Elite",
+   "status": "search",
+   "source": "web search: no Elite page, Hyperice carried",
+   "query": "Hyperice Normatec Elite"
+  },
+  "B0D5TC6BLS": {
+   "name": "",
+   "status": "search",
+   "source": "card mixes Karoo 2 / Karoo 3 naming; Hammerhead carried",
+   "query": "Hammerhead Karoo"
+  },
+  "B0D5YKDXDV": {
+   "name": "Alternatives worth considering",
+   "status": "none",
+   "source": "treadmill"
+  },
+  "B0D5YKF4SK": {
+   "name": "Alternatives worth considering",
+   "status": "none",
+   "source": "treadmill, not sold at Backcountry"
+  },
+  "B0D73SC9RJ": {
+   "name": "Stan's NoTubes Race Sealant",
+   "status": "product",
+   "source": "web search",
+   "slug": "stan-s-notubes-race-sealant"
+  },
+  "B0D7XGWMRD": {
+   "name": "Skip if:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0D9WWB3WX": {
+   "name": "Oura Ring 4",
+   "status": "none",
+   "source": "web search miss: Oura Ring 4"
+  },
+  "B0DC6ZD31R": {
+   "name": "",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-fenix-8-amoled-sport-watch",
+   "prodsku": "GRMF07T-SIWHSIBA-S43M"
+  },
+  "B0DD5S66GR": {
+   "name": "Garmin Fenix 8 Sapphire",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-fenix-8-amoled-sapphire-sport-watch",
+   "prodsku": "GRMF07S-CAGRDLTIBLPEGRSIBAA-S47M"
+  },
+  "B0DDDK5SGZ": {
+   "name": "We Are One Union Hand-Built Wheels",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B0DJWMQPCX": {
+   "name": "Saucony Endorphin Speed 5",
+   "status": "search",
+   "source": "gender unknown, Saucony carried",
+   "query": "Saucony Endorphin Speed 5"
+  },
+  "B0DJWNQGKX": {
+   "name": "Saucony Endorphin Pro 4",
+   "status": "search",
+   "source": "site slug is men's, Amazon gender unknown",
+   "query": "Saucony Endorphin Pro 4"
+  },
+  "B0DK33HWZ6": {
+   "name": "Coros Pace Pro",
+   "status": "product",
+   "source": "web search",
+   "slug": "coros-pace-pro-gps-sport-watch"
+  },
+  "B0DNQCPPSN": {
+   "name": "Skip it",
+   "status": "none",
+   "source": "spin bike"
+  },
+  "B0DT1JKGPH": {
+   "name": "Magnesium",
+   "status": "none",
+   "source": "supplement/nutrition"
+  },
+  "B0DTKTYRX2": {
+   "name": "CEP Compression Calf Sleeves",
+   "status": "search",
+   "source": "web search: gendered pages",
+   "query": "CEP compression calf sleeves"
+  },
+  "B0DX8FVG76": {
+   "name": "Tiger Tail The Stick",
+   "status": "search",
+   "source": "web search: no Stick page, Tiger Tail carried",
+   "query": "Tiger Tail The Stick"
+  },
+  "B0DXR1QKCK": {
+   "name": "BioLite Dash 450 running headlamp",
+   "status": "product",
+   "source": "web search",
+   "slug": "biolite-dash-450-rechargeable-headlamp"
+  },
+  "B0DY2SWV16": {
+   "name": "Whoop",
+   "status": "none",
+   "source": "web search miss: WHOOP"
+  },
+  "B0F48MZV54": {
+   "name": "Skip if:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0F4KRCY47": {
+   "name": "Wahoo ELEMNT ROAM V3",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "wahoo-fitness-elemnt-roam-3-gps-cycling-computer",
+   "prodsku": "WHAC02W-BLA-ONESIZ"
+  },
+  "B0F8QWPVNK": {
+   "name": "Garmin Forerunner 970",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-970-watch",
+   "prodsku": "GRMF08I-CAGRDLTIBLBLWHBA-S47M"
+  },
+  "B0F8QZ7233": {
+   "name": "Top GPS Watch Recommendations",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-forerunner-970-watch",
+   "prodsku": "GRMF08I-CAGRDLTIBLBLWHBA-S47M"
+  },
+  "B0F9DW6DW3": {
+   "name": "Hunt 35 Carbon Gravel Disc X-Wide",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B0FCFHQD1P": {
+   "name": "Track Racing Flats / Spikes",
+   "status": "none",
+   "source": "card name too generic to match one product"
+  },
+  "B0FCLYYQKM": {
+   "name": "Favero Assioma Duo power meter pedals",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "favero-assioma-duo-power-meter"
+  },
+  "B0FCXYF2LP": {
+   "name": "Power Meter (Favero / 4iiii)",
+   "status": "none",
+   "source": "card name too generic to match one product"
+  },
+  "B0FDY2HD98": {
+   "name": "Shimano SH-XC302 mountain shoes",
+   "status": "search",
+   "source": "web search: gender unknown",
+   "query": "Shimano XC302"
+  },
+  "B0FH35ZD3Y": {
+   "name": "Thule Epos 3",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "thule-epos-3",
+   "prodsku": "THUZ3LZ-BLASILFRA-S1252IN"
+  },
+  "B0FJLYJRWX": {
+   "name": "Race Face Chester flat pedals",
+   "status": "product",
+   "source": "web search",
+   "slug": "race-face-chester-pedals-rcf003b"
+  },
+  "B0FJNLLP83": {
+   "name": "This is how it's set up at HYROX races.",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0FKCJNHWB": {
+   "name": "Theragun Prime (6th Gen)",
+   "status": "search",
+   "source": "web search: no 6th Gen page, Therabody carried",
+   "query": "Therabody Theragun Prime"
+  },
+  "B0FKQF466Y": {
+   "name": "Cycling Kit & Tri Suit (150-300)",
+   "status": "none",
+   "source": "card name too generic to match one product"
+  },
+  "B0FLCNJ6T4": {
+   "name": "Shimano Ultegra PD-R8000 pedals",
+   "status": "product",
+   "source": "web search",
+   "slug": "shimano-ultegra-pd-r8000-pedals"
+  },
+  "B0FLQDCR7X": {
+   "name": "Wahoo KICKR CORE 2",
+   "status": "product",
+   "source": "site reuse + web search",
+   "slug": "wahoo-fitness-kickr-core-2-power-trainer-with-zwift-cog-and-click",
+   "prodsku": "WHAC034-BLAORA-ONESIZ"
+  },
+  "B0FLQNCDJK": {
+   "name": "Alternatives worth considering",
+   "status": "none",
+   "source": "smart bike"
+  },
+  "B0FLQQ6Q4P": {
+   "name": "Alternatives worth considering",
+   "status": "none",
+   "source": "treadmill"
+  },
+  "B0FN41MGRY": {
+   "name": "OneUp Components Carbon Handlebar",
+   "status": "product",
+   "source": "web search",
+   "slug": "oneup-components-carbon-handlebar"
+  },
+  "B0FQC9PJTT": {
+   "name": "Garmin Rally RS210",
+   "status": "search",
+   "source": "site slug is the older Rally RS dual model; Garmin carried",
+   "query": "Garmin Rally RS210"
+  },
+  "B0FQCHZD7T": {
+   "name": "Garmin Edge 850",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "garmin-edge-850-bike-computer",
+   "prodsku": "GRMF08W-BLA-ONESIZ"
+  },
+  "B0FRNG2N5H": {
+   "name": "Best Adjustable Dumbbells:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0FW1FSG4M": {
+   "name": "WaterRower Lite",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0FXDZ13QB": {
+   "name": "ICAN Alpha 50 Disc Brake Carbon Wheels",
+   "status": "none",
+   "source": "not looked up (search budget) or brand not confirmed"
+  },
+  "B0G4NQHK9X": {
+   "name": "BioLite Range 300 headlamp",
+   "status": "search",
+   "source": "web search: no Range 300 page, BioLite carried",
+   "query": "BioLite Range 300 headlamp"
+  },
+  "B0G82W9ZZK": {
+   "name": "Hyperice Hypervolt Go 3",
+   "status": "product",
+   "source": "web search",
+   "slug": "hyperice-hypervolt-go-3"
+  },
+  "B0GFGD1C1F": {
+   "name": "Giro Agilis MIPS helmet",
+   "status": "product",
+   "source": "web search",
+   "slug": "giro-agilis-mips-helmet"
+  },
+  "B0GGFC2HDR": {
+   "name": "Giro Register MIPS II",
+   "status": "search",
+   "source": "web search: gendered pages",
+   "query": "Giro Register MIPS II"
+  },
+  "B0GH54FT3R": {
+   "name": "Alternatives worth considering",
+   "status": "product",
+   "source": "site reuse",
+   "slug": "thule-vero-2-bike-hitch-rack",
+   "prodsku": "THUZ3Y4-BLA-ONESIZ"
+  },
+  "B0GSBKBRD8": {
+   "name": "Skip if:",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0H3V199W4": {
+   "name": "not used in HYROX competition",
+   "status": "none",
+   "source": "home gym / weights / cardio machines"
+  },
+  "B0H51TZRMM": {
+   "name": "goodr OG polarized sunglasses",
+   "status": "product",
+   "source": "web search",
+   "slug": "goodr-og-polarized-sunglasses"
+  },
+  "B0HGP24KS2": {
+   "name": "Zone 2 Training for Runners and Cyclists by Drew Calloway, book cover",
+   "status": "none",
+   "source": "Zone 2 Training book, Amazon/KDP only"
+  },
+  "B0F6SSBQ1D": {
+   "name": "budget e-bike",
+   "status": "none",
+   "source": "budget e-bike brands (Velotric, Rad Power, Aventon) not carried"
+  },
+  "B0F5PMCGBS": {
+   "name": "budget e-bike",
+   "status": "none",
+   "source": "budget e-bike brands (Velotric, Rad Power, Aventon) not carried"
+  },
+  "B0FJXP3S2T": {
+   "name": "budget e-bike",
+   "status": "none",
+   "source": "budget e-bike brands (Velotric, Rad Power, Aventon) not carried"
+  },
+  "B0GXDMF4HK": {
+   "name": "budget e-bike",
+   "status": "none",
+   "source": "budget e-bike brands (Velotric, Rad Power, Aventon) not carried"
+  }
+ },
+ "lookups_2026_09_11": [
+  {
+   "query": "Balega Hidden Comfort running sock site:backcountry.com",
+   "result": "hit",
+   "detail": "balega-hidden-comfort-lightweight-running-socks"
+  },
+  {
+   "query": "BioLite Dash 450 headlamp site:backcountry.com",
+   "result": "hit",
+   "detail": "biolite-dash-450-rechargeable-headlamp"
+  },
+  {
+   "query": "BioLite Range 300 headlamp site:backcountry.com",
+   "result": "brand-only",
+   "detail": "BioLite Range 400/500 only"
+  },
+  {
+   "query": "Body Glide anti-chafe balm site:backcountry.com",
+   "result": "hit",
+   "detail": "bodyglide-original-anti-chafe-balm"
+  },
+  {
+   "query": "CatEye ViZ450 rear light site:backcountry.com",
+   "result": "brand-only",
+   "detail": "other CatEye lights"
+  },
+  {
+   "query": "CatEye ViZ150 rear light site:backcountry.com",
+   "result": "brand-only",
+   "detail": "other CatEye lights"
+  },
+  {
+   "query": "Chamois Butt'r Original site:backcountry.com",
+   "result": "hit",
+   "detail": "paceline-products-chamois-buttr-creme"
+  },
+  {
+   "query": "COROS PACE Pro GPS watch site:backcountry.com",
+   "result": "hit",
+   "detail": "coros-pace-pro-gps-sport-watch"
+  },
+  {
+   "query": "Crankbrothers M19 multi-tool site:backcountry.com",
+   "result": "hit",
+   "detail": "crank-brothers-multi-19-tool"
+  },
+  {
+   "query": "FINIS Swimmer's Snorkel site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "FINIS Tempo Trainer Pro site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "FORM Smart Swim 2 goggles site:backcountry.com",
+   "result": "hit",
+   "detail": "form-swim-smart-swim-2-goggles"
+  },
+  {
+   "query": "Garmin Edge 840 bike computer site:backcountry.com",
+   "result": "hit",
+   "detail": "garmin-edge-840-computer; bundle: garmin-edge-840-bike-computer-bundle"
+  },
+  {
+   "query": "Garmin Varia RTL515 site:backcountry.com",
+   "result": "hit",
+   "detail": "garmin-varia-rtl515-rearview-radar-with-taillight"
+  },
+  {
+   "query": "Giro Agilis MIPS helmet site:backcountry.com",
+   "result": "hit",
+   "detail": "giro-agilis-mips-helmet"
+  },
+  {
+   "query": "Kryptonite Evolution Mini-5 U-lock site:backcountry.com",
+   "result": "hit",
+   "detail": "kryptonite-evolution-mini-5-u-lock-double-deadbolt"
+  },
+  {
+   "query": "Lezyne Macro Drive 1400+ site:backcountry.com",
+   "result": "hit",
+   "detail": "lezyne-macro-drive-1400-plus-headlight"
+  },
+  {
+   "query": "Lezyne Pocket Drive HP site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Pocket Drive Pro/HV only"
+  },
+  {
+   "query": "Lock Laces site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Muc-Off bike wash drivetrain kit site:backcountry.com",
+   "result": "brand-only",
+   "detail": "two kit variants"
+  },
+  {
+   "query": "Nathan SpeedDraw Plus site:backcountry.com",
+   "result": "hit",
+   "detail": "nathan-speeddraw-plus-insulated-water-bottle-18oz"
+  },
+  {
+   "query": "New Wave Swim Buoy site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Park Tool GP-2 site:backcountry.com",
+   "result": "hit",
+   "detail": "park-tool-pre-glued-super-patch-kit-gp-2c"
+  },
+  {
+   "query": "Park Tool PCS-10.3 site:backcountry.com",
+   "result": "hit",
+   "detail": "park-tool-pcs-10.3-deluxe-home-mechanic-repair-stand"
+  },
+  {
+   "query": "Park Tool TL-1.2 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "TL-1 only"
+  },
+  {
+   "query": "Pearl Izumi Elite Gel glove site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  },
+  {
+   "query": "Polar H9 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "H10 and others only"
+  },
+  {
+   "query": "Profile Design FC35 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "other Profile Design"
+  },
+  {
+   "query": "SPIbelt site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Salomon ADV Skin 12 set site:backcountry.com",
+   "result": "hit",
+   "detail": "salomon-adv-skin-12l-set-hydration-vest"
+  },
+  {
+   "query": "Shimano Ultegra PD-R8000 site:backcountry.com",
+   "result": "hit",
+   "detail": "shimano-ultegra-pd-r8000-pedals"
+  },
+  {
+   "query": "Shokz OpenRun Pro 2 site:backcountry.com",
+   "result": "hit",
+   "detail": "shokz-openrun-pro-2-headphones"
+  },
+  {
+   "query": "Speedo Teamster 35L site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Speedo Vanquisher 2.0 site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Tifosi Swank site:backcountry.com",
+   "result": "hit",
+   "detail": "tifosi-optics-swank-sunglasses"
+  },
+  {
+   "query": "Tiger Tail The Stick site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Tiger Tail T-1000 / The Big One only"
+  },
+  {
+   "query": "Topeak JoeBlow Sport III site:backcountry.com",
+   "result": "hit",
+   "detail": "topeak-joeblow-sport-iii-floor-pump"
+  },
+  {
+   "query": "race number belt triathlon site:backcountry.com",
+   "result": "miss",
+   "detail": "VeloChampion not carried"
+  },
+  {
+   "query": "Wahoo KICKR CLIMB site:backcountry.com",
+   "result": "hit",
+   "detail": "wahoo-fitness-kickr-climb"
+  },
+  {
+   "query": "Zoot Ultra Tri Bag site:backcountry.com",
+   "result": "hit",
+   "detail": "zoot-ultra-tri-bag"
+  },
+  {
+   "query": "goodr OG polarized site:backcountry.com",
+   "result": "hit",
+   "detail": "goodr-og-polarized-sunglasses"
+  },
+  {
+   "query": "CamelBak Podium Chill 24 oz site:backcountry.com",
+   "result": "brand-only",
+   "detail": "slug mismatch (big-chill-25oz / outdoor-24oz)"
+  },
+  {
+   "query": "Hammerhead Karoo site:backcountry.com",
+   "result": "hit",
+   "detail": "hammerhead-karoo-2-gps-bike-computer (Karoo 3 not confirmed)"
+  },
+  {
+   "query": "Garmin fenix 7X Pro Solar site:backcountry.com",
+   "result": "hit",
+   "detail": "garmin-fenix-7x-pro-solar-sport-watch"
+  },
+  {
+   "query": "Polar Vantage V3 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "V2/M2 only"
+  },
+  {
+   "query": "Tacx NEO 2T site:backcountry.com",
+   "result": "hit",
+   "detail": "garmin-tacx-neo-2t-smart"
+  },
+  {
+   "query": "Wahoo POWRLINK Zero dual site:backcountry.com",
+   "result": "hit",
+   "detail": "wahoo-fitness-powrlink-dual-sided-power-meter-pedals"
+  },
+  {
+   "query": "COROS APEX 2 site:backcountry.com",
+   "result": "hit",
+   "detail": "coros-apex-2-gps-outdoor-watch"
+  },
+  {
+   "query": "Suunto Race site:backcountry.com",
+   "result": "hit",
+   "detail": "suunto-race-sport-watch"
+  },
+  {
+   "query": "Garmin Forerunner 55 site:backcountry.com",
+   "result": "hit",
+   "detail": "garmin-forerunner-55-sportwatch"
+  },
+  {
+   "query": "Shimano 105 PD-R7000 site:backcountry.com",
+   "result": "hit",
+   "detail": "shimano-105-pd-r7000-pedals"
+  },
+  {
+   "query": "Shimano RC302 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "men's/women's pages"
+  },
+  {
+   "query": "Shimano XC302 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "men's page only"
+  },
+  {
+   "query": "Smith Signal MIPS site:backcountry.com",
+   "result": "hit",
+   "detail": "smith-signal-mips-helmet"
+  },
+  {
+   "query": "Giro Register MIPS II site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  },
+  {
+   "query": "ABUS Bordo 6000 site:backcountry.com",
+   "result": "hit",
+   "detail": "abus-bordo-combo-6000c-lock"
+  },
+  {
+   "query": "Genuine Innovations AirChuck site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Air Chuck Elite only"
+  },
+  {
+   "query": "Continental Race 28 tube site:backcountry.com",
+   "result": "hit",
+   "detail": "continental-race-tube"
+  },
+  {
+   "query": "Orange Seal Endurance site:backcountry.com",
+   "result": "hit",
+   "detail": "orange-seal-endurance-tubeless-sealant"
+  },
+  {
+   "query": "Stan's NoTubes Race Sealant site:backcountry.com",
+   "result": "hit",
+   "detail": "stan-s-notubes-race-sealant"
+  },
+  {
+   "query": "Zipp 303 Firecrest site:backcountry.com",
+   "result": "brand-only",
+   "detail": "wheel vs wheelset variants"
+  },
+  {
+   "query": "Zipp 303 S site:backcountry.com",
+   "result": "brand-only",
+   "detail": "wheel vs wheelset variants"
+  },
+  {
+   "query": "Zipp SL-70 XPLR site:backcountry.com",
+   "result": "hit",
+   "detail": "zipp-service-course-sl-70-xplr-handlebar"
+  },
+  {
+   "query": "DT Swiss PR 1600 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "other DT Swiss"
+  },
+  {
+   "query": "DT Swiss XM 1700 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "other DT Swiss"
+  },
+  {
+   "query": "ENVE Compact Road handlebar site:backcountry.com",
+   "result": "hit",
+   "detail": "enve-compact-road-handlebar"
+  },
+  {
+   "query": "Reserve 30 SL site:backcountry.com",
+   "result": "brand-only",
+   "detail": "several wheelsets"
+  },
+  {
+   "query": "Race Face Chester site:backcountry.com",
+   "result": "hit",
+   "detail": "race-face-chester-pedals-rcf003b"
+  },
+  {
+   "query": "Selle Royal Respiro site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Athletic/Relaxed variants"
+  },
+  {
+   "query": "Pearl Izumi Quest short site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  },
+  {
+   "query": "CEP compression calf sleeves site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  },
+  {
+   "query": "FlipBelt Zipper site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "Continental GP5000 S TR site:backcountry.com",
+   "result": "hit",
+   "detail": "continental-grand-prix-5000-s-tr-tire-tubeless; clincher: continental-grand-prix-5000-tire-clincher"
+  },
+  {
+   "query": "Vittoria Corsa Pro TLR site:backcountry.com",
+   "result": "hit",
+   "detail": "vittoria-corsa-pro-g2.0-tlr-tire"
+  },
+  {
+   "query": "Pirelli Cinturato Gravel H site:backcountry.com",
+   "result": "hit",
+   "detail": "pirelli-cinturato-gravel-h-tire-tubeless"
+  },
+  {
+   "query": "Pirelli P Zero Race site:backcountry.com",
+   "result": "hit",
+   "detail": "pirelli-p-zero-race-tlr-tire-pir1wvl"
+  },
+  {
+   "query": "Finish Line Dry lube site:backcountry.com",
+   "result": "brand-only",
+   "detail": "wet lube: finish-line-wet-lube-fin0005"
+  },
+  {
+   "query": "Oura Ring 4 site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "WHOOP site:backcountry.com",
+   "result": "miss",
+   "detail": ""
+  },
+  {
+   "query": "OneUp carbon handlebar site:backcountry.com",
+   "result": "hit",
+   "detail": "oneup-components-carbon-handlebar"
+  },
+  {
+   "query": "Brooks Ghost 16 site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  },
+  {
+   "query": "Hyperice Normatec Hypervolt site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Hyperice carried"
+  },
+  {
+   "query": "Therabody Theragun site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Therabody carried"
+  },
+  {
+   "query": "Hyperice Normatec Elite site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Elite not listed"
+  },
+  {
+   "query": "Hyperice Hypervolt Go 3 site:backcountry.com",
+   "result": "hit",
+   "detail": "hyperice-hypervolt-go-3"
+  },
+  {
+   "query": "Theragun Prime 6th Gen site:backcountry.com",
+   "result": "brand-only",
+   "detail": "Prime Plus only"
+  },
+  {
+   "query": "Panaracer GravelKing SS+ site:backcountry.com",
+   "result": "hit",
+   "detail": "panaracer-gravelking-ss-tire-tubeless-panb006"
+  },
+  {
+   "query": "XTERRA Vortex wetsuit site:backcountry.com",
+   "result": "brand-only",
+   "detail": "gendered pages"
+  }
+ ]
+}
