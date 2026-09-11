@@ -51,9 +51,9 @@ const productDatabase = {
         },
         midRange: {
             name: 'Garmin Forerunner 265',
-            asin: 'B0DVMWYCHD',
-            image: 'https://m.media-amazon.com/images/I/51qrOvMYPOL._SL500_.jpg',
-            price: '~$379',
+            asin: 'B0DVQG71MF',
+            image: 'https://m.media-amazon.com/images/I/41rdFPDWwVL._SL500_.jpg',
+            price: '~$300',
             description: 'AMOLED display with training readiness, HRV status, and VO2 max estimation.'
         },
         budget: {
@@ -65,8 +65,8 @@ const productDatabase = {
         },
         beginner: {
             name: 'Garmin Forerunner 55',
-            asin: 'B092RCLKHN',
-            image: 'https://m.media-amazon.com/images/I/31Ra93nqGTS._SL500_.jpg',
+            asin: 'B0953X73TP',
+            image: 'https://m.media-amazon.com/images/I/31Wyl7SggHL._SL500_.jpg',
             price: '~$129',
             description: 'Entry-level GPS watch with daily suggested workouts and a recovery time advisor.'
         }

@@ -198,14 +198,14 @@
     },
     {
       "id": "horizon-7.0at",
-      "name": "Horizon 7.0 AT Treadmill",
-      "brand": "Horizon",
+      "name": "ProForm Carbon TLX Treadmill",
+      "brand": "ProForm",
       "tier": "mid",
-      "price": 935,
-      "priceDisplay": "$935",
-      "amazonUrl": "https://www.amazon.com/dp/B0DJ3N5SY9?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
-      "imageUrl": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL500_.jpg",
-      "imageMedium": "https://m.media-amazon.com/images/I/314wh+sUlyL._SL160_.jpg",
+      "price": 999,
+      "priceDisplay": "$999",
+      "amazonUrl": "https://www.amazon.com/dp/B0C6DTYQ3G?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31kq3r4+jKL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31kq3r4+jKL._SL160_.jpg",
       "scores": {
         "goal_walk": 7,
         "goal_jog": 8,
@@ -230,15 +230,15 @@
         "space_large": 8
       },
       "specs": {
-        "speed": "0.5-12 mph",
-        "incline": "0-15%",
-        "deck": "60\" x 20\"",
-        "motor": "3.0 HP",
+        "speed": "0-12 mph",
+        "incline": "0-12%",
+        "deck": "See listing",
+        "motor": "See listing",
         "folding": true,
-        "maxWeight": "325 lb"
+        "maxWeight": "See listing"
       },
       "verdict": {
-        "bestFor": "HIIT-friendly with rapid speed changes"
+        "bestFor": "Folding treadmill with 12% incline and iFIT auto-adjust workouts"
       },
       "pairsWith": [
         "tread-mat",
@@ -547,14 +547,14 @@
     },
     {
       "id": "horizon-studio",
-      "name": "Horizon 7.4 AT Studio Treadmill",
-      "brand": "Horizon",
+      "name": "NordicTrack Commercial 1250 Treadmill",
+      "brand": "NordicTrack",
       "tier": "mid",
-      "price": 1300,
-      "priceDisplay": "$1,300",
-      "amazonUrl": "https://www.amazon.com/dp/B08JQQHR7R?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
-      "imageUrl": "https://m.media-amazon.com/images/I/41wMaZFsNwL._SL500_.jpg",
-      "imageMedium": "https://m.media-amazon.com/images/I/41wMaZFsNwL._SL160_.jpg",
+      "price": 1599,
+      "priceDisplay": "$1,599",
+      "amazonUrl": "https://www.amazon.com/dp/B0D5YJ4YW4?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/31Hhl3ePz5L._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/31Hhl3ePz5L._SL160_.jpg",
       "scores": {
         "goal_walk": 7,
         "goal_jog": 8,
@@ -579,15 +579,15 @@
         "space_large": 8
       },
       "specs": {
-        "speed": "0.5-12 mph",
-        "incline": "0-15%",
-        "deck": "60\" x 20\"",
-        "motor": "3.5 HP",
+        "speed": "0-12 mph",
+        "incline": "-3% decline to 12% incline",
+        "deck": "See listing",
+        "motor": "See listing",
         "folding": true,
-        "maxWeight": "350 lb"
+        "maxWeight": "See listing"
       },
       "verdict": {
-        "bestFor": "Fastest speed change dials for sprint intervals"
+        "bestFor": "Incline and decline training with a 10\" tilting touchscreen"
       },
       "pairsWith": [
         "tread-mat",

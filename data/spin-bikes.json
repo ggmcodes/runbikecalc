@@ -194,14 +194,14 @@
     },
     {
       "id": "sunny-evolution-pro",
-      "name": "Sunny Evolution Pro Magnetic Bike",
+      "name": "Sunny Evolution Pro II Magnetic Bike",
       "brand": "Sunny Health",
       "tier": "mid",
       "price": 700,
       "priceDisplay": "$700",
-      "amazonUrl": "https://www.amazon.com/dp/B078F12DPL?tag=runbikecalc-20",
-      "imageUrl": "https://m.media-amazon.com/images/I/41ejop82HsL._SL500_.jpg",
-      "imageMedium": "https://m.media-amazon.com/images/I/41ejop82HsL._SL160_.jpg",
+      "amazonUrl": "https://www.amazon.com/dp/B0876W8BLC?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41vRMED3QKL._SL500_.jpg",
+      "imageMedium": "https://m.media-amazon.com/images/I/41vRMED3QKL._SL160_.jpg",
       "scores": {
         "goal_weight_loss": 8,
         "goal_general_fitness": 8,
@@ -225,14 +225,14 @@
       },
       "specs": {
         "resistance": "Magnetic",
-        "flywheel": "44 lb",
-        "display": "None (bring your own device)",
-        "maxWeight": "330 lb",
-        "warranty": "3 years frame"
+        "flywheel": "40 lb",
+        "display": "Performance monitor (speed, cadence, distance)",
+        "maxWeight": "See listing",
+        "warranty": "See listing"
       },
       "verdict": {
         "skipPeloton": "YES",
-        "bestFor": "Heavy 44 lb flywheel, gym-style ride"
+        "bestFor": "40 lb flywheel, gym-style ride"
       },
       "pairsWith": [
         "cadence-sensor",

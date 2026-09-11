@@ -134,14 +134,14 @@
     },
     {
       "id": "avasta-hybrid-21spd",
-      "name": "AVASTA 700C Hybrid 21-Speed",
-      "brand": "AVASTA",
+      "name": "Schwinn Discover 2 Hybrid 21-Speed",
+      "brand": "Schwinn",
       "tier": "hybrid",
       "type": "Comfort Hybrid",
-      "price": 290,
-      "priceDisplay": "$290",
-      "amazonUrl": "https://www.amazon.com/dp/B0DLKNBR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
-      "affiliateUrl": "https://www.amazon.com/dp/B0DLKNBR7X?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "price": 368,
+      "priceDisplay": "$368",
+      "amazonUrl": "https://www.amazon.com/dp/B08PXJPVGW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B08PXJPVGW?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 7,
         "use_cruise": 6,
@@ -164,17 +164,17 @@
         "pri_speed": 6
       },
       "specs": {
-        "frame": "Aluminum hybrid",
-        "speeds": "21-speed Shimano EF500",
-        "brakes": "Dual disc brakes",
+        "frame": "Alloy hybrid, suspension fork",
+        "speeds": "21-speed EZ-Fire shifters",
+        "brakes": "Front and rear linear pull",
         "best": "Hilly & mixed terrain",
-        "weight": "Lightweight aluminum"
+        "weight": "Lightweight alloy"
       },
       "verdict": {
         "bestFor": "Fitness riders tackling hills and longer mixed routes",
-        "fit": "5'4\"–6'3\""
+        "fit": "5'5\"–6'0\""
       },
-      "image": "https://m.media-amazon.com/images/I/410YaGMITML._SL500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/51jLHmHJCAL._SL500_.jpg"
     },
     {
       "id": "tommaso-siena-gravel",
@@ -310,14 +310,14 @@
     },
     {
       "id": "wooken-cruiser-ebike",
-      "name": "Wooken City Cruiser E-Bike",
-      "brand": "Wooken",
+      "name": "Heybike Cityscape 2.0 Step-Thru E-Bike",
+      "brand": "Heybike",
       "tier": "ebike",
-      "type": "Class 2 Cruiser E-Bike",
-      "price": 630,
-      "priceDisplay": "$630",
-      "amazonUrl": "https://www.amazon.com/dp/B0DPYNVZ77?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
-      "affiliateUrl": "https://www.amazon.com/dp/B0DPYNVZ77?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "type": "Step-Thru Commuter E-Bike",
+      "price": 700,
+      "priceDisplay": "$700",
+      "amazonUrl": "https://www.amazon.com/dp/B0FWCMLPD5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
+      "affiliateUrl": "https://www.amazon.com/dp/B0FWCMLPD5?tag=runbikecalc-20&linkCode=osi&th=1&psc=1",
       "scores": {
         "use_commute": 6,
         "use_cruise": 10,
@@ -340,17 +340,17 @@
         "pri_speed": 6
       },
       "specs": {
-        "frame": "Step-thru alloy",
-        "speeds": "Pedal-assist + throttle",
-        "brakes": "Mechanical disc",
-        "best": "Easy cruising, ~50 mi range",
-        "weight": "749W motor"
+        "frame": "Step-thru, front suspension",
+        "speeds": "7-speed, pedal-assist + throttle",
+        "brakes": "Dual disc",
+        "best": "Commuting, up to 50 mi range",
+        "weight": "500W motor (1200W peak)"
       },
       "verdict": {
-        "bestFor": "Cruiser fans who want effortless, upright e-assisted rides",
-        "fit": "5'3\"–6'2\""
+        "bestFor": "Riders who want an easy step-thru e-bike for upright commuting",
+        "fit": "See listing"
       },
-      "image": "https://m.media-amazon.com/images/I/51mHplbqZ5L._SL500_.jpg"
+      "image": "https://m.media-amazon.com/images/I/51pC8ClltmL._SL500_.jpg"
     },
     {
       "id": "engwe-ep2-ebike",

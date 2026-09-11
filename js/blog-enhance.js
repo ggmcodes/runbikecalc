@@ -105,7 +105,7 @@
         ];
     } else if (body.indexOf('running shoe') !== -1 || body.indexOf('marathon') !== -1 || body.indexOf('running form') !== -1) {
         blogProducts = [
-            { name: 'Garmin Forerunner 265', asin: 'B0DVMWYCHD', image: 'https://m.media-amazon.com/images/I/51qrOvMYPOL._SL500_.jpg', price: '~$379', desc: 'AMOLED GPS watch with training readiness and HRV status.' },
+            { name: 'Garmin Forerunner 265', asin: 'B0DVQG71MF', image: 'https://m.media-amazon.com/images/I/41rdFPDWwVL._SL500_.jpg', price: '~$300', desc: 'AMOLED GPS watch with training readiness and HRV status.' },
             { name: 'Nike Vaporfly 3', asin: 'B0DJGBQT45', image: 'https://m.media-amazon.com/images/I/31LeuoQnEXL._SL500_.jpg', price: '~$155', desc: 'Carbon-plated racing shoe for 5K to marathon distances.' },
             { name: 'Shokz OpenRun Pro 2', asin: 'B0D2HKCMBP', image: 'https://m.media-amazon.com/images/I/219Zog3I5TL._SL500_.jpg', price: '~$179', desc: 'Open-ear headphones that leave surroundings audible while running.' }
         ];
