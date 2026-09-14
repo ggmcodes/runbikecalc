@@ -520,5 +520,9 @@ class CyclingPlanGenerator extends TrainingPlanGenerator {
 }
 
 // Export for use
+
+/* Legacy option aliases: old form values and shared plan links must keep working. */
+CyclingDistanceConfigs.metric = CyclingDistanceConfigs['62mi'];
+CyclingDistanceConfigs.century = CyclingDistanceConfigs['100mi'];
 window.CyclingPlanGenerator = CyclingPlanGenerator;
 window.CyclingDistanceConfigs = CyclingDistanceConfigs;

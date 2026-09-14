@@ -772,6 +772,9 @@ class HyroxPlanGenerator extends TrainingPlanGenerator {
 }
 
 // Export for use
+
+/* Legacy option aliases: old form values and shared plan links must keep working. */
+HyroxDistanceConfigs.first = HyroxDistanceConfigs['first-timer'];
 window.HyroxPlanGenerator = HyroxPlanGenerator;
 window.HyroxDistanceConfigs = HyroxDistanceConfigs;
 window.HyroxWorkoutTypes = HyroxWorkoutTypes;
