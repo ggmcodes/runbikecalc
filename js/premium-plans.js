@@ -296,7 +296,7 @@
 
         const summaryItems = [
             { label: 'Weeks', value: plan.summary?.totalWeeks || plan.weeks?.length || '-' },
-            { label: 'Peak Volume', value: (plan.summary?.peakVolume || '-') + ' mi' },
+            { label: 'Peak Volume', value: (plan.summary?.peakVolume || '-') + (plan.inputs?.sport === 'running' ? ' mi' : ' hrs') },
             { label: 'Recovery Weeks', value: plan.summary?.recoveryWeeks || '-' },
             { label: 'Level', value: capitalizeFirst(plan.inputs?.fitnessLevel || plan.inputs?.experienceLevel || '-') }
         ];
