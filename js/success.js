@@ -1,7 +1,8 @@
 /**
- * Legacy premium success page ($5 flow, retired 2026-09-14).
- * Still unlocks premium for anyone who bought at $5; the stale value-5
- * purchase event was removed so it cannot pollute revenue reporting.
+ * Legacy premium success page (the retired $5 flow).
+ * Still unlocks premium for anyone who bought at $5. The stale value-5
+ * purchase event was removed so it cannot distort revenue reporting
+ * beside the $12 flow, which reports from /premium-unlocked.
  * Premium Success Page Handler
  * Unlocks premium features and redirects to premium training plans page
  */
@@ -47,8 +48,6 @@
     // Track conversion for analytics
     function trackConversion() {
         // Google Analytics event
-);
-        }
     }
 
     // Show fallback message if localStorage fails
