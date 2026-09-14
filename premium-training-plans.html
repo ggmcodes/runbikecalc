@@ -14,13 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Free Training Plans: Running, Cycling, Triathlon &amp; Hyrox (PDF + Calendar)</title>
+    <title>Training Plans: Running, Cycling, Triathlon &amp; Hyrox (Free Plans + Calendar Export)</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Free Training Plans: Running, Cycling, Triathlon &amp; Hyrox (PDF + Calendar)",
-  "description": "Free personalized training plans. Calendar (.ics) export with no signup. PDF and spreadsheet exports free with email. Marathon, 10K, cycling FTP, triathlon, and Hyrox plans.",
+  "headline": "Training Plans: Running, Cycling, Triathlon &amp; Hyrox (Free Plans + Calendar Export)",
+  "description": "Free personalized training plans for running, cycling, triathlon and Hyrox. Calendar (.ics) export is free with no signup. PDF, Excel/CSV, saved plans and share links are part of Premium, a $12 one-time unlock.",
   "image": "https://runbikecalc.com/images/og-default.jpg",
   "datePublished": "2025-01-01",
   "dateModified": "2026-04-26",
@@ -44,7 +44,7 @@
 }
 </script>
     <link rel="canonical" href="https://runbikecalc.com/premium-training-plans">
-    <meta name="description" content="Free personalized training plans. Calendar (.ics) export with no signup. PDF and spreadsheet exports free with email. Marathon, 10K, cycling FTP, triathlon, and Hyrox plans.">
+    <meta name="description" content="Free personalized training plans for running, cycling, triathlon and Hyrox. Calendar (.ics) export is free with no signup. PDF, Excel/CSV, saved plans and share links are part of Premium, a $12 one-time unlock.">
 
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
     <meta name="theme-color" content="#C67B4E">
@@ -85,35 +85,15 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Premium Training Plans",
-      "description": "Custom running, cycling & triathlon training plans with PDF export, calendar sync & advanced periodization",
+      "description": "A $12 one-time unlock for RunBikeCalc training plans: save up to 5 plans, PDF export, Excel/CSV export and shareable plan links.",
       "image": "https://runbikecalc.com/images/premium-training-plans-og.jpg",
       "brand": {
         "@type": "Brand",
         "name": "RunBikeCalc"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Sarah M."
-        },
-        "reviewBody": "The marathon training plan was exactly what I needed. PDF export and calendar sync made it so easy to follow. Best free training resource I've used."
-      },
       "offers": {
         "@type": "Offer",
-        "price": "0",
+        "price": "12",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "url": "https://runbikecalc.com/premium-training-plans",
@@ -330,9 +310,8 @@
         .premium-unlocked .export-lock-overlay {
             display: none;
         }
-        /* Export button grid only appears once unlocked; overlay carries the locked-state CTA */
-        .export-buttons { display: none; }
-        .premium-unlocked .export-buttons { display: block; }
+        /* Export buttons are always visible; gated ones show an upsell on click */
+        .export-buttons { display: block; }
         .export-lock-overlay { margin-top: 0.5rem; }
 
         /* Export buttons */
@@ -373,7 +352,15 @@
       "name": "What do I get with Premium?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PDF and calendar exports of your custom training plans, advanced periodization options, tapering protocols, and race-specific workouts."
+        "text": "Premium is a $12 one-time unlock. It adds saved plans (up to 5), PDF export, Excel/CSV export and shareable plan links. Generating training plans for running, cycling, triathlon and Hyrox stays free, and so does calendar (.ics) export."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay $12 once through the checkout button on the training plans page. After payment you land on a confirmation page that switches Premium on in your browser, and saved plans, PDF export, Excel/CSV export and shareable links unlock right away."
       }
     },
     {
@@ -381,7 +368,7 @@
       "name": "Is this a subscription?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "All export features are free. Calendar (.ics) requires no signup. PDF and spreadsheet exports unlock with a free Endure Weekly newsletter signup."
+        "text": "No. Premium is a single $12 payment, not a subscription, so there is nothing to cancel."
       }
     },
     {
@@ -389,7 +376,7 @@
       "name": "Can I use it on mobile?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Premium works on all devices. Export your plans to PDF or sync directly to your calendar."
+        "text": "Yes. Plans generate and export on any device. Your Premium unlock is stored in the browser you bought it in, so open the confirmation page again on another device or browser to switch it on there."
       }
     }
   ]
@@ -425,8 +412,8 @@
 
                 <!-- CTA + Mobile -->
                 <div class="flex items-center gap-4">
-                    <a href="#export-section" class="unlock-cta hidden md:inline-flex bg-copper text-white px-6 py-3 text-sm font-medium tracking-wide hover:bg-copper-dark transition-colors">
-                        Free Exports
+                    <a href="https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12" target="_blank" rel="noopener" data-buy-premium="nav" class="unlock-cta hidden md:inline-flex bg-copper text-white px-6 py-3 text-sm font-medium tracking-wide hover:bg-copper-dark transition-colors">
+                        Premium $12
                     </a>
                     <button id="mobile-menu-btn" class="lg:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -447,8 +434,8 @@
                 <a href="/recovery" class="text-sm font-medium text-charcoal/70">Recovery</a>
                 
                 <a href="/blog" class="text-sm font-medium text-charcoal/70">Journal</a>
-                <a href="#export-section" class="unlock-cta bg-copper text-white px-4 py-2 text-sm font-medium text-center">
-                    Free Exports
+                <a href="https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12" target="_blank" rel="noopener" data-buy-premium="nav_mobile" class="unlock-cta bg-copper text-white px-4 py-2 text-sm font-medium text-center">
+                    Premium $12
                 </a>
             </div>
         </div>
@@ -464,7 +451,7 @@
                     Training Plans
                 </h1>
                 <p class="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-6">
-                    Professional periodized plans for Running, Cycling, Triathlon & Hyrox. Export to your calendar, download as PDF, or save for later.
+                    Professional periodized plans for Running, Cycling, Triathlon and Hyrox. Build your plan and export it to your calendar for free.
                 </p>
                 <div class="section-divider mx-auto"></div>
             </div>
@@ -874,25 +861,25 @@
 
                         <!-- Export Actions Section -->
                         <div class="relative">
-                            <!-- Free + email-gated overlay (calendar always free; PDF/Excel email-gated) -->
-                            <div class="export-lock-overlay bg-cream-dark border border-charcoal/5 flex flex-col items-center justify-center rounded-sm" style="padding:2rem 1.5rem;">
-                                <div class="text-center" style="max-width:440px;">
-                                    <div style="font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.75rem;">All Exports — Free</div>
-                                    <h3 class="font-display text-2xl text-charcoal mb-2">Export your plan</h3>
+                            <!-- Calendar export is free for everyone; PDF/Excel/save/share are premium -->
+                            <div class="export-lock-overlay bg-cream-dark border border-charcoal/5 flex flex-col items-center justify-center rounded-sm" style="padding:1.75rem 1.5rem;">
+                                <div class="text-center" style="max-width:480px;">
+                                    <div style="font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.75rem;">Export your plan</div>
+                                    <h3 class="font-display text-2xl text-charcoal mb-2">Calendar export is free</h3>
                                     <p class="text-charcoal/80 text-sm" style="line-height:1.55;margin-bottom:1rem;">
-                                      <strong>Calendar (.ics) export is completely free with no signup.</strong> PDF and spreadsheet exports are available with a free email signup to <em>Endure Weekly</em> — one weekly read for runners, cyclists, triathletes, and Hyrox athletes.
+                                      <strong>Calendar (.ics) export is free for everyone, with no signup.</strong> PDF, Excel/CSV, saved plans and shareable links are part of Premium, a $12 one-time unlock.
                                     </p>
                                     <button id="overlay-export-calendar"
                                        class="inline-block bg-charcoal text-white px-6 py-3 font-medium tracking-wide hover:bg-charcoal/90 transition-colors w-full sm:w-auto"
                                        style="margin-bottom:0.75rem;">
                                         Export to Calendar (free, no signup)
                                     </button>
-                                    <div style="font-size:0.85rem;color:#666;margin:0.5rem 0 0.75rem;">— or —</div>
-                                    <button id="overlay-export-pdf"
+                                    <div style="font-size:0.85rem;color:#666;margin:0.5rem 0 0.75rem;">or</div>
+                                    <a href="https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12" target="_blank" rel="noopener" data-buy-premium="results_overlay"
                                        class="inline-block bg-copper text-white px-6 py-3 font-medium tracking-wide hover:bg-copper-dark transition-colors w-full sm:w-auto">
-                                        Get PDF + Spreadsheet (free, with email)
-                                    </button>
-                                    <p style="font-size:0.75rem;color:#888;margin-top:1rem;font-style:italic;">No spam. Unsubscribe in one click.</p>
+                                        Unlock Premium for $12
+                                    </a>
+                                    <p style="font-size:0.75rem;color:#888;margin-top:1rem;font-style:italic;">One-time payment, no subscription.</p>
                                 </div>
                             </div>
                             <script>
@@ -900,14 +887,11 @@
                                 document.getElementById('overlay-export-calendar')?.addEventListener('click', function(){
                                   document.getElementById('export-calendar')?.click();
                                 });
-                                document.getElementById('overlay-export-pdf')?.addEventListener('click', function(){
-                                  document.getElementById('export-pdf')?.click();
-                                });
                               });
                             </script>
 
                             <!-- Export Buttons (shown only when unlocked) -->
-                            <div class="locked-feature export-buttons">
+                            <div class="export-buttons">
                                 <div class="grid sm:grid-cols-3 gap-3 mb-4">
                                     <button id="export-calendar" class="export-btn flex items-center justify-center gap-2 px-4 py-3 bg-copper text-white font-medium hover:bg-copper-dark transition-colors">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -959,64 +943,77 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                                 </svg>
                             </div>
-                            <h3 class="font-display text-xl text-charcoal mb-2">All Exports — Free</h3>
-                            <p class="text-warm-gray text-sm mb-4">Calendar export needs no signup. PDF + Spreadsheet unlock with a free email.</p>
+                            <h3 class="font-display text-xl text-charcoal mb-2">Free and Premium</h3>
+                            <p class="text-warm-gray text-sm mb-6">Build a plan and put it in your calendar for free. Premium adds saving, PDF, spreadsheets and share links.</p>
 
-                            <div class="mb-6">
-                                <span class="font-display text-4xl text-charcoal">$0</span>
-                                <span class="text-emerald-600 text-sm font-semibold ml-1">Always free</span>
+                            <div class="border border-charcoal/10 rounded-sm p-4 mb-4 text-left">
+                                <div class="flex items-baseline justify-between mb-3">
+                                    <span class="font-display text-lg text-charcoal">Free</span>
+                                    <span class="font-display text-2xl text-charcoal">$0</span>
+                                </div>
+                                <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
+                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span>Training plans for all 4 sports: Run, Bike, Tri, Hyrox</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
+                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span><strong>Calendar Export (.ics)</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
+                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span>No signup required</span>
+                                </li>
+                                </ul>
                             </div>
 
-                            <ul class="text-left space-y-3 mb-6">
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
-                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span><strong>Calendar Export (.ics)</strong> — no signup required</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
-                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span>PDF Download — free with email</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
-                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span>Excel/CSV Export — free with email</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
+                            <div class="border border-copper rounded-sm p-4 mb-5 text-left">
+                                <div class="flex items-baseline justify-between mb-1">
+                                    <span class="font-display text-lg text-charcoal">Premium</span>
+                                    <span>
+                                        <span class="font-display text-2xl text-charcoal">$12</span>
+                                        <span class="text-warm-gray text-xs ml-1">one-time</span>
+                                    </span>
+                                </div>
+                                <p class="text-warm-gray text-xs mb-3">Everything in Free, plus:</p>
+                                <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
                                     <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                     </svg>
                                     <span>Save Up to 5 Plans</span>
                                 </li>
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
+                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span>PDF Download</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
+                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span>Excel/CSV Export</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-charcoal/80 text-sm">
                                     <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                     </svg>
                                     <span>Shareable Plan Links</span>
                                 </li>
-                                <li class="flex items-center gap-3 text-charcoal/80 text-sm">
-                                    <svg class="w-4 h-4 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span>All 4 Sports — Run, Bike, Tri, Hyrox</span>
-                                </li>
-                            </ul>
+                                </ul>
+                            </div>
 
-                            <button id="sidebar-export-pdf"
+                            <a href="https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12" target="_blank" rel="noopener" data-buy-premium="sidebar"
                                class="block w-full py-4 bg-copper text-white font-medium tracking-wide hover:bg-copper-dark transition-colors text-center">
-                                Get Free Exports — Endure Weekly
-                            </button>
-                            <script>
-                              document.addEventListener('DOMContentLoaded', function(){
-                                document.getElementById('sidebar-export-pdf')?.addEventListener('click', function(){
-                                  document.getElementById('export-pdf')?.click();
-                                });
-                              });
-                            </script>
+                                Unlock Premium for $12
+                            </a>
 
                             <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;margin-top:1rem;">
                               <div style="display:flex;align-items:center;gap:0.5rem;color:#059669;font-size:0.875rem;font-weight:600;">
@@ -1024,7 +1021,7 @@
                                 Calendar export always free, no email needed
                               </div>
                               <div style="display:flex;align-items:center;gap:0.375rem;color:#94a3b8;font-size:0.75rem;">
-                                One-click unsubscribe from Endure Weekly
+                                One-time payment, no subscription
                               </div>
                             </div>
                         </div>
@@ -1177,21 +1174,32 @@
                         What do I get with Premium?
                         <svg class="w-5 h-5 text-warm-gray group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
-                    <p class="text-warm-gray mt-3">PDF and calendar exports of your custom training plans, advanced periodization options, tapering protocols, and race-specific workouts.</p>
+                    <p class="text-warm-gray mt-3">Premium is a $12 one-time unlock. It adds saved plans (up to 5), PDF export, Excel/CSV export and shareable plan links. Generating training plans stays free, and so does calendar (.ics) export.</p>
                 </details>
                 <details class="bg-white rounded-xl border border-charcoal/10 p-5 group">
                     <summary class="font-semibold text-charcoal cursor-pointer flex justify-between items-center">
                         Is this a subscription?
                         <svg class="w-5 h-5 text-warm-gray group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
-                    <p class="text-warm-gray mt-3">All export features are free. Calendar (.ics) requires no signup. PDF and spreadsheet exports unlock with a free Endure Weekly newsletter signup.</p>
+                    <p class="text-warm-gray mt-3">No. Premium is a single $12 payment, not a subscription, so there is nothing to cancel.</p>
                 </details>
                 <details class="bg-white rounded-xl border border-charcoal/10 p-5 group">
                     <summary class="font-semibold text-charcoal cursor-pointer flex justify-between items-center">
                         Can I use it on mobile?
                         <svg class="w-5 h-5 text-warm-gray group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
-                    <p class="text-warm-gray mt-3">Yes. Premium works on all devices. Export your plans to PDF or sync directly to your calendar.</p>
+                    <p class="text-warm-gray mt-3">Yes. Plans generate and export on any device. Your Premium unlock is stored in the browser you bought it in, so open the confirmation page again on another device or browser to switch it on there.</p>
+                </details>
+                <details class="bg-white rounded-xl border border-charcoal/10 p-5 group">
+                    <summary class="font-semibold text-charcoal cursor-pointer flex justify-between items-center">
+                        How do I get Premium?
+                        <svg class="w-5 h-5 text-warm-gray group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="text-warm-gray mt-3">Pay $12 once through the button below. After payment you land on a confirmation page that switches Premium on in your browser, and saved plans, PDF export, Excel/CSV export and shareable links unlock right away.</p>
+                    <a href="https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12" target="_blank" rel="noopener" data-buy-premium="faq"
+                       class="inline-block mt-4 bg-copper text-white px-6 py-3 font-medium tracking-wide hover:bg-copper-dark transition-colors">
+                        Unlock Premium for $12
+                    </a>
                 </details>
             </div>
         </div>
@@ -1228,6 +1236,21 @@
     <!-- Premium Plans Logic -->
     <script src="js/premium-plans.js"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('[data-buy-premium]').forEach(function(el){
+      el.addEventListener('click', function(){
+        if (typeof gtag !== 'function') return;
+        gtag('event', 'begin_checkout', {
+          currency: 'USD',
+          value: 12,
+          placement: el.getAttribute('data-buy-premium') || 'page',
+          items: [{ item_id: 'runbikecalc_premium', item_name: 'RunBikeCalc Premium', price: 12, quantity: 1 }]
+        });
+      });
+    });
+  });
+</script>
+<script>
 window.POPUP_CONFIG = {
   headline: "Free Zone 2 Training Guide",
   product: "Endure Weekly",
@@ -1243,7 +1266,7 @@ window.POPUP_CONFIG = {
 </script>
 <script src="/js/conversion-popup.js"></script>
 <script src="/js/endure-weekly.js" defer></script>
-<script>window.INLINE_CTA_CONFIG={badge:'Free',headline:'Export your training plan \u2014 free',body:'Calendar (.ics) export is completely free with no signup. PDF and spreadsheet exports are available with a free email signup to Endure Weekly.',ctaText:'Get Free Exports',ctaUrl:'/premium-training-plans',secondaryText:'See export options',secondaryUrl:'/premium-training-plans',accentColor:'#7C2D3A',bgFrom:'#FAF8F5',bgTo:'#ffffff',borderColor:'rgba(124,45,58,0.18)',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
+<script>window.INLINE_CTA_CONFIG={badge:'Training Plans',headline:'Export your training plan',body:'Calendar (.ics) export is free for everyone, no signup needed. PDF, Excel/CSV, saved plans and share links are part of Premium, a $12 one-time unlock.',ctaText:'Build a free plan',ctaUrl:'/premium-training-plans',secondaryText:'Unlock Premium for $12',secondaryUrl:'https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12',accentColor:'#7C2D3A',bgFrom:'#FAF8F5',bgTo:'#ffffff',borderColor:'rgba(124,45,58,0.18)',excludePaths:['/premium','/success','/about','/contact','/privacy','/terms']};</script>
 <script src="/js/inline-cta.js"></script>
 <script src="/js/speculation-rules.js" defer></script>
 <script src="/js/affiliate-click-tracker.js" defer></script>

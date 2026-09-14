@@ -16,7 +16,8 @@
             currentPlan: 'runbikecalc_current_plan'
         },
         MAX_SAVED_PLANS: 5,
-        ENDURE_WEEKLY_MAGIC: 'https://magic.beehiiv.com/v1/89554d0d-f1fb-44f3-9bb0-5a991540103b'
+        PREMIUM_PRICE: 12,
+        PAYMENT_LINK: 'https://buy.stripe.com/dRm7sMenQ5zB1rtcKI2cg12'
     };
 
     // ==================== State ====================
@@ -458,7 +459,7 @@
     // ==================== Export Functions ====================
 
     function initExportButtons() {
-        // Calendar export — completely free, no signup required
+        // Calendar export - free for everyone, no signup, never gated
         document.getElementById('export-calendar')?.addEventListener('click', () => {
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
@@ -470,149 +471,140 @@
             }
         });
 
-        // PDF export — gated behind free email signup
+        // PDF export - premium ($12 one-time)
         document.getElementById('export-pdf')?.addEventListener('click', () => {
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
                 return;
             }
             if (!state.isPremium) {
-                openEmailGate('pdf', () => TrainingPlanExporter.exportPDF(state.currentPlan));
+                showUpsell('pdf');
                 return;
             }
             TrainingPlanExporter.exportPDF(state.currentPlan);
         });
 
-        // Excel/CSV export — gated behind free email signup
+        // Excel/CSV export - premium ($12 one-time)
         document.getElementById('export-excel')?.addEventListener('click', () => {
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
                 return;
             }
             if (!state.isPremium) {
-                openEmailGate('spreadsheet', () => TrainingPlanExporter.exportCSV(state.currentPlan));
+                showUpsell('spreadsheet');
                 return;
             }
             TrainingPlanExporter.exportCSV(state.currentPlan);
         });
     }
 
-    function openEmailGate(format, onUnlock) {
-        // Existing email-gate.js handles the modal — fall back to inline if not present
-        if (typeof window.openEmailGate === 'function' && window.openEmailGate !== openEmailGate) {
-            window.openEmailGate(format, onUnlock);
-            return;
-        }
-        var existing = document.querySelector('.eg-modal');
+    // Gated actions show a small inline upsell. Email signup never grants premium.
+    const FEATURE_LABELS = {
+        pdf: 'PDF export',
+        spreadsheet: 'Excel/CSV export',
+        save: 'Saving plans',
+        share: 'Shareable plan links'
+    };
+
+    function trackBeginCheckout(placement) {
+        if (typeof gtag !== 'function') return;
+        gtag('event', 'begin_checkout', {
+            currency: 'USD',
+            value: CONFIG.PREMIUM_PRICE,
+            placement: placement,
+            items: [{
+                item_id: 'runbikecalc_premium',
+                item_name: 'RunBikeCalc Premium',
+                price: CONFIG.PREMIUM_PRICE,
+                quantity: 1
+            }]
+        });
+    }
+
+    function showUpsell(feature) {
+        const existing = document.getElementById('premium-upsell');
         if (existing) existing.remove();
 
-        var overlay = document.createElement('div');
-        overlay.className = 'eg-modal';
-        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:1rem;';
+        const label = FEATURE_LABELS[feature] || 'This feature';
 
-        var card = document.createElement('div');
-        card.style.cssText = 'background:#FAF8F5;color:#1A1A1A;max-width:440px;width:100%;padding:2rem 1.75rem;border-radius:6px;font-family:"Source Sans 3",sans-serif;text-align:center;position:relative;border:1px solid rgba(124,45,58,0.18);';
+        const card = document.createElement('div');
+        card.id = 'premium-upsell';
+        card.className = 'bg-cream-dark border border-charcoal/10 rounded-sm';
+        card.style.cssText = 'padding:1.25rem 1.25rem 1.1rem;margin-top:1rem;position:relative;';
 
-        var close = document.createElement('button');
+        const close = document.createElement('button');
         close.type = 'button';
-        close.textContent = '×';
-        close.style.cssText = 'position:absolute;top:0.65rem;right:0.85rem;background:none;border:none;font-size:1.6rem;line-height:1;color:#888;cursor:pointer;';
-        close.addEventListener('click', function(){ overlay.remove(); });
+        close.setAttribute('aria-label', 'Dismiss');
+        close.textContent = '\u00D7';
+        close.style.cssText = 'position:absolute;top:0.4rem;right:0.6rem;background:none;border:none;font-size:1.4rem;line-height:1;color:#888;cursor:pointer;';
+        close.addEventListener('click', function(){ card.remove(); });
 
-        var eyebrow = document.createElement('div');
-        eyebrow.style.cssText = 'font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.5rem;';
-        eyebrow.textContent = 'Free Export';
+        const eyebrow = document.createElement('div');
+        eyebrow.style.cssText = 'font-size:0.7rem;letter-spacing:0.22em;font-weight:600;color:#7C2D3A;text-transform:uppercase;margin-bottom:0.4rem;';
+        eyebrow.textContent = 'Premium';
 
-        var h = document.createElement('h3');
-        h.style.cssText = 'font-family:"Playfair Display",Georgia,serif;font-size:1.65rem;font-weight:700;margin:0 0 0.5rem;line-height:1.15;';
-        h.textContent = format === 'pdf' ? 'Get the PDF — free.' : 'Get the spreadsheet — free.';
+        const h = document.createElement('h4');
+        h.className = 'font-display text-lg text-charcoal';
+        h.style.cssText = 'margin:0 0 0.35rem;';
+        h.textContent = label + ' is part of Premium.';
 
-        var sub = document.createElement('p');
-        sub.style.cssText = 'font-size:0.95rem;line-height:1.55;color:#444;margin:0 0 1.25rem;';
-        sub.textContent = 'Drop your email and we\'ll unlock the ' + (format === 'pdf' ? 'PDF' : 'spreadsheet') + ' export. You\'ll also get Endure Weekly — one weekly email for runners, cyclists, triathletes, and Hyrox athletes. Unsubscribe anytime.';
+        const sub = document.createElement('p');
+        sub.className = 'text-charcoal/80 text-sm';
+        sub.style.cssText = 'line-height:1.55;margin:0 0 0.9rem;';
+        sub.textContent = 'One payment of $' + CONFIG.PREMIUM_PRICE + ' unlocks saved plans (up to 5), PDF export, Excel/CSV export and shareable plan links. Generating plans and calendar (.ics) export stay free.';
 
-        var form = document.createElement('form');
-        form.style.cssText = 'display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;';
-        form.setAttribute('novalidate', '');
+        const buy = document.createElement('a');
+        buy.className = 'inline-block bg-copper text-white px-6 py-3 font-medium tracking-wide hover:bg-copper-dark transition-colors';
+        buy.href = CONFIG.PAYMENT_LINK;
+        buy.target = '_blank';
+        buy.rel = 'noopener';
+        buy.textContent = 'Unlock Premium for $' + CONFIG.PREMIUM_PRICE;
+        buy.addEventListener('click', function(){ trackBeginCheckout('upsell_' + feature); });
 
-        var input = document.createElement('input');
-        input.type = 'email';
-        input.name = 'email';
-        input.required = true;
-        input.autocomplete = 'email';
-        input.placeholder = 'your@email.com';
-        input.style.cssText = 'flex:1 1 220px;min-width:0;padding:0.75rem 1rem;font-size:0.95rem;background:#fff;color:#1A1A1A;border:1px solid rgba(26,26,26,0.18);border-radius:4px;outline:none;font-family:inherit;';
-
-        var submit = document.createElement('button');
-        submit.type = 'submit';
-        submit.textContent = 'Unlock & Download';
-        submit.style.cssText = 'padding:0.75rem 1.25rem;font-size:0.85rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#1A1A1A;color:#fff;border:none;border-radius:4px;cursor:pointer;font-family:inherit;';
-
-        var trust = document.createElement('p');
-        trust.style.cssText = 'font-size:0.78rem;color:rgba(26,26,26,0.55);margin:1rem 0 0;font-style:italic;';
-        trust.textContent = 'No spam. One-click unsubscribe.';
-
-        form.appendChild(input);
-        form.appendChild(submit);
-        form.addEventListener('submit', function(e){
-            e.preventDefault();
-            var email = (input.value || '').trim();
-            if (!email || email.indexOf('@') === -1) {
-                input.focus();
-                input.style.borderColor = '#dc2626';
-                return;
-            }
-            // Open Beehiiv magic link in new tab to confirm subscription
-            var url = CONFIG.ENDURE_WEEKLY_MAGIC + '?email=' + encodeURIComponent(email);
-            window.open(url, '_blank', 'noopener');
-            // Track signup
-            if (typeof gtag === 'function') {
-                gtag('event', 'newsletter_signup', {
-                    placement: 'training_plan_' + format,
-                    newsletter: 'endure_weekly',
-                    email_domain: email.split('@')[1] || ''
-                });
-            }
-            // Unlock all gated features locally
-            unlockPremium();
-            overlay.remove();
-            // Trigger the export
-            if (typeof onUnlock === 'function') onUnlock();
-            showToast('Unlocked. ' + (format === 'pdf' ? 'PDF' : 'Spreadsheet') + ' downloading…');
-        });
+        const note = document.createElement('p');
+        note.style.cssText = 'font-size:0.75rem;color:#888;margin:0.75rem 0 0;font-style:italic;';
+        note.textContent = 'One-time payment, no subscription. The unlock is saved in this browser.';
 
         card.appendChild(close);
         card.appendChild(eyebrow);
         card.appendChild(h);
         card.appendChild(sub);
-        card.appendChild(form);
-        card.appendChild(trust);
-        overlay.appendChild(card);
-        document.body.appendChild(overlay);
+        card.appendChild(buy);
+        card.appendChild(note);
 
-        setTimeout(function(){ input.focus(); }, 50);
+        const anchor = document.querySelector('.export-buttons');
+        if (anchor && anchor.parentNode) {
+            anchor.parentNode.insertBefore(card, anchor.nextSibling);
+        } else {
+            document.body.appendChild(card);
+        }
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'premium_upsell_shown', { feature: feature });
+        }
     }
 
     // ==================== Save & Share ====================
 
     function initSaveShare() {
-        // Save plan button — gated behind free email signup
+        // Save plan button - premium ($12 one-time)
         document.getElementById('save-plan')?.addEventListener('click', () => {
             if (!state.currentPlan) {
                 showToast('Please generate a plan first');
                 return;
             }
             if (!state.isPremium) {
-                openEmailGate('save', () => savePlan());
+                showUpsell('save');
                 return;
             }
             savePlan();
         });
 
-        // Share plan button — gated behind free email signup
+        // Share plan button - premium ($12 one-time)
         document.getElementById('share-plan')?.addEventListener('click', () => {
             if (!state.isPremium) {
-                openEmailGate('share', null);
+                showUpsell('share');
                 return;
             }
             if (!state.currentPlan) {
