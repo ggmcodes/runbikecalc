@@ -199,6 +199,10 @@
 
         // Map form fields to generator expected fields
         inputs.goalDistance = inputs.distance || inputs.division;
+        // Forms differ per sport: triathlon and Hyrox post experienceLevel and
+        // longWorkoutDay where running and cycling post fitnessLevel and longRunDay.
+        inputs.fitnessLevel = inputs.fitnessLevel || inputs.experienceLevel;
+        inputs.longDay = inputs.longDay || inputs.longRunDay || inputs.longRideDay || inputs.longWorkoutDay;
         inputs.weeksUntilRace = inputs.weeks;
         inputs.currentVolume = inputs.weeklyMileage || inputs.weeklyHours || 20;
 
