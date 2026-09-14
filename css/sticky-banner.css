@@ -111,3 +111,26 @@
     padding: 0.1875rem 0.5rem;
   }
 }
+
+/**
+ * Keep the site's fixed navigation clear of the banner.
+ * The banner is inserted as the first child of <body>, so the nav is a later
+ * sibling. Separate rules (not one selector list) so that a browser without
+ * :has() still applies the sibling rules.
+ */
+#stickyBanner ~ nav.fixed {
+  top: var(--sb-h, 40px);
+  transition: top 0.3s ease;
+}
+
+#stickyBanner.sb-hidden ~ nav.fixed {
+  top: 0;
+}
+
+body:has(#stickyBanner) nav.fixed {
+  top: var(--sb-h, 40px);
+}
+
+body:has(#stickyBanner.sb-hidden) nav.fixed {
+  top: 0;
+}

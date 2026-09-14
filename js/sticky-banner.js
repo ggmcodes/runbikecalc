@@ -62,7 +62,7 @@
     if (config.detail) {
       var detail = document.createElement('span');
       detail.className = 'sb-detail';
-      detail.textContent = ' \u2014 ' + config.detail;
+      detail.textContent = ' \u00B7 ' + config.detail;
       link.appendChild(detail);
     }
 
@@ -99,16 +99,27 @@
     return banner;
   }
 
+  var basePaddingTop = null;
+
+  function getBasePaddingTop() {
+    if (basePaddingTop === null) {
+      basePaddingTop = parseFloat(window.getComputedStyle(document.body).paddingTop) || 0;
+    }
+    return basePaddingTop;
+  }
+
   function adjustBodyPadding(banner) {
     var height = banner.offsetHeight;
-    document.body.style.paddingTop = height + 'px';
+    document.body.style.paddingTop = (getBasePaddingTop() + height) + 'px';
+    document.documentElement.style.setProperty('--sb-h', height + 'px');
   }
 
   function removeBanner() {
     var banner = document.getElementById('stickyBanner');
     if (banner) {
       banner.remove();
-      document.body.style.paddingTop = '';
+      document.body.style.paddingTop = basePaddingTop ? basePaddingTop + 'px' : '';
+      document.documentElement.style.removeProperty('--sb-h');
       localStorage.setItem(STORAGE_KEY, 'true');
     }
   }
