@@ -885,11 +885,11 @@ class TrainingPlanGenerator extends Calculator {
 
         const price = document.createElement('span');
         price.className = 'text-3xl font-bold text-gray-900';
-        price.textContent = 'Free';
+        price.textContent = '$12';
 
         const priceNote = document.createElement('span');
         priceNote.className = 'text-gray-500 ml-2';
-        priceNote.textContent = 'with email signup';
+        priceNote.textContent = 'one-time unlock, calendar export always free';
 
         priceContainer.appendChild(price);
         priceContainer.appendChild(priceNote);
@@ -901,7 +901,7 @@ class TrainingPlanGenerator extends Calculator {
         ctaLink.className = 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-cream font-medium tracking-wide hover:bg-copper transition-colors';
 
         const ctaText = document.createElement('span');
-        ctaText.textContent = 'Get Free Exports';
+        ctaText.textContent = 'Unlock Premium';
         ctaLink.appendChild(ctaText);
 
         const arrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
