@@ -103,6 +103,9 @@ const TrainingPlanExporter = {
         if (workout.miles) {
             lines.push('Distance: ' + workout.miles + ' miles');
         }
+        else if (workout.duration) {
+            lines.push('Duration: ' + workout.duration);
+        }
 
         // Intensity with user-friendly label
         if (workout.rpe) {
@@ -390,7 +393,7 @@ const TrainingPlanExporter = {
                         week.phaseLabel || week.phase,
                         day.workout?.name || 'Rest',
                         day.workout?.duration || '',
-                        day.workout?.miles || '',
+                        day.workout?.miles || day.workout?.distance || day.workout?.duration || '',
                         day.workout?.rpe || '',
                         day.workout?.purpose || '',
                         day.workout?.note || ''

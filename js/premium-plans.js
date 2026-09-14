@@ -434,7 +434,7 @@
                 // Volume info
                 const volumeEl = document.createElement('div');
                 volumeEl.className = 'mt-2 text-xs text-warm-gray';
-                volumeEl.textContent = 'Volume: ' + (week.targetVolume || week.totalMiles || '-') + ' mi';
+                volumeEl.textContent = 'Volume: ' + (week.targetVolume || week.totalMiles || '-') + (state.currentSport === 'running' ? ' mi' : ' hrs');
                 weekCard.appendChild(volumeEl);
 
                 weeksContainer.appendChild(weekCard);
