@@ -238,7 +238,7 @@ const TrainingPlanExporter = {
         doc.setFontSize(11);
         const summaryLines = [
             'Total Weeks: ' + plan.summary.totalWeeks,
-            'Peak Weekly Volume: ' + plan.summary.peakVolume + ' mi',
+            'Peak Weekly Volume: ' + plan.summary.peakVolume + (plan?.inputs?.sport === 'running' ? ' mi' : ' hrs'),
             'Recovery Weeks: ' + plan.summary.recoveryWeeks,
             'Training Days/Week: ' + (plan.inputs.trainingDays || 5)
         ];
@@ -320,7 +320,7 @@ const TrainingPlanExporter = {
         // Volume
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text('Target Volume: ' + week.targetVolume + ' mi', 20, 35);
+        doc.text('Target Volume: ' + week.targetVolume + (plan?.inputs?.sport === 'running' ? ' mi' : ' hrs'), 20, 35);
 
         // Days table
         if (week.days) {

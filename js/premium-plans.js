@@ -198,7 +198,7 @@
         });
 
         // Map form fields to generator expected fields
-        inputs.goalDistance = inputs.distance;
+        inputs.goalDistance = inputs.distance || inputs.division;
         inputs.weeksUntilRace = inputs.weeks;
         inputs.currentVolume = inputs.weeklyMileage || inputs.weeklyHours || 20;
 
