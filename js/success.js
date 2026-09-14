@@ -1,4 +1,7 @@
 /**
+ * Legacy premium success page ($5 flow, retired 2026-09-14).
+ * Still unlocks premium for anyone who bought at $5; the stale value-5
+ * purchase event was removed so it cannot pollute revenue reporting.
  * Premium Success Page Handler
  * Unlocks premium features and redirects to premium training plans page
  */
@@ -44,12 +47,7 @@
     // Track conversion for analytics
     function trackConversion() {
         // Google Analytics event
-        if (typeof gtag === 'function') {
-            gtag('event', 'purchase', {
-                'event_category': 'Premium',
-                'event_label': 'Training Plans Premium',
-                'value': 5
-            });
+);
         }
     }
 
